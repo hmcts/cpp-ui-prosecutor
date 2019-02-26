@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardComponent should compile correctly 1`] = `
+<prosecutor-dashboard-test>
+  <prosecutor-dashboard>
+    <h1
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      <span
+        pdk-typography="caption-xlarge"
+      >
+        Prosecutor
+      </span>
+       Single Justice Procedure 
+    </h1>
+    <h2
+      pdk-margin-top="8"
+      pdk-typography="heading-medium"
+    >
+      Search for a case
+    </h2>
+    <search-container>
+      <div />
+    </search-container>
+    <h2
+      pdk-margin-top="8"
+      pdk-typography="heading-medium"
+    >
+      Other tasks
+    </h2>
+    <p
+      pdk-typography="caption-medium"
+    >
+      Defendant details updates (0)
+    </p>
+    <div>
+      <a
+        href=""
+        pdk-link=""
+        pdk-section="small"
+      >
+        Withdraw an offence
+      </a>
+    </div>
+    <div
+      pdk-margin-top="6"
+    >
+      <a
+        href=""
+        pdk-link=""
+      >
+        Export case results by date
+      </a>
+    </div>
+  </prosecutor-dashboard>
+</prosecutor-dashboard-test>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevTools - Select User component should compile correctly 1`] = `
+<dev-tools-back
+  location={[Function Object]}
+>
+  <button
+    pdk-button=""
+  >
+     Back 
+  </button>
+</dev-tools-back>
+`;

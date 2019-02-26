@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`devTools - select user container compiles 1`] = `
+<dev-tools-select-user-page
+  fakeSession={[Function Object]}
+  router={[Function Object]}
+  selectUser={[Function Function]}
+  userId={[Function String]}
+  users={[Function Array]}
+>
+  <dev-tools-select-user /><dev-tools-back />
+</dev-tools-select-user-page>
+`;

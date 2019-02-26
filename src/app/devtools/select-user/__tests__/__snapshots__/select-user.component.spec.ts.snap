@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevTools - Select User component compiles 1`] = `
+<dev-tools-select-user
+  form={[Function NgForm]}
+  selectUser={[Function EventEmitter]}
+  users={[Function Array]}
+>
+  <div
+    class="govuk-width-container"
+    pdk-container=""
+    style="display: block;"
+  >
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+       Developer tools 
+    </h1>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Select a user
+    </h3>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-form-field>
+        
+        <pdk-form-group
+          ng-reflect-error="false"
+          style="display: block;"
+        >
+          
+          
+          
+          
+          <label
+            class="govuk-label"
+            for="pdk-form-control-1"
+            ng-reflect-type="default"
+          >
+              
+          </label>
+          
+          
+          
+          <pdk-select
+            class="ng-untouched ng-pristine ng-valid"
+            id="selectUser"
+            name="userId"
+            ng-reflect-id="selectUser"
+            ng-reflect-name="userId"
+            ng-reflect-options="[object Object]"
+            ng-reflect-placeholder="---Please select---"
+            ng-reflect-required=""
+            placeholder="---Please select---"
+            required=""
+          >
+            <select
+              class="govuk-select"
+              id="pdk-form-control-1"
+              name="userId"
+              required=""
+            >
+              
+              
+              <option
+                ng-reflect-value=""
+                value=""
+              >
+                ---Please select---
+              </option>
+              
+              
+              <option
+                ng-reflect-value="userId"
+                value="userId"
+              >
+                 Mock User 
+              </option>
+            </select>
+          </pdk-select>
+          
+          
+        </pdk-form-group>
+      </pdk-form-field>
+      <pdk-form-group
+        style="display: block;"
+      >
+        <button
+          disabled=""
+          pdk-button=""
+          type="submit"
+        >
+           Confirm identity 
+        </button>
+      </pdk-form-group>
+    </form>
+  </div>
+</dev-tools-select-user>
+`;
+
+exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
+<dev-tools-select-user
+  form={[Function NgForm]}
+  selectUser={[Function EventEmitter]}
+  userId={[Function String]}
+  users={[Function Array]}
+>
+  <div
+    class="govuk-width-container"
+    pdk-container=""
+    style="display: block;"
+  >
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+       Developer tools 
+    </h1>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Select a user
+    </h3>
+    <form
+      class="ng-untouched ng-valid ng-dirty"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-form-field>
+        
+        <pdk-form-group
+          ng-reflect-error="false"
+          style="display: block;"
+        >
+          
+          
+          
+          
+          <label
+            class="govuk-label"
+            for="pdk-form-control-3"
+            ng-reflect-type="default"
+          >
+              
+          </label>
+          
+          
+          
+          <pdk-select
+            class="ng-untouched ng-valid ng-dirty"
+            id="selectUser"
+            name="userId"
+            ng-reflect-id="selectUser"
+            ng-reflect-model="userId"
+            ng-reflect-name="userId"
+            ng-reflect-options="[object Object]"
+            ng-reflect-placeholder="---Please select---"
+            ng-reflect-required=""
+            placeholder="---Please select---"
+            required=""
+          >
+            <select
+              class="govuk-select"
+              id="pdk-form-control-3"
+              name="userId"
+              required=""
+            >
+              
+              
+              <option
+                ng-reflect-value=""
+                value=""
+              >
+                ---Please select---
+              </option>
+              
+              
+              <option
+                ng-reflect-value="userId"
+                value="userId"
+              >
+                 Mock User 
+              </option>
+            </select>
+          </pdk-select>
+          
+          
+        </pdk-form-group>
+      </pdk-form-field>
+      <pdk-form-group
+        style="display: block;"
+      >
+        <button
+          pdk-button=""
+          type="submit"
+        >
+           Confirm identity 
+        </button>
+      </pdk-form-group>
+    </form>
+  </div>
+</dev-tools-select-user>
+`;
+
+exports[`DevTools - Select User component it shows error messages when form is submitted with no input 1`] = `
+<dev-tools-select-user
+  form={[Function NgForm]}
+  selectUser={[Function EventEmitter]}
+  users={[Function Array]}
+>
+  <div
+    class="govuk-width-container"
+    pdk-container=""
+    style="display: block;"
+  >
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+       Developer tools 
+    </h1>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Select a user
+    </h3>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-form-field>
+        
+        <pdk-form-group
+          ng-reflect-error="false"
+          style="display: block;"
+        >
+          
+          
+          
+          
+          <label
+            class="govuk-label"
+            for="pdk-form-control-5"
+            ng-reflect-type="default"
+          >
+              
+          </label>
+          
+          
+          
+          <pdk-select
+            class="ng-untouched ng-pristine ng-valid"
+            id="selectUser"
+            name="userId"
+            ng-reflect-id="selectUser"
+            ng-reflect-name="userId"
+            ng-reflect-options="[object Object]"
+            ng-reflect-placeholder="---Please select---"
+            ng-reflect-required=""
+            placeholder="---Please select---"
+            required=""
+          >
+            <select
+              class="govuk-select"
+              id="pdk-form-control-5"
+              name="userId"
+              required=""
+            >
+              
+              
+              <option
+                ng-reflect-value=""
+                value=""
+              >
+                ---Please select---
+              </option>
+              
+              
+              <option
+                ng-reflect-value="userId"
+                value="userId"
+              >
+                 Mock User 
+              </option>
+            </select>
+          </pdk-select>
+          
+          
+        </pdk-form-group>
+      </pdk-form-field>
+      <pdk-form-group
+        style="display: block;"
+      >
+        <button
+          disabled=""
+          pdk-button=""
+          type="submit"
+        >
+           Confirm identity 
+        </button>
+      </pdk-form-group>
+    </form>
+  </div>
+</dev-tools-select-user>
+`;

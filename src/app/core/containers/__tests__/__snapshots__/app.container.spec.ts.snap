@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App page component should compile correctly 1`] = `
+<app-root
+  apiError$={[Function Store]}
+  devTools={[Function Boolean]}
+  headerNavItems={[Function Array]}
+  isBusy$={[Function Observable]}
+  offline$={[Function Observable]}
+>
+  <pdk-provider>
+    <app-layout
+      ng-reflect-api-error="false"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="false"
+    >
+      <div>
+        headerNavItems : [
+    {
+      "title": "Your account",
+      "href": "path/to/account"
+    },
+    {
+      "title": "Sign out",
+      "href": "path/to/logout"
+    },
+    {
+      "title": "Dev tools",
+      "href": "/prosecutor/dev-tools"
+    }
+  ]
+      </div>
+      <div>
+        activity: 
+      </div>
+      <div>
+        offline: false
+      </div>
+      <div>
+        apiError: false
+      </div>
+    </app-layout>
+  </pdk-provider>
+</app-root>
+`;
+
+exports[`App page component should detect when the app is busy 1`] = `
+<app-root
+  apiError$={[Function Store]}
+  devTools={[Function Boolean]}
+  headerNavItems={[Function Array]}
+  isBusy$={[Function Observable]}
+  offline$={[Function Observable]}
+>
+  <pdk-provider>
+    <app-layout
+      ng-reflect-activity="true"
+      ng-reflect-api-error="false"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="false"
+    >
+      <div>
+        headerNavItems : [
+    {
+      "title": "Your account",
+      "href": "path/to/account"
+    },
+    {
+      "title": "Sign out",
+      "href": "path/to/logout"
+    },
+    {
+      "title": "Dev tools",
+      "href": "/prosecutor/dev-tools"
+    }
+  ]
+      </div>
+      <div>
+        activity: true
+      </div>
+      <div>
+        offline: false
+      </div>
+      <div>
+        apiError: false
+      </div>
+    </app-layout>
+  </pdk-provider>
+</app-root>
+`;
+
+exports[`App page component should track any api errors 1`] = `
+<app-root
+  apiError$={[Function Store]}
+  devTools={[Function Boolean]}
+  headerNavItems={[Function Array]}
+  isBusy$={[Function Observable]}
+  offline$={[Function Observable]}
+>
+  <pdk-provider>
+    <app-layout
+      ng-reflect-api-error="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="false"
+    >
+      <div>
+        headerNavItems : [
+    {
+      "title": "Your account",
+      "href": "path/to/account"
+    },
+    {
+      "title": "Sign out",
+      "href": "path/to/logout"
+    },
+    {
+      "title": "Dev tools",
+      "href": "/prosecutor/dev-tools"
+    }
+  ]
+      </div>
+      <div>
+        activity: 
+      </div>
+      <div>
+        offline: false
+      </div>
+      <div>
+        apiError: true
+      </div>
+    </app-layout>
+  </pdk-provider>
+</app-root>
+`;
+
+exports[`App page component should track the offline status of the container 1`] = `
+<app-root
+  apiError$={[Function Store]}
+  devTools={[Function Boolean]}
+  headerNavItems={[Function Array]}
+  isBusy$={[Function Observable]}
+  offline$={[Function Observable]}
+>
+  <pdk-provider>
+    <app-layout
+      ng-reflect-api-error="false"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="true"
+    >
+      <div>
+        headerNavItems : [
+    {
+      "title": "Your account",
+      "href": "path/to/account"
+    },
+    {
+      "title": "Sign out",
+      "href": "path/to/logout"
+    },
+    {
+      "title": "Dev tools",
+      "href": "/prosecutor/dev-tools"
+    }
+  ]
+      </div>
+      <div>
+        activity: 
+      </div>
+      <div>
+        offline: true
+      </div>
+      <div>
+        apiError: false
+      </div>
+    </app-layout>
+  </pdk-provider>
+</app-root>
+`;
+
+exports[`App page component should track the online status of the container 1`] = `
+<app-root
+  apiError$={[Function Store]}
+  devTools={[Function Boolean]}
+  headerNavItems={[Function Array]}
+  isBusy$={[Function Observable]}
+  offline$={[Function Observable]}
+>
+  <pdk-provider>
+    <app-layout
+      ng-reflect-api-error="false"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="false"
+    >
+      <div>
+        headerNavItems : [
+    {
+      "title": "Your account",
+      "href": "path/to/account"
+    },
+    {
+      "title": "Sign out",
+      "href": "path/to/logout"
+    },
+    {
+      "title": "Dev tools",
+      "href": "/prosecutor/dev-tools"
+    }
+  ]
+      </div>
+      <div>
+        activity: 
+      </div>
+      <div>
+        offline: false
+      </div>
+      <div>
+        apiError: false
+      </div>
+    </app-layout>
+  </pdk-provider>
+</app-root>
+`;

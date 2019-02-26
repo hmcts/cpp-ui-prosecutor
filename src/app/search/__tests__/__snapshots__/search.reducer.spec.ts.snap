@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Search reducer default should set the state 1`] = `
+Object {
+  "casesDetails": null,
+  "searchKeyword": null,
+}
+`;
+
+exports[` Search reducer when SEARCH should set the state 1`] = `
+Object {
+  "casesDetails": null,
+  "searchKeyword": "testing",
+}
+`;
+
+exports[` Search reducer when SEARCH should set the state 2`] = `
+Object {
+  "casesDetails": Array [
+    Object {
+      "caseReferenceNumber": "TVL43243413213ASD",
+      "caseStatus": "Completed",
+      "defendantDOB": "19 Feb 1965",
+      "defendantName": "Smith Long Name",
+      "noticeServed": "9 Jan 2019",
+      "prosecutor": "TV Licensing",
+    },
+  ],
+  "searchKeyword": null,
+}
+`;

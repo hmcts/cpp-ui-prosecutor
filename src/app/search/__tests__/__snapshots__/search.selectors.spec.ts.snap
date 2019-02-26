@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search/selectors getCaseDetails should select the available cases with details 1`] = `
+Array [
+  Object {
+    "caseReferenceNumber": "TVL43243413213ASD",
+    "caseStatus": "Completed",
+    "defendantDOB": "19 Feb 1965",
+    "defendantName": "Smith Long Name",
+    "noticeServed": "9 Jan 2019",
+    "prosecutor": "TV Licensing",
+  },
+  Object {
+    "caseReferenceNumber": "TVL43243413213ASD",
+    "caseStatus": "Completed",
+    "defendantDOB": "19 Feb 1965",
+    "defendantName": "Smith Long Name",
+    "noticeServed": "9 Jan 2019",
+    "prosecutor": "TV Licensing",
+  },
+  Object {
+    "caseReferenceNumber": "TVL43243413213ASD",
+    "caseStatus": "Completed",
+    "defendantDOB": "19 Feb 1965",
+    "defendantName": "Smith Long Name",
+    "noticeServed": "9 Jan 2019",
+    "prosecutor": "TV Licensing",
+  },
+]
+`;
+
+exports[`search/selectors getSearchKeyword should select the available keyword 1`] = `"testing"`;

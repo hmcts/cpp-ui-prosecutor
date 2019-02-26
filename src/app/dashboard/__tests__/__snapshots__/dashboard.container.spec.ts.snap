@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardContainer should compile correctly 1`] = `
+<prosecutor-dashboard-container>
+  <prosecutor-dashboard>
+    <span>
+      dashboard
+    </span>
+  </prosecutor-dashboard>
+</prosecutor-dashboard-container>
+`;
