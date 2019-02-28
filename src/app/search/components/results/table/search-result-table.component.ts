@@ -23,7 +23,7 @@ import { CaseDetails } from '../../../search.interface';
           <td pdk-table-cell pdk-link>
             {{ searchResult.defendant | defendantNamePipe }}
           </td>
-          <td pdk-table-cell>{{ searchResult.urn }}</td>
+          <td pdk-table-cell data-role="urn">{{ searchResult.urn }}</td>
           <td pdk-table-cell>{{ searchResult.status | caseStatusPipe }}</td>
           <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutorPipe }}</td>
           <td pdk-table-cell>{{ searchResult.defendant.dateOfBirth | date: 'dd MMM yyyy' }}</td>
