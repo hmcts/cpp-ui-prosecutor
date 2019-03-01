@@ -2,9 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
-## Development server
+## App set up
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Node version: `8.15.0` and above
+
+Npm version: `6.4.1` and above
+
+Add the following configs to the `~/.npmrc` file.
+
+```
+registry=https://libraries.mdv.cpp.nonlive/artifactory/api/npm/npm-virtual
+strict-ssl=false
+```
+
+Make sure that angular cli is installed globally or run `npm install -g @angular/cli`
+
+Create a new json file in `src/app/config/` folder with name `app.overrride.config.json` and add the below config
+
+```
+{
+  "_WARNING": "Do not commit this file, as it's overwritten during deployment. Feel free to use it to test overrides of app.config.json properties locally",
+  "apiRoot": "http://localhost:8181/api",
+  "idamProfilePage": "http://10.124.22.69:81/idam/manageaccount",
+  "idamLogout": "/gateway/SPInitiatedSLO"
+}
+
+```
+
+Forward port 8181 to any one of the ATCM dev servers
+
+`ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
+
+Run `npm start` for a dev server. Navigate to `http://localhost:4750/prosecutor`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -16,11 +45,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via jest.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
