@@ -2,21 +2,22 @@
 
 exports[` Search reducer default should set the state 1`] = `
 Object {
-  "casesDetails": null,
   "searchKeyword": null,
+  "searchResult": null,
 }
 `;
 
 exports[` Search reducer when SEARCH should set the state 1`] = `
 Object {
-  "casesDetails": null,
   "searchKeyword": "testing",
+  "searchResult": null,
 }
 `;
 
 exports[` Search reducer when SEARCH should set the state 2`] = `
 Object {
-  "casesDetails": Array [
+  "searchKeyword": null,
+  "searchResult": Array [
     Object {
       "caseReferenceNumber": "TVL43243413213ASD",
       "caseStatus": "Completed",
@@ -26,6 +27,5 @@ Object {
       "prosecutor": "TV Licensing",
     },
   ],
-  "searchKeyword": null,
 }
 `;

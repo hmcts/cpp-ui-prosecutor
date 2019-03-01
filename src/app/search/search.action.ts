@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { CaseDetails } from './search.container';
+import { SearchResult } from './search.interface';
 
 /*
  * TypeScript creates a lookup dictionary for regular enums,
@@ -15,12 +15,14 @@ export const enum SearchTypes {
 
 export class Search implements Action {
   readonly type = SearchTypes.SEARCH;
+
   constructor(public payload: string) {}
 }
 
 export class SearchSuccess implements Action {
   readonly type = SearchTypes.SEARCH_SUCCESS;
-  constructor(public payload: CaseDetails[]) {}
+
+  constructor(public payload: SearchResult) {}
 }
 
 export type SearchActions = Search | SearchSuccess;

@@ -1,0 +1,37 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { FeatureState, getSearchKeyword, getSearchResultCases } from '../../search.selectors';
+import { Search } from '../../search.action';
+import { Observable } from 'rxjs';
+import { CaseDetails } from '../../search.interface';
+
+@Component({
+  selector: 'search-results-container',
+  template: `
+    <pdk-breadcrumb-list>
+      <li pdk-breadcrumb-list-item>
+        <a href="javascript: void(0)" routerLink="../../" pdk-breadcrumb>Home</a>
+      </li>
+      <li pdk-breadcrumb-list-item>
+        Search for a case
+      </li>
+    </pdk-breadcrumb-list>
+    <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="8">Search for a case</h1>
+    <search-input (searchTerm)="search($event)"></search-input>
+    <search-results-table [searchPayload]="caseDetailsResults$ | async"></search-results-table>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class SearchResultsContainer {
+  caseDetailsResults$: Observable<CaseDetails[]>;
+  keyword$: Observable<string>;
+
+  constructor(private store: Store<FeatureState>) {
+    this.caseDetailsResults$ = this.store.select(getSearchResultCases);
+    this.keyword$ = this.store.select(getSearchKeyword);
+  }
+
+  search(keyword: string) {
+    this.store.dispatch(new Search(keyword));
+  }
+}

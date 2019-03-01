@@ -1,14 +1,14 @@
 import { SearchActions, SearchTypes } from './search.action';
-import { CaseDetails } from './search.container';
+import { SearchResult } from './search.interface';
 
 export interface SearchState {
   searchKeyword: string;
-  casesDetails: CaseDetails[];
+  searchResult: SearchResult;
 }
 
 const initialState: SearchState = {
   searchKeyword: null,
-  casesDetails: null
+  searchResult: null
 };
 
 export function searchReducer(state: SearchState = initialState, action: SearchActions): SearchState {
@@ -23,7 +23,7 @@ export function searchReducer(state: SearchState = initialState, action: SearchA
     case SearchTypes.SEARCH_SUCCESS: {
       return {
         ...state,
-        casesDetails: action.payload
+        searchResult: action.payload
       };
     }
 

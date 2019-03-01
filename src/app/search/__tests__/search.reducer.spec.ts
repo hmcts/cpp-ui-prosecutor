@@ -3,7 +3,7 @@ import { Search, SearchSuccess } from '../search.action';
 
 const state = {
   searchKeyword: null,
-  casesDetails: null
+  searchResult: null
 } as SearchState;
 
 describe(' Search reducer', () => {
@@ -17,7 +17,7 @@ describe(' Search reducer', () => {
     });
 
     it('should set the state', () => {
-      expect(resultState).toMatchSnapshot();
+      expect(resultState).toMatchSnapshot(1);
     });
   });
 

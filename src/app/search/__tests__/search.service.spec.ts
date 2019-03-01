@@ -40,8 +40,8 @@ describe('Search Service', () => {
       expect(query$).toBeObservable(expected$);
 
       expect(http.query).toHaveBeenCalledWith({
-        url: 'url_placeholder',
-        requestType: 'request_type_placeholder'
+        url: '/sjp-query-api/query/api/rest/sjp/search?q=testing',
+        requestType: 'application/vnd.sjp.query.case-search-results+json'
       });
     });
   });

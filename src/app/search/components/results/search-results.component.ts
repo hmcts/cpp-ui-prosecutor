@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CaseDetails } from '../../search.container';
+import { SearchResult } from '../../search.interface';
 
 @Component({
   selector: 'search-results',
@@ -7,5 +7,5 @@ import { CaseDetails } from '../../search.container';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchResultsComponent {
-  @Input() results: CaseDetails[];
+  @Input() results: SearchResult[];
 }

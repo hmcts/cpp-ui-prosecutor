@@ -4,14 +4,16 @@ import { cold, hot } from 'jasmine-marbles';
 import { Store } from '@ngrx/store';
 import { ApiError } from '../../core/actions';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Observable } from 'rxjs';
+import { empty, Observable } from 'rxjs';
 import { SearchEffects } from '../search.effects';
 import { Search, SearchActions, SearchSuccess } from '../search.action';
-import { MOCK_CASES, SearchService } from '../search.service';
+import { SearchService } from '../search.service';
+import { Router } from '@angular/router';
+import { MOCK_CASES } from './test-mock-data';
 
 export class TestActions extends Actions {
   constructor() {
-    super();
+    super(empty());
   }
 
   set stream(source: Observable<any>) {
@@ -30,15 +32,23 @@ describe('Search Effects', () => {
   let getCasesDetails: jest.Mock;
   let dispatch: jest.Mock;
   let action: SearchActions;
+  let navigate: jest.Mock;
 
   beforeEach(() => {
     getCasesDetails = jest.fn();
     dispatch = jest.fn();
+    navigate = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       providers: [
         SearchEffects,
+        {
+          provide: Router,
+          useValue: {
+            navigate
+          }
+        },
         {
           provide: SearchService,
           useValue: {
@@ -77,6 +87,7 @@ describe('Search Effects', () => {
       getCasesDetails.mockReturnValue(response$);
 
       expect(effects.getCasesDetails).toBeObservable(expected$);
+      expect(navigate).toHaveBeenCalledWith(['/search/results']);
     });
 
     it('should error', () => {

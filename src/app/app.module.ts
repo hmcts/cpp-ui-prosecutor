@@ -18,6 +18,7 @@ import { CustomRouterStateSerializer } from './core/utils/router-state';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { SearchModule } from './search/search.module';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     EffectsModule.forRoot([]),
     DashboardModule,
     AppConfigModule,
+    SearchModule,
     ...environment.modules
   ],
   providers: [

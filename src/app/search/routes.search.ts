@@ -1,20 +1,20 @@
 import { Routes } from '@angular/router';
-import { SearchContainer } from './search.container';
-import { SearchResultsComponent } from './components/results/search-results.component';
+import { SearchContainer } from './components/search/search.container';
+import { SearchResultsContainer } from './components/results/seach-results.container';
 
 export const routesSearch: Routes = [
   {
     path: 'search',
     data: {
-      title: 'Search whatever'
+      title: 'Search for a case'
     },
     component: SearchContainer
   },
   {
-    path: 'results',
+    path: 'search/results',
     data: {
-      title: 'Results whatever'
+      title: 'Search for a case'
     },
-    component: SearchResultsComponent
+    component: SearchResultsContainer
   }
 ];
