@@ -8,5 +8,9 @@ export const routes: Routes = [
       title: 'Single Justice Procedure - Prosecutor'
     },
     component: DashboardContainer
+  },
+  {
+    path: 'case-overview',
+    loadChildren: './case-overview/case-overview.module#CaseOverviewModule'
   }
 ];
