@@ -32,7 +32,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             pdk-fieldset=""
           >
             <legend
-              class="govuk-fieldset__legend"
+              class="govuk-visually-hidden govuk-fieldset__legend"
               ng-reflect-type="default"
             >
                From 
@@ -43,7 +43,10 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               class="govuk-hint"
             >
               
+              
+              
                For example, 13 6 2016 
+              
             </pdk-hint>
             
             <pdk-date-input
@@ -141,7 +144,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                   <input
                     _ngcontent-c0=""
                     autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4 govuk-input--width-5"
+                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
                     id="pdk-form-control-1-year"
                     maxlength="4"
@@ -184,7 +187,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             pdk-fieldset=""
           >
             <legend
-              class="govuk-fieldset__legend"
+              class="govuk-visually-hidden govuk-fieldset__legend"
               ng-reflect-type="default"
             >
                To 
@@ -195,7 +198,10 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               class="govuk-hint"
             >
               
+              
+              
                For example, 13 7 2016 
+              
             </pdk-hint>
             
             <pdk-date-input
@@ -294,7 +300,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                   <input
                     _ngcontent-c0=""
                     autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4 govuk-input--width-5"
+                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
                     id="pdk-form-control-2-year"
                     maxlength="4"

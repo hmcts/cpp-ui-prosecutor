@@ -8,14 +8,14 @@ import { CaseDetails } from '../../search.interface';
 @Component({
   selector: 'search-results-container',
   template: `
-    <pdk-breadcrumb-list>
+    <ol pdk-breadcrumb-list pdk-margin-top="4">
       <li pdk-breadcrumb-list-item>
         <a href="javascript: void(0)" routerLink="../../" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
         Search for a case
       </li>
-    </pdk-breadcrumb-list>
+    </ol>
     <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="8">Search for a case</h1>
     <search-input (searchTerm)="search($event)"></search-input>
     <search-results-table [searchPayload]="caseDetailsResults$ | async"></search-results-table>

@@ -40,7 +40,7 @@ exports[`SearchInputComponent should compile correctly 1`] = `
                   
                   
                   <label
-                    class="govuk-label"
+                    class="govuk-visually-hidden govuk-label"
                     for="pdk-form-control-1"
                     ng-reflect-type="default"
                   >

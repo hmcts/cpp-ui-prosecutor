@@ -36,7 +36,7 @@
     "@angular/platform-browser-dynamic": "^7.2.6",
     "@angular/router": "^7.2.6",
     "@cpp/core": "^7.0.0-alpha.3",
-    "@cpp/pdk": "^7.0.0-alpha.5",
+    "@cpp/pdk": "^7.0.0-alpha.6",
     "@ngrx/effects": "^7.2.0",
     "@ngrx/router-store": "~7.2.0",
     "@ngrx/store": "~7.2.0",

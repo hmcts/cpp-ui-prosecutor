@@ -16,9 +16,9 @@ exports[`Layout should render 1`] = `
     >
       <a
         class="govuk-skip-link"
-        href="main-content"
+        href="javascript:void(0)"
       >
-        Skip to main content
+         Skip to main content 
       </a>
     </pdk-skip-link>
     
@@ -138,6 +138,7 @@ exports[`Layout should render 1`] = `
                This is a new service – your 
               <a
                 class="govuk-link"
+                data-test-id="feedback"
                 href="javascript:void(0)"
                 pdk-link=""
               >
@@ -278,9 +279,9 @@ exports[`Layout should render correctly with activity 1`] = `
     >
       <a
         class="govuk-skip-link"
-        href="main-content"
+        href="javascript:void(0)"
       >
-        Skip to main content
+         Skip to main content 
       </a>
     </pdk-skip-link>
     
@@ -400,6 +401,7 @@ exports[`Layout should render correctly with activity 1`] = `
                This is a new service – your 
               <a
                 class="govuk-link"
+                data-test-id="feedback"
                 href="javascript:void(0)"
                 pdk-link=""
               >
@@ -537,9 +539,9 @@ exports[`Layout should render correctly with api error 1`] = `
     >
       <a
         class="govuk-skip-link"
-        href="main-content"
+        href="javascript:void(0)"
       >
-        Skip to main content
+         Skip to main content 
       </a>
     </pdk-skip-link>
     
@@ -659,6 +661,7 @@ exports[`Layout should render correctly with api error 1`] = `
                This is a new service – your 
               <a
                 class="govuk-link"
+                data-test-id="feedback"
                 href="javascript:void(0)"
                 pdk-link=""
               >
@@ -796,9 +799,9 @@ exports[`Layout should render correctly with online status 1`] = `
     >
       <a
         class="govuk-skip-link"
-        href="main-content"
+        href="javascript:void(0)"
       >
-        Skip to main content
+         Skip to main content 
       </a>
     </pdk-skip-link>
     
@@ -918,6 +921,7 @@ exports[`Layout should render correctly with online status 1`] = `
                This is a new service – your 
               <a
                 class="govuk-link"
+                data-test-id="feedback"
                 href="javascript:void(0)"
                 pdk-link=""
               >
