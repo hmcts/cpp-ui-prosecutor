@@ -3,7 +3,7 @@ export interface Case {
   urn: string;
   defendant?: Defendant;
   dateTimeCreated: string;
-  caseDocuments: any[]; // todo check schema
+  caseDocuments: CaseDocument[];
   prosecutingAuthority: string;
   completed: boolean;
   assigned: boolean;
@@ -13,6 +13,12 @@ export interface Case {
   onlinePleaReceived: false;
   status: string;
   listedInCriminalCourts: boolean;
+  datesToAvoid?: string;
+  reopenedDate?: string;
+  libraCaseNumber?: string;
+  reopenedInLibraReason?: string;
+  hearingCourtName?: string;
+  hearingTime?: string;
 }
 
 export interface Defendant {
@@ -28,6 +34,8 @@ export interface Defendant {
 export interface Offence {
   id: string;
   offenceCode: string;
+  title: string;
+  legislation: string;
   offenceSequenceNumber: number;
   wording: string;
   cjsCode: string;
@@ -35,20 +43,33 @@ export interface Offence {
   startDate: string;
   chargeDate: string;
   compensation: number;
-  plea?: string;
+  plea?: PleaseStatus;
   pleaMethod?: string;
   pleaDate?: string;
+  pleaMitigation?: string;
   pendingWithdrawal?: boolean;
   prosecutionFacts?: string;
   dobChanged?: boolean;
   addressChanged?: boolean;
   nameChanged?: boolean;
-  contactDetails?: any; // todo check the schema
+  contactDetails?: ContactDetails;
 }
+
+export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';
 
 export interface Interpreter {
   needed: boolean;
 }
+
+export interface CaseDocument {
+  id: string;
+  materialId: string;
+  documentType: CaseDocumentType;
+  documentNumber: number;
+  addedAt: string;
+}
+
+export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER';
 
 export interface PersonalDetails {
   title?: string;
@@ -57,10 +78,17 @@ export interface PersonalDetails {
   dateOfBirth: string;
   gender?: string;
   address?: Address;
-  contactDetails?: any; // check schema
+  contactDetails?: ContactDetails;
   dobChanged?: false;
   addressChanged?: false;
   nameChanged?: false;
+}
+
+export interface ContactDetails {
+  email: string;
+  home: string;
+  mobile: string;
+  niNumber: string;
 }
 
 export interface Address {

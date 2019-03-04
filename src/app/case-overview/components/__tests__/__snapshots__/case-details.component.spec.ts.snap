@@ -1,0 +1,515 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseDetailsComponent should compile correctly 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details
+    ng-reflect-kase="[object Object]"
+  >
+    <h4
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Case Status
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Completed 
+              
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Prosecutor
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Transport for London 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Notice served
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               27 Jan 2019 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Dates to avoid
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should compile correctly if listed in criminal court 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details
+    ng-reflect-kase="[object Object]"
+  >
+    <h4
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Case Status
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Completed 
+              
+              <div
+                class="govuk-body-xs"
+                ng-reflect-type="body-xsmall"
+                pdk-typography="body-xsmall"
+              >
+                 Hearing court  12 Dec 2018 at 12:00 AM
+                <br />
+                 Summons issued 
+              </div>
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Prosecutor
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Transport for London 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Notice served
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               27 Jan 2019 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Dates to avoid
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details
+    ng-reflect-kase="[object Object]"
+  >
+    <h4
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Case Status
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-body-m"
+              ng-reflect-type="body-medium"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+              pdk-typography="body-medium"
+            >
+               Reopened 12 Dec 2018
+              <br />
+               Libra account no: case123
+              <br />
+               Reason: collateral damage 
+              <br />
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Prosecutor
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Transport for London 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Notice served
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               27 Jan 2019 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Dates to avoid
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;

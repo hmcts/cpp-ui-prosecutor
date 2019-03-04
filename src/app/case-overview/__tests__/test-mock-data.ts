@@ -1,8 +1,8 @@
-import { Case, Offence } from '../case-overview.interfaces';
+import { Case, ContactDetails, Offence } from '../case-overview.interfaces';
 
 export const MOCK_OFFENCES: Offence[] = [
   {
-    id: 'e1cfb89e-0dce-4e99-982f-bdf53b1023b6',
+    id: 'offenceId1',
     offenceCode: 'CA03013',
     offenceSequenceNumber: 1,
     wording: 'On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..',
@@ -12,9 +12,9 @@ export const MOCK_OFFENCES: Offence[] = [
     chargeDate: '2019-01-24',
     compensation: 30,
     prosecutionFacts: 'An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..'
-  },
+  } as Offence,
   {
-    id: '4b47bdea-cf48-4f8d-815f-ba88a523dee1',
+    id: 'offenceId2',
     offenceCode: 'CA03013',
     offenceSequenceNumber: 1,
     wording:
@@ -38,16 +38,16 @@ export const MOCK_OFFENCES: Offence[] = [
       'regarding your train journey and the associated fare.The facts of this incidents are now being considered and I ' +
       'must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the' +
       ' LU prosecution policy'
-  }
+  } as Offence
 ];
 
 export const MOCK_CASE: Case = {
   id: 'case-id-test',
   urn: 'TFL26168N21T5',
   defendant: {
-    id: '946544e8-54c0-444b-8be9-5d79aedf7d93',
+    id: 'defendantId1',
     offences: MOCK_OFFENCES,
-    caseId: '734f9fba-445e-461d-9d94-c966a2d71c95',
+    caseId: 'case-id-test',
     interpreter: {
       needed: false
     },
@@ -66,7 +66,7 @@ export const MOCK_CASE: Case = {
         address4: 'Merton',
         postcode: 'CV8 1AB'
       },
-      contactDetails: {},
+      contactDetails: {} as ContactDetails,
       dobChanged: false,
       addressChanged: false,
       nameChanged: false
@@ -75,14 +75,14 @@ export const MOCK_CASE: Case = {
   dateTimeCreated: '2019-02-24T16:35:46.273Z',
   caseDocuments: [
     {
-      id: '7664f354-1537-4767-b57a-5f1b69dd905e',
+      id: 'documentId1',
       materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
       documentType: 'PLEA',
       documentNumber: 1,
       addedAt: '2019-02-25T09:30:24.442Z'
     },
     {
-      id: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
+      id: 'documentId2',
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'SJPN',
       documentNumber: 1,

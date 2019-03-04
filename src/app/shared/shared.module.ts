@@ -6,6 +6,7 @@ import {
   AgePipeModule,
   CaseProsecutorPipeModule,
   CaseStatusPipeModule,
+  DefendantNamePipeModule,
   FormatAddressPipeModule,
   FormatDatePipeModule,
   IfEmptyPipeModule,
@@ -22,11 +23,23 @@ import {
     AgePipeModule,
     CaseProsecutorPipeModule,
     CaseStatusPipeModule,
+    DefendantNamePipeModule,
     FormatAddressPipeModule,
     FormatDatePipeModule,
     IfEmptyPipeModule,
     PleaStatusPipeModule
   ],
-  exports: [FromToDatesModule, PdkCoreModule]
+  exports: [
+    FromToDatesModule,
+    PdkCoreModule,
+    AgePipeModule,
+    CaseProsecutorPipeModule,
+    CaseStatusPipeModule,
+    DefendantNamePipeModule,
+    FormatAddressPipeModule,
+    FormatDatePipeModule,
+    IfEmptyPipeModule,
+    PleaStatusPipeModule
+  ]
 })
 export class SharedModule {}

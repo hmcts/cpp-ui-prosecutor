@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantOffenceComponent should compile correctly 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offence="[object Object]"
+  >
+    <h2
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-l"
+      ng-reflect-type="heading-large"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="heading-large"
+    >
+       Offence 
+      
+    </h2>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Placeholder for title
+    </h3>
+    <pdk-foldable-text
+      _nghost-c0=""
+      class="govuk-body-m"
+      ng-reflect-type="body-medium"
+      pdk-typography="body-medium"
+    >
+      <div
+        _ngcontent-c0=""
+        class="pdk-foldable"
+      >
+        <span
+          _ngcontent-c0=""
+          aria-expanded="false"
+          class="pdk-foldable__content"
+          id="pdk-foldable-text-1"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+        
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       Placeholder for legislation 
+    </p>
+    
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      ng-reflect-vertical="6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        ng-reflect-right="4"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+      
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should compile correctly with the offence is pending withdrawal 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offence="[object Object]"
+  >
+    <h2
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-l"
+      ng-reflect-type="heading-large"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="heading-large"
+    >
+       Offence 
+      
+    </h2>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Placeholder for title
+    </h3>
+    <pdk-foldable-text
+      _nghost-c2=""
+      class="govuk-body-m"
+      ng-reflect-type="body-medium"
+      pdk-typography="body-medium"
+    >
+      <div
+        _ngcontent-c2=""
+        class="pdk-foldable"
+      >
+        <span
+          _ngcontent-c2=""
+          aria-expanded="false"
+          class="pdk-foldable__content"
+          id="pdk-foldable-text-2"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction  
+        </span>
+        
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       Placeholder for legislation 
+    </p>
+    
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 27 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      ng-reflect-vertical="6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        ng-reflect-right="4"
+        pdk-margin-right="4"
+      >
+         Notified Not Guilty 
+      </pdk-badge>
+      
+      <pdk-badge
+        class="pdk-badge"
+      >
+         Pending withdrawal 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
