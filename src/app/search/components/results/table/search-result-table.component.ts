@@ -20,8 +20,10 @@ import { CaseDetails } from '../../../search.interface';
       </thead>
       <tbody pdk-table-body>
         <tr pdk-table-row *ngFor="let searchResult of searchPayload">
-          <td pdk-table-cell pdk-link>
-            {{ searchResult.defendant | defendantNamePipe }}
+          <td pdk-table-cell>
+            <a href="javascript:void(0)" pdk-link [routerLink]="['/case-overview', searchResult.caseId]">
+              <b>{{ searchResult.defendant | defendantNamePipe }}</b>
+            </a>
           </td>
           <td pdk-table-cell data-role="urn">{{ searchResult.urn }}</td>
           <td pdk-table-cell>{{ searchResult.status | caseStatusPipe }}</td>

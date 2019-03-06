@@ -14,7 +14,7 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
     let params = {};
     let route = routerState.root;
 
-    while (route.firstChild) {
+    while (route) {
       params = { ...params, ...route.params };
       route = route.firstChild;
     }

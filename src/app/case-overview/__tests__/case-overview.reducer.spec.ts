@@ -2,11 +2,7 @@ import { caseOverviewReducer, CaseOverviewState, CaseOverviewState } from '../ca
 import { GetCaseById, GetCaseByIdSuccess } from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
 
-const state = {
-  caseId: null,
-  offences: null
-} as CaseOverviewState;
-
+const state = null;
 describe(' Case Overview reducer', () => {
   let resultState: CaseOverviewState;
   let action: any;
@@ -15,17 +11,6 @@ describe(' Case Overview reducer', () => {
     beforeEach(() => {
       action = {} as any;
       resultState = caseOverviewReducer(undefined, action);
-    });
-
-    it('should set the state', () => {
-      expect(resultState).toMatchSnapshot();
-    });
-  });
-
-  describe('when GET_CASE_BY_ID', () => {
-    beforeEach(() => {
-      action = new GetCaseById('case-id-test');
-      resultState = caseOverviewReducer(state, action);
     });
 
     it('should set the state', () => {

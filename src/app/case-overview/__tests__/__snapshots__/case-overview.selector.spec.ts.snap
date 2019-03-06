@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`case overview/selectors getCaseById should select the case from the store 1`] = `
+exports[`case overview/selectors getCase() should select the case from the store 1`] = `
 Object {
   "assigned": false,
   "caseDocuments": Array [
@@ -89,5 +89,3 @@ Object {
   "urn": "TFL26168N21T5",
 }
 `;
-
-exports[`case overview/selectors getCaseId should select the caseId 1`] = `"case-id-test"`;

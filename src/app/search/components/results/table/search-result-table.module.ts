@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CaseProsecutorPipeModule } from '../../../../shared/pipes/case-prosecutor/case-prosecutor.module';
 import { CaseStatusPipeModule } from '../../../../shared/pipes/case-status/case-status.module';
 import { DefendantNamePipeModule } from '../../../../shared/pipes/defendant-name/defendant-name.module';
+import { RouterModule } from '@angular/router';
 
 const DECLARATIONS = [SearchResultsTableComponent];
 
@@ -14,6 +15,7 @@ const DECLARATIONS = [SearchResultsTableComponent];
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     PdkCoreModule,
     PdkTableModule,
     PdkInsetTextModule,

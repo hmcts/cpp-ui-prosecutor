@@ -19,6 +19,7 @@ import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SearchModule } from './search/search.module';
+import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { SearchModule } from './search/search.module';
     DashboardModule,
     AppConfigModule,
     SearchModule,
+    ErrorPagesModule,
     ...environment.modules
   ],
   providers: [
