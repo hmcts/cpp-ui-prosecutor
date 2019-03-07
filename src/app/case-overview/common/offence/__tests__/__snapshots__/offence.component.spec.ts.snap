@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Offence component should compile 1`] = `
+<test-offence
+  offence={[Function Object]}
+>
+  <offence-component
+    ng-reflect-number="1"
+    ng-reflect-offence="[object Object]"
+  >
+    
+    <span
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+      ng-reflect-bottom="5"
+      ng-reflect-top="5"
+      pdk-margin-bottom="5"
+      pdk-margin-top="5"
+    >
+      
+      <div
+        class="govuk-!-margin-0 govuk-body-m"
+        ng-reflect-margin="0"
+        ng-reflect-type="body-medium"
+        pdk-margin="0"
+        pdk-typography="body-medium"
+      >
+        Offence 1
+      </div>
+      <div
+        class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-body-m"
+        ng-reflect-bottom="1"
+        ng-reflect-top="1"
+        ng-reflect-type="body-medium"
+        pdk-margin-bottom="1"
+        pdk-margin-top="1"
+        pdk-typography="body-medium"
+      >
+        <b>
+          Temporary title
+        </b>
+      </div>
+      <div
+        class="govuk-!-margin-0 govuk-body-m"
+        ng-reflect-margin="0"
+        ng-reflect-type="body-medium"
+        pdk-margin="0"
+        pdk-typography="body-medium"
+      >
+        On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..
+      </div>
+    </span>
+    <hr />
+  </offence-component>
+</test-offence>
+`;
