@@ -1,5 +1,5 @@
 import { request, User } from '@cpp/ui.priming';
-import { StagingParam } from '../interfaces';
+import { CaseData, StagingParam } from '../interfaces';
 import * as uuid from 'uuid/v4';
 
 export const stageSjpCase = (param: StagingParam, user: User): Promise<any> => {
@@ -26,6 +26,19 @@ export const stageSjpCase = (param: StagingParam, user: User): Promise<any> => {
     formData: form,
     headers: {
       'Content-Type': 'multipart/form-data',
+      charset: 'UTF-8'
+    },
+    user
+  });
+};
+
+export const stageCaseWithMultipleOffences = (body: CaseData, user: User): Promise<any> => {
+  return request({
+    method: 'POST',
+    url: `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v1/prosecutions`,
+    body,
+    headers: {
+      'Content-Type': 'application/vnd.hmcts.cjs.sjp-prosecution+json',
       charset: 'UTF-8'
     },
     user

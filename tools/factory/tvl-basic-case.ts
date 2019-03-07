@@ -4,10 +4,10 @@ import { build, TVL_USER } from '../utils';
 import { fetchCaseByUrn } from '../helpers';
 
 export const buildTvlBasicCase = async () => {
-  const caseData = DataBuilder.createCaseDataForTvl();
+  const caseDataBuilder = DataBuilder.createCaseDataForTvl();
 
-  await stageSjpCase(caseData.buildStagingParam(), TVL_USER);
-  const kase = await fetchCaseByUrn(caseData.getUrn());
+  await stageSjpCase(caseDataBuilder.buildStagingParam(), TVL_USER);
+  const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());
 
   return kase;
 };

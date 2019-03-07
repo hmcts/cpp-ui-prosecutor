@@ -7,7 +7,8 @@ const noop = () => {};
 
 const cases = {
   'tfl-case': factory.createBasicTflCase,
-  'tvl-case': factory.createBasicTvlCase
+  'tvl-case': factory.createBasicTvlCase,
+  'tvl-case-mo': factory.createTvlCaseWithMultipleOffences
 };
 
 const { _, apiUrl = defaultUrl } = argv;

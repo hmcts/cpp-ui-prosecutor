@@ -4,10 +4,10 @@ import { build, TFL_USER } from '../utils';
 import { fetchCaseByUrn } from '../helpers';
 
 export const buildTflBasicCase = async () => {
-  const caseData = DataBuilder.createCaseDataForTfl();
+  const caseDataBuilder = DataBuilder.createCaseDataForTfl();
 
-  await stageSjpCase(caseData.buildStagingParam(), TFL_USER);
-  const kase = await fetchCaseByUrn(caseData.getUrn());
+  await stageSjpCase(caseDataBuilder.buildStagingParam(), TFL_USER);
+  const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());
 
   return kase;
 };
