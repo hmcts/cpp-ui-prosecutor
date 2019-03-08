@@ -1,9 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Defendant } from '../../../search/search.interface';
 
-@Pipe({ name: 'defendantNamePipe' })
+@Pipe({ name: 'defendantName' })
 export class DefendantNamePipe implements PipeTransform {
-  transform(defendant: Defendant): string {
-    return defendant.firstName.toUpperCase() + ` ` + defendant.lastName;
+  transform({ firstName, lastName }, reOrder = true, capitalize = true): string {
+    console.log(reOrder);
+    const lName = capitalize ? lastName.toUpperCase() : lastName;
+    return reOrder ? lName + ' ' + firstName : firstName + ' ' + lName;
   }
 }

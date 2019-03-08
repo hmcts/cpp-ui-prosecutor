@@ -22,12 +22,12 @@ import { CaseDetails } from '../../../search.interface';
         <tr pdk-table-row *ngFor="let searchResult of searchPayload">
           <td pdk-table-cell>
             <a href="javascript:void(0)" pdk-link [routerLink]="['/case-overview', searchResult.caseId]">
-              <b>{{ searchResult.defendant | defendantNamePipe }}</b>
+              <b>{{ searchResult.defendant | defendantName }}</b>
             </a>
           </td>
           <td pdk-table-cell data-role="urn">{{ searchResult.urn }}</td>
-          <td pdk-table-cell>{{ searchResult.status | caseStatusPipe }}</td>
-          <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutorPipe }}</td>
+          <td pdk-table-cell>{{ searchResult.status | caseStatus }}</td>
+          <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutor }}</td>
           <td pdk-table-cell>{{ searchResult.defendant.dateOfBirth | date: 'dd MMM yyyy' }}</td>
           <td pdk-table-cell>{{ searchResult.postingDate | date: 'dd MMM yyyy' }}</td>
         </tr>

@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'caseStatusPipe' })
+@Pipe({ name: 'caseStatus' })
 export class CaseStatusPipe implements PipeTransform {
   transform(content: string): string {
     switch (content) {
