@@ -6,13 +6,13 @@ import { ApiError } from '../../core/actions';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs';
 import { CaseOverviewEffects } from '../case-overview.effects';
-import { GetCaseById, CaseOverviewActions, GetCaseByIdSuccess, CaseOverviewActions } from '../case-overview.action';
-import { CaseOverviewService, CaseOverviewService } from '../case-overview.service';
+import { CaseOverviewActions, GetCaseById, GetCaseByIdSuccess } from '../case-overview.action';
+import { CaseOverviewService } from '../case-overview.service';
 import { MOCK_CASE } from './test-mock-data';
-import { CaseOverviewEffects } from '../case-overview.effects';
 
 export class TestActions extends Actions {
   set stream(source: Observable<any>) {
+    // tslint:disable-next-line
     this.source = source;
   }
 }

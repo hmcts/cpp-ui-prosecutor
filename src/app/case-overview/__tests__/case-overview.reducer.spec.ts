@@ -1,5 +1,5 @@
-import { caseOverviewReducer, CaseOverviewState, CaseOverviewState } from '../case-overview.reducer';
-import { GetCaseById, GetCaseByIdSuccess } from '../case-overview.action';
+import { caseOverviewReducer, CaseOverviewState } from '../case-overview.reducer';
+import { GetCaseByIdSuccess } from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
 
 const state = null;

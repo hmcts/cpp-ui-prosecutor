@@ -4,7 +4,7 @@ import { cold, hot } from 'jasmine-marbles';
 import { Store } from '@ngrx/store';
 import { ApiError } from '../../core/actions';
 import { RouterTestingModule } from '@angular/router/testing';
-import { empty, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { SearchEffects } from '../search.effects';
 import { Search, SearchActions, SearchSuccess } from '../search.action';
 import { SearchService } from '../search.service';
@@ -13,10 +13,11 @@ import { MOCK_CASES } from './test-mock-data';
 
 export class TestActions extends Actions {
   constructor() {
-    super(empty());
+    super();
   }
 
   set stream(source: Observable<any>) {
+    // tslint:disable-next-line
     this.source = source;
   }
 }
