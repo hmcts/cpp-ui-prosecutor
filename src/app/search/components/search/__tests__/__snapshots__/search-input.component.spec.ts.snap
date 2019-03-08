@@ -40,8 +40,9 @@ exports[`SearchInputComponent should compile correctly 1`] = `
                   
                   
                   <label
-                    class="govuk-visually-hidden govuk-label"
+                    class="govuk-label"
                     for="pdk-form-control-1"
+                    ng-reflect-hidden="false"
                     ng-reflect-type="default"
                   >
                       
@@ -92,8 +93,8 @@ exports[`SearchInputComponent should compile correctly 1`] = `
                         </pdk-search-icon>
                         <span
                           class="pdk-searchbar__label govuk-visually-hidden"
-                          ng-reflect-accessible=""
-                          pdk-accessible=""
+                          ng-reflect-hidden=""
+                          pdk-visually-hidden=""
                         >
                             
                         </span>
