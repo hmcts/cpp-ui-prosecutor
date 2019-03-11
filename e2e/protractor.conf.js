@@ -9,7 +9,7 @@ exports.config = {
     ...protractorConfig.params,
     apiUrl: 'http://localhost:8181/'
   },
-  specs: ['./src/**/*.e2e-spec.ts'],
+  specs: ['./src/specs/**/*.e2e-spec.ts'],
   async onPrepare() {
     defaults({
       baseUrl: browser.params.apiUrl,

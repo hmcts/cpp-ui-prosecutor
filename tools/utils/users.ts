@@ -15,3 +15,11 @@ export const TVL_USER: User = {
   email: 'amy@test.hmcts.net ',
   source: 'CPP'
 };
+
+export const PROSECUTOR_USER: User = {
+  userId: 'a9448185-672e-4aea-94d6-5988355ed459',
+  firstName: 'Prosecutor',
+  lastName: '',
+  email: 'amy@test.hmcts.net ',
+  source: 'CPP'
+};

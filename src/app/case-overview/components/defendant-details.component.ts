@@ -13,7 +13,7 @@ import { PersonalDetails } from '../case-overview.interfaces';
         </div>
       </pdk-grid>
       <pdk-grid one-half>
-        <div pdk-padding-vertical="2">
+        <div pdk-padding-vertical="2" data-role="defendant-name">
           {{ defendantDetails | defendantName }}
         </div>
       </pdk-grid>
@@ -23,7 +23,7 @@ import { PersonalDetails } from '../case-overview.interfaces';
           <b>Date of Birth</b>
         </div>
       </pdk-grid>
-      <pdk-grid one-half>
+      <pdk-grid one-half data-role="date-of-birth">
         <div pdk-padding-vertical="2">
           {{ defendantDetails.dateOfBirth | formatDate: 'd MMM y' }}
           ({{ defendantDetails.dateOfBirth | age }} years old)
@@ -47,7 +47,7 @@ import { PersonalDetails } from '../case-overview.interfaces';
         </div>
       </pdk-grid>
       <pdk-grid one-half>
-        <div pdk-padding-vertical="2">
+        <div pdk-padding-vertical="2" data-role="defendant-email">
           {{ defendantDetails.contactDetails?.email | ifEmpty: '–' }}
         </div>
       </pdk-grid>

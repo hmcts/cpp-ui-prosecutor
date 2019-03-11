@@ -1,12 +1,11 @@
-import { DataBuilder } from '../helpers/data-builder';
-import { stageSjpCase } from '../contexts/sjp-staging';
+import { stageProsecutorCase } from '../contexts/staging';
 import { build, TVL_USER } from '../utils';
-import { fetchCaseByUrn } from '../helpers';
+import { fetchCaseByUrn, ProsecutorCaseDataBuilder } from '../helpers';
 
 export const buildTvlBasicCase = async () => {
-  const caseDataBuilder = DataBuilder.createCaseDataForTvl();
+  const caseDataBuilder = ProsecutorCaseDataBuilder.createCaseDataForTvl();
 
-  await stageSjpCase(caseDataBuilder.buildStagingParam(), TVL_USER);
+  await stageProsecutorCase(caseDataBuilder.getData(), TVL_USER);
   const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());
 
   return kase;

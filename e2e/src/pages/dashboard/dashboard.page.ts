@@ -3,7 +3,7 @@ import { $, $$ } from 'protractor';
 import { isStable } from '../../util';
 
 export class DashboardPage extends BasePage {
-  public readonly subHeading = $$('h1 span');
+  public readonly subHeading = $('h1 span');
 
   constructor() {
     super(`/`);

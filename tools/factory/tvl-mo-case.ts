@@ -1,12 +1,12 @@
-import { stageCaseWithMultipleOffences } from '../contexts/sjp-staging';
+import { stageProsecutorCase } from '../contexts/staging';
 import { build, TVL_USER } from '../utils';
 import { fetchCaseByUrn } from '../helpers';
-import { MoCaseDataBuilder } from '../helpers/mo-case-data-builder';
+import { ProsecutorCaseDataBuilder } from '../helpers/prosecutor-case-data-builder';
 
 export const buildTvlCaseWithMultipleOffences = async () => {
-  const caseDataBuilder = MoCaseDataBuilder.createCaseDataForTvl();
+  const caseDataBuilder = ProsecutorCaseDataBuilder.createCaseDataForMultipleOffences();
 
-  await stageCaseWithMultipleOffences(caseDataBuilder.getData(), TVL_USER);
+  await stageProsecutorCase(caseDataBuilder.getData(), TVL_USER);
   const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());
 
   return kase;

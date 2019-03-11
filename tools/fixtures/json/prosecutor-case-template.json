@@ -1,0 +1,55 @@
+{
+  "prosecutorCaseData": {
+    "prosecutionSubmissionDetails": {
+      "urn": "TVL12345TVL004",
+      "prosecutingAuthority": "GAEAA01",
+      "informant": "Adam",
+      "writtenChargePostingDate": "2018-03-20",
+      "additionalNewProperty": "test"
+    },
+    "defendant": {
+      "prosecutorDefendantId": "123",
+      "asn": "???",
+      "prosecutorCosts": "20.10",
+      "defendantPerson": {
+        "title": "Mr",
+        "forename": "John",
+        "forename2": "Adam",
+        "forename3": "Theodore",
+        "surname": "SMITH",
+        "contactDetails": {
+          "workPhoneNumber": "1231231230",
+          "homePhoneNumber": "1231231230",
+          "mobilePhoneNumber": "1231231230",
+          "primaryEmail": "john@email.com",
+          "secondaryEmail": "john@email.com"
+        },
+        "dateOfBirth": "1980-02-04",
+        "selfDefinedInformation": {
+          "gender": 0,
+          "ethnicity": "W1",
+          "nationality": "GBR",
+          "additionalNationality": "GBR"
+        },
+        "occupation": "TA",
+        "occupationCode": 666,
+        "driverNumber": "AS",
+        "address": {
+          "address1": "Flat 55",
+          "address2": "1 Oxford Road",
+          "address3": "'SW99 1AA'",
+          "address4": "Surrey",
+          "address5": "",
+          "postcode": "SW99 1AA"
+        },
+        "nationalInsuranceNumber": "AA123456C"
+      },
+      "documentationLanguage": "E",
+      "hearingLanguage": "E",
+      "languageRequirement": "no special language needs",
+      "specificRequirements": "no special needs",
+      "numPreviousConvictions": 3,
+      "offences": []
+    }
+  }
+}

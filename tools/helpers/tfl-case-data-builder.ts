@@ -2,17 +2,17 @@ import { formatDate, getAgeFromDate, subtractDays } from '../utils/date';
 import { randomIntFromRange } from '../utils';
 import { CaseData, StagingParam } from '../interfaces';
 
-const { sjpCaseData } = require('../fixtures/json/sjp-case-template.json');
+const { sjpCaseData } = require('../fixtures/json/tfl-case-template.json');
 
-export class DataBuilder {
+export class TflCaseDataBuilder {
   constructor(private data: CaseData) {}
 
   static getRandomUrnSuffix() {
     return randomIntFromRange(100000000, 9999999999);
   }
 
-  public static initCaseData(urn, postedDaysAgo: number = 28): DataBuilder {
-    const dataBuilder = new DataBuilder(sjpCaseData);
+  public static initCaseData(urn, postedDaysAgo: number = 28): TflCaseDataBuilder {
+    const dataBuilder = new TflCaseDataBuilder(sjpCaseData);
     const postingDate = subtractDays(postedDaysAgo);
     const defendantDob = '1977-10-17';
     const defendantAge = getAgeFromDate(defendantDob);
@@ -28,12 +28,12 @@ export class DataBuilder {
       .set('defendantBirthOnCaseOverview', formatDate(defendantDob) + ' (' + defendantAge + ')');
   }
 
-  static createCaseDataForTfl(urn = null, postedDaysAgo: number = 28): DataBuilder {
+  static createCaseDataForTfl(urn = null, postedDaysAgo: number = 28): TflCaseDataBuilder {
     if (!urn) {
-      urn = 'TFL' + DataBuilder.getRandomUrnSuffix();
+      urn = 'TFL' + TflCaseDataBuilder.getRandomUrnSuffix();
     }
 
-    const dataBuilder = DataBuilder.initCaseData(urn, postedDaysAgo);
+    const dataBuilder = TflCaseDataBuilder.initCaseData(urn, postedDaysAgo);
 
     return dataBuilder
       .set('offenceCode', 'CA03013')
@@ -42,22 +42,6 @@ export class DataBuilder {
         label: 'Transport for London'
       })
       .set('defendantSurname', 'Protractor-' + urn.replace('TFL', ''));
-  }
-
-  static createCaseDataForTvl(urn = null, postedDaysAgo: number = 28): DataBuilder {
-    if (!urn) {
-      urn = 'TVL' + DataBuilder.getRandomUrnSuffix();
-    }
-
-    const dataBuilder = DataBuilder.initCaseData(urn, postedDaysAgo);
-
-    return dataBuilder
-      .set('offenceCode', 'CA03013')
-      .set('prosecutingAuthority', {
-        shortCode: 'TVL',
-        label: 'TV licensing'
-      })
-      .set('defendantSurname', 'Protractor-' + urn.replace('TVL', ''));
   }
 
   set(key: string, value: any) {

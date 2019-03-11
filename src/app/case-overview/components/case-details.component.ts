@@ -24,7 +24,7 @@ import { Case } from '../case-overview.interfaces';
 
       <ng-template #caseStatusSection>
         <pdk-grid one-half>
-          <div pdk-padding-vertical="2">
+          <div pdk-padding-vertical="2" data-role="case-status">
             {{ kase.status | caseStatus }}
             <div *ngIf="kase.listedInCriminalCourts" pdk-typography="body-xsmall">
               {{ kase.hearingCourtName }}
@@ -41,7 +41,7 @@ import { Case } from '../case-overview.interfaces';
         </div>
       </pdk-grid>
       <pdk-grid one-half>
-        <div pdk-padding-vertical="2">
+        <div pdk-padding-vertical="2" data-role="prosecutor">
           {{ kase.prosecutingAuthority | caseProsecutor }}
         </div>
       </pdk-grid>

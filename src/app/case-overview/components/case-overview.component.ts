@@ -52,7 +52,11 @@ import { Case, Defendant, Offence } from '../case-overview.interfaces';
       </pdk-grid>
       <pdk-grid one-third></pdk-grid>
     </pdk-grid>
-    <div pdk-margin-vertical="8" *ngFor="let offence of offences; let i = index; let last = last">
+    <div
+      pdk-margin-vertical="8"
+      data-role="defendant-offences"
+      *ngFor="let offence of offences; let i = index; let last = last"
+    >
       <defendant-offence [index]="offences.length > 1 ? i + 1 : 0" [offence]="offence" [kase]="kase">
       </defendant-offence>
       <statement-of-facts *ngIf="offence.prosecutionFacts" [statementOfFacts]="offence.prosecutionFacts">

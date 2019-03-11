@@ -57,6 +57,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             <div
               _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              data-role="defendant-name"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
@@ -88,6 +89,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
         </pdk-grid>
         <pdk-grid
           _ngcontent-c0=""
+          data-role="date-of-birth"
           ng-reflect-one-half=""
           one-half=""
         >
@@ -181,6 +183,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             <div
               _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              data-role="defendant-email"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >

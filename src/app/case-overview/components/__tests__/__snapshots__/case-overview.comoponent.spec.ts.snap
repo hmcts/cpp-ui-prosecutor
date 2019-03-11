@@ -402,6 +402,7 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
     
     <div
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+      data-role="defendant-offences"
       ng-reflect-vertical="8"
       pdk-margin-vertical="8"
     >
@@ -535,6 +536,7 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
     </div>
     <div
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+      data-role="defendant-offences"
       ng-reflect-vertical="8"
       pdk-margin-vertical="8"
     >
@@ -1071,6 +1073,7 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
     
     <div
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+      data-role="defendant-offences"
       ng-reflect-vertical="8"
       pdk-margin-vertical="8"
     >
@@ -1611,6 +1614,7 @@ exports[`CaseOverviewComponent should compile correctly with single offence 1`] 
     
     <div
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+      data-role="defendant-offences"
       ng-reflect-vertical="8"
       pdk-margin-vertical="8"
     >

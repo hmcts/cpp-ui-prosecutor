@@ -1,6 +1,6 @@
 import { TFL_USER } from '../utils';
 import { request } from '@cpp/ui.priming';
-import { Case } from '../interfaces';
+import { Case } from '../../src/app/case-overview/case-overview.interfaces';
 
 export const getCaseByUrn = (urn: string): Promise<Case> => {
   return request({

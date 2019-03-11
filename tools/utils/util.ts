@@ -1,5 +1,11 @@
 import { error, info } from '@cpp/ui.priming';
 import { compose } from 'ramda';
+import { createReadStream, ReadStream } from 'fs';
+import { join } from 'path';
+
+export const getFixture = (filename: string): ReadStream => {
+  return createReadStream(join(__dirname, '../fixtures', filename));
+};
 
 export const randomIntFromRange = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
