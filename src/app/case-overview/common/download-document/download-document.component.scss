@@ -1,0 +1,22 @@
+.download-document {
+  float: left;
+  clear: both;
+
+  pdk-file-download-icon {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .document-item {
+    float: left;
+
+    span,
+    a {
+      vertical-align: top;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

@@ -12,10 +12,24 @@ describe('case overview/selectors', () => {
     return [...actions].reduce((state, action) => reducer(state, action), { kase: null } as fromSelectors.FeatureState);
   };
 
-  describe('getCase()', () => {
+  describe('getCase', () => {
     it('should select the case from the store', () => {
       const state = createState([new fromActions.GetCaseByIdSuccess(MOCK_CASE)]);
       expect(fromSelectors.getCase(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getDefendant', () => {
+    it('should select the case from the store', () => {
+      const state = createState([new fromActions.GetCaseByIdSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getDefendant(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getOffences', () => {
+    it('should select the case from the store', () => {
+      const state = createState([new fromActions.GetCaseByIdSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getOffences(state)).toMatchSnapshot();
     });
   });
 });

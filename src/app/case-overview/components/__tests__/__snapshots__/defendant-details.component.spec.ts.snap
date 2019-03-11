@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsComponent should compile correctly 1`] = `
+<defendant-details-test
+  defendantDetails={[Function Object]}
+>
+  <defendant-details
+    _nghost-c0=""
+    ng-reflect-defendant-details="[object Object]"
+  >
+    <h4
+      _ngcontent-c0=""
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Personal details
+    </h4>
+    <pdk-grid
+      _ngcontent-c0=""
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Name
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               SMITH Guy 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Date of Birth
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               11 Mar 1957 (59 years old) 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Address
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="pre-line govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  CV8 1AB 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Email
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Home telephone
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                Mobile
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b
+                _ngcontent-c0=""
+              >
+                National Insurance Number
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          _ngcontent-c0=""
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <div
+              _ngcontent-c0=""
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </defendant-details>
+</defendant-details-test>
+`;
