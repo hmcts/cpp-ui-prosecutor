@@ -1,4 +1,4 @@
-import { SearchResult } from '../../contexts/sjp';
+import { CaseDetails, SearchResult } from '../../contexts/sjp';
 
 export const MOCK_SEARCH_RESULTS: SearchResult = {
   foundCasesWithOutdatedDefendantsName: false,
@@ -11,7 +11,24 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
       enterpriseId: 'Z8QG1JR7CMTD',
       prosecutingAuthority: 'TFL',
       postingDate: '2019-01-27',
-      defendant: { firstName: 'Guy', lastName: 'Smith', dateOfBirth: '1957-03-11', outdated: false },
+      defendant: {
+        firstName: 'Guy',
+        lastName: 'Smith',
+        dateOfBirth: '1957-03-11',
+        dobChanged: false,
+        nameChanged: false,
+        gender: 'male',
+        title: 'alpha',
+        outdated: false,
+        address: {
+          address1: 'Hogwards',
+          postcode: 'E1'
+        },
+        addressChanged: false,
+        contactDetails: {
+          niNumber: 'asdad'
+        }
+      },
       status: 'COMPLETED',
       listedInCriminalCourts: false
     },
@@ -26,7 +43,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
       defendant: { firstName: 'Jonti Jonti Jonti', lastName: 'Smith', dateOfBirth: '1985-03-04', outdated: false },
       status: 'COMPLETED',
       listedInCriminalCourts: false
-    },
+    } as CaseDetails,
     {
       caseId: 'caseId3',
       urn: 'TFL84598WRMSZ',
@@ -38,7 +55,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
       defendant: { firstName: 'Murad', lastName: 'Smith', dateOfBirth: '1989-03-04', outdated: false },
       status: 'NO_PLEA_RECEIVED',
       listedInCriminalCourts: false
-    },
+    } as CaseDetails,
     {
       caseId: 'caseId4',
       urn: 'TFL92613WXH4V',
@@ -50,7 +67,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
       defendant: { firstName: 'Petru', lastName: 'Smith', dateOfBirth: '1949-03-14', outdated: false },
       status: 'NO_PLEA_RECEIVED_READY_FOR_DECISION',
       listedInCriminalCourts: false
-    },
+    } as CaseDetails,
     {
       caseId: 'caseId5',
       urn: 'TVL26120QYR99',
@@ -67,6 +84,6 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
       },
       status: 'COMPLETED',
       listedInCriminalCourts: false
-    }
+    } as CaseDetails
   ]
 };

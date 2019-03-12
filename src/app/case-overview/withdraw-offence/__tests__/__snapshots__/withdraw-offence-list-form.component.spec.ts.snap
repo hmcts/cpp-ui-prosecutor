@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithdrawOffenceListFormComponent should compile correctly 1`] = `
+<test-withdraw-list-form-
+  form={[Function Function]}
+  offences={[Function Array]}
+>
+  <withdraw-list-form>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      
+      <h1
+        class="govuk-heading-m"
+        ng-reflect-type="heading-medium"
+        pdk-typography="heading-medium"
+      >
+        Would you like to withdraw any of the following offences?
+      </h1>
+      
+      <div
+        class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+        ng-reflect-bottom="0"
+        ng-reflect-top="5"
+        pdk-margin-bottom="0"
+        pdk-margin-top="5"
+      >
+        <button
+          pdk-button=""
+          type="submit"
+        >
+          Confirm
+        </button>
+        <div
+          class="govuk-!-margin-top-0"
+          ng-reflect-top="0"
+          pdk-margin-top="0"
+        >
+          <a
+            class="govuk-link govuk-body-m"
+            data-test-id="cancel-withdrawal"
+            href="javascript:void(0)"
+            ng-reflect-type="body-medium"
+            pdk-link=""
+            pdk-typography="body-medium"
+            routerlink="../../.."
+          >
+             Cancel 
+          </a>
+        </div>
+      </div>
+    </form>
+  </withdraw-list-form>
+</test-withdraw-list-form->
+`;

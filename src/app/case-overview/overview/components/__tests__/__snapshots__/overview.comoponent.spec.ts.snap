@@ -409,7 +409,23 @@ exports[`OverviewComponent should compile correctly 1`] = `
         >
           <div
             class="govuk-grid-column-one-third"
-          />
+          >
+            <div
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
+            >
+              <a
+                class="govuk-heading-s"
+                href="javascript: void(0)"
+                ng-reflect-type="heading-small"
+                pdk-typography="heading-small"
+                routerlink="withdraw-offence"
+              >
+                Manage offence withdrawals
+              </a>
+            </div>
+          </div>
         </pdk-grid>
       </div>
     </pdk-grid>
@@ -1114,7 +1130,23 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         >
           <div
             class="govuk-grid-column-one-third"
-          />
+          >
+            <div
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
+            >
+              <a
+                class="govuk-heading-s"
+                href="javascript: void(0)"
+                ng-reflect-type="heading-small"
+                pdk-typography="heading-small"
+                routerlink="withdraw-offence"
+              >
+                Manage offence withdrawals
+              </a>
+            </div>
+          </div>
         </pdk-grid>
       </div>
     </pdk-grid>
@@ -1679,7 +1711,23 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         >
           <div
             class="govuk-grid-column-one-third"
-          />
+          >
+            <div
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
+            >
+              <a
+                class="govuk-heading-s"
+                href="javascript: void(0)"
+                ng-reflect-type="heading-small"
+                pdk-typography="heading-small"
+                routerlink="withdraw-offence"
+              >
+                Manage offence withdrawals
+              </a>
+            </div>
+          </div>
         </pdk-grid>
       </div>
     </pdk-grid>

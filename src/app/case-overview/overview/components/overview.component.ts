@@ -50,7 +50,13 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
           </pdk-tabs>
         </div>
       </pdk-grid>
-      <pdk-grid one-third></pdk-grid>
+      <pdk-grid one-third>
+        <div pdk-margin-top="5">
+          <a href="javascript: void(0)" pdk-typography="heading-small" routerLink="withdraw-offence"
+            >Manage offence withdrawals</a
+          >
+        </div>
+      </pdk-grid>
     </pdk-grid>
     <div pdk-margin-vertical="8" *ngFor="let offence of offences; let i = index; let last = last">
       <defendant-offence [index]="offences.length > 1 ? i + 1 : 0" [offence]="offence" [kase]="kase">

@@ -22,7 +22,19 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
         "firstName": "Guy",
         "lastName": "Smith",
         "dateOfBirth": "1957-03-11",
-        "outdated": false
+        "dobChanged": false,
+        "nameChanged": false,
+        "gender": "male",
+        "title": "alpha",
+        "outdated": false,
+        "address": {
+          "address1": "Hogwards",
+          "postcode": "E1"
+        },
+        "addressChanged": false,
+        "contactDetails": {
+          "niNumber": "asdad"
+        }
       },
       "status": "COMPLETED",
       "listedInCriminalCourts": false

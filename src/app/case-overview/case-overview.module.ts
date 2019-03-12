@@ -20,11 +20,17 @@ import { OverviewContainer } from './overview/overview.container';
     RouterModule.forChild([
       {
         path: ':caseId',
-        component: OverviewContainer,
         canActivate: [CaseOverviewGuard],
-        data: {
-          title: 'Case overview'
-        }
+        children: [
+          {
+            path: '',
+            component: OverviewContainer
+          },
+          {
+            path: 'withdraw-offence',
+            loadChildren: './withdraw-offence/withdraw-offence.module#WithdrawOffenceModule'
+          }
+        ]
       }
     ])
   ],

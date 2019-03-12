@@ -7,10 +7,22 @@ Array [
     "caseId": "caseId1",
     "completed": true,
     "defendant": Object {
+      "address": Object {
+        "address1": "Hogwards",
+        "postcode": "E1",
+      },
+      "addressChanged": false,
+      "contactDetails": Object {
+        "niNumber": "asdad",
+      },
       "dateOfBirth": "1957-03-11",
+      "dobChanged": false,
       "firstName": "Guy",
+      "gender": "male",
       "lastName": "Smith",
+      "nameChanged": false,
       "outdated": false,
+      "title": "alpha",
     },
     "enterpriseId": "Z8QG1JR7CMTD",
     "listedInCriminalCourts": false,

@@ -21,7 +21,7 @@ import {
 } from './components';
 import { SharedModule } from '../../shared';
 import { OverviewContainer } from './overview.container';
-import { DownloadDocumentModule, OffenceModule } from '../common';
+import { DownloadDocumentModule } from '../common';
 import { RouterModule } from '@angular/router';
 
 const DECLARATIONS = [

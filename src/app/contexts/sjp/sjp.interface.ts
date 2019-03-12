@@ -1,58 +1,65 @@
 export interface Case {
   id: string;
   urn: string;
-  defendant?: Defendant;
-  dateTimeCreated: string;
-  caseDocuments: CaseDocument[];
-  prosecutingAuthority: string;
-  completed: boolean;
-  assigned: boolean;
-  costs: number;
-  postingDate: string;
   enterpriseId: string;
-  onlinePleaReceived: boolean;
-  status: string;
+  assigned: boolean;
+  adjournedTo?: string;
+  completed: boolean;
+  costs: number;
+  dateTimeCreated: string;
   listedInCriminalCourts: boolean;
-  datesToAvoid?: string;
-  reopenedDate?: string;
-  libraCaseNumber?: string;
-  reopenedInLibraReason?: string;
   hearingCourtName?: string;
   hearingTime?: string;
+  onlinePleaReceived: boolean;
+  postingDate: string;
+  reopenedInLibraReason?: string;
+  reopenedDate?: string;
+  prosecutingAuthority: string;
+  status: string;
+  caseDocuments: CaseDocument[];
+  defendant: Defendant;
+  datesToAvoid?: string;
+  libraCaseNumber?: string; // todo check
 }
 
 export interface Defendant {
   id: string;
+  interpreter: Interpreter;
   caseId: string;
-  speakWelsh?: boolean;
-  offences?: Offence[];
-  interpreter?: Interpreter;
-  personalDetails?: PersonalDetails;
   numPreviousConvictions: number;
+  speakWelsh?: boolean;
+  offences: Offence[];
+  personalDetails: PersonalDetails;
 }
 
 export interface Offence {
   id: string;
-  offenceCode: string;
-  title: string;
-  legislation: string;
-  offenceSequenceNumber: number;
-  wording: string;
-  cjsCode: string;
-  sequenceNumber: number;
-  startDate: string;
   chargeDate: string;
+  cjsCode: string;
   compensation: number;
+  offenceCode: string;
+  offenceSequenceNumber: number;
+  prosecutionFacts?: string;
+  sequenceNumber?: number; // todo check; order to display the offences
+  startDate: string;
+  wording: string;
+  wordingWelsh?: string;
+  title: string;
+  titleWelsh?: string;
+  legislation: string;
+  legislationWelsh?: string;
   plea?: PleaseStatus;
   pleaMethod?: string;
   pleaDate?: string;
+
+  dobChanged: boolean;
+  addressChanged: boolean;
+  nameChanged: boolean;
   pleaMitigation?: string;
-  pendingWithdrawal?: boolean;
-  prosecutionFacts?: string;
-  dobChanged?: boolean;
-  addressChanged?: boolean;
-  nameChanged?: boolean;
-  contactDetails?: ContactDetails;
+
+  // todo bellow unaccounted for
+  pendingWithdrawal?: boolean; // reason? {id}
+  contactDetails?: ContactDetails; // todo delete
 }
 
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';
@@ -72,24 +79,25 @@ export interface CaseDocument {
 export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER';
 
 export interface PersonalDetails {
-  title?: string;
-  firstName?: string;
-  lastName?: string;
-  dateOfBirth: string;
-  gender?: string;
-  address?: Address;
-  contactDetails?: ContactDetails;
-  dobChanged?: boolean;
-  addressChanged?: boolean;
-  nameChanged?: boolean;
-  outdated?: boolean;
+  address: Address;
+  addressChanged: boolean;
+  contactDetails: ContactDetails;
+  dateOfBirth?: string;
+  dobChanged: boolean;
+  firstName: string;
+  lastName: string;
+  nameChanged: boolean;
+  gender: string;
+  nationalInsuranceNumber?: string;
+  title: string;
+  outdated?: boolean; // todo unaccounted for
 }
 
 export interface ContactDetails {
-  email: string;
-  home: string;
-  mobile: string;
-  niNumber: string;
+  email?: string;
+  home?: string;
+  mobile?: string;
+  niNumber?: string; // todo check unaccounted for
 }
 
 export interface Address {
@@ -97,6 +105,7 @@ export interface Address {
   address2?: string;
   address3?: string;
   address4?: string;
+  address5?: string;
   postcode: string;
 }
 

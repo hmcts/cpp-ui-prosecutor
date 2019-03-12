@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defendant-highlight should render and match snapshot 1`] = `
+<defendant-highlight-test
+  kase={[Function Object]}
+>
+  <defendant-highlight
+    ng-reflect-case="[object Object]"
+  >
+    <pdk-page-header>
+      <div
+        class="pdk-page-header"
+      >
+        <pdk-page-header-content
+          ng-reflect-reference="TFL26168N21T5"
+        >
+          <div
+            class="pdk-page-header__content"
+          >
+            
+            
+            <div
+              class="pdk-page-header__reference"
+            >
+              TFL26168N21T5
+            </div>
+            <div
+              class="pdk-page-header__title"
+            >
+              <span
+                pdk-typography=""
+                xsmall=""
+              >
+                <b>
+                  Guy SMITH
+                </b>
+              </span>
+            </div>
+          </div>
+        </pdk-page-header-content>
+      </div>
+    </pdk-page-header>
+  </defendant-highlight>
+</defendant-highlight-test>
+`;
