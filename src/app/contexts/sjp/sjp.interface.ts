@@ -10,7 +10,7 @@ export interface Case {
   costs: number;
   postingDate: string;
   enterpriseId: string;
-  onlinePleaReceived: false;
+  onlinePleaReceived: boolean;
   status: string;
   listedInCriminalCourts: boolean;
   datesToAvoid?: string;
@@ -79,9 +79,10 @@ export interface PersonalDetails {
   gender?: string;
   address?: Address;
   contactDetails?: ContactDetails;
-  dobChanged?: false;
-  addressChanged?: false;
-  nameChanged?: false;
+  dobChanged?: boolean;
+  addressChanged?: boolean;
+  nameChanged?: boolean;
+  outdated?: boolean;
 }
 
 export interface ContactDetails {
@@ -97,4 +98,22 @@ export interface Address {
   address3?: string;
   address4?: string;
   postcode: string;
+}
+
+export interface SearchResult {
+  foundCasesWithOutdatedDefendantsName: boolean;
+  results: CaseDetails[];
+}
+
+export interface CaseDetails {
+  caseId: string;
+  defendant: PersonalDetails;
+  assigned: boolean;
+  completed: boolean;
+  enterpriseId: string;
+  listedInCriminalCourts: boolean;
+  postingDate: string;
+  prosecutingAuthority: string;
+  status: string;
+  urn: string;
 }

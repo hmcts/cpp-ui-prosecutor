@@ -17,15 +17,13 @@ Object {
 exports[` Search reducer when SEARCH should set the state 2`] = `
 Object {
   "searchKeyword": null,
-  "searchResult": Array [
-    Object {
-      "caseReferenceNumber": "TVL43243413213ASD",
-      "caseStatus": "Completed",
-      "defendantDOB": "19 Feb 1965",
-      "defendantName": "Smith Long Name",
-      "noticeServed": "9 Jan 2019",
-      "prosecutor": "TV Licensing",
-    },
-  ],
+  "searchResult": Object {
+    "foundCasesWithOutdatedDefendantsName": true,
+    "results": Array [
+      Object {
+        "caseId": "caseId",
+      },
+    ],
+  },
 }
 `;

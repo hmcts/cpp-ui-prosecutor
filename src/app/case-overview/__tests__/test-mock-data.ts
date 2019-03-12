@@ -1,4 +1,4 @@
-import { Case, ContactDetails, Offence } from '../case-overview.interfaces';
+import { Case, ContactDetails, Offence } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
   {
@@ -18,7 +18,7 @@ export const MOCK_OFFENCES: Offence[] = [
     offenceCode: 'CA03013',
     offenceSequenceNumber: 1,
     wording:
-      'On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on behalf of ' +
+      'On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of ' +
       'London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was ' +
       'being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice ' +
       'displayed on the vehicle pay the fare for the journey in accordance with the direction ',

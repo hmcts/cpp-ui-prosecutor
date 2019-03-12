@@ -7,8 +7,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs';
 import { CaseOverviewEffects } from '../case-overview.effects';
 import { CaseOverviewActions, GetCaseById, GetCaseByIdSuccess } from '../case-overview.action';
-import { CaseOverviewService } from '../case-overview.service';
 import { MOCK_CASE } from './test-mock-data';
+import { SjpService } from '../../contexts/sjp';
 
 export class TestActions extends Actions {
   set stream(source: Observable<any>) {
@@ -37,7 +37,7 @@ describe('Case Overview Effects', () => {
       providers: [
         CaseOverviewEffects,
         {
-          provide: CaseOverviewService,
+          provide: SjpService,
           useValue: {
             getCaseById
           }

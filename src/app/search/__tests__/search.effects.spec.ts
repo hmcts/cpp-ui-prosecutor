@@ -7,9 +7,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs';
 import { SearchEffects } from '../search.effects';
 import { Search, SearchActions, SearchSuccess } from '../search.action';
-import { SearchService } from '../search.service';
 import { Router } from '@angular/router';
 import { MOCK_CASES } from './test-mock-data';
+import { SjpService } from '../../contexts/sjp';
 
 export class TestActions extends Actions {
   constructor() {
@@ -51,7 +51,7 @@ describe('Search Effects', () => {
           }
         },
         {
-          provide: SearchService,
+          provide: SjpService,
           useValue: {
             getCasesDetails
           }

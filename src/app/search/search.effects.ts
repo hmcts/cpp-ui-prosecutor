@@ -6,17 +6,17 @@ import { Action } from '@ngrx/store';
 import { Search, SearchSuccess, SearchTypes } from './search.action';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { ApiError } from '../core/actions/api';
-import { SearchService } from './search.service';
+import { SjpService } from '../contexts/sjp';
 
 @Injectable()
 export class SearchEffects {
-  constructor(private actions$: Actions, private searchService: SearchService, private router: Router) {}
+  constructor(private actions$: Actions, private sjpService: SjpService, private router: Router) {}
 
   @Effect()
   getCasesDetails: Observable<Action> = this.actions$.pipe(
     ofType<Search>(SearchTypes.SEARCH),
     switchMap(action => {
-      return this.searchService.getCasesDetails(action.payload).pipe(
+      return this.sjpService.getCasesDetails(action.payload).pipe(
         map(response => new SearchSuccess(response)),
         tap(() => this.router.navigate(['/search/results'])),
         catchError(err => of(new ApiError(err)))

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { PersonalDetails } from '../case-overview.interfaces';
+import { PersonalDetails } from '../../contexts/sjp';
 
 @Component({
   selector: 'defendant-details',

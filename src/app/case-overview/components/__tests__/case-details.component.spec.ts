@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
-import { Case } from '../../case-overview.interfaces';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import {
   AgePipeModule,
@@ -13,6 +12,7 @@ import {
   IfEmptyPipeModule
 } from '../../../shared/pipes';
 import { CaseDetailsComponent } from '../case-details.component';
+import { Case } from '../../../contexts/sjp';
 
 describe('CaseDetailsComponent', () => {
   let fixture: ComponentFixture<TestCaseDetailsComponent>;

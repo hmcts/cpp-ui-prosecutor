@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Case, Defendant, Offence } from './case-overview.interfaces';
 import { select, Store } from '@ngrx/store';
 import { FeatureState, getCase, getDefendant, getOffences } from './case-overview.selectors';
+import { Case, Defendant, Offence } from '../contexts/sjp';
 
 @Component({
   selector: 'case-overview-container',

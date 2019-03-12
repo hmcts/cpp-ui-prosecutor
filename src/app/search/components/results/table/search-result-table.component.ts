@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CaseDetails } from '../../../search.interface';
+import { CaseDetails } from '../../../../contexts/sjp';
 
 @Component({
   selector: 'search-results-table',

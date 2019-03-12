@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
-import { PersonalDetails } from '../../case-overview.interfaces';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import {
   AgePipeModule,
@@ -14,6 +13,7 @@ import {
 } from '../../../shared/pipes';
 import { DefendantDetailsComponent } from '../defendant-details.component';
 import { CommonModule } from '@angular/common';
+import { PersonalDetails } from '../../../contexts/sjp';
 
 describe('DefendantDetailsComponent', () => {
   let fixture: ComponentFixture<TestDefendantDetailsComponent>;

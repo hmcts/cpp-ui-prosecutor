@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { PleaseStatus } from '../../../contexts/sjp';
 
 export const pleaseStatusMap = {
   GUILTY: 'Notified Guilty',
@@ -10,7 +11,7 @@ export const pleaseStatusMap = {
 
 @Pipe({ name: 'pleaStatus' })
 export class PleaStatusPipe implements PipeTransform {
-  transform(pleaStatus: string, defaultStatus = 'NO_PLEA'): string {
+  transform(pleaStatus: PleaseStatus, defaultStatus = 'NO_PLEA'): string {
     return pleaStatus ? pleaseStatusMap[pleaStatus] : pleaseStatusMap[defaultStatus];
   }
 }

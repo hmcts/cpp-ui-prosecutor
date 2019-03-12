@@ -1,5 +1,6 @@
 import { searchReducer, SearchState } from '../search.reducer';
 import { Search, SearchSuccess } from '../search.action';
+import { CaseDetails, SearchResult } from '../../contexts/sjp';
 
 const state = {
   searchKeyword: null,
@@ -17,7 +18,7 @@ describe(' Search reducer', () => {
     });
 
     it('should set the state', () => {
-      expect(resultState).toMatchSnapshot(1);
+      expect(resultState).toMatchSnapshot();
     });
   });
 
@@ -34,16 +35,10 @@ describe(' Search reducer', () => {
 
   describe('when SEARCH', () => {
     beforeEach(() => {
-      action = new SearchSuccess([
-        {
-          defendantName: 'Smith Long Name',
-          defendantDOB: '19 Feb 1965',
-          caseReferenceNumber: 'TVL43243413213ASD',
-          caseStatus: 'Completed',
-          prosecutor: 'TV Licensing',
-          noticeServed: '9 Jan 2019'
-        }
-      ]);
+      action = new SearchSuccess({
+        foundCasesWithOutdatedDefendantsName: true,
+        results: [{ caseId: 'caseId' } as CaseDetails]
+      } as SearchResult);
       resultState = searchReducer(state, action);
     });
 
