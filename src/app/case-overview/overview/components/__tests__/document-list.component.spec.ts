@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
 import { CommonModule } from '@angular/common';
-import { MOCK_CASE } from '../../__tests__/test-mock-data';
+import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import { DocumentListComponent } from '../document-list.component';
-import { CaseDocument } from '../../../contexts/sjp';
+import { CaseDocument } from '../../../../contexts/sjp';
 
 describe('DocumentListComponent', () => {
   let fixture: ComponentFixture<TestDocumentListComponent>;

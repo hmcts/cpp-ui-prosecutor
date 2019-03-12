@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CaseOverviewContainer should compile correctly 1`] = `
+exports[`OverviewContainer should compile correctly 1`] = `
 <case-overview-container
   defendant$={[Function Store]}
   kase$={[Function Store]}
@@ -67,7 +67,12 @@ exports[`CaseOverviewContainer should compile correctly 1`] = `
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -153,7 +158,12 @@ exports[`CaseOverviewContainer should compile correctly 1`] = `
         "address4": "Merton",
         "postcode": "CV8 1AB"
       },
-      "contactDetails": {},
+      "contactDetails": {
+        "mobile": "77777777",
+        "email": "a@a.com",
+        "niNumber": "WWWWWWW",
+        "home": "333333333"
+      },
       "dobChanged": false,
       "addressChanged": false,
       "nameChanged": false

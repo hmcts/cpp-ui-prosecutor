@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CaseDocument } from '../../contexts/sjp';
+import { CaseDocument } from '../../../contexts/sjp';
 
 @Component({
   selector: 'document-list',

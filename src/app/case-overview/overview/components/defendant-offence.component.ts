@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Case, Offence, PleaseStatus } from '../../contexts/sjp';
+import { Case, Offence, PleaseStatus } from '../../../contexts/sjp';
 
 @Component({
   selector: 'defendant-offence',

@@ -187,7 +187,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               a@a.com 
             </div>
           </div>
         </pdk-grid>
@@ -227,7 +227,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               333333333 
             </div>
           </div>
         </pdk-grid>
@@ -267,7 +267,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               77777777 
             </div>
           </div>
         </pdk-grid>
@@ -307,7 +307,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               WWWWWWW 
             </div>
           </div>
         </pdk-grid>

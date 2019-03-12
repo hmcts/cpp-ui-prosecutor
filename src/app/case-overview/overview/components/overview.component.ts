@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Case, Defendant, Offence } from '../../contexts/sjp';
+import { Case, Defendant, Offence } from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-overview',
@@ -62,7 +62,7 @@ import { Case, Defendant, Offence } from '../../contexts/sjp';
     </div>
   `
 })
-export class CaseOverviewComponent {
+export class OverviewComponent {
   @Input() kase: Case;
   @Input() defendant: Defendant;
   @Input() offences: Offence[];

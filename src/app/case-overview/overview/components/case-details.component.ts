@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Case } from '../../contexts/sjp';
+import { Case } from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-details',

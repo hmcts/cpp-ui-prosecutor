@@ -66,7 +66,12 @@ export const MOCK_CASE: Case = {
         address4: 'Merton',
         postcode: 'CV8 1AB'
       },
-      contactDetails: {} as ContactDetails,
+      contactDetails: {
+        mobile: '77777777',
+        email: 'a@a.com',
+        niNumber: 'WWWWWWW',
+        home: '333333333'
+      } as ContactDetails,
       dobChanged: false,
       addressChanged: false,
       nameChanged: false

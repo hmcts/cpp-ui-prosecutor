@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
-import { MOCK_CASE } from '../../__tests__/test-mock-data';
+import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   CaseProsecutorPipeModule,
@@ -10,10 +10,10 @@ import {
   FormatAddressPipeModule,
   FormatDatePipeModule,
   IfEmptyPipeModule
-} from '../../../shared/pipes';
+} from '../../../../shared/pipes';
 import { DefendantDetailsComponent } from '../defendant-details.component';
 import { CommonModule } from '@angular/common';
-import { PersonalDetails } from '../../../contexts/sjp';
+import { PersonalDetails } from '../../../../contexts/sjp';
 
 describe('DefendantDetailsComponent', () => {
   let fixture: ComponentFixture<TestDefendantDetailsComponent>;
@@ -36,7 +36,7 @@ describe('DefendantDetailsComponent', () => {
       ]
     });
 
-    Date.now = jest.fn(() => 1487076708000); // 14.02.2017
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
     fixture = TestBed.createComponent(TestDefendantDetailsComponent);
     fixture.componentInstance.defendantDetails = MOCK_CASE.defendant.personalDetails;
   });

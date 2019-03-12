@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CaseOverviewComponent should compile correctly 1`] = `
+exports[`OverviewComponent should compile correctly 1`] = `
 <case-overview-test
   defendant={[Function Object]}
   kase={[Function Object]}
@@ -263,7 +263,12 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -331,7 +336,12 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
       "address4": "Merton",
       "postcode": "CV8 1AB"
     },
-    "contactDetails": {},
+    "contactDetails": {
+      "mobile": "77777777",
+      "email": "a@a.com",
+      "niNumber": "WWWWWWW",
+      "home": "333333333"
+    },
     "dobChanged": false,
     "addressChanged": false,
     "nameChanged": false
@@ -482,7 +492,12 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -619,7 +634,12 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -669,7 +689,7 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
 </case-overview-test>
 `;
 
-exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`] = `
+exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
 <case-overview-test
   defendant={[Function Object]}
   kase={[Function Object]}
@@ -932,7 +952,12 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -1000,7 +1025,12 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
       "address4": "Merton",
       "postcode": "CV8 1AB"
     },
-    "contactDetails": {},
+    "contactDetails": {
+      "mobile": "77777777",
+      "email": "a@a.com",
+      "niNumber": "WWWWWWW",
+      "home": "333333333"
+    },
     "dobChanged": false,
     "addressChanged": false,
     "nameChanged": false
@@ -1152,7 +1182,12 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -1209,7 +1244,7 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
 </case-overview-test>
 `;
 
-exports[`CaseOverviewComponent should compile correctly with single offence 1`] = `
+exports[`OverviewComponent should compile correctly with single offence 1`] = `
 <case-overview-test
   defendant={[Function Object]}
   kase={[Function Object]}
@@ -1472,7 +1507,12 @@ exports[`CaseOverviewComponent should compile correctly with single offence 1`] 
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false
@@ -1540,7 +1580,12 @@ exports[`CaseOverviewComponent should compile correctly with single offence 1`] 
       "address4": "Merton",
       "postcode": "CV8 1AB"
     },
-    "contactDetails": {},
+    "contactDetails": {
+      "mobile": "77777777",
+      "email": "a@a.com",
+      "niNumber": "WWWWWWW",
+      "home": "333333333"
+    },
     "dobChanged": false,
     "addressChanged": false,
     "nameChanged": false
@@ -1691,7 +1736,12 @@ exports[`CaseOverviewComponent should compile correctly with single offence 1`] 
           "address4": "Merton",
           "postcode": "CV8 1AB"
         },
-        "contactDetails": {},
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "niNumber": "WWWWWWW",
+          "home": "333333333"
+        },
         "dobChanged": false,
         "addressChanged": false,
         "nameChanged": false

@@ -1,26 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { CaseOverviewContainer } from '../case-overview.container';
-import { reducers } from '../../reducers';
+import { reducers } from '../../../reducers';
 import { Store, StoreModule } from '@ngrx/store';
-import { caseOverviewReducer } from '../case-overview.reducer';
-import { GetCaseByIdSuccess } from '../case-overview.action';
-import { MOCK_CASE } from './test-mock-data';
-import { FeatureState } from '../case-overview.selectors';
-import { Case, Defendant, Offence } from '../../contexts/sjp';
+import { caseOverviewReducer } from '../../case-overview.reducer';
+import { GetCaseByIdSuccess } from '../../case-overview.action';
+import { MOCK_CASE } from '../../__tests__/test-mock-data';
+import { FeatureState } from '../../case-overview.selectors';
+import { Case, Defendant, Offence } from '../../../contexts/sjp';
+import { OverviewContainer } from '../overview.container';
 
-describe('CaseOverviewContainer', () => {
-  let fixture: ComponentFixture<CaseOverviewContainer>;
+describe('OverviewContainer', () => {
+  let fixture: ComponentFixture<OverviewContainer>;
   let store: Store<FeatureState>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseOverviewContainer, MockCaseOverviewComponent],
+      declarations: [OverviewContainer, MockCaseOverviewComponent],
       imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)]
     });
 
     store = TestBed.get(Store);
-    fixture = TestBed.createComponent(CaseOverviewContainer);
+    fixture = TestBed.createComponent(OverviewContainer);
   });
 
   it('should compile correctly', () => {

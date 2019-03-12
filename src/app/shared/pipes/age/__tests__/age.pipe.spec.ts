@@ -4,7 +4,7 @@ describe('AgePipe', () => {
   const pipe = new AgePipe();
 
   beforeEach(() => {
-    Date.now = jest.fn(() => 1487076708000); // 14.02.2017
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
   });
 
   it('should return the age', () => {

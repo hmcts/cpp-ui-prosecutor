@@ -8,23 +8,23 @@ import {
   PdkPageHeaderModule,
   PdkTabsModule
 } from '@cpp/pdk';
-import { MOCK_CASE, MOCK_OFFENCES } from '../../__tests__/test-mock-data';
-import { CaseOverviewComponent } from '../case-overview.component';
+import { MOCK_CASE, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,
   FormatDatePipeModule
-} from '../../../shared/pipes';
-import { Case, CaseDocument, Defendant, Offence } from '../../../contexts/sjp';
+} from '../../../../shared/pipes';
+import { Case, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
+import { OverviewComponent } from '../overview.component';
 
-describe('CaseOverviewComponent', () => {
+describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        CaseOverviewComponent,
+        OverviewComponent,
         TestCaseOverviewComponent,
         MockOffenceComponent,
         MockPleaMitigationComponent,
@@ -45,7 +45,7 @@ describe('CaseOverviewComponent', () => {
       ]
     });
 
-    Date.now = jest.fn(() => 1487076708000); // 14.02.2017
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
 
     fixture = TestBed.createComponent(TestCaseOverviewComponent);
     fixture.componentInstance.kase = MOCK_CASE;
