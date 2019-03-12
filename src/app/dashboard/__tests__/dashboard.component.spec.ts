@@ -28,7 +28,7 @@ describe('DashboardComponent', () => {
   class TestDashboardComponent {}
 
   @Component({
-    selector: 'search-container',
+    selector: 'search-input-container',
     template: `
       <div></div>
     `

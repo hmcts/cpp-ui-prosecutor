@@ -1,0 +1,411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSearchResultsComponent should compile correctly with multiple results 1`] = `
+<list-search-results-test
+  searchResults={[Function Array]}
+>
+  <list-search-results
+    ng-reflect-search-results="[object Object],[object Object"
+  >
+    
+    <pdk-inset-text
+      class="govuk-!-margin-top-0"
+      ng-reflect-top="0"
+      pdk-margin-top="0"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         4 
+        <span
+          ng-reflect-ng-plural="4"
+        >
+          
+          
+          results
+        </span>
+         available 
+      </div>
+    </pdk-inset-text>
+    
+    <table
+      pdk-table=""
+    >
+      <thead
+        pdk-table-head=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <th
+            pdk-table-header=""
+          >
+            Name
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case reference number
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case status
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Prosecutor
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Date of birth
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        pdk-table-body=""
+      >
+        
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId2"
+              ng-reflect-router-link="/case-overview,caseId2"
+              pdk-link=""
+            >
+              <b>
+                SMITH Jonti Jonti Jonti
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26116MZMMI
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Completed
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            TV Licensing
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            04 Mar 1985
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId3"
+              ng-reflect-router-link="/case-overview,caseId3"
+              pdk-link=""
+            >
+              <b>
+                SMITH Murad
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL84598WRMSZ
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            No plea received
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Transport for London
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            04 Mar 1989
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId4"
+              ng-reflect-router-link="/case-overview,caseId4"
+              pdk-link=""
+            >
+              <b>
+                SMITH Petru
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL92613WXH4V
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            No plea received - ready for decision
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Transport for London
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            14 Mar 1949
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId5"
+              ng-reflect-router-link="/case-overview,caseId5"
+              pdk-link=""
+            >
+              <b>
+                SMITH Sartaaj Sartaaj Sartaaj
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26120QYR99
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Completed
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            TV Licensing
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            05 Mar 1981
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should compile correctly with no results 1`] = `
+<list-search-results-test
+  searchResults={[Function Array]}
+>
+  <list-search-results
+    ng-reflect-search-results=""
+  >
+    
+    <pdk-inset-text
+      class="govuk-!-margin-top-0"
+      ng-reflect-top="0"
+      pdk-margin-top="0"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         0 
+        <span
+          ng-reflect-ng-plural="0"
+        >
+          
+          
+          results
+        </span>
+         available 
+      </div>
+    </pdk-inset-text>
+    
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should compile correctly with single result 1`] = `
+<list-search-results-test
+  searchResults={[Function Array]}
+>
+  <list-search-results
+    ng-reflect-search-results="[object Object]"
+  >
+    
+    <pdk-inset-text
+      class="govuk-!-margin-top-0"
+      ng-reflect-top="0"
+      pdk-margin-top="0"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         1 
+        <span
+          ng-reflect-ng-plural="1"
+        >
+          
+          result
+          
+        </span>
+         available 
+      </div>
+    </pdk-inset-text>
+    
+    <table
+      pdk-table=""
+    >
+      <thead
+        pdk-table-head=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <th
+            pdk-table-header=""
+          >
+            Name
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case reference number
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case status
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Prosecutor
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Date of birth
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        pdk-table-body=""
+      >
+        
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId1"
+              ng-reflect-router-link="/case-overview,caseId1"
+              pdk-link=""
+            >
+              <b>
+                SMITH Guy
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Completed
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            Transport for London
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;

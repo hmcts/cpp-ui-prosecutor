@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsComponent should compile correctly 1`] = `
+<search-results-test
+  searchResults={[Function Array]}
+>
+  <search-results
+    ng-reflect-search-result-cases="[object Object],[object Object"
+  >
+    <ol
+      class="govuk-!-margin-top-4"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          href="/"
+          ng-reflect-router-link="../"
+          pdk-breadcrumb=""
+          routerlink="../"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        pdk-breadcrumb-list-item=""
+      >
+         Search for a case 
+      </li>
+    </ol>
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      Search for a case
+    </h1>
+    <search-input>
+      <label
+        class="govuk-label"
+        ng-reflect-type=""
+        pdk-label=""
+      >
+        Enter case reference number or defendant’s last name
+      </label>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <form
+            class="ng-untouched ng-pristine ng-valid"
+            novalidate=""
+            pdk-form=""
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <pdk-form-field>
+                  
+                  <pdk-form-group
+                    ng-reflect-error="false"
+                    style="display: block;"
+                  >
+                    
+                    
+                    
+                    
+                    <label
+                      class="govuk-label"
+                      for="pdk-form-control-1"
+                      ng-reflect-hidden="false"
+                      ng-reflect-type="default"
+                    >
+                        
+                    </label>
+                    
+                    
+                    
+                    <pdk-searchbar
+                      class="ng-untouched ng-pristine ng-valid"
+                      name="searchInput"
+                      ng-reflect-model=""
+                      ng-reflect-name="searchInput"
+                    >
+                      <div
+                        class="pdk-searchbar"
+                      >
+                        <input
+                          class="pdk-searchbar__input govuk-input"
+                          id="pdk-form-control-1"
+                          ng-reflect-error="false"
+                          ng-reflect-width=""
+                          pdk-input=""
+                          placeholder=""
+                          type="text"
+                        />
+                        <button
+                          class="pdk-searchbar__button"
+                          type="submit"
+                        >
+                          <pdk-search-icon
+                            color="#fff"
+                            ng-reflect-color="#fff"
+                            style="display: flex; align-items: center; justify-content: center;"
+                          >
+                            <i
+                              style="height: 20px; width: 20px; fill: #fff;"
+                            >
+                              <svg
+                                height="100%"
+                                viewBox="0 0 512 512"
+                                width="100%"
+                              >
+                                <path
+                                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                                />
+                              </svg>
+                            </i>
+                          </pdk-search-icon>
+                          <span
+                            class="pdk-searchbar__label govuk-visually-hidden"
+                            ng-reflect-hidden=""
+                            pdk-visually-hidden=""
+                          >
+                              
+                          </span>
+                        </button>
+                      </div>
+                    </pdk-searchbar>
+                    
+                    
+                  </pdk-form-group>
+                </pdk-form-field>
+              </div>
+            </pdk-grid>
+          </form>
+        </div>
+      </pdk-grid>
+    </search-input>
+    <list-search-results
+      ng-reflect-search-results="[object Object],[object Object"
+    >
+       [
+    {
+      "caseId": "caseId1",
+      "urn": "TFL26168N21T5",
+      "assigned": false,
+      "completed": true,
+      "enterpriseId": "Z8QG1JR7CMTD",
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-01-27",
+      "defendant": {
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "outdated": false
+      },
+      "status": "COMPLETED",
+      "listedInCriminalCourts": false
+    },
+    {
+      "caseId": "caseId2",
+      "urn": "TVL26116MZMMI",
+      "assigned": false,
+      "completed": true,
+      "enterpriseId": "Y91FYLC8SCJJ",
+      "prosecutingAuthority": "TVL",
+      "postingDate": "2019-01-27",
+      "defendant": {
+        "firstName": "Jonti Jonti Jonti",
+        "lastName": "Smith",
+        "dateOfBirth": "1985-03-04",
+        "outdated": false
+      },
+      "status": "COMPLETED",
+      "listedInCriminalCourts": false
+    },
+    {
+      "caseId": "caseId3",
+      "urn": "TFL84598WRMSZ",
+      "assigned": false,
+      "completed": false,
+      "enterpriseId": "JZPFWZ26GWBF",
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-01-28",
+      "defendant": {
+        "firstName": "Murad",
+        "lastName": "Smith",
+        "dateOfBirth": "1989-03-04",
+        "outdated": false
+      },
+      "status": "NO_PLEA_RECEIVED",
+      "listedInCriminalCourts": false
+    },
+    {
+      "caseId": "caseId4",
+      "urn": "TFL92613WXH4V",
+      "assigned": false,
+      "completed": false,
+      "enterpriseId": "7XQLP31VP93C",
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-01-28",
+      "defendant": {
+        "firstName": "Petru",
+        "lastName": "Smith",
+        "dateOfBirth": "1949-03-14",
+        "outdated": false
+      },
+      "status": "NO_PLEA_RECEIVED_READY_FOR_DECISION",
+      "listedInCriminalCourts": false
+    },
+    {
+      "caseId": "caseId5",
+      "urn": "TVL26120QYR99",
+      "assigned": false,
+      "completed": true,
+      "enterpriseId": "8PQ1KQYQK8ZC",
+      "prosecutingAuthority": "TVL",
+      "postingDate": "2019-01-27",
+      "defendant": {
+        "firstName": "Sartaaj Sartaaj Sartaaj",
+        "lastName": "Smith",
+        "dateOfBirth": "1981-03-05",
+        "outdated": false
+      },
+      "status": "COMPLETED",
+      "listedInCriminalCourts": false
+    }
+  ] 
+    </list-search-results>
+  </search-results>
+</search-results-test>
+`;

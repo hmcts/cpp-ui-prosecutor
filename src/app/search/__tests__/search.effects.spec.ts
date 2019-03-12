@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { SearchEffects } from '../search.effects';
 import { Search, SearchActions, SearchSuccess } from '../search.action';
 import { Router } from '@angular/router';
-import { MOCK_CASES } from './test-mock-data';
+import { MOCK_SEARCH_RESULTS } from './test-mock-data';
 import { SjpService } from '../../contexts/sjp';
 
 export class TestActions extends Actions {
@@ -81,14 +81,14 @@ describe('Search Effects', () => {
 
     it('should respond with success', () => {
       const expected$ = cold('---b', {
-        b: new SearchSuccess(MOCK_CASES)
+        b: new SearchSuccess(MOCK_SEARCH_RESULTS)
       });
 
-      const response$ = cold('--a', { a: MOCK_CASES });
+      const response$ = cold('--a', { a: MOCK_SEARCH_RESULTS });
       getCasesDetails.mockReturnValue(response$);
 
       expect(effects.getCasesDetails).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['/search/results']);
+      expect(navigate).toHaveBeenCalledWith(['/search']);
     });
 
     it('should error', () => {

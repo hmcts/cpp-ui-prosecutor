@@ -20,9 +20,9 @@ exports[`DashboardComponent should compile correctly 1`] = `
     >
       Search for a case
     </h2>
-    <search-container>
+    <search-input-container>
       <div />
-    </search-container>
+    </search-input-container>
     <h2
       pdk-margin-top="8"
       pdk-typography="heading-medium"

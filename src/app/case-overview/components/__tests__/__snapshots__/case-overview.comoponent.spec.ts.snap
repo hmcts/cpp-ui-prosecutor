@@ -38,7 +38,7 @@ exports[`CaseOverviewComponent should compile correctly 1`] = `
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
           pdk-breadcrumb=""
-          routerlink="/search/results"
+          routerlink="/search"
         >
            Search for a case 
         </a>
@@ -709,7 +709,7 @@ exports[`CaseOverviewComponent should compile correctly with plea mitigation 1`]
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
           pdk-breadcrumb=""
-          routerlink="/search/results"
+          routerlink="/search"
         >
            Search for a case 
         </a>
@@ -1250,7 +1250,7 @@ exports[`CaseOverviewComponent should compile correctly with single offence 1`] 
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
           pdk-breadcrumb=""
-          routerlink="/search/results"
+          routerlink="/search"
         >
            Search for a case 
         </a>

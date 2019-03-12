@@ -1,13 +1,18 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CaseDetails } from '../../../../contexts/sjp';
+import { CaseDetails } from '../../../contexts/sjp';
 
 @Component({
-  selector: 'search-results-table',
+  selector: 'list-search-results',
   template: `
-    <pdk-inset-text *ngIf="searchPayload" pdk-margin-top="0"
-      >{{ searchPayload.length }} results available
+    <pdk-inset-text *ngIf="searchResults" pdk-margin-top="0">
+      {{ searchResults.length }}
+      <span [ngPlural]="searchResults.length">
+        <ng-template ngPluralCase="=1">result</ng-template>
+        <ng-template ngPluralCase="other">results</ng-template>
+      </span>
+      available
     </pdk-inset-text>
-    <table pdk-table *ngIf="searchPayload?.length">
+    <table pdk-table *ngIf="searchResults?.length">
       <thead pdk-table-head>
         <tr pdk-table-row>
           <th pdk-table-header>Name</th>
@@ -19,7 +24,7 @@ import { CaseDetails } from '../../../../contexts/sjp';
         </tr>
       </thead>
       <tbody pdk-table-body>
-        <tr pdk-table-row *ngFor="let searchResult of searchPayload">
+        <tr pdk-table-row *ngFor="let searchResult of searchResults">
           <td pdk-table-cell>
             <a href="javascript:void(0)" pdk-link [routerLink]="['/case-overview', searchResult.caseId]">
               <b>{{ searchResult.defendant | defendantName }}</b>
@@ -36,6 +41,6 @@ import { CaseDetails } from '../../../../contexts/sjp';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SearchResultsTableComponent {
-  @Input() searchPayload: CaseDetails[];
+export class ListSearchResultsComponent {
+  @Input() searchResults: CaseDetails[];
 }

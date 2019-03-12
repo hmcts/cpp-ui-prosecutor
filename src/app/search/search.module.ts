@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchInputModule } from './components/search/search-input.module';
 import { StoreModule } from '@ngrx/store';
 import { searchReducer } from './search.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { SearchEffects } from './search.effects';
 import { RouterModule } from '@angular/router';
-import { routesSearch } from './routes.search';
-import { SearchResultsModule } from './components/results/search-results.module';
 import { SjpModule } from '../contexts/sjp/sjp.module';
+import { SearchInputModule } from './search-input/search-input.module';
+import { SearchResultsModule } from './search-results/search-results.module';
+import { SearchResultsContainer } from './search-results/seach-results.container';
 
 const DECLARATIONS = [];
 
@@ -21,7 +21,15 @@ const DECLARATIONS = [];
     SjpModule,
     StoreModule.forFeature('search', searchReducer),
     EffectsModule.forFeature([SearchEffects]),
-    RouterModule.forChild(routesSearch)
+    RouterModule.forChild([
+      {
+        path: 'search',
+        data: {
+          title: 'Search for a case'
+        },
+        component: SearchResultsContainer
+      }
+    ])
   ],
   exports: [...DECLARATIONS]
 })
