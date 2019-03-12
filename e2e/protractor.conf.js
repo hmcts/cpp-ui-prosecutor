@@ -2,7 +2,10 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { defaults } = require('@cpp/ui.priming');
-const protractorConfig = require('@cpp/ui.config').protractorChromeConfig;
+const protractorConfig = require('@cpp/ui.config').protractorFirefoxConfig;
+const protractorHelper = require('@cpp/ui.test-utils').protractorHelper;
+const yargs = require('yargs');
+const { visible } = yargs.argv;
 
 exports.config = {
   params: {
@@ -10,6 +13,7 @@ exports.config = {
     apiUrl: 'http://localhost:8181/'
   },
   specs: ['./src/specs/**/*.e2e-spec.ts'],
+  capabilities: protractorHelper.firefoxCapability({ headless: !visible }),
   async onPrepare() {
     defaults({
       baseUrl: browser.params.apiUrl,

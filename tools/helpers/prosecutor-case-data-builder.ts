@@ -13,7 +13,9 @@ export class ProsecutorCaseDataBuilder {
       urn = 'TVL' + randomIntFromRange(100000000, 9999999999);
     }
 
-    const dataBuilder = new ProsecutorCaseDataBuilder(prosecutorCaseData);
+    const payload = JSON.parse(JSON.stringify(prosecutorCaseData));
+    const dataBuilder = new ProsecutorCaseDataBuilder(payload);
+
     dataBuilder
       .setUrn(urn)
       .setDefendantSurname('Protractor-' + urn.replace('TVL', ''))

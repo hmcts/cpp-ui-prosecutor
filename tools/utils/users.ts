@@ -16,10 +16,10 @@ export const TVL_USER: User = {
   source: 'CPP'
 };
 
-export const PROSECUTOR_USER: User = {
-  userId: 'a9448185-672e-4aea-94d6-5988355ed459',
-  firstName: 'Prosecutor',
-  lastName: '',
-  email: 'amy@test.hmcts.net ',
+export const TVL_PROSECUTOR_USER: User = {
+  userId: '85435116-0f4b-4616-ae9a-9954ed1c3ee1',
+  firstName: 'Trevor',
+  lastName: 'Lawson',
+  email: 'trevor@test.tvl.uk',
   source: 'CPP'
 };
