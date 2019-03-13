@@ -19,8 +19,7 @@ describe('prosecutor', () => {
 
     await page.searchForUrn(urn);
 
-    // todo need to pluralise the search result text
-    await expect(searchResultPage.searchResult.getText()).toContain('1 results available');
+    await expect(searchResultPage.searchResult.getText()).toContain('1 result available');
     await expect(searchResultPage.caseUrn.getText()).toContain(urn);
   });
 });

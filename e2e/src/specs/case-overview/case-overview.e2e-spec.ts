@@ -19,7 +19,7 @@ describe('prosecutor', () => {
     await expect(page.caseStatus.getText()).toContain('No plea received - ready for decision');
     await expect(page.caseProsecutor.getText()).toContain('TV Licensing');
 
-    await page.goToTab('DefendantDetails details');
+    await page.goToTab('Defendant details');
 
     const defendantName = 'PROTRACTOR-' + kase.urn.replace('TVL', '') + ' John Adam Theodore';
 
