@@ -2,6 +2,8 @@ import { request, User } from '@cpp/ui.priming';
 import { CaseData, StagingParam } from '../interfaces';
 import * as uuid from 'uuid/v4';
 
+const COMMAND = `/stagingtfl-command-api/command/api/rest`;
+
 export const stageTflCase = (param: StagingParam, user: User): Promise<any> => {
   const form = {
     headerFileReference: {
@@ -22,7 +24,7 @@ export const stageTflCase = (param: StagingParam, user: User): Promise<any> => {
 
   return request({
     method: 'POST',
-    url: `/stagingtfl-command-api/command/api/rest/staging-tfl/files/` + uuid(),
+    url: `${COMMAND}/staging-tfl/files/` + uuid(),
     formData: form,
     headers: {
       'Content-Type': 'multipart/form-data',
@@ -35,7 +37,7 @@ export const stageTflCase = (param: StagingParam, user: User): Promise<any> => {
 export const stageProsecutorCase = (body: CaseData, user: User): Promise<any> => {
   return request({
     method: 'POST',
-    url: `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v1/prosecutions`,
+    url: `${COMMAND}/stagingprosecutors/v1/prosecutions`,
     body,
     headers: {
       'Content-Type': 'application/vnd.hmcts.cjs.sjp-prosecution+json',
@@ -50,7 +52,20 @@ export const stageDocument = (formData: any, user: User): Promise<any> => {
   return request({
     method: 'POST',
     formData,
-    url: `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v1/prosecutions/${urn}/materials`,
+    url: `${COMMAND}/stagingprosecutors/v1/prosecutions/${urn}/materials`,
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      charset: 'UTF-8'
+    },
+    user
+  });
+};
+
+export const stageTflDocument = (formData: any, user: User): Promise<any> => {
+  return request({
+    method: 'POST',
+    formData,
+    url: `${COMMAND}/staging-tfl/upload-supporting-documents/` + uuid(),
     headers: {
       'Content-Type': 'multipart/form-data',
       charset: 'UTF-8'
