@@ -8,12 +8,12 @@ import { Case, Offence, PleaseStatus } from '../../../contexts/sjp';
     <h2 pdk-typography="heading-large" pdk-margin-vertical="4">
       Offence <span *ngIf="index">{{ index }}</span>
     </h2>
-    <h3 pdk-typography="heading-medium">{{ offence.title || 'Placeholder for title' }}</h3>
+    <h3 pdk-typography="heading-medium">{{ offence.title }}</h3>
     <pdk-foldable-text pdk-typography="body-medium">
       {{ offence.wording }}
     </pdk-foldable-text>
     <p pdk-typography="body-small" pdk-margin-vertical="4">
-      {{ offence.legislation || 'Placeholder for legislation' }}
+      {{ offence.legislation }}
     </p>
     <p pdk-typography="body-small" pdk-margin-vertical="4" *ngIf="offence.chargeDate">
       On {{ offence.chargeDate | formatDate: 'd MMM y' }}

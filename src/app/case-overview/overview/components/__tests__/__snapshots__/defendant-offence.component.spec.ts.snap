@@ -24,7 +24,7 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
       ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-      Placeholder for title
+      offence title 1
     </h3>
     <pdk-foldable-text
       _nghost-c0=""
@@ -54,7 +54,7 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
-       Placeholder for legislation 
+       legislation 2 
     </p>
     
     <p
@@ -108,7 +108,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-      Placeholder for title
+      offence title 2
     </h3>
     <pdk-foldable-text
       _nghost-c2=""
@@ -138,7 +138,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
-       Placeholder for legislation 
+       legislation 1 
     </p>
     
     <p

@@ -22,6 +22,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
         {
           "id": "offenceId1",
           "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
           "offenceSequenceNumber": 1,
           "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
           "cjsCode": "CA03013",
@@ -34,6 +36,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
         {
           "id": "offenceId2",
           "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
           "offenceSequenceNumber": 1,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
@@ -113,6 +117,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
       {
         "id": "offenceId1",
         "offenceCode": "CA03013",
+        "title": "offence title 1",
+        "legislation": "legislation 2",
         "offenceSequenceNumber": 1,
         "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
         "cjsCode": "CA03013",
@@ -125,6 +131,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
       {
         "id": "offenceId2",
         "offenceCode": "CA03013",
+        "title": "offence title 2",
+        "legislation": "legislation 1",
         "offenceSequenceNumber": 1,
         "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
         "cjsCode": "CA03013",
@@ -175,6 +183,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
     {
       "id": "offenceId1",
       "offenceCode": "CA03013",
+      "title": "offence title 1",
+      "legislation": "legislation 2",
       "offenceSequenceNumber": 1,
       "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
       "cjsCode": "CA03013",
@@ -187,6 +197,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
     {
       "id": "offenceId2",
       "offenceCode": "CA03013",
+      "title": "offence title 2",
+      "legislation": "legislation 1",
       "offenceSequenceNumber": 1,
       "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
       "cjsCode": "CA03013",

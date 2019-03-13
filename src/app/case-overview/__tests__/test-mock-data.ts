@@ -4,6 +4,8 @@ export const MOCK_OFFENCES: Offence[] = [
   {
     id: 'offenceId1',
     offenceCode: 'CA03013',
+    title: 'offence title 1',
+    legislation: 'legislation 2',
     offenceSequenceNumber: 1,
     wording: 'On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..',
     cjsCode: 'CA03013',
@@ -16,6 +18,8 @@ export const MOCK_OFFENCES: Offence[] = [
   {
     id: 'offenceId2',
     offenceCode: 'CA03013',
+    title: 'offence title 2',
+    legislation: 'legislation 1',
     offenceSequenceNumber: 1,
     wording:
       'On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of ' +
