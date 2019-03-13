@@ -3,7 +3,7 @@ import { reducers } from '../../core';
 import * as fromActions from '../search.action';
 import * as fromSelectors from '../search.selectors';
 import { searchReducer as search } from '../search.reducer';
-import { MOCK_CASES } from './test-mock-data';
+import { MOCK_SEARCH_RESULTS } from './test-mock-data';
 
 describe('search/selectors', () => {
   const reducer = combineReducers({ ...reducers, search });
@@ -24,7 +24,7 @@ describe('search/selectors', () => {
 
   describe('getCaseDetails', () => {
     it('should select the available cases with details', () => {
-      const state = createState([new fromActions.SearchSuccess(MOCK_CASES)]);
+      const state = createState([new fromActions.SearchSuccess(MOCK_SEARCH_RESULTS)]);
       expect(fromSelectors.getSearchResultCases(state)).toMatchSnapshot();
     });
   });

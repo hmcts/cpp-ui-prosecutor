@@ -1,6 +1,6 @@
 import { SearchResult } from '../../contexts/sjp';
 
-export const MOCK_CASES: SearchResult = {
+export const MOCK_SEARCH_RESULTS: SearchResult = {
   foundCasesWithOutdatedDefendantsName: false,
   results: [
     {

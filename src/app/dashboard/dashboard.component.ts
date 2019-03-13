@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       Single Justice Procedure
     </h1>
     <h2 pdk-typography="heading-medium" pdk-margin-top="8">Search for a case</h2>
-    <search-container></search-container>
+    <search-input-container></search-input-container>
 
     <h2 pdk-typography="heading-medium" pdk-margin-top="8">Other tasks</h2>
     <p pdk-typography="caption-medium">Defendant details updates (0)</p>

@@ -18,7 +18,7 @@ export class SearchEffects {
     switchMap(action => {
       return this.sjpService.getCasesDetails(action.payload).pipe(
         map(response => new SearchSuccess(response)),
-        tap(() => this.router.navigate(['/search/results'])),
+        tap(() => this.router.navigate(['/search'])),
         catchError(err => of(new ApiError(err)))
       );
     })
