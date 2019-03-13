@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { FeatureState, getSearchKeyword, getSearchResultCases } from '../../search.selectors';
 import { Search } from '../../search.action';
 import { Observable } from 'rxjs';
-import { CaseDetails } from '../../search.interface';
+import { CaseDetails } from '../../../contexts/sjp';
 
 @Component({
   selector: 'search-results-container',

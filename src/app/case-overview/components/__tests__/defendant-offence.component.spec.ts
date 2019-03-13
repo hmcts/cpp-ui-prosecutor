@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { PdkBadgeModule, PdkCoreModule, PdkFoldableTextModule } from '@cpp/pdk';
 import { CommonModule } from '@angular/common';
-import { Case, Offence } from '../../case-overview.interfaces';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { DefendantOffenceComponent } from '../defendant-offence.component';
 import { FormatDatePipeModule, PleaStatusPipeModule } from '../../../shared/pipes';
+import { Case, Offence } from '../../../contexts/sjp';
 
 describe('DefendantOffenceComponent', () => {
   const offence1 = MOCK_CASE.defendant.offences[0];

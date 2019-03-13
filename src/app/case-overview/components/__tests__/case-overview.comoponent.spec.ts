@@ -8,7 +8,6 @@ import {
   PdkPageHeaderModule,
   PdkTabsModule
 } from '@cpp/pdk';
-import { Case, CaseDocument, Defendant, Offence } from '../../case-overview.interfaces';
 import { MOCK_CASE, MOCK_OFFENCES } from '../../__tests__/test-mock-data';
 import { CaseOverviewComponent } from '../case-overview.component';
 import {
@@ -17,6 +16,7 @@ import {
   FormatAddressPipeModule,
   FormatDatePipeModule
 } from '../../../shared/pipes';
+import { Case, CaseDocument, Defendant, Offence } from '../../../contexts/sjp';
 
 describe('CaseOverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -78,7 +78,7 @@ describe('CaseOverviewComponent', () => {
   @Component({
     selector: 'case-overview-test',
     template: `
-      <case-overview [kase]="kase" [defendant]="defendant" [offences]="offences"> </case-overview>
+      <case-overview [kase]="kase" [defendant]="defendant" [offences]="offences"></case-overview>
     `
   })
   class TestCaseOverviewComponent {

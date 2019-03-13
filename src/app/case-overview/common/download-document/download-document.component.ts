@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CaseDocument } from '../../case-overview.interfaces';
+import { CaseDocument } from '../../../contexts/sjp';
 
 @Component({
   selector: 'download-document',
@@ -7,9 +7,7 @@ import { CaseDocument } from '../../case-overview.interfaces';
     <div pdk-margin-vertical="2" class="download-document">
       <pdk-file-download-icon [size]="39"></pdk-file-download-icon>
       <div class="document-item">
-        <a href="/api" pdk-link pdk-typography="body-xsmall">
-          {{ document.documentType | docFileName }} </a
-        ><br />
+        <a href="/api" pdk-link pdk-typography="body-xsmall"> {{ document.documentType | docFileName }} </a><br />
         <span pdk-typography="body-xsmall">PDF</span>
       </div>
       <div class="clear"></div>

@@ -10,11 +10,5 @@ export const getSearchKeyword = (state: FeatureState) => state.search.searchKeyw
 export const getSearchResult = (state: FeatureState) => state.search.searchResult;
 export const getSearchResultCases = createSelector(
   getSearchResult,
-  cases => {
-    if (cases) {
-      return cases.results;
-    } else {
-      return null;
-    }
-  }
+  cases => cases && cases.results
 );

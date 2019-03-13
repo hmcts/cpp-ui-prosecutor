@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Case } from './case-overview.interfaces';
+import { Case } from '../contexts/sjp';
 
 export const enum CaseOverviewTypes {
   GET_CASE_BY_ID = '[CaseOverview] Get Case By Id',

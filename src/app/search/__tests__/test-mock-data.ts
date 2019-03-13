@@ -1,4 +1,4 @@
-import { SearchResult } from '../search.interface';
+import { SearchResult } from '../../contexts/sjp';
 
 export const MOCK_CASES: SearchResult = {
   foundCasesWithOutdatedDefendantsName: false,

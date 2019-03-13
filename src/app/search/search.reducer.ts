@@ -1,5 +1,5 @@
 import { SearchActions, SearchTypes } from './search.action';
-import { SearchResult } from './search.interface';
+import { SearchResult } from '../contexts/sjp';
 
 export interface SearchState {
   searchKeyword: string;

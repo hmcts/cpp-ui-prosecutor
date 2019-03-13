@@ -20,13 +20,13 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CaseOverviewEffects } from './case-overview.effects';
 import { caseOverviewReducer } from './case-overview.reducer';
-import { CaseOverviewService } from './case-overview.service';
 import { CaseOverviewGuard } from './case-overview.guard';
 import { DownloadDocumentModule } from './common/download-document/download-document.module';
 import { StatementOfFactsComponent } from './components/statement-of-facts.component';
 import { DefendantOffenceComponent } from './components/defendant-offence.component';
 import { PleaMitigationComponent } from './components/plea-mitigation.component';
 import { SharedModule } from '../shared';
+import { SjpModule } from '../contexts/sjp/sjp.module';
 
 const DECLARATIONS = [
   CaseOverviewComponent,
@@ -52,6 +52,7 @@ const DECLARATIONS = [
     PdkDividerModule,
     PdkBadgeModule,
     SharedModule,
+    SjpModule,
     DownloadDocumentModule,
     StoreModule.forFeature('kase', caseOverviewReducer),
     EffectsModule.forFeature([CaseOverviewEffects]),
@@ -66,7 +67,7 @@ const DECLARATIONS = [
       }
     ])
   ],
-  providers: [CaseOverviewService, CaseOverviewGuard],
+  providers: [CaseOverviewGuard],
   exports: [...DECLARATIONS]
 })
 export class CaseOverviewModule {}

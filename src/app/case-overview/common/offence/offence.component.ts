@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, Optional } from '@angular/core';
-import { Offence } from '../../case-overview.interfaces';
+import { Offence } from '../../../contexts/sjp';
 
 @Component({
   selector: 'offence-component',

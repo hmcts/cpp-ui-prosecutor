@@ -1,5 +1,5 @@
-import { Case } from './case-overview.interfaces';
 import { CaseOverviewActions, CaseOverviewTypes } from './case-overview.action';
+import { Case } from '../contexts/sjp';
 
 export type CaseOverviewState = Case;
 

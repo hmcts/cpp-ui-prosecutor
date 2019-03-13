@@ -1,7 +1,7 @@
 import { DefendantNamePipe } from '../defendant-name.pipe';
-import { Defendant } from '../../../../search/search.interface';
+import { DefendantDetails } from '../../../../search/search.interface';
 
-const DEFENDANT: Defendant = {
+const DEFENDANT: DefendantDetails = {
   dateOfBirth: '',
   outdated: false,
   firstName: 'John',

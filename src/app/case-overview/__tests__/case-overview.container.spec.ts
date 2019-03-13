@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { Case, Defendant, Offence } from '../case-overview.interfaces';
 import { CaseOverviewContainer } from '../case-overview.container';
 import { reducers } from '../../reducers';
 import { Store, StoreModule } from '@ngrx/store';
@@ -8,6 +7,7 @@ import { caseOverviewReducer } from '../case-overview.reducer';
 import { GetCaseByIdSuccess } from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
 import { FeatureState } from '../case-overview.selectors';
+import { Case, Defendant, Offence } from '../../contexts/sjp';
 
 describe('CaseOverviewContainer', () => {
   let fixture: ComponentFixture<CaseOverviewContainer>;

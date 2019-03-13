@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Address } from '../../../case-overview/case-overview.interfaces';
+import { Address } from '../../../contexts/sjp';
 
 @Pipe({
   name: 'formatAddress'

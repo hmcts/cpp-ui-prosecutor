@@ -2,11 +2,10 @@ import { CaseOverviewGuard } from '../case-overview.guard';
 import { Store, StoreModule } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
-import { CaseOverviewService } from '../case-overview.service';
-import { ActivatedRouteSnapshot, Router } from '@angular/router';
-import { Case } from '../case-overview.interfaces';
+import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { GetCaseByIdSuccess } from '../case-overview.action';
+import { Case, SjpService } from '../../contexts/sjp';
 
 describe('CaseOverviewGuard', () => {
   let guard: CaseOverviewGuard;
@@ -27,7 +26,7 @@ describe('CaseOverviewGuard', () => {
       providers: [
         CaseOverviewGuard,
         {
-          provide: CaseOverviewService,
+          provide: SjpService,
           useValue: {
             getCaseById
           }

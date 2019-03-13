@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { CaseDocumentType } from '../../case-overview.interfaces';
+import { CaseDocumentType } from '../../../contexts/sjp';
 
 export const fileNameMap = {
   SJPN: 'SJP notice',

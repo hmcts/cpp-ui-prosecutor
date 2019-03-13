@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { SearchResult } from './search.interface';
+import { SearchResult } from '../contexts/sjp';
 
 /*
  * TypeScript creates a lookup dictionary for regular enums,
