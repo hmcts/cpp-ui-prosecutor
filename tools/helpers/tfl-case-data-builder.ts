@@ -1,8 +1,6 @@
 import { formatDate, getAgeFromDate, subtractDays } from '../utils/date';
-import { randomIntFromRange } from '../utils';
+import { getFixture, randomIntFromRange, zipDocFile } from '../utils';
 import { CaseData, StagingParam } from '../interfaces';
-
-const { sjpCaseData } = require('../fixtures/json/tfl-case-template.json');
 
 export class TflCaseDataBuilder {
   constructor(private data: CaseData) {}
@@ -53,6 +51,10 @@ export class TflCaseDataBuilder {
     return this.data.urn;
   }
 
+  public buildSjpnFileName(): string {
+    return this.data.defendantSurname + '_' + this.data.defendantName + '_' + this.data.urn + '_SJPN';
+  }
+
   public buildStagingParam(): StagingParam {
     return {
       caseData: this.toCaseHeaderValue(),
@@ -85,3 +87,5 @@ export class TflCaseDataBuilder {
     );
   }
 }
+
+const { sjpCaseData } = require('../fixtures/json/tfl-case-template.json');

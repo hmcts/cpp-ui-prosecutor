@@ -9,7 +9,8 @@ const cases = {
   'tfl-case': factory.createBasicTflCase,
   'tvl-case': factory.createBasicTvlCase,
   'tvl-case-mo': factory.createTvlCaseWithMultipleOffences,
-  'tvl-case-with-doc': factory.createTvlCaseWithDoc
+  'tvl-case-with-doc': factory.createTvlCaseWithDoc,
+  'tfl-case-with-doc': factory.createTflCaseWithDoc
 };
 
 const { _, apiUrl = defaultUrl } = argv;
