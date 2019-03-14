@@ -17,7 +17,7 @@ strict-ssl=false
 
 Make sure that angular cli is installed globally or run `npm install -g @angular/cli`
 
-Create a new json file in `src/app/config/` folder with name `app.overrride.config.json` and add the below config
+Create a new json file in `src/app/config/` folder with name `app.override.config.json` and add the below config
 
 ```
 {
@@ -32,6 +32,8 @@ Create a new json file in `src/app/config/` folder with name `app.overrride.conf
 Forward port 8181 to any one of the ATCM dev servers
 
 `ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
+
+Finally run `npm install` to install all packages
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4750/prosecutor`. The app will automatically reload if you change any of the source files.
 
