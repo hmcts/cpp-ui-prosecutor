@@ -22,7 +22,7 @@ interface ExtendedCommandSyncArgs extends CommandSyncArgs {
 }
 
 @Injectable()
-export class C2IHttp extends CppHttp {
+export class CustomHttp extends CppHttp {
   constructor(generateUniqueKey: any, backend: any, notifications: any, private store: Store<State>) {
     super(generateUniqueKey, backend, notifications);
   }
@@ -64,11 +64,11 @@ export class C2IHttp extends CppHttp {
   }
 }
 
-export function c2iHttpFactory(
+export function loadHttpFactory(
   generateUniqueKey: any,
   backend: CppHttpBackend,
   notifications: Notifications,
   store: Store<State>
 ) {
-  return new C2IHttp(generateUniqueKey, backend, notifications, store);
+  return new CustomHttp(generateUniqueKey, backend, notifications, store);
 }

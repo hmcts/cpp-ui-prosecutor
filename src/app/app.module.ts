@@ -4,11 +4,11 @@ import { RouterModule } from '@angular/router';
 import { META_REDUCERS, Store, StoreModule } from '@ngrx/store';
 import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
-import { CppHttp, CppHttpBackend, GENERATE_UNIQUE_KEY, Notifications } from '@cpp/core';
+import { CppHttp, CppHttpBackend, GENERATE_UNIQUE_KEY, HttpModule, Notifications } from '@cpp/core';
 
 import { routes } from './routes';
 import { getMetaReducers, getReducers, reducerToken } from './reducers';
-import { c2iHttpFactory } from './core/services/http';
+import { loadHttpFactory } from './core/services/http';
 // temporary, pending ui.core fix
 import * as uuid from 'uuid/v4';
 
@@ -24,6 +24,7 @@ import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     CoreModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducerToken),
@@ -51,7 +52,7 @@ import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
     },
     {
       provide: CppHttp,
-      useFactory: c2iHttpFactory,
+      useFactory: loadHttpFactory,
       deps: [GENERATE_UNIQUE_KEY, CppHttpBackend, Notifications, Store]
     },
     {
