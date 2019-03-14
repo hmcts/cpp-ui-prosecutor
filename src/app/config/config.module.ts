@@ -1,7 +1,6 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_CONFIG } from '@cpp/core';
-import { CapabilitiesModule } from '@cpp/core';
 import { AppConfigService } from './config.service';
 
 export const fetchAppConfig = (appConfig: AppConfigService) => {
@@ -9,7 +8,7 @@ export const fetchAppConfig = (appConfig: AppConfigService) => {
 };
 
 @NgModule({
-  imports: [HttpClientModule, CapabilitiesModule.forRoot({ manifestPath: 'capabilities.json' })],
+  imports: [HttpClientModule],
   providers: [
     AppConfigService,
     { provide: HTTP_CONFIG, useExisting: AppConfigService },
