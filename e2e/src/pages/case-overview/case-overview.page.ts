@@ -6,6 +6,7 @@ export class CaseOverviewPage extends BasePage {
   public readonly caseStatus = $(`[data-role='case-status']`);
   public readonly caseProsecutor = $(`[data-role='prosecutor']`);
   public readonly offenceHeadings = $$(`defendant-offence h2`);
+  public readonly offenceTitles = $$(`defendant-offence h3`);
 
   public readonly defendantName = $(`[data-role='defendant-name']`);
   public readonly defendantDob = $(`[data-role='date-of-birth']`);

@@ -28,6 +28,9 @@ describe('prosecutor', () => {
     await expect(page.defendantEmail.getText()).toContain('john@email.com');
 
     await expect(page.offenceHeadings.get(0).getText()).toContain('Offence');
+    await expect(page.offenceTitles.get(0).getText()).toContain(
+      'Obstruct person executing search warrant for TV receiver'
+    );
   });
 });
 
@@ -53,6 +56,11 @@ describe('prosecutor', () => {
     await expect(page.offenceHeadings.get(0).getText()).toContain('Offence 1');
     await expect(page.offenceHeadings.get(1).getText()).toContain('Offence 2');
 
-    // todo check offence titles
+    await expect(page.offenceTitles.get(0).getText()).toContain(
+      'Obstruct person executing search warrant for TV receiver'
+    );
+    await expect(page.offenceTitles.get(1).getText()).toContain(
+      'TV set with intent another use install without a licence'
+    );
   });
 });
