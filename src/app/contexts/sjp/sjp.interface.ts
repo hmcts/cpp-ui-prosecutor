@@ -145,3 +145,18 @@ export interface CaseDetails {
   status: string;
   urn: string;
 }
+
+interface PleadNotGuiltyCase {
+  caseId: string;
+  pleaEntry: string;
+  firstName: string;
+  lastName: string;
+  address: Address;
+  referenceNumber: string;
+  dateOfBirth: string;
+}
+
+export interface PleadedNotGuiltyCasesDetail {
+  cases: PleadNotGuiltyCase[];
+  count: number;
+}

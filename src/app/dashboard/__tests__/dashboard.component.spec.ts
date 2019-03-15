@@ -1,31 +1,36 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DashboardContainer } from '../dashboard.container';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DashboardComponent } from '../dashboard.component';
+import { MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
 
 describe('DashboardComponent', () => {
-  let fixture: ComponentFixture<DashboardContainer>;
+  let fixture: ComponentFixture<DashboardComponent>;
+  let component;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DashboardComponent, TestDashboardComponent, MockSearchContainer],
+      declarations: [DashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink],
       imports: []
     });
-    fixture = TestBed.createComponent(TestDashboardComponent);
+    fixture = TestBed.createComponent(DashboardComponent);
+    component = fixture.componentInstance;
   });
 
   it('should compile correctly', () => {
+    component.pleadedNotGuiltyCasesDetail = MOCK_PENDING_DATES_TO_AVOID;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   @Component({
-    selector: 'prosecutor-dashboard-test',
+    selector: 'review-not-guilty-pleas-link',
     template: `
-      <prosecutor-dashboard></prosecutor-dashboard>
+      <span>{{ numberOfCases }}</span>
     `
   })
-  class TestDashboardComponent {}
+  class ReviewNotGuiltyPleasLink {
+    @Input() numberOfCases;
+  }
 
   @Component({
     selector: 'search-input-container',

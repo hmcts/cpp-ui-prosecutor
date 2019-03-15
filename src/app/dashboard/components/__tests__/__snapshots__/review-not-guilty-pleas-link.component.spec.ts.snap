@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with multiple cases then the link should contain (2 cases) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases={[Function Number]}
+>
+  <p>
+    
+    <pdk-warning-text
+      _nghost-c3=""
+    >
+      <div
+        _ngcontent-c3=""
+        class="govuk-warning-text"
+      >
+        <span
+          _ngcontent-c3=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c3=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c3=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+          <a
+            href="/review-not-guilty-pleas"
+            ng-reflect-router-link="/review-not-guilty-pleas"
+            pdk-link=""
+            pdk-section="small"
+            routerlink="/review-not-guilty-pleas"
+          >
+             Review not guilty pleas (2 
+            <span
+              ng-reflect-ng-plural="2"
+            >
+              
+              
+              cases
+            </span>
+             ) 
+          </a>
+        </strong>
+      </div>
+    </pdk-warning-text>
+    
+  </p>
+</review-not-guilty-pleas-link>
+`;
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with single case then the link should contain (1 case) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases={[Function Number]}
+>
+  <p>
+    
+    <pdk-warning-text
+      _nghost-c2=""
+    >
+      <div
+        _ngcontent-c2=""
+        class="govuk-warning-text"
+      >
+        <span
+          _ngcontent-c2=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c2=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c2=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+          <a
+            href="/review-not-guilty-pleas"
+            ng-reflect-router-link="/review-not-guilty-pleas"
+            pdk-link=""
+            pdk-section="small"
+            routerlink="/review-not-guilty-pleas"
+          >
+             Review not guilty pleas (1 
+            <span
+              ng-reflect-ng-plural="1"
+            >
+              
+              case
+              
+            </span>
+             ) 
+          </a>
+        </strong>
+      </div>
+    </pdk-warning-text>
+    
+  </p>
+</review-not-guilty-pleas-link>
+`;
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with zero cases then the link should contain (0) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases="0"
+>
+  <p>
+    
+     Review not guilty pleas (0) 
+    
+  </p>
+</review-not-guilty-pleas-link>
+`;

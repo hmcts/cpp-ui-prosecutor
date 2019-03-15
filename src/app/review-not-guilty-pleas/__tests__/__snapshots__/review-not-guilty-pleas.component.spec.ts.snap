@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewNotGuiltyPleasComponent then the component should be created with out failure 1`] = `
+<review-not-guilty-pleas
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+>
+  <ol
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="/"
+        ng-reflect-router-link="../"
+        pdk-breadcrumb=""
+        routerlink="../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Review not guilty pleas (2 
+      
+      <span
+        ng-reflect-ng-plural="2"
+      >
+        
+        
+        cases
+      </span>
+       ) 
+    </li>
+  </ol><span>
+    <h2
+      pdk-section="large"
+    >
+       Review not guilty pleas (2 
+      <span
+        ng-reflect-ng-plural="2"
+      >
+        
+        
+        cases
+      </span>
+       ) 
+    </h2>
+    <h4
+      pdk-section="large"
+    >
+      <pdk-warning-text
+        _nghost-c4=""
+      >
+        <div
+          _ngcontent-c4=""
+          class="govuk-warning-text"
+        >
+          <span
+            _ngcontent-c4=""
+            aria-hidden="true"
+            class="govuk-warning-text__icon"
+          >
+            !
+          </span>
+          <strong
+            _ngcontent-c4=""
+            class="govuk-warning-text__text"
+          >
+            <span
+              _ngcontent-c4=""
+              class="govuk-warning-text__assistive"
+            >
+              Warning
+            </span>
+             These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working days from plea entry whichever is sooner 
+          </strong>
+        </div>
+      </pdk-warning-text>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </h4>
+  </span><table
+    pdk-table=""
+  >
+    <thead
+      pdk-table-head=""
+    >
+      <tr
+        pdk-table-row=""
+      >
+        <th
+          pdk-table-header=""
+        >
+          Name
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Address
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Reference Number
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Date of birth
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Plea entry
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      pdk-table-body=""
+    >
+      
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/f10c88de-e577-47df-98af-c8944c5094d0"
+            ng-reflect-router-link="/case-overview,f10c88de-e577-4"
+            pdk-link=""
+          >
+            <b>
+              Dennon Dennon Dennon SMITH
+            </b>
+          </a>
+        </td>
+        <td
+          class="pre-line"
+          pdk-table-cell=""
+        >
+           Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  LE3 1AB 
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL640029AGBG 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           25 Mar 1975 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           14 Mar 2019 
+        </td>
+      </tr>
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
+            ng-reflect-router-link="/case-overview,facca075-d7a5-4"
+            pdk-link=""
+          >
+            <b>
+              Stefanos Stefanos Stefanos SMITH
+            </b>
+          </a>
+        </td>
+        <td
+          class="pre-line"
+          pdk-table-cell=""
+        >
+           Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  SE21 1AB 
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL143468N9KN 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           23 Mar 2001 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           19 Mar 2019 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</review-not-guilty-pleas>
+`;
+
+exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case then the component should be created with out failure 1`] = `
+<review-not-guilty-pleas
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+>
+  <ol
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="/"
+        ng-reflect-router-link="../"
+        pdk-breadcrumb=""
+        routerlink="../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Review not guilty pleas (2 
+      
+      <span
+        ng-reflect-ng-plural="2"
+      >
+        
+        
+        cases
+      </span>
+       ) 
+    </li>
+  </ol><span>
+    <h2
+      pdk-section="large"
+    >
+       Review not guilty pleas (2 
+      <span
+        ng-reflect-ng-plural="2"
+      >
+        
+        
+        cases
+      </span>
+       ) 
+    </h2>
+    <h4
+      pdk-section="large"
+    >
+      <pdk-warning-text
+        _nghost-c2=""
+      >
+        <div
+          _ngcontent-c2=""
+          class="govuk-warning-text"
+        >
+          <span
+            _ngcontent-c2=""
+            aria-hidden="true"
+            class="govuk-warning-text__icon"
+          >
+            !
+          </span>
+          <strong
+            _ngcontent-c2=""
+            class="govuk-warning-text__text"
+          >
+            <span
+              _ngcontent-c2=""
+              class="govuk-warning-text__assistive"
+            >
+              Warning
+            </span>
+             These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working days from plea entry whichever is sooner 
+          </strong>
+        </div>
+      </pdk-warning-text>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </h4>
+  </span><table
+    pdk-table=""
+  >
+    <thead
+      pdk-table-head=""
+    >
+      <tr
+        pdk-table-row=""
+      >
+        <th
+          pdk-table-header=""
+        >
+          Name
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Address
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Reference Number
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Date of birth
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Plea entry
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      pdk-table-body=""
+    >
+      
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
+            ng-reflect-router-link="/case-overview,facca075-d7a5-4"
+            pdk-link=""
+          >
+            <b>
+              Stefanos Stefanos Stefanos SMITH
+            </b>
+          </a>
+        </td>
+        <td
+          class="pre-line"
+          pdk-table-cell=""
+        >
+           Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  SE21 1AB 
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL143468N9KN 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           23 Mar 2001 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           19 Mar 2019 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</review-not-guilty-pleas>
+`;
+
+exports[`ReviewNotGuiltyPleasComponent when the component is created with zero cases then the component should be created with out failure 1`] = `
+<review-not-guilty-pleas
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+>
+  <ol
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="/"
+        ng-reflect-router-link="../"
+        pdk-breadcrumb=""
+        routerlink="../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Review not guilty pleas (0 
+      
+       ) 
+    </li>
+  </ol>
+</review-not-guilty-pleas>
+`;

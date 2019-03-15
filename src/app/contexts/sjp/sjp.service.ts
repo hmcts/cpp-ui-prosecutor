@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
-import { Case, SearchResult, WithdrawOffenceState } from './sjp.interface';
+import { Case, PleadedNotGuiltyCasesDetail, SearchResult, WithdrawOffenceState } from './sjp.interface';
 
 @Injectable()
 export class SjpService {
@@ -14,6 +14,13 @@ export class SjpService {
     return this.http.query({
       url: `${this.query}/cases/${caseId}`,
       requestType: 'application/vnd.sjp.query.case-with-document-metadata+json'
+    });
+  }
+
+  getPendingDatesToAvoid(): Observable<PleadedNotGuiltyCasesDetail> {
+    return this.http.query({
+      url: `${this.query}/cases/pending-dates-to-avoid`,
+      requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
     });
   }
 

@@ -5,6 +5,7 @@ import { LayoutComponent } from './components/layout.component';
 import { AppContainer } from './containers/app.container';
 import { PdkCoreModule, PdkCppPatternModule } from '@cpp/pdk';
 import { ContextsModule } from '../contexts/contexts.module';
+import { PleadedNotGuiltyCasesDataGuard } from './guards/pleaded-not-guilty-cases-data-guard.service';
 import { AppRouterContainer } from './containers/app.router.container';
 
 const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
@@ -12,6 +13,7 @@ const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
 @NgModule({
   imports: [CommonModule, PdkCoreModule, PdkCppPatternModule, RouterModule, ContextsModule],
   declarations: [...DECLARATIONS],
-  exports: [AppContainer]
+  exports: [AppContainer],
+  providers: [PleadedNotGuiltyCasesDataGuard]
 })
 export class CoreModule {}

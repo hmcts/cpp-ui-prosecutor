@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selectors should select the right data from the store 1`] = `
+Object {
+  "cases": Array [
+    Object {
+      "address": Object {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "LE3 1AB",
+      },
+      "caseId": "f10c88de-e577-47df-98af-c8944c5094d0",
+      "dateOfBirth": "1975-03-25",
+      "firstName": "Dennon Dennon Dennon",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-14T11:54:08.167Z",
+      "referenceNumber": "TVL640029AGBG",
+    },
+    Object {
+      "address": Object {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "SE21 1AB",
+      },
+      "caseId": "facca075-d7a5-4f66-ac54-c2e0a2b47d77",
+      "dateOfBirth": "2001-03-23",
+      "firstName": "Stefanos Stefanos Stefanos",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-19T16:56:14.915Z",
+      "referenceNumber": "TVL143468N9KN",
+    },
+  ],
+  "count": 2,
+}
+`;
