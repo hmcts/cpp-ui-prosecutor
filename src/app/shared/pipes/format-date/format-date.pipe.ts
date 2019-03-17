@@ -9,6 +9,7 @@ export class FormatDatePipe implements PipeTransform {
   private datePipe: DatePipe = new DatePipe('en-GB');
 
   transform(isoDateString: string, pattern?: string): string {
-    return this.datePipe.transform(isoDateString, pattern).replace(/(AM|PM)/gm, match => match.toLowerCase());
+    const formattedDate = this.datePipe.transform(isoDateString, pattern);
+    return formattedDate && formattedDate.replace(/(AM|PM)/gm, match => match.toLowerCase());
   }
 }
