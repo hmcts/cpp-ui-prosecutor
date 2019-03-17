@@ -1,9 +1,14 @@
 import { formatDate, getAgeFromDate, subtractDays } from '../utils/date';
-import { getFixture, randomIntFromRange, zipDocFile } from '../utils';
+import { randomIntFromRange } from '../utils';
 import { CaseData, StagingParam } from '../interfaces';
+import { CaseDataBuilder } from './case-data-builder';
 
-export class TflCaseDataBuilder {
-  constructor(private data: CaseData) {}
+const { sjpCaseData } = require('../fixtures/json/tfl-case-template.json');
+
+export class TflCaseDataBuilder extends CaseDataBuilder {
+  constructor(private data: CaseData) {
+    super();
+  }
 
   static getRandomUrnSuffix() {
     return randomIntFromRange(100000000, 9999999999);
@@ -87,5 +92,3 @@ export class TflCaseDataBuilder {
     );
   }
 }
-
-const { sjpCaseData } = require('../fixtures/json/tfl-case-template.json');

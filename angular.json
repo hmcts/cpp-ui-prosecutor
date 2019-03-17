@@ -37,6 +37,14 @@
             "es5BrowserSupport": true
           },
           "configurations": {
+            "idam": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.idam.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -93,6 +101,9 @@
             "browserTarget": "prosecutor:build"
           },
           "configurations": {
+            "idam": {
+              "browserTarget": "prosecutor:build:idam"
+            },
             "production": {
               "browserTarget": "prosecutor:build:production"
             }

@@ -1,14 +1,17 @@
 import { CaseData } from '../interfaces';
 import { getFixture, OFFENCE_CODES, randomIntFromRange } from '../utils';
 import { subtractDays } from '../utils/date';
+import { CaseDataBuilder } from './case-data-builder';
 
 const { prosecutorCaseData } = require('../fixtures/json/prosecutor-case-template.json');
 const { offenceData } = require('../fixtures/json/offence.json');
 
-export class ProsecutorCaseDataBuilder {
-  constructor(private data: CaseData) {}
+export class ProsecutorCaseDataBuilder extends CaseDataBuilder {
+  constructor(private data: CaseData) {
+    super();
+  }
 
-  static createCaseDataForTvl(urn = null): ProsecutorCaseDataBuilder {
+  static createCaseDataForTvl(urn = null, postedDaysAgo = 28): ProsecutorCaseDataBuilder {
     if (!urn) {
       urn = 'TVL' + randomIntFromRange(100000000, 9999999999);
     }
@@ -20,12 +23,13 @@ export class ProsecutorCaseDataBuilder {
       .setUrn(urn)
       .setDefendantSurname('Protractor-' + urn.replace('TVL', ''))
       .setDefendantDob('1977-10-17')
+      .setChargePostingDate(subtractDays(postedDaysAgo))
       .addOffence(ProsecutorCaseDataBuilder.createOffence());
     return dataBuilder;
   }
 
-  static createCaseDataForMultipleOffences(urn = null): ProsecutorCaseDataBuilder {
-    const dataBuilder = ProsecutorCaseDataBuilder.createCaseDataForTvl(urn);
+  static createCaseDataForMultipleOffences(urn = null, postedDaysAgo = 28): ProsecutorCaseDataBuilder {
+    const dataBuilder = ProsecutorCaseDataBuilder.createCaseDataForTvl(urn, postedDaysAgo);
     dataBuilder.addOffence(ProsecutorCaseDataBuilder.createOffence(OFFENCE_CODES[1], 2));
 
     return dataBuilder;
@@ -57,6 +61,11 @@ export class ProsecutorCaseDataBuilder {
 
   setUrn(urn: string) {
     this.data.prosecutionSubmissionDetails.urn = urn;
+    return this;
+  }
+
+  setChargePostingDate(date: string) {
+    this.data.prosecutionSubmissionDetails.writtenChargePostingDate = date;
     return this;
   }
 

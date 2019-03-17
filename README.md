@@ -37,6 +37,11 @@ Finally run `npm install` to install all packages
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4750/prosecutor`. The app will automatically reload if you change any of the source files.
 
+### Run app in local vagrant with idam simulator
+
+Change `apiRoot` in `app.override.config.json` file to `http://localhost:7080/api` and then run
+`npm run start:idam`. You can browse the app using url `http://localhost:7080/prosecutor/`
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

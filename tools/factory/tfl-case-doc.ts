@@ -2,8 +2,8 @@ import { stageTflCase, stageTflDocument } from '../contexts/staging';
 import { build, deleteFile, TFL_USER, zipDocFile } from '../utils';
 import { fetchCaseByUrn, fetchCaseDocument, TflCaseDataBuilder } from '../helpers';
 
-export const buildTflCaseWithDoc = async () => {
-  const caseDataBuilder = TflCaseDataBuilder.createCaseDataForTfl();
+export const buildTflCaseWithDoc = async (postedDays = 28) => {
+  const caseDataBuilder = TflCaseDataBuilder.createCaseDataForTfl(null, postedDays);
 
   await stageTflCase(caseDataBuilder.buildStagingParam(), TFL_USER);
   const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());
