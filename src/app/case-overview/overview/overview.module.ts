@@ -8,6 +8,7 @@ import {
   PdkFoldableTextModule,
   PdkGridModule,
   PdkPageHeaderModule,
+  PdkRelatedModule,
   PdkTabsModule
 } from '@cpp/pdk';
 import {
@@ -48,6 +49,7 @@ const DECLARATIONS = [
     PdkFoldableTextModule,
     PdkDividerModule,
     PdkBadgeModule,
+    PdkRelatedModule,
     SharedModule,
     DownloadDocumentModule
   ],

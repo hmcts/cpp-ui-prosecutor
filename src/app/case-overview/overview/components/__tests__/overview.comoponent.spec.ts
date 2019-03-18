@@ -6,6 +6,7 @@ import {
   PdkDividerModule,
   PdkGridModule,
   PdkPageHeaderModule,
+  PdkRelatedModule,
   PdkTabsModule
 } from '@cpp/pdk';
 import { MOCK_CASE, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
@@ -41,7 +42,8 @@ describe('OverviewComponent', () => {
         DefendantNamePipeModule,
         FormatDatePipeModule,
         FormatAddressPipeModule,
-        PdkBreadcrumbsModule
+        PdkBreadcrumbsModule,
+        PdkRelatedModule
       ]
     });
 

@@ -415,15 +415,30 @@ exports[`OverviewComponent should compile correctly 1`] = `
               ng-reflect-top="5"
               pdk-margin-top="5"
             >
-              <a
-                class="govuk-heading-s"
-                href="javascript: void(0)"
-                ng-reflect-type="heading-small"
-                pdk-typography="heading-small"
-                routerlink="withdraw-offence"
+              <pdk-related
+                _nghost-c4=""
               >
-                Manage offence withdrawals
-              </a>
+                <div
+                  _ngcontent-c4=""
+                  class="pdk-related"
+                >
+                  <div
+                    _ngcontent-c4=""
+                    class="pdk-related__section"
+                  >
+                    <a
+                      class="govuk-link govuk-section-break govuk-section-break--s"
+                      href="javascript: void(0)"
+                      ng-reflect-type="small"
+                      pdk-link=""
+                      pdk-section="small"
+                      routerlink="withdraw-offence"
+                    >
+                      Manage offence withdrawals
+                    </a>
+                  </div>
+                </div>
+              </pdk-related>
             </div>
           </div>
         </pdk-grid>
@@ -1136,15 +1151,30 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               ng-reflect-top="5"
               pdk-margin-top="5"
             >
-              <a
-                class="govuk-heading-s"
-                href="javascript: void(0)"
-                ng-reflect-type="heading-small"
-                pdk-typography="heading-small"
-                routerlink="withdraw-offence"
+              <pdk-related
+                _nghost-c16=""
               >
-                Manage offence withdrawals
-              </a>
+                <div
+                  _ngcontent-c16=""
+                  class="pdk-related"
+                >
+                  <div
+                    _ngcontent-c16=""
+                    class="pdk-related__section"
+                  >
+                    <a
+                      class="govuk-link govuk-section-break govuk-section-break--s"
+                      href="javascript: void(0)"
+                      ng-reflect-type="small"
+                      pdk-link=""
+                      pdk-section="small"
+                      routerlink="withdraw-offence"
+                    >
+                      Manage offence withdrawals
+                    </a>
+                  </div>
+                </div>
+              </pdk-related>
             </div>
           </div>
         </pdk-grid>
@@ -1717,15 +1747,30 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               ng-reflect-top="5"
               pdk-margin-top="5"
             >
-              <a
-                class="govuk-heading-s"
-                href="javascript: void(0)"
-                ng-reflect-type="heading-small"
-                pdk-typography="heading-small"
-                routerlink="withdraw-offence"
+              <pdk-related
+                _nghost-c10=""
               >
-                Manage offence withdrawals
-              </a>
+                <div
+                  _ngcontent-c10=""
+                  class="pdk-related"
+                >
+                  <div
+                    _ngcontent-c10=""
+                    class="pdk-related__section"
+                  >
+                    <a
+                      class="govuk-link govuk-section-break govuk-section-break--s"
+                      href="javascript: void(0)"
+                      ng-reflect-type="small"
+                      pdk-link=""
+                      pdk-section="small"
+                      routerlink="withdraw-offence"
+                    >
+                      Manage offence withdrawals
+                    </a>
+                  </div>
+                </div>
+              </pdk-related>
             </div>
           </div>
         </pdk-grid>

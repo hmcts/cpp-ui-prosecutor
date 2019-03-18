@@ -52,9 +52,11 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid one-third>
         <div pdk-margin-top="5">
-          <a href="javascript: void(0)" pdk-typography="heading-small" routerLink="withdraw-offence"
-            >Manage offence withdrawals</a
-          >
+          <pdk-related>
+            <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
+              >Manage offence withdrawals</a
+            >
+          </pdk-related>
         </div>
       </pdk-grid>
     </pdk-grid>

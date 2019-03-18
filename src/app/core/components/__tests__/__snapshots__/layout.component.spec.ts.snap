@@ -114,45 +114,39 @@ exports[`Layout should render 1`] = `
       style="display: block;"
     >
       <pdk-phase-banner
-        _nghost-c5=""
         ng-reflect-type="beta"
       >
-        <div
-          _ngcontent-c5=""
-          class="govuk-phase-banner"
+        <p
+          class="govuk-phase-banner__content"
         >
-          <p
-            _ngcontent-c5=""
-            class="govuk-phase-banner__content"
+          <strong
+            class="govuk-tag govuk-phase-banner__content__tag"
           >
-            <strong
-              _ngcontent-c5=""
-              class="govuk-tag govuk-phase-banner__content__tag"
+            beta
+          </strong>
+          <span
+            class="govuk-phase-banner__text"
+          >
+             This is a new service – your 
+            <a
+              class="govuk-link"
+              data-test-id="feedback"
+              href="javascript:void(0)"
+              pdk-link=""
             >
-              beta
-            </strong>
-            <span
-              _ngcontent-c5=""
-              class="govuk-phase-banner__text"
-            >
-               This is a new service – your 
-              <a
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
-            </span>
-          </p>
-        </div>
+              feedback
+            </a>
+             will help us improve it 
+          </span>
+        </p>
       </pdk-phase-banner>
     </pdk-container>
     <pdk-main
+      class="govuk-body-m"
       id="main-content"
       ng-reflect-id="main-content"
+      ng-reflect-type="body"
+      pdk-typography="body"
     >
       <main
         class="govuk-!-margin-bottom-9 govuk-width-container"
@@ -377,45 +371,39 @@ exports[`Layout should render correctly with activity 1`] = `
       style="display: block;"
     >
       <pdk-phase-banner
-        _nghost-c26=""
         ng-reflect-type="beta"
       >
-        <div
-          _ngcontent-c26=""
-          class="govuk-phase-banner"
+        <p
+          class="govuk-phase-banner__content"
         >
-          <p
-            _ngcontent-c26=""
-            class="govuk-phase-banner__content"
+          <strong
+            class="govuk-tag govuk-phase-banner__content__tag"
           >
-            <strong
-              _ngcontent-c26=""
-              class="govuk-tag govuk-phase-banner__content__tag"
+            beta
+          </strong>
+          <span
+            class="govuk-phase-banner__text"
+          >
+             This is a new service – your 
+            <a
+              class="govuk-link"
+              data-test-id="feedback"
+              href="javascript:void(0)"
+              pdk-link=""
             >
-              beta
-            </strong>
-            <span
-              _ngcontent-c26=""
-              class="govuk-phase-banner__text"
-            >
-               This is a new service – your 
-              <a
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
-            </span>
-          </p>
-        </div>
+              feedback
+            </a>
+             will help us improve it 
+          </span>
+        </p>
       </pdk-phase-banner>
     </pdk-container>
     <pdk-main
+      class="govuk-body-m"
       id="main-content"
       ng-reflect-id="main-content"
+      ng-reflect-type="body"
+      pdk-typography="body"
     >
       <main
         class="govuk-!-margin-bottom-9 govuk-width-container"
@@ -637,45 +625,39 @@ exports[`Layout should render correctly with api error 1`] = `
       style="display: block;"
     >
       <pdk-phase-banner
-        _nghost-c19=""
         ng-reflect-type="beta"
       >
-        <div
-          _ngcontent-c19=""
-          class="govuk-phase-banner"
+        <p
+          class="govuk-phase-banner__content"
         >
-          <p
-            _ngcontent-c19=""
-            class="govuk-phase-banner__content"
+          <strong
+            class="govuk-tag govuk-phase-banner__content__tag"
           >
-            <strong
-              _ngcontent-c19=""
-              class="govuk-tag govuk-phase-banner__content__tag"
+            beta
+          </strong>
+          <span
+            class="govuk-phase-banner__text"
+          >
+             This is a new service – your 
+            <a
+              class="govuk-link"
+              data-test-id="feedback"
+              href="javascript:void(0)"
+              pdk-link=""
             >
-              beta
-            </strong>
-            <span
-              _ngcontent-c19=""
-              class="govuk-phase-banner__text"
-            >
-               This is a new service – your 
-              <a
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
-            </span>
-          </p>
-        </div>
+              feedback
+            </a>
+             will help us improve it 
+          </span>
+        </p>
       </pdk-phase-banner>
     </pdk-container>
     <pdk-main
+      class="govuk-body-m"
       id="main-content"
       ng-reflect-id="main-content"
+      ng-reflect-type="body"
+      pdk-typography="body"
     >
       <main
         class="govuk-!-margin-bottom-9 govuk-width-container"
@@ -897,45 +879,39 @@ exports[`Layout should render correctly with online status 1`] = `
       style="display: block;"
     >
       <pdk-phase-banner
-        _nghost-c12=""
         ng-reflect-type="beta"
       >
-        <div
-          _ngcontent-c12=""
-          class="govuk-phase-banner"
+        <p
+          class="govuk-phase-banner__content"
         >
-          <p
-            _ngcontent-c12=""
-            class="govuk-phase-banner__content"
+          <strong
+            class="govuk-tag govuk-phase-banner__content__tag"
           >
-            <strong
-              _ngcontent-c12=""
-              class="govuk-tag govuk-phase-banner__content__tag"
+            beta
+          </strong>
+          <span
+            class="govuk-phase-banner__text"
+          >
+             This is a new service – your 
+            <a
+              class="govuk-link"
+              data-test-id="feedback"
+              href="javascript:void(0)"
+              pdk-link=""
             >
-              beta
-            </strong>
-            <span
-              _ngcontent-c12=""
-              class="govuk-phase-banner__text"
-            >
-               This is a new service – your 
-              <a
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
-            </span>
-          </p>
-        </div>
+              feedback
+            </a>
+             will help us improve it 
+          </span>
+        </p>
       </pdk-phase-banner>
     </pdk-container>
     <pdk-main
+      class="govuk-body-m"
       id="main-content"
       ng-reflect-id="main-content"
+      ng-reflect-type="body"
+      pdk-typography="body"
     >
       <main
         class="govuk-!-margin-bottom-9 govuk-width-container"
