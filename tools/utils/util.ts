@@ -1,5 +1,4 @@
 import { error, info } from '@cpp/ui.priming';
-import { compose } from 'ramda';
 import { createReadStream, createWriteStream, ReadStream, unlink } from 'fs';
 import { join } from 'path';
 import * as archiver from 'archiver';

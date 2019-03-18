@@ -10,7 +10,11 @@ const cases = {
   'tvl-case': factory.createBasicTvlCase,
   'tvl-case-mo': factory.createTvlCaseWithMultipleOffences,
   'tvl-case-with-doc': factory.createTvlCaseWithDoc,
-  'tfl-case-with-doc': factory.createTflCaseWithDoc
+  'tfl-case-with-doc': factory.createTflCaseWithDoc,
+  'tfl-case-withdraw-offence': factory.createTflCaseWithdrawOffence,
+  'tvl-case-withdraw-offence': factory.createTvlCaseWithdrawOffence,
+  'tfl-case-plead-online': factory.createTflCaseAndPleadOnline,
+  'tfl-case-plea-not-guilty': factory.createTflCaseAndPleadNotGuilty
 };
 
 const { _, apiUrl = defaultUrl } = argv;

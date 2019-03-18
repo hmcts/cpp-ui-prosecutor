@@ -1,5 +1,5 @@
 import { createBasicTvlCase, createTvlCaseWithDoc } from '../../../../tools/factory';
-import { TVL_PROSECUTOR_USER } from '../../../../tools/utils';
+import { TVL_USER } from '../../../../tools/utils';
 import { navigate } from '../../util';
 import { CaseOverviewPage } from '../../pages';
 
@@ -13,7 +13,7 @@ describe('prosecutor', () => {
   });
 
   it('should be able to access the case details with single offence', async () => {
-    await navigate(page.getUrl(), TVL_PROSECUTOR_USER);
+    await navigate(page.getUrl(), TVL_USER);
 
     await expect(page.pageHeaderBar.getText()).toContain(kase.urn);
     await expect(page.caseStatus.getText()).toContain('No plea received - ready for decision');
@@ -44,7 +44,7 @@ describe('prosecutor', () => {
   });
 
   it('should be able to access the case details with multiple offences', async () => {
-    await navigate(page.getUrl(), TVL_PROSECUTOR_USER);
+    await navigate(page.getUrl(), TVL_USER);
 
     await expect(page.pageHeaderBar.getText()).toContain(kase.urn);
     await expect(page.caseStatus.getText()).toContain('No plea received - ready for decision');
