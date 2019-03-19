@@ -1,4 +1,4 @@
-import { Case, ContactDetails, Offence } from '../../contexts/sjp';
+import { Case, CaseDocumentMetaData, ContactDetails, Offence } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
   {
@@ -88,14 +88,16 @@ export const MOCK_CASE: Case = {
       materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
       documentType: 'PLEA',
       documentNumber: 1,
-      addedAt: '2019-02-25T09:30:24.442Z'
+      addedAt: '2019-02-25T09:30:24.442Z',
+      metadata: {} as CaseDocumentMetaData
     },
     {
       id: 'documentId2',
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'SJPN',
       documentNumber: 1,
-      addedAt: '2019-02-24T16:35:56.558Z'
+      addedAt: '2019-02-24T16:35:56.558Z',
+      metadata: {} as CaseDocumentMetaData
     }
   ],
   prosecutingAuthority: 'TFL',

@@ -87,6 +87,13 @@ export interface CaseDocument {
   documentType: CaseDocumentType;
   documentNumber: number;
   addedAt: string;
+  metadata: CaseDocumentMetaData;
+}
+
+export interface CaseDocumentMetaData {
+  addedAt: string;
+  fileName: string;
+  mimeType: string;
 }
 
 export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER';

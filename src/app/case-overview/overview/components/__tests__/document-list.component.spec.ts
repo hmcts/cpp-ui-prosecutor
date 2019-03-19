@@ -38,9 +38,11 @@ describe('DocumentListComponent', () => {
     selector: 'download-document',
     template: `
       {{ document | json }}
+      {{ caseId }}
     `
   })
   class MockDownloadDocument {
     @Input() document: CaseDocument;
+    @Input() caseId: string;
   }
 });

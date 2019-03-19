@@ -296,14 +296,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -316,6 +318,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
+                        </div>
+                        <div>
+                          
                         </div>
                       </case-details>
                     </section>
@@ -364,6 +369,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         <div>
                           
                         </div>
+                        <div>
+                          
+                        </div>
                       </defendant-details>
                     </section>
                   </pdk-tab>
@@ -379,6 +387,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     >
                       
                       <document-list
+                        ng-reflect-case-id="case-id-test"
                         ng-reflect-documents="[object Object],[object Object"
                       >
                         <div>
@@ -388,14 +397,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
       "documentType": "PLEA",
       "documentNumber": 1,
-      "addedAt": "2019-02-25T09:30:24.442Z"
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
     },
     {
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
       "documentType": "SJPN",
       "documentNumber": 1,
-      "addedAt": "2019-02-24T16:35:56.558Z"
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
     }
   ]
                         </div>
@@ -404,6 +415,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         </div>
                         <div>
                           
+                        </div>
+                        <div>
+                          case-id-test
                         </div>
                       </document-list>
                     </section>
@@ -576,14 +590,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -724,14 +740,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -1151,14 +1169,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -1171,6 +1191,9 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
+                        </div>
+                        <div>
+                          
                         </div>
                       </case-details>
                     </section>
@@ -1219,6 +1242,9 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         <div>
                           
                         </div>
+                        <div>
+                          
+                        </div>
                       </defendant-details>
                     </section>
                   </pdk-tab>
@@ -1234,6 +1260,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     >
                       
                       <document-list
+                        ng-reflect-case-id="case-id-test"
                         ng-reflect-documents="[object Object],[object Object"
                       >
                         <div>
@@ -1243,14 +1270,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
       "documentType": "PLEA",
       "documentNumber": 1,
-      "addedAt": "2019-02-25T09:30:24.442Z"
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
     },
     {
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
       "documentType": "SJPN",
       "documentNumber": 1,
-      "addedAt": "2019-02-24T16:35:56.558Z"
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
     }
   ]
                         </div>
@@ -1259,6 +1288,9 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         </div>
                         <div>
                           
+                        </div>
+                        <div>
+                          case-id-test
                         </div>
                       </document-list>
                     </section>
@@ -1433,14 +1465,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -1770,14 +1804,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -1790,6 +1826,9 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
+                        </div>
+                        <div>
+                          
                         </div>
                       </case-details>
                     </section>
@@ -1838,6 +1877,9 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         <div>
                           
                         </div>
+                        <div>
+                          
+                        </div>
                       </defendant-details>
                     </section>
                   </pdk-tab>
@@ -1853,6 +1895,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     >
                       
                       <document-list
+                        ng-reflect-case-id="case-id-test"
                         ng-reflect-documents="[object Object],[object Object"
                       >
                         <div>
@@ -1862,14 +1905,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
       "documentType": "PLEA",
       "documentNumber": 1,
-      "addedAt": "2019-02-25T09:30:24.442Z"
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
     },
     {
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
       "documentType": "SJPN",
       "documentNumber": 1,
-      "addedAt": "2019-02-24T16:35:56.558Z"
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
     }
   ]
                         </div>
@@ -1878,6 +1923,9 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         </div>
                         <div>
                           
+                        </div>
+                        <div>
+                          case-id-test
                         </div>
                       </document-list>
                     </section>
@@ -2051,14 +2099,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -2395,14 +2445,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -2415,6 +2467,9 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
+                        </div>
+                        <div>
+                          
                         </div>
                       </case-details>
                     </section>
@@ -2463,6 +2518,9 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         <div>
                           
                         </div>
+                        <div>
+                          
+                        </div>
                       </defendant-details>
                     </section>
                   </pdk-tab>
@@ -2478,6 +2536,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     >
                       
                       <document-list
+                        ng-reflect-case-id="case-id-test"
                         ng-reflect-documents="[object Object],[object Object"
                       >
                         <div>
@@ -2487,14 +2546,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
       "documentType": "PLEA",
       "documentNumber": 1,
-      "addedAt": "2019-02-25T09:30:24.442Z"
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
     },
     {
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
       "documentType": "SJPN",
       "documentNumber": 1,
-      "addedAt": "2019-02-24T16:35:56.558Z"
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
     }
   ]
                         </div>
@@ -2503,6 +2564,9 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         </div>
                         <div>
                           
+                        </div>
+                        <div>
+                          case-id-test
                         </div>
                       </document-list>
                     </section>
@@ -2675,14 +2739,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
         "documentType": "PLEA",
         "documentNumber": 1,
-        "addedAt": "2019-02-25T09:30:24.442Z"
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
         "id": "documentId2",
         "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
         "documentType": "SJPN",
         "documentNumber": 1,
-        "addedAt": "2019-02-24T16:35:56.558Z"
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
     ],
     "prosecutingAuthority": "TFL",

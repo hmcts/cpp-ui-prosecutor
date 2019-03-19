@@ -12,7 +12,7 @@ import { CaseDocument } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid two-thirds>
         <ng-container *ngFor="let document of documents">
-          <download-document [document]="document"></download-document>
+          <download-document [document]="document" [caseId]="caseId"></download-document>
         </ng-container>
       </pdk-grid>
     </pdk-grid>
@@ -20,4 +20,5 @@ import { CaseDocument } from '../../../contexts/sjp';
 })
 export class DocumentListComponent {
   @Input() documents: CaseDocument[];
+  @Input() caseId: string;
 }

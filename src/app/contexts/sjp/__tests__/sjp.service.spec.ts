@@ -56,7 +56,7 @@ describe('SjpService', () => {
 
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/cases/case-id-test',
-        requestType: 'application/vnd.sjp.query.case+json'
+        requestType: 'application/vnd.sjp.query.case-with-document-metadata+json'
       });
     });
   });

@@ -13,7 +13,7 @@ export class SjpService {
   getCaseById(caseId: string): Observable<Case> {
     return this.http.query({
       url: `${this.query}/cases/${caseId}`,
-      requestType: 'application/vnd.sjp.query.case+json'
+      requestType: 'application/vnd.sjp.query.case-with-document-metadata+json'
     });
   }
 

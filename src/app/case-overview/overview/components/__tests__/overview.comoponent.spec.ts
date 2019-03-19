@@ -149,11 +149,13 @@ describe('OverviewComponent', () => {
       <div>{{ documents | json }}</div>
       <div>{{ defendantDetails | json }}</div>
       <div>{{ kase | json }}</div>
+      <div>{{ caseId }}</div>
     `
   })
   class MockSubComponent {
     @Input() documents: CaseDocument[];
     @Input() defendantDetails: Defendant;
     @Input() kase: Case;
+    @Input() caseId: string;
   }
 });

@@ -53,7 +53,7 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
               <defendant-details [defendantDetails]="defendant.personalDetails"></defendant-details>
             </pdk-tab>
             <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
-              <document-list [documents]="kase.caseDocuments"></document-list>
+              <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
             </pdk-tab>
           </pdk-tabs>
         </div>

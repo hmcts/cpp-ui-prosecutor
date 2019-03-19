@@ -10,6 +10,7 @@ Object {
       "documentType": "PLEA",
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+      "metadata": Object {},
     },
     Object {
       "addedAt": "2019-02-24T16:35:56.558Z",
@@ -17,6 +18,7 @@ Object {
       "documentType": "SJPN",
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+      "metadata": Object {},
     },
   ],
   "completed": true,
