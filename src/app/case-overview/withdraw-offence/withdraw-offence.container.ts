@@ -2,30 +2,18 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FeatureState, getCase, getOffences } from '../case-overview.selectors';
 import { Observable } from 'rxjs';
-import { Case, Offence } from '../../contexts/sjp';
+import { Case, Offence, WithdrawOffence } from '../../contexts/sjp';
+import { map, take } from 'rxjs/operators';
+import { WithdrawOffences } from '../case-overview.action';
 
 @Component({
   selector: 'withdraw-offence',
   template: `
-    <ol pdk-breadcrumb-list pdk-margin-vertical="4">
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../../.." pdk-breadcrumb>Home</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="/search/results" pdk-breadcrumb>
-          Search for a case
-        </a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb href="javascript: void(0)" routerLink="../../..">Case Overview</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb>Withdraw offence</a>
-      </li>
-    </ol>
-    <defendant-highlight [case]="case$ | async"></defendant-highlight>
-
-    <withdraw-offence-list [offences]="offences$ | async" (formSubmit)="prepareState($event)"> </withdraw-offence-list>
+    <withdraw-offence-list
+      [kase]="case$ | async"
+      [offences]="offences$ | async"
+      (formSubmit)="submit($event)"
+    ></withdraw-offence-list>
   `
 })
 export class WithdrawOffenceContainer {
@@ -37,8 +25,13 @@ export class WithdrawOffenceContainer {
     this.offences$ = this.store.select(getOffences);
   }
 
-  prepareState($event: any) {
-    // TODO: prepare the state with reasons; ... let state = [];
-    console.log($event);
+  submit(offences: WithdrawOffence[]) {
+    this.case$
+      .pipe(
+        map(({ id }) => id),
+        map(id => new WithdrawOffences(offences, id)),
+        take(1)
+      )
+      .subscribe(this.store);
   }
 }

@@ -14,12 +14,7 @@ describe('WithdrawOffenceContainer', () => {
   beforeEach(() => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
-      declarations: [
-        WithdrawOffenceContainer,
-        MockWithdrawOffenceContainer,
-        MockDefendantHighlightComponent,
-        MockWithdrawOffenceListComponent
-      ],
+      declarations: [WithdrawOffenceContainer, MockWithdrawOffenceListComponent],
       imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)],
       providers: [
         {
@@ -40,24 +35,6 @@ describe('WithdrawOffenceContainer', () => {
   });
 
   @Component({
-    selector: 'withdraw-offence-test',
-    template: `
-      <span>container</span>
-    `
-  })
-  class MockWithdrawOffenceContainer {}
-
-  @Component({
-    selector: 'defendant-highlight',
-    template: `
-      <pre>{{ case | json }}</pre>
-    `
-  })
-  class MockDefendantHighlightComponent {
-    @Input() case: any;
-  }
-
-  @Component({
     selector: 'withdraw-offence-list',
     template: `
       <pre>{{ offences | json }}</pre>
@@ -65,5 +42,6 @@ describe('WithdrawOffenceContainer', () => {
   })
   class MockWithdrawOffenceListComponent {
     @Input() offences: any;
+    @Input() kase: any;
   }
 });

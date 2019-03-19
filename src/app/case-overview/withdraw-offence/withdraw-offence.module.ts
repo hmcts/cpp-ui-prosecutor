@@ -3,29 +3,22 @@ import { CommonModule } from '@angular/common';
 import { WithdrawOffenceContainer } from './withdraw-offence.container';
 import { RouterModule } from '@angular/router';
 import {
-  PdkBadgeModule,
   PdkBreadcrumbsModule,
   PdkButtonModule,
   PdkCheckboxInputModule,
   PdkCoreModule,
-  PdkDividerModule,
-  PdkFoldableTextModule,
+  PdkErrorSummaryModule,
   PdkFormModule,
   PdkGridModule,
   PdkRadioInputModule
 } from '@cpp/pdk';
 import { DefendantHighlightModule } from './components/defendant-highlight/defendant-highlight.module';
-import { OffenceComponent } from './offence.component';
-import { WithdrawOffenceListComponent } from './withdraw-offence-list.component';
-import { WithdrawOffenceListFormComponent } from './withdraw-offence-list-form.component';
+import { WithdrawOffenceComponent } from './withdraw-offence.component';
+import { WithdrawOffenceFormComponent } from './withdraw-offence-form.component';
 import { FormsModule } from '@angular/forms';
+import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence-withdrawal.module';
 
-const DECLARATIONS = [
-  WithdrawOffenceContainer,
-  OffenceComponent,
-  WithdrawOffenceListComponent,
-  WithdrawOffenceListFormComponent
-];
+const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
 @NgModule({
   declarations: [...DECLARATIONS],
@@ -39,10 +32,9 @@ const DECLARATIONS = [
     PdkCheckboxInputModule,
     PdkGridModule,
     PdkButtonModule,
-    PdkDividerModule,
-    PdkFoldableTextModule,
-    PdkBadgeModule,
+    PdkErrorSummaryModule,
     DefendantHighlightModule,
+    OffenceWithdrawalModule,
     RouterModule.forChild([
       {
         path: '',

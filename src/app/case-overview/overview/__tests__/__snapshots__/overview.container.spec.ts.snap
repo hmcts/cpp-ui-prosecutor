@@ -3,12 +3,14 @@
 exports[`OverviewContainer should compile correctly 1`] = `
 <case-overview-container
   defendant$={[Function Store]}
+  displayOffencesWithdrawnBanner$={[Function Store]}
   kase$={[Function Store]}
   offences$={[Function Store]}
   store={[Function Store]}
 >
   <case-overview
     ng-reflect-defendant="[object Object]"
+    ng-reflect-display-offences-withdrawn-banner="false"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >

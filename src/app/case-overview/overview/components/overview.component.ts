@@ -25,6 +25,11 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
         </pdk-page-header-content>
       </pdk-page-header>
     </div>
+    <div pdk-margin-vertical="1" *ngIf="displayOffencesWithdrawnBanner">
+      <pdk-alert [type]="'confirmation'">
+        Your request has been sent
+      </pdk-alert>
+    </div>
     <pdk-grid container>
       <pdk-grid two-thirds>
         <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">
@@ -81,4 +86,5 @@ export class OverviewComponent {
   @Input() kase: Case;
   @Input() defendant: Defendant;
   @Input() offences: Offence[];
+  @Input() displayOffencesWithdrawnBanner: boolean;
 }

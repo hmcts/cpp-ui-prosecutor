@@ -51,6 +51,7 @@ export interface Offence {
   plea?: PleaseStatus;
   pleaMethod?: string;
   pleaDate?: string;
+  reason?: string;
 
   dobChanged: boolean;
   addressChanged: boolean;
@@ -63,6 +64,15 @@ export interface Offence {
   contactDetails?: ContactDetails; // todo delete
   outOfTime?: boolean;
   notInEffect?: boolean;
+}
+
+export interface WithdrawOffence {
+  offenceId: string;
+  reason: string;
+}
+
+export interface WithdrawOffenceState {
+  withdrawalRequestsStatus: WithdrawOffence[];
 }
 
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';

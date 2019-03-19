@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  PdkAlertModule,
   PdkBadgeModule,
   PdkBreadcrumbsModule,
   PdkCoreModule,
@@ -54,6 +55,7 @@ const DECLARATIONS = [
     PdkDividerModule,
     PdkBadgeModule,
     PdkRelatedModule,
+    PdkAlertModule,
     PdkWarningTextModule,
     SharedModule,
     OffenceWarningModule,

@@ -5,13 +5,25 @@ import { CppHttp, HttpModule } from '@cpp/core';
 import { SjpService } from '../sjp.service';
 import { Case, CaseDetails, SearchResult } from '../sjp.interface';
 
+const MOCK_CASE_ID = 'mock-case-id';
+const MOCK_WITHDRAW_STATE = {
+  withdrawalRequestsStatus: [
+    {
+      offenceId: 'mock-offence-id',
+      reason: 'mock-reason'
+    }
+  ]
+};
+
 describe('SjpService', () => {
   let http: CppHttp;
   let service: SjpService;
   let mockQuery: jest.Mock;
+  let mockCommandSync: jest.Mock;
 
   beforeEach(() => {
     mockQuery = jest.fn();
+    mockCommandSync = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [HttpModule, CommonModule],
@@ -20,7 +32,8 @@ describe('SjpService', () => {
         {
           provide: CppHttp,
           useValue: {
-            query: mockQuery
+            query: mockQuery,
+            commandSync: mockCommandSync
           }
         }
       ]
@@ -66,6 +79,28 @@ describe('SjpService', () => {
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/search?q=testing',
         requestType: 'application/vnd.sjp.query.case-search-results+json'
+      });
+    });
+  });
+
+  describe('withdrawOffences', () => {
+    it('should make a call', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockCommandSync.mockReturnValue(response$);
+
+      const command$ = service.withdrawOffences(MOCK_WITHDRAW_STATE, MOCK_CASE_ID);
+
+      expect(command$).toBeObservable(expected$);
+
+      expect(mockCommandSync).toHaveBeenCalledWith({
+        url: `/sjp-command-api/command/api/rest/sjp/cases/${MOCK_CASE_ID}/offences-withdrawal-requests-status`,
+        requestType: 'application/vnd.sjp.set-offences-withdrawal-requests-status+json',
+        body: MOCK_WITHDRAW_STATE,
+        successEvent: 'public.sjp.offences-withdrawal-status-set',
+        errorEvent: []
       });
     });
   });

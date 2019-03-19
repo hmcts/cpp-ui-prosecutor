@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import {
+  PdkAlertModule,
   PdkBreadcrumbsModule,
   PdkCoreModule,
   PdkDividerModule,
@@ -42,6 +43,7 @@ describe('OverviewComponent', () => {
         PdkWarningTextModule,
         PdkGridModule,
         PdkDividerModule,
+        PdkAlertModule,
         AgePipeModule,
         DefendantNamePipeModule,
         FormatDatePipeModule,

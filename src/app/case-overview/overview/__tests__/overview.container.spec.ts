@@ -8,6 +8,7 @@ import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { FeatureState } from '../../case-overview.selectors';
 import { Case, Defendant, Offence } from '../../../contexts/sjp';
 import { OverviewContainer } from '../overview.container';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('OverviewContainer', () => {
   let fixture: ComponentFixture<OverviewContainer>;
@@ -16,7 +17,7 @@ describe('OverviewContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OverviewContainer, MockCaseOverviewComponent],
-      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)]
+      imports: [RouterTestingModule, StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)]
     });
 
     store = TestBed.get(Store);
@@ -41,5 +42,6 @@ describe('OverviewContainer', () => {
     @Input() kase: Case;
     @Input() defendant: Defendant;
     @Input() offences: Offence[];
+    @Input() displayOffencesWithdrawnBanner: boolean;
   }
 });

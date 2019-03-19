@@ -86,6 +86,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </div>
       </pdk-page-header>
     </div>
+    
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -425,14 +426,14 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c4=""
+                _nghost-c5=""
               >
                 <div
-                  _ngcontent-c4=""
+                  _ngcontent-c5=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c4=""
+                    _ngcontent-c5=""
                     class="pdk-related__section"
                   >
                     <a
@@ -850,6 +851,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         </div>
       </pdk-page-header>
     </div>
+    
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -888,27 +890,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             >
               
               <pdk-warning-text
-                _nghost-c27=""
+                _nghost-c31=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c27=""
+                  _ngcontent-c31=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c27=""
+                      _ngcontent-c31=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -919,27 +921,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-c27=""
+                _nghost-c31=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c27=""
+                  _ngcontent-c31=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c27=""
+                      _ngcontent-c31=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -950,27 +952,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-c27=""
+                _nghost-c31=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c27=""
+                  _ngcontent-c31=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c27=""
+                    _ngcontent-c31=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c27=""
+                      _ngcontent-c31=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -1279,14 +1281,14 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c25=""
+                _nghost-c29=""
               >
                 <div
-                  _ngcontent-c25=""
+                  _ngcontent-c29=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c25=""
+                    _ngcontent-c29=""
                     class="pdk-related__section"
                   >
                     <a
@@ -1558,6 +1560,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         </div>
       </pdk-page-header>
     </div>
+    
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -1897,14 +1900,14 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c18=""
+                _nghost-c21=""
               >
                 <div
-                  _ngcontent-c18=""
+                  _ngcontent-c21=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c18=""
+                    _ngcontent-c21=""
                     class="pdk-related__section"
                   >
                     <a
@@ -2182,6 +2185,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         </div>
       </pdk-page-header>
     </div>
+    
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -2521,14 +2525,14 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c11=""
+                _nghost-c13=""
               >
                 <div
-                  _ngcontent-c11=""
+                  _ngcontent-c13=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c11=""
+                    _ngcontent-c13=""
                     class="pdk-related__section"
                   >
                     <a

@@ -6,57 +6,7 @@ exports[`WithdrawOffenceContainer should compile correctly 1`] = `
   offences$={[Function Store]}
   store={[Function Store]}
 >
-  <ol
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
-  >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../.."
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="/search/results"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../.."
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Withdraw offence
-      </a>
-    </li>
-  </ol><defendant-highlight>
-    <pre>
-      null
-    </pre>
-  </defendant-highlight><withdraw-offence-list>
+  <withdraw-offence-list>
     <pre>
       null
     </pre>
