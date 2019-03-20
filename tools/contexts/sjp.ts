@@ -26,7 +26,7 @@ export const withdrawOffences = (caseId: string, user: User) => {
   });
 };
 
-export const pleadOnline = (defendantId: string, caseId: string, body) => {
+export const pleadOnline = (caseId: string, defendantId: string, body) => {
   return request({
     method: 'POST',
     url: `${COMMAND}/cases/${caseId}/defendants/${defendantId}/plead-online`,
