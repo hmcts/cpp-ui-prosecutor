@@ -45,13 +45,13 @@
         "address2": "London",
         "address3": "England",
         "address4": "UK",
-        "address5": "Greater London",
         "postcode": "W1T 1JY"
       }
     },
     "outgoings": [
       {
-        "description": "Accommodation"
+        "description": "Accommodation",
+        "amount": 500.3
       },
       {
         "description": "Council Tax",
@@ -66,10 +66,12 @@
         "amount": 100.1
       },
       {
-        "description": "Child maintenance"
+        "description": "Child maintenance",
+        "amount": 500.3
       },
       {
-        "description": "Other expenses required for live"
+        "description": "Other expenses required for live",
+        "amount": 500.3
       }
     ]
   }
