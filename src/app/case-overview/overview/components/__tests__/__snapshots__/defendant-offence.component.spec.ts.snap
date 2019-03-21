@@ -84,7 +84,7 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
 </defendant-offence-test>
 `;
 
-exports[`DefendantOffenceComponent should compile correctly with the offence is pending withdrawal 1`] = `
+exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there is withdrawal reason 1`] = `
 <defendant-offence-test
   kase={[Function Object]}
   offence={[Function Object]}
@@ -108,7 +108,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-      offence title 2
+      offence title 1
     </h3>
     <pdk-foldable-text
       _nghost-c2=""
@@ -126,7 +126,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
           class="pdk-foldable__content"
           id="pdk-foldable-text-2"
         >
-           On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction  
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
         
       </div>
@@ -138,7 +138,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
-       legislation 1 
+       legislation 2 
     </p>
     
     <p
@@ -148,7 +148,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
-       On 27 Jan 2019 
+       On 24 Jan 2019 
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -160,7 +160,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
         ng-reflect-right="4"
         pdk-margin-right="4"
       >
-         Notified Not Guilty 
+         No plea received 
       </pdk-badge>
       
       <pdk-badge
@@ -168,6 +168,174 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       >
          Pending withdrawal 
       </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the case is completed 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offence="[object Object]"
+  >
+    <h2
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-l"
+      ng-reflect-type="heading-large"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="heading-large"
+    >
+       Offence 
+      
+    </h2>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      _nghost-c6=""
+      class="govuk-body-m"
+      ng-reflect-type="body-medium"
+      pdk-typography="body-medium"
+    >
+      <div
+        _ngcontent-c6=""
+        class="pdk-foldable"
+      >
+        <span
+          _ngcontent-c6=""
+          aria-expanded="false"
+          class="pdk-foldable__content"
+          id="pdk-foldable-text-4"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+        
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      ng-reflect-vertical="6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        ng-reflect-right="4"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+      
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the reason is empty 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offence="[object Object]"
+  >
+    <h2
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-l"
+      ng-reflect-type="heading-large"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="heading-large"
+    >
+       Offence 
+      
+    </h2>
+    <h3
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      _nghost-c4=""
+      class="govuk-body-m"
+      ng-reflect-type="body-medium"
+      pdk-typography="body-medium"
+    >
+      <div
+        _ngcontent-c4=""
+        class="pdk-foldable"
+      >
+        <span
+          _ngcontent-c4=""
+          aria-expanded="false"
+          class="pdk-foldable__content"
+          id="pdk-foldable-text-3"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+        
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      ng-reflect-type="body-small"
+      ng-reflect-vertical="4"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      ng-reflect-vertical="6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        ng-reflect-right="4"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+      
     </div>
   </defendant-offence>
 </defendant-offence-test>

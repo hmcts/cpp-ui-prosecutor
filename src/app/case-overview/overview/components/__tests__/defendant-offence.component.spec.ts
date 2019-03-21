@@ -36,12 +36,40 @@ describe('DefendantOffenceComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should compile correctly with the offence is pending withdrawal', () => {
+  it('should display "Pending Withdrawal" if there is withdrawal reason', () => {
     fixture.componentInstance.kase = {
       ...MOCK_CASE,
       completed: false
     };
-    fixture.componentInstance.offence = offence2;
+    fixture.componentInstance.offence = {
+      ...offence1,
+      withdrawalRequestReason: 'with reason'
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should not show "Pending Withdrawal" if the reason is empty', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE,
+      completed: false
+    };
+    fixture.componentInstance.offence = {
+      ...offence1,
+      withdrawalRequestReason: ''
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should not show "Pending Withdrawal" if the case is completed', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE
+    };
+    fixture.componentInstance.offence = {
+      ...offence1,
+      withdrawalRequestReason: 'some reason'
+    };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

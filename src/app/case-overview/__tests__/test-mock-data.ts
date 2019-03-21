@@ -13,6 +13,7 @@ export const MOCK_OFFENCES: Offence[] = [
     startDate: '2019-01-19',
     chargeDate: '2019-01-24',
     compensation: 30,
+    withdrawalRequestReason: 'some reason',
     prosecutionFacts: 'An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..'
   } as Offence,
   {
