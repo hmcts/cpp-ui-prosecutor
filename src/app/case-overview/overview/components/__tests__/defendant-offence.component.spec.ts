@@ -15,7 +15,7 @@ describe('DefendantOffenceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantOffenceComponent, TestDefendantOffenceComponent],
+      declarations: [DefendantOffenceComponent, MockOffenceWarning, TestDefendantOffenceComponent],
       imports: [
         CommonModule,
         PdkCoreModule,
@@ -74,14 +74,33 @@ describe('DefendantOffenceComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
+  it('should compile correctly with offence warnings', () => {
+    fixture.componentInstance.kase = MOCK_CASE;
+    fixture.componentInstance.offence = {
+      ...offence1,
+      outOfTime: true,
+      notInEffect: true
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
   @Component({
     selector: 'defendant-offence-test',
     template: `
-      <defendant-offence [offence]="offence" [kase]="kase"> </defendant-offence>
+      <defendant-offence [offence]="offence" [kase]="kase"></defendant-offence>
     `
   })
   class TestDefendantOffenceComponent {
     offence: Offence;
     kase: Case;
   }
+
+  @Component({
+    selector: 'offence-warning',
+    template: `
+      <ng-content></ng-content>
+    `
+  })
+  class MockOffenceWarning {}
 });

@@ -61,6 +61,8 @@ export interface Offence {
   // todo bellow unaccounted for
   pendingWithdrawal?: boolean; // reason? {id}
   contactDetails?: ContactDetails; // todo delete
+  outOfTime?: boolean;
+  notInEffect?: boolean;
 }
 
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';

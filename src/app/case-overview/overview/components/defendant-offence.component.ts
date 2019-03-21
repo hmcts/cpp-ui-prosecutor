@@ -8,6 +8,12 @@ import { Case, Offence, PleaseStatus } from '../../../contexts/sjp';
     <h2 pdk-typography="heading-large" pdk-margin-vertical="4">
       Offence <span *ngIf="index">{{ index }}</span>
     </h2>
+    <offence-warning *ngIf="offence.outOfTime">
+      Offence is out of time
+    </offence-warning>
+    <offence-warning *ngIf="offence.notInEffect">
+      Offence not in effect - refer to court and see SJPN for offence details
+    </offence-warning>
     <h3 pdk-typography="heading-medium">{{ offence.title }}</h3>
     <pdk-foldable-text pdk-typography="body-medium">
       {{ offence.wording }}
