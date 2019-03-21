@@ -8,7 +8,7 @@
     "start": "ng serve --base-href=\"/prosecutor/\" --port 4750",
     "start:idam": "ng serve --base-href=\"/prosecutor/\" -c idam --port 9009 --public-host http://localhost:9009/sockjs-node --deploy-url /prosecutor/",
     "build": "ng build --base-href=\"/prosecutor/\"",
-    "ci:build": "ng build --base-href=\"/atcm-prosecutor/\"",
+    "ci:build": "ng build --base-href=\"/prosecutor-atcm/\"",
     "build:prod": "ng build --base-href=\"/prosecutor/\"",
     "lint": "ng lint --type-check --format verbose",
     "ci:lint": "mkdirp ./build/lint && ng lint --type-check --no-fix --force --format checkstyle 1> ./build/lint/tslint-checkstyle-result.xml",
