@@ -56,6 +56,7 @@ export interface Offence {
   addressChanged: boolean;
   nameChanged: boolean;
   pleaMitigation?: string;
+  withdrawalRequestReason?: string;
 
   // todo bellow unaccounted for
   pendingWithdrawal?: boolean; // reason? {id}

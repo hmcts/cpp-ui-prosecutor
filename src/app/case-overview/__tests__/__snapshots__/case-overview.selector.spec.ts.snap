@@ -42,6 +42,7 @@ Object {
         "sequenceNumber": 1,
         "startDate": "2019-01-19",
         "title": "offence title 1",
+        "withdrawalRequestReason": "some reason",
         "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
       },
       Object {
@@ -120,6 +121,7 @@ Object {
       "sequenceNumber": 1,
       "startDate": "2019-01-19",
       "title": "offence title 1",
+      "withdrawalRequestReason": "some reason",
       "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
     },
     Object {
@@ -182,6 +184,7 @@ Array [
     "sequenceNumber": 1,
     "startDate": "2019-01-19",
     "title": "offence title 1",
+    "withdrawalRequestReason": "some reason",
     "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
   },
   Object {

@@ -22,7 +22,7 @@ import { Case, Offence, PleaseStatus } from '../../../contexts/sjp';
       <pdk-badge pdk-margin-right="4">
         {{ plea | pleaStatus }}
       </pdk-badge>
-      <pdk-badge *ngIf="offence.pendingWithdrawal && !kase.completed">
+      <pdk-badge *ngIf="pendingWithdrawal">
         Pending withdrawal
       </pdk-badge>
     </div>
@@ -35,5 +35,9 @@ export class DefendantOffenceComponent {
 
   get plea(): PleaseStatus {
     return this.kase.completed && this.offence.plea === 'GUILTY' ? 'GUILTY_CASE_COMPLETED' : this.offence.plea;
+  }
+
+  get pendingWithdrawal(): boolean {
+    return this.offence.withdrawalRequestReason && !this.kase.completed;
   }
 }
