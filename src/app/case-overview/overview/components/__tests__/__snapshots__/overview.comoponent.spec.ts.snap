@@ -24,6 +24,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink=".."
         >
@@ -37,6 +38,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink="/search"
         >
@@ -760,6 +762,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink=".."
         >
@@ -773,6 +776,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink="/search"
         >
@@ -1356,6 +1360,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink=".."
         >
@@ -1369,6 +1374,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         <a
           class="govuk-breadcrumbs__link"
           href="javascript: void(0)"
+          ng-reflect-active=""
           pdk-breadcrumb=""
           routerlink="/search"
         >

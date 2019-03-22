@@ -149,7 +149,7 @@ exports[`Layout should render 1`] = `
       pdk-typography="body"
     >
       <main
-        class="govuk-!-margin-bottom-9 govuk-width-container"
+        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
         id="main-content"
         ng-reflect-bottom="9"
         pdk-container=""
@@ -262,9 +262,6 @@ exports[`Layout should render correctly with activity 1`] = `
           </p>
         </div>
       </div>
-      <div
-        class="pdk-activity-indicator__backdrop"
-      />
     </pdk-activity-indicator>
     
     <pdk-skip-link
@@ -406,7 +403,7 @@ exports[`Layout should render correctly with activity 1`] = `
       pdk-typography="body"
     >
       <main
-        class="govuk-!-margin-bottom-9 govuk-width-container"
+        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
         id="main-content"
         ng-reflect-bottom="9"
         pdk-container=""
@@ -660,7 +657,7 @@ exports[`Layout should render correctly with api error 1`] = `
       pdk-typography="body"
     >
       <main
-        class="govuk-!-margin-bottom-9 govuk-width-container"
+        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
         id="main-content"
         ng-reflect-bottom="9"
         pdk-container=""
@@ -914,7 +911,7 @@ exports[`Layout should render correctly with online status 1`] = `
       pdk-typography="body"
     >
       <main
-        class="govuk-!-margin-bottom-9 govuk-width-container"
+        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
         id="main-content"
         ng-reflect-bottom="9"
         pdk-container=""
