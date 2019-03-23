@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseWarnings should compile correctly with all warnings 1`] = `
+<case-warnings-test
+  defendant={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-warnings
+    ng-reflect-defendant="[object Object]"
+    ng-reflect-offences="[object Object]"
+  >
+    
+    <pdk-warning-text
+      _nghost-c0=""
+      error=""
+      ng-reflect-error=""
+    >
+      <div
+        _ngcontent-c0=""
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          _ngcontent-c0=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c0=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c0=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+           Defendant under 18 at date of charge 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    
+    <pdk-warning-text
+      _nghost-c0=""
+      error=""
+      ng-reflect-error=""
+    >
+      <div
+        _ngcontent-c0=""
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          _ngcontent-c0=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c0=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c0=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+           Offence is out of time 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    
+    <pdk-warning-text
+      _nghost-c0=""
+      error=""
+      ng-reflect-error=""
+    >
+      <div
+        _ngcontent-c0=""
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          _ngcontent-c0=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c0=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c0=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+           Offence not in effect - refer to court and see SJPN for offence details 
+        </strong>
+      </div>
+    </pdk-warning-text>
+  </case-warnings>
+</case-warnings-test>
+`;
+
+exports[`CaseWarnings should compile correctly without any warnings 1`] = `
+<case-warnings-test
+  defendant={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-warnings
+    ng-reflect-defendant="[object Object]"
+    ng-reflect-offences="[object Object]"
+  >
+    
+    <pdk-warning-text
+      _nghost-c1=""
+      error=""
+      ng-reflect-error=""
+    >
+      <div
+        _ngcontent-c1=""
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          _ngcontent-c1=""
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          _ngcontent-c1=""
+          class="govuk-warning-text__text"
+        >
+          <span
+            _ngcontent-c1=""
+            class="govuk-warning-text__assistive"
+          >
+            Warning
+          </span>
+           Defendant under 18 at date of charge 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    
+    
+  </case-warnings>
+</case-warnings-test>
+`;

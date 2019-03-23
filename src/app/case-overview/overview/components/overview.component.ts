@@ -36,6 +36,9 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
           ({{ defendant.personalDetails.dateOfBirth | age }} years old)<br />
           {{ defendant.personalDetails.address | formatAddress: ', ' }}
         </p>
+
+        <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
+
         <div pdk-margin-vertical="8">
           <pdk-tabs>
             <pdk-tab heading="Case details">

@@ -7,7 +7,8 @@ import {
   PdkGridModule,
   PdkPageHeaderModule,
   PdkRelatedModule,
-  PdkTabsModule
+  PdkTabsModule,
+  PdkWarningTextModule
 } from '@cpp/pdk';
 import { MOCK_CASE, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
 import {
@@ -18,6 +19,7 @@ import {
 } from '../../../../shared/pipes';
 import { Case, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
+import { CaseWarningsComponent } from '../case-warnings.component';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -28,6 +30,7 @@ describe('OverviewComponent', () => {
         OverviewComponent,
         TestCaseOverviewComponent,
         MockOffenceComponent,
+        CaseWarningsComponent,
         MockPleaMitigationComponent,
         MockStatementOfFactsComponent,
         MockSubComponent
@@ -36,6 +39,7 @@ describe('OverviewComponent', () => {
         PdkCoreModule,
         PdkPageHeaderModule,
         PdkTabsModule,
+        PdkWarningTextModule,
         PdkGridModule,
         PdkDividerModule,
         AgePipeModule,
@@ -71,6 +75,20 @@ describe('OverviewComponent', () => {
       {
         ...MOCK_OFFENCES[0],
         pleaMitigation: 'Plea mitigation'
+      }
+    ];
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should compile correctly with case warnings', () => {
+    fixture.componentInstance.defendant.personalDetails.dateOfBirth = '2000-02-14';
+    fixture.componentInstance.offences = [
+      {
+        ...MOCK_OFFENCES[0],
+        chargeDate: '2017-01-14',
+        outOfTime: true,
+        notInEffect: true
       }
     ];
     fixture.detectChanges();

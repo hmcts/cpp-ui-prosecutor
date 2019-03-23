@@ -9,7 +9,8 @@ import {
   PdkGridModule,
   PdkPageHeaderModule,
   PdkRelatedModule,
-  PdkTabsModule
+  PdkTabsModule,
+  PdkWarningTextModule
 } from '@cpp/pdk';
 import {
   CaseDetailsComponent,
@@ -24,10 +25,13 @@ import { SharedModule } from '../../shared';
 import { OverviewContainer } from './overview.container';
 import { DownloadDocumentModule } from '../common';
 import { RouterModule } from '@angular/router';
+import { CaseWarningsComponent } from './components/case-warnings.component';
+import { OffenceWarningModule } from '../common/offence-warning/offence-warning.module';
 
 const DECLARATIONS = [
   OverviewComponent,
   CaseDetailsComponent,
+  CaseWarningsComponent,
   DocumentListComponent,
   DefendantDetailsComponent,
   StatementOfFactsComponent,
@@ -50,7 +54,9 @@ const DECLARATIONS = [
     PdkDividerModule,
     PdkBadgeModule,
     PdkRelatedModule,
+    PdkWarningTextModule,
     SharedModule,
+    OffenceWarningModule,
     DownloadDocumentModule
   ],
   exports: [OverviewContainer]
