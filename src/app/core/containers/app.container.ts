@@ -50,10 +50,14 @@ export class AppContainer {
     titleService: Title
   ) {
     this.isBusy$ = combineLatest(
-      store.pipe(select(getHasApiActivity)),
+      store.pipe(
+        select(getHasApiActivity),
+        startWith(false)
+      ),
       router.events.pipe(
         filter(event => event instanceof RouteConfigLoadStart || event instanceof RouteConfigLoadEnd),
-        map(event => event instanceof RouteConfigLoadStart)
+        map(event => event instanceof RouteConfigLoadStart),
+        startWith(false)
       )
     ).pipe(map(([hasApiActivity, isBeingLazyLoaded]) => hasApiActivity || isBeingLazyLoaded));
 

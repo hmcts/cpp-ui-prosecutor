@@ -13,6 +13,7 @@ exports[`App page component should compile correctly 1`] = `
       class="js-enabled"
     >
       <app-layout
+        ng-reflect-activity="false"
         ng-reflect-api-error="false"
         ng-reflect-header-nav-items="[object Object],[object Object"
         ng-reflect-offline="false"
@@ -34,7 +35,7 @@ exports[`App page component should compile correctly 1`] = `
   ]
         </div>
         <div>
-          activity: 
+          activity: false
         </div>
         <div>
           offline: false
@@ -110,6 +111,7 @@ exports[`App page component should track any api errors 1`] = `
       class="js-enabled"
     >
       <app-layout
+        ng-reflect-activity="false"
         ng-reflect-api-error="true"
         ng-reflect-header-nav-items="[object Object],[object Object"
         ng-reflect-offline="false"
@@ -131,7 +133,7 @@ exports[`App page component should track any api errors 1`] = `
   ]
         </div>
         <div>
-          activity: 
+          activity: false
         </div>
         <div>
           offline: false
@@ -158,6 +160,7 @@ exports[`App page component should track the offline status of the container 1`]
       class="js-enabled"
     >
       <app-layout
+        ng-reflect-activity="false"
         ng-reflect-api-error="false"
         ng-reflect-header-nav-items="[object Object],[object Object"
         ng-reflect-offline="true"
@@ -179,7 +182,7 @@ exports[`App page component should track the offline status of the container 1`]
   ]
         </div>
         <div>
-          activity: 
+          activity: false
         </div>
         <div>
           offline: true
@@ -206,6 +209,7 @@ exports[`App page component should track the online status of the container 1`] 
       class="js-enabled"
     >
       <app-layout
+        ng-reflect-activity="false"
         ng-reflect-api-error="false"
         ng-reflect-header-nav-items="[object Object],[object Object"
         ng-reflect-offline="false"
@@ -227,7 +231,7 @@ exports[`App page component should track the online status of the container 1`] 
   ]
         </div>
         <div>
-          activity: 
+          activity: false
         </div>
         <div>
           offline: false

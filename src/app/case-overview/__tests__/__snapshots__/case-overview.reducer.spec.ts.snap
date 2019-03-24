@@ -79,7 +79,6 @@ Object {
         "email": "a@a.com",
         "home": "333333333",
         "mobile": "77777777",
-        "niNumber": "WWWWWWW",
       },
       "dateOfBirth": "1957-03-11",
       "dobChanged": false,

@@ -307,7 +307,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               WWWWWWW 
+               – 
             </div>
           </div>
         </pdk-grid>

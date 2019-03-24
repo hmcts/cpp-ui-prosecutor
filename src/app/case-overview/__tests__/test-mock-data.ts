@@ -74,7 +74,6 @@ export const MOCK_CASE: Case = {
       contactDetails: {
         mobile: '77777777',
         email: 'a@a.com',
-        niNumber: 'WWWWWWW',
         home: '333333333'
       } as ContactDetails,
       dobChanged: false,

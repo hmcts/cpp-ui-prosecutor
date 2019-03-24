@@ -26,7 +26,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
         },
         addressChanged: false,
         contactDetails: {
-          niNumber: 'asdad'
+          email: 'me@me.com'
         }
       },
       status: 'COMPLETED',

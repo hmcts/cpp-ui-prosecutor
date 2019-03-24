@@ -75,7 +75,6 @@ exports[`OverviewContainer should compile correctly 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -171,7 +170,6 @@ exports[`OverviewContainer should compile correctly 1`] = `
       "contactDetails": {
         "mobile": "77777777",
         "email": "a@a.com",
-        "niNumber": "WWWWWWW",
         "home": "333333333"
       },
       "dobChanged": false,

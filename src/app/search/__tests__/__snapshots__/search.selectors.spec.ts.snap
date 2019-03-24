@@ -13,7 +13,7 @@ Array [
       },
       "addressChanged": false,
       "contactDetails": Object {
-        "niNumber": "asdad",
+        "email": "me@me.com",
       },
       "dateOfBirth": "1957-03-11",
       "dobChanged": false,

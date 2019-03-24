@@ -100,7 +100,6 @@ export interface ContactDetails {
   email?: string;
   home?: string;
   mobile?: string;
-  niNumber?: string; // todo check unaccounted for
 }
 
 export interface Address {

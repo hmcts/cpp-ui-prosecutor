@@ -63,14 +63,18 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
         </div>
       </pdk-grid>
     </pdk-grid>
-    <div pdk-margin-vertical="8" *ngFor="let offence of offences; let i = index; let last = last">
-      <defendant-offence [index]="offences.length > 1 ? i + 1 : 0" [offence]="offence" [kase]="kase">
-      </defendant-offence>
-      <statement-of-facts *ngIf="offence.prosecutionFacts" [statementOfFacts]="offence.prosecutionFacts">
-      </statement-of-facts>
-      <plea-mitigation *ngIf="offence.pleaMitigation" [pleaMitigation]="offence.pleaMitigation"></plea-mitigation>
-      <pdk-divider *ngIf="!last"></pdk-divider>
-    </div>
+    <pdk-grid container>
+      <pdk-grid two-thirds>
+        <div pdk-margin-vertical="8" *ngFor="let offence of offences; let i = index; let last = last">
+          <defendant-offence [index]="offences.length > 1 ? i + 1 : 0" [offence]="offence" [kase]="kase">
+          </defendant-offence>
+          <statement-of-facts *ngIf="offence.prosecutionFacts" [statementOfFacts]="offence.prosecutionFacts">
+          </statement-of-facts>
+          <plea-mitigation *ngIf="offence.pleaMitigation" [pleaMitigation]="offence.pleaMitigation"></plea-mitigation>
+          <pdk-divider *ngIf="!last"></pdk-divider>
+        </div>
+      </pdk-grid>
+    </pdk-grid>
   `
 })
 export class OverviewComponent {

@@ -281,7 +281,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -354,7 +353,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "contactDetails": {
       "mobile": "77777777",
       "email": "a@a.com",
-      "niNumber": "WWWWWWW",
       "home": "333333333"
     },
     "dobChanged": false,
@@ -455,22 +453,36 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    
-    <div
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
     >
-      <defendant-offence
-        ng-reflect-index="1"
-        ng-reflect-kase="[object Object]"
-        ng-reflect-offence="[object Object]"
+      <div
+        class="govuk-grid-row"
       >
-        <div>
-          1
-        </div>
-        <div>
-          {
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="1"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  1
+                </div>
+                <div>
+                  {
     "id": "offenceId1",
     "offenceCode": "CA03013",
     "title": "offence title 1",
@@ -485,9 +497,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "withdrawalRequestReason": "some reason",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
-        </div>
-        <div>
-          {
+                </div>
+                <div>
+                  {
     "id": "case-id-test",
     "urn": "TFL26168N21T5",
     "defendant": {
@@ -549,7 +561,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -584,39 +595,39 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-        </div>
-      </defendant-offence>
-      
-      <statement-of-facts
-        ng-reflect-statement-of-facts="An incident took place at GREE"
-      >
-        <div>
-          An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
-        </div>
-      </statement-of-facts>
-      
-      
-      <pdk-divider>
-        <hr
-          class="pdk-divider"
-        />
-      </pdk-divider>
-    </div>
-    <div
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
-    >
-      <defendant-offence
-        ng-reflect-index="2"
-        ng-reflect-kase="[object Object]"
-        ng-reflect-offence="[object Object]"
-      >
-        <div>
-          2
-        </div>
-        <div>
-          {
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              
+              <pdk-divider>
+                <hr
+                  class="pdk-divider"
+                />
+              </pdk-divider>
+            </div>
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="2"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  2
+                </div>
+                <div>
+                  {
     "id": "offenceId2",
     "offenceCode": "CA03013",
     "title": "offence title 2",
@@ -634,9 +645,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "pendingWithdrawal": true,
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
   }
-        </div>
-        <div>
-          {
+                </div>
+                <div>
+                  {
     "id": "case-id-test",
     "urn": "TFL26168N21T5",
     "defendant": {
@@ -698,7 +709,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -733,19 +743,23 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-        </div>
-      </defendant-offence>
-      
-      <statement-of-facts
-        ng-reflect-statement-of-facts="An incident took place at GREE"
-      >
-        <div>
-          An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
-        </div>
-      </statement-of-facts>
-      
-      
-    </div>
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
+                </div>
+              </statement-of-facts>
+              
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
   </case-overview>
 </case-overview-test>
 `;
@@ -1121,7 +1135,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -1194,7 +1207,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "contactDetails": {
       "mobile": "77777777",
       "email": "a@a.com",
-      "niNumber": "WWWWWWW",
       "home": "333333333"
     },
     "dobChanged": false,
@@ -1295,22 +1307,36 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    
-    <div
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
     >
-      <defendant-offence
-        ng-reflect-index="0"
-        ng-reflect-kase="[object Object]"
-        ng-reflect-offence="[object Object]"
+      <div
+        class="govuk-grid-row"
       >
-        <div>
-          0
-        </div>
-        <div>
-          {
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="0"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  0
+                </div>
+                <div>
+                  {
     "id": "offenceId1",
     "offenceCode": "CA03013",
     "title": "offence title 1",
@@ -1327,9 +1353,9 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "outOfTime": true,
     "notInEffect": true
   }
-        </div>
-        <div>
-          {
+                </div>
+                <div>
+                  {
     "id": "case-id-test",
     "urn": "TFL26168N21T5",
     "defendant": {
@@ -1391,7 +1417,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -1426,19 +1451,23 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-        </div>
-      </defendant-offence>
-      
-      <statement-of-facts
-        ng-reflect-statement-of-facts="An incident took place at GREE"
-      >
-        <div>
-          An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
-        </div>
-      </statement-of-facts>
-      
-      
-    </div>
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
   </case-overview>
 </case-overview-test>
 `;
@@ -1724,7 +1753,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -1797,7 +1825,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "contactDetails": {
       "mobile": "77777777",
       "email": "a@a.com",
-      "niNumber": "WWWWWWW",
       "home": "333333333"
     },
     "dobChanged": false,
@@ -1898,22 +1925,36 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    
-    <div
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
     >
-      <defendant-offence
-        ng-reflect-index="0"
-        ng-reflect-kase="[object Object]"
-        ng-reflect-offence="[object Object]"
+      <div
+        class="govuk-grid-row"
       >
-        <div>
-          0
-        </div>
-        <div>
-          {
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="0"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  0
+                </div>
+                <div>
+                  {
     "id": "offenceId1",
     "offenceCode": "CA03013",
     "title": "offence title 1",
@@ -1929,9 +1970,9 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..",
     "pleaMitigation": "Plea mitigation"
   }
-        </div>
-        <div>
-          {
+                </div>
+                <div>
+                  {
     "id": "case-id-test",
     "urn": "TFL26168N21T5",
     "defendant": {
@@ -1993,7 +2034,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -2028,26 +2068,30 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-        </div>
-      </defendant-offence>
-      
-      <statement-of-facts
-        ng-reflect-statement-of-facts="An incident took place at GREE"
-      >
-        <div>
-          An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
-        </div>
-      </statement-of-facts>
-      
-      <plea-mitigation
-        ng-reflect-plea-mitigation="Plea mitigation"
-      >
-        <div>
-          Plea mitigation
-        </div>
-      </plea-mitigation>
-      
-    </div>
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              <plea-mitigation
+                ng-reflect-plea-mitigation="Plea mitigation"
+              >
+                <div>
+                  Plea mitigation
+                </div>
+              </plea-mitigation>
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
   </case-overview>
 </case-overview-test>
 `;
@@ -2333,7 +2377,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -2406,7 +2449,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "contactDetails": {
       "mobile": "77777777",
       "email": "a@a.com",
-      "niNumber": "WWWWWWW",
       "home": "333333333"
     },
     "dobChanged": false,
@@ -2507,22 +2549,36 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    
-    <div
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
     >
-      <defendant-offence
-        ng-reflect-index="0"
-        ng-reflect-kase="[object Object]"
-        ng-reflect-offence="[object Object]"
+      <div
+        class="govuk-grid-row"
       >
-        <div>
-          0
-        </div>
-        <div>
-          {
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="0"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  0
+                </div>
+                <div>
+                  {
     "id": "offenceId1",
     "offenceCode": "CA03013",
     "title": "offence title 1",
@@ -2537,9 +2593,9 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "withdrawalRequestReason": "some reason",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
-        </div>
-        <div>
-          {
+                </div>
+                <div>
+                  {
     "id": "case-id-test",
     "urn": "TFL26168N21T5",
     "defendant": {
@@ -2601,7 +2657,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
-          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -2636,19 +2691,23 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-        </div>
-      </defendant-offence>
-      
-      <statement-of-facts
-        ng-reflect-statement-of-facts="An incident took place at GREE"
-      >
-        <div>
-          An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
-        </div>
-      </statement-of-facts>
-      
-      
-    </div>
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
   </case-overview>
 </case-overview-test>
 `;

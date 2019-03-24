@@ -33,7 +33,7 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
         },
         "addressChanged": false,
         "contactDetails": {
-          "niNumber": "asdad"
+          "email": "me@me.com"
         }
       },
       "status": "COMPLETED",

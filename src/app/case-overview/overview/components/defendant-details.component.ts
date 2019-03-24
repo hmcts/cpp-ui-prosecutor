@@ -81,7 +81,7 @@ import { PersonalDetails } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid one-half>
         <div pdk-padding-vertical="2">
-          {{ defendantDetails.contactDetails?.niNumber | ifEmpty: '–' }}
+          {{ defendantDetails.nationalInsuranceNumber | ifEmpty: '–' }}
         </div>
       </pdk-grid>
     </pdk-grid>
