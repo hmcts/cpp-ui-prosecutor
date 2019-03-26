@@ -3,7 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SearchInputModule } from '../search-input/search-input.module';
 import { SearchResultsContainer } from './seach-results.container';
 import { ListSearchResultsComponent } from './components/list-search-results.component';
-import { PdkBreadcrumbsModule, PdkCoreModule, PdkInsetTextModule, PdkTableModule } from '@cpp/pdk';
+import {
+  PdkBreadcrumbsModule,
+  PdkCoreModule,
+  PdkInsetTextModule,
+  PdkTableModule,
+  PdkWarningTextModule
+} from '@cpp/pdk';
 import { RouterModule } from '@angular/router';
 import { CaseProsecutorPipeModule, CaseStatusPipeModule, DefendantNamePipeModule } from '../../shared/pipes';
 import { SearchResultsComponent } from './components/search-results.component';
@@ -17,6 +23,7 @@ import { SearchResultsComponent } from './components/search-results.component';
     PdkBreadcrumbsModule,
     PdkInsetTextModule,
     PdkTableModule,
+    PdkWarningTextModule,
     SearchInputModule,
     CaseStatusPipeModule,
     CaseProsecutorPipeModule,

@@ -25,6 +25,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           results
         </span>
          available 
+        
       </div>
     </pdk-inset-text>
     
@@ -79,10 +80,12 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
+            
+            
             <a
               class="govuk-link"
               href="/case-overview/caseId2"
-              ng-reflect-router-link="/case-overview,caseId2"
+              ng-reflect-router-link="../../case-overview,caseId2"
               pdk-link=""
             >
               <b>
@@ -123,10 +126,12 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
+            
+            
             <a
               class="govuk-link"
               href="/case-overview/caseId3"
-              ng-reflect-router-link="/case-overview,caseId3"
+              ng-reflect-router-link="../../case-overview,caseId3"
               pdk-link=""
             >
               <b>
@@ -167,10 +172,12 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
+            
+            
             <a
               class="govuk-link"
               href="/case-overview/caseId4"
-              ng-reflect-router-link="/case-overview,caseId4"
+              ng-reflect-router-link="../../case-overview,caseId4"
               pdk-link=""
             >
               <b>
@@ -211,10 +218,12 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
+            
+            
             <a
               class="govuk-link"
               href="/case-overview/caseId5"
-              ng-reflect-router-link="/case-overview,caseId5"
+              ng-reflect-router-link="../../case-overview,caseId5"
               pdk-link=""
             >
               <b>
@@ -280,6 +289,7 @@ exports[`ListSearchResultsComponent should compile correctly with no results 1`]
           results
         </span>
          available 
+        
       </div>
     </pdk-inset-text>
     
@@ -312,6 +322,38 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
           
         </span>
          available 
+        
+        <pdk-warning-text
+          _nghost-c3=""
+          class="govuk-!-margin-top-2"
+          ng-reflect-top="2"
+          pdk-margin-top="2"
+        >
+          <div
+            _ngcontent-c3=""
+            class="govuk-warning-text"
+          >
+            <span
+              _ngcontent-c3=""
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              _ngcontent-c3=""
+              class="govuk-warning-text__text"
+            >
+              <span
+                _ngcontent-c3=""
+                class="govuk-warning-text__assistive"
+              >
+                Warning
+              </span>
+               Cases with updated defendant name 
+            </strong>
+          </div>
+        </pdk-warning-text>
       </div>
     </pdk-inset-text>
     
@@ -366,16 +408,48 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
           <td
             pdk-table-cell=""
           >
-            <a
-              class="govuk-link"
-              href="/case-overview/caseId1"
-              ng-reflect-router-link="/case-overview,caseId1"
-              pdk-link=""
+            
+            <pdk-warning-text
+              _nghost-c3=""
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
             >
-              <b>
-                SMITH Guy
-              </b>
-            </a>
+              <div
+                _ngcontent-c3=""
+                class="govuk-warning-text"
+              >
+                <span
+                  _ngcontent-c3=""
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  _ngcontent-c3=""
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    _ngcontent-c3=""
+                    class="govuk-warning-text__assistive"
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/case-overview/caseId1"
+                    ng-reflect-router-link="../../case-overview,caseId1"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+            
           </td>
           <td
             data-role="urn"

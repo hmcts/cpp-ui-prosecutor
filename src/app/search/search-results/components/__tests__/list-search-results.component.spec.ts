@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { CaseDetails } from '../../../../contexts/sjp';
 import { CaseProsecutorPipeModule, CaseStatusPipeModule, DefendantNamePipeModule } from '../../../../shared/pipes';
-import { PdkCoreModule, PdkGridModule, PdkInsetTextModule } from '@cpp/pdk';
+import { PdkCoreModule, PdkGridModule, PdkInsetTextModule, PdkWarningTextModule } from '@cpp/pdk';
 import { ListSearchResultsComponent } from '../list-search-results.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
@@ -18,6 +18,7 @@ describe('ListSearchResultsComponent', () => {
         PdkCoreModule,
         PdkGridModule,
         PdkInsetTextModule,
+        PdkWarningTextModule,
         DefendantNamePipeModule,
         CaseStatusPipeModule,
         CaseProsecutorPipeModule

@@ -169,7 +169,7 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
         "nameChanged": false,
         "gender": "male",
         "title": "alpha",
-        "outdated": false,
+        "outdated": true,
         "address": {
           "address1": "Hogwards",
           "postcode": "E1"

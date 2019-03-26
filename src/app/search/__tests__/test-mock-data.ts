@@ -19,7 +19,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
         nameChanged: false,
         gender: 'male',
         title: 'alpha',
-        outdated: false,
+        outdated: true,
         address: {
           address1: 'Hogwards',
           postcode: 'E1'

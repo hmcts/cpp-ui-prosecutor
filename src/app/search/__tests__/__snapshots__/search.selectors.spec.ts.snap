@@ -21,7 +21,7 @@ Array [
       "gender": "male",
       "lastName": "Smith",
       "nameChanged": false,
-      "outdated": false,
+      "outdated": true,
       "title": "alpha",
     },
     "enterpriseId": "Z8QG1JR7CMTD",
