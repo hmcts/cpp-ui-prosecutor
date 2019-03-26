@@ -49,7 +49,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         class="govuk-breadcrumbs__list-item"
         pdk-breadcrumb-list-item=""
       >
-         Case Details 
+         Case details 
       </li>
     </ol>
     <div
@@ -457,7 +457,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       pdk-margin-vertical="1"
                       pdk-typography="heading-medium"
                     >
-                      Case Options
+                      Case options
                     </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
@@ -841,7 +841,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         class="govuk-breadcrumbs__list-item"
         pdk-breadcrumb-list-item=""
       >
-         Case Details 
+         Case details 
       </li>
     </ol>
     <div
@@ -1339,7 +1339,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       pdk-margin-vertical="1"
                       pdk-typography="heading-medium"
                     >
-                      Case Options
+                      Case options
                     </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
@@ -1575,7 +1575,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         class="govuk-breadcrumbs__list-item"
         pdk-breadcrumb-list-item=""
       >
-         Case Details 
+         Case details 
       </li>
     </ol>
     <div
@@ -1983,7 +1983,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       pdk-margin-vertical="1"
                       pdk-typography="heading-medium"
                     >
-                      Case Options
+                      Case options
                     </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
@@ -2225,7 +2225,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         class="govuk-breadcrumbs__list-item"
         pdk-breadcrumb-list-item=""
       >
-         Case Details 
+         Case details 
       </li>
     </ol>
     <div
@@ -2633,7 +2633,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       pdk-margin-vertical="1"
                       pdk-typography="heading-medium"
                     >
-                      Case Options
+                      Case options
                     </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"

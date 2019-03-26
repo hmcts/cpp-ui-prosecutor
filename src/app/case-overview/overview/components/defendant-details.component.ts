@@ -5,7 +5,7 @@ import { PersonalDetails } from '../../../contexts/sjp';
   selector: 'defendant-details',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <h4 pdk-typography="heading-medium">Personal details</h4>
+    <h4 pdk-typography="heading-medium">Defendant details</h4>
     <pdk-grid container>
       <pdk-grid one-half>
         <div pdk-padding-vertical="2">
@@ -14,7 +14,7 @@ import { PersonalDetails } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid one-half>
         <div pdk-padding-vertical="2" data-role="defendant-name">
-          {{ defendantDetails | defendantName }}
+          {{ defendantDetails | defendantName: false }}
         </div>
       </pdk-grid>
 

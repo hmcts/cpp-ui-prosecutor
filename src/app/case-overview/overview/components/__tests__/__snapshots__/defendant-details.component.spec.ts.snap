@@ -14,7 +14,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
       ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-      Personal details
+      Defendant details
     </h4>
     <pdk-grid
       _ngcontent-c0=""
@@ -61,7 +61,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               SMITH Guy 
+               Guy SMITH 
             </div>
           </div>
         </pdk-grid>
