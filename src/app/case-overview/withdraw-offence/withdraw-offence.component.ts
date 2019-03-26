@@ -10,7 +10,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
         <a href="javascript: void(0)" routerLink="/" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="/search/results" pdk-breadcrumb>
+        <a href="javascript: void(0)" routerLink="/search" pdk-breadcrumb>
           Search for a case
         </a>
       </li>

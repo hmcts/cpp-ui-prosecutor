@@ -450,6 +450,15 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     _ngcontent-c5=""
                     class="pdk-related__section"
                   >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case Options
+                    </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
                       href="javascript: void(0)"
@@ -1323,6 +1332,15 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     _ngcontent-c29=""
                     class="pdk-related__section"
                   >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case Options
+                    </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
                       href="javascript: void(0)"
@@ -1958,6 +1976,15 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     _ngcontent-c21=""
                     class="pdk-related__section"
                   >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case Options
+                    </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
                       href="javascript: void(0)"
@@ -2599,6 +2626,15 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     _ngcontent-c13=""
                     class="pdk-related__section"
                   >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case Options
+                    </h1>
                     <a
                       class="govuk-link govuk-section-break govuk-section-break--s"
                       href="javascript: void(0)"

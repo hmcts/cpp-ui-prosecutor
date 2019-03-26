@@ -61,6 +61,7 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
       <pdk-grid one-third>
         <div pdk-margin-top="5">
           <pdk-related>
+            <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Case Options</h1>
             <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
               >Manage offence withdrawals</a
             >
