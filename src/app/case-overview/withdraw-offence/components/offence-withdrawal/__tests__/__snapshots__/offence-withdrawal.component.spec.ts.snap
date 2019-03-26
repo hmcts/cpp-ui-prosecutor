@@ -2,7 +2,7 @@
 
 exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
 <offence-component-test
-  number={[Function Number]}
+  index={[Function Number]}
   offence={[Function Object]}
 >
   <form
@@ -10,7 +10,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
     novalidate=""
   >
     <offence-withdrawal-component
-      ng-reflect-number="1"
+      ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
     >
       
@@ -26,14 +26,18 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
             class="pdk-divider"
           />
         </pdk-divider>
-        
         <div
           class="govuk-!-margin-0"
           ng-reflect-margin="0"
           pdk-margin="0"
         >
           <b>
-            Offence 1: offence title 1
+            Offence 
+            
+            <span>
+              1
+            </span>
+            : offence title 1
           </b>
         </div>
         <pdk-foldable-text
@@ -316,7 +320,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
 
 exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge if there is a reason property present on the offence 1`] = `
 <offence-component-test
-  number={[Function Number]}
+  index={[Function Number]}
   offence={[Function Object]}
 >
   <form
@@ -324,7 +328,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
     novalidate=""
   >
     <offence-withdrawal-component
-      ng-reflect-number="1"
+      ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
     >
       
@@ -340,14 +344,18 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
             class="pdk-divider"
           />
         </pdk-divider>
-        
         <div
           class="govuk-!-margin-0"
           ng-reflect-margin="0"
           pdk-margin="0"
         >
           <b>
-            Offence 1: offence title 1
+            Offence 
+            
+            <span>
+              1
+            </span>
+            : offence title 1
           </b>
         </div>
         <pdk-foldable-text
@@ -630,7 +638,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
 
 exports[`OffenceWithdrawalComponent should display the reasons options when yes is selected 1`] = `
 <offence-component-test
-  number={[Function Number]}
+  index={[Function Number]}
   offence={[Function Object]}
 >
   <form
@@ -638,7 +646,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
     novalidate=""
   >
     <offence-withdrawal-component
-      ng-reflect-number="1"
+      ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
     >
       
@@ -654,14 +662,18 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
             class="pdk-divider"
           />
         </pdk-divider>
-        
         <div
           class="govuk-!-margin-0"
           ng-reflect-margin="0"
           pdk-margin="0"
         >
           <b>
-            Offence 1: offence title 1
+            Offence 
+            
+            <span>
+              1
+            </span>
+            : offence title 1
           </b>
         </div>
         <pdk-foldable-text

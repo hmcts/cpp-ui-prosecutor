@@ -33,7 +33,7 @@ describe('OffenceWithdrawalComponent', () => {
     fixture = TestBed.createComponent(TestOffenceComponent);
 
     fixture.componentInstance.offence = MOCK_OFFENCES[0];
-    fixture.componentInstance.number = 1;
+    fixture.componentInstance.index = 1;
 
     fixture.detectChanges();
   });
@@ -59,12 +59,12 @@ describe('OffenceWithdrawalComponent', () => {
     selector: 'offence-component-test',
     template: `
       <form #form="ngForm">
-        <offence-withdrawal-component [offence]="offence" [number]="1"></offence-withdrawal-component>
+        <offence-withdrawal-component [offence]="offence" [index]="1"></offence-withdrawal-component>
       </form>
     `
   })
   class TestOffenceComponent {
     offence: Offence;
-    number: number;
+    index: number;
   }
 });

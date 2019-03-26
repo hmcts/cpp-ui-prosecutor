@@ -85,7 +85,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <a
               class="govuk-link"
               href="/case-overview/caseId2"
-              ng-reflect-router-link="../../case-overview,caseId2"
+              ng-reflect-router-link="/case-overview,caseId2"
               pdk-link=""
             >
               <b>
@@ -131,7 +131,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <a
               class="govuk-link"
               href="/case-overview/caseId3"
-              ng-reflect-router-link="../../case-overview,caseId3"
+              ng-reflect-router-link="/case-overview,caseId3"
               pdk-link=""
             >
               <b>
@@ -177,7 +177,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <a
               class="govuk-link"
               href="/case-overview/caseId4"
-              ng-reflect-router-link="../../case-overview,caseId4"
+              ng-reflect-router-link="/case-overview,caseId4"
               pdk-link=""
             >
               <b>
@@ -223,7 +223,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <a
               class="govuk-link"
               href="/case-overview/caseId5"
-              ng-reflect-router-link="../../case-overview,caseId5"
+              ng-reflect-router-link="/case-overview,caseId5"
               pdk-link=""
             >
               <b>
@@ -439,7 +439,7 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
                   <a
                     class="govuk-link"
                     href="/case-overview/caseId1"
-                    ng-reflect-router-link="../../case-overview,caseId1"
+                    ng-reflect-router-link="/case-overview,caseId1"
                     pdk-link=""
                   >
                     <b>

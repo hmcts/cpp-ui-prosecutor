@@ -10,8 +10,11 @@ import { REASON_OPTIONS } from '../../reason-mappings';
   template: `
     <div *ngIf="offence" pdk-margin-vertical="5" pdk-typography="body-medium">
       <pdk-divider></pdk-divider>
-      <div *ngIf="number" pdk-margin="0">
-        <b>Offence {{ number }}: {{ offence.title }}</b>
+      <div pdk-margin="0">
+        <b
+          >Offence <span *ngIf="index">{{ index }}</span
+          >: {{ offence.title }}</b
+        >
       </div>
       <pdk-foldable-text pdk-margin-top="2">
         {{ offence.wording }}
@@ -33,7 +36,7 @@ import { REASON_OPTIONS } from '../../reason-mappings';
           <pdk-form-field
             pdk-margin-top="5"
             labelHidden="true"
-            label="Offence {{ number }}: Reason for withdrawing"
+            label="Offence {{ index > 0 ? index : '' }}: Reason for withdrawing"
             labelType="small"
             errorMessages="errorMessage"
           >
@@ -54,7 +57,7 @@ import { REASON_OPTIONS } from '../../reason-mappings';
 export class OffenceWithdrawalComponent {
   reasonOptions = REASON_OPTIONS;
 
-  @Input() number: number;
+  @Input() index: number;
   @Input() offence: Offence;
 
   get displayReason() {

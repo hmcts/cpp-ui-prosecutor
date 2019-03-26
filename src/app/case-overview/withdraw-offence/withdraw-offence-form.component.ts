@@ -17,10 +17,18 @@ export interface WithdrawOffenceFormObj {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <form pdk-form (errors)="errors.emit($event)" (validSubmit)="mapFormValues(form.value)" novalidate>
-      <h1 pdk-typography="heading-medium">Would you like to withdraw any of the following offences?</h1>
+      <h1 pdk-typography="heading-medium">
+        <span [ngPlural]="offences.length">
+          <ng-template ngPluralCase="=1">Would you like to withdraw the following offence?</ng-template>
+          <ng-template ngPluralCase="other">Would you like to withdraw any of the following offences?</ng-template>
+        </span>
+      </h1>
 
       <div *ngFor="let offence of offences; let i = index">
-        <offence-withdrawal-component [number]="i + 1" [offence]="offence"></offence-withdrawal-component>
+        <offence-withdrawal-component
+          [index]="offences.length > 1 ? i + 1 : 0"
+          [offence]="offence"
+        ></offence-withdrawal-component>
       </div>
 
       <div pdk-margin-top="5" pdk-margin-bottom="0">
@@ -55,5 +63,6 @@ export class WithdrawOffenceFormComponent {
     this.submitOffenceWithdrawals.emit({
       withdrawalRequestsStatus: offences
     });
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 }

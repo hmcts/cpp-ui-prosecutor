@@ -3,8 +3,11 @@
 exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
 <test-withdraw-list-form-
   form={[Function Function]}
+  offences={[Function Array]}
 >
-  <withdraw-list-form>
+  <withdraw-list-form
+    ng-reflect-offences="[object Object],[object Object"
+  >
     <form
       class="ng-untouched ng-pristine ng-valid"
       novalidate=""
@@ -15,9 +18,21 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
         ng-reflect-type="heading-medium"
         pdk-typography="heading-medium"
       >
-        Would you like to withdraw any of the following offences?
+        <span
+          ng-reflect-ng-plural="2"
+        >
+          
+          
+          Would you like to withdraw any of the following offences?
+        </span>
       </h1>
       
+      <div>
+        <offence-withdrawal-component />
+      </div>
+      <div>
+        <offence-withdrawal-component />
+      </div>
       <div
         class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
         ng-reflect-bottom="0"
@@ -73,7 +88,13 @@ exports[`WithdrawOffenceFormComponent should display the offences 1`] = `
         ng-reflect-type="heading-medium"
         pdk-typography="heading-medium"
       >
-        Would you like to withdraw any of the following offences?
+        <span
+          ng-reflect-ng-plural="2"
+        >
+          
+          
+          Would you like to withdraw any of the following offences?
+        </span>
       </h1>
       
       <div>

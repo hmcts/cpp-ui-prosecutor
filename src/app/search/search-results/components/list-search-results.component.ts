@@ -11,7 +11,7 @@ import { CaseDetails } from '../../../contexts/sjp';
         <ng-template ngPluralCase="other">results</ng-template>
       </span>
       available
-      <pdk-warning-text *ngIf="areDefendantDetailsUpdated" pdk-margin-top="2">
+      <pdk-warning-text *ngIf="areDefendantsDetailsUpdated" pdk-margin-top="2">
         Cases with updated defendant name
       </pdk-warning-text>
     </pdk-inset-text>
@@ -30,7 +30,7 @@ import { CaseDetails } from '../../../contexts/sjp';
         <tr pdk-table-row *ngFor="let searchResult of searchResults">
           <td pdk-table-cell>
             <pdk-warning-text *ngIf="searchResult.defendant.outdated" pdk-margin-top="5">
-              <a href="javascript:void(0)" pdk-link [routerLink]="['../../case-overview', searchResult.caseId]">
+              <a href="javascript:void(0)" pdk-link [routerLink]="['/case-overview', searchResult.caseId]">
                 <b>{{ searchResult.defendant | defendantName }}</b>
               </a>
             </pdk-warning-text>
@@ -38,7 +38,7 @@ import { CaseDetails } from '../../../contexts/sjp';
               *ngIf="!searchResult.defendant.outdated"
               href="javascript:void(0)"
               pdk-link
-              [routerLink]="['../../case-overview', searchResult.caseId]"
+              [routerLink]="['/case-overview', searchResult.caseId]"
             >
               <b>{{ searchResult.defendant | defendantName }}</b>
             </a>
@@ -57,7 +57,7 @@ import { CaseDetails } from '../../../contexts/sjp';
 export class ListSearchResultsComponent {
   @Input() searchResults: CaseDetails[];
 
-  get areDefendantDetailsUpdated() {
+  get areDefendantsDetailsUpdated() {
     return this.searchResults.some(({ defendant }) => !!defendant.outdated);
   }
 }
