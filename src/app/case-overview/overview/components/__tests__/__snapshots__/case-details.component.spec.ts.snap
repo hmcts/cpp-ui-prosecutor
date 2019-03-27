@@ -22,11 +22,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
         class="govuk-grid-row"
       >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -41,11 +41,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
         </pdk-grid>
         
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -59,12 +59,21 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -78,11 +87,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -94,12 +103,21 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -113,11 +131,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -128,12 +146,21 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -147,11 +174,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -190,11 +217,11 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
         class="govuk-grid-row"
       >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -209,11 +236,11 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
         </pdk-grid>
         
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -236,12 +263,21 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
           </div>
         </pdk-grid>
         
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -255,11 +291,11 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -271,12 +307,21 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -290,11 +335,11 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -305,12 +350,21 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -324,11 +378,11 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -367,11 +421,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
         class="govuk-grid-row"
       >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -387,11 +441,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
         
         
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-body-m"
@@ -410,12 +464,21 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           </div>
         </pdk-grid>
         
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -429,11 +492,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -445,12 +508,21 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -464,11 +536,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -479,12 +551,21 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
@@ -498,11 +579,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           </div>
         </pdk-grid>
         <pdk-grid
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"

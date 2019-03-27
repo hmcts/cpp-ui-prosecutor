@@ -30,7 +30,7 @@ import { environment } from '../../../environments/environment';
         [offline]="offline$ | async"
         [apiError]="apiError$ | async"
       >
-        <router-outlet></router-outlet>
+        <router-container></router-container>
       </app-layout>
     </pdk-provider>
   `

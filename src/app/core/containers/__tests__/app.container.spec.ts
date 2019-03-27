@@ -14,9 +14,12 @@ import { PdkCoreModule, PdkCppPatternModule } from '@cpp/pdk';
 import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
 import { reducers } from '../../reducers';
 import { global } from '@angular/compiler/src/util';
+import { AppRouterContainer } from '../app.router.container';
 
 describe('App page component', () => {
+  window.scrollTo = jest.fn();
   const setTitle: jest.Mock = jest.fn();
+  const mockParseUrl = jest.fn();
 
   let fixture: ComponentFixture<AppContainer>;
   let store: Store<any>;
@@ -28,7 +31,7 @@ describe('App page component', () => {
     routeData = new BehaviorSubject<{}>({});
 
     TestBed.configureTestingModule({
-      declarations: [AppContainer, MockLayoutComponent],
+      declarations: [AppContainer, AppRouterContainer, MockLayoutComponent],
       imports: [CommonModule, PdkCoreModule, PdkCppPatternModule, StoreModule.forRoot(reducers), RouterTestingModule],
       providers: [
         {
@@ -45,7 +48,8 @@ describe('App page component', () => {
         {
           provide: Router,
           useValue: {
-            events: mockRouterEvent
+            events: mockRouterEvent,
+            parseUrl: mockParseUrl
           }
         },
         {
@@ -60,6 +64,7 @@ describe('App page component', () => {
     });
 
     store = TestBed.get(Store);
+    mockParseUrl.mockReturnValue({ url: 'home' });
     fixture = TestBed.createComponent(AppContainer);
   });
 

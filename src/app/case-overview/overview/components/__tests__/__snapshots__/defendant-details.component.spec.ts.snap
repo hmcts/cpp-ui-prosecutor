@@ -5,11 +5,9 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
   defendantDetails={[Function Object]}
 >
   <defendant-details
-    _nghost-c0=""
     ng-reflect-defendant-details="[object Object]"
   >
     <h4
-      _ngcontent-c0=""
       class="govuk-heading-m"
       ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
@@ -17,7 +15,6 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
       Defendant details
     </h4>
     <pdk-grid
-      _ngcontent-c0=""
       container=""
       ng-reflect-container=""
     >
@@ -25,37 +22,31 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
         class="govuk-grid-row"
       >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Name
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               data-role="defendant-name"
               ng-reflect-vertical="2"
@@ -65,39 +56,42 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Date of Birth
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
           data-role="date-of-birth"
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
@@ -106,38 +100,41 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Address
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="pre-line govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
@@ -150,38 +147,41 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Email
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               data-role="defendant-email"
               ng-reflect-vertical="2"
@@ -191,38 +191,41 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Home telephone
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
@@ -231,38 +234,41 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 Mobile
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
@@ -271,38 +277,41 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
             </div>
           </div>
         </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-one-third=""
+          one-third=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-one-third"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-              <b
-                _ngcontent-c0=""
-              >
+              <b>
                 National Insurance Number
               </b>
             </div>
           </div>
         </pdk-grid>
         <pdk-grid
-          _ngcontent-c0=""
-          ng-reflect-one-half=""
-          one-half=""
+          ng-reflect-two-thirds=""
+          two-thirds=""
         >
           <div
-            class="govuk-grid-column-one-half"
+            class="govuk-grid-column-two-thirds"
           >
             <div
-              _ngcontent-c0=""
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
