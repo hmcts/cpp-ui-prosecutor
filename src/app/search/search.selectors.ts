@@ -6,8 +6,8 @@ export interface FeatureState extends State {
   search: SearchState;
 }
 
-export const getSearchKeyword = (state: FeatureState) => state.search.searchKeyword;
-export const getSearchResult = (state: FeatureState) => state.search.searchResult;
+export const getSearchResult = (state: FeatureState) => state.search;
+export const getKeyword = (state: FeatureState) => state.search && state.search.keyword;
 export const getSearchResultCases = createSelector(
   getSearchResult,
   cases => cases && cases.results

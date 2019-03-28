@@ -1,29 +1,43 @@
 import { TestBed } from '@angular/core/testing';
-import { entitiesReducer, PleadedNotGuiltyCasesDetailState } from '../entities.reducer';
-import { LoadPleadedNotGuiltyCases } from '../../actions/entities';
+import { caseReducer, PleadedNotGuiltyCasesState, pleadedNotGuiltyReducer } from '../entities.reducer';
+import { LoadCaseSuccess, LoadPleadedNotGuiltyCases } from '../../actions/entities';
 import { MOCK_PENDING_DATES_TO_AVOID } from '../../../dashboard/__tests__/test-mock-data';
+import { Case } from '../../../contexts/sjp';
 
-describe('Entities Reducer', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [entitiesReducer]
+describe('caseReducer', () => {
+  describe('undefined action', () => {
+    it('should initialize the default state', () => {
+      const action = {} as any;
+      const result = caseReducer(undefined, action);
+
+      expect(result).toMatchSnapshot();
     });
   });
 
-  it('should reduce to the new state', () => {
-    const oldState = {} as PleadedNotGuiltyCasesDetailState;
-    const newState = MOCK_PENDING_DATES_TO_AVOID;
+  describe('LOAD_CASE_SUCCESS', () => {
+    it('should set the incoming case', () => {
+      const action = new LoadCaseSuccess({ id: 'caseId' } as Case);
+      const result = caseReducer(undefined, action);
+      expect(result).toMatchSnapshot();
+    });
+  });
+});
 
-    const result = entitiesReducer(oldState, new LoadPleadedNotGuiltyCases(newState));
+describe('pleadedNotGuiltyReducer', () => {
+  describe('undefined action', () => {
+    it('should initialize the default state', () => {
+      const action = {} as any;
+      const result = pleadedNotGuiltyReducer(undefined, action);
 
-    expect(result).toMatchSnapshot();
+      expect(result).toMatchSnapshot();
+    });
   });
 
-  it('should reduce to the same base state When the action doesnt match', () => {
-    const action = {} as any;
+  describe('LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS', () => {
+    it('should set the new state', () => {
+      const result = pleadedNotGuiltyReducer(undefined, new LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID));
 
-    const result = entitiesReducer(undefined, action);
-
-    expect(result).toMatchSnapshot();
+      expect(result).toMatchSnapshot();
+    });
   });
 });

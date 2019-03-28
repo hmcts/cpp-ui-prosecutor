@@ -1,4 +1,4 @@
-import { CaseDetails, SearchResult } from '../../contexts/sjp';
+import { CaseDetails, ContactDetails, SearchResult } from '../../contexts/sjp';
 
 export const MOCK_SEARCH_RESULTS: SearchResult = {
   foundCasesWithOutdatedDefendantsName: false,
@@ -25,9 +25,7 @@ export const MOCK_SEARCH_RESULTS: SearchResult = {
           postcode: 'E1'
         },
         addressChanged: false,
-        contactDetails: {
-          email: 'me@me.com'
-        }
+        contactDetails: {} as ContactDetails
       },
       status: 'COMPLETED',
       listedInCriminalCourts: false

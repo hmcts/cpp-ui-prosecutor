@@ -38,7 +38,7 @@ import { REASON_OPTIONS } from '../../reason-mappings';
             labelHidden="true"
             label="Offence {{ index > 0 ? index : '' }}: Reason for withdrawing"
             labelType="small"
-            errorMessages="errorMessage"
+            [errorMessages]="errorMessages"
           >
             <label pdk-label="small">Reason for withdrawing</label>
             <pdk-radio-group
@@ -55,7 +55,8 @@ import { REASON_OPTIONS } from '../../reason-mappings';
   `
 })
 export class OffenceWithdrawalComponent {
-  reasonOptions = REASON_OPTIONS;
+  public readonly reasonOptions = REASON_OPTIONS;
+  public readonly errorMessages = [{ rule: 'required', message: 'Choose a reason' }];
 
   @Input() index: number;
   @Input() offence: Offence;
@@ -63,6 +64,4 @@ export class OffenceWithdrawalComponent {
   get displayReason() {
     return !!this.offence.withdrawalRequestReason;
   }
-
-  errorMessage = [{ rule: 'required', message: 'Choose a reason' }];
 }

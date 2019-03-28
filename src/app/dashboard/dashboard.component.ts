@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { PleadedNotGuiltyCasesDetail } from '../contexts/sjp';
+import { PleadedNotGuiltyCaseResult } from '../contexts/sjp';
 
 @Component({
   selector: 'prosecutor-dashboard',
@@ -14,7 +14,7 @@ import { PleadedNotGuiltyCasesDetail } from '../contexts/sjp';
 
     <h2 pdk-typography="heading-medium" pdk-margin-top="8">Other tasks</h2>
 
-    <review-not-guilty-pleas-link [numberOfCases]="pleadedNotGuiltyCasesDetail.count"></review-not-guilty-pleas-link>
+    <review-not-guilty-pleas-link [numberOfCases]="pleadedNotGuiltyCasesDetail?.count"></review-not-guilty-pleas-link>
 
     <p pdk-typography="caption-medium">Defendant details updates (0)</p>
     <div>
@@ -26,5 +26,5 @@ import { PleadedNotGuiltyCasesDetail } from '../contexts/sjp';
   `
 })
 export class DashboardComponent {
-  @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCasesDetail;
+  @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
 }

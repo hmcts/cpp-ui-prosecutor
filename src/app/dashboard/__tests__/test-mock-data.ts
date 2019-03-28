@@ -1,6 +1,6 @@
-import { PleadedNotGuiltyCasesDetailState } from '../../core/reducers/entities.reducer';
+import { PleadedNotGuiltyCasesState } from '../../core/reducers/entities.reducer';
 
-export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesDetailState = {
+export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
   cases: [
     {
       caseId: 'f10c88de-e577-47df-98af-c8944c5094d0',
@@ -38,7 +38,7 @@ export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesDetailState = {
   count: 2
 };
 
-export const MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE: PleadedNotGuiltyCasesDetailState = {
+export const MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE: PleadedNotGuiltyCasesState = {
   cases: [
     {
       caseId: 'facca075-d7a5-4f66-ac54-c2e0a2b47d77',

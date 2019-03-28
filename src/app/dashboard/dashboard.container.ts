@@ -3,7 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { State } from '../reducers';
 import { getPleadedNotGuiltyCasesDetail } from '../core/selectors';
-import { PleadedNotGuiltyCasesDetail } from '../contexts/sjp';
+import { PleadedNotGuiltyCaseResult } from '../contexts/sjp';
 
 @Component({
   selector: 'prosecutor-dashboard-container',
@@ -13,7 +13,7 @@ import { PleadedNotGuiltyCasesDetail } from '../contexts/sjp';
   `
 })
 export class DashboardContainer {
-  pleadedNotGuiltyCasesDetail$: Observable<PleadedNotGuiltyCasesDetail>;
+  pleadedNotGuiltyCasesDetail$: Observable<PleadedNotGuiltyCaseResult>;
 
   constructor(private store: Store<State>) {
     this.pleadedNotGuiltyCasesDetail$ = this.store.pipe(select(getPleadedNotGuiltyCasesDetail));

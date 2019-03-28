@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
-import { Case, PleadedNotGuiltyCasesDetail, SearchResult, WithdrawOffenceState } from './sjp.interface';
+import { Case, PleadedNotGuiltyCaseResult, SearchResult } from './sjp.interface';
+import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 
 @Injectable()
 export class SjpService {
@@ -17,7 +18,7 @@ export class SjpService {
     });
   }
 
-  getPendingDatesToAvoid(): Observable<PleadedNotGuiltyCasesDetail> {
+  getPendingDatesToAvoid(): Observable<PleadedNotGuiltyCaseResult> {
     return this.http.query({
       url: `${this.query}/cases/pending-dates-to-avoid`,
       requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
@@ -31,10 +32,10 @@ export class SjpService {
     });
   }
 
-  withdrawOffences(offences: WithdrawOffenceState, caseId: string): Observable<any> {
+  withdrawOffences(body: WithdrawOffenceRequestParam, caseId: string): Observable<any> {
     return this.http.commandSync({
       url: `${this.command}/cases/${caseId}/offences-withdrawal-requests-status`,
-      body: offences,
+      body,
       requestType: 'application/vnd.sjp.set-offences-withdrawal-requests-status+json',
       successEvent: 'public.sjp.offences-withdrawal-status-set',
       errorEvent: []

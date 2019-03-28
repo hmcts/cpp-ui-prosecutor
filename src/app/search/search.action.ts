@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { SearchResult } from '../contexts/sjp';
+import { SearchState } from './search.reducer';
 
 /*
  * TypeScript creates a lookup dictionary for regular enums,
@@ -9,20 +9,19 @@ import { SearchResult } from '../contexts/sjp';
  * instead of simple strings.
  */
 export const enum SearchTypes {
-  SEARCH = '[Search] Search',
-  SEARCH_SUCCESS = '[Search] Search Success'
+  RESET_SEARCH_RESULT = '[ATCM] reset search result',
+  SEARCH_SUCCESS = '[ATCM] Search Success'
 }
 
-export class Search implements Action {
-  readonly type = SearchTypes.SEARCH;
-
-  constructor(public payload: string) {}
+export class ResetSearchResult implements Action {
+  readonly type = SearchTypes.RESET_SEARCH_RESULT;
+  constructor() {}
 }
 
 export class SearchSuccess implements Action {
   readonly type = SearchTypes.SEARCH_SUCCESS;
 
-  constructor(public payload: SearchResult) {}
+  constructor(public payload: SearchState) {}
 }
 
-export type SearchActions = Search | SearchSuccess;
+export type SearchActions = ResetSearchResult | SearchSuccess;

@@ -1,22 +1,17 @@
 import { Actions } from '@ngrx/effects';
 import { TestBed } from '@angular/core/testing';
 import { cold, hot } from 'jasmine-marbles';
-import { Store } from '@ngrx/store';
-import { ApiError } from '../../core/actions';
+import { Store, StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs';
 import { CaseOverviewEffects } from '../case-overview.effects';
-import {
-  CaseOverviewActions,
-  GetCaseById,
-  GetCaseByIdSuccess,
-  WithdrawOffences,
-  WithdrawOffencesActions,
-  WithdrawOffencesSuccess
-} from '../case-overview.action';
+import { WithdrawOffences, CaseOverviewAction, WithdrawOffencesSuccess } from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
 import { SjpService } from '../../contexts/sjp';
 import { Router } from '@angular/router';
+import { reducers, State } from '../../reducers';
+import { LoadCaseSuccess } from '../../core/actions';
+import { caseOverviewReducer } from '../case-overview.reducer';
 
 export class TestActions extends Actions {
   set stream(source: Observable<any>) {
@@ -28,34 +23,44 @@ export class TestActions extends Actions {
 export function getActions() {
   return new TestActions();
 }
-const MOCK_WITHDRAW_STATE = {
-  withdrawalRequestsStatus: [
-    {
-      offenceId: 'mock-offence-id',
-      reason: 'mock-reason'
-    }
-  ]
-};
-const CASE_ID_TEST = 'case-id-test';
 
 describe('Case Overview Effects', () => {
+  const withdrawOffenceParam = {
+    withdrawalRequestsStatus: [
+      {
+        offenceId: 'mock-offence-id',
+        reason: 'mock-reason'
+      }
+    ]
+  };
+
   let effects: CaseOverviewEffects;
   let actions$: TestActions;
+  let store: Store<State>;
 
   let getCaseById: jest.Mock;
   let withdrawOffences: jest.Mock;
-  let dispatch: jest.Mock;
-  let action: CaseOverviewActions | WithdrawOffencesActions;
+  let action: CaseOverviewAction | CaseOverviewAction;
   let navigate: jest.Mock;
 
   beforeEach(() => {
     getCaseById = jest.fn();
     withdrawOffences = jest.fn();
-    dispatch = jest.fn();
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        StoreModule.forRoot({
+          ...reducers,
+          router: (state, routerAction) => ({
+            state: {
+              params: { role: 'tvl' }
+            }
+          }),
+          caseOverview: caseOverviewReducer
+        })
+      ],
       providers: [
         CaseOverviewEffects,
         {
@@ -75,56 +80,25 @@ describe('Case Overview Effects', () => {
           provide: Actions,
           useFactory: getActions
         },
-        {
-          provide: Store,
-          useValue: {
-            dispatch
-          }
-        },
         RouterTestingModule
       ]
     });
+
     effects = TestBed.get(CaseOverviewEffects);
     actions$ = TestBed.get(Actions);
-  });
-
-  describe('getCasesDetails', () => {
-    beforeEach(() => {
-      action = new GetCaseById(CASE_ID_TEST);
-      actions$.stream = hot('-a', { a: action });
-    });
-
-    it('should respond with success', () => {
-      const expected$ = cold('---b', {
-        b: new GetCaseByIdSuccess(MOCK_CASE)
-      });
-
-      const response$ = cold('--a', { a: MOCK_CASE });
-      getCaseById.mockReturnValue(response$);
-      expect(effects.getOffences).toBeObservable(expected$);
-    });
-
-    it('should error', () => {
-      const error = { status: 400 };
-      const apiError = new ApiError(error);
-
-      const error$ = cold('--#', {}, error);
-      const expected$ = cold('---e-', { e: apiError });
-
-      getCaseById.mockReturnValue(error$);
-      expect(effects.getOffences).toBeObservable(expected$);
-    });
+    store = TestBed.get(Store);
+    store.dispatch(new LoadCaseSuccess(MOCK_CASE));
   });
 
   describe('withdrawOffences', () => {
     beforeEach(() => {
-      action = new WithdrawOffences(MOCK_WITHDRAW_STATE, CASE_ID_TEST);
+      action = new WithdrawOffences(withdrawOffenceParam);
       actions$.stream = hot('-a', { a: action });
     });
 
     it('should respond with success', () => {
       const expected$ = cold('----(bc)', {
-        b: new GetCaseByIdSuccess(MOCK_CASE),
+        b: new LoadCaseSuccess(MOCK_CASE),
         c: new WithdrawOffencesSuccess()
       });
       const response$ = cold('-a|', { a: MOCK_CASE });
@@ -137,7 +111,7 @@ describe('Case Overview Effects', () => {
 
     it('should respond with success and navigate to case overview', () => {
       const expected$ = cold('----(bc)', {
-        b: new GetCaseByIdSuccess(MOCK_CASE),
+        b: new LoadCaseSuccess(MOCK_CASE),
         c: new WithdrawOffencesSuccess()
       });
       const response$ = cold('-a|', { a: MOCK_CASE });
@@ -146,7 +120,7 @@ describe('Case Overview Effects', () => {
       withdrawOffences.mockReturnValue(cold('--x|', { x: true }));
 
       expect(effects.withdrawOffences).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['case-overview', MOCK_CASE.id]);
+      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
     });
   });
 });

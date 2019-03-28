@@ -20,7 +20,6 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
           href="/"
           ng-reflect-router-link="../"
           pdk-breadcrumb=""
-          routerlink="../"
         >
           Home
         </a>
@@ -91,7 +90,6 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
                     <pdk-searchbar
                       class="ng-untouched ng-pristine ng-valid"
                       name="searchInput"
-                      ng-reflect-model=""
                       ng-reflect-name="searchInput"
                     >
                       <div
@@ -175,9 +173,7 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
           "postcode": "E1"
         },
         "addressChanged": false,
-        "contactDetails": {
-          "email": "me@me.com"
-        }
+        "contactDetails": {}
       },
       "status": "COMPLETED",
       "listedInCriminalCourts": false

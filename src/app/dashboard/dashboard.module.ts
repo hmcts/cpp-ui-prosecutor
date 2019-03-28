@@ -10,8 +10,22 @@ import { RouterModule } from '@angular/router';
 const DECLARATIONS = [DashboardContainer, DashboardComponent, ReviewNotGuiltyPleasLinkComponent];
 
 @NgModule({
-  imports: [CommonModule, PdkCoreModule, RouterModule, SearchInputModule, PdkWarningTextModule],
-  declarations: [...DECLARATIONS],
-  providers: []
+  imports: [
+    CommonModule,
+    PdkCoreModule,
+    RouterModule,
+    SearchInputModule,
+    PdkWarningTextModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        data: {
+          title: 'Single Justice Procedure - Prosecutor'
+        },
+        component: DashboardContainer
+      }
+    ])
+  ],
+  declarations: [...DECLARATIONS]
 })
 export class DashboardModule {}

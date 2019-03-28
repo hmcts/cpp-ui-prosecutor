@@ -5,7 +5,6 @@ import { ReviewNotGuiltyPleasContainer } from './review-not-guilty-pleas.contain
 import { CommonModule } from '@angular/common';
 import { PdkBreadcrumbsModule, PdkCoreModule, PdkDividerModule, PdkTableModule, PdkWarningTextModule } from '@cpp/pdk';
 import { DefendantNamePipeModule, FormatAddressPipeModule } from '../shared/pipes';
-import { DefendantNamePipe } from '../shared/pipes/defendant-name/defendant-name.pipe';
 
 const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContainer];
 

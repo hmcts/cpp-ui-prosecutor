@@ -3,24 +3,21 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../reducers';
 import { catchError, mapTo, take, tap } from 'rxjs/operators';
-import { GetCaseByIdSuccess } from './case-overview.action';
-import { Observable, of } from 'rxjs';
-import { SjpService } from '../contexts/sjp';
+import { Observable } from 'rxjs';
+import { SjpService } from '../../contexts/sjp';
+import { LoadCaseSuccess } from '../actions/entities';
 
 @Injectable()
-export class CaseOverviewGuard implements CanActivate {
+export class CaseDataGuard implements CanActivate {
   constructor(private store: Store<State>, private router: Router, private sjpService: SjpService) {}
 
   canActivate({ params }: ActivatedRouteSnapshot): Observable<boolean> {
     const { caseId } = params;
     return this.sjpService.getCaseById(caseId).pipe(
-      tap(kase => this.store.dispatch(new GetCaseByIdSuccess(kase))),
+      tap(kase => this.store.dispatch(new LoadCaseSuccess(kase))),
       mapTo(true),
-      take(1),
-      catchError(() => {
-        this.router.navigate(['/technical-error']);
-        return of(false);
-      })
+      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      take(1)
     );
   }
 }

@@ -27,7 +27,7 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="/search"
+        routerlink="../../../../../../search"
       >
          Search for a case 
       </a>
@@ -38,7 +38,7 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="../../.."
+        routerlink="../../../../"
       >
         Case Overview
       </a>
@@ -124,7 +124,7 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="/search"
+        routerlink="../../../../../../search"
       >
          Search for a case 
       </a>
@@ -135,7 +135,7 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="../../.."
+        routerlink="../../../../"
       >
         Case Overview
       </a>

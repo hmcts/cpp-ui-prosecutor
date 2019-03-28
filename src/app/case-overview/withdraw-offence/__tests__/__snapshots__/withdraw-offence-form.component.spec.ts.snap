@@ -59,7 +59,7 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
             ng-reflect-type="body-medium"
             pdk-link=""
             pdk-typography="body-medium"
-            routerlink="../../.."
+            routerlink="../../../../"
           >
              Cancel 
           </a>
@@ -129,7 +129,7 @@ exports[`WithdrawOffenceFormComponent should display the offences 1`] = `
             ng-reflect-type="body-medium"
             pdk-link=""
             pdk-typography="body-medium"
-            routerlink="../../.."
+            routerlink="../../../../"
           >
              Cancel 
           </a>

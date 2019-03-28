@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 import { reducers } from '../../../reducers';
 import { Store, StoreModule } from '@ngrx/store';
 import { caseOverviewReducer } from '../../case-overview.reducer';
-import { GetCaseByIdSuccess } from '../../case-overview.action';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { FeatureState } from '../../case-overview.selectors';
 import { Case, Defendant, Offence } from '../../../contexts/sjp';
 import { OverviewContainer } from '../overview.container';
 import { RouterTestingModule } from '@angular/router/testing';
+import { LoadCaseSuccess } from '../../../core/actions';
 
 describe('OverviewContainer', () => {
   let fixture: ComponentFixture<OverviewContainer>;
@@ -17,7 +17,11 @@ describe('OverviewContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OverviewContainer, MockCaseOverviewComponent],
-      imports: [RouterTestingModule, StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)]
+      imports: [
+        RouterTestingModule,
+        StoreModule.forRoot(reducers),
+        StoreModule.forFeature('caseOverview', caseOverviewReducer)
+      ]
     });
 
     store = TestBed.get(Store);
@@ -25,7 +29,7 @@ describe('OverviewContainer', () => {
   });
 
   it('should compile correctly', () => {
-    store.dispatch(new GetCaseByIdSuccess(MOCK_CASE));
+    store.dispatch(new LoadCaseSuccess(MOCK_CASE));
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

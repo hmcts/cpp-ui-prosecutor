@@ -46,7 +46,7 @@ import { Component, Input } from '@angular/core';
       <tbody pdk-table-body>
         <tr pdk-table-row *ngFor="let pleadedNotGuiltyCase of pleadedNotGuiltyCasesDetail.cases">
           <td pdk-table-cell>
-            <a href="javascript:void(0)" pdk-link [routerLink]="['/case-overview', pleadedNotGuiltyCase.caseId]">
+            <a href="javascript:void(0)" pdk-link [routerLink]="['../case-overview', pleadedNotGuiltyCase.caseId]">
               <b>{{ pleadedNotGuiltyCase | defendantName: false }}</b>
             </a>
           </td>

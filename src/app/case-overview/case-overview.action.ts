@@ -1,41 +1,25 @@
 import { Action } from '@ngrx/store';
-import { Case } from '../contexts/sjp';
+import { WithdrawOffenceRequestParam } from '../contexts/sjp';
 
-export const enum CaseOverviewTypes {
-  GET_CASE_BY_ID = '[CaseOverview] Get Case By Id',
-  GET_CASE_BY_ID_SUCCESS = '[CaseOverview] Get Case By Id Success'
+export const enum CaseOverviewActionType {
+  WITHDRAW_OFFENCES = '[ATCM] Withdraw offences',
+  WITHDRAW_OFFENCES_SUCCESS = '[ATCM] Withdraw offences success',
+  RESET_CASE_OVERVIEW_STATE = '[ATCM] Clear case overview state'
 }
-export const enum WithdrawOffencesTypes {
-  WITHDRAW_OFFENCES = '[OffenceWithdraw] Submit Offences to Withdraw',
-  WITHDRAW_OFFENCES_SUCCESS = '[OffenceWithdraw] Submit Offences to Withdraw Success',
-  WITHDRAW_OFFENCES_CLEAR = '[OffenceWithdraw] Clear Offences to Withdraw Flag'
-}
-
-export class GetCaseById implements Action {
-  readonly type = CaseOverviewTypes.GET_CASE_BY_ID;
-  constructor(public payload: string) {}
-}
-
-export class GetCaseByIdSuccess implements Action {
-  readonly type = CaseOverviewTypes.GET_CASE_BY_ID_SUCCESS;
-  constructor(public payload: Case) {}
-}
-
-export type CaseOverviewActions = GetCaseById | GetCaseByIdSuccess;
 
 export class WithdrawOffences implements Action {
-  readonly type = WithdrawOffencesTypes.WITHDRAW_OFFENCES;
-  constructor(public offences: any, public caseId: string) {}
+  readonly type = CaseOverviewActionType.WITHDRAW_OFFENCES;
+  constructor(public offences: WithdrawOffenceRequestParam) {}
 }
 
 export class WithdrawOffencesSuccess implements Action {
-  readonly type = WithdrawOffencesTypes.WITHDRAW_OFFENCES_SUCCESS;
+  readonly type = CaseOverviewActionType.WITHDRAW_OFFENCES_SUCCESS;
   constructor() {}
 }
 
-export class WithdrawOffencesClear implements Action {
-  readonly type = WithdrawOffencesTypes.WITHDRAW_OFFENCES_CLEAR;
+export class ResetCaseOverviewState implements Action {
+  readonly type = CaseOverviewActionType.RESET_CASE_OVERVIEW_STATE;
   constructor() {}
 }
 
-export type WithdrawOffencesActions = WithdrawOffences | WithdrawOffencesSuccess | WithdrawOffencesClear;
+export type CaseOverviewAction = WithdrawOffences | WithdrawOffencesSuccess | ResetCaseOverviewState;

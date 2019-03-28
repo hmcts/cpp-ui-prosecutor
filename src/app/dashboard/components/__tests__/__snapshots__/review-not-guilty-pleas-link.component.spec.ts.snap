@@ -32,12 +32,13 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
           </span>
           <a
             href="/review-not-guilty-pleas"
-            ng-reflect-router-link="/review-not-guilty-pleas"
+            ng-reflect-router-link="review-not-guilty-pleas"
             pdk-link=""
             pdk-section="small"
-            routerlink="/review-not-guilty-pleas"
+            routerlink="review-not-guilty-pleas"
           >
              Review not guilty pleas (2 
+            
             <span
               ng-reflect-ng-plural="2"
             >
@@ -45,11 +46,12 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
               
               cases
             </span>
-             ) 
+            ) 
           </a>
         </strong>
       </div>
     </pdk-warning-text>
+    
     
   </p>
 </review-not-guilty-pleas-link>
@@ -87,12 +89,13 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with si
           </span>
           <a
             href="/review-not-guilty-pleas"
-            ng-reflect-router-link="/review-not-guilty-pleas"
+            ng-reflect-router-link="review-not-guilty-pleas"
             pdk-link=""
             pdk-section="small"
-            routerlink="/review-not-guilty-pleas"
+            routerlink="review-not-guilty-pleas"
           >
              Review not guilty pleas (1 
+            
             <span
               ng-reflect-ng-plural="1"
             >
@@ -100,11 +103,12 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with si
               case
               
             </span>
-             ) 
+            ) 
           </a>
         </strong>
       </div>
     </pdk-warning-text>
+    
     
   </p>
 </review-not-guilty-pleas-link>
@@ -117,6 +121,7 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with ze
   <p>
     
      Review not guilty pleas (0) 
+    
     
   </p>
 </review-not-guilty-pleas-link>

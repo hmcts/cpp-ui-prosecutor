@@ -1,26 +1,27 @@
 import { Routes } from '@angular/router';
-import { DashboardContainer } from './dashboard/dashboard.container';
-import { TechnicalErrorComponent } from './shared/error-pages/technical-error.component';
-import { PleadedNotGuiltyCasesDataGuard } from './core/guards';
+import { TechnicalErrorComponent } from './shared/error-pages';
+import { CaseDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
 
 export const routes: Routes = [
   {
     path: '',
-    canActivate: [PleadedNotGuiltyCasesDataGuard],
-    children: [
-      {
-        path: '',
-        component: DashboardContainer
-      },
-      {
-        path: 'case-overview',
-        loadChildren: './case-overview/case-overview.module#CaseOverviewModule'
-      },
-      {
-        path: 'review-not-guilty-pleas',
-        loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule'
-      }
-    ]
+    redirectTo: 'tvl', // todo remove or change based on server config
+    pathMatch: 'full'
+  },
+  {
+    path: 'tvl',
+    loadChildren: './dashboard/dashboard.module#DashboardModule',
+    canActivate: [PleadedNotGuiltyDataGuard]
+  },
+  {
+    path: ':role/case-overview/:caseId',
+    loadChildren: './case-overview/case-overview.module#CaseOverviewModule',
+    canActivate: [CaseDataGuard]
+  },
+  {
+    path: ':role/review-not-guilty-pleas',
+    loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
+    canActivate: [PleadedNotGuiltyDataGuard]
   },
   { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent }
 ];

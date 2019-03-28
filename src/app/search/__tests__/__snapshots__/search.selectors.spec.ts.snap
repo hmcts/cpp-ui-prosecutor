@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`search/selectors getCaseDetails should select the available cases with details 1`] = `
+exports[`search/selectors getSearchKeyword should select the available keyword 1`] = `"keyword"`;
+
+exports[`search/selectors getSearchResultCases should select the available cases with details 1`] = `
 Array [
   Object {
     "assigned": false,
@@ -12,9 +14,7 @@ Array [
         "postcode": "E1",
       },
       "addressChanged": false,
-      "contactDetails": Object {
-        "email": "me@me.com",
-      },
+      "contactDetails": Object {},
       "dateOfBirth": "1957-03-11",
       "dobChanged": false,
       "firstName": "Guy",
@@ -101,5 +101,3 @@ Array [
   },
 ]
 `;
-
-exports[`search/selectors getSearchKeyword should select the available keyword 1`] = `"testing"`;

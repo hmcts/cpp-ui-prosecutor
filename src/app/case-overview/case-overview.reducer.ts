@@ -1,41 +1,27 @@
-import { CaseOverviewActions, CaseOverviewTypes } from './case-overview.action';
-import { Case } from '../contexts/sjp';
-import { WithdrawOffencesActions, WithdrawOffencesTypes } from './case-overview.action';
+import { CaseOverviewAction, CaseOverviewActionType } from './case-overview.action';
 
 export interface CaseOverviewState {
-  caseOverview: Case;
   withdrawOffencesSuccess: boolean;
 }
 
 const initialState: CaseOverviewState = {
-  caseOverview: null,
   withdrawOffencesSuccess: false
 };
 
 export function caseOverviewReducer(
   state: CaseOverviewState = initialState,
-  action: CaseOverviewActions | WithdrawOffencesActions
+  action: CaseOverviewAction | CaseOverviewAction
 ): CaseOverviewState {
   switch (action.type) {
-    case CaseOverviewTypes.GET_CASE_BY_ID_SUCCESS: {
-      return {
-        ...state,
-        caseOverview: action.payload
-      };
-    }
-
-    case WithdrawOffencesTypes.WITHDRAW_OFFENCES_SUCCESS: {
+    case CaseOverviewActionType.WITHDRAW_OFFENCES_SUCCESS: {
       return {
         ...state,
         withdrawOffencesSuccess: true
       };
     }
 
-    case WithdrawOffencesTypes.WITHDRAW_OFFENCES_CLEAR: {
-      return {
-        ...state,
-        withdrawOffencesSuccess: false
-      };
+    case CaseOverviewActionType.RESET_CASE_OVERVIEW_STATE: {
+      return initialState;
     }
 
     default: {

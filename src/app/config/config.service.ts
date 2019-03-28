@@ -18,18 +18,16 @@ export class AppConfigService implements CppHttpConfig {
   constructor(private http: HttpClient) {}
 
   load() {
-    return new Promise((resolve, reject) => {
-      this.http
-        .get('./app.override.config.json')
-        .pipe(
-          tap((config: AppConfig) => {
-            this.baseUrl = config.apiRoot;
-            this.accountUrl = config.idamProfilePage;
-            this.logoutUrl = config.idamLogoutPage;
-          })
-        )
-        .subscribe(resolve, reject);
-    });
+    return this.http
+      .get('./app.override.config.json')
+      .pipe(
+        tap((config: AppConfig) => {
+          this.baseUrl = config.apiRoot;
+          this.accountUrl = config.idamProfilePage;
+          this.logoutUrl = config.idamLogoutPage;
+        })
+      )
+      .toPromise();
   }
 
   getLogoutUrl(): string {

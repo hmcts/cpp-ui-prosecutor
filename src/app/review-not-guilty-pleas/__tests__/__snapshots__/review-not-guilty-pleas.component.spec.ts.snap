@@ -133,7 +133,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         >
           <a
             href="/case-overview/f10c88de-e577-47df-98af-c8944c5094d0"
-            ng-reflect-router-link="/case-overview,f10c88de-e577-4"
+            ng-reflect-router-link="../case-overview,f10c88de-e577"
             pdk-link=""
           >
             <b>
@@ -177,7 +177,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         >
           <a
             href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
-            ng-reflect-router-link="/case-overview,facca075-d7a5-4"
+            ng-reflect-router-link="../case-overview,facca075-d7a5"
             pdk-link=""
           >
             <b>
@@ -351,7 +351,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
         >
           <a
             href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
-            ng-reflect-router-link="/case-overview,facca075-d7a5-4"
+            ng-reflect-router-link="../case-overview,facca075-d7a5"
             pdk-link=""
           >
             <b>

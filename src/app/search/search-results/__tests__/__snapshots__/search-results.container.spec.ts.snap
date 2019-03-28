@@ -2,6 +2,9 @@
 
 exports[`SearchResultsContainer should compile correctly 1`] = `
 <search-results-container
+  keyword$={[Function Store]}
+  route={[Function Object]}
+  router={[Function Object]}
   searchResultCases$={[Function Store]}
   store={[Function Store]}
 >
@@ -32,9 +35,7 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
           "postcode": "E1"
         },
         "addressChanged": false,
-        "contactDetails": {
-          "email": "me@me.com"
-        }
+        "contactDetails": {}
       },
       "status": "COMPLETED",
       "listedInCriminalCourts": false
@@ -108,6 +109,9 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
       "listedInCriminalCourts": false
     }
   ]
+    </div>
+    <div>
+      
     </div>
   </search-results>
 </search-results-container>

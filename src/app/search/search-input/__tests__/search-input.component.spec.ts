@@ -4,6 +4,7 @@ import { SearchInputComponent } from '../search-input.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PdkCoreModule, PdkFormModule, PdkGridModule, PdkSearchbarModule } from '@cpp/pdk';
+import { By } from '@angular/platform-browser';
 
 describe('SearchInputComponent', () => {
   let fixture: ComponentFixture<TestSearchInputComponent>;

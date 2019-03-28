@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { searchReducer } from './search.reducer';
-import { EffectsModule } from '@ngrx/effects';
-import { SearchEffects } from './search.effects';
 import { RouterModule } from '@angular/router';
 import { SjpModule } from '../contexts/sjp/sjp.module';
 import { SearchInputModule } from './search-input/search-input.module';
 import { SearchResultsModule } from './search-results/search-results.module';
 import { SearchResultsContainer } from './search-results/seach-results.container';
+import { SearchGuard } from './search.guard';
+import { ResetGuard } from './reset.guard';
 
 const DECLARATIONS = [];
 
@@ -20,17 +20,29 @@ const DECLARATIONS = [];
     SearchResultsModule,
     SjpModule,
     StoreModule.forFeature('search', searchReducer),
-    EffectsModule.forFeature([SearchEffects]),
     RouterModule.forChild([
       {
-        path: 'search',
+        path: ':role/search',
         data: {
           title: 'Search for a case'
         },
-        component: SearchResultsContainer
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            canActivate: [ResetGuard],
+            component: SearchResultsContainer
+          },
+          {
+            path: ':keyword',
+            canActivate: [SearchGuard],
+            component: SearchResultsContainer
+          }
+        ]
       }
     ])
   ],
-  exports: [...DECLARATIONS]
+  exports: [...DECLARATIONS],
+  providers: [SearchGuard, ResetGuard]
 })
 export class SearchModule {}

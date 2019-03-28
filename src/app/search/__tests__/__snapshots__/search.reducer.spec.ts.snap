@@ -1,29 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` Search reducer default should set the state 1`] = `
-Object {
-  "searchKeyword": null,
-  "searchResult": null,
-}
-`;
+exports[` Search reducer default should set the state 1`] = `null`;
 
-exports[` Search reducer when SEARCH should set the state 1`] = `
-Object {
-  "searchKeyword": "testing",
-  "searchResult": null,
-}
-`;
+exports[` Search reducer when reset search should set the state 1`] = `null`;
 
-exports[` Search reducer when SEARCH should set the state 2`] = `
+exports[` Search reducer when search success should set the state 1`] = `
 Object {
-  "searchKeyword": null,
-  "searchResult": Object {
-    "foundCasesWithOutdatedDefendantsName": true,
-    "results": Array [
-      Object {
-        "caseId": "caseId",
-      },
-    ],
-  },
+  "foundCasesWithOutdatedDefendantsName": true,
+  "keyword": "search",
+  "results": Array [
+    Object {
+      "caseId": "caseId",
+    },
+  ],
 }
 `;

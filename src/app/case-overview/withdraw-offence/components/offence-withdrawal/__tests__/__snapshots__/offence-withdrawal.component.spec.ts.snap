@@ -159,10 +159,9 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
               
               <pdk-form-field
                 class="govuk-!-margin-top-5"
-                errormessages="errorMessage"
                 labelhidden="true"
                 labeltype="small"
-                ng-reflect-error-messages="errorMessage"
+                ng-reflect-error-messages="[object Object]"
                 ng-reflect-label="Offence 1: Reason for withdraw"
                 ng-reflect-label-hidden="true"
                 ng-reflect-label-type="small"
@@ -477,10 +476,9 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               
               <pdk-form-field
                 class="govuk-!-margin-top-5"
-                errormessages="errorMessage"
                 labelhidden="true"
                 labeltype="small"
-                ng-reflect-error-messages="errorMessage"
+                ng-reflect-error-messages="[object Object]"
                 ng-reflect-label="Offence 1: Reason for withdraw"
                 ng-reflect-label-hidden="true"
                 ng-reflect-label-type="small"
@@ -795,10 +793,9 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               
               <pdk-form-field
                 class="govuk-!-margin-top-5"
-                errormessages="errorMessage"
                 labelhidden="true"
                 labeltype="small"
-                ng-reflect-error-messages="errorMessage"
+                ng-reflect-error-messages="[object Object]"
                 ng-reflect-label="Offence 1: Reason for withdraw"
                 ng-reflect-label-hidden="true"
                 ng-reflect-label-type="small"

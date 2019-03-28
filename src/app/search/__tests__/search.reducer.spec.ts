@@ -1,11 +1,6 @@
 import { searchReducer, SearchState } from '../search.reducer';
-import { Search, SearchSuccess } from '../search.action';
+import { ResetSearchResult, SearchSuccess } from '../search.action';
 import { CaseDetails, SearchResult } from '../../contexts/sjp';
-
-const state = {
-  searchKeyword: null,
-  searchResult: null
-} as SearchState;
 
 describe(' Search reducer', () => {
   let resultState: SearchState;
@@ -22,10 +17,14 @@ describe(' Search reducer', () => {
     });
   });
 
-  describe('when SEARCH', () => {
+  describe('when search success', () => {
     beforeEach(() => {
-      action = new Search('testing');
-      resultState = searchReducer(state, action);
+      action = new SearchSuccess({
+        keyword: 'search',
+        foundCasesWithOutdatedDefendantsName: true,
+        results: [{ caseId: 'caseId' } as CaseDetails]
+      } as SearchResult);
+      resultState = searchReducer(undefined, action);
     });
 
     it('should set the state', () => {
@@ -33,13 +32,17 @@ describe(' Search reducer', () => {
     });
   });
 
-  describe('when SEARCH', () => {
+  describe('when reset search', () => {
     beforeEach(() => {
-      action = new SearchSuccess({
-        foundCasesWithOutdatedDefendantsName: true,
-        results: [{ caseId: 'caseId' } as CaseDetails]
-      } as SearchResult);
-      resultState = searchReducer(state, action);
+      action = new ResetSearchResult();
+      resultState = searchReducer(
+        {
+          keyword: 'search',
+          foundCasesWithOutdatedDefendantsName: true,
+          results: [{ caseId: 'caseId' } as CaseDetails]
+        } as SearchResult,
+        action
+      );
     });
 
     it('should set the state', () => {

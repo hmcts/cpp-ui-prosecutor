@@ -1,15 +1,13 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Offence, WithdrawOffenceState } from '../../contexts/sjp';
+import { Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 
-export interface FormValues {
-  [key: string]: WithdrawOffenceFormObj;
-}
-
-export interface WithdrawOffenceFormObj {
-  withdraw: boolean;
-  reason: string;
+interface FormValues {
+  [key: string]: {
+    withdraw: boolean;
+    reason: string;
+  };
 }
 
 @Component({
@@ -40,7 +38,7 @@ export interface WithdrawOffenceFormObj {
             pdk-typography="body-medium"
             data-test-id="cancel-withdrawal"
             href="javascript:void(0)"
-            routerLink="../../.."
+            routerLink="../../../../"
           >
             Cancel
           </a>
@@ -51,18 +49,17 @@ export interface WithdrawOffenceFormObj {
 })
 export class WithdrawOffenceFormComponent {
   @ViewChild(NgForm) form: NgForm;
+
   @Input() offences: Offence[];
   @Output() errors = new EventEmitter<ValidationError[]>();
-  @Output() submitOffenceWithdrawals = new EventEmitter<WithdrawOffenceState>();
+  @Output() submitOffenceWithdrawals = new EventEmitter<WithdrawOffenceParam[]>();
 
   mapFormValues(values: FormValues[]) {
-    const offences = Object.keys(values).reduce((aggregator, key) => {
+    const selectedOffences = Object.keys(values).reduce((aggregator, key) => {
       const [offenceId, identifier] = key.split('.');
       return identifier === 'reason' ? [...aggregator, { offenceId, reason: values[key] }] : aggregator;
     }, []);
-    this.submitOffenceWithdrawals.emit({
-      withdrawalRequestsStatus: offences
-    });
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
+    this.submitOffenceWithdrawals.emit(selectedOffences);
   }
 }

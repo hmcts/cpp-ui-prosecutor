@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Entities Reducer should reduce to the new state 1`] = `
+exports[`caseReducer LOAD_CASE_SUCCESS should set the incoming case 1`] = `
+Object {
+  "id": "caseId",
+}
+`;
+
+exports[`caseReducer undefined action should initialize the default state 1`] = `null`;
+
+exports[`pleadedNotGuiltyReducer LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS should set the new state 1`] = `
 Object {
   "cases": Array [
     Object {
@@ -40,9 +48,4 @@ Object {
 }
 `;
 
-exports[`Entities Reducer should reduce to the same base state When the action doesnt match 1`] = `
-Object {
-  "cases": Array [],
-  "count": 0,
-}
-`;
+exports[`pleadedNotGuiltyReducer undefined action should initialize the default state 1`] = `undefined`;

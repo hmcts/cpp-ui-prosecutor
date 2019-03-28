@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-import { FeatureState, getCase, getDefendant, getOffences, getWithdrawOffenceStatus } from '../case-overview.selectors';
+import { FeatureState, getWithdrawOffenceStatus } from '../case-overview.selectors';
 import { Case, Defendant, Offence } from '../../contexts/sjp';
-import { WithdrawOffencesClear } from '../case-overview.action';
+import { ResetCaseOverviewState } from '../case-overview.action';
+import { getCase, getDefendant, getOffences } from '../../core/selectors';
 
 @Component({
   selector: 'case-overview-container',
@@ -31,6 +32,6 @@ export class OverviewContainer implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.store.dispatch(new WithdrawOffencesClear());
+    this.store.dispatch(new ResetCaseOverviewState());
   }
 }

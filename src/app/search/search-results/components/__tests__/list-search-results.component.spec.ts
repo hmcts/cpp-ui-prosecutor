@@ -9,6 +9,7 @@ import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
 
 describe('ListSearchResultsComponent', () => {
   let fixture: ComponentFixture<TestListSearchResultsComponent>;
+  let component: TestListSearchResultsComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -24,8 +25,8 @@ describe('ListSearchResultsComponent', () => {
         CaseProsecutorPipeModule
       ]
     });
-
     fixture = TestBed.createComponent(TestListSearchResultsComponent);
+    component = fixture.componentInstance;
   });
 
   it('should compile correctly with no results', () => {
@@ -42,6 +43,30 @@ describe('ListSearchResultsComponent', () => {
 
   it('should compile correctly with multiple results', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it(`should display the 'Upload and enter postal reply' link`, () => {
+    const caseDetails = MOCK_SEARCH_RESULTS.results[0];
+    fixture.componentInstance.searchResults = [
+      {
+        ...caseDetails,
+        status: 'NO_PLEA_RECEIVED_READY_FOR_DECISION'
+      }
+    ];
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it(`should display the 'View in Criminal Courts' link`, () => {
+    const caseDetails = MOCK_SEARCH_RESULTS.results[0];
+    fixture.componentInstance.searchResults = [
+      {
+        ...caseDetails,
+        status: 'REFERRED_FOR_COURT_HEARING'
+      }
+    ];
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

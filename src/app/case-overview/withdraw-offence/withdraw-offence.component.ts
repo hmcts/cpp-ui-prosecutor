@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Case, Offence } from '../../contexts/sjp';
+import { Case, Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 
 @Component({
@@ -10,12 +10,12 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
         <a href="javascript: void(0)" routerLink="/" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="/search" pdk-breadcrumb>
+        <a href="javascript: void(0)" routerLink="../../../../../../search" pdk-breadcrumb>
           Search for a case
         </a>
       </li>
       <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb href="javascript: void(0)" routerLink="../../..">Case Overview</a>
+        <a pdk-breadcrumb href="javascript: void(0)" routerLink="../../../../">Case Overview</a>
       </li>
       <li pdk-breadcrumb-list-item>
         <a pdk-breadcrumb>Withdraw offence</a>
@@ -52,6 +52,6 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 export class WithdrawOffenceComponent {
   @Input() offences: Offence[];
   @Input() kase: Case;
-  @Output() formSubmit = new EventEmitter<any>();
+  @Output() formSubmit = new EventEmitter<WithdrawOffenceParam[]>();
   errors: ValidationError[];
 }

@@ -1,43 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
-import { Action } from '@ngrx/store';
-import { catchError, map, switchMap, tap } from 'rxjs/operators';
-import { ApiError } from '../core/actions';
-import { CaseOverviewTypes, GetCaseById, GetCaseByIdSuccess } from './case-overview.action';
+import { Action, select, Store } from '@ngrx/store';
+import { catchError, switchMap, tap, withLatestFrom } from 'rxjs/operators';
+import { ApiError, LoadCaseSuccess } from '../core/actions';
 import { SjpService } from '../contexts/sjp';
-import { WithdrawOffences, WithdrawOffencesSuccess, WithdrawOffencesTypes } from './case-overview.action';
+import { CaseOverviewActionType, WithdrawOffences, WithdrawOffencesSuccess } from './case-overview.action';
 import { Router } from '@angular/router';
+import { getCase, getRole } from '../core/selectors';
+import { State } from '../reducers';
 
 @Injectable()
 export class CaseOverviewEffects {
-  constructor(private actions$: Actions, private sjpService: SjpService, private router: Router) {}
-
-  @Effect()
-  getOffences: Observable<Action> = this.actions$.pipe(
-    ofType<GetCaseById>(CaseOverviewTypes.GET_CASE_BY_ID),
-    switchMap(action => {
-      return this.sjpService.getCaseById(action.payload).pipe(
-        map(response => new GetCaseByIdSuccess(response)),
-        catchError(err => of(new ApiError(err)))
-      );
-    })
-  );
-
   @Effect()
   withdrawOffences: Observable<Action> = this.actions$.pipe(
-    ofType<WithdrawOffences>(WithdrawOffencesTypes.WITHDRAW_OFFENCES),
-    tap(actions => console.log),
-    switchMap(({ offences, caseId }) =>
+    ofType<WithdrawOffences>(CaseOverviewActionType.WITHDRAW_OFFENCES),
+    withLatestFrom(this.store.pipe(select(getCase)), this.store.pipe(select(getRole))),
+    switchMap(([{ offences }, { id: caseId }, role]) =>
       this.sjpService.withdrawOffences(offences, caseId).pipe(
         switchMap(() =>
           this.sjpService.getCaseById(caseId).pipe(
-            switchMap(kase => [new GetCaseByIdSuccess(kase), new WithdrawOffencesSuccess()]),
-            tap(() => this.router.navigate(['case-overview', caseId]))
+            switchMap(kase => [new LoadCaseSuccess(kase), new WithdrawOffencesSuccess()]),
+            tap(() => this.router.navigate([role, 'case-overview', caseId]))
           )
         )
       )
     ),
     catchError(err => of(new ApiError(err)))
   );
+
+  constructor(
+    private actions$: Actions,
+    private sjpService: SjpService,
+    private router: Router,
+    private store: Store<State>
+  ) {}
 }

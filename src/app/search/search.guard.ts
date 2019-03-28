@@ -1,0 +1,34 @@
+import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { catchError, mapTo, switchMap, take, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { SjpService } from '../contexts/sjp';
+import { FeatureState, getSearchResult } from './search.selectors';
+import { SearchSuccess } from './search.action';
+
+@Injectable()
+export class SearchGuard implements CanActivate {
+  constructor(private store: Store<FeatureState>, private router: Router, private sjpService: SjpService) {}
+
+  canActivate({ params }: ActivatedRouteSnapshot): Observable<boolean> {
+    const { keyword } = params;
+
+    return this.store.pipe(
+      select(getSearchResult),
+      take(1),
+      switchMap(result => {
+        if (result && result.keyword === keyword) {
+          return of(true);
+        }
+
+        return this.sjpService.getCasesDetails(keyword).pipe(
+          tap(searchResult => this.store.dispatch(new SearchSuccess({ ...searchResult, keyword }))),
+          mapTo(true),
+          catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+          take(1)
+        );
+      })
+    );
+  }
+}

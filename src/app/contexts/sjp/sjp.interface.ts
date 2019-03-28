@@ -66,15 +66,6 @@ export interface Offence {
   notInEffect?: boolean;
 }
 
-export interface WithdrawOffence {
-  offenceId: string;
-  reason: string;
-}
-
-export interface WithdrawOffenceState {
-  withdrawalRequestsStatus: WithdrawOffence[];
-}
-
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';
 
 export interface Interpreter {
@@ -156,7 +147,7 @@ interface PleadNotGuiltyCase {
   dateOfBirth: string;
 }
 
-export interface PleadedNotGuiltyCasesDetail {
+export interface PleadedNotGuiltyCaseResult {
   cases: PleadNotGuiltyCase[];
   count: number;
 }

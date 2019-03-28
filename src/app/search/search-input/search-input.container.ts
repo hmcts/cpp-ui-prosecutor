@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FeatureState } from '../search.selectors';
-import { Search } from '../search.action';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'search-input-container',
@@ -11,9 +11,9 @@ import { Search } from '../search.action';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchInputContainer {
-  constructor(private store: Store<FeatureState>) {}
+  constructor(private store: Store<FeatureState>, private route: ActivatedRoute, private router: Router) {}
 
   search(keyword: string) {
-    this.store.dispatch(new Search(keyword));
+    this.router.navigate(['./search', keyword], { relativeTo: this.route });
   }
 }

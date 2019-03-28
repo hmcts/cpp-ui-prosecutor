@@ -7,10 +7,10 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
   template: `
     <ol pdk-breadcrumb-list pdk-margin-top="4">
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink=".." pdk-breadcrumb>Home</a>
+        <a href="javascript: void(0)" routerLink="../../../" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="/search" pdk-breadcrumb>
+        <a href="javascript: void(0)" routerLink="../../search" pdk-breadcrumb>
           Search for a case
         </a>
       </li>
@@ -26,7 +26,7 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
       </pdk-page-header>
     </div>
     <div pdk-margin-vertical="1" *ngIf="displayOffencesWithdrawnBanner">
-      <pdk-alert [type]="'confirmation'">
+      <pdk-alert type="confirmation">
         Your request has been sent
       </pdk-alert>
     </div>

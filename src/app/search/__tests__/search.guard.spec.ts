@@ -1,34 +1,34 @@
-import { CaseOverviewGuard } from '../case-overview.guard';
 import { Store, StoreModule } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
-import { GetCaseByIdSuccess } from '../case-overview.action';
-import { Case, SjpService } from '../../contexts/sjp';
+import { SearchGuard } from '../search.guard';
+import { SearchResult, SjpService } from '../../contexts/sjp';
+import { SearchSuccess } from '../search.action';
 
-describe('CaseOverviewGuard', () => {
-  let guard: CaseOverviewGuard;
+describe('SearchGuard', () => {
+  let guard: SearchGuard;
   let store: Store<State>;
-  let getCaseById: jest.Mock;
+  let getCasesDetails: jest.Mock;
   let navigate: jest.Mock;
 
   const snapshot = {
-    params: { caseId: 'caseId' }
+    params: { keyword: 'keyword' }
   } as any;
 
   beforeEach(() => {
-    getCaseById = jest.fn();
+    getCasesDetails = jest.fn();
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [StoreModule.forRoot(reducers)],
       providers: [
-        CaseOverviewGuard,
+        SearchGuard,
         {
           provide: SjpService,
           useValue: {
-            getCaseById
+            getCasesDetails
           }
         },
         {
@@ -40,24 +40,24 @@ describe('CaseOverviewGuard', () => {
       ]
     });
 
-    guard = TestBed.get(CaseOverviewGuard);
+    guard = TestBed.get(SearchGuard);
     store = TestBed.get(Store);
     jest.spyOn(store, 'dispatch');
   });
 
-  it('should fetch the data remotely and resolve the route', () => {
-    const kase = {
-      id: 'caseId'
-    } as Case;
+  it('should fetch the data remotely and resolve the route if its not set', () => {
+    const searchResult = {
+      foundCasesWithOutdatedDefendantsName: true
+    } as SearchResult;
 
-    const kase$ = cold('-a|', { a: kase });
+    const searchResult$ = cold('-a|', { a: searchResult });
     const expected$ = cold('-(b|)', { b: true });
 
-    getCaseById.mockReturnValue(kase$);
+    getCasesDetails.mockReturnValue(searchResult$);
     const activate$ = guard.canActivate(snapshot);
 
     expect(activate$).toBeObservable(expected$);
-    expect(store.dispatch).toHaveBeenCalledWith(new GetCaseByIdSuccess(kase));
+    expect(store.dispatch).toHaveBeenCalledWith(new SearchSuccess({ ...searchResult, keyword: 'keyword' }));
     expect(navigate).not.toHaveBeenCalled();
   });
 
@@ -65,10 +65,14 @@ describe('CaseOverviewGuard', () => {
     const error$ = cold('---#');
     const expected$ = cold('---(a|)', { a: false });
 
-    getCaseById.mockReturnValue(error$);
+    getCasesDetails.mockReturnValue(error$);
+    navigate.mockReturnValue(Promise.resolve(true));
     const activate$ = guard.canActivate(snapshot);
 
-    expect(activate$).toBeObservable(expected$);
-    expect(navigate).toHaveBeenCalledWith(['/technical-error']);
+    // promise cannot be tested with marbles as Promise.resolve is asynchronous
+    activate$.subscribe(val => {
+      expect(val).toBeFalsy();
+      expect(navigate).toHaveBeenCalledWith(['/technical-error']);
+    });
   });
 });

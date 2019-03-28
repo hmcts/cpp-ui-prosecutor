@@ -30,7 +30,6 @@ import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
     StoreModule.forRoot(reducerToken),
     StoreRouterConnectingModule,
     EffectsModule.forRoot([]),
-    DashboardModule,
     AppConfigModule,
     SearchModule,
     ErrorPagesModule,

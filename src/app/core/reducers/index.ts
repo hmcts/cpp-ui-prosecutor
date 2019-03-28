@@ -1,12 +1,14 @@
 import { apiReducer, ApiState } from './api.reducer';
-import { entitiesReducer, PleadedNotGuiltyCasesDetailState } from './entities.reducer';
+import { caseReducer, CaseState, PleadedNotGuiltyCasesState, pleadedNotGuiltyReducer } from './entities.reducer';
 
 export interface State {
   readonly api: ApiState;
-  readonly pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCasesDetailState;
+  readonly case: CaseState;
+  readonly pleadedNotGuiltyCases: PleadedNotGuiltyCasesState;
 }
 
 export const reducers = {
   api: apiReducer,
-  pleadedNotGuiltyCasesDetail: entitiesReducer
+  case: caseReducer,
+  pleadedNotGuiltyCases: pleadedNotGuiltyReducer
 };

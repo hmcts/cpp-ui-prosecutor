@@ -1,21 +1,25 @@
-import { PleadedNotGuiltyCasesDetail } from '../../contexts/sjp';
-import { EntitiesActions, EntitiesActionType } from '../actions/entities';
+import { Case, PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
+import { EntitiesAction, EntitiesActionType } from '../actions/entities';
 
-export type PleadedNotGuiltyCasesDetailState = PleadedNotGuiltyCasesDetail;
+export type CaseState = Case;
 
-export const initialState = {
-  count: 0,
-  cases: []
+export const caseReducer = (state: CaseState = null, action: EntitiesAction): CaseState => {
+  if (action.type === EntitiesActionType.LOAD_CASE_SUCCESS) {
+    return action.kase;
+  }
+
+  return state;
 };
 
-export function entitiesReducer(
-  state: PleadedNotGuiltyCasesDetailState = initialState,
-  action: EntitiesActions
-): PleadedNotGuiltyCasesDetail {
-  switch (action.type) {
-    case EntitiesActionType.LOAD_PLEADED_NOT_GUILTY_CASES:
-      return action.actionResult;
-    default:
-      return state;
+export type PleadedNotGuiltyCasesState = PleadedNotGuiltyCaseResult;
+
+export const pleadedNotGuiltyReducer = (
+  state: PleadedNotGuiltyCasesState = undefined,
+  action: EntitiesAction
+): PleadedNotGuiltyCaseResult => {
+  if (action.type === EntitiesActionType.LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS) {
+    return action.actionResult;
   }
-}
+
+  return state;
+};

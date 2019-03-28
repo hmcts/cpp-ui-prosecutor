@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
-import { PleadedNotGuiltyCasesDataGuard } from '../pleaded-not-guilty-cases-data-guard.service';
+import { PleadedNotGuiltyDataGuard } from '../pleaded-not-guilty-data.guard';
 import { Store, StoreModule } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
-import { PleadedNotGuiltyCasesDetail, SjpService } from '../../../contexts/sjp';
+import { PleadedNotGuiltyCaseResult, SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { LoadPleadedNotGuiltyCases } from '../../actions/entities';
 
-describe('PleadedNotGuiltyCasesDataGuard', () => {
-  let pleadedNotGuiltyCasesDataGuard: PleadedNotGuiltyCasesDataGuard;
+describe('PleadedNotGuiltyDataGuard', () => {
+  let pleadedNotGuiltyCasesDataGuard: PleadedNotGuiltyDataGuard;
   let store: Store<State>;
   let getPendingDatesToAvoid: jest.Mock;
   let navigate: jest.Mock;
@@ -21,7 +21,7 @@ describe('PleadedNotGuiltyCasesDataGuard', () => {
       declarations: [],
       imports: [StoreModule.forRoot(reducers)],
       providers: [
-        PleadedNotGuiltyCasesDataGuard,
+        PleadedNotGuiltyDataGuard,
         {
           provide: SjpService,
           useValue: {
@@ -37,13 +37,13 @@ describe('PleadedNotGuiltyCasesDataGuard', () => {
       ]
     });
 
-    pleadedNotGuiltyCasesDataGuard = TestBed.get(PleadedNotGuiltyCasesDataGuard);
+    pleadedNotGuiltyCasesDataGuard = TestBed.get(PleadedNotGuiltyDataGuard);
     store = TestBed.get(Store);
     jest.spyOn(store, 'dispatch');
   });
 
-  it('should resolve to true On successful service call', () => {
-    const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCasesDetail;
+  it('should call the service and load data if the data is not in the store', () => {
+    const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCaseResult;
     const pendingCasesToAvoid$ = cold('-a|', { a: pendingDatesToAvoidPayLoad });
     const expected$ = cold('-(b|)', { b: true });
 
@@ -53,6 +53,18 @@ describe('PleadedNotGuiltyCasesDataGuard', () => {
 
     expect(activate$).toBeObservable(expected$);
     expect(store.dispatch).toHaveBeenCalledWith(new LoadPleadedNotGuiltyCases(pendingDatesToAvoidPayLoad));
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  it('should not call the service if the data is available', () => {
+    const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCaseResult;
+    store.dispatch(new LoadPleadedNotGuiltyCases(pendingDatesToAvoidPayLoad));
+
+    const expected$ = cold('(b|)', { b: true });
+    const activate$ = pleadedNotGuiltyCasesDataGuard.canActivate();
+
+    expect(activate$).toBeObservable(expected$);
+    expect(getPendingDatesToAvoid).not.toHaveBeenCalled();
     expect(navigate).not.toHaveBeenCalled();
   });
 

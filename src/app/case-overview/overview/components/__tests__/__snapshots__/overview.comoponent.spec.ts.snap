@@ -26,7 +26,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink=".."
+          routerlink="../../../"
         >
           Home
         </a>
@@ -40,7 +40,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink="/search"
+          routerlink="../../search"
         >
            Search for a case 
         </a>
@@ -818,7 +818,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink=".."
+          routerlink="../../../"
         >
           Home
         </a>
@@ -832,7 +832,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink="/search"
+          routerlink="../../search"
         >
            Search for a case 
         </a>
@@ -1552,7 +1552,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink=".."
+          routerlink="../../../"
         >
           Home
         </a>
@@ -1566,7 +1566,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink="/search"
+          routerlink="../../search"
         >
            Search for a case 
         </a>
@@ -2202,7 +2202,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink=".."
+          routerlink="../../../"
         >
           Home
         </a>
@@ -2216,7 +2216,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           href="javascript: void(0)"
           ng-reflect-active=""
           pdk-breadcrumb=""
-          routerlink="/search"
+          routerlink="../../search"
         >
            Search for a case 
         </a>
