@@ -12,11 +12,11 @@ import {
   PdkGridModule,
   PdkRadioInputModule
 } from '@cpp/pdk';
-import { DefendantHighlightModule } from './components/defendant-highlight/defendant-highlight.module';
 import { WithdrawOffenceComponent } from './withdraw-offence.component';
 import { WithdrawOffenceFormComponent } from './withdraw-offence-form.component';
 import { FormsModule } from '@angular/forms';
 import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence-withdrawal.module';
+import { CaseHeaderBadgeModule } from '../case-header-badge/case-header-badge.module';
 
 const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
@@ -33,7 +33,7 @@ const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, Withdr
     PdkGridModule,
     PdkButtonModule,
     PdkErrorSummaryModule,
-    DefendantHighlightModule,
+    CaseHeaderBadgeModule,
     OffenceWithdrawalModule,
     RouterModule.forChild([
       {

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PdkPageHeaderModule } from '@cpp/pdk';
-import { DefendantHighlightModule } from '../defendant-highlight.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { DefendantNamePipeModule } from '../../../../../shared/pipes';
-import { MOCK_CASE } from '../../../../__tests__/test-mock-data';
-import { Case } from '../../../../../contexts/sjp';
+import { DefendantNamePipeModule } from '../../../shared/pipes';
+import { MOCK_CASE } from '../../__tests__/test-mock-data';
+import { Case } from '../../../contexts/sjp';
+import { CaseHeaderBadgeModule } from '../case-header-badge.module';
 
 describe('defendant-highlight', () => {
   let fixture: ComponentFixture<DefendantHighlightTest>;
@@ -14,7 +14,7 @@ describe('defendant-highlight', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DefendantHighlightTest],
-      imports: [CommonModule, FormsModule, DefendantNamePipeModule, PdkPageHeaderModule, DefendantHighlightModule]
+      imports: [CommonModule, FormsModule, DefendantNamePipeModule, PdkPageHeaderModule, CaseHeaderBadgeModule]
     });
 
     fixture = TestBed.createComponent(DefendantHighlightTest);
@@ -29,7 +29,7 @@ describe('defendant-highlight', () => {
 @Component({
   selector: 'defendant-highlight-test',
   template: `
-    <defendant-highlight [case]="kase"></defendant-highlight>
+    <case-header-badge [kase]="kase"></case-header-badge>
   `
 })
 class DefendantHighlightTest {

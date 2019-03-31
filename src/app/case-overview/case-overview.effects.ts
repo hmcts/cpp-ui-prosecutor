@@ -5,7 +5,13 @@ import { Action, select, Store } from '@ngrx/store';
 import { catchError, switchMap, tap, withLatestFrom } from 'rxjs/operators';
 import { ApiError, LoadCaseSuccess } from '../core/actions';
 import { SjpService } from '../contexts/sjp';
-import { CaseOverviewActionType, WithdrawOffences, WithdrawOffencesSuccess } from './case-overview.action';
+import {
+  CaseOverviewActionType,
+  SubmitDatesToAvoid,
+  SubmitDatesToAvoidSuccess,
+  WithdrawOffences,
+  WithdrawOffencesSuccess
+} from './case-overview.action';
 import { Router } from '@angular/router';
 import { getCase, getRole } from '../core/selectors';
 import { State } from '../reducers';
@@ -22,6 +28,23 @@ export class CaseOverviewEffects {
           this.sjpService.getCaseById(caseId).pipe(
             switchMap(kase => [new LoadCaseSuccess(kase), new WithdrawOffencesSuccess()]),
             tap(() => this.router.navigate([role, 'case-overview', caseId]))
+          )
+        )
+      )
+    ),
+    catchError(err => of(new ApiError(err)))
+  );
+
+  @Effect()
+  submitDatesToAvoid: Observable<Action> = this.actions$.pipe(
+    ofType<SubmitDatesToAvoid>(CaseOverviewActionType.SUBMIT_DATES_TO_AVOID),
+    withLatestFrom(this.store.pipe(select(getCase)), this.store.pipe(select(getRole))),
+    switchMap(([{ datesToAvoid }, { id: caseId, datesToAvoid: previousDatesToAvoid }, role]) =>
+      this.sjpService.submitDatesToAvoid(datesToAvoid, caseId, !previousDatesToAvoid).pipe(
+        switchMap(() =>
+          this.sjpService.getCaseById(caseId).pipe(
+            switchMap(newCase => [new LoadCaseSuccess(newCase), new SubmitDatesToAvoidSuccess()]),
+            tap(() => this.router.navigate([role, 'case-overview', caseId, 'dates-to-avoid']))
           )
         )
       )

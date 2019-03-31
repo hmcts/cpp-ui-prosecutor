@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
 import { Case, PleadedNotGuiltyCaseResult, SearchResult, SjpNoticeCasesCountResult } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class SjpService {
@@ -46,6 +46,18 @@ export class SjpService {
       requestType: 'application/vnd.sjp.set-offences-withdrawal-requests-status+json',
       successEvent: 'public.sjp.offences-withdrawal-status-set',
       errorEvent: []
+    });
+  }
+
+  submitDatesToAvoid(datesToAvoid: string, caseId: string, isNew: boolean): Observable<any> {
+    const successEvent = isNew ? 'public.sjp.dates-to-avoid-added' : 'public.sjp.dates-to-avoid-updated';
+
+    return this.http.commandSync({
+      url: `${this.command}/cases/${caseId}/dates-to-avoid`,
+      body: { datesToAvoid },
+      requestType: 'application/vnd.sjp.add-dates-to-avoid+json',
+      successEvent,
+      errorEvent: 'public.sjp.case-update-rejected'
     });
   }
 }

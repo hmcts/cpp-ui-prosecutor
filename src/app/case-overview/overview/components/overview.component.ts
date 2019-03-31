@@ -62,9 +62,17 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
         <div pdk-margin-top="5">
           <pdk-related>
             <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Case options</h1>
-            <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
-              >Manage offence withdrawals</a
-            >
+            <div>
+              <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
+                >Manage offence withdrawals</a
+              >
+            </div>
+            <div>
+              <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="dates-to-avoid">
+                <span *ngIf="!this.kase.datesToAvoid">Add dates to avoid</span>
+                <span *ngIf="!!this.kase.datesToAvoid">Change dates to avoid</span>
+              </a>
+            </div>
           </pdk-related>
         </div>
       </pdk-grid>

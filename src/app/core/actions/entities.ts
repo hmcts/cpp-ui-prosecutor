@@ -1,5 +1,5 @@
-import { Action } from '@ngrx/store';
-import { Case, PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
+import {Action} from '@ngrx/store';
+import {Case, PleadedNotGuiltyCaseResult} from '../../contexts/sjp';
 
 export const enum EntitiesActionType {
   LOAD_CASE_SUCCESS = '[ATCM] Load case success',
@@ -9,13 +9,15 @@ export const enum EntitiesActionType {
 export class LoadCaseSuccess implements Action {
   readonly type = EntitiesActionType.LOAD_CASE_SUCCESS;
 
-  constructor(public kase: Case) {}
+  constructor(public kase: Case) {
+  }
 }
 
 export class LoadPleadedNotGuiltyCases implements Action {
   readonly type = EntitiesActionType.LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS;
 
-  constructor(public actionResult: PleadedNotGuiltyCaseResult) {}
+  constructor(public actionResult: PleadedNotGuiltyCaseResult) {
+  }
 }
 
 export type EntitiesAction = LoadPleadedNotGuiltyCases | LoadCaseSuccess;

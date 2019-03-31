@@ -185,7 +185,7 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               datesToAvoid1 
             </div>
           </div>
         </pdk-grid>
@@ -389,7 +389,7 @@ exports[`CaseDetailsComponent should compile correctly if listed in criminal cou
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               datesToAvoid1 
             </div>
           </div>
         </pdk-grid>
@@ -590,7 +590,7 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               – 
+               datesToAvoid1 
             </div>
           </div>
         </pdk-grid>

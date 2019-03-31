@@ -223,6 +223,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         <div>
                           {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -460,16 +461,34 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     >
                       Case options
                     </h1>
-                    <a
-                      class="govuk-link govuk-section-break govuk-section-break--s"
-                      href="javascript: void(0)"
-                      ng-reflect-type="small"
-                      pdk-link=""
-                      pdk-section="small"
-                      routerlink="withdraw-offence"
-                    >
-                      Manage offence withdrawals
-                    </a>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </pdk-related>
@@ -526,6 +545,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 <div>
                   {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -676,6 +696,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 <div>
                   {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -1106,6 +1127,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         <div>
                           {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -1343,16 +1365,34 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     >
                       Case options
                     </h1>
-                    <a
-                      class="govuk-link govuk-section-break govuk-section-break--s"
-                      href="javascript: void(0)"
-                      ng-reflect-type="small"
-                      pdk-link=""
-                      pdk-section="small"
-                      routerlink="withdraw-offence"
-                    >
-                      Manage offence withdrawals
-                    </a>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </pdk-related>
@@ -1411,6 +1451,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 <div>
                   {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -1751,6 +1792,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         <div>
                           {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -1988,16 +2030,34 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     >
                       Case options
                     </h1>
-                    <a
-                      class="govuk-link govuk-section-break govuk-section-break--s"
-                      href="javascript: void(0)"
-                      ng-reflect-type="small"
-                      pdk-link=""
-                      pdk-section="small"
-                      routerlink="withdraw-offence"
-                    >
-                      Manage offence withdrawals
-                    </a>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </pdk-related>
@@ -2055,6 +2115,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                 <div>
                   {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -2402,6 +2463,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         <div>
                           {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -2639,16 +2701,34 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     >
                       Case options
                     </h1>
-                    <a
-                      class="govuk-link govuk-section-break govuk-section-break--s"
-                      href="javascript: void(0)"
-                      ng-reflect-type="small"
-                      pdk-link=""
-                      pdk-section="small"
-                      routerlink="withdraw-offence"
-                    >
-                      Manage offence withdrawals
-                    </a>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </pdk-related>
@@ -2705,6 +2785,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 <div>
                   {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",

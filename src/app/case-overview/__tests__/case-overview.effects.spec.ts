@@ -5,7 +5,13 @@ import { Store, StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs';
 import { CaseOverviewEffects } from '../case-overview.effects';
-import { WithdrawOffences, CaseOverviewAction, WithdrawOffencesSuccess } from '../case-overview.action';
+import {
+  CaseOverviewAction,
+  SubmitDatesToAvoid,
+  SubmitDatesToAvoidSuccess,
+  WithdrawOffences,
+  WithdrawOffencesSuccess
+} from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
 import { SjpService } from '../../contexts/sjp';
 import { Router } from '@angular/router';
@@ -33,6 +39,7 @@ describe('Case Overview Effects', () => {
       }
     ]
   };
+  const datesToAvoid = 'datesToAvoid';
 
   let effects: CaseOverviewEffects;
   let actions$: TestActions;
@@ -40,12 +47,14 @@ describe('Case Overview Effects', () => {
 
   let getCaseById: jest.Mock;
   let withdrawOffences: jest.Mock;
+  let submitDatesToAvoid: jest.Mock;
   let action: CaseOverviewAction | CaseOverviewAction;
   let navigate: jest.Mock;
 
   beforeEach(() => {
     getCaseById = jest.fn();
     withdrawOffences = jest.fn();
+    submitDatesToAvoid = jest.fn();
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
@@ -73,7 +82,8 @@ describe('Case Overview Effects', () => {
           provide: SjpService,
           useValue: {
             getCaseById,
-            withdrawOffences
+            withdrawOffences,
+            submitDatesToAvoid
           }
         },
         {
@@ -121,6 +131,24 @@ describe('Case Overview Effects', () => {
 
       expect(effects.withdrawOffences).toBeObservable(expected$);
       expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
+    });
+  });
+
+  describe('datesToAvoid', () => {
+    it('should respond with success', () => {
+      action = new SubmitDatesToAvoid(datesToAvoid);
+      actions$.stream = hot('-a', { a: action });
+
+      const expected$ = cold('----(bc)', {
+        b: new LoadCaseSuccess(MOCK_CASE),
+        c: new SubmitDatesToAvoidSuccess()
+      });
+      const response$ = cold('-a|', { a: MOCK_CASE });
+
+      getCaseById.mockReturnValue(response$);
+      submitDatesToAvoid.mockReturnValue(cold('--x|', { x: true }));
+
+      expect(effects.submitDatesToAvoid).toBeObservable(expected$);
     });
   });
 });

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatesToAvoidContainer should compile correctly 1`] = `
+<dates-to-avoid
+  case$={[Function Store]}
+  displayDatesToAvoidBanner$={[Function Store]}
+  store={[Function Store]}
+>
+  <dates-to-avoid-page>
+    <pre>
+      null
+    </pre>
+  </dates-to-avoid-page>
+</dates-to-avoid>
+`;

@@ -33,12 +33,12 @@ describe('WithdrawOffenceComponent', () => {
   });
 
   @Component({
-    selector: 'defendant-highlight',
+    selector: 'case-header-badge',
     template: `
       <pre>{{ kase | json }}</pre>
     `
   })
-  class MockDefendantHighlightComponent {
+  class MockCaseHeaderBadgeComponent {
     @Input() kase: any;
   }
 

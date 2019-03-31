@@ -17,6 +17,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
     <div>
       {
     "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",

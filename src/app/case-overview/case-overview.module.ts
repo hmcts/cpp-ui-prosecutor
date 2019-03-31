@@ -24,6 +24,10 @@ import { OverviewContainer } from './overview/overview.container';
       {
         path: 'withdraw-offence',
         loadChildren: './withdraw-offence/withdraw-offence.module#WithdrawOffenceModule'
+      },
+      {
+        path: 'dates-to-avoid',
+        loadChildren: './dates-to-avoid/dates-to-avoid.module#DatesToAvoidModule'
       }
     ])
   ]

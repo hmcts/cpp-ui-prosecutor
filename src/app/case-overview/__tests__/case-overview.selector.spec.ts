@@ -17,4 +17,11 @@ describe('case overview/selectors', () => {
       expect(fromSelectors.getWithdrawOffenceStatus(state)).toMatchSnapshot();
     });
   });
+
+  describe('getDatesToAvoidStatus', () => {
+    it('should select the case from the store', () => {
+      const state = createState([new fromActions.SubmitDatesToAvoidSuccess()]);
+      expect(fromSelectors.getDatesToAvoidStatus(state)).toMatchSnapshot();
+    });
+  });
 });

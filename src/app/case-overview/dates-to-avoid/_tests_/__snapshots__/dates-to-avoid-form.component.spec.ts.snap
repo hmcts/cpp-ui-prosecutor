@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
+<test-dates-to-avoid-form
+  formSubmit={[Function Function]}
+  kase={[Function Object]}
+>
+  <dates-to-avoid-form
+    ng-reflect-kase="[object Object]"
+  >
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <form
+              class="ng-untouched ng-pristine ng-valid"
+              novalidate=""
+              pdk-form=""
+            >
+              <pdk-form-field
+                label="Enter dates this case shouldn't be listed or write 'none'."
+                ng-reflect-error-messages="[object Object]"
+                ng-reflect-label="Enter dates this case shouldn'"
+              >
+                
+                <pdk-form-group
+                  ng-reflect-error="false"
+                  style="display: block;"
+                >
+                  
+                  
+                  
+                  
+                  <label
+                    class="govuk-label"
+                    for="pdk-form-control-1"
+                    ng-reflect-hidden="false"
+                    ng-reflect-type="default"
+                  >
+                     Enter dates this case shouldn't be listed or write 'none'. 
+                  </label>
+                  
+                  
+                  
+                  <textarea
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-form-control-1"
+                    name="datesToAvoid"
+                    ng-reflect-model="datesToAvoid1"
+                    ng-reflect-name="datesToAvoid"
+                    ng-reflect-required=""
+                    ng-reflect-width=""
+                    pdk-input=""
+                    pdk-text-input=""
+                    required=""
+                  />
+                  
+                  
+                </pdk-form-group>
+              </pdk-form-field>
+              <button
+                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+                ng-reflect-type=""
+                ng-reflect-vertical="5"
+                pdk-button=""
+                pdk-margin-vertical="5"
+              >
+                 Submit 
+              </button>
+              <div>
+                <a
+                  class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+                  href="javascript:void(0)"
+                  ng-reflect-vertical="5"
+                  pdk-link=""
+                  pdk-margin-vertical="5"
+                  routerlink="../../../../"
+                >
+                  Cancel
+                </a>
+              </div>
+            </form>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</test-dates-to-avoid-form>
+`;
+
+exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
+<test-dates-to-avoid-form
+  formSubmit={[Function Function]}
+  kase={[Function Object]}
+>
+  <dates-to-avoid-form
+    ng-reflect-kase="[object Object]"
+  >
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <form
+              class="ng-untouched ng-pristine ng-valid"
+              novalidate=""
+              pdk-form=""
+            >
+              <pdk-form-field
+                label="Enter dates this case shouldn't be listed or write 'none'."
+                ng-reflect-error-messages="[object Object]"
+                ng-reflect-label="Enter dates this case shouldn'"
+              >
+                
+                <pdk-form-group
+                  ng-reflect-error="false"
+                  style="display: block;"
+                >
+                  
+                  
+                  
+                  
+                  <label
+                    class="govuk-label"
+                    for="pdk-form-control-2"
+                    ng-reflect-hidden="false"
+                    ng-reflect-type="default"
+                  >
+                     Enter dates this case shouldn't be listed or write 'none'. 
+                  </label>
+                  
+                  
+                  
+                  <textarea
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-form-control-2"
+                    name="datesToAvoid"
+                    ng-reflect-model="datesToAvoid1"
+                    ng-reflect-name="datesToAvoid"
+                    ng-reflect-required=""
+                    ng-reflect-width=""
+                    pdk-input=""
+                    pdk-text-input=""
+                    required=""
+                  />
+                  
+                  
+                </pdk-form-group>
+              </pdk-form-field>
+              <button
+                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+                ng-reflect-type=""
+                ng-reflect-vertical="5"
+                pdk-button=""
+                pdk-margin-vertical="5"
+              >
+                 Submit 
+              </button>
+              <div>
+                <a
+                  class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+                  href="javascript:void(0)"
+                  ng-reflect-vertical="5"
+                  pdk-link=""
+                  pdk-margin-vertical="5"
+                  routerlink="../../../../"
+                >
+                  Cancel
+                </a>
+              </div>
+            </form>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</test-dates-to-avoid-form>
+`;

@@ -48,6 +48,7 @@ export const MOCK_OFFENCES: Offence[] = [
 
 export const MOCK_CASE: Case = {
   id: 'case-id-test',
+  datesToAvoid: 'datesToAvoid1',
   urn: 'TFL26168N21T5',
   defendant: {
     id: 'defendantId1',

@@ -4,8 +4,8 @@ exports[`defendant-highlight should render and match snapshot 1`] = `
 <defendant-highlight-test
   kase={[Function Object]}
 >
-  <defendant-highlight
-    ng-reflect-case="[object Object]"
+  <case-header-badge
+    ng-reflect-kase="[object Object]"
   >
     <pdk-page-header>
       <div
@@ -40,6 +40,6 @@ exports[`defendant-highlight should render and match snapshot 1`] = `
         </pdk-page-header-content>
       </div>
     </pdk-page-header>
-  </defendant-highlight>
+  </case-header-badge>
 </defendant-highlight-test>
 `;

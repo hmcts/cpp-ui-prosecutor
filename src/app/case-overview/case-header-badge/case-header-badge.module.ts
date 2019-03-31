@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { DefendantHighlightComponent } from './defendant-highlight.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { DefendantNamePipeModule } from '../../../../shared/pipes';
+import { DefendantNamePipeModule } from '../../shared/pipes';
 import { PdkPageHeaderModule } from '@cpp/pdk';
+import { CaseHeaderBadgeComponent } from './case-header-badge.component';
 
-const DECLARATIONS = [DefendantHighlightComponent];
+const DECLARATIONS = [CaseHeaderBadgeComponent];
 
 @NgModule({
   declarations: [...DECLARATIONS],
   imports: [CommonModule, FormsModule, DefendantNamePipeModule, PdkPageHeaderModule],
   exports: [...DECLARATIONS]
 })
-export class DefendantHighlightModule {}
+export class CaseHeaderBadgeModule {}

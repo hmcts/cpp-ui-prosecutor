@@ -6,6 +6,8 @@ import { SjpService } from '../sjp.service';
 import { Case, CaseDetails, SearchResult } from '../sjp.interface';
 
 const MOCK_CASE_ID = 'mock-case-id';
+const MOCK_DATES_TO_AVOID = 'dates to avoid content';
+
 const MOCK_WITHDRAW_STATE = {
   withdrawalRequestsStatus: [
     {
@@ -142,4 +144,40 @@ describe('SjpService', () => {
       });
     });
   });
+
+  describe('addDatesToAvoid', () => {
+    it('should make a call', () => {
+      submitDatesToAvoidInternal(true, 'public.sjp.dates-to-avoid-added');
+    });
+  });
+
+  describe('changeDatesToAvoid', () => {
+    it('should make a call', () => {
+      submitDatesToAvoidInternal(false, 'public.sjp.dates-to-avoid-updated');
+    });
+  });
+
+  const submitDatesToAvoidInternal = (isNew: boolean, successEvent) => {
+    const submitDatesToAvoidPayload = {
+      datesToAvoid: 'dates to avoid content'
+    };
+
+    const response = { body: '*' };
+    const response$ = cold('-a|', { a: response });
+    const expected$ = cold('-b|', { b: response });
+
+    mockCommandSync.mockReturnValue(response$);
+
+    const command$ = service.submitDatesToAvoid(MOCK_DATES_TO_AVOID, MOCK_CASE_ID, isNew);
+
+    expect(command$).toBeObservable(expected$);
+
+    expect(mockCommandSync).toHaveBeenCalledWith({
+      url: `/sjp-command-api/command/api/rest/sjp/cases/${MOCK_CASE_ID}/dates-to-avoid`,
+      requestType: 'application/vnd.sjp.add-dates-to-avoid+json',
+      body: submitDatesToAvoidPayload,
+      successEvent,
+      errorEvent: 'public.sjp.case-update-rejected'
+    });
+  };
 });

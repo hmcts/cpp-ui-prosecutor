@@ -6,3 +6,5 @@ export interface FeatureState extends State {
 }
 
 export const getWithdrawOffenceStatus = (state: FeatureState) => state.caseOverview.withdrawOffencesSuccess;
+
+export const getDatesToAvoidStatus = (state: FeatureState) => state.caseOverview.datesToAvoidSuccess;
