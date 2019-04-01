@@ -42,7 +42,7 @@ describe('PleadedNotGuiltyDataGuard', () => {
     jest.spyOn(store, 'dispatch');
   });
 
-  it('should call the service and load data if the data is not in the store', () => {
+  it('should call the service and load data', () => {
     const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCaseResult;
     const pendingCasesToAvoid$ = cold('-a|', { a: pendingDatesToAvoidPayLoad });
     const expected$ = cold('-(b|)', { b: true });
@@ -53,18 +53,6 @@ describe('PleadedNotGuiltyDataGuard', () => {
 
     expect(activate$).toBeObservable(expected$);
     expect(store.dispatch).toHaveBeenCalledWith(new LoadPleadedNotGuiltyCases(pendingDatesToAvoidPayLoad));
-    expect(navigate).not.toHaveBeenCalled();
-  });
-
-  it('should not call the service if the data is available', () => {
-    const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCaseResult;
-    store.dispatch(new LoadPleadedNotGuiltyCases(pendingDatesToAvoidPayLoad));
-
-    const expected$ = cold('(b|)', { b: true });
-    const activate$ = pleadedNotGuiltyCasesDataGuard.canActivate();
-
-    expect(activate$).toBeObservable(expected$);
-    expect(getPendingDatesToAvoid).not.toHaveBeenCalled();
     expect(navigate).not.toHaveBeenCalled();
   });
 

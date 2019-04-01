@@ -152,3 +152,8 @@ export interface PleadedNotGuiltyCaseResult {
   cases: PleadNotGuiltyCase[];
   count: number;
 }
+
+export interface SjpNoticeCasesCountResult {
+  count: number;
+  ids?: string[];
+}

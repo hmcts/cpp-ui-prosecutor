@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Tfl reducer default should set the state 1`] = `
+Object {
+  "sjpNoticeCaseResult": undefined,
+}
+`;
+
+exports[` Tfl reducer default should update state with cases sjp notices case data  1`] = `
+Object {
+  "sjpNoticeCaseResult": Object {
+    "count": 10,
+  },
+}
+`;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
-import { Case, PleadedNotGuiltyCaseResult, SearchResult } from './sjp.interface';
+import { Case, PleadedNotGuiltyCaseResult, SearchResult, SjpNoticeCasesCountResult } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 
 @Injectable()
@@ -22,6 +22,13 @@ export class SjpService {
     return this.http.query({
       url: `${this.query}/cases/pending-dates-to-avoid`,
       requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+    });
+  }
+
+  getCasesWithSjpNoticeCount(): Observable<SjpNoticeCasesCountResult> {
+    return this.http.query({
+      url: `${this.query}/cases-missing-sjpn?limit=0`,
+      requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
     });
   }
 

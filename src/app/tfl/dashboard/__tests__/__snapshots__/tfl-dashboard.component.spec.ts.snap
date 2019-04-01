@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TflDashboardComponent should compile correctly 1`] = `
+<tfl-dashboard
+  casesWithSjpNoticeCount={[Function Number]}
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+>
+  <pdk-grid>
+    <div>
+      <h1
+        class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+        ng-reflect-type="heading-xlarge"
+        ng-reflect-vertical="8"
+        pdk-margin-vertical="8"
+        pdk-typography="heading-xlarge"
+      >
+        <span
+          class="govuk-caption-xl"
+          ng-reflect-type="caption-xlarge"
+          pdk-typography="caption-xlarge"
+        >
+          Prosecutor
+        </span>
+         Single Justice Procedure 
+      </h1>
+      <h2
+        class="govuk-!-margin-top-8 govuk-heading-m"
+        ng-reflect-top="8"
+        ng-reflect-type="heading-medium"
+        pdk-margin-top="8"
+        pdk-typography="heading-medium"
+      >
+        Search for a case
+      </h2>
+      <search-input-container>
+        <div />
+      </search-input-container>
+    </div>
+  </pdk-grid><pdk-grid
+    container=""
+    ng-reflect-container=""
+  >
+    <div
+      class="govuk-grid-row"
+    >
+      <pdk-grid
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-grid-column-two-thirds"
+        >
+          <h2
+            class="govuk-!-margin-top-8 govuk-heading-m"
+            ng-reflect-top="8"
+            ng-reflect-type="heading-medium"
+            pdk-margin-top="8"
+            pdk-typography="heading-medium"
+          >
+            Send data files to court
+          </h2>
+          <div>
+            <a
+              class="govuk-link"
+              href="javascript: void(0)"
+              pdk-link=""
+              routerlink=""
+            >
+               Upload header and offence CSVs 
+            </a>
+          </div>
+          <div
+            class="govuk-!-margin-top-6"
+            ng-reflect-top="6"
+            pdk-margin-top="6"
+          >
+            <a
+              class="govuk-link"
+              href="javascript: void(0)"
+              pdk-link=""
+              routerlink=""
+            >
+               Check CSV uploads 
+            </a>
+          </div>
+          <h2
+            class="govuk-!-margin-top-8 govuk-heading-m"
+            ng-reflect-top="8"
+            ng-reflect-type="heading-medium"
+            pdk-margin-top="8"
+            pdk-typography="heading-medium"
+          >
+            Send data files to court
+          </h2>
+          <div>
+            <a
+              class="govuk-link"
+              href="javascript: void(0)"
+              pdk-link=""
+              routerlink=""
+            >
+               Upload SJP notices, previous convictions and witness statements 
+            </a>
+          </div>
+          <div
+            class="govuk-!-margin-top-6"
+            ng-reflect-top="6"
+            pdk-margin-top="6"
+          >
+            <a
+              class="govuk-link"
+              href="javascript: void(0)"
+              pdk-link=""
+              routerlink=""
+            >
+               Check document uploads 
+            </a>
+          </div>
+          <h2
+            class="govuk-!-margin-top-8 govuk-heading-m"
+            ng-reflect-top="8"
+            ng-reflect-type="heading-medium"
+            pdk-margin-top="8"
+            pdk-typography="heading-medium"
+          >
+            Other tasks
+          </h2>
+          <review-not-guilty-pleas-link
+            ng-reflect-number-of-cases="1"
+          >
+            <span>
+              1
+            </span>
+          </review-not-guilty-pleas-link>
+          <p
+            class="govuk-caption-m"
+            ng-reflect-type="caption-medium"
+            pdk-typography="caption-medium"
+          >
+            Defendant details updates (0)
+          </p>
+          <div>
+            <a
+              class="govuk-link govuk-section-break govuk-section-break--s"
+              href=""
+              ng-reflect-type="small"
+              pdk-link=""
+              pdk-section="small"
+            >
+              Withdraw an offence
+            </a>
+          </div>
+          <div
+            class="govuk-!-margin-top-6"
+            ng-reflect-top="6"
+            pdk-margin-top="6"
+          >
+            <a
+              class="govuk-link"
+              href=""
+              pdk-link=""
+            >
+              Export case results by date
+            </a>
+          </div>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-grid-column-one-third"
+        >
+          <a
+            href=""
+          >
+            <pdk-summary-item
+              class="pdk-!-text-color-blue"
+              count="0"
+              hero=""
+              label="CSV errors in last upload"
+              ng-reflect-count="0"
+              ng-reflect-hero=""
+              ng-reflect-label="CSV errors in last upload"
+              ng-reflect-type="blue"
+              pdk-text-colour="blue"
+            >
+              <div
+                class="pdk-summary-item"
+              >
+                <span
+                  class="pdk-summary-item__number pdk-summary-item__number--hero"
+                >
+                   0 
+                </span>
+                <span
+                  class="pdk-summary-item__label"
+                >
+                  CSV errors in last upload
+                </span>
+              </div>
+            </pdk-summary-item>
+          </a>
+          <a
+            href=""
+          >
+            <pdk-summary-item
+              class="pdk-!-text-color-blue"
+              count="0"
+              hero=""
+              label="document errors in last upload"
+              ng-reflect-count="0"
+              ng-reflect-hero=""
+              ng-reflect-label="document errors in last upload"
+              ng-reflect-type="blue"
+              pdk-text-colour="blue"
+            >
+              <div
+                class="pdk-summary-item"
+              >
+                <span
+                  class="pdk-summary-item__number pdk-summary-item__number--hero"
+                >
+                   0 
+                </span>
+                <span
+                  class="pdk-summary-item__label"
+                >
+                  document errors in last upload
+                </span>
+              </div>
+            </pdk-summary-item>
+          </a>
+          <a
+            href=""
+          >
+            <pdk-summary-item
+              class="pdk-!-text-color-blue"
+              hero=""
+              label="case missing SJP notices"
+              ng-reflect-count="5"
+              ng-reflect-hero=""
+              ng-reflect-label="case missing SJP notices"
+              ng-reflect-type="blue"
+              pdk-text-colour="blue"
+            >
+              <div
+                class="pdk-summary-item"
+              >
+                <span
+                  class="pdk-summary-item__number pdk-summary-item__number--hero"
+                >
+                   5 
+                </span>
+                <span
+                  class="pdk-summary-item__label"
+                >
+                  case missing SJP notices
+                </span>
+              </div>
+            </pdk-summary-item>
+          </a>
+        </div>
+      </pdk-grid>
+    </div>
+  </pdk-grid>
+</tfl-dashboard>
+`;

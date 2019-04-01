@@ -3,11 +3,11 @@ import { DashboardContainer } from './dashboard.container';
 import { DashboardComponent } from './dashboard.component';
 import { PdkCoreModule, PdkWarningTextModule } from '@cpp/pdk';
 import { SearchInputModule } from '../search/search-input/search-input.module';
-import { ReviewNotGuiltyPleasLinkComponent } from './components/review-not-guilty-pleas-link/review-not-guilty-pleas-link.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReviewNotGuiltyPleasLinkModule } from '../shared/review-not-guilty-pleas-link';
 
-const DECLARATIONS = [DashboardContainer, DashboardComponent, ReviewNotGuiltyPleasLinkComponent];
+const DECLARATIONS = [DashboardContainer, DashboardComponent];
 
 @NgModule({
   imports: [
@@ -16,6 +16,7 @@ const DECLARATIONS = [DashboardContainer, DashboardComponent, ReviewNotGuiltyPle
     RouterModule,
     SearchInputModule,
     PdkWarningTextModule,
+    ReviewNotGuiltyPleasLinkModule,
     RouterModule.forChild([
       {
         path: '',

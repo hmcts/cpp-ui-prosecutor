@@ -104,4 +104,42 @@ describe('SjpService', () => {
       });
     });
   });
+
+  describe('getCasesWithSjpNoticeCount', () => {
+    it('should make a call', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getCasesWithSjpNoticeCount();
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn?limit=0',
+        requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
+      });
+    });
+  });
+
+  describe('getPendingDatesToAvoid', () => {
+    it('should make a call', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid();
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+  });
 });

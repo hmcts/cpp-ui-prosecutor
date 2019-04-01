@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReviewNotGuiltyPleasLinkComponent } from '../review-not-guilty-pleas-link/review-not-guilty-pleas-link.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { PdkWarningTextModule } from '@cpp/pdk';
+import { ReviewNotGuiltyPleasLinkComponent } from '../review-not-guilty-pleas-link.component';
 
 describe('ReviewNotGuiltyPleasLinkComponent', () => {
   let component: ReviewNotGuiltyPleasLinkComponent;
