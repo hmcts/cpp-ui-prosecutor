@@ -5,7 +5,7 @@ export class SearchResultPage extends BasePage {
   public readonly searchResult = $$(`pdk-inset-text`);
   public readonly caseUrn = $$(`[data-role='urn']`);
 
-  constructor() {
-    super('/search/result');
+  constructor(role: string) {
+    super(`/${role}/search/result`);
   }
 }

@@ -9,7 +9,7 @@ describe('prosecutor', () => {
 
   beforeAll(async () => {
     kase = await createBasicTvlCase();
-    page = new CaseOverviewPage(kase.id);
+    page = new CaseOverviewPage('tvl', kase.id);
   });
 
   it('should be able to access the case details with single offence', async () => {
@@ -21,7 +21,7 @@ describe('prosecutor', () => {
 
     await page.goToTab('Defendant details');
 
-    const defendantName = 'PROTRACTOR-' + kase.urn.replace('TVL', '') + ' John Adam Theodore';
+    const defendantName = 'John Adam Theodore PROTRACTOR-' + kase.urn.replace('TVL', '');
 
     await expect(page.defendantName.getText()).toContain(defendantName);
     await expect(page.defendantDob.getText()).toContain('4 Feb 1980');
@@ -40,7 +40,7 @@ describe('prosecutor', () => {
 
   beforeAll(async () => {
     kase = await createTvlCaseWithDoc();
-    page = new CaseOverviewPage(kase.id);
+    page = new CaseOverviewPage('tvl', kase.id);
   });
 
   it('should be able to access the case details with multiple offences', async () => {

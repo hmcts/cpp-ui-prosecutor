@@ -6,7 +6,7 @@ import { DashboardPage, SearchResultPage } from '../../pages';
 describe('prosecutor', () => {
   let urn: string;
   const page = new DashboardPage();
-  const searchResultPage = new SearchResultPage();
+  const searchResultPage = new SearchResultPage('tvl');
 
   beforeAll(async () => {
     const kase = await createBasicTvlCase();

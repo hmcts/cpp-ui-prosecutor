@@ -6,7 +6,7 @@ export class DashboardPage extends BasePage {
   public readonly subHeading = $('h1 span');
 
   constructor() {
-    super(`/`);
+    super(`/tvl`);
   }
 
   async searchForUrn(urn: string) {

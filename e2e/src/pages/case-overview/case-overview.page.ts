@@ -14,8 +14,8 @@ export class CaseOverviewPage extends BasePage {
 
   public readonly downloadDocumentLink = $(`download-document a`);
 
-  constructor(caseId) {
-    super(`/case-overview/${caseId}`);
+  constructor(role: string, caseId: string) {
+    super(`/${role}/case-overview/${caseId}`);
   }
 
   goToTab(linkName: string) {
