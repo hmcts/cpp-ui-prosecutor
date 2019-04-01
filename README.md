@@ -23,7 +23,7 @@ Create a new json file in `src/app/config/` folder with name `app.override.confi
 {
   "_WARNING": "Do not commit this file, as it's overwritten during deployment. Feel free to use it to test overrides of app.config.json properties locally",
   "apiRoot": "http://localhost:8181/api",
-  "idamProfilePage": "http://10.124.22.69:81/idam/manageaccount",
+  "idamProfilePage": "/idam/manage-account",
   "idamLogoutPage": "/gateway/SPInitiatedSLO"
 }
 

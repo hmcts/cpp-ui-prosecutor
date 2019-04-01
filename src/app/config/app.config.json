@@ -1,5 +1,5 @@
 {
   "apiRoot": "http://localhost:8080",
-  "idamProfilePage": "/idam/manageaccount",
+  "idamProfilePage": "/idam/manage-account",
   "idamLogoutPage": "/gateway/SPInitiatedSLO"
 }
