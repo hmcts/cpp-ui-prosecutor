@@ -46,7 +46,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         
         cases
       </span>
-       ) 
+      ) 
     </h2>
     <h4
       pdk-section="large"
@@ -264,7 +264,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
         
         cases
       </span>
-       ) 
+      ) 
     </h2>
     <h4
       pdk-section="large"

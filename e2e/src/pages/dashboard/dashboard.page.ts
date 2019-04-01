@@ -4,6 +4,7 @@ import { isStable } from '../../util';
 
 export class DashboardPage extends BasePage {
   public readonly subHeading = $('h1 span');
+  public readonly reviewNotGuiltyPleasLink = $('review-not-guilty-pleas-link');
 
   constructor() {
     super(`/tvl`);

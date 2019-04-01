@@ -21,9 +21,8 @@ import { Component, Input } from '@angular/core';
         Review not guilty pleas ({{ pleadedNotGuiltyCasesDetail.count }}
         <span [ngPlural]="pleadedNotGuiltyCasesDetail.count">
           <ng-template ngPluralCase="=1">case</ng-template>
-          <ng-template ngPluralCase="other">cases</ng-template>
-        </span>
-        )
+          <ng-template ngPluralCase="other">cases</ng-template> </span
+        >)
       </h2>
       <h4 pdk-section="large">
         <pdk-warning-text>

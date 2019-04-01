@@ -14,7 +14,8 @@ const cases = {
   'tfl-case-withdraw-offence': factory.createTflCaseWithdrawOffence,
   'tvl-case-withdraw-offence': factory.createTvlCaseWithdrawOffence,
   'tfl-case-plead-online': factory.createTflCaseAndPleadOnline,
-  'tfl-case-plea-not-guilty': factory.createTflCaseAndPleadNotGuilty
+  'tfl-case-plea-not-guilty': factory.createTflCaseAndPleadNotGuilty,
+  'tvl-case-plea-not-guilty': factory.createTvlPleadNotGuiltyCase
 };
 
 const { _, apiUrl = defaultUrl } = argv;
