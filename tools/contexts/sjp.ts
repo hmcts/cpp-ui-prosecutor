@@ -1,4 +1,4 @@
-import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, SYSTEM_TVL_USER, TFL_USER } from '../utils';
+import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER } from '../utils';
 import { request, User } from '@cpp/ui.priming';
 import { Case } from '../../src/app/contexts/sjp';
 
@@ -60,6 +60,6 @@ export const getPleadedNotGuiltyCases = () => {
     headers: {
       Accept: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
     },
-    user: SYSTEM_TVL_USER
+    user: TVL_USER
   });
 };
