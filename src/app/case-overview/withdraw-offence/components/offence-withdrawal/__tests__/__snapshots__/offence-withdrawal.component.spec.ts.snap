@@ -89,7 +89,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                 ng-reflect-hidden="false"
                 ng-reflect-type="default"
               >
-                  
+                
               </legend>
               
               
@@ -183,7 +183,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                       ng-reflect-hidden="true"
                       ng-reflect-type="small"
                     >
-                       Offence 1: Reason for withdrawing 
+                      Offence 1: Reason for withdrawing
                     </legend>
                     
                     
@@ -406,7 +406,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                 ng-reflect-hidden="false"
                 ng-reflect-type="default"
               >
-                  
+                
               </legend>
               
               
@@ -500,7 +500,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                       ng-reflect-hidden="true"
                       ng-reflect-type="small"
                     >
-                       Offence 1: Reason for withdrawing 
+                      Offence 1: Reason for withdrawing
                     </legend>
                     
                     
@@ -723,7 +723,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                 ng-reflect-hidden="false"
                 ng-reflect-type="default"
               >
-                  
+                
               </legend>
               
               
@@ -817,7 +817,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                       ng-reflect-hidden="true"
                       ng-reflect-type="small"
                     >
-                       Offence 1: Reason for withdrawing 
+                      Offence 1: Reason for withdrawing
                     </legend>
                     
                     

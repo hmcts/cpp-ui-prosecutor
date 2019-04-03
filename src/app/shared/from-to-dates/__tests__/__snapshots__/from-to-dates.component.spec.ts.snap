@@ -36,7 +36,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               ng-reflect-hidden="false"
               ng-reflect-type="default"
             >
-               From 
+              From
             </legend>
             
             
@@ -192,7 +192,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               ng-reflect-hidden="false"
               ng-reflect-type="default"
             >
-               To 
+              To
             </legend>
             
             

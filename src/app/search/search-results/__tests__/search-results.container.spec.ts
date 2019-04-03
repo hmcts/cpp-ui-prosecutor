@@ -51,7 +51,7 @@ describe('SearchResultsContainer', () => {
   });
 
   it('should compile correctly', () => {
-    store.dispatch(new SearchSuccess(MOCK_SEARCH_RESULTS));
+    store.dispatch(new SearchSuccess({ ...MOCK_SEARCH_RESULTS, keyword: '' }));
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

@@ -9,6 +9,7 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
   store={[Function Store]}
 >
   <search-results
+    ng-reflect-keyword=""
     ng-reflect-search-result-cases="[object Object],[object Object"
   >
     <div>

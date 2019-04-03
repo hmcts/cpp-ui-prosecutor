@@ -184,7 +184,7 @@ exports[`Layout should render 1`] = `
                     Telephone
                   </dt>
                   <dd>
-                    0207 633 4140
+                    0300 303 0688
                   </dd>
                   <dd>
                     Monday to Friday, 8am to 6pm (excluding public holidays)
@@ -222,6 +222,41 @@ exports[`Layout should render 1`] = `
               </div>
             </div>
           </pdk-footer-meta>
+          <pdk-footer-list>
+            <hr
+              class="govuk-footer__section-break"
+            />
+            <ul
+              class="govuk-footer__inline-list"
+            >
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    class="govuk-footer__link"
+                    href="javascript:void(0)"
+                    pdk-footer-link=""
+                  >
+                    Terms and conditions
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    href="https://www.gov.uk/help/cookies"
+                    ppdk-footer-link=""
+                    target="_blank"
+                  >
+                    Cookies
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+            </ul>
+          </pdk-footer-list>
         </div>
       </footer>
     </pdk-footer>
@@ -438,7 +473,7 @@ exports[`Layout should render correctly with activity 1`] = `
                     Telephone
                   </dt>
                   <dd>
-                    0207 633 4140
+                    0300 303 0688
                   </dd>
                   <dd>
                     Monday to Friday, 8am to 6pm (excluding public holidays)
@@ -476,6 +511,41 @@ exports[`Layout should render correctly with activity 1`] = `
               </div>
             </div>
           </pdk-footer-meta>
+          <pdk-footer-list>
+            <hr
+              class="govuk-footer__section-break"
+            />
+            <ul
+              class="govuk-footer__inline-list"
+            >
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    class="govuk-footer__link"
+                    href="javascript:void(0)"
+                    pdk-footer-link=""
+                  >
+                    Terms and conditions
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    href="https://www.gov.uk/help/cookies"
+                    ppdk-footer-link=""
+                    target="_blank"
+                  >
+                    Cookies
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+            </ul>
+          </pdk-footer-list>
         </div>
       </footer>
     </pdk-footer>
@@ -692,7 +762,7 @@ exports[`Layout should render correctly with api error 1`] = `
                     Telephone
                   </dt>
                   <dd>
-                    0207 633 4140
+                    0300 303 0688
                   </dd>
                   <dd>
                     Monday to Friday, 8am to 6pm (excluding public holidays)
@@ -730,6 +800,41 @@ exports[`Layout should render correctly with api error 1`] = `
               </div>
             </div>
           </pdk-footer-meta>
+          <pdk-footer-list>
+            <hr
+              class="govuk-footer__section-break"
+            />
+            <ul
+              class="govuk-footer__inline-list"
+            >
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    class="govuk-footer__link"
+                    href="javascript:void(0)"
+                    pdk-footer-link=""
+                  >
+                    Terms and conditions
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    href="https://www.gov.uk/help/cookies"
+                    ppdk-footer-link=""
+                    target="_blank"
+                  >
+                    Cookies
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+            </ul>
+          </pdk-footer-list>
         </div>
       </footer>
     </pdk-footer>
@@ -946,7 +1051,7 @@ exports[`Layout should render correctly with online status 1`] = `
                     Telephone
                   </dt>
                   <dd>
-                    0207 633 4140
+                    0300 303 0688
                   </dd>
                   <dd>
                     Monday to Friday, 8am to 6pm (excluding public holidays)
@@ -984,6 +1089,41 @@ exports[`Layout should render correctly with online status 1`] = `
               </div>
             </div>
           </pdk-footer-meta>
+          <pdk-footer-list>
+            <hr
+              class="govuk-footer__section-break"
+            />
+            <ul
+              class="govuk-footer__inline-list"
+            >
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    class="govuk-footer__link"
+                    href="javascript:void(0)"
+                    pdk-footer-link=""
+                  >
+                    Terms and conditions
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+              <pdk-footer-list-item>
+                <li
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    href="https://www.gov.uk/help/cookies"
+                    ppdk-footer-link=""
+                    target="_blank"
+                  >
+                    Cookies
+                  </a>
+                </li>
+              </pdk-footer-list-item>
+            </ul>
+          </pdk-footer-list>
         </div>
       </footer>
     </pdk-footer>

@@ -1,5 +1,5 @@
 import { FormatAddressPipe } from '../format-address.pipe';
-import { Address } from '../../../../case-overview/case-overview.interfaces';
+import { Address } from '../../../../contexts/sjp';
 
 describe('FormatAddressPipe', () => {
   const pipe = new FormatAddressPipe();

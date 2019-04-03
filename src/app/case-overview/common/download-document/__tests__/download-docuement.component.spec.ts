@@ -4,9 +4,9 @@ import { PdkCoreModule, PdkFileDownloadIconModule, PdkGridModule } from '@cpp/pd
 import { CommonModule } from '@angular/common';
 import { DownloadDocumentComponent } from '../download-document.component';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
-import { CaseDocument } from '../../../case-overview.interfaces';
 import { DocFileNamePipe } from '../doc-file-name.pipe';
 import { FormatDatePipeModule } from '../../../../shared/pipes';
+import { CaseDocument } from '../../../../contexts/sjp';
 
 describe('DownloadDocumentComponent', () => {
   let fixture: ComponentFixture<TestDownloadDocumentComponent>;

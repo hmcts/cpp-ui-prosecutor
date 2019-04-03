@@ -1,6 +1,6 @@
 import { searchReducer, SearchState } from '../search.reducer';
 import { ResetSearchResult, SearchSuccess } from '../search.action';
-import { CaseDetails, SearchResult } from '../../contexts/sjp';
+import { CaseDetails } from '../../contexts/sjp';
 
 describe(' Search reducer', () => {
   let resultState: SearchState;
@@ -23,7 +23,7 @@ describe(' Search reducer', () => {
         keyword: 'search',
         foundCasesWithOutdatedDefendantsName: true,
         results: [{ caseId: 'caseId' } as CaseDetails]
-      } as SearchResult);
+      } as SearchState);
       resultState = searchReducer(undefined, action);
     });
 
@@ -40,7 +40,7 @@ describe(' Search reducer', () => {
           keyword: 'search',
           foundCasesWithOutdatedDefendantsName: true,
           results: [{ caseId: 'caseId' } as CaseDetails]
-        } as SearchResult,
+        } as SearchState,
         action
       );
     });
