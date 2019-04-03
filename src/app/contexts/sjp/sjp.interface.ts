@@ -64,6 +64,7 @@ export interface Offence {
   contactDetails?: ContactDetails; // todo delete
   outOfTime?: boolean;
   notInEffect?: boolean;
+  imprisonable?: boolean;
 }
 
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';

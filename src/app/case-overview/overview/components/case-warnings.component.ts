@@ -15,6 +15,9 @@ import { isUnderAge } from '../../../contexts/sjp/util/sjp-util';
     <pdk-warning-text error *ngIf="isOffenceNotInEffect">
       Offence not in effect - refer to court and see SJPN for offence details
     </pdk-warning-text>
+    <pdk-warning-text error *ngIf="isImprisonable">
+      Imprisonable offence
+    </pdk-warning-text>
   `
 })
 export class CaseWarningsComponent {
@@ -31,5 +34,9 @@ export class CaseWarningsComponent {
 
   get isOffenceNotInEffect() {
     return this.offences.some(({ notInEffect }) => !!notInEffect);
+  }
+
+  get isImprisonable() {
+    return this.offences.some(({ imprisonable }) => !!imprisonable);
   }
 }

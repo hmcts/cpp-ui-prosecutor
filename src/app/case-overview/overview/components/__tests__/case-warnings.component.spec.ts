@@ -30,7 +30,8 @@ describe('CaseWarnings', () => {
         ...offences[0],
         chargeDate: '2017-01-14',
         outOfTime: true,
-        notInEffect: true
+        notInEffect: true,
+        imprisonable: true
       }
     ];
 
@@ -45,7 +46,8 @@ describe('CaseWarnings', () => {
         ...offences[0],
         chargeDate: '2017-01-14',
         outOfTime: false,
-        notInEffect: false
+        notInEffect: false,
+        imprisonable: false
       }
     ];
 

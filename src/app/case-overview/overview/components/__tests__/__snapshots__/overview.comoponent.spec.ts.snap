@@ -126,6 +126,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
               
               
               
+              
             </case-warnings>
             <div
               class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
@@ -1008,6 +1009,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   </strong>
                 </div>
               </pdk-warning-text>
+              
             </case-warnings>
             <div
               class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
@@ -1649,6 +1651,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               ng-reflect-defendant="[object Object]"
               ng-reflect-offences="[object Object]"
             >
+              
               
               
               
@@ -2299,6 +2302,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               ng-reflect-defendant="[object Object]"
               ng-reflect-offences="[object Object]"
             >
+              
               
               
               

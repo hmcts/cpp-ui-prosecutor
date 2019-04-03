@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PdkBadgeModule, PdkCoreModule, PdkFoldableTextModule } from '@cpp/pdk';
 import { CommonModule } from '@angular/common';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
@@ -15,7 +15,7 @@ describe('DefendantOffenceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantOffenceComponent, MockOffenceWarning, TestDefendantOffenceComponent],
+      declarations: [DefendantOffenceComponent, MockDefendantOffenceWarningsComponent, TestDefendantOffenceComponent],
       imports: [
         CommonModule,
         PdkCoreModule,
@@ -74,12 +74,23 @@ describe('DefendantOffenceComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
+  it('should compile correctly with the offence is pending withdrawal', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE,
+      completed: false
+    };
+    fixture.componentInstance.offence = offence2;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
   it('should compile correctly with offence warnings', () => {
     fixture.componentInstance.kase = MOCK_CASE;
     fixture.componentInstance.offence = {
       ...offence1,
       outOfTime: true,
-      notInEffect: true
+      notInEffect: true,
+      imprisonable: true
     };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
@@ -88,7 +99,7 @@ describe('DefendantOffenceComponent', () => {
   @Component({
     selector: 'defendant-offence-test',
     template: `
-      <defendant-offence [offence]="offence" [kase]="kase"></defendant-offence>
+      <defendant-offence [offence]="offence" [kase]="kase"> </defendant-offence>
     `
   })
   class TestDefendantOffenceComponent {
@@ -97,10 +108,12 @@ describe('DefendantOffenceComponent', () => {
   }
 
   @Component({
-    selector: 'offence-warning',
+    selector: 'defendant-offence-warnings',
     template: `
-      <ng-content></ng-content>
+      {{ offence | json }}
     `
   })
-  class MockOffenceWarning {}
+  class MockDefendantOffenceWarningsComponent {
+    @Input() offence: Offence;
+  }
 });

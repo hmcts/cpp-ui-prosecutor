@@ -28,11 +28,13 @@ import { DownloadDocumentModule } from '../common';
 import { RouterModule } from '@angular/router';
 import { CaseWarningsComponent } from './components/case-warnings.component';
 import { OffenceWarningModule } from '../common/offence-warning/offence-warning.module';
+import { DefendantOffenceWarningsComponent } from './components/defendant-offence-warnings.component';
 
 const DECLARATIONS = [
   OverviewComponent,
   CaseDetailsComponent,
   CaseWarningsComponent,
+  DefendantOffenceWarningsComponent,
   DocumentListComponent,
   DefendantDetailsComponent,
   StatementOfFactsComponent,

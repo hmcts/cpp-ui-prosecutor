@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantOffenceWarnings should compile correctly with all warnings 1`] = `
+<defendant-offence-warnings-test
+  offence={[Function Object]}
+>
+  <defendant-offence-warnings
+    ng-reflect-offence="[object Object]"
+  >
+    
+    <offence-warning>
+       Offence is out of time 
+    </offence-warning>
+    
+    <offence-warning>
+       Offence not in effect - refer to court and see SJPN for offence details 
+    </offence-warning>
+    
+    <offence-warning>
+       Imprisonable offence 
+    </offence-warning>
+  </defendant-offence-warnings>
+</defendant-offence-warnings-test>
+`;
+
+exports[`DefendantOffenceWarnings should compile correctly without any warnings 1`] = `
+<defendant-offence-warnings-test
+  offence={[Function Object]}
+>
+  <defendant-offence-warnings
+    ng-reflect-offence="[object Object]"
+  >
+    
+    
+    
+  </defendant-offence-warnings>
+</defendant-offence-warnings-test>
+`;
