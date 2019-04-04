@@ -21,8 +21,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
         <a pdk-breadcrumb>Withdraw offence</a>
       </li>
     </ol>
-    <case-header-badge [kase]="kase"></case-header-badge>
-
+    <case-header-badge-container></case-header-badge-container>
     <pdk-error-summary
       *ngIf="errors"
       pdk-margin-top="5"

@@ -18,6 +18,7 @@ import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
 import { DatesToAvoidFormComponent } from '../dates-to-avoid-form.component';
 import { By } from '@angular/platform-browser';
+import { mockNativeMethods } from '../../../test/jest-mock';
 
 describe('DatesToAvoidFormComponent', () => {
   let fixture: ComponentFixture<TestDatesToAvoidFormComponent>;
@@ -42,6 +43,7 @@ describe('DatesToAvoidFormComponent', () => {
       ],
       schemas: [NO_ERRORS_SCHEMA]
     });
+    mockNativeMethods();
     fixture = TestBed.createComponent(TestDatesToAvoidFormComponent);
     fixture.componentInstance.kase = MOCK_CASE;
     formComponent = fixture.debugElement.query(By.directive(DatesToAvoidFormComponent)).componentInstance;

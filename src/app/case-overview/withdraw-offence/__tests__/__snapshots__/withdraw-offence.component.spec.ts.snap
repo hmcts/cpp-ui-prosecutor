@@ -52,7 +52,7 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
         Withdraw offence
       </a>
     </li>
-  </ol><case-header-badge /><div>
+  </ol><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       ng-reflect-type="heading-xlarge"
@@ -149,7 +149,7 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
         Withdraw offence
       </a>
     </li>
-  </ol><case-header-badge /><div>
+  </ol><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       ng-reflect-type="heading-xlarge"

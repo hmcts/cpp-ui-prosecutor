@@ -52,40 +52,11 @@ exports[`OverviewComponent should compile correctly 1`] = `
          Case details 
       </li>
     </ol>
-    <div
-      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-      ng-reflect-vertical="4"
-      pdk-margin-vertical="4"
-    >
-      <pdk-page-header>
-        <div
-          class="pdk-page-header"
-        >
-          <pdk-page-header-content
-            ng-reflect-reference="TFL26168N21T5"
-          >
-            <div
-              class="pdk-page-header__content"
-            >
-              
-              
-              <div
-                class="pdk-page-header__reference"
-              >
-                TFL26168N21T5
-              </div>
-              <div
-                class="pdk-page-header__title"
-              >
-                <b>
-                  Guy SMITH
-                </b>
-              </div>
-            </div>
-          </pdk-page-header-content>
-        </div>
-      </pdk-page-header>
-    </div>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
     
     <pdk-grid
       container=""
@@ -442,14 +413,14 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c5=""
+                _nghost-c4=""
               >
                 <div
-                  _ngcontent-c5=""
+                  _ngcontent-c4=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c5=""
+                    _ngcontent-c4=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -866,40 +837,11 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
          Case details 
       </li>
     </ol>
-    <div
-      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-      ng-reflect-vertical="4"
-      pdk-margin-vertical="4"
-    >
-      <pdk-page-header>
-        <div
-          class="pdk-page-header"
-        >
-          <pdk-page-header-content
-            ng-reflect-reference="TFL26168N21T5"
-          >
-            <div
-              class="pdk-page-header__content"
-            >
-              
-              
-              <div
-                class="pdk-page-header__reference"
-              >
-                TFL26168N21T5
-              </div>
-              <div
-                class="pdk-page-header__title"
-              >
-                <b>
-                  Guy SMITH
-                </b>
-              </div>
-            </div>
-          </pdk-page-header-content>
-        </div>
-      </pdk-page-header>
-    </div>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
     
     <pdk-grid
       container=""
@@ -939,27 +881,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             >
               
               <pdk-warning-text
-                _nghost-c31=""
+                _nghost-c27=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c31=""
+                  _ngcontent-c27=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c31=""
+                      _ngcontent-c27=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -970,27 +912,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-c31=""
+                _nghost-c27=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c31=""
+                  _ngcontent-c27=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c31=""
+                      _ngcontent-c27=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -1001,27 +943,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-c31=""
+                _nghost-c27=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-c31=""
+                  _ngcontent-c27=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-c31=""
+                    _ngcontent-c27=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-c31=""
+                      _ngcontent-c27=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -1346,14 +1288,14 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c29=""
+                _nghost-c25=""
               >
                 <div
-                  _ngcontent-c29=""
+                  _ngcontent-c25=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c29=""
+                    _ngcontent-c25=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -1621,40 +1563,11 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
          Case details 
       </li>
     </ol>
-    <div
-      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-      ng-reflect-vertical="4"
-      pdk-margin-vertical="4"
-    >
-      <pdk-page-header>
-        <div
-          class="pdk-page-header"
-        >
-          <pdk-page-header-content
-            ng-reflect-reference="TFL26168N21T5"
-          >
-            <div
-              class="pdk-page-header__content"
-            >
-              
-              
-              <div
-                class="pdk-page-header__reference"
-              >
-                TFL26168N21T5
-              </div>
-              <div
-                class="pdk-page-header__title"
-              >
-                <b>
-                  Guy SMITH
-                </b>
-              </div>
-            </div>
-          </pdk-page-header-content>
-        </div>
-      </pdk-page-header>
-    </div>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
     
     <pdk-grid
       container=""
@@ -2011,14 +1924,14 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c21=""
+                _nghost-c18=""
               >
                 <div
-                  _ngcontent-c21=""
+                  _ngcontent-c18=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c21=""
+                    _ngcontent-c18=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -2292,40 +2205,11 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
          Case details 
       </li>
     </ol>
-    <div
-      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-      ng-reflect-vertical="4"
-      pdk-margin-vertical="4"
-    >
-      <pdk-page-header>
-        <div
-          class="pdk-page-header"
-        >
-          <pdk-page-header-content
-            ng-reflect-reference="TFL26168N21T5"
-          >
-            <div
-              class="pdk-page-header__content"
-            >
-              
-              
-              <div
-                class="pdk-page-header__reference"
-              >
-                TFL26168N21T5
-              </div>
-              <div
-                class="pdk-page-header__title"
-              >
-                <b>
-                  Guy SMITH
-                </b>
-              </div>
-            </div>
-          </pdk-page-header-content>
-        </div>
-      </pdk-page-header>
-    </div>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
     
     <pdk-grid
       container=""
@@ -2682,14 +2566,14 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c13=""
+                _nghost-c11=""
               >
                 <div
-                  _ngcontent-c13=""
+                  _ngcontent-c11=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c13=""
+                    _ngcontent-c11=""
                     class="pdk-related__section"
                   >
                     <h1

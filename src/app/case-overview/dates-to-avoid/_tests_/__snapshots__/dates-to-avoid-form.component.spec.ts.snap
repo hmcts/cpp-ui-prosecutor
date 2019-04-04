@@ -55,15 +55,21 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
                   <textarea
                     class="ng-untouched ng-pristine ng-valid govuk-input"
                     id="pdk-form-control-1"
+                    minrows="10"
                     name="datesToAvoid"
+                    ng-reflect-min-rows="10"
                     ng-reflect-model="datesToAvoid1"
                     ng-reflect-name="datesToAvoid"
                     ng-reflect-required=""
                     ng-reflect-width=""
                     pdk-input=""
+                    pdk-resize=""
                     pdk-text-input=""
                     required=""
-                  />
+                    style="resize: none; min-height: NaNpx; max-height: NaNpx;"
+                  >
+                                
+                  </textarea>
                   
                   
                 </pdk-form-group>
@@ -141,7 +147,7 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
                   
                   <label
                     class="govuk-label"
-                    for="pdk-form-control-2"
+                    for="pdk-form-control-3"
                     ng-reflect-hidden="false"
                     ng-reflect-type="default"
                   >
@@ -152,16 +158,22 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
                   
                   <textarea
                     class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-2"
+                    id="pdk-form-control-3"
+                    minrows="10"
                     name="datesToAvoid"
+                    ng-reflect-min-rows="10"
                     ng-reflect-model="datesToAvoid1"
                     ng-reflect-name="datesToAvoid"
                     ng-reflect-required=""
                     ng-reflect-width=""
                     pdk-input=""
+                    pdk-resize=""
                     pdk-text-input=""
                     required=""
-                  />
+                    style="resize: none; min-height: NaNpx; max-height: NaNpx;"
+                  >
+                                
+                  </textarea>
                   
                   
                 </pdk-form-group>

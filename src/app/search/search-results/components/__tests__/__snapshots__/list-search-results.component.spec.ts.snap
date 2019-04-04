@@ -116,11 +116,13 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             TV Licensing
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             27 Jan 2019
@@ -168,11 +170,13 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             Transport for London
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             04 Mar 1989
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             28 Jan 2019
@@ -228,11 +232,13 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             Transport for London
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             14 Mar 1949
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             28 Jan 2019
@@ -280,17 +286,20 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             TV Licensing
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             05 Mar 1981
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             27 Jan 2019
           </td>
         </tr>
       </tbody>
+       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -506,17 +515,20 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             Transport for London
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             11 Mar 1957
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             27 Jan 2019
           </td>
         </tr>
       </tbody>
+       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -646,17 +658,20 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
             TV Licensing
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             27 Jan 2019
           </td>
         </tr>
       </tbody>
+       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -786,17 +801,20 @@ exports[`ListSearchResultsComponent should display the 'View in Criminal Courts'
             TV Licensing
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
+            class="no-wrap"
             pdk-table-cell=""
           >
             27 Jan 2019
           </td>
         </tr>
       </tbody>
+       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>

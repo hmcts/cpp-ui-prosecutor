@@ -11,7 +11,16 @@ import { Case } from '../../contexts/sjp';
             label="Enter dates this case shouldn't be listed or write 'none'."
             [errorMessages]="errorMessages"
           >
-            <textarea pdk-input name="datesToAvoid" pdk-text-input required [ngModel]="kase.datesToAvoid"></textarea>
+            <textarea
+              pdk-resize
+              minRows="10"
+              pdk-input
+              name="datesToAvoid"
+              pdk-text-input
+              required
+              [ngModel]="kase.datesToAvoid"
+            >
+            </textarea>
           </pdk-form-field>
 
           <button pdk-button pdk-margin-vertical="5">

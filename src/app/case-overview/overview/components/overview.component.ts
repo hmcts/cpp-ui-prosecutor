@@ -18,18 +18,10 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
         Case details
       </li>
     </ol>
-    <div pdk-margin-vertical="4">
-      <pdk-page-header>
-        <pdk-page-header-content reference="{{ kase.urn }}">
-          <b>{{ defendant.personalDetails | defendantName: false }}</b>
-        </pdk-page-header-content>
-      </pdk-page-header>
-    </div>
-    <div pdk-margin-vertical="1" *ngIf="displayOffencesWithdrawnBanner">
-      <pdk-alert type="confirmation">
-        Your request has been sent
-      </pdk-alert>
-    </div>
+    <case-header-badge-container></case-header-badge-container>
+    <pdk-alert type="confirmation" icon="true" pdk-margin-vertical="1" *ngIf="displayOffencesWithdrawnBanner">
+      Your request has been sent
+    </pdk-alert>
     <pdk-grid container>
       <pdk-grid two-thirds>
         <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">

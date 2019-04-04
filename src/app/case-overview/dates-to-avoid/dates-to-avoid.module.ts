@@ -21,7 +21,7 @@ import { DatesToAvoidContainer } from './dates-to-avoid.container';
 import { DatesToAvoidComponent } from './dates-to-avoid.component';
 import { DefendantNamePipeModule } from '../../shared/pipes';
 import { DatesToAvoidFormComponent } from './dates-to-avoid-form.component';
-import { CaseHeaderBadgeModule } from '../case-header-badge/case-header-badge.module';
+import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 
 const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoidFormComponent];
 

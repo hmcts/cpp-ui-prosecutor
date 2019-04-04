@@ -29,6 +29,7 @@ import { RouterModule } from '@angular/router';
 import { CaseWarningsComponent } from './components/case-warnings.component';
 import { OffenceWarningModule } from '../common/offence-warning/offence-warning.module';
 import { DefendantOffenceWarningsComponent } from './components/defendant-offence-warnings.component';
+import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -61,7 +62,8 @@ const DECLARATIONS = [
     PdkWarningTextModule,
     SharedModule,
     OffenceWarningModule,
-    DownloadDocumentModule
+    DownloadDocumentModule,
+    CaseHeaderBadgeModule
   ],
   exports: [OverviewContainer]
 })

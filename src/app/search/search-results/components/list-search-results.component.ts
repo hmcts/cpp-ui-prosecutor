@@ -68,10 +68,11 @@ import { CaseDetails } from '../../../contexts/sjp';
             </div>
           </td>
           <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutor }}</td>
-          <td pdk-table-cell>{{ searchResult.defendant.dateOfBirth | date: 'dd MMM yyyy' }}</td>
-          <td pdk-table-cell>{{ searchResult.postingDate | date: 'dd MMM yyyy' }}</td>
+          <td pdk-table-cell class="no-wrap">{{ searchResult.defendant.dateOfBirth | date: 'dd MMM yyyy' }}</td>
+          <td pdk-table-cell class="no-wrap">{{ searchResult.postingDate | date: 'dd MMM yyyy' }}</td>
         </tr>
       </tbody>
+      case-header-badge
     </table>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush

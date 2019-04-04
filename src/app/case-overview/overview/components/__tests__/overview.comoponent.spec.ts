@@ -34,6 +34,7 @@ describe('OverviewComponent', () => {
         CaseWarningsComponent,
         MockPleaMitigationComponent,
         MockStatementOfFactsComponent,
+        MockCaseHeaderBadgeContainer,
         MockSubComponent
       ],
       imports: [
@@ -142,6 +143,14 @@ describe('OverviewComponent', () => {
     @Input() offence: Offence;
     @Input() kase: Case;
   }
+
+  @Component({
+    selector: 'case-header-badge-container',
+    template: `
+      <pre>case badge</pre>
+    `
+  })
+  class MockCaseHeaderBadgeContainer {}
 
   @Component({
     selector: 'case-details, defendant-details, document-list',

@@ -21,7 +21,7 @@ import { Case } from '../../contexts/sjp';
       </li>
     </ol>
 
-    <case-header-badge [kase]="kase"></case-header-badge>
+    <case-header-badge-container></case-header-badge-container>
     <div>
       <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5">Dates to avoid</h1>
     </div>

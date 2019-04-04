@@ -14,10 +14,12 @@ describe('WithdrawOffenceComponent', () => {
       declarations: [WithdrawOffenceComponent],
       imports: [PdkCoreModule, PdkGridModule, PdkErrorSummaryModule],
       schemas: [NO_ERRORS_SCHEMA]
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(WithdrawOffenceComponent);
-    component = fixture.componentInstance;
+    })
+      .compileComponents()
+      .then(() => {
+        fixture = TestBed.createComponent(WithdrawOffenceComponent);
+        component = fixture.componentInstance;
+      });
   });
 
   it('should compile correctly', () => {
@@ -33,14 +35,12 @@ describe('WithdrawOffenceComponent', () => {
   });
 
   @Component({
-    selector: 'case-header-badge',
+    selector: 'case-header-badge-container',
     template: `
-      <pre>{{ kase | json }}</pre>
+      <pre>case badge</pre>
     `
   })
-  class MockCaseHeaderBadgeComponent {
-    @Input() kase: any;
-  }
+  class MockCaseHeaderBadgeContainer {}
 
   @Component({
     selector: 'withdraw-list-form',
@@ -55,7 +55,7 @@ describe('WithdrawOffenceComponent', () => {
   @Component({
     selector: 'withdraw-offence-list-test',
     template: `
-      <withdraw-offence-list [offences]="offences" [kase]="kase"> </withdraw-offence-list>
+      <withdraw-offence-list [offences]="offences" [kase]="kase"></withdraw-offence-list>
     `
   })
   class TestWithdrawOffenceListComponent {

@@ -16,7 +16,7 @@ import { WithdrawOffenceComponent } from './withdraw-offence.component';
 import { WithdrawOffenceFormComponent } from './withdraw-offence-form.component';
 import { FormsModule } from '@angular/forms';
 import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence-withdrawal.module';
-import { CaseHeaderBadgeModule } from '../case-header-badge/case-header-badge.module';
+import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 
 const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
