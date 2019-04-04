@@ -145,6 +145,7 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
         pdk-button=""
         pdk-margin-vertical="5"
         routerlink="../../../../../../review-not-guilty-pleas"
+        type="button"
       >
          Continue 
       </button>

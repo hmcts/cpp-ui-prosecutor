@@ -23,7 +23,7 @@ import { Case } from '../../contexts/sjp';
             </textarea>
           </pdk-form-field>
 
-          <button pdk-button pdk-margin-vertical="5">
+          <button type="submit" pdk-button pdk-margin-vertical="5">
             Submit
           </button>
           <div>
