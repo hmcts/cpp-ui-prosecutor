@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { Offence } from '../../../../contexts/sjp/index';
-import { REASON_OPTIONS } from '../../reason-mappings';
+import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIONS } from '../../reason-mappings';
 
 @Component({
   selector: 'offence-withdrawal-component',
@@ -20,13 +20,13 @@ import { REASON_OPTIONS } from '../../reason-mappings';
         {{ offence.wording }}
       </pdk-foldable-text>
 
-      <div *ngIf="offence.withdrawalRequestReason" pdk-margin-vertical="5">
-        <pdk-badge>
-          Pending withdrawal
-        </pdk-badge>
-      </div>
+      <pdk-form-field *ngIf="!caseWithdrawn">
+        <div *ngIf="offence.withdrawalRequestReason" pdk-margin-vertical="5">
+          <pdk-badge>
+            Pending Withdrawal
+          </pdk-badge>
+        </div>
 
-      <pdk-form-field>
         <pdk-radio-group inline #reason="ngModel" [ngModel]="displayReason" name="{{ offence.id }}.withdraw" required>
           <pdk-radio-button [value]="true">Yes</pdk-radio-button>
           <pdk-radio-button [value]="false">No</pdk-radio-button>
@@ -42,7 +42,7 @@ import { REASON_OPTIONS } from '../../reason-mappings';
           >
             <label pdk-label="small">Reason for withdrawing</label>
             <pdk-radio-group
-              [ngModel]="offence.withdrawalRequestReason"
+              [ngModel]="offenceReason"
               name="{{ offence.id }}.reason"
               [options]="reasonOptions"
               required
@@ -54,14 +54,19 @@ import { REASON_OPTIONS } from '../../reason-mappings';
     </div>
   `
 })
-export class OffenceWithdrawalComponent {
-  public readonly reasonOptions = REASON_OPTIONS;
-  public readonly errorMessages = [{ rule: 'required', message: 'Choose a reason' }];
+export class OffenceWithdrawalComponent implements OnInit {
+  public readonly reasonOptions = WITHDRAW_OFFENCE_FORM_REASON_OPTIONS;
+  public readonly errorMessages = WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE;
 
   @Input() index: number;
   @Input() offence: Offence;
+  @Input() caseWithdrawn: boolean;
 
-  get displayReason() {
-    return !!this.offence.withdrawalRequestReason;
+  offenceReason = '';
+  displayReason = false;
+
+  ngOnInit(): void {
+    this.offenceReason = this.offence.withdrawalRequestReason;
+    this.displayReason = !!this.offence.withdrawalRequestReason;
   }
 }

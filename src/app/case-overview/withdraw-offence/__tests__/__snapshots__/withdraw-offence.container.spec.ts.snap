@@ -3,6 +3,7 @@
 exports[`WithdrawOffenceContainer should compile correctly 1`] = `
 <withdraw-offence
   case$={[Function Store]}
+  caseWithdrawnStatus$={[Function Store]}
   offences$={[Function Store]}
   store={[Function Store]}
 >

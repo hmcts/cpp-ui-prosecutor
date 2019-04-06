@@ -248,3 +248,5 @@ Object {
   "count": 2,
 }
 `;
+
+exports[`selectors getWithdrawCaseStatus should select case withdrawn status from the store 1`] = `false`;

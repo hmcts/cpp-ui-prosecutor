@@ -19,7 +19,7 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
       </li>
     </ol>
     <case-header-badge-container></case-header-badge-container>
-    <pdk-alert type="confirmation" icon="true" pdk-margin-vertical="1" *ngIf="displayOffencesWithdrawnBanner">
+    <pdk-alert *ngIf="displayOffencesWithdrawnBanner" type="confirmation" icon="true" pdk-margin-top="3">
       Your request has been sent
     </pdk-alert>
     <pdk-grid container>

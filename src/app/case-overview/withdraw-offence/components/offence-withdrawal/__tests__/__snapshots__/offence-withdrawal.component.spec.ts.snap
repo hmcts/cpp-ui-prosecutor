@@ -62,17 +62,6 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
           </div>
         </pdk-foldable-text>
         
-        <div
-          class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
-          ng-reflect-vertical="5"
-          pdk-margin-vertical="5"
-        >
-          <pdk-badge
-            class="pdk-badge"
-          >
-             Pending withdrawal 
-          </pdk-badge>
-        </div>
         <pdk-form-field>
           
           <pdk-form-group
@@ -94,6 +83,18 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
               
               
               
+              
+              <div
+                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+                ng-reflect-vertical="5"
+                pdk-margin-vertical="5"
+              >
+                <pdk-badge
+                  class="pdk-badge"
+                >
+                   Pending Withdrawal 
+                </pdk-badge>
+              </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
                 inline=""
@@ -379,17 +380,6 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
           </div>
         </pdk-foldable-text>
         
-        <div
-          class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
-          ng-reflect-vertical="5"
-          pdk-margin-vertical="5"
-        >
-          <pdk-badge
-            class="pdk-badge"
-          >
-             Pending withdrawal 
-          </pdk-badge>
-        </div>
         <pdk-form-field>
           
           <pdk-form-group
@@ -411,6 +401,18 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               
               
               
+              
+              <div
+                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+                ng-reflect-vertical="5"
+                pdk-margin-vertical="5"
+              >
+                <pdk-badge
+                  class="pdk-badge"
+                >
+                   Pending Withdrawal 
+                </pdk-badge>
+              </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
                 inline=""
@@ -696,17 +698,6 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
           </div>
         </pdk-foldable-text>
         
-        <div
-          class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
-          ng-reflect-vertical="5"
-          pdk-margin-vertical="5"
-        >
-          <pdk-badge
-            class="pdk-badge"
-          >
-             Pending withdrawal 
-          </pdk-badge>
-        </div>
         <pdk-form-field>
           
           <pdk-form-group
@@ -728,6 +719,18 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               
               
               
+              
+              <div
+                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+                ng-reflect-vertical="5"
+                pdk-margin-vertical="5"
+              >
+                <pdk-badge
+                  class="pdk-badge"
+                >
+                   Pending Withdrawal 
+                </pdk-badge>
+              </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
                 inline=""

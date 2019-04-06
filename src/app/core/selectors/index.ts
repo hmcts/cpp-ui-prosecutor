@@ -20,4 +20,15 @@ export const getOffences = createSelector(
   defendant => defendant.offences || []
 );
 
+export const getWithdrawCaseStatus = createSelector(
+  getCase,
+  kase =>
+    kase.defendant.offences.length > 1 &&
+    kase.defendant.offences.every(
+      offence =>
+        offence.withdrawalRequestReason &&
+        offence.withdrawalRequestReason === kase.defendant.offences[0].withdrawalRequestReason
+    )
+);
+
 export const getPleadedNotGuiltyCasesDetail = (state: State) => state.pleadedNotGuiltyCases;

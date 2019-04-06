@@ -33,6 +33,13 @@ describe('selectors', () => {
     });
   });
 
+  describe('getWithdrawCaseStatus', () => {
+    it('should select case withdrawn status from the store', () => {
+      const state = createState([new fromActions.LoadCaseSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getWithdrawCaseStatus(state)).toMatchSnapshot();
+    });
+  });
+
   describe('getPleadedNotGuiltyCasesDetail', () => {
     it('should select the right data from the store', () => {
       const state = createState([new fromActions.LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID)]);

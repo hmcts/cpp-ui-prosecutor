@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WithdrawOffenceContainer } from './withdraw-offence.container';
 import { RouterModule } from '@angular/router';
 import {
+  PdkBadgeModule,
   PdkBreadcrumbsModule,
   PdkButtonModule,
   PdkCheckboxInputModule,
@@ -33,6 +34,7 @@ const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, Withdr
     PdkGridModule,
     PdkButtonModule,
     PdkErrorSummaryModule,
+    PdkBadgeModule,
     CaseHeaderBadgeModule,
     OffenceWithdrawalModule,
     RouterModule.forChild([

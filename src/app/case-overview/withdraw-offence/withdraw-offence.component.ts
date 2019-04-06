@@ -39,6 +39,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
       <pdk-grid three-quarters pdk-margin-top="5">
         <withdraw-list-form
           [offences]="offences"
+          [caseWithdrawnStatus]="caseWithdrawnStatus"
           (errors)="errors = $event"
           (submitOffenceWithdrawals)="formSubmit.emit($event)"
         >
@@ -51,6 +52,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 export class WithdrawOffenceComponent {
   @Input() offences: Offence[];
   @Input() kase: Case;
+  @Input() caseWithdrawnStatus: boolean;
   @Output() formSubmit = new EventEmitter<WithdrawOffenceParam[]>();
   errors: ValidationError[];
 }

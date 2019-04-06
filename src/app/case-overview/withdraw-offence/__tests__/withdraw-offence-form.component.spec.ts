@@ -1,19 +1,31 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
-import { PdkCoreModule, PdkFormModule, PdkGridModule } from '@cpp/pdk';
+import { Component, Input } from '@angular/core';
+import { PdkBadgeModule, PdkCoreModule, PdkFormModule, PdkGridModule, PdkRadioInputModule } from '@cpp/pdk';
 import { WithdrawOffenceFormComponent } from '../withdraw-offence-form.component';
 import { Offence } from '../../../contexts/sjp';
 import { MOCK_OFFENCES } from '../../__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 describe('WithdrawOffenceFormComponent', () => {
   let fixture: ComponentFixture<TestWithdrawOffenceListFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WithdrawOffenceFormComponent, TestWithdrawOffenceListFormComponent],
-      imports: [CommonModule, PdkFormModule, PdkCoreModule, PdkGridModule],
-      schemas: [NO_ERRORS_SCHEMA]
+      declarations: [
+        WithdrawOffenceFormComponent,
+        TestWithdrawOffenceListFormComponent,
+        MockOffenceWithdrawalComponent
+      ],
+      imports: [
+        CommonModule,
+        FormsModule,
+        PdkFormModule,
+        PdkCoreModule,
+        PdkGridModule,
+        PdkBadgeModule,
+        PdkRadioInputModule
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(TestWithdrawOffenceListFormComponent);
     fixture.componentInstance.offences = MOCK_OFFENCES;
@@ -24,19 +36,34 @@ describe('WithdrawOffenceFormComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should display the offences', () => {
-    fixture.detectChanges();
-    expect(fixture).toMatchSnapshot();
-  });
-
   @Component({
-    selector: 'test-withdraw-list-form-',
+    selector: 'test-withdraw-list-form',
     template: `
-      <withdraw-list-form [offences]="offences"> </withdraw-list-form>
+      <withdraw-list-form
+        [offences]="offences"
+        [caseWithdrawnStatus]="caseWithdrawnStatus"
+        (errors)="errors = $event"
+        (submitOffenceWithdrawals)="formSubmit.emit($event)"
+      >
+      </withdraw-list-form>
     `
   })
   class TestWithdrawOffenceListFormComponent {
     offences: Offence[];
     form = jest.fn();
+    formSubmit = jest.fn();
+    errors = jest.fn();
+  }
+
+  @Component({
+    selector: 'offence-withdrawal-component',
+    template: `
+      <span></span>
+    `
+  })
+  class MockOffenceWithdrawalComponent {
+    @Input() index: number;
+    @Input() offence: Offence;
+    @Input() caseWithdrawn: boolean;
   }
 });

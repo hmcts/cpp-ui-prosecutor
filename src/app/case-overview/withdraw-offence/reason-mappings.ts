@@ -1,4 +1,4 @@
-export const REASON_OPTIONS = [
+export const WITHDRAW_OFFENCE_FORM_REASON_OPTIONS = [
   {
     value: 'Insufficient evidence',
     label: 'Insufficient evidence'
@@ -16,3 +16,5 @@ export const REASON_OPTIONS = [
     label: 'Other'
   }
 ];
+
+export const WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE = [{ rule: 'required', message: 'Choose a reason' }];

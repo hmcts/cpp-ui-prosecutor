@@ -43,5 +43,6 @@ describe('WithdrawOffenceContainer', () => {
   class MockWithdrawOffenceListComponent {
     @Input() offences: any;
     @Input() kase: any;
+    @Input() caseWithdrawnStatus: any;
   }
 });
