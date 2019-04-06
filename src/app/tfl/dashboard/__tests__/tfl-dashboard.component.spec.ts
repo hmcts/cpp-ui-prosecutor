@@ -19,6 +19,8 @@ describe('TflDashboardComponent', () => {
   it('should compile correctly', () => {
     component.pleadedNotGuiltyCasesDetail = { cases: [{ caseId: 'caseId' }], count: 1 };
     component.casesWithSjpNoticeCount = 5;
+    component.documentsUploadErrorCount = 5;
+    component.csvUploadErrorCount = 5;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

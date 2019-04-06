@@ -1,5 +1,6 @@
 import { tflReducer } from '../tfl.reducer';
-import { LoadCasesWithSjpNoticeCountSuccess, TflAction } from '../tfl.action';
+import { LoadCasesWithSjpNoticeCountSuccess, LoadFileUploadStatsSuccess, TflAction } from '../tfl.action';
+import { FileUploadStat, FileUploadStatResult } from '../../contexts/staging-tfl';
 
 describe(' Tfl reducer', () => {
   describe('default', () => {
@@ -10,6 +11,13 @@ describe(' Tfl reducer', () => {
 
     it('should update state with cases sjp notices case data ', () => {
       const action = new LoadCasesWithSjpNoticeCountSuccess({ count: 10 });
+      const result = tflReducer(undefined, action);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should update state with cases file upload stats data ', () => {
+      const fileUploadStat = { csvUpload: { errorCount: 10 } as FileUploadStat } as FileUploadStatResult;
+      const action = new LoadFileUploadStatsSuccess(fileUploadStat);
       const result = tflReducer(undefined, action);
       expect(result).toMatchSnapshot();
     });

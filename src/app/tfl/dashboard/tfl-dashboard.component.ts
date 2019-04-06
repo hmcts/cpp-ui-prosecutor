@@ -55,10 +55,16 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
       </pdk-grid>
       <pdk-grid one-third>
         <a href="">
-          <pdk-summary-item pdk-text-colour="blue" hero count="0" label="CSV errors in last upload"> </pdk-summary-item>
+          <pdk-summary-item pdk-text-colour="blue" hero [count]="csvUploadErrorCount" label="CSV errors in last upload">
+          </pdk-summary-item>
         </a>
         <a href="">
-          <pdk-summary-item pdk-text-colour="blue" hero count="0" label="document errors in last upload">
+          <pdk-summary-item
+            pdk-text-colour="blue"
+            hero
+            [count]="documentsUploadErrorCount"
+            label="document errors in last upload"
+          >
           </pdk-summary-item>
         </a>
         <a href="">
@@ -77,4 +83,6 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
 export class TflDashboardComponent {
   @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
   @Input() casesWithSjpNoticeCount: number;
+  @Input() documentsUploadErrorCount: number;
+  @Input() csvUploadErrorCount: number;
 }

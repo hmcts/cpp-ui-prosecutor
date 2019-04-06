@@ -7,14 +7,24 @@ import { tflReducer } from '../../tfl.reducer';
 import { reducers, State } from '../../../reducers';
 import { LoadPleadedNotGuiltyCases } from '../../../core/actions';
 import { PleadedNotGuiltyCaseResult } from '../../../contexts/sjp';
-import { LoadCasesWithSjpNoticeCountSuccess } from '../../tfl.action';
+import { LoadCasesWithSjpNoticeCountSuccess, LoadFileUploadStatsSuccess } from '../../tfl.action';
 import { MOCK_PENDING_DATES_TO_AVOID } from '../../../dashboard/__tests__/test-mock-data';
 import { TflDashboardContainer } from '../tfl-dashboard.container';
+import { FileUploadStatResult } from '../../../contexts/staging-tfl';
 
 describe('TflDashboardContainer', () => {
   let fixture: ComponentFixture<TflDashboardContainer>;
   let navigate: jest.Mock;
   let store: Store<State>;
+
+  const fileUploadStats = {
+    csvUpload: {
+      errorCount: 10
+    },
+    documentsUpload: {
+      errorCount: 10
+    }
+  } as FileUploadStatResult;
 
   beforeEach(() => {
     navigate = jest.fn();
@@ -25,11 +35,13 @@ describe('TflDashboardContainer', () => {
 
     store = TestBed.get(Store);
     fixture = TestBed.createComponent(TflDashboardContainer);
+
+    store.dispatch(new LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID));
+    store.dispatch(new LoadCasesWithSjpNoticeCountSuccess({ count: 0 }));
+    store.dispatch(new LoadFileUploadStatsSuccess(fileUploadStats));
   });
 
   it('should compile correctly', () => {
-    store.dispatch(new LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID));
-    store.dispatch(new LoadCasesWithSjpNoticeCountSuccess({ count: 0 }));
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -39,10 +51,14 @@ describe('TflDashboardContainer', () => {
     template: `
       <span>{{ pleadedNotGuiltyCasesDetail | json }}</span>
       <span>{{ casesWithSjpNoticeCount }}</span>
+      <span>{{ documentsUploadErrorCount }}</span>
+      <span>{{ csvUploadErrorCount }}</span>
     `
   })
   class MockTflDashboardComponent {
     @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
     @Input() casesWithSjpNoticeCount: number;
+    @Input() documentsUploadErrorCount: number;
+    @Input() csvUploadErrorCount: number;
   }
 });

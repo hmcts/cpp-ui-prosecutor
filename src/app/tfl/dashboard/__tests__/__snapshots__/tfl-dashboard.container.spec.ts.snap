@@ -3,11 +3,15 @@
 exports[`TflDashboardContainer should compile correctly 1`] = `
 <tfl-dashboard-container
   casesWithSjpNoticeCount$={[Function Store]}
+  csvUploadErrorCount$={[Function Store]}
+  documentsUploadErrorCount$={[Function Store]}
   pleadedNotGuiltyCasesDetail$={[Function Store]}
   store={[Function Store]}
 >
   <tfl-dashboard
     ng-reflect-cases-with-sjp-notice-count="0"
+    ng-reflect-csv-upload-error-count="10"
+    ng-reflect-documents-upload-error-count="10"
     ng-reflect-pleaded-not-guilty-cases-detail="[object Object]"
   >
     <span>
@@ -51,6 +55,12 @@ exports[`TflDashboardContainer should compile correctly 1`] = `
     </span>
     <span>
       0
+    </span>
+    <span>
+      10
+    </span>
+    <span>
+      10
     </span>
   </tfl-dashboard>
 </tfl-dashboard-container>

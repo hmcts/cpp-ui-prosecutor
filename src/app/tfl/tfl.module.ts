@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { tflReducer } from './tfl.reducer';
 import { SjpNoticeCasesDataGuard } from './guards/sjp-notice-cases-data.guard';
+import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard';
 
 @NgModule({
   imports: [
@@ -10,11 +11,11 @@ import { SjpNoticeCasesDataGuard } from './guards/sjp-notice-cases-data.guard';
     RouterModule.forChild([
       {
         path: '',
-        canActivate: [SjpNoticeCasesDataGuard],
+        canActivate: [SjpNoticeCasesDataGuard, FileUploadStatsDataGuard],
         loadChildren: './dashboard/tfl-dashboard.module#TflDashboardModule'
       }
     ])
   ],
-  providers: [SjpNoticeCasesDataGuard]
+  providers: [SjpNoticeCasesDataGuard, FileUploadStatsDataGuard]
 })
 export class TflModule {}

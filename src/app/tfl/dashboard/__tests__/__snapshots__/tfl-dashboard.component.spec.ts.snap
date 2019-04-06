@@ -3,6 +3,8 @@
 exports[`TflDashboardComponent should compile correctly 1`] = `
 <tfl-dashboard
   casesWithSjpNoticeCount={[Function Number]}
+  csvUploadErrorCount={[Function Number]}
+  documentsUploadErrorCount={[Function Number]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
 >
   <pdk-grid>
@@ -177,10 +179,9 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"
-              count="0"
               hero=""
               label="CSV errors in last upload"
-              ng-reflect-count="0"
+              ng-reflect-count="5"
               ng-reflect-hero=""
               ng-reflect-label="CSV errors in last upload"
               ng-reflect-type="blue"
@@ -192,7 +193,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
                 <span
                   class="pdk-summary-item__number pdk-summary-item__number--hero"
                 >
-                   0 
+                   5 
                 </span>
                 <span
                   class="pdk-summary-item__label"
@@ -207,10 +208,9 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"
-              count="0"
               hero=""
               label="document errors in last upload"
-              ng-reflect-count="0"
+              ng-reflect-count="5"
               ng-reflect-hero=""
               ng-reflect-label="document errors in last upload"
               ng-reflect-type="blue"
@@ -222,7 +222,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
                 <span
                   class="pdk-summary-item__number pdk-summary-item__number--hero"
                 >
-                   0 
+                   5 
                 </span>
                 <span
                   class="pdk-summary-item__label"
