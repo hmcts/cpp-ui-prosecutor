@@ -17,7 +17,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
       <pdk-grid two-thirds>
         <h2 pdk-typography="heading-medium" pdk-margin-top="8">Send data files to court</h2>
         <div>
-          <a href="javascript: void(0)" routerLink="" pdk-link>
+          <a href="javascript: void(0)" routerLink="csv-upload" pdk-link>
             Upload header and offence CSVs
           </a>
         </div>
@@ -34,7 +34,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
           </a>
         </div>
         <div pdk-margin-top="6">
-          <a href="javascript: void(0)" routerLink="" pdk-link>
+          <a href="javascript: void(0)" routerLink="csv-upload" pdk-link>
             Check document uploads
           </a>
         </div>

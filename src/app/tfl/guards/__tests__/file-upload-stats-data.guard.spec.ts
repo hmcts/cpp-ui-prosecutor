@@ -6,7 +6,7 @@ import { cold } from 'jasmine-marbles';
 import { LoadFileUploadStatsSuccess } from '../../tfl.action';
 import { tflReducer } from '../../tfl.reducer';
 import { FileUploadStatsDataGuard } from '../file-upload-stats-data.guard';
-import { FileUploadStat, CsvFileUploadStatResult, StagingTflService } from '../../../contexts/staging-tfl';
+import { CsvFileUploadStatResult, FileUploadStat, StagingTflService } from '../../../contexts/staging-tfl';
 
 describe('FileUploadStatsDataGuard', () => {
   let guard: FileUploadStatsDataGuard;

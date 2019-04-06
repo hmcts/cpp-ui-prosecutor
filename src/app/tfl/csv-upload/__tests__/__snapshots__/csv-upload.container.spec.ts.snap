@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsvUploadContainer should compile correctly 1`] = `
+<csv-upload
+  displayFileSubmittedBanner$={[Function Store]}
+  store={[Function Store]}
+>
+  <csv-upload-page
+    ng-reflect-display-file-submitted-banner="false"
+  >
+    <span>
+      false
+    </span>
+  </csv-upload-page>
+</csv-upload>
+`;

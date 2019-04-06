@@ -2,6 +2,7 @@
 
 exports[` Tfl reducer default should set the state 1`] = `
 Object {
+  "csvUploadSuccess": false,
   "fileUploadStats": undefined,
   "sjpNoticeCaseResult": undefined,
 }
@@ -9,6 +10,7 @@ Object {
 
 exports[` Tfl reducer default should update state with cases file upload stats data  1`] = `
 Object {
+  "csvUploadSuccess": false,
   "fileUploadStats": Object {
     "csvUpload": Object {
       "errorCount": 10,
@@ -20,9 +22,18 @@ Object {
 
 exports[` Tfl reducer default should update state with cases sjp notices case data  1`] = `
 Object {
+  "csvUploadSuccess": false,
   "fileUploadStats": undefined,
   "sjpNoticeCaseResult": Object {
     "count": 10,
   },
+}
+`;
+
+exports[` Tfl reducer default should update state with csv upload success 1`] = `
+Object {
+  "csvUploadSuccess": true,
+  "fileUploadStats": undefined,
+  "sjpNoticeCaseResult": undefined,
 }
 `;

@@ -66,7 +66,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
               class="govuk-link"
               href="javascript: void(0)"
               pdk-link=""
-              routerlink=""
+              routerlink="csv-upload"
             >
                Upload header and offence CSVs 
             </a>
@@ -113,7 +113,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
               class="govuk-link"
               href="javascript: void(0)"
               pdk-link=""
-              routerlink=""
+              routerlink="csv-upload"
             >
                Check document uploads 
             </a>

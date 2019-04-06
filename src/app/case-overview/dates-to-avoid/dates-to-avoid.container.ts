@@ -3,8 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { FeatureState, getDatesToAvoidStatus } from '../case-overview.selectors';
 import { Observable } from 'rxjs';
 import { Case } from '../../contexts/sjp';
-import { map, take } from 'rxjs/operators';
-import { ResetCaseOverviewState, ResetDatesToAvoidState, SubmitDatesToAvoid } from '../case-overview.action';
+import { ResetDatesToAvoidState, SubmitDatesToAvoid } from '../case-overview.action';
 import { getCase } from '../../core/selectors';
 
 @Component({

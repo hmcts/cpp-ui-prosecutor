@@ -4,12 +4,14 @@ import { CsvFileUploadStatResult } from '../contexts/staging-tfl';
 
 export interface TflState {
   sjpNoticeCaseResult: SjpNoticeCasesCountResult;
+  csvUploadSuccess: boolean;
   fileUploadStats: CsvFileUploadStatResult;
 }
 
 const initialState: TflState = {
   sjpNoticeCaseResult: undefined,
-  fileUploadStats: undefined
+  fileUploadStats: undefined,
+  csvUploadSuccess: false
 };
 
 export function tflReducer(state: TflState = initialState, action: TflAction): TflState {
@@ -24,6 +26,13 @@ export function tflReducer(state: TflState = initialState, action: TflAction): T
         ...state,
         fileUploadStats: action.fileUploadStatResult
       };
+    case TflActionType.SUBMIT_CSV_FILES_SUCCESS:
+      return {
+        ...state,
+        csvUploadSuccess: true
+      };
+    case TflActionType.RESET_CSV_UPLOAD_PAGE_STATE:
+      return initialState;
 
     default:
       return state;

@@ -3,6 +3,7 @@ import { Case } from '../../contexts/sjp';
 
 @Component({
   selector: 'dates-to-avoid-form',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <pdk-grid container>
       <pdk-grid two-thirds>
@@ -32,8 +33,7 @@ import { Case } from '../../contexts/sjp';
         </form>
       </pdk-grid>
     </pdk-grid>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  `
 })
 export class DatesToAvoidFormComponent {
   public readonly errorMessages = [

@@ -23,3 +23,5 @@ export const getCsvUploadErrorCount = createSelector(
   getFileUploadStats,
   fileUploadStats => (fileUploadStats ? fileUploadStats.csvUpload.errorCount || 0 : 0)
 );
+
+export const getCsvUploadStatus = (state: FeatureState) => state.tfl.csvUploadSuccess;
