@@ -22,13 +22,8 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
       </li>
     </ol>
     <case-header-badge-container></case-header-badge-container>
-    <pdk-error-summary
-      *ngIf="errors"
-      pdk-margin-top="5"
-      focusOnChange
-      title="Fix the following"
-      [errors]="errors"
-    ></pdk-error-summary>
+    <pdk-error-summary *ngIf="errors" pdk-margin-top="5" focusOnChange title="Fix the following" [errors]="errors">
+    </pdk-error-summary>
 
     <div>
       <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5">Manage offence withdrawals</h1>

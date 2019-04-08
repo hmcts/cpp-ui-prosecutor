@@ -4,7 +4,7 @@ import { CaseDetails } from '../../../contexts/sjp';
 @Component({
   selector: 'list-search-results',
   template: `
-    <pdk-inset-text *ngIf="searchResults" pdk-margin-top="0">
+    <pdk-inset-text *ngIf="searchResults" pdk-margin-top="6">
       {{ searchResults.length }}
       <span [ngPlural]="searchResults.length">
         <ng-template ngPluralCase="=1">result</ng-template>

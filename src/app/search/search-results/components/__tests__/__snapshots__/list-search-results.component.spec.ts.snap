@@ -9,9 +9,9 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
   >
     
     <pdk-inset-text
-      class="govuk-!-margin-top-0"
-      ng-reflect-top="0"
-      pdk-margin-top="0"
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
@@ -313,9 +313,9 @@ exports[`ListSearchResultsComponent should compile correctly with no results 1`]
   >
     
     <pdk-inset-text
-      class="govuk-!-margin-top-0"
-      ng-reflect-top="0"
-      pdk-margin-top="0"
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
@@ -346,9 +346,9 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
   >
     
     <pdk-inset-text
-      class="govuk-!-margin-top-0"
-      ng-reflect-top="0"
-      pdk-margin-top="0"
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
@@ -541,9 +541,9 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
   >
     
     <pdk-inset-text
-      class="govuk-!-margin-top-0"
-      ng-reflect-top="0"
-      pdk-margin-top="0"
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
@@ -683,9 +683,9 @@ exports[`ListSearchResultsComponent should display the 'View in Criminal Courts'
   >
     
     <pdk-inset-text
-      class="govuk-!-margin-top-0"
-      ng-reflect-top="0"
-      pdk-margin-top="0"
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"

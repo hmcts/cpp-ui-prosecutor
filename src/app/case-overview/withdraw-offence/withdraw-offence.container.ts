@@ -30,7 +30,6 @@ export class WithdrawOffenceContainer {
   }
 
   submit(selectedOffences: WithdrawOffenceParam[]) {
-    window.scrollTo(0, 0);
     this.store.dispatch(new WithdrawOffences({ withdrawalRequestsStatus: selectedOffences }));
   }
 }

@@ -297,6 +297,9 @@ exports[`Layout should render correctly with activity 1`] = `
           </p>
         </div>
       </div>
+      <div
+        class="pdk-activity-indicator__backdrop"
+      />
     </pdk-activity-indicator>
     
     <pdk-skip-link
