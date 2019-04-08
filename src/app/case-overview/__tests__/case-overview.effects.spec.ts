@@ -8,6 +8,7 @@ import { CaseOverviewEffects } from '../case-overview.effects';
 import {
   CaseOverviewAction,
   SubmitDatesToAvoid,
+  SubmitDatesToAvoidFailed,
   SubmitDatesToAvoidSuccess,
   WithdrawOffences,
   WithdrawOffencesSuccess
@@ -149,6 +150,35 @@ describe('Case Overview Effects', () => {
       submitDatesToAvoid.mockReturnValue(cold('--x|', { x: true }));
 
       expect(effects.submitDatesToAvoid).toBeObservable(expected$);
+      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id, 'dates-to-avoid']);
+    });
+
+    it('should respond with error and navigate to case overview', () => {
+      const MOCK_CASE_ERROR = {
+        data: {
+          reason: 'CASE_ASSIGNED',
+          caseId: MOCK_CASE.id
+        }
+      };
+
+      action = new SubmitDatesToAvoid(datesToAvoid);
+      actions$.stream = hot('-a', { a: action });
+
+      const expected$ = cold(
+        '---(bc)',
+        {
+          b: new LoadCaseSuccess(MOCK_CASE),
+          c: new SubmitDatesToAvoidFailed()
+        },
+        MOCK_CASE_ERROR
+      );
+      const response$ = cold('-a|', { a: MOCK_CASE });
+
+      getCaseById.mockReturnValue(response$);
+      submitDatesToAvoid.mockReturnValue(cold('-#|', {}, MOCK_CASE_ERROR));
+
+      expect(effects.submitDatesToAvoid).toBeObservable(expected$);
+      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
     });
   });
 });

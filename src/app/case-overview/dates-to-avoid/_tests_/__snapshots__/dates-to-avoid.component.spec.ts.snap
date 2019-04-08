@@ -144,7 +144,7 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
         ng-reflect-vertical="5"
         pdk-button=""
         pdk-margin-vertical="5"
-        routerlink="../../../../"
+        routerlink="../../../../../../review-not-guilty-pleas"
       >
          Continue 
       </button>

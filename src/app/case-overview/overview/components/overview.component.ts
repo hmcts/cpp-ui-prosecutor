@@ -22,6 +22,17 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
     <pdk-alert *ngIf="displayOffencesWithdrawnBanner" type="confirmation" icon="true" pdk-margin-top="3">
       Your request has been sent
     </pdk-alert>
+    <pdk-alert
+      type="warning"
+      icon="true"
+      pdk-margin-vertical="1"
+      *ngIf="kase.assigned && !displayDatesToAvoidUpdateFailedBanner"
+    >
+      This case is view–only, as a legal adviser is working on it.
+    </pdk-alert>
+    <pdk-alert type="warning" icon="true" pdk-margin-vertical="1" *ngIf="displayDatesToAvoidUpdateFailedBanner">
+      The case has been assigned to a session and dates to avoid can't be added.
+    </pdk-alert>
     <pdk-grid container>
       <pdk-grid two-thirds>
         <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">
@@ -50,7 +61,7 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
           </pdk-tabs>
         </div>
       </pdk-grid>
-      <pdk-grid one-third>
+      <pdk-grid one-third *ngIf="!kase.assigned && !kase.completed">
         <div pdk-margin-top="5">
           <pdk-related>
             <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Case options</h1>
@@ -88,4 +99,5 @@ export class OverviewComponent {
   @Input() defendant: Defendant;
   @Input() offences: Offence[];
   @Input() displayOffencesWithdrawnBanner: boolean;
+  @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
 }

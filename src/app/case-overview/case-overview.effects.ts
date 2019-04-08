@@ -8,6 +8,7 @@ import { SjpService } from '../contexts/sjp';
 import {
   CaseOverviewActionType,
   SubmitDatesToAvoid,
+  SubmitDatesToAvoidFailed,
   SubmitDatesToAvoidSuccess,
   WithdrawOffences,
   WithdrawOffencesSuccess
@@ -49,7 +50,20 @@ export class CaseOverviewEffects {
         )
       )
     ),
-    catchError(err => of(new ApiError(err)))
+    catchError(err => {
+      if (err.data && err.data.reason === 'CASE_ASSIGNED') {
+        return this.store.pipe(select(getRole)).pipe(
+          switchMap(role =>
+            this.sjpService.getCaseById(err.data.caseId).pipe(
+              switchMap(newCase => [new LoadCaseSuccess(newCase), new SubmitDatesToAvoidFailed()]),
+              tap(() => this.router.navigate([role, 'case-overview', err.data.caseId]))
+            )
+          ),
+          catchError(nestedErr => of(new ApiError(nestedErr)))
+        );
+      }
+      return of(new ApiError(err));
+    })
   );
 
   constructor(

@@ -6,7 +6,6 @@ import { cold } from 'jasmine-marbles';
 import { CaseDataGuard } from '../case-data.guard';
 import { Case, SjpService } from '../../../contexts/sjp';
 import { LoadCaseSuccess } from '../../actions';
-import { take } from 'rxjs/operators';
 
 describe('CaseDataGuard', () => {
   let guard: CaseDataGuard;

@@ -4,7 +4,7 @@ import { FeatureState, getDatesToAvoidStatus } from '../case-overview.selectors'
 import { Observable } from 'rxjs';
 import { Case } from '../../contexts/sjp';
 import { map, take } from 'rxjs/operators';
-import { ResetCaseOverviewState, SubmitDatesToAvoid } from '../case-overview.action';
+import { ResetCaseOverviewState, ResetDatesToAvoidState, SubmitDatesToAvoid } from '../case-overview.action';
 import { getCase } from '../../core/selectors';
 
 @Component({
@@ -32,6 +32,6 @@ export class DatesToAvoidContainer implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.store.dispatch(new ResetCaseOverviewState());
+    this.store.dispatch(new ResetDatesToAvoidState());
   }
 }

@@ -22,6 +22,7 @@ import { DatesToAvoidComponent } from './dates-to-avoid.component';
 import { DefendantNamePipeModule } from '../../shared/pipes';
 import { DatesToAvoidFormComponent } from './dates-to-avoid-form.component';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
+import { DatesToAvoidGuard } from './dates-to-avoid.guard';
 
 const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoidFormComponent];
 
@@ -48,10 +49,12 @@ const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoid
     RouterModule.forChild([
       {
         path: '',
-        component: DatesToAvoidContainer
+        component: DatesToAvoidContainer,
+        canActivate: [DatesToAvoidGuard]
       }
     ])
   ],
+  providers: [DatesToAvoidGuard],
   exports: [DatesToAvoidContainer]
 })
 export class DatesToAvoidModule {}

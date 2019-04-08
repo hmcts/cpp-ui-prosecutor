@@ -30,7 +30,7 @@ import { Case } from '../../contexts/sjp';
         Dates to avoid court submitted
       </pdk-alert>
       <div>
-        <button pdk-button pdk-margin-vertical="5" routerLink="../../../../">
+        <button pdk-button pdk-margin-vertical="5" routerLink="../../../../../../review-not-guilty-pleas">
           Continue
         </button>
       </div>

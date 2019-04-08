@@ -1,5 +1,10 @@
 import { caseOverviewReducer } from '../case-overview.reducer';
-import { CaseOverviewAction, SubmitDatesToAvoidSuccess, WithdrawOffencesSuccess } from '../case-overview.action';
+import {
+  CaseOverviewAction,
+  SubmitDatesToAvoidFailed,
+  SubmitDatesToAvoidSuccess,
+  WithdrawOffencesSuccess
+} from '../case-overview.action';
 
 describe(' Case Overview reducer', () => {
   describe('default', () => {
@@ -16,6 +21,12 @@ describe(' Case Overview reducer', () => {
 
     it('should update the dates to avoid success state', () => {
       const action = new SubmitDatesToAvoidSuccess();
+      const result = caseOverviewReducer(undefined, action);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should update the dates to avoid failed state', () => {
+      const action = new SubmitDatesToAvoidFailed();
       const result = caseOverviewReducer(undefined, action);
       expect(result).toMatchSnapshot();
     });

@@ -57,12 +57,24 @@ describe('OverviewComponent', () => {
     Date.now = jest.fn(() => Date.parse('2017-02-14'));
 
     fixture = TestBed.createComponent(TestCaseOverviewComponent);
-    fixture.componentInstance.kase = MOCK_CASE;
+    fixture.componentInstance.kase = { ...MOCK_CASE, completed: false };
     fixture.componentInstance.defendant = MOCK_CASE.defendant;
     fixture.componentInstance.offences = MOCK_OFFENCES;
   });
 
   it('should compile correctly', () => {
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should compile correctly completed case', () => {
+    fixture.componentInstance.kase = { ...MOCK_CASE, completed: true };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should compile correctly assigned case', () => {
+    fixture.componentInstance.kase = { ...MOCK_CASE, assigned: true };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

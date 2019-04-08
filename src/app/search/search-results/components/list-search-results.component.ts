@@ -72,7 +72,6 @@ import { CaseDetails } from '../../../contexts/sjp';
           <td pdk-table-cell class="no-wrap">{{ searchResult.postingDate | date: 'dd MMM yyyy' }}</td>
         </tr>
       </tbody>
-      case-header-badge
     </table>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush

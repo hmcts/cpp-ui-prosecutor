@@ -12,7 +12,9 @@ export const getRole = createSelector(
 export const getHasApiActivity = (state: State) => state.api.requests.length > 0;
 export const getHasApiError = (state: State) => state.api.errors.length > 0;
 
-export const getCase = (state: State) => state.case;
+export const getCase = (state: State) => {
+  return state.case;
+};
 export const getDefendant = (state: State) => state.case && state.case.defendant;
 
 export const getOffences = createSelector(

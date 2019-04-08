@@ -299,7 +299,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           </td>
         </tr>
       </tbody>
-       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -528,7 +527,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
           </td>
         </tr>
       </tbody>
-       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -671,7 +669,6 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
           </td>
         </tr>
       </tbody>
-       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>
@@ -814,7 +811,6 @@ exports[`ListSearchResultsComponent should display the 'View in Criminal Courts'
           </td>
         </tr>
       </tbody>
-       case-header-badge 
     </table>
   </list-search-results>
 </list-search-results-test>

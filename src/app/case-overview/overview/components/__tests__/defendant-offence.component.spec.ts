@@ -64,7 +64,8 @@ describe('DefendantOffenceComponent', () => {
 
   it('should not show "Pending Withdrawal" if the case is completed', () => {
     fixture.componentInstance.kase = {
-      ...MOCK_CASE
+      ...MOCK_CASE,
+      completed: true
     };
     fixture.componentInstance.offence = {
       ...offence1,

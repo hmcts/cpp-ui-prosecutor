@@ -47,5 +47,6 @@ describe('OverviewContainer', () => {
     @Input() defendant: Defendant;
     @Input() offences: Offence[];
     @Input() displayOffencesWithdrawnBanner: boolean;
+    @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   }
 });
