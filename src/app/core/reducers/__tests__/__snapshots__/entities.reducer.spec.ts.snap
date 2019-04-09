@@ -8,6 +8,40 @@ Object {
 
 exports[`caseReducer undefined action should initialize the default state 1`] = `null`;
 
+exports[`defendantDetailsUpdatesReducer LOAD_DEFENDANT_DETAILS_UPDATES_SUCCESS should set the new state 1`] = `
+Object {
+  "defendantDetailsUpdates": Array [
+    Object {
+      "addressUpdated": true,
+      "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+      "caseUrn": "TVL7105556000",
+      "dateOfBirth": "1977-10-17",
+      "dateOfBirthUpdated": true,
+      "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
+      "firstName": "John",
+      "lastName": "Jones",
+      "nameUpdated": true,
+      "updatedOn": "2019-04-04",
+    },
+    Object {
+      "addressUpdated": true,
+      "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+      "caseUrn": "TVL9772166531",
+      "dateOfBirth": "1991-02-19",
+      "dateOfBirthUpdated": true,
+      "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
+      "firstName": "Bob",
+      "lastName": "Last",
+      "nameUpdated": true,
+      "updatedOn": "2019-04-04",
+    },
+  ],
+  "total": 2,
+}
+`;
+
+exports[`defendantDetailsUpdatesReducer undefined action should initialize the default state 1`] = `undefined`;
+
 exports[`pleadedNotGuiltyReducer LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS should set the new state 1`] = `
 Object {
   "cases": Array [

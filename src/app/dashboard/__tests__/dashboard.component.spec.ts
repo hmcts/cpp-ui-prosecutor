@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { DashboardComponent } from '../dashboard.component';
-import { MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
+import { MOCK_PENDING_DATES_TO_AVOID, MOCK_DEFENDANT_DETAILS_UPDATES } from './test-mock-data';
 
 describe('DashboardComponent', () => {
   let fixture: ComponentFixture<DashboardComponent>;
@@ -9,7 +9,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink],
+      declarations: [DashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink, DefendantDetailsUpdateLink],
       imports: []
     });
     fixture = TestBed.createComponent(DashboardComponent);
@@ -18,6 +18,7 @@ describe('DashboardComponent', () => {
 
   it('should compile correctly', () => {
     component.pleadedNotGuiltyCasesDetail = MOCK_PENDING_DATES_TO_AVOID;
+    component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -30,6 +31,16 @@ describe('DashboardComponent', () => {
   })
   class ReviewNotGuiltyPleasLink {
     @Input() numberOfCases;
+  }
+
+  @Component({
+    selector: 'defendant-details-updates-link',
+    template: `
+      <span>{{ numberOfUpdates }}</span>
+    `
+  })
+  class DefendantDetailsUpdateLink {
+    @Input() numberOfUpdates;
   }
 
   @Component({

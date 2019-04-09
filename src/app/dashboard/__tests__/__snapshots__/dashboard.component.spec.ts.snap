@@ -2,6 +2,7 @@
 
 exports[`DashboardComponent should compile correctly 1`] = `
 <prosecutor-dashboard
+  defendantDetailsUpdates={[Function Object]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
 >
   <h1
@@ -32,11 +33,13 @@ exports[`DashboardComponent should compile correctly 1`] = `
     <span>
       2
     </span>
-  </review-not-guilty-pleas-link><p
-    pdk-typography="caption-medium"
+  </review-not-guilty-pleas-link><defendant-details-updates-link
+    ng-reflect-number-of-updates="2"
   >
-    Defendant details updates (0)
-  </p><div>
+    <span>
+      2
+    </span>
+  </defendant-details-updates-link><div>
     <a
       href=""
       pdk-link=""

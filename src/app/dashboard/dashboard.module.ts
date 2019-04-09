@@ -6,6 +6,7 @@ import { SearchInputModule } from '../search/search-input/search-input.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReviewNotGuiltyPleasLinkModule } from '../shared/review-not-guilty-pleas-link';
+import { DefendantDetailsUpdatesLinkModule } from '../shared/defendant-details-updates-link';
 
 const DECLARATIONS = [DashboardContainer, DashboardComponent];
 
@@ -17,6 +18,7 @@ const DECLARATIONS = [DashboardContainer, DashboardComponent];
     SearchInputModule,
     PdkWarningTextModule,
     ReviewNotGuiltyPleasLinkModule,
+    DefendantDetailsUpdatesLinkModule,
     RouterModule.forChild([
       {
         path: '',

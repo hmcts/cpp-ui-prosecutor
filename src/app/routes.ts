@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { TechnicalErrorComponent } from './shared/error-pages';
-import { CaseDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
+import {CaseDataGuard, PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard} from './core/guards';
 
 export const routes: Routes = [
   {
@@ -11,7 +11,7 @@ export const routes: Routes = [
   {
     path: 'tvl',
     loadChildren: './dashboard/dashboard.module#DashboardModule',
-    canActivate: [PleadedNotGuiltyDataGuard]
+    canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard]
   },
   {
     path: 'tfl',

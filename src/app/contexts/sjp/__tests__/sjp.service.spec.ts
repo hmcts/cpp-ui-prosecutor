@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CppHttp, HttpModule } from '@cpp/core';
 import { SjpService } from '../sjp.service';
 import { Case, CaseDetails, SearchResult } from '../sjp.interface';
+import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/test-mock-data';
 
 const MOCK_CASE_ID = 'mock-case-id';
 const MOCK_DATES_TO_AVOID = 'dates to avoid content';
@@ -81,6 +82,25 @@ describe('SjpService', () => {
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/search?q=testing',
         requestType: 'application/vnd.sjp.query.case-search-results+json'
+      });
+    });
+  });
+
+  describe('getDefendantDetailsUpdates', () => {
+    it('should make a call', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10);
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates?limit=10',
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
       });
     });
   });

@@ -148,9 +148,27 @@ interface PleadNotGuiltyCase {
   dateOfBirth: string;
 }
 
+interface DefendantDetailsUpdate {
+  firstName: string;
+  lastName: string;
+  defendantId: string;
+  caseId: string;
+  caseUrn: string;
+  dateOfBirth: string;
+  nameUpdated: boolean;
+  dateOfBirthUpdated: boolean;
+  addressUpdated: boolean;
+  updatedOn: string;
+}
+
 export interface PleadedNotGuiltyCaseResult {
   cases: PleadNotGuiltyCase[];
   count: number;
+}
+
+export interface DefendantDetailsUpdatesResult {
+  defendantDetailsUpdates: DefendantDetailsUpdate[];
+  total: number;
 }
 
 export interface SjpNoticeCasesCountResult {
