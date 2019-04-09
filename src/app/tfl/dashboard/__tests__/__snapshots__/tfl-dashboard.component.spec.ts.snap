@@ -80,7 +80,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
               class="govuk-link"
               href="javascript: void(0)"
               pdk-link=""
-              routerlink=""
+              routerlink="check-csv-uploads"
             >
                Check CSV uploads 
             </a>
@@ -175,7 +175,8 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           class="govuk-grid-column-one-third"
         >
           <a
-            href=""
+            href="javascript: void(0);"
+            routerlink="check-csv-uploads"
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"

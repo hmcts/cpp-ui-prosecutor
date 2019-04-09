@@ -6,6 +6,11 @@ export interface User {
 
 export const mockUsers: User[] = [
   {
+    id: '1bf60455-11c9-427e-b087-d8331dcea44f',
+    displayName: 'ATCM - Court Admin',
+    default: true
+  },
+  {
     id: '85435116-0f4b-4616-ae9a-9954ed1c3ee1',
     displayName: 'Trevor Lawson (Tvl)',
     default: true

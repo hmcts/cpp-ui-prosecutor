@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckCsvUploadComponent should compile correctly with  multiple rows 1`] = `
+<check-csv-upload
+  csvFileUploadDetails={[Function Array]}
+>
+  <ol
+    class="govuk-!-margin-top-4"
+    ng-reflect-top="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="../../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Check CSV uploads 
+    </li>
+  </ol><h1
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="6"
+    pdk-margin-vertical="6"
+    pdk-typography="heading-xlarge"
+  >
+    Check CSV uploads
+  </h1><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      ng-reflect-ng-plural="2"
+    >
+      
+      
+      
+      2 files
+    </span>
+     found 
+  </p><list-csv-upload-details
+    ng-reflect-csv-file-upload-details="[object Object],[object Object"
+  >
+    <div>
+      [
+    {
+      "headerFilename": "fileName.csv",
+      "uploadId": "uploadId",
+      "uploadStatus": {
+        "status": "SUCCEEDED"
+      }
+    },
+    {
+      "headerFilename": "fileName.csv",
+      "uploadId": "uploadId",
+      "uploadStatus": {
+        "status": "FAILED"
+      }
+    }
+  ]
+    </div>
+  </list-csv-upload-details>
+</check-csv-upload>
+`;
+
+exports[`CheckCsvUploadComponent should compile correctly with no data 1`] = `
+<check-csv-upload
+  csvFileUploadDetails={[Function Array]}
+>
+  <ol
+    class="govuk-!-margin-top-4"
+    ng-reflect-top="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="../../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Check CSV uploads 
+    </li>
+  </ol><h1
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="6"
+    pdk-margin-vertical="6"
+    pdk-typography="heading-xlarge"
+  >
+    Check CSV uploads
+  </h1><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      ng-reflect-ng-plural="0"
+    >
+      
+      No files
+      
+      
+    </span>
+     found 
+  </p><list-csv-upload-details
+    ng-reflect-csv-file-upload-details=""
+  >
+    <div>
+      []
+    </div>
+  </list-csv-upload-details>
+</check-csv-upload>
+`;
+
+exports[`CheckCsvUploadComponent should compile correctly with single row 1`] = `
+<check-csv-upload
+  csvFileUploadDetails={[Function Array]}
+>
+  <ol
+    class="govuk-!-margin-top-4"
+    ng-reflect-top="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="../../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Check CSV uploads 
+    </li>
+  </ol><h1
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="6"
+    pdk-margin-vertical="6"
+    pdk-typography="heading-xlarge"
+  >
+    Check CSV uploads
+  </h1><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      ng-reflect-ng-plural="1"
+    >
+      
+      
+      1 file
+      
+    </span>
+     found 
+  </p><list-csv-upload-details
+    ng-reflect-csv-file-upload-details="[object Object]"
+  >
+    <div>
+      [
+    {
+      "headerFilename": "fileName.csv",
+      "uploadId": "uploadId",
+      "uploadStatus": {
+        "status": "SUCCEEDED"
+      }
+    }
+  ]
+    </div>
+  </list-csv-upload-details>
+</check-csv-upload>
+`;

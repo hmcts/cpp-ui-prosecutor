@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { SjpNoticeCasesCountResult } from '../contexts/sjp';
-import { FileUploadStatResult } from '../contexts/staging-tfl/staging-tfl.interface';
+import { CsvFileUploadStatResult } from '../contexts/staging-tfl/staging-tfl.interface';
 
 export const enum TflActionType {
   LOAD_CASES_WITH_SJP_NOTICE_COUNT_SUCCESS = '[ATCM] Load cases with sjp notice count success',
@@ -16,7 +16,7 @@ export class LoadCasesWithSjpNoticeCountSuccess implements Action {
 export class LoadFileUploadStatsSuccess implements Action {
   readonly type = TflActionType.LOAD_FILE_UPLOAD_STATS_SUCCESS;
 
-  constructor(public fileUploaStatResult: FileUploadStatResult) {}
+  constructor(public fileUploadStatResult: CsvFileUploadStatResult) {}
 }
 
 export type TflAction = LoadCasesWithSjpNoticeCountSuccess | LoadFileUploadStatsSuccess;

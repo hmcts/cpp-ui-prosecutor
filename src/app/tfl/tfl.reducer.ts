@@ -1,10 +1,10 @@
 import { SjpNoticeCasesCountResult } from '../contexts/sjp';
 import { TflAction, TflActionType } from './tfl.action';
-import { FileUploadStatResult } from '../contexts/staging-tfl';
+import { CsvFileUploadStatResult } from '../contexts/staging-tfl';
 
 export interface TflState {
   sjpNoticeCaseResult: SjpNoticeCasesCountResult;
-  fileUploadStats: FileUploadStatResult;
+  fileUploadStats: CsvFileUploadStatResult;
 }
 
 const initialState: TflState = {
@@ -22,7 +22,7 @@ export function tflReducer(state: TflState = initialState, action: TflAction): T
     case TflActionType.LOAD_FILE_UPLOAD_STATS_SUCCESS:
       return {
         ...state,
-        fileUploadStats: action.fileUploaStatResult
+        fileUploadStats: action.fileUploadStatResult
       };
 
     default:

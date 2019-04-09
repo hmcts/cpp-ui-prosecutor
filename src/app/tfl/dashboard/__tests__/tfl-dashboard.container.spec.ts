@@ -10,7 +10,7 @@ import { PleadedNotGuiltyCaseResult } from '../../../contexts/sjp';
 import { LoadCasesWithSjpNoticeCountSuccess, LoadFileUploadStatsSuccess } from '../../tfl.action';
 import { MOCK_PENDING_DATES_TO_AVOID } from '../../../dashboard/__tests__/test-mock-data';
 import { TflDashboardContainer } from '../tfl-dashboard.container';
-import { FileUploadStatResult } from '../../../contexts/staging-tfl';
+import { CsvFileUploadStatResult } from '../../../contexts/staging-tfl';
 
 describe('TflDashboardContainer', () => {
   let fixture: ComponentFixture<TflDashboardContainer>;
@@ -24,7 +24,7 @@ describe('TflDashboardContainer', () => {
     documentsUpload: {
       errorCount: 10
     }
-  } as FileUploadStatResult;
+  } as CsvFileUploadStatResult;
 
   beforeEach(() => {
     navigate = jest.fn();

@@ -6,7 +6,7 @@ import { cold } from 'jasmine-marbles';
 import { LoadFileUploadStatsSuccess } from '../../tfl.action';
 import { tflReducer } from '../../tfl.reducer';
 import { FileUploadStatsDataGuard } from '../file-upload-stats-data.guard';
-import { FileUploadStat, FileUploadStatResult, StagingTflService } from '../../../contexts/staging-tfl';
+import { FileUploadStat, CsvFileUploadStatResult, StagingTflService } from '../../../contexts/staging-tfl';
 
 describe('FileUploadStatsDataGuard', () => {
   let guard: FileUploadStatsDataGuard;
@@ -44,7 +44,7 @@ describe('FileUploadStatsDataGuard', () => {
   });
 
   it('should call the service and load data', () => {
-    const fileUploadStatResult = { csvUpload: { errorCount: 10 } as FileUploadStat } as FileUploadStatResult;
+    const fileUploadStatResult = { csvUpload: { errorCount: 10 } as FileUploadStat } as CsvFileUploadStatResult;
     const fileUploadStatResult$ = cold('-a|', { a: fileUploadStatResult });
     const expected$ = cold('-(b|)', { b: true });
 

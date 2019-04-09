@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple rows 1`] = `
+<list-csv-upload-details
+  csvFileUploadDetails={[Function Array]}
+>
+  <table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <thead
+      class="govuk-table__head"
+      pdk-table-head=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          Date Uploaded
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          At
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          File name
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          Status
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="govuk-table__body"
+      pdk-table-body=""
+    >
+      
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          fileName.csv
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          <b
+            class="pdk-!-text-color-red"
+            ng-reflect-type="red"
+            pdk-text-colour="red"
+          >
+             Sent to court 
+          </b>
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          –
+          
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          fileName.csv
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          <span>
+             Rejected – errors found 
+          </span>
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          <a
+            class="govuk-link"
+            href="#"
+            pdk-link=""
+          >
+             View report 
+          </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</list-csv-upload-details>
+`;
+
+exports[`ListCsvUploadDetailsComponent should compile correctly with no data 1`] = `
+<list-csv-upload-details
+  csvFileUploadDetails={[Function Array]}
+>
+  
+</list-csv-upload-details>
+`;
+
+exports[`ListCsvUploadDetailsComponent should compile correctly with single row 1`] = `
+<list-csv-upload-details
+  csvFileUploadDetails={[Function Array]}
+>
+  <table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <thead
+      class="govuk-table__head"
+      pdk-table-head=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          Date Uploaded
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          At
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          File name
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+          Status
+        </th>
+        <th
+          class="govuk-table__cell"
+          ng-reflect-row=""
+          pdk-table-header=""
+          scope="col"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="govuk-table__body"
+      pdk-table-body=""
+    >
+      
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          fileName.csv
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          <b
+            class="pdk-!-text-color-red"
+            ng-reflect-type="red"
+            pdk-text-colour="red"
+          >
+             Sent to court 
+          </b>
+          
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          
+          –
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</list-csv-upload-details>
+`;

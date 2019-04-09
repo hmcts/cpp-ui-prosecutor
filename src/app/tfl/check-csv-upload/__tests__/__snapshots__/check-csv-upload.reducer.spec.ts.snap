@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Check CSV upload reducer default should set the state 1`] = `undefined`;
+
+exports[` Check CSV upload reducer default should update state with csv file upload data 1`] = `
+Array [
+  Object {
+    "headerFilename": "fileName.csv",
+    "uploadId": "uploadId",
+    "uploadStatus": Object {
+      "status": "SUCCEEDED",
+    },
+  },
+]
+`;

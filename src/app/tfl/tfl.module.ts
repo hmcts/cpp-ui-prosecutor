@@ -11,8 +11,13 @@ import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard'
     RouterModule.forChild([
       {
         path: '',
-        canActivate: [SjpNoticeCasesDataGuard, FileUploadStatsDataGuard],
+        canActivate: [SjpNoticeCasesDataGuard],
         loadChildren: './dashboard/tfl-dashboard.module#TflDashboardModule'
+      },
+      {
+        path: 'check-csv-uploads',
+        canActivate: [],
+        loadChildren: './check-csv-upload/check-csv-upload.module#CheckCsvUploadModule'
       }
     ])
   ],
