@@ -92,7 +92,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
             pdk-margin-top="8"
             pdk-typography="heading-medium"
           >
-            Send data files to court
+            Send SJP notices and other documents
           </h2>
           <div>
             <a
