@@ -8,7 +8,7 @@ let appLoaded: boolean;
 let loggedInUser: User;
 
 export const navigate = async (url: string, user: User) => {
-  loggedInUser = user ? user : loggedInUser || TFL_USER;
+  const currentUser = user ? user : loggedInUser ? loggedInUser : TFL_USER;
 
   if (browser.params.integration !== 'integrated') {
     if (!appLoaded) {
@@ -16,9 +16,8 @@ export const navigate = async (url: string, user: User) => {
       appLoaded = true;
     }
     await browser.executeScript(`return window.sessionStorage.setItem('CJSCPPUID', '${user.userId}')`);
-  } else if (!loggedInUser || loggedInUser !== user) {
-    loginAs({ email: user.email });
-
+  } else if (!loggedInUser || loggedInUser !== currentUser) {
+    await loginAs({ email: user.email });
     loggedInUser = user;
   }
   await browser.get(join('.', url));
