@@ -29,6 +29,10 @@ export const routes: Routes = [
     canActivate: [PleadedNotGuiltyDataGuard]
   },
   {
+    path: ':role/export-case-decisions',
+    loadChildren: './export-case-decisions/export-case-decisions.module#ExportCaseDecisionsModule'
+  },
+  {
     path: ':role/defendant-details-updates',
     loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule'
   },

@@ -22,7 +22,7 @@ import { DefendantDetailsUpdatesResult, PleadedNotGuiltyCaseResult } from '../co
       <a href="" pdk-link pdk-section="small">Withdraw an offence</a>
     </div>
     <div pdk-margin-top="6">
-      <a href="" pdk-link>Export case results by date</a>
+      <a href="javascript:void(0)" routerLink="export-case-decisions" pdk-link>Export case results by date</a>
     </div>
   `
 })

@@ -51,8 +51,9 @@ exports[`DashboardComponent should compile correctly 1`] = `
     pdk-margin-top="6"
   >
     <a
-      href=""
+      href="javascript:void(0)"
       pdk-link=""
+      routerlink="export-case-decisions"
     >
       Export case results by date
     </a>

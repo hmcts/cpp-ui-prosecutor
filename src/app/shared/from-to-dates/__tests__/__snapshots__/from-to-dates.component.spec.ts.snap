@@ -2,18 +2,21 @@
 
 exports[`FromToDatesComponent should compile correctly 1`] = `
 <from-to-dates-test
+  errors={[Function Function]}
   fromDate={[Function String]}
   maxDaysForToDate={[Function Number]}
+  submit={[Function Function]}
   toDate={[Function String]}
 >
-   [object Object] <form
+  <form
     class="ng-untouched ng-pristine ng-valid"
     novalidate=""
+    pdk-form=""
   >
     <from-to-dates
-      ng-reflect-from-date="2019-09-01"
+      ng-reflect-from-date="2018-09-15"
       ng-reflect-max-days-for-to-date="31"
-      ng-reflect-to-date="2019-10-01"
+      ng-reflect-to-date="2018-10-01"
     >
       <pdk-form-field
         hinttext="For example, 13 6 2016"
@@ -54,7 +57,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               _nghost-c0=""
               class="ng-untouched ng-pristine ng-valid"
               name="fromDate"
-              ng-reflect-model="2019-09-01"
+              ng-reflect-model="2018-09-15"
               ng-reflect-name="fromDate"
               ng-reflect-required=""
               pastdate=""
@@ -196,8 +199,8 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               _nghost-c0=""
               class="ng-untouched ng-pristine ng-valid"
               name="toDate"
-              ng-reflect-max-days="31"
-              ng-reflect-model="2019-10-01"
+              ng-reflect-max-days-value="31"
+              ng-reflect-model="2018-10-01"
               ng-reflect-name="toDate"
               ng-reflect-required=""
               pastdate=""
@@ -300,6 +303,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
         </pdk-form-group>
       </pdk-form-field>
     </from-to-dates>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
   </form>
 </from-to-dates-test>
 `;

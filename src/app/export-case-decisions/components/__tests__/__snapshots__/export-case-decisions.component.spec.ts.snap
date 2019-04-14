@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
+<export-case-decisions-test
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions>
+    <ol
+      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink=".."
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+         Export case results by date 
+      </li>
+    </ol>
+    
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      Export case results by date
+    </h1>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+    
+  </export-case-decisions>
+</export-case-decisions-test>
+`;
+
+exports[`ExportCaseDecisionsComponent should compile correctly with case count results 1`] = `
+<export-case-decisions-test
+  caseCountResult={[Function Object]}
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions
+    ng-reflect-case-count-result="[object Object]"
+  >
+    <ol
+      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink=".."
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+         Export case results by date 
+      </li>
+    </ol>
+    
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      Export case results by date
+    </h1>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+    
+    <download-case-decisions
+      ng-reflect-case-count-result="[object Object]"
+    >
+       {
+    "casesResultedCount": 0,
+    "fromDate": "2019-10-01",
+    "toDate": "2019-10-10"
+  } 
+    </download-case-decisions>
+  </export-case-decisions>
+</export-case-decisions-test>
+`;
+
+exports[`ExportCaseDecisionsComponent should compile correctly with errors 1`] = `
+<export-case-decisions-test
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions>
+    <ol
+      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink=".."
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+         Export case results by date 
+      </li>
+    </ol>
+    
+    <pdk-error-summary
+      focusonchange=""
+      ng-reflect-errors="[object Object]"
+      ng-reflect-focus-on-change=""
+      ng-reflect-title="Fix the following"
+      tabindex="-1"
+      title="Fix the following"
+    >
+      <div
+        aria-labelledby="pdk-error-sumamry-1"
+        class="govuk-error-summary"
+      >
+        <h2
+          class="govuk-error-summary__title"
+          id="pdk-error-sumamry-1"
+        >
+          Fix the following
+        </h2>
+        <div
+          class="govuk-error-summary__body"
+        >
+          <ul
+            class="govuk-list govuk-error-summary__list"
+          >
+            
+            <li>
+              <a
+                href="javascript:void(0)"
+              >
+                 Invalid input 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </pdk-error-summary>
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      ng-reflect-type="heading-xlarge"
+      ng-reflect-vertical="8"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      Export case results by date
+    </h1>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+    
+  </export-case-decisions>
+</export-case-decisions-test>
+`;

@@ -15,8 +15,24 @@ import * as moment from 'moment';
 export class MaxDaysDirective implements Validator {
   private readonly dateFormat = 'YYYY-MM-DD';
 
-  @Input() fromDate: string;
-  @Input() maxDays: number;
+  @Input('fromDate') set fromDateValue(value: string) {
+    this.fromDate = value;
+    if (this.onChange) {
+      this.onChange();
+    }
+  }
+
+  @Input('maxDays') set maxDaysValue(value: number) {
+    this.maxDays = value;
+    if (this.onChange) {
+      this.onChange();
+    }
+  }
+
+  private fromDate: string;
+  private maxDays: number;
+
+  private onChange: () => void;
 
   validate(c: AbstractControl): ValidationErrors | null {
     if (this.maxDays && c.value) {
@@ -35,5 +51,9 @@ export class MaxDaysDirective implements Validator {
     }
 
     return null;
+  }
+
+  registerOnValidatorChange(fn: () => void): void {
+    this.onChange = fn;
   }
 }

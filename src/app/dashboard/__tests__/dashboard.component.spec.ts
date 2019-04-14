@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { DashboardComponent } from '../dashboard.component';
-import { MOCK_PENDING_DATES_TO_AVOID, MOCK_DEFENDANT_DETAILS_UPDATES } from './test-mock-data';
+import { MOCK_DEFENDANT_DETAILS_UPDATES, MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
 
 describe('DashboardComponent', () => {
   let fixture: ComponentFixture<DashboardComponent>;
@@ -42,6 +42,12 @@ describe('DashboardComponent', () => {
   class DefendantDetailsUpdateLink {
     @Input() numberOfUpdates;
   }
+
+  @Component({
+    selector: 'export-case-decisions-link',
+    template: ``
+  })
+  class ExportCaseDecisionsLink {}
 
   @Component({
     selector: 'search-input-container',

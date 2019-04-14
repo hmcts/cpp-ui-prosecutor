@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadCaseDecisionsComponent should compile correctly with case count results 1`] = `
+<download-case-decisions-test
+  caseCountResult={[Function Object]}
+>
+  <download-case-decisions
+    ng-reflect-case-count-result="[object Object]"
+  >
+    <pdk-inset-text>
+      <div
+        class="govuk-inset-text"
+      >
+        <p
+          class="govuk-heading-m"
+          ng-reflect-type="heading-medium"
+          pdk-typography="heading-medium"
+        >
+           13 case 
+          <span
+            ng-reflect-ng-plural="13"
+          >
+            
+            
+            results
+          </span>
+           found from 2019-10-01 to 2019-10-10 
+        </p>
+        
+        <a
+          href="/api/mireportdata-query-api/query/api/rest/mireportdata/case-export?fromDate=2019-10-01&toDate=2019-10-10"
+          pdk-button="secondary"
+          target="_blank"
+        >
+           Download results in json file 
+        </a>
+      </div>
+    </pdk-inset-text>
+  </download-case-decisions>
+</download-case-decisions-test>
+`;
+
+exports[`DownloadCaseDecisionsComponent should compile correctly with zero cases 1`] = `
+<download-case-decisions-test
+  caseCountResult={[Function Object]}
+>
+  <download-case-decisions
+    ng-reflect-case-count-result="[object Object]"
+  >
+    <pdk-inset-text>
+      <div
+        class="govuk-inset-text"
+      >
+        <p
+          class="govuk-heading-m"
+          ng-reflect-type="heading-medium"
+          pdk-typography="heading-medium"
+        >
+           0 case 
+          <span
+            ng-reflect-ng-plural="0"
+          >
+            
+            
+            results
+          </span>
+           found from 2019-10-01 to 2019-10-10 
+        </p>
+        
+      </div>
+    </pdk-inset-text>
+  </download-case-decisions>
+</download-case-decisions-test>
+`;
