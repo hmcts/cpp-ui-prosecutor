@@ -19,11 +19,11 @@ exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updat
   <p>
     
     <a
-      href="/review-not-guilty-pleas"
-      ng-reflect-router-link="review-not-guilty-pleas"
+      href="/defendant-details-updates"
+      ng-reflect-router-link="defendant-details-updates"
       pdk-link=""
       pdk-section="small"
-      routerlink="review-not-guilty-pleas"
+      routerlink="defendant-details-updates"
     >
        Defendant details updates (1) 
     </a>

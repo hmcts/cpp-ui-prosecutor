@@ -28,5 +28,9 @@ export const routes: Routes = [
     loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
     canActivate: [PleadedNotGuiltyDataGuard]
   },
+  {
+    path: ':role/defendant-details-updates',
+    loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule'
+  },
   { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent }
 ];

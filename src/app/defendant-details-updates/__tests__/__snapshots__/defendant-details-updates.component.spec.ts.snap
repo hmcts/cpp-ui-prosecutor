@@ -1,0 +1,468 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsUpdatesComponent when the component is loaded with less than 50 updates should display defendant details updates with no limit message 1`] = `
+<defendant-details-updates
+  defendantDetailsUpdates={[Function Object]}
+>
+  <ol
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="/"
+        ng-reflect-router-link="../"
+        pdk-breadcrumb=""
+        routerlink="../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Defendant details updates 
+    </li>
+  </ol><h1
+    pdk-margin-vertical="8"
+    pdk-typography="heading-xlarge"
+  >
+     Defendant details updates 
+  </h1><pdk-inset-text>
+    <div
+      class="govuk-inset-text"
+    >
+       2 
+      <span
+        ng-reflect-ng-plural="2"
+      >
+        
+        
+        cases have
+      </span>
+       updates 
+      
+    </div>
+  </pdk-inset-text><table
+    pdk-table=""
+  >
+    <thead
+      pdk-table-head=""
+    >
+      <tr
+        pdk-table-row=""
+      >
+        <th
+          pdk-table-header=""
+        >
+          Name
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Case reference number
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Date of birth
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          What changed?
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Updated on
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Remove from list
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      pdk-table-body=""
+    >
+      
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/842054bb-3e72-4166-ae67-52355f047765"
+            ng-reflect-router-link="../case-overview,842054bb-3e72"
+            pdk-link=""
+          >
+            <b>
+              John JONES
+            </b>
+          </a>
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL7105556000 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           17 Oct 1977 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <what-changed
+            ng-reflect-defendant-details-update="[object Object]"
+          >
+            <span>
+              {
+    "firstName": "John",
+    "lastName": "Jones",
+    "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
+    "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+    "caseUrn": "TVL7105556000",
+    "dateOfBirth": "1977-10-17",
+    "nameUpdated": true,
+    "dateOfBirthUpdated": true,
+    "addressUpdated": true,
+    "updatedOn": "2019-04-04"
+  }
+            </span>
+          </what-changed>
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           04 Apr 2019 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="#"
+          >
+            Remove
+          </a>
+        </td>
+      </tr>
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/12ca0803-d10b-44dd-bf6b-c0242c207e55"
+            ng-reflect-router-link="../case-overview,12ca0803-d10b"
+            pdk-link=""
+          >
+            <b>
+              Bob LAST
+            </b>
+          </a>
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL9772166531 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           19 Feb 1991 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <what-changed
+            ng-reflect-defendant-details-update="[object Object]"
+          >
+            <span>
+              {
+    "firstName": "Bob",
+    "lastName": "Last",
+    "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
+    "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+    "caseUrn": "TVL9772166531",
+    "dateOfBirth": "1991-02-19",
+    "nameUpdated": true,
+    "dateOfBirthUpdated": true,
+    "addressUpdated": true,
+    "updatedOn": "2019-04-04"
+  }
+            </span>
+          </what-changed>
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           04 Apr 2019 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="#"
+          >
+            Remove
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table><button
+    class="govuk-button"
+    ng-reflect-router-link="../"
+    ng-reflect-type=""
+    pdk-button=""
+    routerlink="../"
+    tabindex="0"
+  >
+     Back to home 
+  </button>
+</defendant-details-updates>
+`;
+
+exports[`DefendantDetailsUpdatesComponent when the component is loaded with more than 50 updates should display defendant details updates with limit message 1`] = `
+<defendant-details-updates
+  defendantDetailsUpdates={[Function Object]}
+>
+  <ol
+    pdk-breadcrumb-list=""
+    pdk-margin-top="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="/"
+        ng-reflect-router-link="../"
+        pdk-breadcrumb=""
+        routerlink="../"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+       Defendant details updates 
+    </li>
+  </ol><h1
+    pdk-margin-vertical="8"
+    pdk-typography="heading-xlarge"
+  >
+     Defendant details updates 
+  </h1><pdk-inset-text>
+    <div
+      class="govuk-inset-text"
+    >
+       51 
+      <span
+        ng-reflect-ng-plural="51"
+      >
+        
+        
+        cases have
+      </span>
+       updates 
+      
+      <span>
+        (first 50 shown below)
+      </span>
+    </div>
+  </pdk-inset-text><table
+    pdk-table=""
+  >
+    <thead
+      pdk-table-head=""
+    >
+      <tr
+        pdk-table-row=""
+      >
+        <th
+          pdk-table-header=""
+        >
+          Name
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Case reference number
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Date of birth
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          What changed?
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Updated on
+        </th>
+        <th
+          pdk-table-header=""
+        >
+          Remove from list
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      pdk-table-body=""
+    >
+      
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/842054bb-3e72-4166-ae67-52355f047765"
+            ng-reflect-router-link="../case-overview,842054bb-3e72"
+            pdk-link=""
+          >
+            <b>
+              John JONES
+            </b>
+          </a>
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL7105556000 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           17 Oct 1977 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <what-changed
+            ng-reflect-defendant-details-update="[object Object]"
+          >
+            <span>
+              {
+    "firstName": "John",
+    "lastName": "Jones",
+    "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
+    "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+    "caseUrn": "TVL7105556000",
+    "dateOfBirth": "1977-10-17",
+    "nameUpdated": true,
+    "dateOfBirthUpdated": true,
+    "addressUpdated": true,
+    "updatedOn": "2019-04-04"
+  }
+            </span>
+          </what-changed>
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           04 Apr 2019 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="#"
+          >
+            Remove
+          </a>
+        </td>
+      </tr>
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="/case-overview/12ca0803-d10b-44dd-bf6b-c0242c207e55"
+            ng-reflect-router-link="../case-overview,12ca0803-d10b"
+            pdk-link=""
+          >
+            <b>
+              Bob LAST
+            </b>
+          </a>
+        </td>
+        <td
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           TVL9772166531 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           19 Feb 1991 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <what-changed
+            ng-reflect-defendant-details-update="[object Object]"
+          >
+            <span>
+              {
+    "firstName": "Bob",
+    "lastName": "Last",
+    "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
+    "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+    "caseUrn": "TVL9772166531",
+    "dateOfBirth": "1991-02-19",
+    "nameUpdated": true,
+    "dateOfBirthUpdated": true,
+    "addressUpdated": true,
+    "updatedOn": "2019-04-04"
+  }
+            </span>
+          </what-changed>
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+           04 Apr 2019 
+        </td>
+        <td
+          pdk-table-cell=""
+        >
+          <a
+            href="#"
+          >
+            Remove
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table><button
+    class="govuk-button"
+    ng-reflect-router-link="../"
+    ng-reflect-type=""
+    pdk-button=""
+    routerlink="../"
+    tabindex="0"
+  >
+     Back to home 
+  </button>
+</defendant-details-updates>
+`;
