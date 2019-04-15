@@ -13,6 +13,7 @@ exports.config = {
     apiUrl: 'http://localhost:8181/'
   },
   specs: ['./src/specs/**/*.e2e-spec.ts'],
+  SELENIUM_PROMISE_MANAGER: false,
   capabilities: protractorHelper.firefoxCapability({ headless: !visible }),
   async onPrepare() {
     defaults({

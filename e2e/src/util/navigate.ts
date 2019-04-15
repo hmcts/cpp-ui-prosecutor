@@ -26,5 +26,8 @@ export const navigate = async (url: string, user: User) => {
 };
 
 export const isStable = () => {
-  return browser.driver.wait(ExpectedConditions.invisibilityOf($('pdk-busy-indicator')));
+  return Promise.all([
+    browser.driver.wait(ExpectedConditions.invisibilityOf($('pdk-busy-indicator'))),
+    browser.waitForAngular()
+  ]);
 };

@@ -3,6 +3,7 @@ import { $, $$, by, element } from 'protractor';
 
 export class CaseOverviewPage extends BasePage {
   public readonly pageHeaderBar = $('pdk-page-header');
+  public readonly alertRequestSent = $('pdk-alert');
   public readonly caseStatus = $(`[data-role='case-status']`);
   public readonly caseProsecutor = $(`[data-role='prosecutor']`);
   public readonly offenceHeadings = $$(`defendant-offence h2`);

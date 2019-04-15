@@ -26,7 +26,9 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
     </pdk-error-summary>
 
     <div>
-      <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5">Manage offence withdrawals</h1>
+      <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5" data-test="withdraw-offence-heading">
+        Manage offence withdrawals
+      </h1>
     </div>
     <div pdk-typography="body" pdk-margin-bottom="5">You can ask a legal adviser to withdraw offences or the case.</div>
 

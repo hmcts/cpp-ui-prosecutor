@@ -55,12 +55,13 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
   </ol><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+      data-test="withdraw-offence-heading"
       ng-reflect-type="heading-xlarge"
       ng-reflect-vertical="5"
       pdk-margin-vertical="5"
       pdk-typography="heading-xlarge"
     >
-      Manage offence withdrawals
+       Manage offence withdrawals 
     </h1>
   </div><div
     class="govuk-!-margin-bottom-5 govuk-body-m"
@@ -152,12 +153,13 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
   </ol><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+      data-test="withdraw-offence-heading"
       ng-reflect-type="heading-xlarge"
       ng-reflect-vertical="5"
       pdk-margin-vertical="5"
       pdk-typography="heading-xlarge"
     >
-      Manage offence withdrawals
+       Manage offence withdrawals 
     </h1>
   </div><div
     class="govuk-!-margin-bottom-5 govuk-body-m"
