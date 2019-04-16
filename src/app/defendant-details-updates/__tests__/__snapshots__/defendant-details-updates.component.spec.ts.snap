@@ -2,6 +2,7 @@
 
 exports[`DefendantDetailsUpdatesComponent when the component is loaded with less than 50 updates should display defendant details updates with no limit message 1`] = `
 <defendant-details-updates
+  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter]}
   defendantDetailsUpdates={[Function Object]}
 >
   <ol
@@ -148,7 +149,8 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           pdk-table-cell=""
         >
           <a
-            href="#"
+            href="javascript:void(0)"
+            pdk-link=""
           >
             Remove
           </a>
@@ -212,7 +214,8 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           pdk-table-cell=""
         >
           <a
-            href="#"
+            href="javascript:void(0)"
+            pdk-link=""
           >
             Remove
           </a>
@@ -234,6 +237,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
 
 exports[`DefendantDetailsUpdatesComponent when the component is loaded with more than 50 updates should display defendant details updates with limit message 1`] = `
 <defendant-details-updates
+  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter]}
   defendantDetailsUpdates={[Function Object]}
 >
   <ol
@@ -383,7 +387,8 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           pdk-table-cell=""
         >
           <a
-            href="#"
+            href="javascript:void(0)"
+            pdk-link=""
           >
             Remove
           </a>
@@ -447,7 +452,8 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           pdk-table-cell=""
         >
           <a
-            href="#"
+            href="javascript:void(0)"
+            pdk-link=""
           >
             Remove
           </a>

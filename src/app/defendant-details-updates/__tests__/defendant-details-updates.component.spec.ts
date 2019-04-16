@@ -1,11 +1,12 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {DefendantDetailsUpdatesComponent} from '../defendant-details-updates.component';
-import {DefendantNamePipeModule} from '../../shared/pipes';
-import {RouterTestingModule} from '@angular/router/testing';
-import {MOCK_DEFENDANT_DETAILS_UPDATES} from '../../dashboard/__tests__/test-mock-data';
-import {PdkButtonModule, PdkInsetTextModule} from '@cpp/pdk';
-import {Component, Input} from '@angular/core';
+import { DefendantDetailsUpdatesComponent } from '../defendant-details-updates.component';
+import { DefendantNamePipeModule } from '../../shared/pipes';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
+import { PdkButtonModule, PdkInsetTextModule } from '@cpp/pdk';
+import { Component, Input } from '@angular/core';
+import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
 
 let component: DefendantDetailsUpdatesComponent;
 let fixture: ComponentFixture<DefendantDetailsUpdatesComponent>;
@@ -48,8 +49,27 @@ describe('DefendantDetailsUpdatesComponent', () => {
       expect(fixture).toMatchSnapshot();
     });
   });
+
+  describe('when defendant details updates are acknowledged', () => {
+    it('should emit the correct parameters', () => {
+      const CASE_ID = 'case-id';
+      const DEFENDANT_ID = 'defendant-id';
+
+      const params = {
+        caseId: CASE_ID,
+        defendantId: DEFENDANT_ID
+      } as AcknowledgeDefendantDetailsUpdatesParam;
+
+      spyOn(component.acknowledgeDefendantDetailsUpdatesEmitter, 'emit');
+
+      component.acknowledgeDefendendantDetailsUpdate(CASE_ID, DEFENDANT_ID);
+
+      expect(component.acknowledgeDefendantDetailsUpdatesEmitter.emit).toHaveBeenCalledWith(params);
+    });
+  });
 });
 
+// noinspection AngularMissingOrInvalidDeclarationInModule
 @Component({
   selector: 'what-changed',
   template: `

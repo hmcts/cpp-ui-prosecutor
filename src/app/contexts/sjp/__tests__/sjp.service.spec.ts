@@ -8,6 +8,7 @@ import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/tes
 
 const MOCK_CASE_ID = 'mock-case-id';
 const MOCK_DATES_TO_AVOID = 'dates to avoid content';
+const MOCK_DEFENDANT_ID = 'mock-defendant-id';
 
 const MOCK_WITHDRAW_STATE = {
   withdrawalRequestsStatus: [
@@ -101,6 +102,28 @@ describe('SjpService', () => {
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates?limit=10',
         requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
+  });
+
+  describe('acknowledgeDefendantDetailsUpdates', () => {
+    it('should make a call', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockCommandSync.mockReturnValue(response$);
+
+      const command$ = service.acknowledgeDefendantDetailsUpdates(MOCK_CASE_ID, MOCK_DEFENDANT_ID);
+
+      expect(command$).toBeObservable(expected$);
+
+      expect(mockCommandSync).toHaveBeenCalledWith({
+        url: `/sjp-command-api/command/api/rest/sjp/cases/${MOCK_CASE_ID}/defendant/${MOCK_DEFENDANT_ID}`,
+        requestType: 'application/vnd.sjp.acknowledge-defendant-details-updates+json',
+        body: {},
+        successEvent: 'public.sjp.defendant-details-updates-acknowledged',
+        errorEvent: []
       });
     });
   });

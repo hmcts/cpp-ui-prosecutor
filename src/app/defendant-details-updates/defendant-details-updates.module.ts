@@ -14,6 +14,8 @@ import {
 import { DefendantNamePipeModule } from '../shared/pipes';
 import { DefendantDetailsUpdatesPageDataGuard } from '../defendant-details-updates/defendant-details-updates.guard';
 import {WhatChangedComponent} from './what-changed/what-changed.component';
+import {EffectsModule} from '@ngrx/effects';
+import {DefendantDetailsUpdatesEffects} from './defendant-details-updates.effects';
 
 const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesContainer, WhatChangedComponent];
 
@@ -27,6 +29,7 @@ const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesC
     PdkButtonModule,
     PdkInsetTextModule,
     DefendantNamePipeModule,
+    EffectsModule.forFeature([DefendantDetailsUpdatesEffects]),
     RouterModule.forChild([
       {
         path: '',

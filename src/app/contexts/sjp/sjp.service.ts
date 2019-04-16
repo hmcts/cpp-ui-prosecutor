@@ -73,4 +73,14 @@ export class SjpService {
       errorEvent: 'public.sjp.case-update-rejected'
     });
   }
+
+  acknowledgeDefendantDetailsUpdates(caseId: string, defendantId: string): Observable<any> {
+    return this.http.commandSync({
+      url: `${this.command}/cases/${caseId}/defendant/${defendantId}`,
+      body: {},
+      requestType: 'application/vnd.sjp.acknowledge-defendant-details-updates+json',
+      successEvent: 'public.sjp.defendant-details-updates-acknowledged',
+      errorEvent: []
+    });
+  }
 }

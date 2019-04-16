@@ -6,3 +6,9 @@ export interface WithdrawOffenceParam {
 export interface WithdrawOffenceRequestParam {
   withdrawalRequestsStatus: WithdrawOffenceParam[];
 }
+
+export interface AcknowledgeDefendantDetailsUpdatesParam {
+  caseId: string;
+  defendantId: string;
+}
+
