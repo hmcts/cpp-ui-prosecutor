@@ -22,7 +22,7 @@ describe('App router component', () => {
           provide: Router,
           useValue: {
             events: mockRouterEvent,
-            url: 'home',
+            url: 'home#fragment',
             parseUrl: mockParseUrl
           }
         }
@@ -38,12 +38,16 @@ describe('App router component', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should scroll top when navigate', fakeAsync(() => {
-    window.scrollTo = jest.fn();
+  it('should scroll to the view if there is a fragment', fakeAsync(() => {
+    const dummyObject = { scrollIntoView: jest.fn() };
+    const mockQuerySelector = jest.fn();
+    document.querySelector = mockQuerySelector;
     fixture.detectChanges();
-    mockParseUrl.mockReturnValue({ url: 'home' });
-    mockRouterEvent.next(new NavigationEnd(123, 'url', null));
+
+    mockParseUrl.mockReturnValue({ fragment: 'fragment' });
+    mockQuerySelector.mockReturnValue(dummyObject);
+    mockRouterEvent.next(new NavigationEnd(123, 'home#fragment', null));
     tick();
-    expect(window.scrollTo).toHaveBeenCalled();
+    expect(dummyObject.scrollIntoView).toHaveBeenCalled();
   }));
 });

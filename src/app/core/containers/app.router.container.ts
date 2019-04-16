@@ -1,5 +1,6 @@
-import { ChangeDetectorRef, Component, ChangeDetectionStrategy } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'router-container',
@@ -9,28 +10,16 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
   `
 })
 export class AppRouterContainer {
-  constructor(router: Router, cdr: ChangeDetectorRef) {
-    router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        cdr.detach();
-      }
-      // scroll back to the top of the page upon route change
-      if (event instanceof NavigationEnd) {
-        cdr.reattach();
-
-        const tree = router.parseUrl(router.url);
-
-        if (tree.fragment) {
-          setTimeout(() => {
-            const element = document.querySelector(`[id="${tree.fragment}"]`);
-
-            if (element) {
-              element.scrollIntoView();
-            }
-          });
-        } else {
-          window.scrollTo(0, 0);
-        }
+  constructor(router: Router) {
+    router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      const tree = router.parseUrl(router.url);
+      if (tree.fragment) {
+        setTimeout(() => {
+          const element = document.querySelector(`[id="${tree.fragment}"]`);
+          if (element) {
+            element.scrollIntoView();
+          }
+        });
       }
     });
   }

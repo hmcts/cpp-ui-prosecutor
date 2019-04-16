@@ -14,7 +14,7 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
     >
       <pdk-file-download-icon
         ng-reflect-size="39"
-        style="display: inline-block;"
+        style="display: inline-block; vertical-align: middle;"
       >
         <div
           style="display: flex; align-items: center; justify-content: center;"

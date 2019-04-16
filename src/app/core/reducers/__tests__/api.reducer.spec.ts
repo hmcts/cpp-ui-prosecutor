@@ -1,7 +1,7 @@
 import { ROUTER_NAVIGATION, RouterNavigationAction } from '@ngrx/router-store';
 import { ApiError, CompletedApiRequest, PendingApiRequest } from '../../actions/api';
 import { apiReducer } from '../api.reducer';
-import { HttpGetRequestOptions } from '@cpp/core';
+import { HttpQueryOptions } from '@cpp/core';
 
 describe('apiReducer', () => {
   describe('undefined action', () => {
@@ -28,7 +28,7 @@ describe('apiReducer', () => {
 
   describe('API_REQUEST', () => {
     it('should add the incoming request to the pending requests', () => {
-      const createAction = new PendingApiRequest({ url: '/' } as HttpGetRequestOptions);
+      const createAction = new PendingApiRequest({ url: '/' } as HttpQueryOptions);
       const result = apiReducer(undefined, createAction);
 
       expect(result).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('apiReducer', () => {
 
   describe('API_RESPONSE', () => {
     it('should remove the completed request from the pending requests', () => {
-      const requestOption = { url: '/' } as HttpGetRequestOptions;
+      const requestOption = { url: '/' } as HttpQueryOptions;
       const state = { requests: [requestOption], errors: [] };
       const completedAction = new CompletedApiRequest(requestOption);
 

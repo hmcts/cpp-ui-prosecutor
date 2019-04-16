@@ -36,7 +36,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               ng-reflect-hidden="false"
               ng-reflect-type="default"
             >
-              From
+               From 
             </legend>
             
             
@@ -84,15 +84,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
                     id="pdk-form-control-1-day"
-                    maxlength="2"
                     name="dateDay"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="2"
                     ng-reflect-name="day"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="2"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />
@@ -116,15 +112,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
                     id="pdk-form-control-1-month"
-                    maxlength="2"
                     name="dateMonth"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="2"
                     ng-reflect-name="month"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="2"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />
@@ -148,17 +140,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
                     id="pdk-form-control-1-year"
-                    maxlength="4"
-                    minlength="4"
                     name="dateYear"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="4"
-                    ng-reflect-minlength="4"
                     ng-reflect-name="year"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="4"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />
@@ -192,7 +178,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
               ng-reflect-hidden="false"
               ng-reflect-type="default"
             >
-              To
+               To 
             </legend>
             
             
@@ -241,15 +227,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
                     id="pdk-form-control-2-day"
-                    maxlength="2"
                     name="dateDay"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="2"
                     ng-reflect-name="day"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="2"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />
@@ -273,15 +255,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
                     id="pdk-form-control-2-month"
-                    maxlength="2"
                     name="dateMonth"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="2"
                     ng-reflect-name="month"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="2"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />
@@ -305,17 +283,11 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
                     id="pdk-form-control-2-year"
-                    maxlength="4"
-                    minlength="4"
                     name="dateYear"
                     ng-reflect-error="false"
-                    ng-reflect-maxlength="4"
-                    ng-reflect-minlength="4"
                     ng-reflect-name="year"
-                    ng-reflect-pattern="[0-9]*"
                     ng-reflect-required=""
                     ng-reflect-width="4"
-                    pattern="[0-9]*"
                     required=""
                     type="number"
                   />

@@ -43,7 +43,7 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
                 ng-reflect-hidden="false"
                 ng-reflect-type="default"
               >
-                
+                  
               </legend>
               
               
@@ -69,14 +69,14 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-checkbox-3"
+                        id="pdk-radio-3"
                         name="pdk-radio-group-2"
                         type="radio"
                         value="true"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-checkbox-3"
+                        for="pdk-radio-3"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -92,14 +92,14 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-checkbox-4"
+                        id="pdk-radio-4"
                         name="pdk-radio-group-2"
                         type="radio"
                         value="false"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-checkbox-4"
+                        for="pdk-radio-4"
                         ng-reflect-type=""
                         pdk-label=""
                       >
