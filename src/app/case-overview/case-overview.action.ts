@@ -35,15 +35,6 @@ export class ResetDatesToAvoidState implements Action {
   constructor() {}
 }
 
-export type CaseOverviewAction =
-  | WithdrawOffences
-  | WithdrawOffencesSuccess
-  | ResetCaseOverviewState
-  | ResetDatesToAvoidState
-  | SubmitDatesToAvoid
-  | SubmitDatesToAvoidSuccess
-  | SubmitDatesToAvoidFailed;
-
 export class SubmitDatesToAvoid implements Action {
   readonly type = CaseOverviewActionType.SUBMIT_DATES_TO_AVOID;
 
@@ -61,3 +52,12 @@ export class SubmitDatesToAvoidFailed implements Action {
 
   constructor() {}
 }
+
+export type CaseOverviewAction =
+  | WithdrawOffences
+  | WithdrawOffencesSuccess
+  | ResetCaseOverviewState
+  | ResetDatesToAvoidState
+  | SubmitDatesToAvoid
+  | SubmitDatesToAvoidSuccess
+  | SubmitDatesToAvoidFailed;

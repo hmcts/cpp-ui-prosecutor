@@ -14,7 +14,7 @@ const initialState: CaseOverviewState = {
 
 export function caseOverviewReducer(
   state: CaseOverviewState = initialState,
-  action: CaseOverviewAction | CaseOverviewAction
+  action: CaseOverviewAction
 ): CaseOverviewState {
   switch (action.type) {
     case CaseOverviewActionType.WITHDRAW_OFFENCES_SUCCESS: {
