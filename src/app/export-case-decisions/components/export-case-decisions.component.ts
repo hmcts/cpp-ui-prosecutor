@@ -17,14 +17,19 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
     </ol>
     <pdk-error-summary *ngIf="errors" [errors]="errors" title="Fix the following" focusOnChange></pdk-error-summary>
     <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="8">Export case results by date</h1>
-    <export-case-decisions-form (errors)="errors = $event" (loadCaseCount)="loadCaseCount.emit($event)">
+    <export-case-decisions-form (errors)="handleFormErrors($event)" (loadCaseCount)="loadCaseCount.emit($event)">
     </export-case-decisions-form>
     <download-case-decisions *ngIf="caseCountResult" [caseCountResult]="caseCountResult"> </download-case-decisions>
   `
 })
 export class ExportCaseDecisionsComponent {
-  errors: ValidationError[];
-
   @Input() caseCountResult: CaseCountResult;
   @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
+  @Output() errorsOutput: EventEmitter<ValidationError[]> = new EventEmitter();
+  errors: ValidationError[];
+
+  handleFormErrors(event) {
+    this.errors = event;
+    this.errorsOutput.emit(event);
+  }
 }

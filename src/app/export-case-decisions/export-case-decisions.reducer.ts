@@ -10,6 +10,8 @@ export function exportCaseDecisionsReducer(
   switch (action.type) {
     case ResultedCaseCountActionTypes.LOAD_RESULTED_CASE_COUNT_SUCCESS:
       return action.caseCountResult;
+    case ResultedCaseCountActionTypes.RESET_RESULTED_CASE_COUNT:
+      return null;
     default:
       return state;
   }
