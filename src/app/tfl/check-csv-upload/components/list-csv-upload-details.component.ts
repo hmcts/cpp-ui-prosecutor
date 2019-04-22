@@ -31,7 +31,12 @@ import { CsvFileUploadDetails } from '../../../contexts/staging-tfl';
             </ng-template>
           </td>
           <td pdk-table-cell>
-            <a href="#" *ngIf="csvUploadFileData.uploadStatus.status === 'FAILED'; else dash" pdk-link>
+            <a
+              *ngIf="csvUploadFileData.uploadStatus.status === 'FAILED'; else dash"
+              href="javascript:void(0)"
+              routerLink="report/{{ csvUploadFileData.uploadId }}"
+              pdk-link
+            >
               View report
             </a>
             <ng-template #dash>–</ng-template>

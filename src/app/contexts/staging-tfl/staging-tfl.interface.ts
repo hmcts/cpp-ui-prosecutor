@@ -4,7 +4,7 @@ export interface FileUploadStat {
   errorCount: number;
 }
 
-export interface CsvFileUploadStatResult {
+export interface FileUploadStatResult {
   csvUpload: FileUploadStat;
   documentsUpload: FileUploadStat;
 }
@@ -22,4 +22,23 @@ export interface CsvFileUploadDetails {
 export interface UploadStatus {
   status: string;
   timestamp: string;
+}
+
+export interface CsvFileUploadReport {
+  headerErrors: CsvError[];
+  headerFileReference: string;
+  headerFilename: string;
+  offenceErrors: CsvError[];
+  offenceFileReference: string;
+  offenceFilename: string;
+  timestamp: string;
+  uploadId: string;
+  uploadStatus: UploadStatus;
+}
+
+export interface CsvError {
+  csvColumn: string;
+  csvRow: number;
+  tflCaseUrn: string;
+  validationMessageKey: string;
 }

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewCsvUploadReportContainer should compile correctly 1`] = `
+<view-csv-upload-report-container
+  csvFileUploadReport$={[Function Store]}
+>
+  <view-csv-upload-report
+    ng-reflect-csv-file-upload-report="[object Object]"
+  >
+    <span>
+      {
+    "uploadId": "uploadID",
+    "headerFilename": "headerFileName.csv"
+  }
+    </span>
+  </view-csv-upload-report>
+</view-csv-upload-report-container>
+`;

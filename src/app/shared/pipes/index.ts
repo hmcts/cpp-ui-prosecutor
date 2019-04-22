@@ -6,3 +6,5 @@ export * from './format-date/format-date-pipe.module';
 export * from './defendant-name/defendant-name.module';
 export * from './if-empty/if-empty-pipe.module';
 export * from './please-status/plea-status-pipe.module';
+export * from './upload-status/upload-status-pipe.module';
+export * from './upload-error/upload-error-pipe.module';

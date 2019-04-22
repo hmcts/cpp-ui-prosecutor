@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
+<csv-upload-error-list
+  csvErrors={[Function Array]}
+>
+  <table
+    pdk-table=""
+  >
+    <thead
+      pdk-table-head=""
+    >
+      <tr
+        pdk-table-row=""
+      >
+        <th
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-header=""
+          pdk-typography="body-small"
+        >
+          <b>
+            Row
+          </b>
+        </th>
+        <th
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-header=""
+          pdk-typography="body-small"
+        >
+          <b>
+            Reference name
+          </b>
+        </th>
+        <th
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-header=""
+          pdk-typography="body-small"
+        >
+          <b>
+            Column
+          </b>
+        </th>
+        <th
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-header=""
+          pdk-typography="body-small"
+        >
+          <b>
+            Error
+          </b>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      pdk-table-body=""
+    >
+      
+      <tr
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          1
+        </td>
+        <td
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          TFL88932KI14X
+        </td>
+        <td
+          class="govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          H
+        </td>
+        <td
+          class="pdk-!-text-color-red govuk-body-s"
+          ng-reflect-type="body-small"
+          pdk-table-cell=""
+          pdk-text-colour="red"
+          pdk-typography="body-small"
+        >
+           You must enter date of hearing in YYYY-MM-DD format 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</csv-upload-error-list>
+`;

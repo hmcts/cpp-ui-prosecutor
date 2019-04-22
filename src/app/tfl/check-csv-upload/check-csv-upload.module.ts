@@ -8,11 +8,10 @@ import { ListCsvUploadDetailsComponent } from './components/list-csv-upload-deta
 import { CheckCsvUploadGuard } from './check-csv-upload.guard';
 import { StoreModule } from '@ngrx/store';
 import { csvFileUploadReducer } from './check-csv-upload.reducer';
-import { FormatDatePipeModule } from '../../shared/pipes';
-import { UploadStatusPipe } from './upload-status.pipe';
+import { FormatDatePipeModule, UploadStatusPipeModule } from '../../shared/pipes';
 
 @NgModule({
-  declarations: [CheckCsvUploadContainer, CheckCsvUploadComponent, ListCsvUploadDetailsComponent, UploadStatusPipe],
+  declarations: [CheckCsvUploadContainer, CheckCsvUploadComponent, ListCsvUploadDetailsComponent],
   imports: [
     CommonModule,
     PdkCoreModule,
@@ -21,6 +20,7 @@ import { UploadStatusPipe } from './upload-status.pipe';
     FormatDatePipeModule,
     PdkErrorMessageModule,
     PdkFormModule,
+    UploadStatusPipeModule,
     StoreModule.forFeature('csvFileUploadDetails', csvFileUploadReducer),
     RouterModule.forChild([
       {

@@ -5,7 +5,7 @@ import {
   SubmitCsvFilesSuccess,
   TflAction
 } from '../tfl.action';
-import { CsvFileUploadStatResult, FileUploadStat } from '../../contexts/staging-tfl';
+import { FileUploadStatResult, FileUploadStat } from '../../contexts/staging-tfl';
 
 describe(' Tfl reducer', () => {
   describe('default', () => {
@@ -21,7 +21,7 @@ describe(' Tfl reducer', () => {
     });
 
     it('should update state with cases file upload stats data ', () => {
-      const fileUploadStat = { csvUpload: { errorCount: 10 } as FileUploadStat } as CsvFileUploadStatResult;
+      const fileUploadStat = { csvUpload: { errorCount: 10 } as FileUploadStat } as FileUploadStatResult;
       const action = new LoadFileUploadStatsSuccess(fileUploadStat);
       const result = tflReducer(undefined, action);
       expect(result).toMatchSnapshot();

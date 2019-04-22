@@ -8,7 +8,7 @@ import {
   getCsvUploadErrorCount,
   getDocumentsUploadErrorCount
 } from '../tfl.selectors';
-import { CsvFileUploadStatResult } from '../../contexts/staging-tfl';
+import { FileUploadStatResult } from '../../contexts/staging-tfl';
 
 describe('tfl selectors', () => {
   const reducer = combineReducers({ ...reducers, tfl: tflReducer });
@@ -36,7 +36,7 @@ describe('tfl selectors', () => {
       documentsUpload: {
         errorCount: 10
       }
-    } as CsvFileUploadStatResult;
+    } as FileUploadStatResult;
 
     describe('getDocumentsUploadErrorCount', () => {
       it('should select default count', () => {

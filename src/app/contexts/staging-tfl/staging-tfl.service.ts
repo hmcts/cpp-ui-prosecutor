@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { Observable } from 'rxjs';
-import { CsvFileUploadDetails, CsvFileUploadStatResult } from './staging-tfl.interface';
+import { CsvFileUploadDetails, FileUploadStatResult, CsvFileUploadReport } from './staging-tfl.interface';
 import { map } from 'rxjs/operators';
 import { v4 as uuid } from 'uuid';
 import { CsvUploadRequestParam } from './staging-tfl-param.interface';
@@ -13,7 +13,7 @@ export class StagingTflService {
 
   constructor(private http: CppHttp) {}
 
-  getFileUploadStats(): Observable<CsvFileUploadStatResult> {
+  getFileUploadStats(): Observable<FileUploadStatResult> {
     return this.http.query({
       url: `${this.query}/uploads-status-information`,
       requestType: 'application/vnd.stagingtfl.query.uploads-status-information+json'
@@ -38,5 +38,12 @@ export class StagingTflService {
         requestType: 'application/vnd.stagingtfl.query.charged-cases-csv-files-uploads+json'
       })
       .pipe(map((result: { csvsFileUploads: CsvFileUploadDetails[] }) => result.csvsFileUploads));
+  }
+
+  getCsvFileUploadReport(uploadId: string): Observable<CsvFileUploadReport> {
+    return this.http.query({
+      url: `${this.query}/csv-files-upload/${uploadId}`,
+      requestType: 'application/vnd.stagingtfl.query.charged-cases-csv-files-upload-by-id+json'
+    });
   }
 }

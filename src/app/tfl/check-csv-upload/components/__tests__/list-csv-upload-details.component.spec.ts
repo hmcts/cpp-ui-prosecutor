@@ -3,7 +3,8 @@ import { PdkCoreModule, PdkGridModule, PdkTableModule } from '@cpp/pdk';
 import { CsvFileUploadDetails, UploadStatus } from '../../../../contexts/staging-tfl';
 import { ListCsvUploadDetailsComponent } from '../list-csv-upload-details.component';
 import { FormatDatePipeModule } from '../../../../shared/pipes';
-import { UploadStatusPipe } from '../../upload-status.pipe';
+import { UploadStatusPipe } from '../../../../shared/pipes/upload-status/upload-status.pipe';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ListCsvUploadDetailsComponent', () => {
   let fixture: ComponentFixture<ListCsvUploadDetailsComponent>;
@@ -29,7 +30,7 @@ describe('ListCsvUploadDetailsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ListCsvUploadDetailsComponent, UploadStatusPipe],
-      imports: [PdkCoreModule, PdkGridModule, PdkTableModule, FormatDatePipeModule]
+      imports: [PdkCoreModule, PdkGridModule, PdkTableModule, FormatDatePipeModule, RouterTestingModule]
     });
     fixture = TestBed.createComponent(ListCsvUploadDetailsComponent);
     component = fixture.componentInstance;

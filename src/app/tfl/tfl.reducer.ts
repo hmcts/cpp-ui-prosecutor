@@ -1,11 +1,11 @@
 import { SjpNoticeCasesCountResult } from '../contexts/sjp';
 import { TflAction, TflActionType } from './tfl.action';
-import { CsvFileUploadStatResult } from '../contexts/staging-tfl';
+import { FileUploadStatResult } from '../contexts/staging-tfl';
 
 export interface TflState {
   sjpNoticeCaseResult: SjpNoticeCasesCountResult;
   csvUploadSuccess: boolean;
-  fileUploadStats: CsvFileUploadStatResult;
+  fileUploadStats: FileUploadStatResult;
 }
 
 const initialState: TflState = {

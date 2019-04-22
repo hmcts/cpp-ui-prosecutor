@@ -5,7 +5,12 @@ import { CppHttp, HttpModule } from '@cpp/core';
 import { StagingTflService } from '../staging-tfl.service';
 import { CsvUploadRequestParam } from '../staging-tfl-param.interface';
 import { v4 as uuid } from 'uuid';
-import { CsvFileUploadDetails, CsvFileUploadStatResult, UploadStatus } from '../staging-tfl.interface';
+import {
+  CsvFileUploadDetails,
+  CsvFileUploadReport,
+  FileUploadStatResult,
+  UploadStatus
+} from '../staging-tfl.interface';
 
 describe('StagingTflService', () => {
   let http: CppHttp;
@@ -43,7 +48,7 @@ describe('StagingTflService', () => {
         documentsUpload: {
           errorCount: 10
         }
-      } as CsvFileUploadStatResult;
+      } as FileUploadStatResult;
       const expected$ = cold('-b|', { b: fileUploadStats });
       const response$ = cold('-a|', { a: fileUploadStats });
 
@@ -86,6 +91,29 @@ describe('StagingTflService', () => {
       expect(http.query).toHaveBeenCalledWith({
         url: '/stagingtfl-query-api/query/api/rest/stagingtfl/csv-files-upload',
         requestType: 'application/vnd.stagingtfl.query.charged-cases-csv-files-uploads+json'
+      });
+    });
+  });
+
+  describe('getCsvFileUploadReport', () => {
+    it('should make a call', () => {
+      const mockUploadReport = {
+        uploadId: 'uploadID',
+        headerFilename: 'headerFileName.csv'
+      } as CsvFileUploadReport;
+
+      const expected$ = cold('-a|', { a: mockUploadReport });
+      const response$ = cold('-b|', { b: mockUploadReport });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getCsvFileUploadReport('uploadId');
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/stagingtfl-query-api/query/api/rest/stagingtfl/csv-files-upload/uploadId',
+        requestType: 'application/vnd.stagingtfl.query.charged-cases-csv-files-upload-by-id+json'
       });
     });
   });

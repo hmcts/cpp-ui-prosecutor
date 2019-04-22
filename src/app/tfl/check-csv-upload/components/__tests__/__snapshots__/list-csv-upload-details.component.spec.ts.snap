@@ -147,7 +147,8 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
           
           <a
             class="govuk-link"
-            href="#"
+            href="/report/uploadId"
+            ng-reflect-router-link="report/uploadId"
             pdk-link=""
           >
              View report 
