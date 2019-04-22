@@ -21,7 +21,7 @@ import { CsvFileUploadDetails } from '../../../contexts/staging-tfl';
           <td pdk-table-cell>{{ csvUploadFileData.timestamp | formatDate: 'h:ssa' }}</td>
           <td pdk-table-cell>{{ csvUploadFileData.headerFilename }}</td>
           <td pdk-table-cell>
-            <span *ngIf="csvUploadFileData.uploadStatus.status === 'FAILED'; else error">
+            <span *ngIf="csvUploadFileData.uploadStatus.status !== 'FAILED'; else error">
               {{ csvUploadFileData.uploadStatus.status | uploadStatus }}
             </span>
             <ng-template #error>

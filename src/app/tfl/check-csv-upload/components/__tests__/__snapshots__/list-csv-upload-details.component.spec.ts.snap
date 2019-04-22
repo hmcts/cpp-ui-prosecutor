@@ -90,13 +90,9 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
           pdk-table-cell=""
         >
           
-          <b
-            class="pdk-!-text-color-red"
-            ng-reflect-type="red"
-            pdk-text-colour="red"
-          >
+          <span>
              Sent to court 
-          </b>
+          </span>
           
         </td>
         <td
@@ -135,9 +131,13 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
           pdk-table-cell=""
         >
           
-          <span>
+          <b
+            class="pdk-!-text-color-red"
+            ng-reflect-type="red"
+            pdk-text-colour="red"
+          >
              Rejected – errors found 
-          </span>
+          </b>
           
         </td>
         <td
@@ -258,13 +258,9 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with single row 
           pdk-table-cell=""
         >
           
-          <b
-            class="pdk-!-text-color-red"
-            ng-reflect-type="red"
-            pdk-text-colour="red"
-          >
+          <span>
              Sent to court 
-          </b>
+          </span>
           
         </td>
         <td
