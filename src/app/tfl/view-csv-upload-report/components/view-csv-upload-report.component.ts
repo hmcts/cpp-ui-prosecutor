@@ -70,7 +70,7 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
         <pdk-related>
           <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Related links</h1>
           <div>
-            <a href="javascript: void(0)" pdk-link routerLink="upload-csv">
+            <a href="javascript: void(0)" pdk-link routerLink="../../../csv-upload">
               Upload CSVs
             </a>
           </div>
@@ -86,7 +86,7 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
         <li>your correct data</li>
         <li>all the remaining original data which didn’t contain errors</li>
       </ul>
-      <button pdk-button routerLink="upload-csv">Upload CSVs again</button>
+      <button pdk-button routerLink="../../../csv-upload">Upload CSVs again</button>
     </pdk-grid>
   `
 })

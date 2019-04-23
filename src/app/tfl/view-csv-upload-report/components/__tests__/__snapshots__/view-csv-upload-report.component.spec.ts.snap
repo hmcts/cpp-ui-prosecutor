@@ -176,7 +176,7 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
                     class="govuk-link"
                     href="javascript: void(0)"
                     pdk-link=""
-                    routerlink="upload-csv"
+                    routerlink="../../../csv-upload"
                   >
                      Upload CSVs 
                   </a>
@@ -213,7 +213,7 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
       </ul>
       <button
         pdk-button=""
-        routerlink="upload-csv"
+        routerlink="../../../csv-upload"
       >
         Upload CSVs again
       </button>
@@ -386,7 +386,7 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
       </ul>
       <button
         pdk-button=""
-        routerlink="upload-csv"
+        routerlink="../../../csv-upload"
       >
         Upload CSVs again
       </button>
