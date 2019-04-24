@@ -18,7 +18,7 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
     </h1>
 
     <pdk-inset-text>
-      {{ defendantDetailsUpdates.total }}
+      <span id="updates-count">{{ defendantDetailsUpdates.total }}</span>&nbsp;
       <span [ngPlural]="defendantDetailsUpdates.total">
         <ng-template ngPluralCase="=1">case has</ng-template>
         <ng-template ngPluralCase="other">cases have</ng-template>
@@ -27,7 +27,7 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
       <span *ngIf="defendantDetailsUpdates.total > 50">(first 50 shown below)</span>
     </pdk-inset-text>
 
-    <table pdk-table *ngIf="defendantDetailsUpdates.total > 0">
+    <table pdk-table *ngIf="defendantDetailsUpdates.total > 0" id="cases">
       <thead pdk-table-head>
       <tr pdk-table-row>
         <th pdk-table-header>Name</th>
@@ -40,7 +40,7 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
       </thead>
       <tbody pdk-table-body>
       <tr pdk-table-row *ngFor="let defendantDetailsUpdate of defendantDetailsUpdates.defendantDetailsUpdates">
-        <td pdk-table-cell>
+        <td pdk-table-cell data-role="defendant-name">
           <a href="javascript:void(0)" pdk-link [routerLink]="['../case-overview', defendantDetailsUpdate.caseId]">
             <b>{{ defendantDetailsUpdate | defendantName: false }}</b>
           </a>
@@ -48,23 +48,23 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
         <td pdk-table-cell data-role="urn">
           {{ defendantDetailsUpdate.caseUrn }}
         </td>
-        <td pdk-table-cell>
+        <td pdk-table-cell data-role="date-of-birth">
           {{ defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy' }}
         </td>
         <td pdk-table-cell>
           <what-changed [defendantDetailsUpdate]="defendantDetailsUpdate"></what-changed>
         </td>
-        <td pdk-table-cell>
+        <td pdk-table-cell data-role="updated-on">
           {{ defendantDetailsUpdate.updatedOn | date: 'dd MMM yyyy' }}
         </td>
         <td pdk-table-cell>
-          <a href="javascript:void(0)" pdk-link
+          <a href="javascript:void(0)" pdk-link data-role="remove-link"
              (click)="acknowledgeDefendendantDetailsUpdate(defendantDetailsUpdate.caseId, defendantDetailsUpdate.defendantId)">Remove</a>
         </td>
       </tr>
       </tbody>
     </table>
-    <button pdk-button routerLink="../">
+    <button id="back-button" pdk-button routerLink="../">
       Back to home
     </button>
   `

@@ -10,7 +10,7 @@ exports[`WhatChangedComponent should show address changed 1`] = `
     
     
     <li
-      data-test-id="address-updated"
+      data-role="address-updated"
     >
        Address details 
     </li>
@@ -28,19 +28,19 @@ exports[`WhatChangedComponent should show all change 1`] = `
   >
     
     <li
-      data-test-id="date-of-birth-updated"
+      data-role="date-of-birth-updated"
     >
        Date of birth 
     </li>
     
     <li
-      data-test-id="address-updated"
+      data-role="address-updated"
     >
        Address details 
     </li>
     
     <li
-      data-test-id="name-updated"
+      data-role="name-updated"
     >
        Name 
     </li>
@@ -57,7 +57,7 @@ exports[`WhatChangedComponent should show date of birth changed 1`] = `
   >
     
     <li
-      data-test-id="date-of-birth-updated"
+      data-role="date-of-birth-updated"
     >
        Date of birth 
     </li>
@@ -78,7 +78,7 @@ exports[`WhatChangedComponent should show name changed 1`] = `
     
     
     <li
-      data-test-id="name-updated"
+      data-role="name-updated"
     >
        Name 
     </li>

@@ -1,6 +1,6 @@
-import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER } from '../utils';
-import { request, User } from '@cpp/ui.priming';
-import { Case } from '../../src/app/contexts/sjp';
+import {COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER} from '../utils';
+import {request, User} from '@cpp/ui.priming';
+import {Case} from '../../src/app/contexts/sjp';
 
 const COMMAND = `/sjp-command-api/command/api/rest/sjp`;
 const QUERY = `/sjp-command-api/query/api/rest/sjp`;
@@ -61,5 +61,29 @@ export const getPleadedNotGuiltyCases = () => {
       Accept: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
     },
     user: TVL_USER
+  });
+};
+
+export const updateDefendantDetails = (caseId: string, defendantId: string, body: any) => {
+  return request({
+    method: 'POST',
+    url: `${COMMAND}/cases/${caseId}/defendant/${defendantId}`,
+    headers: {
+      'Content-Type': 'application/vnd.sjp.update-defendant-details+json',
+      charset: 'UTF-8'
+    },
+    body,
+    user: COURT_ADMIN
+  });
+};
+
+export const getDefendantDetailsUpdates = (user: User, limit: number) => {
+  return request({
+    method: 'GET',
+    url: `${QUERY}/defendant-details-updates?limit=${limit}`,
+    headers: {
+      Accept: 'application/vnd.sjp.query.defendant-details-updates+json'
+    },
+    user
   });
 };

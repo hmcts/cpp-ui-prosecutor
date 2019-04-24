@@ -35,7 +35,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
     <div
       class="govuk-inset-text"
     >
-       2 
+      <span
+        id="updates-count"
+      >
+        2
+      </span>
+        
       <span
         ng-reflect-ng-plural="2"
       >
@@ -47,6 +52,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
       
     </div>
   </pdk-inset-text><table
+    id="cases"
     pdk-table=""
   >
     <thead
@@ -95,6 +101,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         pdk-table-row=""
       >
         <td
+          data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
@@ -114,6 +121,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
            TVL7105556000 
         </td>
         <td
+          data-role="date-of-birth"
           pdk-table-cell=""
         >
            17 Oct 1977 
@@ -141,6 +149,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </what-changed>
         </td>
         <td
+          data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
@@ -149,6 +158,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           pdk-table-cell=""
         >
           <a
+            data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -160,6 +170,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         pdk-table-row=""
       >
         <td
+          data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
@@ -179,6 +190,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
            TVL9772166531 
         </td>
         <td
+          data-role="date-of-birth"
           pdk-table-cell=""
         >
            19 Feb 1991 
@@ -206,6 +218,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </what-changed>
         </td>
         <td
+          data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
@@ -214,6 +227,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           pdk-table-cell=""
         >
           <a
+            data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -224,6 +238,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
     </tbody>
   </table><button
     class="govuk-button"
+    id="back-button"
     ng-reflect-router-link="../"
     ng-reflect-type=""
     pdk-button=""
@@ -270,7 +285,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
     <div
       class="govuk-inset-text"
     >
-       51 
+      <span
+        id="updates-count"
+      >
+        51
+      </span>
+        
       <span
         ng-reflect-ng-plural="51"
       >
@@ -285,6 +305,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
       </span>
     </div>
   </pdk-inset-text><table
+    id="cases"
     pdk-table=""
   >
     <thead
@@ -333,6 +354,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         pdk-table-row=""
       >
         <td
+          data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
@@ -352,6 +374,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
            TVL7105556000 
         </td>
         <td
+          data-role="date-of-birth"
           pdk-table-cell=""
         >
            17 Oct 1977 
@@ -379,6 +402,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </what-changed>
         </td>
         <td
+          data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
@@ -387,6 +411,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           pdk-table-cell=""
         >
           <a
+            data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -398,6 +423,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         pdk-table-row=""
       >
         <td
+          data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
@@ -417,6 +443,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
            TVL9772166531 
         </td>
         <td
+          data-role="date-of-birth"
           pdk-table-cell=""
         >
            19 Feb 1991 
@@ -444,6 +471,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </what-changed>
         </td>
         <td
+          data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
@@ -452,6 +480,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           pdk-table-cell=""
         >
           <a
+            data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -462,6 +491,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
     </tbody>
   </table><button
     class="govuk-button"
+    id="back-button"
     ng-reflect-router-link="../"
     ng-reflect-type=""
     pdk-button=""

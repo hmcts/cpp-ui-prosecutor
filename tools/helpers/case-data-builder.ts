@@ -1,4 +1,4 @@
-import { Case } from '../../src/app/contexts/sjp';
+import {Case} from '../../src/app/contexts/sjp';
 
 const { pleadOnlinePayload } = require('../fixtures/json/plead-online.json');
 
@@ -36,5 +36,13 @@ export class CaseDataBuilder {
     }
 
     return payload;
+  }
+
+  public static buildDefendantDetailsUpdatesPayload(loadedCase, dateOfBirth) {
+    return {
+      ...loadedCase.defendant.personalDetails,
+      dateOfBirth,
+      contactNumber: {}
+    };
   }
 }
