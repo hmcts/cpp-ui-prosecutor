@@ -5,7 +5,7 @@ import { CsvError } from '../../../contexts/staging-tfl';
   selector: 'csv-upload-error-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <table pdk-table>
+    <table pdk-table [summary]="summary">
       <thead pdk-table-head>
         <tr pdk-table-row>
           <th pdk-table-header pdk-typography="body-small"><b>Row</b></th>
@@ -29,4 +29,5 @@ import { CsvError } from '../../../contexts/staging-tfl';
 })
 export class CsvUploadErrorListComponent {
   @Input() csvErrors: CsvError[];
+  @Input() summary: string;
 }

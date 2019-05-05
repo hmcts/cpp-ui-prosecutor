@@ -89,3 +89,6 @@ export const build = <T>(name: string, fn: (...args: any[]) => Promise<T & { urn
     }
   };
 };
+
+export const stringFormat = (stringToFormat: string, ...values: any) =>
+  stringToFormat.replace(/{(\d+)}/g, (match, index) => (values[index] ? values[index] : match));

@@ -81,12 +81,14 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
         </td>
         <td
           class="govuk-table__cell"
+          data-col="file-name"
           pdk-table-cell=""
         >
           fileName.csv
         </td>
         <td
           class="govuk-table__cell"
+          data-col="csv-upload-status"
           pdk-table-cell=""
         >
           
@@ -122,12 +124,14 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
         </td>
         <td
           class="govuk-table__cell"
+          data-col="file-name"
           pdk-table-cell=""
         >
           fileName.csv
         </td>
         <td
           class="govuk-table__cell"
+          data-col="csv-upload-status"
           pdk-table-cell=""
         >
           
@@ -250,12 +254,14 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with single row 
         </td>
         <td
           class="govuk-table__cell"
+          data-col="file-name"
           pdk-table-cell=""
         >
           fileName.csv
         </td>
         <td
           class="govuk-table__cell"
+          data-col="csv-upload-status"
           pdk-table-cell=""
         >
           

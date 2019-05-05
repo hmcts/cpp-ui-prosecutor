@@ -32,7 +32,10 @@ export function tflReducer(state: TflState = initialState, action: TflAction): T
         csvUploadSuccess: true
       };
     case TflActionType.RESET_CSV_UPLOAD_PAGE_STATE:
-      return initialState;
+      return {
+        ...state,
+        csvUploadSuccess: false
+      };
 
     default:
       return state;

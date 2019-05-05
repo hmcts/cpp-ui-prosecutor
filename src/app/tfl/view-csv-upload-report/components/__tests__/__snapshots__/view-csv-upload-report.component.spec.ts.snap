@@ -63,7 +63,11 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
           <p>
              Name:
             <br />
-             headerFileName.csv 
+            <span
+              data-role="file-name"
+            >
+              headerFileName.csv
+            </span>
           </p>
           <p>
              Uploaded:
@@ -76,6 +80,7 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
             
             <b
               class="pdk-!-text-color-red"
+              data-role="csv-upload-status"
               ng-reflect-type="red"
               pdk-text-colour="red"
             >
@@ -101,6 +106,8 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
             </h3>
             <csv-upload-error-list
               ng-reflect-csv-errors="[object Object]"
+              ng-reflect-summary="Header error list"
+              summary="Header error list"
             >
               <div>
                 [
@@ -111,6 +118,9 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
       "validationMessageKey": "DATE_OF_HEARING_WRONG_FORMAT"
     }
   ]
+              </div>
+              <div>
+                Header error list
               </div>
             </csv-upload-error-list>
           </section>
@@ -128,6 +138,8 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
             </h3>
             <csv-upload-error-list
               ng-reflect-csv-errors="[object Object]"
+              ng-reflect-summary="Offences error list"
+              summary="Offences error list"
             >
               <div>
                 [
@@ -138,6 +150,9 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
       "validationMessageKey": "DATE_OF_HEARING_WRONG_FORMAT"
     }
   ]
+              </div>
+              <div>
+                Offences error list
               </div>
             </csv-upload-error-list>
           </section>
@@ -285,7 +300,11 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
           <p>
              Name:
             <br />
-             headerFileName.csv 
+            <span
+              data-role="file-name"
+            >
+              headerFileName.csv
+            </span>
           </p>
           <p>
              Uploaded:
@@ -316,6 +335,8 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
             </h3>
             <csv-upload-error-list
               ng-reflect-csv-errors="[object Object]"
+              ng-reflect-summary="Header error list"
+              summary="Header error list"
             >
               <div>
                 [
@@ -326,6 +347,9 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
       "validationMessageKey": "DATE_OF_HEARING_WRONG_FORMAT"
     }
   ]
+              </div>
+              <div>
+                Header error list
               </div>
             </csv-upload-error-list>
           </section>
@@ -343,6 +367,8 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
             </h3>
             <csv-upload-error-list
               ng-reflect-csv-errors="[object Object]"
+              ng-reflect-summary="Offences error list"
+              summary="Offences error list"
             >
               <div>
                 [
@@ -353,6 +379,9 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
       "validationMessageKey": "DATE_OF_HEARING_WRONG_FORMAT"
     }
   ]
+              </div>
+              <div>
+                Offences error list
               </div>
             </csv-upload-error-list>
           </section>

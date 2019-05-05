@@ -3,9 +3,11 @@
 exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
 <csv-upload-error-list
   csvErrors={[Function Array]}
+  summary={[Function String]}
 >
   <table
     pdk-table=""
+    summary="Header error list"
   >
     <thead
       pdk-table-head=""

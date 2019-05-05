@@ -28,6 +28,7 @@ describe('ViewCsvUploadReportComponent', () => {
 
   it('should compile correctly', () => {
     component.csvErrors = mockErrors;
+    component.summary = 'Header error list';
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

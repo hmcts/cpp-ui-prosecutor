@@ -66,9 +66,11 @@ describe('ViewCsvUploadReportComponent', () => {
     selector: 'csv-upload-error-list',
     template: `
       <div>{{ csvErrors | json }}</div>
+      <div>{{ summary }}</div>
     `
   })
   class MockCsvUploadErrorListComponent {
     @Input() csvErrors: CsvError[];
+    @Input() summary: string;
   }
 });

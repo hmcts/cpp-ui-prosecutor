@@ -15,7 +15,7 @@ export class TflCaseDataBuilder extends CaseDataBuilder {
   }
 
   public static initCaseData(urn, postedDaysAgo: number = 28): TflCaseDataBuilder {
-    const dataBuilder = new TflCaseDataBuilder(sjpCaseData);
+    const dataBuilder = new TflCaseDataBuilder(JSON.parse(JSON.stringify(sjpCaseData)));
     const postingDate = subtractDays(postedDaysAgo);
     const defendantDob = '1977-10-17';
     const defendantAge = getAgeFromDate(defendantDob);
@@ -40,6 +40,23 @@ export class TflCaseDataBuilder extends CaseDataBuilder {
 
     return dataBuilder
       .set('offenceCode', 'CA03013')
+      .set('prosecutingAuthority', {
+        shortCode: 'TFL',
+        label: 'Transport for London'
+      })
+      .set('defendantSurname', 'Protractor-' + urn.replace('TFL', ''));
+  }
+
+  static createInvalidTflCaseData(urn = null): TflCaseDataBuilder {
+    if (!urn) {
+      urn = 'TFL' + TflCaseDataBuilder.getRandomUrnSuffix();
+    }
+
+    const dataBuilder = new TflCaseDataBuilder(JSON.parse(JSON.stringify(sjpCaseData)));
+
+    return dataBuilder
+      .set('urn', urn)
+      .set('offenceCode', 'TR11047XX')
       .set('prosecutingAuthority', {
         shortCode: 'TFL',
         label: 'Transport for London'

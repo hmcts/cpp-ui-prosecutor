@@ -1,9 +1,9 @@
-import {COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER} from '../utils';
-import {request, User} from '@cpp/ui.priming';
-import {Case} from '../../src/app/contexts/sjp';
+import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER } from '../utils';
+import { request, User } from '@cpp/ui.priming';
+import { Case } from '../../src/app/contexts/sjp';
 
 const COMMAND = `/sjp-command-api/command/api/rest/sjp`;
-const QUERY = `/sjp-command-api/query/api/rest/sjp`;
+const QUERY = `/sjp-query-api/query/api/rest/sjp`;
 
 export const getCaseByUrn = (urn: string): Promise<Case> => {
   return request({

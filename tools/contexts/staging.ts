@@ -1,8 +1,11 @@
 import { request, User } from '@cpp/ui.priming';
 import { CaseData, StagingParam } from '../interfaces';
 import * as uuid from 'uuid/v4';
+import { FileUploadStatResult } from '../../src/app/contexts/staging-tfl';
 
 const COMMAND_TFL = `/stagingtfl-command-api/command/api/rest`;
+const QUERY_TFL = `/stagingtfl-query-api/query/api/rest/stagingtfl`;
+
 const COMMAND_TVL = `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v1`;
 
 export const stageTflCase = (param: StagingParam, user: User): Promise<any> => {
@@ -70,6 +73,17 @@ export const stageDocument = (formData: any, user: User): Promise<any> => {
     headers: {
       'Content-Type': 'multipart/form-data',
       charset: 'UTF-8'
+    },
+    user
+  });
+};
+
+export const getFileUploadStats = (user: User): Promise<FileUploadStatResult> => {
+  return request({
+    method: 'GET',
+    url: `${QUERY_TFL}/uploads-status-information`,
+    headers: {
+      Accept: 'application/vnd.stagingtfl.query.uploads-status-information+json'
     },
     user
   });

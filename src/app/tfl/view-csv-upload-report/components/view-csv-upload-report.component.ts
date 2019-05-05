@@ -22,7 +22,7 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
         <h1 pdk-typography="heading-large" pdk-margin-vertical="4">View upload report</h1>
         <p>
           Name:<br />
-          {{ csvFileUploadReport.headerFilename }}
+          <span data-role="file-name">{{ csvFileUploadReport.headerFilename }}</span>
         </p>
         <p>
           Uploaded:<br />
@@ -34,7 +34,7 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
             {{ csvFileUploadReport.uploadStatus.status | uploadStatus }}
           </span>
           <ng-template #error>
-            <b pdk-text-colour="red">
+            <b pdk-text-colour="red" data-role="csv-upload-status">
               {{ csvFileUploadReport.uploadStatus.status | uploadStatus }}
             </b>
           </ng-template>
@@ -52,7 +52,8 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
               <ng-template ngPluralCase="other">errors</ng-template>
             </span>
           </h3>
-          <csv-upload-error-list [csvErrors]="csvFileUploadReport.headerErrors"> </csv-upload-error-list>
+          <csv-upload-error-list summary="Header error list" [csvErrors]="csvFileUploadReport.headerErrors">
+          </csv-upload-error-list>
         </section>
 
         <section *ngIf="csvFileUploadReport.offenceErrors?.length">
@@ -63,7 +64,8 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
               <ng-template ngPluralCase="other">errors</ng-template>
             </span>
           </h3>
-          <csv-upload-error-list [csvErrors]="csvFileUploadReport.offenceErrors"> </csv-upload-error-list>
+          <csv-upload-error-list summary="Offences error list" [csvErrors]="csvFileUploadReport.offenceErrors">
+          </csv-upload-error-list>
         </section>
       </pdk-grid>
       <pdk-grid one-third *ngIf="csvFileUploadReport.uploadStatus.status === 'FAILED'">

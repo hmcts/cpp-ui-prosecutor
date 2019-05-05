@@ -1,6 +1,6 @@
-import {BasePage} from '../base.page';
-import {$} from 'protractor';
-import {isStable} from '../../util';
+import { BasePage } from '../base.page';
+import { $ } from 'protractor';
+import { isStable } from '../../util';
 
 export class DashboardPage extends BasePage {
   public readonly subHeading = $('h1 span');
