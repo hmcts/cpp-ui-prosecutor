@@ -30,6 +30,10 @@ import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard'
       {
         path: 'csv-upload',
         loadChildren: './csv-upload/csv-upload.module#CsvUploadModule'
+      },
+      {
+        path: 'check-document-uploads',
+        loadChildren: './check-document-upload/check-document-upload.module#CheckDocumentUploadModule'
       }
     ])
   ],

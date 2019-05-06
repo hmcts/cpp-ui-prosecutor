@@ -8,6 +8,7 @@ import { v4 as uuid } from 'uuid';
 import {
   CsvFileUploadDetails,
   CsvFileUploadReport,
+  DocumentUploadDetails,
   FileUploadStatResult,
   UploadStatus
 } from '../staging-tfl.interface';
@@ -141,6 +142,36 @@ describe('StagingTflService', () => {
       expect(http.command).toHaveBeenCalledWith({
         url: `/stagingtfl-command-api/command/api/rest/staging-tfl/files/uuid`,
         body: formData
+      });
+    });
+  });
+
+  describe('getDocumentUploadDetails', () => {
+    it('should make a call', () => {
+      const mockFileUploadDetailsResult = {
+        supportingDocumentUploads: [
+          {
+            zipFilename: 'fileName.zip',
+            bundleUploadId: 'uploadId',
+            uploadStatus: {
+              status: 'SUCCEEDED'
+            } as UploadStatus
+          } as DocumentUploadDetails
+        ]
+      };
+
+      const expected$ = cold('-a|', { a: mockFileUploadDetailsResult.supportingDocumentUploads });
+      const response$ = cold('-b|', { b: mockFileUploadDetailsResult });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDocumentUploadDetails();
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/stagingtfl-query-api/query/api/rest/stagingtfl/supporting-documents-upload',
+        requestType: 'application/vnd.stagingtfl.query.supporting-documents-upload+json'
       });
     });
   });

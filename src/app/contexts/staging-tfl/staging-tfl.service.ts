@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { Observable } from 'rxjs';
-import { CsvFileUploadDetails, FileUploadStatResult, CsvFileUploadReport } from './staging-tfl.interface';
+import {
+  CsvFileUploadDetails,
+  FileUploadStatResult,
+  CsvFileUploadReport,
+  DocumentUploadDetails
+} from './staging-tfl.interface';
 import { map } from 'rxjs/operators';
 import { v4 as uuid } from 'uuid';
 import { CsvUploadRequestParam } from './staging-tfl-param.interface';
@@ -45,5 +50,14 @@ export class StagingTflService {
       url: `${this.query}/csv-files-upload/${uploadId}`,
       requestType: 'application/vnd.stagingtfl.query.charged-cases-csv-files-upload-by-id+json'
     });
+  }
+
+  getDocumentUploadDetails(): Observable<DocumentUploadDetails[]> {
+    return this.http
+      .query({
+        url: `${this.query}/supporting-documents-upload`,
+        requestType: 'application/vnd.stagingtfl.query.supporting-documents-upload+json'
+      })
+      .pipe(map((result: { supportingDocumentUploads: DocumentUploadDetails[] }) => result.supportingDocumentUploads));
   }
 }

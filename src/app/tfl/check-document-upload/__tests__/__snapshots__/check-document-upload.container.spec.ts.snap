@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckDocumentUploadContainer should compile correctly 1`] = `
+<check-document-upload-container
+  documentUploadDetails$={[Function Store]}
+  store={[Function Store]}
+>
+  <check-document-upload
+    ng-reflect-document-upload-details="[object Object]"
+  >
+    <span>
+      [
+    {
+      "zipFilename": "fileName.zip",
+      "bundleUploadId": "uploadId",
+      "uploadStatus": {
+        "status": "SUCCEEDED"
+      }
+    }
+  ]
+    </span>
+  </check-document-upload>
+</check-document-upload-container>
+`;

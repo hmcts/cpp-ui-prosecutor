@@ -42,3 +42,10 @@ export interface CsvError {
   tflCaseUrn: string;
   validationMessageKey: string;
 }
+
+export interface DocumentUploadDetails {
+  bundleUploadId: string;
+  timestamp: string;
+  zipFilename: string;
+  uploadStatus: UploadStatus;
+}
