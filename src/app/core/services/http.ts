@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
@@ -17,7 +17,12 @@ export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandS
 
 @Injectable()
 export class CustomHttp extends CppHttp {
-  constructor(generateUniqueKey: any, backend: any, notifications: any, private store: Store<State>) {
+  constructor(
+    generateUniqueKey: InjectionToken<{}>,
+    backend: CppHttpBackend,
+    notifications: Notifications,
+    private store: Store<State>
+  ) {
     super(generateUniqueKey, backend, notifications);
   }
 
@@ -56,7 +61,7 @@ export class CustomHttp extends CppHttp {
 }
 
 export function loadHttpFactory(
-  generateUniqueKey: any,
+  generateUniqueKey: InjectionToken<{}>,
   backend: CppHttpBackend,
   notifications: Notifications,
   store: Store<State>
