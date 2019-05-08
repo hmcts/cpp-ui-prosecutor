@@ -30,7 +30,8 @@ import { User } from '../session/users.constant';
       </pdk-grid>
       <pdk-grid one-quarter>
         <ul pdk-list pdk-margin-top="6">
-          <li><a routerLink="/court-admin" pdk-link>Court admin</a></li>
+          <li><a routerLink="/tfl" pdk-link>Tfl prosecutor</a></li>
+          <li><a routerLink="/tvl" pdk-link>Tvl prosecutor</a></li>
         </ul>
       </pdk-grid>
     </pdk-grid>
