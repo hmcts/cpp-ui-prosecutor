@@ -5,6 +5,7 @@ export class UploadStatusPipe implements PipeTransform {
   transform(uploadStatus: string): string {
     switch (uploadStatus) {
       case 'SUCCEEDED':
+      case 'COMPLETED':
         return 'Sent to court';
       case 'FAILED':
         return 'Rejected – errors found';
