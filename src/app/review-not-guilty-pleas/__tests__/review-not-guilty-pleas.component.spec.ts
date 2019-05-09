@@ -7,7 +7,7 @@ import {
   MOCK_PENDING_DATES_TO_AVOID,
   MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE
 } from '../../dashboard/__tests__/test-mock-data';
-import { PdkDividerModule, PdkWarningTextModule } from '@cpp/pdk';
+import { PdkButtonModule, PdkDividerModule, PdkWarningTextModule } from '@cpp/pdk';
 
 describe('ReviewNotGuiltyPleasComponent', () => {
   let navigate: jest.Mock;
@@ -23,7 +23,8 @@ describe('ReviewNotGuiltyPleasComponent', () => {
         RouterTestingModule,
         DefendantNamePipeModule,
         PdkDividerModule,
-        PdkWarningTextModule
+        PdkWarningTextModule,
+        PdkButtonModule
       ]
     });
 
@@ -31,7 +32,7 @@ describe('ReviewNotGuiltyPleasComponent', () => {
     component = fixture.componentInstance;
   }));
 
-  it('when the component is created with zero cases then the component should be created with out failure', () => {
+  it('when the component is created with zero cases then the component should display message "There are no cases to review"', () => {
     component.pleadedNotGuiltyCasesDetail = {
       cases: [],
       count: 0

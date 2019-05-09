@@ -3,7 +3,14 @@ import { ReviewNotGuiltyPleasComponent } from './review-not-guilty-pleas.compone
 import { RouterModule } from '@angular/router';
 import { ReviewNotGuiltyPleasContainer } from './review-not-guilty-pleas.container';
 import { CommonModule } from '@angular/common';
-import { PdkBreadcrumbsModule, PdkCoreModule, PdkDividerModule, PdkTableModule, PdkWarningTextModule } from '@cpp/pdk';
+import {
+  PdkBreadcrumbsModule,
+  PdkButtonModule,
+  PdkCoreModule,
+  PdkDividerModule,
+  PdkTableModule,
+  PdkWarningTextModule
+} from '@cpp/pdk';
 import { DefendantNamePipeModule, FormatAddressPipeModule } from '../shared/pipes';
 
 const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContainer];
@@ -12,6 +19,7 @@ const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContain
   imports: [
     CommonModule,
     PdkCoreModule,
+    PdkButtonModule,
     FormatAddressPipeModule,
     PdkTableModule,
     PdkWarningTextModule,
