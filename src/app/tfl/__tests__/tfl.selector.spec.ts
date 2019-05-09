@@ -15,7 +15,8 @@ describe('tfl selectors', () => {
   const initialState: TflState = {
     casesMissingsjpNoticeResult: undefined,
     fileUploadStats: undefined,
-    csvUploadSuccess: undefined
+    csvUploadSuccess: false,
+    documentUploadSuccess: false
   };
   const createState = (actions: TflAction[]) => {
     return [...actions].reduce((state, action) => reducer(state, action), { tfl: initialState } as FeatureState);

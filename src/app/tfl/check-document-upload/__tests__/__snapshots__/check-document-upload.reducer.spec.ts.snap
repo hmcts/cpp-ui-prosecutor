@@ -9,7 +9,7 @@ Array [
     "uploadStatus": Object {
       "status": "SUCCEEDED",
     },
-    "zipFilename": "fileName.zip",
+    "zipFilename": "fileName.zipFile",
   },
 ]
 `;

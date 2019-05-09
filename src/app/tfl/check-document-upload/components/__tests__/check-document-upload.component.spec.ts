@@ -10,14 +10,14 @@ describe('CheckDocumentUploadComponent', () => {
 
   const mockDocumentUploadDetailsArray = [
     {
-      zipFilename: 'fileName.zip',
+      zipFilename: 'fileName.zipFile',
       bundleUploadId: 'uploadId',
       uploadStatus: {
         status: 'SUCCEEDED'
       } as UploadStatus
     } as DocumentUploadDetails,
     {
-      zipFilename: 'fileName.zip',
+      zipFilename: 'fileName.zipFile',
       bundleUploadId: 'uploadId',
       uploadStatus: {
         status: 'FAILED'

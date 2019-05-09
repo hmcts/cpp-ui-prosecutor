@@ -1,7 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { FeatureState, getCsvUploadStatus } from '../tfl.selectors';
-import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { Observable } from 'rxjs';
 import { ResetCsvUploadPageState, SubmitCsvFiles } from '../tfl.action';
 
@@ -11,7 +10,8 @@ import { ResetCsvUploadPageState, SubmitCsvFiles } from '../tfl.action';
     <csv-upload-page
       [displayFileSubmittedBanner]="displayFileSubmittedBanner$ | async"
       (formSubmit)="formSubmit($event)"
-    ></csv-upload-page>
+    >
+    </csv-upload-page>
   `
 })
 export class CsvUploadContainer implements OnDestroy {

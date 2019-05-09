@@ -29,7 +29,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
 
         <h2 pdk-typography="heading-medium" pdk-margin-top="8">Send SJP notices and other documents</h2>
         <div>
-          <a href="javascript: void(0)" routerLink="" pdk-link>
+          <a href="javascript: void(0)" routerLink="upload-documents" pdk-link>
             Upload SJP notices, previous convictions and witness statements
           </a>
         </div>

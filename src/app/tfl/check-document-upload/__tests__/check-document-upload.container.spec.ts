@@ -15,7 +15,7 @@ describe('CheckDocumentUploadContainer', () => {
   let store: Store<State>;
 
   const mockDocumentUploadDetails = {
-    zipFilename: 'fileName.zip',
+    zipFilename: 'fileName.zipFile',
     bundleUploadId: 'uploadId',
     uploadStatus: {
       status: 'SUCCEEDED'

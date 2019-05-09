@@ -6,9 +6,14 @@ import { CsvUploadRequestParam } from '../contexts/staging-tfl/staging-tfl-param
 export const enum TflActionType {
   LOAD_CASES_WITH_SJP_NOTICE_COUNT_SUCCESS = '[ATCM] Load cases with sjp notice count success',
   LOAD_FILE_UPLOAD_STATS_SUCCESS = '[ATCM] Load upload file stats success',
+
   SUBMIT_CSV_FILES = '[ATCM] Submit CSV files for upload',
   SUBMIT_CSV_FILES_SUCCESS = '[ATCM] Submit CSV files for upload success',
-  RESET_CSV_UPLOAD_PAGE_STATE = '[ATCM] Clear csv upload state'
+  RESET_CSV_UPLOAD_PAGE_STATE = '[ATCM] Clear csv upload state',
+
+  UPLOAD_DOCUMENTS = '[ATCM] Upload documents',
+  UPLOAD_DOCUMENTS_SUCCESS = '[ATCM] Upload documents success',
+  RESET_UPLOAD_DOCUMENT_SUCCESS = '[ATCM] Clear csv upload state'
 }
 
 export class LoadCasesWithSjpNoticeCountSuccess implements Action {
@@ -41,9 +46,30 @@ export class ResetCsvUploadPageState implements Action {
   constructor() {}
 }
 
+export class UploadDocuments implements Action {
+  readonly type = TflActionType.UPLOAD_DOCUMENTS;
+
+  constructor(public zipFile: File) {}
+}
+
+export class UploadDocumentsSuccess implements Action {
+  readonly type = TflActionType.UPLOAD_DOCUMENTS_SUCCESS;
+
+  constructor() {}
+}
+
+export class ResetUploadDocumentSuccess implements Action {
+  readonly type = TflActionType.RESET_UPLOAD_DOCUMENT_SUCCESS;
+
+  constructor() {}
+}
+
 export type TflAction =
   | LoadCasesWithSjpNoticeCountSuccess
   | SubmitCsvFiles
   | SubmitCsvFilesSuccess
   | LoadFileUploadStatsSuccess
-  | ResetCsvUploadPageState;
+  | ResetCsvUploadPageState
+  | UploadDocuments
+  | UploadDocumentsSuccess
+  | ResetUploadDocumentSuccess;

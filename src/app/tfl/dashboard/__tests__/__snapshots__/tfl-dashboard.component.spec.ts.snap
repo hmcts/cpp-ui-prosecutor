@@ -99,7 +99,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
               class="govuk-link"
               href="javascript: void(0)"
               pdk-link=""
-              routerlink=""
+              routerlink="upload-documents"
             >
                Upload SJP notices, previous convictions and witness statements 
             </a>

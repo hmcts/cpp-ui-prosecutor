@@ -60,4 +60,14 @@ export class StagingTflService {
       })
       .pipe(map((result: { supportingDocumentUploads: DocumentUploadDetails[] }) => result.supportingDocumentUploads));
   }
+
+  uploadDocuments(zipFile: File): Observable<void> {
+    const formData = new FormData();
+    formData.append('zipFile', zipFile);
+
+    return this.http.command({
+      url: `${this.command}/upload-supporting-documents/${uuid()}`,
+      body: formData
+    });
+  }
 }

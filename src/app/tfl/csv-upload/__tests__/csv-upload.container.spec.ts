@@ -5,7 +5,6 @@ import { Store, StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
 import { CsvUploadContainer } from '../csv-upload.container';
 import { reducers, State } from '../../../reducers';
-import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { SubmitCsvFiles } from '../../tfl.action';
 import { tflReducer } from '../../tfl.reducer';
 import { CsvUploadRequestParam } from '../../../contexts/staging-tfl/staging-tfl-param.interface';

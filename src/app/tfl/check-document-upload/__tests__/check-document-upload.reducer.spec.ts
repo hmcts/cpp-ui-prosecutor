@@ -4,7 +4,7 @@ import { DocumentUploadAction, LoadDocumentUploadDetailsSuccess } from '../docum
 
 describe('Check document upload reducer', () => {
   const mockDocumentUploadDetails = {
-    zipFilename: 'fileName.zip',
+    zipFilename: 'fileName.zipFile',
     bundleUploadId: 'uploadId',
     uploadStatus: {
       status: 'SUCCEEDED'

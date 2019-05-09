@@ -4,7 +4,13 @@ import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { ApiError } from '../core/actions';
-import { SubmitCsvFiles, SubmitCsvFilesSuccess, TflActionType } from './tfl.action';
+import {
+  SubmitCsvFiles,
+  SubmitCsvFilesSuccess,
+  TflActionType,
+  UploadDocuments,
+  UploadDocumentsSuccess
+} from './tfl.action';
 import { StagingTflService } from '../contexts/staging-tfl';
 
 @Injectable()
@@ -14,6 +20,15 @@ export class TflEffects {
     ofType<SubmitCsvFiles>(TflActionType.SUBMIT_CSV_FILES),
     switchMap(({ csvUploadRequestParam }) => {
       return this.stagingTflService.submitCsvFiles(csvUploadRequestParam).pipe(map(() => new SubmitCsvFilesSuccess()));
+    }),
+    catchError(err => of(new ApiError(err)))
+  );
+
+  @Effect()
+  uploadDocuments$: Observable<Action> = this.actions$.pipe(
+    ofType<UploadDocuments>(TflActionType.UPLOAD_DOCUMENTS),
+    switchMap(({ zipFile }) => {
+      return this.stagingTflService.uploadDocuments(zipFile).pipe(map(() => new UploadDocumentsSuccess()));
     }),
     catchError(err => of(new ApiError(err)))
   );

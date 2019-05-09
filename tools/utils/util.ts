@@ -15,7 +15,7 @@ export const zipDocFile = (fileName): Promise<ReadStream> => {
   const baseFilePath = join(__dirname, '../fixtures/data', fileName);
 
   return new Promise<ReadStream>(async (resolve, reject) => {
-    const zipFile = baseFilePath + '.zip';
+    const zipFile = baseFilePath + '.zipFile';
     const pdfPath = baseFilePath + '.pdf';
     const output = createWriteStream(zipFile);
 

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadDocumentsContainer should compile correctly 1`] = `
+<upload-documents-container
+  store={[Function Store]}
+  uploadSuccess$={[Function Store]}
+>
+  <upload-documents
+    ng-reflect-upload-success="false"
+  >
+    <span>
+      false
+    </span>
+  </upload-documents>
+</upload-documents-container>
+`;
+
+exports[`UploadDocumentsContainer should compile correctly with upload success 1`] = `
+<upload-documents-container
+  store={[Function Store]}
+  uploadSuccess$={[Function Store]}
+>
+  <upload-documents
+    ng-reflect-upload-success="true"
+  >
+    <span>
+      true
+    </span>
+  </upload-documents>
+</upload-documents-container>
+`;

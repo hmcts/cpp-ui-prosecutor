@@ -17,7 +17,7 @@ describe('document upload selectors', () => {
 
   describe('getDocumentUploadDetails', () => {
     const mockDocumentUploadDetails = {
-      zipFilename: 'fileName.zip',
+      zipFilename: 'fileName.zipFile',
       bundleUploadId: 'uploadId',
       uploadStatus: {
         status: 'SUCCEEDED'

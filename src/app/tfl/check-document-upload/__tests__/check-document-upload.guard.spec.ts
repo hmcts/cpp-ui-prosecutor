@@ -45,7 +45,7 @@ describe('CheckDocumentUploadGuard', () => {
 
   it('should call the service and load data', () => {
     const mockDocumentUploadDetails = {
-      zipFilename: 'fileName.zip',
+      zipFilename: 'fileName.zipFile',
       bundleUploadId: 'uploadId',
       uploadStatus: {
         status: 'SUCCEEDED'

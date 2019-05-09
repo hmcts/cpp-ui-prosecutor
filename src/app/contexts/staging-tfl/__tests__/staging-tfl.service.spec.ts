@@ -12,12 +12,14 @@ import {
   FileUploadStatResult,
   UploadStatus
 } from '../staging-tfl.interface';
+import { zip } from 'rxjs';
 
 describe('StagingTflService', () => {
   let http: CppHttp;
   let service: StagingTflService;
   let mockQuery: jest.Mock;
   let mockCommand: jest.Mock;
+  jest.spyOn(uuid, 'v4').mockReturnValue('uuid');
 
   beforeEach(() => {
     mockQuery = jest.fn();
@@ -36,6 +38,7 @@ describe('StagingTflService', () => {
         }
       ]
     });
+
     http = TestBed.get(CppHttp);
     service = TestBed.get(StagingTflService);
   });
@@ -130,7 +133,6 @@ describe('StagingTflService', () => {
       const response$ = cold('-a|', { a: csvUploadRequestParam });
 
       mockCommand.mockReturnValue(response$);
-      jest.spyOn(uuid, 'v4').mockReturnValue('uuid');
 
       const command$ = service.submitCsvFiles(csvUploadRequestParam);
 
@@ -146,12 +148,35 @@ describe('StagingTflService', () => {
     });
   });
 
+  describe('uploadDocuments', () => {
+    it('should make a call', () => {
+      const response = { body: '*' };
+
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockCommand.mockReturnValue(response$);
+
+      const zipFile = new File(['file1'], 'filename1', { type: 'zip' });
+      const command$ = service.uploadDocuments(zipFile);
+      const formData = new FormData();
+      formData.append('zipFile', zipFile);
+
+      expect(command$).toBeObservable(expected$);
+
+      expect(http.command).toHaveBeenCalledWith({
+        url: `/stagingtfl-command-api/command/api/rest/staging-tfl/upload-supporting-documents/uuid`,
+        body: formData
+      });
+    });
+  });
+
   describe('getDocumentUploadDetails', () => {
     it('should make a call', () => {
       const mockFileUploadDetailsResult = {
         supportingDocumentUploads: [
           {
-            zipFilename: 'fileName.zip',
+            zipFilename: 'fileName.zipFile',
             bundleUploadId: 'uploadId',
             uploadStatus: {
               status: 'SUCCEEDED'

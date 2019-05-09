@@ -54,14 +54,14 @@ exports[`CheckDocumentUploadComponent should compile correctly with  multiple ro
     <div>
       [
     {
-      "zipFilename": "fileName.zip",
+      "zipFilename": "fileName.zipFile",
       "bundleUploadId": "uploadId",
       "uploadStatus": {
         "status": "SUCCEEDED"
       }
     },
     {
-      "zipFilename": "fileName.zip",
+      "zipFilename": "fileName.zipFile",
       "bundleUploadId": "uploadId",
       "uploadStatus": {
         "status": "FAILED"
@@ -185,7 +185,7 @@ exports[`CheckDocumentUploadComponent should compile correctly with single row 1
     <div>
       [
     {
-      "zipFilename": "fileName.zip",
+      "zipFilename": "fileName.zipFile",
       "bundleUploadId": "uploadId",
       "uploadStatus": {
         "status": "SUCCEEDED"

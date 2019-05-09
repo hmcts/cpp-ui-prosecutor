@@ -83,7 +83,7 @@ exports[`ListDocumentUploadDetailsComponent should compile correctly with  multi
           class="govuk-table__cell"
           pdk-table-cell=""
         >
-          fileName.zip
+          fileName.zipFile
         </td>
         <td
           class="govuk-table__cell"
@@ -124,7 +124,7 @@ exports[`ListDocumentUploadDetailsComponent should compile correctly with  multi
           class="govuk-table__cell"
           pdk-table-cell=""
         >
-          fileName.zip
+          fileName.zipFile
         </td>
         <td
           class="govuk-table__cell"
@@ -252,7 +252,7 @@ exports[`ListDocumentUploadDetailsComponent should compile correctly with single
           class="govuk-table__cell"
           pdk-table-cell=""
         >
-          fileName.zip
+          fileName.zipFile
         </td>
         <td
           class="govuk-table__cell"

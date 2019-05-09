@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadDocumentsComponent should compile correctly 1`] = `
+<upload-documents
+  uploadDocuments={[Function EventEmitter]}
+>
+  <ol
+    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
+    ng-reflect-vertical="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-vertical="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="/tfl"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        pdk-breadcrumb=""
+      >
+        Upload SJP notices and other documents
+      </a>
+    </li>
+  </ol><h1
+    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="4"
+    pdk-margin-vertical="4"
+    pdk-typography="heading-xlarge"
+  >
+    Upload SJP notices and 
+    <br />
+    other documents
+  </h1><p>
+    Put your documents in a zip file and then upload. You can include:
+  </p><ul>
+    <li>
+      SJP notices
+    </li>
+    <li>
+      previous convictions
+    </li>
+    <li>
+      witness statements
+    </li>
+  </ul><pdk-inset-text>
+     If you only want to upload one document, you'll still need to put it in a zip file. 
+  </pdk-inset-text><upload-document-form>
+    <div>
+      Upload document form
+    </div>
+  </upload-document-form>
+</upload-documents>
+`;
+
+exports[`UploadDocumentsComponent should display upload success message 1`] = `
+<upload-documents
+  uploadDocuments={[Function EventEmitter]}
+  uploadSuccess={[Function Boolean]}
+>
+  <ol
+    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
+    ng-reflect-vertical="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-vertical="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="/tfl"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        pdk-breadcrumb=""
+      >
+        Upload SJP notices and other documents
+      </a>
+    </li>
+  </ol><div
+    class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+    ng-reflect-vertical="1"
+    pdk-margin-vertical="1"
+  >
+    <pdk-context-panel
+      icon="tick"
+      title="Your zip file is being checked for errors"
+    >
+       Check back within 24 hours to find out if it's been successfully sent to court 
+    </pdk-context-panel>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      ng-reflect-vertical="6"
+      pdk-margin-vertical="6"
+    >
+      <a
+        class="govuk-link"
+        href="javascript:void(0)"
+        pdk-link=""
+        routerlink="/tfl"
+      >
+         Back to case tasks 
+      </a>
+    </div>
+  </div>
+</upload-documents>
+`;
+
+exports[`UploadDocumentsComponent should show errors 1`] = `
+<upload-documents
+  errors={[Function Array]}
+  uploadDocuments={[Function EventEmitter]}
+>
+  <ol
+    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
+    ng-reflect-vertical="4"
+    pdk-breadcrumb-list=""
+    pdk-margin-vertical="4"
+  >
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        href="javascript: void(0)"
+        pdk-breadcrumb=""
+        routerlink="/tfl"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      pdk-breadcrumb-list-item=""
+    >
+      <a
+        pdk-breadcrumb=""
+      >
+        Upload SJP notices and other documents
+      </a>
+    </li>
+  </ol><h1
+    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="4"
+    pdk-margin-vertical="4"
+    pdk-typography="heading-xlarge"
+  >
+    Upload SJP notices and 
+    <br />
+    other documents
+  </h1><p>
+    Put your documents in a zip file and then upload. You can include:
+  </p><ul>
+    <li>
+      SJP notices
+    </li>
+    <li>
+      previous convictions
+    </li>
+    <li>
+      witness statements
+    </li>
+  </ul><pdk-inset-text>
+     If you only want to upload one document, you'll still need to put it in a zip file. 
+  </pdk-inset-text><pdk-error-summary
+    class="govuk-!-margin-top-5"
+    focusonchange=""
+    ng-reflect-errors="[object Object]"
+    ng-reflect-focus-on-change=""
+    ng-reflect-title="Fix the following"
+    ng-reflect-top="5"
+    pdk-margin-top="5"
+    tabindex="-1"
+    title="Fix the following"
+  >
+    <div
+      aria-labelledby="pdk-error-sumamry-1"
+      class="govuk-error-summary"
+    >
+      <h2
+        class="govuk-error-summary__title"
+        id="pdk-error-sumamry-1"
+      >
+        Fix the following
+      </h2>
+      <div
+        class="govuk-error-summary__body"
+      >
+        <ul
+          class="govuk-list govuk-error-summary__list"
+        >
+          
+          <li>
+            <a
+              href="javascript:void(0)"
+            >
+               Select file 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </pdk-error-summary><upload-document-form>
+    <div>
+      Upload document form
+    </div>
+  </upload-document-form>
+</upload-documents>
+`;

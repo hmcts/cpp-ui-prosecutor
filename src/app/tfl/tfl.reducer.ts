@@ -5,13 +5,15 @@ import { FileUploadStatResult } from '../contexts/staging-tfl';
 export interface TflState {
   casesMissingsjpNoticeResult: CasesMissingSjpNoticeResult;
   csvUploadSuccess: boolean;
+  documentUploadSuccess: boolean;
   fileUploadStats: FileUploadStatResult;
 }
 
 const initialState: TflState = {
   casesMissingsjpNoticeResult: undefined,
   fileUploadStats: undefined,
-  csvUploadSuccess: false
+  csvUploadSuccess: false,
+  documentUploadSuccess: false
 };
 
 export function tflReducer(state: TflState = initialState, action: TflAction): TflState {
@@ -35,6 +37,16 @@ export function tflReducer(state: TflState = initialState, action: TflAction): T
       return {
         ...state,
         csvUploadSuccess: false
+      };
+    case TflActionType.UPLOAD_DOCUMENTS_SUCCESS:
+      return {
+        ...state,
+        documentUploadSuccess: true
+      };
+    case TflActionType.RESET_UPLOAD_DOCUMENT_SUCCESS:
+      return {
+        ...state,
+        documentUploadSuccess: false
       };
 
     default:
