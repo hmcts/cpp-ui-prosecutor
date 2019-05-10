@@ -4,6 +4,7 @@ import { WithdrawOffenceRequestParam } from '../contexts/sjp';
 export const enum CaseOverviewActionType {
   WITHDRAW_OFFENCES = '[ATCM] Withdraw offences',
   WITHDRAW_OFFENCES_SUCCESS = '[ATCM] Withdraw offences success',
+  WITHDRAW_OFFENCES_FAILED = '[ATCM] Withdraw offences Failed',
   SUBMIT_DATES_TO_AVOID = '[ATCM] Submit Dates to Avoid',
   SUBMIT_DATES_TO_AVOID_SUCCESS = '[ATCM] Submit Dates to Avoid Success',
   SUBMIT_DATES_TO_AVOID_FAILED = '[ATCM] Submit Dates to Avoid Failed',
@@ -19,6 +20,12 @@ export class WithdrawOffences implements Action {
 
 export class WithdrawOffencesSuccess implements Action {
   readonly type = CaseOverviewActionType.WITHDRAW_OFFENCES_SUCCESS;
+
+  constructor() {}
+}
+
+export class WithdrawOffencesFailed implements Action {
+  readonly type = CaseOverviewActionType.WITHDRAW_OFFENCES_FAILED;
 
   constructor() {}
 }
@@ -56,6 +63,7 @@ export class SubmitDatesToAvoidFailed implements Action {
 export type CaseOverviewAction =
   | WithdrawOffences
   | WithdrawOffencesSuccess
+  | WithdrawOffencesFailed
   | ResetCaseOverviewState
   | ResetDatesToAvoidState
   | SubmitDatesToAvoid

@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseSubmissionMessagesComponent should compile correctly 1`] = `
+<case-submission-messages
+  displayDatesToAvoidUpdateFailedBanner="false"
+  displayOffencesWithdrawnBanner={[Function Boolean]}
+  displayOffencesWithdrawnFailedBanner={[Function Boolean]}
+  kase={[Function Object]}
+>
+  <pdk-alert
+    class="govuk-!-margin-top-3"
+    icon="true"
+    ng-reflect-icon="true"
+    ng-reflect-top="3"
+    ng-reflect-type="confirmation"
+    pdk-margin-top="3"
+    type="confirmation"
+  >
+    <div
+      class="pdk-alert pdk-alert--confirmation"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--tick"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             Your request has been sent 
+          </div>
+        </div>
+      </div>
+    </div>
+  </pdk-alert><pdk-alert
+    class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+    icon="true"
+    ng-reflect-icon="true"
+    ng-reflect-type="warning"
+    ng-reflect-vertical="1"
+    pdk-margin-vertical="1"
+    type="warning"
+  >
+    <div
+      class="pdk-alert pdk-alert--warning"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--alert"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             This case is view–only, as a legal adviser is working on it. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </pdk-alert><pdk-alert
+    class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+    icon="true"
+    ng-reflect-icon="true"
+    ng-reflect-type="warning"
+    ng-reflect-vertical="1"
+    pdk-margin-vertical="1"
+    type="warning"
+  >
+    <div
+      class="pdk-alert pdk-alert--warning"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--alert"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             You can't edit this case because it has already been completed. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </pdk-alert><pdk-alert
+    class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+    icon="true"
+    ng-reflect-icon="true"
+    ng-reflect-type="warning"
+    ng-reflect-vertical="1"
+    pdk-margin-vertical="1"
+    type="warning"
+  >
+    <div
+      class="pdk-alert pdk-alert--warning"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--alert"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             This case is view–only, as a legal adviser is working on it. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </pdk-alert>
+</case-submission-messages>
+`;

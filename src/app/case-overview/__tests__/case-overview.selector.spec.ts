@@ -16,6 +16,11 @@ describe('case overview/selectors', () => {
       const state = createState([new fromActions.WithdrawOffencesSuccess()]);
       expect(fromSelectors.getWithdrawOffenceStatus(state)).toMatchSnapshot();
     });
+
+    it('should respond to failure', () => {
+      const state = createState([new fromActions.WithdrawOffencesFailed()]);
+      expect(fromSelectors.getWithdrawOffenceFailed(state)).toMatchSnapshot();
+    });
   });
 
   describe('getDatesToAvoidStatus', () => {

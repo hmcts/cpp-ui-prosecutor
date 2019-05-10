@@ -3,6 +3,7 @@ import {
   CaseOverviewAction,
   SubmitDatesToAvoidFailed,
   SubmitDatesToAvoidSuccess,
+  WithdrawOffencesFailed,
   WithdrawOffencesSuccess
 } from '../case-overview.action';
 
@@ -15,6 +16,12 @@ describe(' Case Overview reducer', () => {
 
     it('should update the withdraw offences success state', () => {
       const action = new WithdrawOffencesSuccess();
+      const result = caseOverviewReducer(undefined, action);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should update the withdraw offences failed state', () => {
+      const action = new WithdrawOffencesFailed();
       const result = caseOverviewReducer(undefined, action);
       expect(result).toMatchSnapshot();
     });

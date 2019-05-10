@@ -37,7 +37,8 @@ describe('OverviewComponent', () => {
         MockStatementOfFactsComponent,
         MockCaseHeaderBadgeContainer,
         MockSubComponent,
-        PersonalDetailsChangeAlertComponent
+        PersonalDetailsChangeAlertComponent,
+        MockSubmissionMessagesComponent
       ],
       imports: [
         PdkCoreModule,
@@ -190,5 +191,21 @@ describe('OverviewComponent', () => {
     @Input() defendantDetails: Defendant;
     @Input() kase: Case;
     @Input() caseId: string;
+  }
+
+  @Component({
+    selector: 'case-submission-messages',
+    template: `
+      <span>{{ kase | json }}</span>
+      <span>{{ displayOffencesWithdrawnBanner }}</span>
+      <span>{{ displayOffencesWithdrawnFailedBanner }}</span>
+      <span>{{ displayDatesToAvoidUpdateFailedBanner }}</span>
+    `
+  })
+  class MockSubmissionMessagesComponent {
+    @Input() kase: Case;
+    @Input() displayOffencesWithdrawnBanner: boolean;
+    @Input() displayOffencesWithdrawnFailedBanner: boolean;
+    @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   }
 });

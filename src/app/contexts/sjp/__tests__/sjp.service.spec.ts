@@ -145,7 +145,7 @@ describe('SjpService', () => {
         requestType: 'application/vnd.sjp.set-offences-withdrawal-requests-status+json',
         body: MOCK_WITHDRAW_STATE,
         successEvent: 'public.sjp.offences-withdrawal-status-set',
-        errorEvent: []
+        errorEvent: 'public.sjp.case-update-rejected'
       });
     });
   });

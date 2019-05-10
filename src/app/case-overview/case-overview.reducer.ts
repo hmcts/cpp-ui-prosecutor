@@ -2,12 +2,14 @@ import { CaseOverviewAction, CaseOverviewActionType } from './case-overview.acti
 
 export interface CaseOverviewState {
   withdrawOffencesSuccess: boolean;
+  withdrawOffencesFailed: boolean;
   datesToAvoidSuccess: boolean;
   datesToAvoidFailed: boolean;
 }
 
 const initialState: CaseOverviewState = {
   withdrawOffencesSuccess: false,
+  withdrawOffencesFailed: false,
   datesToAvoidSuccess: false,
   datesToAvoidFailed: false
 };
@@ -21,6 +23,13 @@ export function caseOverviewReducer(
       return {
         ...state,
         withdrawOffencesSuccess: true
+      };
+    }
+
+    case CaseOverviewActionType.WITHDRAW_OFFENCES_FAILED: {
+      return {
+        ...state,
+        withdrawOffencesFailed: true
       };
     }
 

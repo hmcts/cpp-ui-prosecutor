@@ -11,7 +11,8 @@ import {
   SubmitDatesToAvoidFailed,
   SubmitDatesToAvoidSuccess,
   WithdrawOffences,
-  WithdrawOffencesSuccess
+  WithdrawOffencesSuccess,
+  WithdrawOffencesFailed
 } from './case-overview.action';
 import { Router } from '@angular/router';
 import { getCase, getRole } from '../core/selectors';
@@ -33,7 +34,20 @@ export class CaseOverviewEffects {
         )
       )
     ),
-    catchError(err => of(new ApiError(err)))
+    catchError(err => {
+      if (err.data && (err.data.reason === 'CASE_ASSIGNED' || err.data.reason === 'CASE_COMPLETED')) {
+        return this.store.pipe(select(getRole)).pipe(
+          switchMap(role =>
+            this.sjpService.getCaseById(err.data.caseId).pipe(
+              switchMap(newCase => [new LoadCaseSuccess(newCase), new WithdrawOffencesFailed()]),
+              tap(() => this.router.navigate([role, 'case-overview', err.data.caseId]))
+            )
+          ),
+          catchError(nestedErr => of(new ApiError(nestedErr)))
+        );
+      }
+      return of(new ApiError(err));
+    })
   );
 
   @Effect()

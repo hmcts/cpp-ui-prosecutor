@@ -57,9 +57,120 @@ exports[`OverviewComponent should compile correctly 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -421,14 +532,14 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c4=""
+                _nghost-c3=""
               >
                 <div
-                  _ngcontent-c4=""
+                  _ngcontent-c3=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c4=""
+                    _ngcontent-c3=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -850,41 +961,120 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    <pdk-alert
-      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-      icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
-      pdk-margin-vertical="1"
-      type="warning"
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
     >
-      <div
-        class="pdk-alert pdk-alert--warning"
-        role="alert"
-      >
-        <div
-          class="pdk-alert__container"
-        >
-          
-          <i
-            aria-hidden="true"
-            class="pdk-alert__icon pdk-alert__icon--alert"
-            role="presentation"
-          />
-          <div
-            class="pdk-alert__message"
-          >
-            <div>
-               This case is view–only, as a legal adviser is working on it. 
-            </div>
-          </div>
-        </div>
-      </div>
-    </pdk-alert>
-    
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": true,
+    "assigned": true,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -1609,9 +1799,120 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": true,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -2336,9 +2637,120 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -2790,14 +3202,14 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c39=""
+                _nghost-c38=""
               >
                 <div
-                  _ngcontent-c39=""
+                  _ngcontent-c38=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c39=""
+                    _ngcontent-c38=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -3070,9 +3482,120 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -3473,14 +3996,14 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c46=""
+                _nghost-c45=""
               >
                 <div
-                  _ngcontent-c46=""
+                  _ngcontent-c45=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c46=""
+                    _ngcontent-c45=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -3902,9 +4425,120 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -4266,14 +4900,14 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c32=""
+                _nghost-c31=""
               >
                 <div
-                  _ngcontent-c32=""
+                  _ngcontent-c31=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c32=""
+                    _ngcontent-c31=""
                     class="pdk-related__section"
                   >
                     <h1
@@ -4552,9 +5186,120 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    
-    
-    
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReason": "some reason",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "1957-03-11",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": false,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
     <pdk-grid
       container=""
       ng-reflect-container=""
@@ -4916,14 +5661,14 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-c25=""
+                _nghost-c24=""
               >
                 <div
-                  _ngcontent-c25=""
+                  _ngcontent-c24=""
                   class="pdk-related"
                 >
                   <div
-                    _ngcontent-c25=""
+                    _ngcontent-c24=""
                     class="pdk-related__section"
                   >
                     <h1

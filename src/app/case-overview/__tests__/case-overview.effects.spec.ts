@@ -11,6 +11,7 @@ import {
   SubmitDatesToAvoidFailed,
   SubmitDatesToAvoidSuccess,
   WithdrawOffences,
+  WithdrawOffencesFailed,
   WithdrawOffencesSuccess
 } from '../case-overview.action';
 import { MOCK_CASE } from './test-mock-data';
@@ -129,6 +130,31 @@ describe('Case Overview Effects', () => {
 
       getCaseById.mockReturnValue(response$);
       withdrawOffences.mockReturnValue(cold('--x|', { x: true }));
+
+      expect(effects.withdrawOffences).toBeObservable(expected$);
+      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
+    });
+
+    it('should respond with error when case is assigned and navigate to case overview', () => {
+      const MOCK_CASE_ERROR = {
+        data: {
+          reason: 'CASE_ASSIGNED',
+          caseId: MOCK_CASE.id
+        }
+      };
+
+      const expected$ = cold(
+        '---(bc)',
+        {
+          b: new LoadCaseSuccess(MOCK_CASE),
+          c: new WithdrawOffencesFailed()
+        },
+        MOCK_CASE_ERROR
+      );
+      const response$ = cold('-a', { a: MOCK_CASE });
+
+      getCaseById.mockReturnValue(response$);
+      withdrawOffences.mockReturnValue(cold('-#|', {}, MOCK_CASE_ERROR));
 
       expect(effects.withdrawOffences).toBeObservable(expected$);
       expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
