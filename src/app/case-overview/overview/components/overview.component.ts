@@ -45,6 +45,8 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
           {{ defendant.personalDetails.address | formatAddress: ', ' }}
         </p>
 
+        <personal-details-change-alert [personalDetails]="defendant.personalDetails"></personal-details-change-alert>
+
         <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 
         <div pdk-margin-vertical="8">

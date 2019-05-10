@@ -21,6 +21,7 @@ import {
 import { Case, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
+import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -35,7 +36,8 @@ describe('OverviewComponent', () => {
         MockPleaMitigationComponent,
         MockStatementOfFactsComponent,
         MockCaseHeaderBadgeContainer,
-        MockSubComponent
+        MockSubComponent,
+        PersonalDetailsChangeAlertComponent
       ],
       imports: [
         PdkCoreModule,
@@ -107,6 +109,16 @@ describe('OverviewComponent', () => {
       }
     ];
     fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should compile correctly with personal detail change alert', () => {
+    fixture.componentInstance.defendant.personalDetails.dobChanged = true;
+    fixture.detectChanges();
+
+    const compiled = fixture.debugElement.nativeElement;
+    const alertMessage = compiled.querySelector('personal-details-change-alert');
+    expect(alertMessage.textContent).toContain('The following defendant details have been updated:');
     expect(fixture).toMatchSnapshot();
   });
 
