@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
 import { State } from '../../../reducers';
-import { SjpNoticeCasesCountResult, SjpService } from '../../../contexts/sjp';
+import { CasesMissingSjpNoticeResult, SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { SjpNoticeCasesDataGuard } from '../sjp-notice-cases-data.guard';
@@ -11,11 +11,11 @@ import { tflReducer } from '../../tfl.reducer';
 describe('SjpNoticeCasesDataGuard', () => {
   let pleadedNotGuiltyCasesDataGuard: SjpNoticeCasesDataGuard;
   let store: Store<State>;
-  let getCasesWithSjpNoticeCount: jest.Mock;
+  let getCasesMissingSjpNoticeCount: jest.Mock;
   let navigate: jest.Mock;
 
   beforeEach(() => {
-    getCasesWithSjpNoticeCount = jest.fn();
+    getCasesMissingSjpNoticeCount = jest.fn();
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
@@ -26,7 +26,7 @@ describe('SjpNoticeCasesDataGuard', () => {
         {
           provide: SjpService,
           useValue: {
-            getCasesWithSjpNoticeCount
+            getCasesMissingSjpNoticeCount
           }
         },
         {
@@ -44,11 +44,11 @@ describe('SjpNoticeCasesDataGuard', () => {
   });
 
   it('should call the service and load data', () => {
-    const sjpNoticeCaseResult = { count: 0 } as SjpNoticeCasesCountResult;
+    const sjpNoticeCaseResult = { count: 0 } as CasesMissingSjpNoticeResult;
     const sjpNoticeCaseResult$ = cold('-a|', { a: sjpNoticeCaseResult });
     const expected$ = cold('-(b|)', { b: true });
 
-    getCasesWithSjpNoticeCount.mockReturnValue(sjpNoticeCaseResult$);
+    getCasesMissingSjpNoticeCount.mockReturnValue(sjpNoticeCaseResult$);
 
     const activate$ = pleadedNotGuiltyCasesDataGuard.canActivate();
 
@@ -60,7 +60,7 @@ describe('SjpNoticeCasesDataGuard', () => {
   it('should resolve to false and navigate to technical error page on failures', () => {
     const error$ = cold('--#');
 
-    getCasesWithSjpNoticeCount.mockReturnValue(error$);
+    getCasesMissingSjpNoticeCount.mockReturnValue(error$);
 
     const activate$ = pleadedNotGuiltyCasesDataGuard.canActivate();
 

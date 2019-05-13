@@ -19,6 +19,43 @@ const MOCK_WITHDRAW_STATE = {
   ]
 };
 
+const MOCK_CASES_MISSING_SJP_NOTICE = {
+  ids: ['caseId1', 'caseId2'],
+  count: 2,
+  cases: [
+    {
+      id: 'caseId1',
+      urn: '22C22222222',
+      defendant: {
+        id: 'defendantId1',
+        title: 'Mr',
+        firstName: 'Abel',
+        lastName: 'Krumps',
+        dateOfBirth: '1972-01-01',
+        gender: 'Male',
+        nationalInsuranceNumber: 'SR67854OP'
+      },
+      prosecutingAuthority: 'TFL',
+      postingDate: '2019-05-03'
+    },
+    {
+      id: 'caseId2',
+      urn: '33C2DF22222',
+      defendant: {
+        id: 'defendantId2',
+        title: 'Mrs',
+        firstName: 'Linda',
+        lastName: 'Craig',
+        dateOfBirth: '1980-07-12',
+        gender: 'Female',
+        nationalInsuranceNumber: 'SR63344OQ'
+      },
+      prosecutingAuthority: 'TFL',
+      postingDate: '2019-05-03'
+    }
+  ]
+};
+
 describe('SjpService', () => {
   let http: CppHttp;
   let service: SjpService;
@@ -150,7 +187,7 @@ describe('SjpService', () => {
     });
   });
 
-  describe('getCasesWithSjpNoticeCount', () => {
+  describe('getCasesMissingSjpNoticeCount', () => {
     it('should make a call', () => {
       const response = { body: '*' };
       const response$ = cold('-a|', { a: response });
@@ -158,12 +195,33 @@ describe('SjpService', () => {
 
       mockQuery.mockReturnValue(response$);
 
-      const query$ = service.getCasesWithSjpNoticeCount();
+      const query$ = service.getCasesMissingSjpNoticeCount();
 
       expect(query$).toBeObservable(expected$);
 
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn?limit=0',
+        requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
+      });
+    });
+  });
+
+  describe('getCasesMissingSjpNotice', () => {
+    it('should make a call', () => {
+      const result = MOCK_CASES_MISSING_SJP_NOTICE;
+      const expected = MOCK_CASES_MISSING_SJP_NOTICE.cases;
+
+      const response$ = cold('-a|', { a: result });
+      const expected$ = cold('-b|', { b: expected });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getCasesMissingSjpNotice();
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn',
         requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
       });
     });

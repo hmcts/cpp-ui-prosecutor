@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CasesMissingSjpNoticesContainer should compile correctly 1`] = `
+<cases-missing-sjp-notices-container
+  casesMissingNotices$={[Function Store]}
+  store={[Function Store]}
+>
+  <cases-missing-sjp-notices
+    ng-reflect-cases-missing-notices=""
+  >
+    <div>
+      []
+    </div>
+  </cases-missing-sjp-notices>
+</cases-missing-sjp-notices-container>
+`;

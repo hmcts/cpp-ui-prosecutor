@@ -50,14 +50,14 @@ describe('TflDashboardContainer', () => {
     selector: 'tfl-dashboard',
     template: `
       <span>{{ pleadedNotGuiltyCasesDetail | json }}</span>
-      <span>{{ casesWithSjpNoticeCount }}</span>
+      <span>{{ casesMissingSjpNoticeCount }}</span>
       <span>{{ documentsUploadErrorCount }}</span>
       <span>{{ csvUploadErrorCount }}</span>
     `
   })
   class MockTflDashboardComponent {
     @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
-    @Input() casesWithSjpNoticeCount: number;
+    @Input() casesMissingSjpNoticeCount: number;
     @Input() documentsUploadErrorCount: number;
     @Input() csvUploadErrorCount: number;
   }

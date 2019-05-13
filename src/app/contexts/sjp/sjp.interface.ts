@@ -171,7 +171,26 @@ export interface DefendantDetailsUpdatesResult {
   total: number;
 }
 
-export interface SjpNoticeCasesCountResult {
+export interface DefendantSummary {
+  id: string;
+  title: string;
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string;
+  nationalInsuranceNumber: string;
+  gender: string;
+}
+
+export interface CaseSummary {
+  id: string;
+  urn: string;
+  defendant: DefendantSummary;
+  prosecutingAuthority: string;
+  postingDate: string;
+}
+
+export interface CasesMissingSjpNoticeResult {
   count: number;
   ids?: string[];
+  cases?: CaseSummary[];
 }

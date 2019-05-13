@@ -6,7 +6,7 @@ export interface FeatureState extends State {
   tfl: TflState;
 }
 
-export const getCasesWithSjpNotice = (state: FeatureState) => state.tfl.sjpNoticeCaseResult;
+export const getCasesWithSjpNotice = (state: FeatureState) => state.tfl.casesMissingsjpNoticeResult;
 export const getFileUploadStats = (state: FeatureState) => state.tfl.fileUploadStats;
 
 export const getCasesWithSjpNoticeCount = createSelector(

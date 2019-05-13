@@ -13,7 +13,7 @@ import { FileUploadStatResult } from '../../contexts/staging-tfl';
 describe('tfl selectors', () => {
   const reducer = combineReducers({ ...reducers, tfl: tflReducer });
   const initialState: TflState = {
-    sjpNoticeCaseResult: undefined,
+    casesMissingsjpNoticeResult: undefined,
     fileUploadStats: undefined,
     csvUploadSuccess: undefined
   };
@@ -21,7 +21,7 @@ describe('tfl selectors', () => {
     return [...actions].reduce((state, action) => reducer(state, action), { tfl: initialState } as FeatureState);
   };
 
-  describe('getCasesWithSjpNoticeCount', () => {
+  describe('getCasesMissingSjpNoticeCount', () => {
     it('should select the sjp notice case from the store', () => {
       const state = createState([new LoadCasesWithSjpNoticeCountSuccess({ count: 10 })]);
       expect(getCasesWithSjpNoticeCount(state)).toEqual(10);

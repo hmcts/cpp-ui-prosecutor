@@ -236,13 +236,13 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
             </pdk-summary-item>
           </a>
           <a
-            href=""
+            href="javascript: void(0);"
+            routerlink="cases-missing-sjp-notices"
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"
               hero=""
               label="case missing SJP notices"
-              ng-reflect-count="5"
               ng-reflect-hero=""
               ng-reflect-label="case missing SJP notices"
               ng-reflect-type="blue"
@@ -254,7 +254,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
                 <span
                   class="pdk-summary-item__number pdk-summary-item__number--hero"
                 >
-                   5 
+                    
                 </span>
                 <span
                   class="pdk-summary-item__label"

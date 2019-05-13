@@ -11,7 +11,7 @@ import { getCasesWithSjpNoticeCount, getCsvUploadErrorCount, getDocumentsUploadE
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <tfl-dashboard
-      [casesWithSjpNoticeCount]="casesWithSjpNoticeCount$ | async"
+      [casesMissingSjpNoticeCount]="casesMissingSjpNoticeCount$ | async"
       [pleadedNotGuiltyCasesDetail]="pleadedNotGuiltyCasesDetail$ | async"
       [documentsUploadErrorCount]="documentsUploadErrorCount$ | async"
       [csvUploadErrorCount]="csvUploadErrorCount$ | async"
@@ -21,13 +21,13 @@ import { getCasesWithSjpNoticeCount, getCsvUploadErrorCount, getDocumentsUploadE
 })
 export class TflDashboardContainer {
   pleadedNotGuiltyCasesDetail$: Observable<PleadedNotGuiltyCaseResult>;
-  casesWithSjpNoticeCount$: Observable<number>;
+  casesMissingSjpNoticeCount$: Observable<number>;
   documentsUploadErrorCount$: Observable<number>;
   csvUploadErrorCount$: Observable<number>;
 
   constructor(private store: Store<State>) {
     this.pleadedNotGuiltyCasesDetail$ = this.store.pipe(select(getPleadedNotGuiltyCasesDetail));
-    this.casesWithSjpNoticeCount$ = this.store.pipe(select(getCasesWithSjpNoticeCount));
+    this.casesMissingSjpNoticeCount$ = this.store.pipe(select(getCasesWithSjpNoticeCount));
     this.documentsUploadErrorCount$ = this.store.pipe(select(getDocumentsUploadErrorCount));
     this.csvUploadErrorCount$ = this.store.pipe(select(getCsvUploadErrorCount));
   }

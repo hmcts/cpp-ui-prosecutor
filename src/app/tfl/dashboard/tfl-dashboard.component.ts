@@ -57,7 +57,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
           <pdk-summary-item pdk-text-colour="blue" hero [count]="csvUploadErrorCount" label="CSV errors in last upload">
           </pdk-summary-item>
         </a>
-        <a href="" href="javascript: void(0);" routerLink="check-document-uploads">
+        <a href="javascript: void(0);" routerLink="check-document-uploads">
           <pdk-summary-item
             pdk-text-colour="blue"
             hero
@@ -66,11 +66,11 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
           >
           </pdk-summary-item>
         </a>
-        <a href="">
+        <a href="javascript: void(0);" routerLink="cases-missing-sjp-notices">
           <pdk-summary-item
             pdk-text-colour="blue"
             hero
-            [count]="casesWithSjpNoticeCount"
+            [count]="casesMissingSjpNoticeCount"
             label="case missing SJP notices"
           >
           </pdk-summary-item>
@@ -81,7 +81,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
 })
 export class TflDashboardComponent {
   @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
-  @Input() casesWithSjpNoticeCount: number;
+  @Input() casesMissingSjpNoticeCount: number;
   @Input() documentsUploadErrorCount: number;
   @Input() csvUploadErrorCount: number;
 }

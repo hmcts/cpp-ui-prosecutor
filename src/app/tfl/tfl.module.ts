@@ -7,6 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { TflEffects } from './tfl.effects';
 import { CommonModule } from '@angular/common';
 import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard';
+import { CasesMissingSjpNoticesGuard } from './cases-missing-sjp-notices/cases-missing-sjp-notices.guard';
 
 @NgModule({
   imports: [
@@ -34,6 +35,10 @@ import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard'
       {
         path: 'check-document-uploads',
         loadChildren: './check-document-upload/check-document-upload.module#CheckDocumentUploadModule'
+      },
+      {
+        path: 'cases-missing-sjp-notices',
+        loadChildren: './cases-missing-sjp-notices/cases-missing-sjp-notices.module#CasesMissingSjpNoticesModule'
       }
     ])
   ],

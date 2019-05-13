@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import {
   Case,
+  CaseDetails,
+  CasesMissingSjpNoticeResult,
+  CaseSummary,
+  DefendantDetailsUpdatesResult,
   PleadedNotGuiltyCaseResult,
-  SearchResult,
-  SjpNoticeCasesCountResult,
-  DefendantDetailsUpdatesResult
+  SearchResult
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class SjpService {
@@ -31,11 +34,20 @@ export class SjpService {
     });
   }
 
-  getCasesWithSjpNoticeCount(): Observable<SjpNoticeCasesCountResult> {
+  getCasesMissingSjpNoticeCount(): Observable<CasesMissingSjpNoticeResult> {
     return this.http.query({
       url: `${this.query}/cases-missing-sjpn?limit=0`,
       requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
     });
+  }
+
+  getCasesMissingSjpNotice(): Observable<CaseSummary[]> {
+    return this.http
+      .query({
+        url: `${this.query}/cases-missing-sjpn`,
+        requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
+      })
+      .pipe(map((result: CasesMissingSjpNoticeResult) => result.cases));
   }
 
   getCasesDetails(searchKeyword: string): Observable<SearchResult> {

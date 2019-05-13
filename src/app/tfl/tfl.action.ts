@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { SjpNoticeCasesCountResult } from '../contexts/sjp';
+import { CasesMissingSjpNoticeResult } from '../contexts/sjp';
 import { FileUploadStatResult } from '../contexts/staging-tfl/staging-tfl.interface';
 import { CsvUploadRequestParam } from '../contexts/staging-tfl/staging-tfl-param.interface';
 
@@ -14,7 +14,7 @@ export const enum TflActionType {
 export class LoadCasesWithSjpNoticeCountSuccess implements Action {
   readonly type = TflActionType.LOAD_CASES_WITH_SJP_NOTICE_COUNT_SUCCESS;
 
-  constructor(public sjpNoticeCaseResult: SjpNoticeCasesCountResult) {}
+  constructor(public sjpNoticeCaseResult: CasesMissingSjpNoticeResult) {}
 }
 
 export class LoadFileUploadStatsSuccess implements Action {

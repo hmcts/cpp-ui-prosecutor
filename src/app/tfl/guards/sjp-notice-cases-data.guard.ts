@@ -12,7 +12,7 @@ export class SjpNoticeCasesDataGuard implements CanActivate {
   constructor(private store: Store<State>, private sjpService: SjpService, private router: Router) {}
 
   canActivate(): Observable<boolean> {
-    return this.sjpService.getCasesWithSjpNoticeCount().pipe(
+    return this.sjpService.getCasesMissingSjpNoticeCount().pipe(
       tap(result => this.store.dispatch(new LoadCasesWithSjpNoticeCountSuccess(result))),
       mapTo(true),
       catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
