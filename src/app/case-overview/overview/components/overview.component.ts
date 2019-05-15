@@ -21,7 +21,6 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
     <case-header-badge-container></case-header-badge-container>
     <case-submission-messages
       [kase]="kase"
-      [displayOffencesWithdrawnFailedBanner]="displayOffencesWithdrawnFailedBanner"
       [displayOffencesWithdrawnBanner]="displayOffencesWithdrawnBanner"
       [displayDatesToAvoidUpdateFailedBanner]="displayDatesToAvoidUpdateFailedBanner"
     >
@@ -94,6 +93,5 @@ export class OverviewComponent {
   @Input() defendant: Defendant;
   @Input() offences: Offence[];
   @Input() displayOffencesWithdrawnBanner: boolean;
-  @Input() displayOffencesWithdrawnFailedBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
 }

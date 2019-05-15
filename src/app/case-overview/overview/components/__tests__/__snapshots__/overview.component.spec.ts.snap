@@ -167,9 +167,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
       <span>
         
       </span>
-      <span>
-        
-      </span>
     </case-submission-messages>
     <pdk-grid
       container=""
@@ -1071,9 +1068,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
       <span>
         
       </span>
-      <span>
-        
-      </span>
     </case-submission-messages>
     <pdk-grid
       container=""
@@ -1902,9 +1896,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-      </span>
-      <span>
-        
       </span>
       <span>
         
@@ -2747,9 +2738,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
       <span>
         
       </span>
-      <span>
-        
-      </span>
     </case-submission-messages>
     <pdk-grid
       container=""
@@ -3585,9 +3573,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-      </span>
-      <span>
-        
       </span>
       <span>
         
@@ -4535,9 +4520,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
       <span>
         
       </span>
-      <span>
-        
-      </span>
     </case-submission-messages>
     <pdk-grid
       container=""
@@ -5289,9 +5271,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-      </span>
-      <span>
-        
       </span>
       <span>
         

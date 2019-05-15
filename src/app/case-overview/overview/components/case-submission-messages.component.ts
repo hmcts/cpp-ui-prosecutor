@@ -12,27 +12,19 @@ import { Case } from '../../../contexts/sjp';
       type="warning"
       icon="true"
       pdk-margin-vertical="1"
-      *ngIf="displayOffencesWithdrawnFailedBanner && kase.assigned"
+      *ngIf="!displayDatesToAvoidUpdateFailedBanner && kase.assigned"
     >
       This case is view–only, as a legal adviser is working on it.
     </pdk-alert>
-    <pdk-alert
-      type="warning"
-      icon="true"
-      pdk-margin-vertical="1"
-      *ngIf="displayOffencesWithdrawnFailedBanner && kase.completed"
-    >
+    <pdk-alert type="warning" icon="true" pdk-margin-vertical="1" *ngIf="kase.completed">
       You can't edit this case because it has already been completed.
     </pdk-alert>
     <pdk-alert
       type="warning"
       icon="true"
       pdk-margin-vertical="1"
-      *ngIf="kase.assigned && !displayDatesToAvoidUpdateFailedBanner"
+      *ngIf="kase.assigned && displayDatesToAvoidUpdateFailedBanner"
     >
-      This case is view–only, as a legal adviser is working on it.
-    </pdk-alert>
-    <pdk-alert type="warning" icon="true" pdk-margin-vertical="1" *ngIf="displayDatesToAvoidUpdateFailedBanner">
       The case has been assigned to a session and dates to avoid can't be added.
     </pdk-alert>
   `
@@ -40,6 +32,5 @@ import { Case } from '../../../contexts/sjp';
 export class CaseSubmissionMessagesComponent {
   @Input() kase: Case;
   @Input() displayOffencesWithdrawnBanner: boolean;
-  @Input() displayOffencesWithdrawnFailedBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
 }
