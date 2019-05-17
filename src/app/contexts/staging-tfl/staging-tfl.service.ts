@@ -61,6 +61,13 @@ export class StagingTflService {
       .pipe(map((result: { supportingDocumentUploads: DocumentUploadDetails[] }) => result.supportingDocumentUploads));
   }
 
+  getDocumentUploadReport(uploadId: string): Observable<DocumentUploadDetails> {
+    return this.http.query({
+      url: `${this.query}/supporting-documents-upload/${uploadId}`,
+      requestType: 'application/vnd.stagingtfl.query.supporting-documents-upload-by-id+json'
+    });
+  }
+
   uploadDocuments(zipFile: File): Observable<void> {
     const formData = new FormData();
     formData.append('zipFile', zipFile);

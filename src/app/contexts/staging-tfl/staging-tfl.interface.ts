@@ -22,6 +22,7 @@ export interface CsvFileUploadDetails {
 export interface UploadStatus {
   status: string;
   timestamp: string;
+  reason?: string;
 }
 
 export interface CsvFileUploadReport {
@@ -48,4 +49,12 @@ export interface DocumentUploadDetails {
   timestamp: string;
   zipFilename: string;
   uploadStatus: UploadStatus;
+  documentCount?: number;
+  documentErrors?: DocumentUploadError[];
+}
+
+export interface DocumentUploadError {
+  documentFilename: string;
+  documentType: string;
+  validationMessageKey: string;
 }

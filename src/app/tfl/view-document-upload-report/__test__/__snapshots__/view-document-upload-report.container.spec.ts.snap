@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewDocumentUploadReportContainer should compile correctly 1`] = `
+<view-upload-report-container
+  documentUploadDetails$={[Function Store]}
+>
+  <view-document-upload-report
+    ng-reflect-document-upload-details="[object Object]"
+  >
+    <span>
+      {
+    "bundleUploadId": "uploadID"
+  }
+    </span>
+  </view-document-upload-report>
+</view-upload-report-container>
+`;

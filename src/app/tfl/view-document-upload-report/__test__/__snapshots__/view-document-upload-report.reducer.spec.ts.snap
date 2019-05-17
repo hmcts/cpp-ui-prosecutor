@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document upload report reducer default should set the state 1`] = `undefined`;
+
+exports[`Document upload report reducer default should update state with document upload data 1`] = `
+Object {
+  "bundleUploadId": "uploadID",
+}
+`;

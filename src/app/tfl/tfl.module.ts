@@ -42,6 +42,10 @@ import { FileUploadStatsDataGuard } from './guards/file-upload-stats-data.guard'
       {
         path: 'cases-missing-sjp-notices',
         loadChildren: './cases-missing-sjp-notices/cases-missing-sjp-notices.module#CasesMissingSjpNoticesModule'
+      },
+      {
+        path: 'check-document-uploads/report',
+        loadChildren: './view-document-upload-report/view-document-upload-report.module#ViewDocumentUploadReportModule'
       }
     ])
   ],
