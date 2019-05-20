@@ -66,12 +66,12 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
           >
           </pdk-summary-item>
         </a>
-        <a href="javascript: void(0);" routerLink="cases-missing-sjp-notices">
+        <a href="javascript: void(0);" routerLink="cases-missing-sjp-notices" title="Cases missing SJP notices">
           <pdk-summary-item
             pdk-text-colour="blue"
             hero
             [count]="casesMissingSjpNoticeCount"
-            label="case missing SJP notices"
+            label="cases missing SJP notices"
           >
           </pdk-summary-item>
         </a>

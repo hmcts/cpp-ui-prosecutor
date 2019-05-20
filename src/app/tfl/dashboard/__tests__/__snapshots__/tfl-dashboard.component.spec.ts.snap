@@ -238,13 +238,14 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           <a
             href="javascript: void(0);"
             routerlink="cases-missing-sjp-notices"
+            title="Cases missing SJP notices"
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"
               hero=""
-              label="case missing SJP notices"
+              label="cases missing SJP notices"
               ng-reflect-hero=""
-              ng-reflect-label="case missing SJP notices"
+              ng-reflect-label="cases missing SJP notices"
               ng-reflect-type="blue"
               pdk-text-colour="blue"
             >
@@ -259,7 +260,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
                 <span
                   class="pdk-summary-item__label"
                 >
-                  case missing SJP notices
+                  cases missing SJP notices
                 </span>
               </div>
             </pdk-summary-item>

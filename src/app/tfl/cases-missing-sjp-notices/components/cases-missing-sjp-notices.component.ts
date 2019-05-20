@@ -19,7 +19,7 @@ import { CaseDetails, CaseSummary } from '../../../contexts/sjp';
     </h1>
 
     <p pdk-typography="heading-medium">
-      <span [ngPlural]="casesMissingNotices.length">
+      <span [ngPlural]="casesMissingNotices.length" data-test="cases-number">
         <ng-template ngPluralCase="=0">No cases</ng-template>
         <ng-template ngPluralCase="+1">1 case</ng-template>
         <ng-template ngPluralCase="other">{{ casesMissingNotices.length }} cases</ng-template>

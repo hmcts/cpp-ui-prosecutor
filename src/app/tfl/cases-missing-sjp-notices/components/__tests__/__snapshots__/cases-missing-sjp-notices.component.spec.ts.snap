@@ -40,6 +40,7 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with multiple 
     pdk-typography="heading-medium"
   >
     <span
+      data-test="cases-number"
       ng-reflect-ng-plural="2"
     >
       
@@ -155,6 +156,7 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with no data 1
     pdk-typography="heading-medium"
   >
     <span
+      data-test="cases-number"
       ng-reflect-ng-plural="0"
     >
       
@@ -213,6 +215,7 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with single ro
     pdk-typography="heading-medium"
   >
     <span
+      data-test="cases-number"
       ng-reflect-ng-plural="1"
     >
       

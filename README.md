@@ -58,6 +58,18 @@ Run `npm run test` to execute the unit tests via jest.
 
 Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+### Running end-to-end tests locally
+
+If you want to target a specifc ste environment follow these steps:
+
+- Forward port 8181 to any of the ATCM dev servers
+  (make sure you have this configured in `app.override.config.json`).
+
+`ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
+
+- Run the application locally from another command line (`npm start` or `npm run start`).
+- After this run end to end tests locally with either `npm run e2e` or `npm run ptr` to run tests on visible browser.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
