@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PdkCoreModule, PdkGridModule, PdkRelatedModule } from '@cpp/pdk';
 import { DocumentUploadErrorListComponent } from '../document-upload-error-list.component';
 import { UploadStatusPipeModule } from '../../../../shared/pipes';
+import { DocumentAndErrorTypesPipe } from '../../document-and-error-types.pipe';
 
 describe('DocumentUploadErrorListComponent', () => {
   let fixture: ComponentFixture<DocumentUploadErrorListComponent>;
@@ -17,7 +18,7 @@ describe('DocumentUploadErrorListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DocumentUploadErrorListComponent],
+      declarations: [DocumentUploadErrorListComponent, DocumentAndErrorTypesPipe],
       imports: [PdkCoreModule, PdkGridModule, PdkRelatedModule, UploadStatusPipeModule]
     });
     fixture = TestBed.createComponent(DocumentUploadErrorListComponent);

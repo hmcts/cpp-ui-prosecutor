@@ -16,12 +16,14 @@ import { StoreModule } from '@ngrx/store';
 import { IfEmptyPipeModule, UploadErrorPipeModule, UploadStatusPipeModule } from '../../shared/pipes';
 import { documentUploadReportReducer } from './view-document-upload-report.reducer';
 import { ViewDocumentUploadReportGuard } from './view-document-upload-report.guard';
+import { DocumentAndErrorTypesPipe } from './document-and-error-types.pipe';
 
 @NgModule({
   declarations: [
     ViewDocumentUploadReportContainer,
     ViewDocumentUploadReportComponent,
-    DocumentUploadErrorListComponent
+    DocumentUploadErrorListComponent,
+    DocumentAndErrorTypesPipe
   ],
   imports: [
     CommonModule,

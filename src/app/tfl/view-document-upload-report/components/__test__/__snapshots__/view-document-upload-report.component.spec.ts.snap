@@ -134,7 +134,7 @@ exports[`ViewDocumentUploadReportComponent should compile correctly 1`] = `
       </p>
       <button
         pdk-button=""
-        routerlink="../../"
+        routerlink="../../../upload-documents"
       >
         Upload documents
       </button>
@@ -272,7 +272,7 @@ exports[`ViewDocumentUploadReportComponent should compile correctly if the statu
       </p>
       <button
         pdk-button=""
-        routerlink="../../"
+        routerlink="../../../upload-documents"
       >
         Upload documents
       </button>

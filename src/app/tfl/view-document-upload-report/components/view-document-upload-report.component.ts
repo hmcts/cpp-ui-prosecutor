@@ -60,7 +60,7 @@ import { DocumentUploadDetails } from '../../../contexts/staging-tfl';
         If you have corrected documents to send to court, put them in a new <br />
         zip file and upload again
       </p>
-      <button pdk-button routerLink="../../">Upload documents</button>
+      <button pdk-button routerLink="../../../upload-documents">Upload documents</button>
     </pdk-grid>
   `
 })

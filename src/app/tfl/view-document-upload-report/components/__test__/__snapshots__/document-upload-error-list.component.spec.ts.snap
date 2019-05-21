@@ -75,7 +75,7 @@ exports[`DocumentUploadErrorListComponent should compile correctly 1`] = `
           pdk-text-colour="red"
           pdk-typography="body-small"
         >
-           Being checked 
+           - 
         </td>
       </tr>
     </tbody>

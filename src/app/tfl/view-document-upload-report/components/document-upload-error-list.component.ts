@@ -15,10 +15,10 @@ import { DocumentUploadError } from '../../../contexts/staging-tfl';
       </thead>
       <tbody pdk-table-body>
         <tr pdk-table-row *ngFor="let documentError of documentUploadErrors">
-          <td pdk-table-cell pdk-typography="body-small">{{ documentError.documentType | uploadStatus }}</td>
+          <td pdk-table-cell pdk-typography="body-small">{{ documentError.documentType | documentAndErrorTypes }}</td>
           <td pdk-table-cell pdk-typography="body-small">{{ documentError.documentFilename }}</td>
           <td pdk-table-cell pdk-typography="body-small" pdk-text-colour="red">
-            {{ documentError.validationMessageKey | uploadStatus }}
+            {{ documentError.validationMessageKey | documentAndErrorTypes }}
           </td>
         </tr>
       </tbody>
