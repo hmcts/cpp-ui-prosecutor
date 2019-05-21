@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { State } from '../../reducers';
-import { UploadDocuments } from '../tfl.action';
+import { ResetUploadDocumentSuccess, UploadDocuments } from '../tfl.action';
 import { getDocumentUploadSuccess } from '../tfl.selectors';
 
 @Component({
@@ -12,7 +12,7 @@ import { getDocumentUploadSuccess } from '../tfl.selectors';
     </upload-documents>
   `
 })
-export class UploadDocumentsContainer {
+export class UploadDocumentsContainer implements OnDestroy {
   uploadSuccess$: Observable<boolean>;
 
   constructor(private store: Store<State>) {
@@ -21,5 +21,9 @@ export class UploadDocumentsContainer {
 
   uploadDocuments(zipFile: File) {
     this.store.dispatch(new UploadDocuments(zipFile));
+  }
+
+  ngOnDestroy(): void {
+    this.store.dispatch(new ResetUploadDocumentSuccess());
   }
 }

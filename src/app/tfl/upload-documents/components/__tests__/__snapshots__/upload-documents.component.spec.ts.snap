@@ -163,21 +163,7 @@ exports[`UploadDocumentsComponent should show errors 1`] = `
     Upload SJP notices and 
     <br />
     other documents
-  </h1><p>
-    Put your documents in a zip file and then upload. You can include:
-  </p><ul>
-    <li>
-      SJP notices
-    </li>
-    <li>
-      previous convictions
-    </li>
-    <li>
-      witness statements
-    </li>
-  </ul><pdk-inset-text>
-     If you only want to upload one document, you'll still need to put it in a zip file. 
-  </pdk-inset-text><pdk-error-summary
+  </h1><pdk-error-summary
     class="govuk-!-margin-top-5"
     focusonchange=""
     ng-reflect-errors="[object Object]"
@@ -215,7 +201,21 @@ exports[`UploadDocumentsComponent should show errors 1`] = `
         </ul>
       </div>
     </div>
-  </pdk-error-summary><upload-document-form>
+  </pdk-error-summary><p>
+    Put your documents in a zip file and then upload. You can include:
+  </p><ul>
+    <li>
+      SJP notices
+    </li>
+    <li>
+      previous convictions
+    </li>
+    <li>
+      witness statements
+    </li>
+  </ul><pdk-inset-text>
+     If you only want to upload one document, you'll still need to put it in a zip file. 
+  </pdk-inset-text><upload-document-form>
     <div>
       Upload document form
     </div>

@@ -34,7 +34,7 @@ export class UploadDocumentFormComponent {
   public readonly errorMessages = [
     {
       rule: 'required',
-      message: 'Select file'
+      message: 'You need to upload a file'
     }
   ];
 

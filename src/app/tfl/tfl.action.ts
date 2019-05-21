@@ -13,7 +13,7 @@ export const enum TflActionType {
 
   UPLOAD_DOCUMENTS = '[ATCM] Upload documents',
   UPLOAD_DOCUMENTS_SUCCESS = '[ATCM] Upload documents success',
-  RESET_UPLOAD_DOCUMENT_SUCCESS = '[ATCM] Clear csv upload state'
+  RESET_UPLOAD_DOCUMENT_SUCCESS = '[ATCM] Clear Upload documents success'
 }
 
 export class LoadCasesWithSjpNoticeCountSuccess implements Action {

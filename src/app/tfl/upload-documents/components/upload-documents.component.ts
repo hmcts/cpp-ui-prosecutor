@@ -27,6 +27,14 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 
     <ng-template #mainPage>
       <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">Upload SJP notices and <br />other documents</h1>
+      <pdk-error-summary
+        *ngIf="errors && errors.length > 0"
+        pdk-margin-top="5"
+        focusOnChange
+        title="Fix the following"
+        [errors]="errors"
+      >
+      </pdk-error-summary>
       <p>Put your documents in a zip file and then upload. You can include:</p>
       <ul>
         <li>SJP notices</li>
@@ -36,14 +44,6 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
       <pdk-inset-text>
         If you only want to upload one document, you'll still need to put it in a zip file.
       </pdk-inset-text>
-      <pdk-error-summary
-        *ngIf="errors && errors.length > 0"
-        pdk-margin-top="5"
-        focusOnChange
-        title="Fix the following"
-        [errors]="errors"
-      >
-      </pdk-error-summary>
       <upload-document-form (formSubmit)="uploadDocuments.emit($event)" (errors)="errors = $event">
       </upload-document-form>
     </ng-template>

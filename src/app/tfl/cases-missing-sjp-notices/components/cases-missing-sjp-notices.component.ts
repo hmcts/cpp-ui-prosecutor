@@ -38,7 +38,7 @@ import { CaseDetails, CaseSummary } from '../../../contexts/sjp';
         Put the notices in a new zip file and then upload.
       </p>
 
-      <button pdk-button pdk-margin-vertical="5" routerLink="../../upload-missing-sjp-notices">
+      <button pdk-button pdk-margin-vertical="5" routerLink="../../upload-documents">
         Go to upload documents
       </button>
     </div>
