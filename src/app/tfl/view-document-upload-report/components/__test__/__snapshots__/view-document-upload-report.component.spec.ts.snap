@@ -82,7 +82,7 @@ exports[`ViewDocumentUploadReportComponent should compile correctly 1`] = `
             
             <b
               class="pdk-!-text-color-red"
-              data-role="csv-upload-status"
+              data-role="document-upload-status"
               ng-reflect-type="red"
               pdk-text-colour="red"
             >

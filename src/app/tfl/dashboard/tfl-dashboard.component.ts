@@ -57,7 +57,7 @@ import { PleadedNotGuiltyCaseResult } from '../../contexts/sjp';
           <pdk-summary-item pdk-text-colour="blue" hero [count]="csvUploadErrorCount" label="CSV errors in last upload">
           </pdk-summary-item>
         </a>
-        <a href="javascript: void(0);" routerLink="check-document-uploads">
+        <a href="javascript: void(0);" routerLink="check-document-uploads" title="Document errors in last upload">
           <pdk-summary-item
             pdk-text-colour="blue"
             hero

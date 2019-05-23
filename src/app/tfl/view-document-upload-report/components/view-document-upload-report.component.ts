@@ -36,7 +36,7 @@ import { DocumentUploadDetails } from '../../../contexts/staging-tfl';
             {{ documentUploadDetails.uploadStatus.status | uploadStatus }}
           </span>
           <ng-template #error>
-            <b pdk-text-colour="red" data-role="csv-upload-status">
+            <b pdk-text-colour="red" data-role="document-upload-status">
               {{ documentUploadDetails.uploadStatus.status | uploadStatus }}
             </b>
           </ng-template>

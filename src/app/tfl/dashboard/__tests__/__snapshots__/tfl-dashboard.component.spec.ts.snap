@@ -208,6 +208,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           <a
             href="javascript: void(0);"
             routerlink="check-document-uploads"
+            title="Document errors in last upload"
           >
             <pdk-summary-item
               class="pdk-!-text-color-blue"

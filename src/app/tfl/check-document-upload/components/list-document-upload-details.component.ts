@@ -19,8 +19,8 @@ import { DocumentUploadDetails } from '../../../contexts/staging-tfl';
         <tr pdk-table-row *ngFor="let documentUploadData of documentUploadDetails">
           <td pdk-table-cell>{{ documentUploadData.timestamp | formatDate: 'd MMM y' }}</td>
           <td pdk-table-cell>{{ documentUploadData.timestamp | formatDate: 'h:mma' }}</td>
-          <td pdk-table-cell>{{ documentUploadData.zipFilename }}</td>
-          <td pdk-table-cell>
+          <td pdk-table-cell data-col="file-name">{{ documentUploadData.zipFilename }}</td>
+          <td pdk-table-cell data-col="document-upload-status">
             <span *ngIf="documentUploadData.uploadStatus.status !== 'FAILED'; else error">
               {{ documentUploadData.uploadStatus.status | uploadStatus }}
             </span>
