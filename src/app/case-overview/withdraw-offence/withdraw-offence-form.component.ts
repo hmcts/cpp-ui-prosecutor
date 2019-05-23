@@ -39,7 +39,6 @@ interface FormValues {
               labelType="small"
               [errorMessages]="errorMessages"
             >
-              <label pdk-label="small">Reason for withdrawing</label>
               <pdk-radio-group [ngModel]="caseReason" name="case.reason" [options]="reasonOptions" required>
               </pdk-radio-group>
             </pdk-form-field>

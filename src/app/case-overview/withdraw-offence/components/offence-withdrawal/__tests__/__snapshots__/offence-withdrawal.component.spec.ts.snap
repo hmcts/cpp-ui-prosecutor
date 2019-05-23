@@ -188,13 +188,6 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                     
                     
                     
-                    <label
-                      class="govuk-label govuk-label--s"
-                      ng-reflect-type="small"
-                      pdk-label="small"
-                    >
-                      Reason for withdrawing
-                    </label>
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
                       ng-reflect-model="some reason"
@@ -505,13 +498,6 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                     
                     
                     
-                    <label
-                      class="govuk-label govuk-label--s"
-                      ng-reflect-type="small"
-                      pdk-label="small"
-                    >
-                      Reason for withdrawing
-                    </label>
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
                       ng-reflect-model="some reason"
@@ -822,13 +808,6 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                     
                     
                     
-                    <label
-                      class="govuk-label govuk-label--s"
-                      ng-reflect-type="small"
-                      pdk-label="small"
-                    >
-                      Reason for withdrawing
-                    </label>
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
                       ng-reflect-model="some reason"

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { Offence } from '../../../../contexts/sjp/index';
 import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIONS } from '../../reason-mappings';
@@ -40,7 +40,6 @@ import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIO
             labelType="small"
             [errorMessages]="errorMessages"
           >
-            <label pdk-label="small">Reason for withdrawing</label>
             <pdk-radio-group
               [ngModel]="offenceReason"
               name="{{ offence.id }}.reason"
