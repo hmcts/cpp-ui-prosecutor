@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Case, Defendant, Offence } from '../../../contexts/sjp';
+import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-overview',
@@ -52,6 +52,11 @@ import { Case, Defendant, Offence } from '../../../contexts/sjp';
             <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
               <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
             </pdk-tab>
+            <pdk-tab heading="Decisions" *ngIf="allOffenceDecisionsWithdrawnOrAdjourned">
+              <div *ngFor="let caseDecision of caseDecisions">
+                <case-decisions [caseDecision]="caseDecision"></case-decisions>
+              </div>
+            </pdk-tab>
           </pdk-tabs>
         </div>
       </pdk-grid>
@@ -94,4 +99,20 @@ export class OverviewComponent {
   @Input() offences: Offence[];
   @Input() displayOffencesWithdrawnBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
+  @Input() caseDecisions: CaseDecision[];
+
+  get allOffenceDecisionsWithdrawnOrAdjourned(): boolean {
+    return (
+      this.caseDecisions.length > 0 &&
+      this.caseDecisions.every((caseDecision: CaseDecision) =>
+        OverviewComponent.allCaseOffenceDecissionsWithdrawnOrAdjourned(caseDecision)
+      )
+    );
+  }
+
+  private static allCaseOffenceDecissionsWithdrawnOrAdjourned(caseDecision: CaseDecision): boolean {
+    const offenceWithdraw = (offenceDecision: OffenceDecision) => offenceDecision.decisionType === 'WITHDRAW';
+    const offenceAdjourn = (offenceDecision: OffenceDecision) => offenceDecision.decisionType === 'ADJOURN';
+    return caseDecision.offenceDecisions.every(offenceWithdraw) || caseDecision.offenceDecisions.every(offenceAdjourn);
+  }
 }

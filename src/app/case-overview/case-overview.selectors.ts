@@ -1,5 +1,7 @@
 import { CaseOverviewState } from './case-overview.reducer';
 import { State } from '../reducers';
+import { createSelector } from '@ngrx/store';
+import { getCaseDecisions, getOffences } from '../core/selectors';
 
 export interface FeatureState extends State {
   caseOverview: CaseOverviewState;
@@ -12,3 +14,23 @@ export const getWithdrawOffenceFailed = (state: FeatureState) => state.caseOverv
 export const getDatesToAvoidStatus = (state: FeatureState) => state.caseOverview.datesToAvoidSuccess;
 
 export const getDatesToAvoidFailed = (state: FeatureState) => state.caseOverview.datesToAvoidFailed;
+
+export const getCaseDecisionsWithOffenceDecisions = createSelector(
+  getCaseDecisions,
+  getOffences,
+  (caseDecisions, offences) => {
+    caseDecisions.forEach(caseDecision => {
+      caseDecision.offenceDecisions.forEach(offenceDecision => {
+        offences
+          .filter(offence => offence.id === offenceDecision.offenceId)
+          .map(offence => {
+            Object.assign(offenceDecision, {
+              offenceTitle: offence.title
+            });
+          });
+      });
+    });
+
+    return caseDecisions ? caseDecisions : [];
+  }
+);

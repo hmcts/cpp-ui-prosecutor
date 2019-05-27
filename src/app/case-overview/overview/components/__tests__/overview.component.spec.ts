@@ -11,14 +11,14 @@ import {
   PdkTabsModule,
   PdkWarningTextModule
 } from '@cpp/pdk';
-import { MOCK_CASE, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
+import { MOCK_CASE, MOCK_OFFENCES, MOCK_CASE_DECISION } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,
   FormatDatePipeModule
 } from '../../../../shared/pipes';
-import { Case, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
+import { Case, CaseDecision, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
 import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
@@ -38,7 +38,8 @@ describe('OverviewComponent', () => {
         MockCaseHeaderBadgeContainer,
         MockSubComponent,
         PersonalDetailsChangeAlertComponent,
-        MockSubmissionMessagesComponent
+        MockSubmissionMessagesComponent,
+        MockCaseDecisionsComponent
       ],
       imports: [
         PdkCoreModule,
@@ -63,6 +64,7 @@ describe('OverviewComponent', () => {
     fixture.componentInstance.kase = { ...MOCK_CASE, completed: false };
     fixture.componentInstance.defendant = MOCK_CASE.defendant;
     fixture.componentInstance.offences = MOCK_OFFENCES;
+    fixture.componentInstance.caseDecisions = [MOCK_CASE_DECISION];
   });
 
   it('should compile correctly', () => {
@@ -126,13 +128,19 @@ describe('OverviewComponent', () => {
   @Component({
     selector: 'case-overview-test',
     template: `
-      <case-overview [kase]="kase" [defendant]="defendant" [offences]="offences"></case-overview>
+      <case-overview
+        [kase]="kase"
+        [defendant]="defendant"
+        [offences]="offences"
+        [caseDecisions]="caseDecisions"
+      ></case-overview>
     `
   })
   class TestCaseOverviewComponent {
     kase: Case;
     defendant: Defendant;
     offences: Offence[];
+    caseDecisions: CaseDecision[];
   }
 
   @Component({
@@ -205,5 +213,16 @@ describe('OverviewComponent', () => {
     @Input() kase: Case;
     @Input() displayOffencesWithdrawnBanner: boolean;
     @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
+  }
+
+  @Component({
+    selector: 'case-decisions',
+    template: `
+      <div>{{ caseDecision | json }}</div>
+    `
+  })
+  class MockCaseDecisionsComponent {
+    @Input()
+    caseDecision: CaseDecision;
   }
 });

@@ -2,6 +2,7 @@
 
 exports[`OverviewContainer should compile correctly 1`] = `
 <case-overview-container
+  caseDecisions$={[Function Store]}
   defendant$={[Function Store]}
   displayDatesToAvoidUpdateFailedBanner$={[Function Store]}
   displayOffencesWithdrawnBanner$={[Function Store]}
@@ -10,6 +11,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
   store={[Function Store]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-display-dates-to-avoid-update-failed-banner="false"
     ng-reflect-display-offences-withdrawn-banner="false"
@@ -114,7 +116,62 @@ exports[`OverviewContainer should compile correctly 1`] = `
     "enterpriseId": "Z8QG1JR7CMTD",
     "onlinePleaReceived": false,
     "status": "COMPLETED",
-    "listedInCriminalCourts": false
+    "listedInCriminalCourts": false,
+    "caseDecisions": [
+      {
+        "id": "mock-case-decision-1",
+        "session": {
+          "sessionId": "mock-case-decision-session-1",
+          "legalAdviserUserId": "mock-case-decision-session-userid-1",
+          "courtHouseCode": "B01OK",
+          "courtHouseName": "Wimbledon Magistrates' Court",
+          "localJusticeAreaNationalCourtCode": "2577",
+          "startedAt": "2018-12-01T16:10:28.259Z",
+          "endedAt": "2018-12-01T16:10:28.259Z",
+          "sessionType": "DELEGATEDPOwERS",
+          "legalAdviser": {
+            "userId": "legal-adviser-1",
+            "firstName": "Mark",
+            "lastName": "Adams"
+          }
+        },
+        "savedAt": "2018-12-01T16:10:28.259Z",
+        "offenceDecisions": [
+          {
+            "id": "mock-case-offence-decision-1",
+            "offenceId": "offenceId1",
+            "decisionType": "WITHDRAW",
+            "reason": "Insufficient evidence",
+            "offenceTitle": "offence title 1"
+          },
+          {
+            "id": "mock-case-offence-decision-2",
+            "offenceId": "offenceId2",
+            "decisionType": "WITHDRAW",
+            "reason": "Insufficient evidence",
+            "offenceTitle": "offence title 2"
+          },
+          {
+            "id": "mock-case-offence-decision-3",
+            "offenceId": "offenceId3",
+            "decisionType": "ADJOURN",
+            "adjournedTo": "2019-06-11"
+          },
+          {
+            "id": "mock-case-offence-decision-4",
+            "offenceId": "offenceId4",
+            "decisionType": "ADJOURN",
+            "adjournedTo": "2019-07-11"
+          },
+          {
+            "id": "mock-case-offence-decision-5",
+            "offenceId": "offenceId5",
+            "decisionType": "ADJOURN",
+            "adjournedTo": "2019-06-21"
+          }
+        ]
+      }
+    ]
   }
     </div>
     <div>
@@ -219,6 +276,63 @@ exports[`OverviewContainer should compile correctly 1`] = `
       "pleaDate": "2019-02-27T15:32:20.593Z",
       "pendingWithdrawal": true,
       "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+    }
+  ]
+    </div>
+    <div>
+      [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOwERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
+      },
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "reason": "Insufficient evidence",
+          "offenceTitle": "offence title 1"
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "reason": "Insufficient evidence",
+          "offenceTitle": "offence title 2"
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11"
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11"
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21"
+        }
+      ]
     }
   ]
     </div>

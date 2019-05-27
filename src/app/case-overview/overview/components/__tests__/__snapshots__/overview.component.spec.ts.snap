@@ -2,11 +2,13 @@
 
 exports[`OverviewComponent should compile correctly 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
@@ -510,6 +512,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -903,11 +906,13 @@ exports[`OverviewComponent should compile correctly 1`] = `
 
 exports[`OverviewComponent should compile correctly assigned case 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
@@ -1411,6 +1416,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -1738,11 +1744,13 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
 
 exports[`OverviewComponent should compile correctly completed case 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
@@ -2246,6 +2254,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -2573,11 +2582,13 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
 
 exports[`OverviewComponent should compile correctly with case warnings 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
@@ -3171,6 +3182,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -3415,11 +3427,13 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
 
 exports[`OverviewComponent should compile correctly with personal detail change alert 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
@@ -3962,6 +3976,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -4355,11 +4370,13 @@ exports[`OverviewComponent should compile correctly with personal detail change 
 
 exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
@@ -4863,6 +4880,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>
@@ -5113,11 +5131,13 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
 
 exports[`OverviewComponent should compile correctly with single offence 1`] = `
 <case-overview-test
+  caseDecisions={[Function Array]}
   defendant={[Function Object]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
   <case-overview
+    ng-reflect-case-decisions="[object Object]"
     ng-reflect-defendant="[object Object]"
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
@@ -5621,6 +5641,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
+                  
                 </div>
               </pdk-tabs>
             </div>

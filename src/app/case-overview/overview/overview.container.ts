@@ -1,8 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-import { FeatureState, getDatesToAvoidFailed, getWithdrawOffenceStatus } from '../case-overview.selectors';
-import { Case, Defendant, Offence } from '../../contexts/sjp';
+import {
+  FeatureState,
+  getCaseDecisionsWithOffenceDecisions,
+  getDatesToAvoidFailed,
+  getWithdrawOffenceStatus
+} from '../case-overview.selectors';
+import { Case, CaseDecision, Defendant, Offence } from '../../contexts/sjp';
 import { ResetCaseOverviewState } from '../case-overview.action';
 import { getCase, getDefendant, getOffences } from '../../core/selectors';
 
@@ -16,6 +21,7 @@ import { getCase, getDefendant, getOffences } from '../../core/selectors';
       [offences]="offences$ | async"
       [displayOffencesWithdrawnBanner]="displayOffencesWithdrawnBanner$ | async"
       [displayDatesToAvoidUpdateFailedBanner]="displayDatesToAvoidUpdateFailedBanner$ | async"
+      [caseDecisions]="caseDecisions$ | async"
     ></case-overview>
   `
 })
@@ -25,6 +31,7 @@ export class OverviewContainer implements OnDestroy {
   offences$: Observable<Offence[]>;
   displayOffencesWithdrawnBanner$: Observable<boolean>;
   displayDatesToAvoidUpdateFailedBanner$: Observable<boolean>;
+  caseDecisions$: Observable<CaseDecision[]>;
 
   constructor(private store: Store<FeatureState>) {
     this.kase$ = this.store.pipe(select(getCase));
@@ -32,6 +39,7 @@ export class OverviewContainer implements OnDestroy {
     this.offences$ = this.store.pipe(select(getOffences));
     this.displayOffencesWithdrawnBanner$ = this.store.pipe(select(getWithdrawOffenceStatus));
     this.displayDatesToAvoidUpdateFailedBanner$ = this.store.pipe(select(getDatesToAvoidFailed));
+    this.caseDecisions$ = this.store.pipe(select(getCaseDecisionsWithOffenceDecisions));
   }
 
   ngOnDestroy(): void {

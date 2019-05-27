@@ -32,6 +32,7 @@ import { DefendantOffenceWarningsComponent } from './components/defendant-offenc
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 import { PersonalDetailsChangeAlertComponent } from './components/personal-details-change-alert.component';
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
+import { CaseDecisionsComponent } from './components/case-decisions.component';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -45,7 +46,8 @@ const DECLARATIONS = [
   OverviewContainer,
   PleaMitigationComponent,
   PersonalDetailsChangeAlertComponent,
-  CaseSubmissionMessagesComponent
+  CaseSubmissionMessagesComponent,
+  CaseDecisionsComponent
 ];
 
 @NgModule({

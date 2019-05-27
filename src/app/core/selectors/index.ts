@@ -36,3 +36,5 @@ export const getWithdrawCaseStatus = createSelector(
 export const getPleadedNotGuiltyCasesDetail = (state: State) => state.pleadedNotGuiltyCases;
 
 export const getDefendantDetailsUpdates = (state: State) => state.defendantDetailsUpdates;
+
+export const getCaseDecisions = (state: State) => state.case && state.case.caseDecisions;

@@ -8,3 +8,4 @@ export * from './if-empty/if-empty-pipe.module';
 export * from './please-status/plea-status-pipe.module';
 export * from './upload-status/upload-status-pipe.module';
 export * from './upload-error/upload-error-pipe.module';
+export * from './first-last-name/first-last-name.module';

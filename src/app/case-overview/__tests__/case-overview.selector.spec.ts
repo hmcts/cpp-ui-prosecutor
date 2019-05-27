@@ -3,11 +3,17 @@ import * as fromActions from '../case-overview.action';
 import * as fromSelectors from '../case-overview.selectors';
 import { caseOverviewReducer as caseOverview } from '../case-overview.reducer';
 import { reducers } from '../../reducers';
+import { EntitiesAction, LoadCaseSuccess } from '../../core/actions';
+import { MOCK_CASE, MOCK_CASE_DECISION } from './test-mock-data';
 
 describe('case overview/selectors', () => {
   const reducer = combineReducers({ ...reducers, caseOverview });
 
   const createState = (actions: fromActions.CaseOverviewAction[]) => {
+    return [...actions].reduce((state, action) => reducer(state, action), undefined as fromSelectors.FeatureState);
+  };
+
+  const createCaseState = (actions: EntitiesAction[]) => {
     return [...actions].reduce((state, action) => reducer(state, action), undefined as fromSelectors.FeatureState);
   };
 
@@ -27,6 +33,14 @@ describe('case overview/selectors', () => {
     it('should select the case from the store', () => {
       const state = createState([new fromActions.SubmitDatesToAvoidSuccess()]);
       expect(fromSelectors.getDatesToAvoidStatus(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getCase', () => {
+    it('should select case decisions from the store', () => {
+      MOCK_CASE.caseDecisions = [MOCK_CASE_DECISION];
+      const state = createCaseState([new LoadCaseSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getCaseDecisionsWithOffenceDecisions(state)).toMatchSnapshot();
     });
   });
 });

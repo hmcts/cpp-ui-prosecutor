@@ -4,6 +4,7 @@ import * as fromSelectors from '../../selectors';
 import { combineReducers } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { MOCK_CASE, MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
+import { MOCK_CASE_DECISION } from '../../../case-overview/__tests__/test-mock-data';
 
 describe('selectors', () => {
   const reducer = combineReducers({ ...reducers });
@@ -44,6 +45,14 @@ describe('selectors', () => {
     it('should select the right data from the store', () => {
       const state = createState([new fromActions.LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID)]);
       expect(fromSelectors.getPleadedNotGuiltyCasesDetail(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getCaseDecisions', () => {
+    it('should select the case decisions from the store', () => {
+      MOCK_CASE.caseDecisions = [MOCK_CASE_DECISION];
+      const state = createState([new fromActions.LoadCaseSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getCaseDecisions(state)).toMatchSnapshot();
     });
   });
 });

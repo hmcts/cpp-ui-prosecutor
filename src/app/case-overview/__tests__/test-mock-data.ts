@@ -1,4 +1,12 @@
-import { Case, CaseDocumentMetaData, ContactDetails, Offence } from '../../contexts/sjp';
+import {
+  AdjournOffenceDecision,
+  Case,
+  CaseDecision,
+  CaseDocumentMetaData,
+  ContactDetails,
+  Offence,
+  WithdrawOffenceDecision
+} from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
   {
@@ -110,4 +118,56 @@ export const MOCK_CASE: Case = {
   onlinePleaReceived: false,
   status: 'COMPLETED',
   listedInCriminalCourts: false
+};
+
+export const MOCK_CASE_DECISION: CaseDecision = {
+  id: 'mock-case-decision-1',
+  session: {
+    sessionId: 'mock-case-decision-session-1',
+    legalAdviserUserId: 'mock-case-decision-session-userid-1',
+    courtHouseCode: 'B01OK',
+    courtHouseName: `Wimbledon Magistrates' Court`,
+    localJusticeAreaNationalCourtCode: '2577',
+    startedAt: '2018-12-01T16:10:28.259Z',
+    endedAt: '2018-12-01T16:10:28.259Z',
+    sessionType: 'DELEGATEDPOwERS',
+    legalAdviser: {
+      userId: 'legal-adviser-1',
+      firstName: 'Mark',
+      lastName: 'Adams'
+    }
+  },
+  savedAt: '2018-12-01T16:10:28.259Z',
+  offenceDecisions: [
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId1',
+      decisionType: 'WITHDRAW',
+      reason: 'Insufficient evidence'
+    } as WithdrawOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-2',
+      offenceId: 'offenceId2',
+      decisionType: 'WITHDRAW',
+      reason: 'Insufficient evidence'
+    } as WithdrawOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-3',
+      offenceId: 'offenceId3',
+      decisionType: 'ADJOURN',
+      adjournedTo: '2019-06-11'
+    } as AdjournOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-4',
+      offenceId: 'offenceId4',
+      decisionType: 'ADJOURN',
+      adjournedTo: '2019-07-11'
+    } as AdjournOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-5',
+      offenceId: 'offenceId5',
+      decisionType: 'ADJOURN',
+      adjournedTo: '2019-06-21'
+    } as AdjournOffenceDecision
+  ]
 };

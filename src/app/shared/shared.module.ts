@@ -10,7 +10,8 @@ import {
   FormatAddressPipeModule,
   FormatDatePipeModule,
   IfEmptyPipeModule,
-  PleaStatusPipeModule
+  PleaStatusPipeModule,
+  FirstLastNamePipeModule
 } from './pipes';
 
 @NgModule({
@@ -38,6 +39,7 @@ import {
     DefendantNamePipeModule,
     FormatAddressPipeModule,
     FormatDatePipeModule,
+    FirstLastNamePipeModule,
     IfEmptyPipeModule,
     PleaStatusPipeModule
   ]

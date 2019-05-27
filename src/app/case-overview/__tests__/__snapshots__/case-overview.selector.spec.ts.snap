@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`case overview/selectors getCase should select case decisions from the store 1`] = `
+Array [
+  Object {
+    "id": "mock-case-decision-1",
+    "offenceDecisions": Array [
+      Object {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "offenceTitle": "offence title 1",
+        "reason": "Insufficient evidence",
+      },
+      Object {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "offenceTitle": "offence title 2",
+        "reason": "Insufficient evidence",
+      },
+      Object {
+        "adjournedTo": "2019-06-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+      },
+      Object {
+        "adjournedTo": "2019-07-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+      },
+      Object {
+        "adjournedTo": "2019-06-21",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+      },
+    ],
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "session": Object {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "legalAdviser": Object {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-1",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "sessionId": "mock-case-decision-session-1",
+      "sessionType": "DELEGATEDPOwERS",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+    },
+  },
+]
+`;
+
 exports[`case overview/selectors getDatesToAvoidStatus should select the case from the store 1`] = `true`;
 
 exports[`case overview/selectors getWithdrawOffenceStatus should respond to failure 1`] = `true`;

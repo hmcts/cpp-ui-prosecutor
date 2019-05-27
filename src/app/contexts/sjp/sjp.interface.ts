@@ -20,6 +20,7 @@ export interface Case {
   defendant: Defendant;
   datesToAvoid?: string;
   libraCaseNumber?: string; // todo check
+  caseDecisions?: CaseDecision[];
 }
 
 export interface Defendant {
@@ -193,4 +194,44 @@ export interface CasesMissingSjpNoticeResult {
   count: number;
   ids?: string[];
   cases?: CaseSummary[];
+}
+
+export interface LegalAdviser {
+  userId: string;
+  firstName: string;
+  lastName: string;
+}
+
+export interface OffenceDecision {
+  id: string;
+  offenceId: string;
+  offenceTitle: string;
+  decisionType: string;
+}
+
+export interface WithdrawOffenceDecision extends OffenceDecision {
+  reason: string;
+}
+
+export interface AdjournOffenceDecision extends OffenceDecision {
+  adjournedTo: string;
+}
+
+export interface Session {
+  sessionId: string;
+  legalAdviserUserId: string;
+  courtHouseCode: string;
+  courtHouseName: string;
+  localJusticeAreaNationalCourtCode: string;
+  startedAt: string;
+  endedAt: string;
+  sessionType: string;
+  legalAdviser: LegalAdviser;
+}
+
+export interface CaseDecision {
+  id: string;
+  session: Session;
+  savedAt: string;
+  offenceDecisions: OffenceDecision[];
 }
