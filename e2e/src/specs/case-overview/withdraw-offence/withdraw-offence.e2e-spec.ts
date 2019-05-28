@@ -19,7 +19,7 @@ describe('withdraw offence page', () => {
     await navigate(withdrawOffencePage.getUrl(), TVL_USER);
     await expect(withdrawOffencePage.withdrawOffenceHeading.getText()).toContain('Manage offence withdrawals');
     await expect(withdrawOffencePage.withdrawOffenceRadioButtonYes.click());
-    await browser.waitForAngular();
+    await isStable();
     await expect(withdrawOffencePage.withdrawOffenceRadioButtonReasonInsufficient.click());
     await browser.waitForAngular();
     await expect(withdrawOffencePage.withdrawOffenceSubmitButton.click());
