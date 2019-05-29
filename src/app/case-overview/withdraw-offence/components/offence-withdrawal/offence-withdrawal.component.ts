@@ -35,8 +35,8 @@ import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIO
         <ng-container *ngIf="reason.value">
           <pdk-form-field
             pdk-margin-top="5"
-            labelHidden="true"
-            label="Offence {{ index > 0 ? index : '' }}: Reason for withdrawing"
+            label="Reason for withdrawing"
+            labelForErrorSummary="Offence {{ index > 0 ? index : '' }}: Reason for withdrawing"
             labelType="small"
             [errorMessages]="errorMessages"
           >
