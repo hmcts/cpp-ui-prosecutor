@@ -52,11 +52,6 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
             <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
               <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
             </pdk-tab>
-            <pdk-tab heading="Decisions" *ngIf="allOffenceDecisionsWithdrawnOrAdjourned">
-              <div *ngFor="let caseDecision of caseDecisions">
-                <case-decisions [caseDecision]="caseDecision"></case-decisions>
-              </div>
-            </pdk-tab>
           </pdk-tabs>
         </div>
       </pdk-grid>
@@ -88,6 +83,19 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
           </statement-of-facts>
           <plea-mitigation *ngIf="offence.pleaMitigation" [pleaMitigation]="offence.pleaMitigation"></plea-mitigation>
           <pdk-divider *ngIf="!last"></pdk-divider>
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid container>
+      <pdk-grid two-thirds>
+        <div pdk-margin-vertical="8">
+          <pdk-tabs *ngIf="allOffenceDecisionsWithdrawnOrAdjourned">
+            <pdk-tab heading="Decisions">
+              <div *ngFor="let caseDecision of caseDecisions">
+                <case-decisions [caseDecision]="caseDecision"></case-decisions>
+              </div>
+            </pdk-tab>
+          </pdk-tabs>
         </div>
       </pdk-grid>
     </pdk-grid>

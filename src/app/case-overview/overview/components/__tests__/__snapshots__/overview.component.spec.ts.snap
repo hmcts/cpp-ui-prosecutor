@@ -512,7 +512,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -894,6 +893,31 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -1416,7 +1440,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -1732,6 +1755,31 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -2254,7 +2302,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -2570,6 +2617,31 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -3182,7 +3254,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -3415,6 +3486,31 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -3976,7 +4072,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -4358,6 +4453,31 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -4880,7 +5000,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -5119,6 +5238,31 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   Plea mitigation
                 </div>
               </plea-mitigation>
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
@@ -5641,7 +5785,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       </document-list>
                     </section>
                   </pdk-tab>
-                  
                 </div>
               </pdk-tabs>
             </div>
@@ -5872,6 +6015,31 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 </div>
               </statement-of-facts>
               
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
               
             </div>
           </div>
