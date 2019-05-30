@@ -16,7 +16,8 @@ import {
   AgePipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,
-  FormatDatePipeModule
+  FormatDatePipeModule,
+  SavedDecisionInformationPipeModule
 } from '../../../../shared/pipes';
 import { Case, CaseDecision, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
@@ -54,7 +55,8 @@ describe('OverviewComponent', () => {
         FormatDatePipeModule,
         FormatAddressPipeModule,
         PdkBreadcrumbsModule,
-        PdkRelatedModule
+        PdkRelatedModule,
+        SavedDecisionInformationPipeModule
       ]
     });
 
@@ -123,6 +125,26 @@ describe('OverviewComponent', () => {
     const alertMessage = compiled.querySelector('personal-details-change-alert');
     expect(alertMessage.textContent).toContain('The following defendant details have been updated:');
     expect(fixture).toMatchSnapshot();
+  });
+
+  it('should display Decisions tab with Case Decisions', () => {
+    fixture.componentInstance.caseDecisions = [
+      {
+        ...MOCK_CASE_DECISION
+      }
+    ];
+    fixture.detectChanges();
+    const debugElement = fixture.debugElement.nativeElement;
+    const caseDecisions = debugElement.querySelector('case-decisions');
+    expect(caseDecisions.textContent).toContain('Decisions');
+  });
+
+  it('should Not display Decisions tab without Case Decisions', () => {
+    fixture.componentInstance.caseDecisions = [];
+    fixture.detectChanges();
+    const debugElement = fixture.debugElement.nativeElement;
+    const caseDecisions = debugElement.querySelector('case-decisions');
+    expect(caseDecisions).toBeNull();
   });
 
   @Component({

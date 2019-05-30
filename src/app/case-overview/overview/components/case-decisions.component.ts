@@ -42,12 +42,7 @@ import { CaseDecision } from '../../../contexts/sjp';
           </pdk-grid>
           <pdk-grid two-thirds>
             {{ offenceDecision.offenceTitle }}
-            <ng-container *ngIf="offenceDecision.decisionType === 'WITHDRAW'">
-              <p>Withdraw: {{ offenceDecision.reason }}</p>
-            </ng-container>
-            <ng-container *ngIf="offenceDecision.decisionType === 'ADJOURN'">
-              <p>Adjourned to {{ offenceDecision.adjournedTo | formatDate: 'd MMM y' }} (or after)</p>
-            </ng-container>
+            <p>{{ offenceDecision | savedDecisionInformation }}</p>
           </pdk-grid>
         </pdk-grid>
         <pdk-divider *ngIf="!last"></pdk-divider>

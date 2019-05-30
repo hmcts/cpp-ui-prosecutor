@@ -5,7 +5,8 @@ import {
   CaseDocumentMetaData,
   ContactDetails,
   Offence,
-  WithdrawOffenceDecision
+  WithdrawOffenceDecision,
+  CourtReferralOffenceDecision
 } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
@@ -168,6 +169,12 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       offenceId: 'offenceId5',
       decisionType: 'ADJOURN',
       adjournedTo: '2019-06-21'
-    } as AdjournOffenceDecision
+    } as AdjournOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-6',
+      offenceId: 'offenceId6',
+      decisionType: 'REFER_FOR_COURT_HEARING',
+      referralReason: 'Not suitable for SJP'
+    } as CourtReferralOffenceDecision
   ]
 };

@@ -918,7 +918,116 @@ exports[`OverviewComponent should compile correctly 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -1780,7 +1889,116 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -2642,7 +2860,116 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -3511,7 +3838,116 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -4478,7 +4914,116 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -5263,7 +5808,116 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>
@@ -6040,7 +6694,116 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               ng-reflect-vertical="8"
               pdk-margin-vertical="8"
             >
-              
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      
+                      <div>
+                        <case-decisions
+                          ng-reflect-case-decision="[object Object]"
+                        >
+                          <div>
+                            {
+    "id": "mock-case-decision-1",
+    "session": {
+      "sessionId": "mock-case-decision-session-1",
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "startedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01T16:10:28.259Z",
+      "sessionType": "DELEGATEDPOwERS",
+      "legalAdviser": {
+        "userId": "legal-adviser-1",
+        "firstName": "Mark",
+        "lastName": "Adams"
+      }
+    },
+    "savedAt": "2018-12-01T16:10:28.259Z",
+    "offenceDecisions": [
+      {
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "decisionType": "WITHDRAW",
+        "reason": "Insufficient evidence"
+      },
+      {
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-11"
+      },
+      {
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-07-11"
+      },
+      {
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "decisionType": "ADJOURN",
+        "adjournedTo": "2019-06-21"
+      },
+      {
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "referralReason": "Not suitable for SJP"
+      }
+    ]
+  }
+                          </div>
+                        </case-decisions>
+                      </div>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
             </div>
           </div>
         </pdk-grid>

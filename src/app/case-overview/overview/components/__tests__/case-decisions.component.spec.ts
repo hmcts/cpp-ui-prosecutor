@@ -4,7 +4,7 @@ import { CaseDecision } from '../../../../contexts/sjp';
 import { MOCK_CASE_DECISION } from '../../../__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
 import { PdkDividerModule, PdkGridModule, PdkTabsModule } from '@cpp/pdk';
-import { FormatDatePipeModule } from '../../../../shared/pipes';
+import { FormatDatePipeModule, SavedDecisionInformationPipeModule } from '../../../../shared/pipes';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CaseDecisionsComponent } from '../case-decisions.component';
 import { FirstLastNamePipeModule } from '../../../../shared/pipes/first-last-name/first-last-name.module';
@@ -22,7 +22,8 @@ describe('CaseDecisionComponent', () => {
         PdkTabsModule,
         FormatDatePipeModule,
         RouterTestingModule,
-        FirstLastNamePipeModule
+        FirstLastNamePipeModule,
+        SavedDecisionInformationPipeModule
       ]
     });
     fixture = TestBed.createComponent(TestCaseDecisionsComponent);

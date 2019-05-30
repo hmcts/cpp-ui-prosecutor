@@ -89,8 +89,8 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
     <pdk-grid container>
       <pdk-grid two-thirds>
         <div pdk-margin-vertical="8">
-          <pdk-tabs *ngIf="allOffenceDecisionsWithdrawnOrAdjourned">
-            <pdk-tab heading="Decisions">
+          <pdk-tabs>
+            <pdk-tab heading="Decisions" *ngIf="caseDecisions?.length">
               <div *ngFor="let caseDecision of caseDecisions">
                 <case-decisions [caseDecision]="caseDecision"></case-decisions>
               </div>
@@ -108,19 +108,4 @@ export class OverviewComponent {
   @Input() displayOffencesWithdrawnBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   @Input() caseDecisions: CaseDecision[];
-
-  get allOffenceDecisionsWithdrawnOrAdjourned(): boolean {
-    return (
-      this.caseDecisions.length > 0 &&
-      this.caseDecisions.every((caseDecision: CaseDecision) =>
-        OverviewComponent.allCaseOffenceDecissionsWithdrawnOrAdjourned(caseDecision)
-      )
-    );
-  }
-
-  private static allCaseOffenceDecissionsWithdrawnOrAdjourned(caseDecision: CaseDecision): boolean {
-    const offenceWithdraw = (offenceDecision: OffenceDecision) => offenceDecision.decisionType === 'WITHDRAW';
-    const offenceAdjourn = (offenceDecision: OffenceDecision) => offenceDecision.decisionType === 'ADJOURN';
-    return caseDecision.offenceDecisions.every(offenceWithdraw) || caseDecision.offenceDecisions.every(offenceAdjourn);
-  }
 }

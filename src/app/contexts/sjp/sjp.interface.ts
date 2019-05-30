@@ -217,6 +217,10 @@ export interface AdjournOffenceDecision extends OffenceDecision {
   adjournedTo: string;
 }
 
+export interface CourtReferralOffenceDecision extends OffenceDecision {
+  referralReason: string;
+}
+
 export interface Session {
   sessionId: string;
   legalAdviserUserId: string;

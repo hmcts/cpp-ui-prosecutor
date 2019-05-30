@@ -33,6 +33,7 @@ import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-b
 import { PersonalDetailsChangeAlertComponent } from './components/personal-details-change-alert.component';
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
 import { CaseDecisionsComponent } from './components/case-decisions.component';
+import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -69,7 +70,8 @@ const DECLARATIONS = [
     SharedModule,
     OffenceWarningModule,
     DownloadDocumentModule,
-    CaseHeaderBadgeModule
+    CaseHeaderBadgeModule,
+    SavedDecisionInformationPipeModule
   ],
   exports: [OverviewContainer]
 })

@@ -37,6 +37,12 @@ Array [
         "id": "mock-case-offence-decision-5",
         "offenceId": "offenceId5",
       },
+      Object {
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "referralReason": "Not suitable for SJP",
+      },
     ],
     "savedAt": "2018-12-01T16:10:28.259Z",
     "session": Object {
