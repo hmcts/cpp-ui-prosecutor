@@ -43,7 +43,8 @@ describe('DefendantOffenceComponent', () => {
     };
     fixture.componentInstance.offence = {
       ...offence1,
-      withdrawalRequestReason: 'with reason'
+      withdrawalRequestReason: 'with reason',
+      withdrawalRequestReasonId: '1'
     };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
@@ -56,7 +57,8 @@ describe('DefendantOffenceComponent', () => {
     };
     fixture.componentInstance.offence = {
       ...offence1,
-      withdrawalRequestReason: ''
+      withdrawalRequestReason: '',
+      withdrawalRequestReasonId: null
     };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
@@ -69,7 +71,8 @@ describe('DefendantOffenceComponent', () => {
     };
     fixture.componentInstance.offence = {
       ...offence1,
-      withdrawalRequestReason: 'some reason'
+      withdrawalRequestReason: 'some reason',
+      withdrawalRequestReasonId: '1'
     };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();

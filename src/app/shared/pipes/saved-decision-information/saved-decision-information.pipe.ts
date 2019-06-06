@@ -16,7 +16,7 @@ export class SavedDecisionInformationPipe implements PipeTransform {
     switch (offenceDecision.decisionType) {
       case 'WITHDRAW': {
         const withdrawOffenceDecision = offenceDecision as WithdrawOffenceDecision;
-        return `Withdrawn - ${withdrawOffenceDecision.reason}`;
+        return `Withdrawn - ${withdrawOffenceDecision.withdrawalReason}`;
       }
       case 'ADJOURN': {
         const adjournOffenceDecision = offenceDecision as AdjournOffenceDecision;

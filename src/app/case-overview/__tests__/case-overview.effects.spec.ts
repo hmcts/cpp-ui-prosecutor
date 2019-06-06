@@ -37,7 +37,7 @@ describe('Case Overview Effects', () => {
     withdrawalRequestsStatus: [
       {
         offenceId: 'mock-offence-id',
-        reason: 'mock-reason'
+        withdrawalRequestReasonId: 'id'
       }
     ]
   };

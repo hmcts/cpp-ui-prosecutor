@@ -4,6 +4,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
 <offence-component-test
   index={[Function Number]}
   offence={[Function Object]}
+  offenceWithdrawalReasons={[Function Array]}
 >
   <form
     class="ng-untouched ng-pristine ng-valid"
@@ -12,6 +13,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
     <offence-withdrawal-component
       ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
+      ng-reflect-offence-withdrawal-reasons="[object Object],[object Object"
     >
       
       <div
@@ -191,8 +193,8 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                     
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
-                      ng-reflect-model="some reason"
-                      ng-reflect-name="offenceId1.reason"
+                      ng-reflect-model="1"
+                      ng-reflect-name="offenceId1.withdrawalRequestRe"
                       ng-reflect-options="[object Object],[object Object"
                       ng-reflect-required=""
                       required=""
@@ -202,7 +204,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                       >
                         
                         <pdk-radio-button
-                          ng-reflect-value="Insufficient evidence"
+                          ng-reflect-value="1"
                         >
                           <div
                             class="govuk-radios__item"
@@ -212,7 +214,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                               id="pdk-radio-8"
                               name="pdk-radio-group-7"
                               type="radio"
-                              value="Insufficient evidence"
+                              value="1"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
@@ -220,12 +222,12 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Insufficient evidence 
+                               First option 
                             </label>
                           </div>
                         </pdk-radio-button>
                         <pdk-radio-button
-                          ng-reflect-value="Agreement between prosecutor a"
+                          ng-reflect-value="2"
                         >
                           <div
                             class="govuk-radios__item"
@@ -235,7 +237,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                               id="pdk-radio-9"
                               name="pdk-radio-group-7"
                               type="radio"
-                              value="Agreement between prosecutor and defendant reached"
+                              value="2"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
@@ -243,53 +245,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Agreement between prosecutor and defendant reached 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Not in public interest to proc"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-10"
-                              name="pdk-radio-group-7"
-                              type="radio"
-                              value="Not in public interest to proceed"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-10"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Not in public interest to proceed 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Other"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-11"
-                              name="pdk-radio-group-7"
-                              type="radio"
-                              value="Other"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-11"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Other 
+                               Second option 
                             </label>
                           </div>
                         </pdk-radio-button>
@@ -315,6 +271,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
 <offence-component-test
   index={[Function Number]}
   offence={[Function Object]}
+  offenceWithdrawalReasons={[Function Array]}
 >
   <form
     class="ng-untouched ng-pristine ng-valid"
@@ -323,6 +280,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
     <offence-withdrawal-component
       ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
+      ng-reflect-offence-withdrawal-reasons="[object Object],[object Object"
     >
       
       <div
@@ -365,7 +323,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               _ngcontent-c10=""
               aria-expanded="false"
               class="pdk-foldable__content"
-              id="pdk-foldable-text-12"
+              id="pdk-foldable-text-10"
             >
                On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
             </span>
@@ -427,14 +385,14 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-15"
-                        name="pdk-radio-group-14"
+                        id="pdk-radio-13"
+                        name="pdk-radio-group-12"
                         type="radio"
                         value="true"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-15"
+                        for="pdk-radio-13"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -450,14 +408,14 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-16"
-                        name="pdk-radio-group-14"
+                        id="pdk-radio-14"
+                        name="pdk-radio-group-12"
                         type="radio"
                         value="false"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-16"
+                        for="pdk-radio-14"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -502,8 +460,8 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                     
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
-                      ng-reflect-model="some reason"
-                      ng-reflect-name="offenceId1.reason"
+                      ng-reflect-model="1"
+                      ng-reflect-name="offenceId1.withdrawalRequestRe"
                       ng-reflect-options="[object Object],[object Object"
                       ng-reflect-required=""
                       required=""
@@ -513,94 +471,48 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                       >
                         
                         <pdk-radio-button
-                          ng-reflect-value="Insufficient evidence"
+                          ng-reflect-value="1"
                         >
                           <div
                             class="govuk-radios__item"
                           >
                             <input
                               class="govuk-radios__input"
-                              id="pdk-radio-19"
-                              name="pdk-radio-group-18"
+                              id="pdk-radio-17"
+                              name="pdk-radio-group-16"
                               type="radio"
-                              value="Insufficient evidence"
+                              value="1"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
-                              for="pdk-radio-19"
+                              for="pdk-radio-17"
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Insufficient evidence 
+                               First option 
                             </label>
                           </div>
                         </pdk-radio-button>
                         <pdk-radio-button
-                          ng-reflect-value="Agreement between prosecutor a"
+                          ng-reflect-value="2"
                         >
                           <div
                             class="govuk-radios__item"
                           >
                             <input
                               class="govuk-radios__input"
-                              id="pdk-radio-20"
-                              name="pdk-radio-group-18"
+                              id="pdk-radio-18"
+                              name="pdk-radio-group-16"
                               type="radio"
-                              value="Agreement between prosecutor and defendant reached"
+                              value="2"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
-                              for="pdk-radio-20"
+                              for="pdk-radio-18"
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Agreement between prosecutor and defendant reached 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Not in public interest to proc"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-21"
-                              name="pdk-radio-group-18"
-                              type="radio"
-                              value="Not in public interest to proceed"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-21"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Not in public interest to proceed 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Other"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-22"
-                              name="pdk-radio-group-18"
-                              type="radio"
-                              value="Other"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-22"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Other 
+                               Second option 
                             </label>
                           </div>
                         </pdk-radio-button>
@@ -626,6 +538,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
 <offence-component-test
   index={[Function Number]}
   offence={[Function Object]}
+  offenceWithdrawalReasons={[Function Array]}
 >
   <form
     class="ng-untouched ng-pristine ng-valid"
@@ -634,6 +547,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
     <offence-withdrawal-component
       ng-reflect-index="1"
       ng-reflect-offence="[object Object]"
+      ng-reflect-offence-withdrawal-reasons="[object Object],[object Object"
     >
       
       <div
@@ -676,7 +590,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               _ngcontent-c19=""
               aria-expanded="false"
               class="pdk-foldable__content"
-              id="pdk-foldable-text-23"
+              id="pdk-foldable-text-19"
             >
                On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
             </span>
@@ -738,14 +652,14 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-26"
-                        name="pdk-radio-group-25"
+                        id="pdk-radio-22"
+                        name="pdk-radio-group-21"
                         type="radio"
                         value="true"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-26"
+                        for="pdk-radio-22"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -761,14 +675,14 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-27"
-                        name="pdk-radio-group-25"
+                        id="pdk-radio-23"
+                        name="pdk-radio-group-21"
                         type="radio"
                         value="false"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-27"
+                        for="pdk-radio-23"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -813,8 +727,8 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                     
                     <pdk-radio-group
                       class="ng-untouched ng-pristine ng-valid"
-                      ng-reflect-model="some reason"
-                      ng-reflect-name="offenceId1.reason"
+                      ng-reflect-model="1"
+                      ng-reflect-name="offenceId1.withdrawalRequestRe"
                       ng-reflect-options="[object Object],[object Object"
                       ng-reflect-required=""
                       required=""
@@ -824,94 +738,48 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                       >
                         
                         <pdk-radio-button
-                          ng-reflect-value="Insufficient evidence"
+                          ng-reflect-value="1"
                         >
                           <div
                             class="govuk-radios__item"
                           >
                             <input
                               class="govuk-radios__input"
-                              id="pdk-radio-30"
-                              name="pdk-radio-group-29"
+                              id="pdk-radio-26"
+                              name="pdk-radio-group-25"
                               type="radio"
-                              value="Insufficient evidence"
+                              value="1"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
-                              for="pdk-radio-30"
+                              for="pdk-radio-26"
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Insufficient evidence 
+                               First option 
                             </label>
                           </div>
                         </pdk-radio-button>
                         <pdk-radio-button
-                          ng-reflect-value="Agreement between prosecutor a"
+                          ng-reflect-value="2"
                         >
                           <div
                             class="govuk-radios__item"
                           >
                             <input
                               class="govuk-radios__input"
-                              id="pdk-radio-31"
-                              name="pdk-radio-group-29"
+                              id="pdk-radio-27"
+                              name="pdk-radio-group-25"
                               type="radio"
-                              value="Agreement between prosecutor and defendant reached"
+                              value="2"
                             />
                             <label
                               class="govuk-radios__label govuk-label"
-                              for="pdk-radio-31"
+                              for="pdk-radio-27"
                               ng-reflect-type=""
                               pdk-label=""
                             >
-                               Agreement between prosecutor and defendant reached 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Not in public interest to proc"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-32"
-                              name="pdk-radio-group-29"
-                              type="radio"
-                              value="Not in public interest to proceed"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-32"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Not in public interest to proceed 
-                            </label>
-                          </div>
-                        </pdk-radio-button>
-                        <pdk-radio-button
-                          ng-reflect-value="Other"
-                        >
-                          <div
-                            class="govuk-radios__item"
-                          >
-                            <input
-                              class="govuk-radios__input"
-                              id="pdk-radio-33"
-                              name="pdk-radio-group-29"
-                              type="radio"
-                              value="Other"
-                            />
-                            <label
-                              class="govuk-radios__label govuk-label"
-                              for="pdk-radio-33"
-                              ng-reflect-type=""
-                              pdk-label=""
-                            >
-                               Other 
+                               Second option 
                             </label>
                           </div>
                         </pdk-radio-button>

@@ -12,6 +12,7 @@ import {
 import { MOCK_OFFENCES } from '../../../../__tests__/test-mock-data';
 import { Offence } from '../../../../../contexts/sjp/index';
 import { By } from '@angular/platform-browser';
+import { Option } from '../../../../../shared/interfaces';
 
 describe('OffenceWithdrawalComponent', () => {
   let fixture: ComponentFixture<TestOffenceComponent>;
@@ -34,6 +35,10 @@ describe('OffenceWithdrawalComponent', () => {
 
     fixture.componentInstance.offence = MOCK_OFFENCES[0];
     fixture.componentInstance.index = 1;
+    fixture.componentInstance.offenceWithdrawalReasons = [
+      { value: '1', label: 'First option' },
+      { value: '2', label: 'Second option' }
+    ];
 
     fixture.detectChanges();
   });
@@ -59,12 +64,17 @@ describe('OffenceWithdrawalComponent', () => {
     selector: 'offence-component-test',
     template: `
       <form #form="ngForm">
-        <offence-withdrawal-component [offence]="offence" [index]="1"></offence-withdrawal-component>
+        <offence-withdrawal-component
+          [offence]="offence"
+          [index]="1"
+          [offenceWithdrawalReasons]="offenceWithdrawalReasons"
+        ></offence-withdrawal-component>
       </form>
     `
   })
   class TestOffenceComponent {
     offence: Offence;
     index: number;
+    offenceWithdrawalReasons: Option[];
   }
 });

@@ -113,15 +113,17 @@ Array [
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
-        "reason": "Insufficient evidence",
         "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
       },
       Object {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
-        "reason": "Insufficient evidence",
         "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
       },
       Object {
         "adjournedTo": "2019-06-11",
@@ -244,6 +246,19 @@ Object {
   },
   "speakWelsh": false,
 }
+`;
+
+exports[`selectors getOffenceWithdrawalRequestReasons should select offences withdrawal request reasons from the store 1`] = `
+Array [
+  Object {
+    "label": "First",
+    "value": "1",
+  },
+  Object {
+    "label": "Third",
+    "value": "3",
+  },
+]
 `;
 
 exports[`selectors getOffences should select offences from the store 1`] = `

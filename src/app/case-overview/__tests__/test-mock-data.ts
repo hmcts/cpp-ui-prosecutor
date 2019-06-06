@@ -23,7 +23,8 @@ export const MOCK_OFFENCES: Offence[] = [
     startDate: '2019-01-19',
     chargeDate: '2019-01-24',
     compensation: 30,
-    withdrawalRequestReason: 'some reason',
+    withdrawalRequestReasonId: '1',
+    withdrawalRequestReason: 'Insufficient Evidence',
     prosecutionFacts: 'An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..'
   } as Offence,
   {
@@ -145,14 +146,16 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       id: 'mock-case-offence-decision-1',
       offenceId: 'offenceId1',
       decisionType: 'WITHDRAW',
-      reason: 'Insufficient evidence',
+      withdrawalReason: 'Insufficient evidence',
+      withdrawalReasonId: '1',
       verdict: 'NO_VERDICT'
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-2',
       offenceId: 'offenceId2',
       decisionType: 'WITHDRAW',
-      reason: 'Insufficient evidence',
+      withdrawalReason: 'Insufficient evidence',
+      withdrawalReasonId: '1',
       verdict: 'NO_VERDICT'
     } as WithdrawOffenceDecision,
     {

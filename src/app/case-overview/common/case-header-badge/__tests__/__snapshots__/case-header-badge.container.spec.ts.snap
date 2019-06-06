@@ -28,7 +28,8 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {

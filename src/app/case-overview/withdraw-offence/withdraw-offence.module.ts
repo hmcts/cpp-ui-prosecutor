@@ -18,7 +18,7 @@ import { WithdrawOffenceFormComponent } from './withdraw-offence-form.component'
 import { FormsModule } from '@angular/forms';
 import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence-withdrawal.module';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
-
+import { OffenceWithdrawalReasonsGuard } from './withdraw-offence.guard';
 const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
 @NgModule({
@@ -40,10 +40,12 @@ const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, Withdr
     RouterModule.forChild([
       {
         path: '',
-        component: WithdrawOffenceContainer
+        component: WithdrawOffenceContainer,
+        canActivate: [OffenceWithdrawalReasonsGuard]
       }
     ])
   ],
-  exports: [WithdrawOffenceContainer]
+  exports: [WithdrawOffenceContainer],
+  providers: [OffenceWithdrawalReasonsGuard]
 })
 export class WithdrawOffenceModule {}

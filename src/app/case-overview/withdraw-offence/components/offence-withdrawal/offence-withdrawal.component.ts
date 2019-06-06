@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { Offence } from '../../../../contexts/sjp/index';
-import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIONS } from '../../reason-mappings';
+import { Option } from '../../../../shared/interfaces';
 
 @Component({
   selector: 'offence-withdrawal-component',
@@ -21,7 +21,7 @@ import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIO
       </pdk-foldable-text>
 
       <pdk-form-field *ngIf="!caseWithdrawn">
-        <div *ngIf="offence.withdrawalRequestReason" pdk-margin-vertical="5">
+        <div *ngIf="offence.withdrawalRequestReasonId" pdk-margin-vertical="5">
           <pdk-badge>
             Pending Withdrawal
           </pdk-badge>
@@ -42,8 +42,8 @@ import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIO
           >
             <pdk-radio-group
               [ngModel]="offenceReason"
-              name="{{ offence.id }}.reason"
-              [options]="reasonOptions"
+              name="{{ offence.id }}.withdrawalRequestReasonId"
+              [options]="offenceWithdrawalReasons"
               required
             >
             </pdk-radio-group>
@@ -54,9 +54,9 @@ import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIO
   `
 })
 export class OffenceWithdrawalComponent implements OnInit {
-  public readonly reasonOptions = WITHDRAW_OFFENCE_FORM_REASON_OPTIONS;
-  public readonly errorMessages = WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE;
+  public readonly errorMessages = [{ rule: 'required', message: 'Choose a reason' }];
 
+  @Input() offenceWithdrawalReasons: Option[];
   @Input() index: number;
   @Input() offence: Offence;
   @Input() caseWithdrawn: boolean;
@@ -65,7 +65,7 @@ export class OffenceWithdrawalComponent implements OnInit {
   displayReason = false;
 
   ngOnInit(): void {
-    this.offenceReason = this.offence.withdrawalRequestReason;
-    this.displayReason = !!this.offence.withdrawalRequestReason;
+    this.offenceReason = this.offence.withdrawalRequestReasonId;
+    this.displayReason = !!this.offence.withdrawalRequestReasonId;
   }
 }

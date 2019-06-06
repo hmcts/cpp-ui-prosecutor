@@ -3,7 +3,7 @@ import * as fromSelectors from '../../selectors';
 
 import { combineReducers } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
-import { MOCK_CASE, MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
+import { MOCK_CASE, MOCK_PENDING_DATES_TO_AVOID, MOCK_OFFENCE_WITHDRAWAL_REASON } from './test-mock-data';
 import { MOCK_CASE_DECISION } from '../../../case-overview/__tests__/test-mock-data';
 
 describe('selectors', () => {
@@ -53,6 +53,13 @@ describe('selectors', () => {
       MOCK_CASE.caseDecisions = [MOCK_CASE_DECISION];
       const state = createState([new fromActions.LoadCaseSuccess(MOCK_CASE)]);
       expect(fromSelectors.getCaseDecisions(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getOffenceWithdrawalRequestReasons', () => {
+    it('should select offences withdrawal request reasons from the store', () => {
+      const state = createState([new fromActions.LoadOffenceWithdrawalReasonsSuccess(MOCK_OFFENCE_WITHDRAWAL_REASON)]);
+      expect(fromSelectors.getOffenceWithdrawalRequestReasons(state)).toMatchSnapshot();
     });
   });
 });

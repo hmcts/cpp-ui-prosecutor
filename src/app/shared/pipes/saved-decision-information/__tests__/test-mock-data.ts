@@ -29,7 +29,7 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       id: 'mock-case-offence-decision-1',
       offenceId: 'offenceId1',
       decisionType: 'WITHDRAW',
-      reason: 'Insufficient evidence'
+      withdrawalReason: 'Insufficient evidence'
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-2',

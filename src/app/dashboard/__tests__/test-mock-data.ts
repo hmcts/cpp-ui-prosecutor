@@ -1,4 +1,5 @@
 import { DefendantDetailsUpdatesState, PleadedNotGuiltyCasesState } from '../../core/reducers/entities.reducer';
+import { OffenceWithdrawalReason } from '../../contexts/reference-data';
 
 export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
   cases: [
@@ -89,3 +90,27 @@ export const MOCK_DEFENDANT_DETAILS_UPDATES: DefendantDetailsUpdatesState = {
     }
   ]
 };
+
+export const MOCK_OFFENCE_WITHDRAWAL_REASON: OffenceWithdrawalReason[] = [
+  {
+    id: '1',
+    sequence: 1,
+    reasonCodeDescription: 'First',
+    legalAdviser: true,
+    prosecutor: true
+  },
+  {
+    id: '2',
+    sequence: 2,
+    reasonCodeDescription: 'Second',
+    legalAdviser: true,
+    prosecutor: false
+  },
+  {
+    id: '3',
+    sequence: 3,
+    reasonCodeDescription: 'Third',
+    legalAdviser: false,
+    prosecutor: true
+  }
+];

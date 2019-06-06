@@ -39,6 +39,6 @@ export class DefendantOffenceComponent {
   }
 
   get pendingWithdrawal(): boolean {
-    return this.offence.withdrawalRequestReason && !this.kase.completed;
+    return this.offence.withdrawalRequestReasonId && !this.kase.completed;
   }
 }

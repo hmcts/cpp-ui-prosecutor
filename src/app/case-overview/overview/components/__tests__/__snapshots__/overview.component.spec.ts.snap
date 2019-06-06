@@ -82,7 +82,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -328,7 +329,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -627,7 +629,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
                 </div>
@@ -651,7 +654,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -802,7 +806,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -951,10 +956,11 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -987,14 +993,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -1131,7 +1139,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -1377,7 +1386,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -1610,7 +1620,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
                 </div>
@@ -1634,7 +1645,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -1785,7 +1797,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -1934,10 +1947,11 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -1970,14 +1984,16 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -2114,7 +2130,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -2360,7 +2377,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -2593,7 +2611,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
                 </div>
@@ -2617,7 +2636,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -2768,7 +2788,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -2917,10 +2938,11 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -2953,14 +2975,16 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -3097,7 +3121,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -3433,7 +3458,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -3732,7 +3758,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2017-01-14",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..",
     "outOfTime": true,
     "notInEffect": true
@@ -3758,7 +3785,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -3907,10 +3935,11 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -3943,14 +3972,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -4087,7 +4118,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -4372,7 +4404,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -4671,7 +4704,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
                 </div>
@@ -4695,7 +4729,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -4846,7 +4881,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -4995,10 +5031,11 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -5031,14 +5068,16 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -5175,7 +5214,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -5421,7 +5461,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -5720,7 +5761,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..",
     "pleaMitigation": "Plea mitigation"
   }
@@ -5745,7 +5787,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -5901,10 +5944,11 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -5937,14 +5981,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
@@ -6081,7 +6127,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -6327,7 +6374,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -6626,7 +6674,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "startDate": "2019-01-19",
     "chargeDate": "2019-01-24",
     "compensation": 30,
-    "withdrawalRequestReason": "some reason",
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
     "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
   }
                 </div>
@@ -6650,7 +6699,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "startDate": "2019-01-19",
           "chargeDate": "2019-01-24",
           "compensation": 30,
-          "withdrawalRequestReason": "some reason",
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
           "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
         },
         {
@@ -6799,10 +6849,11 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   <pdk-tab
                     heading="Decisions"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
                       role="tabpanel"
                     >
                       
@@ -6835,14 +6886,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
         "decisionType": "WITHDRAW",
-        "reason": "Insufficient evidence",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
         "verdict": "NO_VERDICT"
       },
       {

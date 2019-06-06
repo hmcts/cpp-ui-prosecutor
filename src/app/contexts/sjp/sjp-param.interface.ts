@@ -1,6 +1,6 @@
 export interface WithdrawOffenceParam {
   offenceId: string;
-  reason: string;
+  withdrawalRequestReasonId: string;
 }
 
 export interface WithdrawOffenceRequestParam {
@@ -11,4 +11,3 @@ export interface AcknowledgeDefendantDetailsUpdatesParam {
   caseId: string;
   defendantId: string;
 }
-

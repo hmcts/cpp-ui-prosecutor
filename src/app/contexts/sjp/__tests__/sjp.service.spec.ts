@@ -14,7 +14,7 @@ const MOCK_WITHDRAW_STATE = {
   withdrawalRequestsStatus: [
     {
       offenceId: 'mock-offence-id',
-      reason: 'mock-reason'
+      withdrawalRequestReasonId: 'mock-reason'
     }
   ]
 };

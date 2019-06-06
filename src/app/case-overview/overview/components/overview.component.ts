@@ -90,7 +90,7 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
       <pdk-grid two-thirds>
         <div pdk-margin-vertical="8">
           <pdk-tabs>
-            <pdk-tab heading="Decisions" *ngIf="caseDecisions?.length">
+            <pdk-tab heading="Decisions" *ngIf="caseDecisions?.length" [selected]="true">
               <div *ngFor="let caseDecision of caseDecisions">
                 <case-decisions [caseDecision]="caseDecision"></case-decisions>
               </div>

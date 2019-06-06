@@ -1,5 +1,6 @@
 import { Case, CaseDocumentMetaData, ContactDetails, Offence } from '../../../contexts/sjp';
 import { PleadedNotGuiltyCasesState } from '../../reducers/entities.reducer';
+import { OffenceWithdrawalReason } from '../../../contexts/reference-data';
 
 export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
   cases: [
@@ -144,3 +145,27 @@ export const MOCK_CASE: Case = {
   status: 'COMPLETED',
   listedInCriminalCourts: false
 };
+
+export const MOCK_OFFENCE_WITHDRAWAL_REASON: OffenceWithdrawalReason[] = [
+  {
+    id: '3',
+    sequence: 3,
+    reasonCodeDescription: 'Third',
+    legalAdviser: true,
+    prosecutor: true
+  },
+  {
+    id: '2',
+    sequence: 1,
+    reasonCodeDescription: 'Second',
+    legalAdviser: true,
+    prosecutor: false
+  },
+  {
+    id: '1',
+    sequence: 1,
+    reasonCodeDescription: 'First',
+    legalAdviser: false,
+    prosecutor: true
+  }
+];

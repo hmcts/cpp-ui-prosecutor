@@ -40,6 +40,32 @@ Object {
 }
 `;
 
+exports[`defendantDetailsUpdatesReducer LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS should set the new state 1`] = `
+Array [
+  Object {
+    "id": "1",
+    "legalAdviser": true,
+    "prosecutor": true,
+    "reasonCodeDescription": "First",
+    "sequence": 1,
+  },
+  Object {
+    "id": "2",
+    "legalAdviser": true,
+    "prosecutor": false,
+    "reasonCodeDescription": "Second",
+    "sequence": 2,
+  },
+  Object {
+    "id": "3",
+    "legalAdviser": false,
+    "prosecutor": true,
+    "reasonCodeDescription": "Third",
+    "sequence": 3,
+  },
+]
+`;
+
 exports[`defendantDetailsUpdatesReducer undefined action should initialize the default state 1`] = `undefined`;
 
 exports[`pleadedNotGuiltyReducer LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS should set the new state 1`] = `

@@ -1,5 +1,6 @@
 import { State } from '../../reducers';
 import { createSelector } from '@ngrx/store';
+import { map } from 'rxjs/operators';
 
 export const getRouteParams = (state: State) =>
   (state.router && state.router.state && (state.router.state.params as { [key: string]: string })) || {};
@@ -28,8 +29,8 @@ export const getWithdrawCaseStatus = createSelector(
     kase.defendant.offences.length > 1 &&
     kase.defendant.offences.every(
       offence =>
-        offence.withdrawalRequestReason &&
-        offence.withdrawalRequestReason === kase.defendant.offences[0].withdrawalRequestReason
+        offence.withdrawalRequestReasonId &&
+        offence.withdrawalRequestReasonId === kase.defendant.offences[0].withdrawalRequestReasonId
     )
 );
 
@@ -38,3 +39,14 @@ export const getPleadedNotGuiltyCasesDetail = (state: State) => state.pleadedNot
 export const getDefendantDetailsUpdates = (state: State) => state.defendantDetailsUpdates;
 
 export const getCaseDecisions = (state: State) => state.case && state.case.caseDecisions;
+
+export const getOffenceWithdrawalReasons = (state: State) => state.offenceWithdrawalReasons;
+
+export const getOffenceWithdrawalRequestReasons = createSelector(
+  getOffenceWithdrawalReasons,
+  offenceWithdrawalReasons =>
+    offenceWithdrawalReasons
+      .filter(offenceWithdrawalReason => offenceWithdrawalReason.prosecutor)
+      .sort((reason1, reason2) => reason1.sequence - reason2.sequence)
+      .map(reason => ({ value: reason.id, label: reason.reasonCodeDescription }))
+);

@@ -1,14 +1,19 @@
-import { TestBed } from '@angular/core/testing';
 import {
   caseReducer,
   defendantDetailsUpdatesReducer,
-  PleadedNotGuiltyCasesState,
+  offenceWithdrawalReasonsReducer,
   pleadedNotGuiltyReducer
 } from '../entities.reducer';
-import { LoadCaseSuccess, LoadDefendantDetailsUpdates, LoadPleadedNotGuiltyCases } from '../../actions/entities';
 import {
-  MOCK_PENDING_DATES_TO_AVOID,
-  MOCK_DEFENDANT_DETAILS_UPDATES
+  LoadCaseSuccess,
+  LoadDefendantDetailsUpdates,
+  LoadOffenceWithdrawalReasonsSuccess,
+  LoadPleadedNotGuiltyCases
+} from '../../actions/entities';
+import {
+  MOCK_DEFENDANT_DETAILS_UPDATES,
+  MOCK_OFFENCE_WITHDRAWAL_REASON,
+  MOCK_PENDING_DATES_TO_AVOID
 } from '../../../dashboard/__tests__/test-mock-data';
 import { Case } from '../../../contexts/sjp';
 
@@ -65,6 +70,17 @@ describe('defendantDetailsUpdatesReducer', () => {
       const result = defendantDetailsUpdatesReducer(
         undefined,
         new LoadDefendantDetailsUpdates(MOCK_DEFENDANT_DETAILS_UPDATES)
+      );
+
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS', () => {
+    it('should set the new state', () => {
+      const result = offenceWithdrawalReasonsReducer(
+        undefined,
+        new LoadOffenceWithdrawalReasonsSuccess(MOCK_OFFENCE_WITHDRAWAL_REASON)
       );
 
       expect(result).toMatchSnapshot();

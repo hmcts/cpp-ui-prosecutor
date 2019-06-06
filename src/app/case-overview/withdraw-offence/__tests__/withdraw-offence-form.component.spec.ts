@@ -6,6 +6,7 @@ import { Offence } from '../../../contexts/sjp';
 import { MOCK_OFFENCES } from '../../__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Option } from '../../../shared/interfaces';
 
 describe('WithdrawOffenceFormComponent', () => {
   let fixture: ComponentFixture<TestWithdrawOffenceListFormComponent>;
@@ -42,6 +43,7 @@ describe('WithdrawOffenceFormComponent', () => {
       <withdraw-list-form
         [offences]="offences"
         [caseWithdrawnStatus]="caseWithdrawnStatus"
+        [offenceWithdrawalReasons]="offenceWithdrawalReasons"
         (errors)="errors = $event"
         (submitOffenceWithdrawals)="formSubmit.emit($event)"
       >
@@ -50,6 +52,7 @@ describe('WithdrawOffenceFormComponent', () => {
   })
   class TestWithdrawOffenceListFormComponent {
     offences: Offence[];
+    offenceWithdrawalReasons: Option[];
     form = jest.fn();
     formSubmit = jest.fn();
     errors = jest.fn();
@@ -65,5 +68,6 @@ describe('WithdrawOffenceFormComponent', () => {
     @Input() index: number;
     @Input() offence: Offence;
     @Input() caseWithdrawn: boolean;
+    @Input() offenceWithdrawalReasons: Option[];
   }
 });

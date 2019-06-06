@@ -59,6 +59,7 @@ export interface Offence {
   nameChanged: boolean;
   pleaMitigation?: string;
   withdrawalRequestReason?: string;
+  withdrawalRequestReasonId?: string;
 
   // todo bellow unaccounted for
   pendingWithdrawal?: boolean; // reason? {id}
@@ -211,7 +212,8 @@ export interface OffenceDecision {
 }
 
 export interface WithdrawOffenceDecision extends OffenceDecision {
-  reason: string;
+  withdrawalReason: string;
+  withdrawalReasonId: string;
 }
 
 export interface AdjournOffenceDecision extends OffenceDecision {

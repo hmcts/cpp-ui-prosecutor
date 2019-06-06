@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Case, Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
+import { Option } from '../../shared/interfaces';
 
 @Component({
   selector: 'withdraw-offence-list',
@@ -37,6 +38,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
         <withdraw-list-form
           [offences]="offences"
           [caseWithdrawnStatus]="caseWithdrawnStatus"
+          [offenceWithdrawalReasons]="offenceWithdrawalReasons"
           (errors)="errors = $event"
           (submitOffenceWithdrawals)="formSubmit.emit($event)"
         >
@@ -50,6 +52,7 @@ export class WithdrawOffenceComponent {
   @Input() offences: Offence[];
   @Input() kase: Case;
   @Input() caseWithdrawnStatus: boolean;
+  @Input() offenceWithdrawalReasons: Option[];
   @Output() formSubmit = new EventEmitter<WithdrawOffenceParam[]>();
   errors: ValidationError[];
 }

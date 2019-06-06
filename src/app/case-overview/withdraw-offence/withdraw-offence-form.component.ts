@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
 import { NgForm } from '@angular/forms';
 import { Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
-import { WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE, WITHDRAW_OFFENCE_FORM_REASON_OPTIONS } from './reason-mappings';
+import { Option } from '../../shared/interfaces';
 
 interface FormValues {
   [key: string]: {
     withdraw: boolean;
-    reason: string;
+    withdrawalRequestReasonId: string;
   };
 }
 
@@ -39,7 +39,12 @@ interface FormValues {
               labelType="small"
               [errorMessages]="errorMessages"
             >
-              <pdk-radio-group [ngModel]="caseReason" name="case.reason" [options]="reasonOptions" required>
+              <pdk-radio-group
+                [ngModel]="caseReason"
+                name="case.withdrawalRequestReasonId"
+                [options]="offenceWithdrawalReasons"
+                required
+              >
               </pdk-radio-group>
             </pdk-form-field>
           </ng-container>
@@ -62,6 +67,7 @@ interface FormValues {
           [index]="offences.length > 1 ? i + 1 : 0"
           [offence]="offence"
           [caseWithdrawn]="caseWithdrawn"
+          [offenceWithdrawalReasons]="offenceWithdrawalReasons"
         ></offence-withdrawal-component>
       </div>
 
@@ -84,8 +90,7 @@ interface FormValues {
   `
 })
 export class WithdrawOffenceFormComponent implements OnInit {
-  public readonly reasonOptions = WITHDRAW_OFFENCE_FORM_REASON_OPTIONS;
-  public readonly errorMessages = WITHDRAW_OFFENCE_FORM_ERROR_MESSAGE;
+  public readonly errorMessages = [{ rule: 'required', message: 'Choose a reason' }];
 
   caseReason = '';
   caseWithdrawn = false;
@@ -94,26 +99,32 @@ export class WithdrawOffenceFormComponent implements OnInit {
 
   @Input() caseWithdrawnStatus: boolean;
   @Input() offences: Offence[];
+  @Input() offenceWithdrawalReasons: Option[];
   @Output() errors = new EventEmitter<ValidationError[]>();
   @Output() submitOffenceWithdrawals = new EventEmitter<WithdrawOffenceParam[]>();
 
   ngOnInit(): void {
     this.caseWithdrawn = this.caseWithdrawnStatus;
     if (this.caseWithdrawnStatus) {
-      this.caseReason = this.offences[0].withdrawalRequestReason;
+      this.caseReason = this.offences[0].withdrawalRequestReasonId;
     }
   }
 
   mapFormValues(values: FormValues[]) {
     if (this.caseWithdrawn) {
       const caseWithdrawnState = this.offences.reduce((accumulator, currentValue) => {
-        return [...accumulator, { offenceId: currentValue.id, reason: values['case.reason'] }];
+        return [
+          ...accumulator,
+          { offenceId: currentValue.id, withdrawalRequestReasonId: values['case.withdrawalRequestReasonId'] }
+        ];
       }, []);
       this.submitOffenceWithdrawals.emit(caseWithdrawnState);
     } else {
       const selectedOffencesWithdrawnState = Object.keys(values).reduce((accumulator, key) => {
         const [offenceId, identifier] = key.split('.');
-        return identifier === 'reason' ? [...accumulator, { offenceId, reason: values[key] }] : accumulator;
+        return identifier === 'withdrawalRequestReasonId'
+          ? [...accumulator, { offenceId, withdrawalRequestReasonId: values[key] }]
+          : accumulator;
       }, []);
       this.submitOffenceWithdrawals.emit(selectedOffencesWithdrawnState);
     }

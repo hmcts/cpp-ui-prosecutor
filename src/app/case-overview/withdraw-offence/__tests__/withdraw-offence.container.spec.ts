@@ -5,6 +5,7 @@ import { WithdrawOffenceContainer } from '../withdraw-offence.container';
 import { StoreModule, Store } from '@ngrx/store';
 import { caseOverviewReducer } from '../../case-overview.reducer';
 import { reducers } from '../../../core/reducers';
+import { Option } from '../../../shared/interfaces';
 
 describe('WithdrawOffenceContainer', () => {
   let fixture: ComponentFixture<WithdrawOffenceContainer>;
@@ -44,5 +45,6 @@ describe('WithdrawOffenceContainer', () => {
     @Input() offences: any;
     @Input() kase: any;
     @Input() caseWithdrawnStatus: any;
+    @Input() offenceWithdrawalReasons: Option[];
   }
 });
