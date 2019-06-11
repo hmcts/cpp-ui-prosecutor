@@ -6,7 +6,8 @@ import {
   ContactDetails,
   Offence,
   WithdrawOffenceDecision,
-  CourtReferralOffenceDecision
+  CourtReferralOffenceDecision,
+  DismissOffenceDecision
 } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
@@ -144,37 +145,49 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       id: 'mock-case-offence-decision-1',
       offenceId: 'offenceId1',
       decisionType: 'WITHDRAW',
-      reason: 'Insufficient evidence'
+      reason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT'
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-2',
       offenceId: 'offenceId2',
       decisionType: 'WITHDRAW',
-      reason: 'Insufficient evidence'
+      reason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT'
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-3',
       offenceId: 'offenceId3',
       decisionType: 'ADJOURN',
-      adjournedTo: '2019-06-11'
+      adjournedTo: '2019-06-11',
+      verdict: 'NO_VERDICT'
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-4',
       offenceId: 'offenceId4',
       decisionType: 'ADJOURN',
-      adjournedTo: '2019-07-11'
+      adjournedTo: '2019-07-11',
+      verdict: 'NO_VERDICT'
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-5',
       offenceId: 'offenceId5',
       decisionType: 'ADJOURN',
-      adjournedTo: '2019-06-21'
+      adjournedTo: '2019-06-21',
+      verdict: 'NO_VERDICT'
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-6',
       offenceId: 'offenceId6',
       decisionType: 'REFER_FOR_COURT_HEARING',
-      referralReason: 'Not suitable for SJP'
-    } as CourtReferralOffenceDecision
+      referralReason: 'Not suitable for SJP',
+      verdict: 'NO_VERDICT'
+    } as CourtReferralOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-7',
+      offenceId: 'offenceId7',
+      decisionType: 'DISMISS',
+      verdict: 'PROVED_SJP'
+    } as DismissOffenceDecision
   ]
 };

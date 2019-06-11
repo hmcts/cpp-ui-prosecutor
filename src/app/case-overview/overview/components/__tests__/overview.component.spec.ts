@@ -23,6 +23,7 @@ import { Case, CaseDecision, CaseDocument, Defendant, Offence } from '../../../.
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
 import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
+import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -56,7 +57,8 @@ describe('OverviewComponent', () => {
         FormatAddressPipeModule,
         PdkBreadcrumbsModule,
         PdkRelatedModule,
-        SavedDecisionInformationPipeModule
+        SavedDecisionInformationPipeModule,
+        VerdictTypePipeModule
       ]
     });
 

@@ -34,6 +34,7 @@ import { PersonalDetailsChangeAlertComponent } from './components/personal-detai
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
 import { CaseDecisionsComponent } from './components/case-decisions.component';
 import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
+import { VerdictTypePipeModule } from '../../shared/pipes/verdict-type/verdict-type.module';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -71,7 +72,8 @@ const DECLARATIONS = [
     OffenceWarningModule,
     DownloadDocumentModule,
     CaseHeaderBadgeModule,
-    SavedDecisionInformationPipeModule
+    SavedDecisionInformationPipeModule,
+    VerdictTypePipeModule
   ],
   exports: [OverviewContainer]
 })

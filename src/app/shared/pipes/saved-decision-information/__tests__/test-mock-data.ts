@@ -2,7 +2,8 @@ import {
   CaseDecision,
   WithdrawOffenceDecision,
   AdjournOffenceDecision,
-  CourtReferralOffenceDecision
+  CourtReferralOffenceDecision,
+  DismissOffenceDecision
 } from 'src/app/contexts/sjp';
 
 export const MOCK_CASE_DECISION: CaseDecision = {
@@ -41,6 +42,10 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       offenceId: 'offenceId6',
       decisionType: 'REFER_FOR_COURT_HEARING',
       referralReason: 'Not suitable for SJP'
-    } as CourtReferralOffenceDecision
+    } as CourtReferralOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-7',
+      decisionType: 'DISMISS'
+    } as DismissOffenceDecision
   ]
 };

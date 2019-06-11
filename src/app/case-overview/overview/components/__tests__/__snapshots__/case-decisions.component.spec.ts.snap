@@ -116,6 +116,7 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Withdrawn - Insufficient evidence
                   </p>
@@ -162,6 +163,7 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Withdrawn - Insufficient evidence
                   </p>
@@ -208,6 +210,7 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Adjourned to 11 Jun 2019 (or after)
                   </p>
@@ -254,6 +257,7 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Adjourned to 11 Jul 2019 (or after)
                   </p>
@@ -300,6 +304,7 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Adjourned to 21 Jun 2019 (or after)
                   </p>
@@ -346,8 +351,59 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   class="govuk-grid-column-two-thirds"
                 >
                     
+                  
                   <p>
                     Referred for court hearing - Not suitable for SJP
+                  </p>
+                </div>
+              </pdk-grid>
+            </div>
+          </pdk-grid>
+          
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div>
+          <pdk-grid
+            container=""
+            ng-reflect-container=""
+          >
+            <div
+              class="govuk-grid-row"
+            >
+              <pdk-grid
+                ng-reflect-one-third=""
+                one-third=""
+              >
+                <div
+                  class="govuk-grid-column-one-third"
+                >
+                  <div
+                    pdk-margin-left="2"
+                  >
+                    <b>
+                      Offence 7 
+                    </b>
+                  </div>
+                </div>
+              </pdk-grid>
+              <pdk-grid
+                ng-reflect-two-thirds=""
+                two-thirds=""
+              >
+                <div
+                  class="govuk-grid-column-two-thirds"
+                >
+                    
+                  
+                  <p>
+                    Proved SJP
+                  </p>
+                  <p>
+                    Dismissed
                   </p>
                 </div>
               </pdk-grid>

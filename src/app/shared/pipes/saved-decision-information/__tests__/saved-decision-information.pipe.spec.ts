@@ -21,4 +21,8 @@ describe('Saved Decision Information Pipe', () => {
       'Referred for court hearing - Not suitable for SJP'
     );
   });
+
+  it('should display Dismissed  decision information if decision type is Dismissed', () => {
+    expect(pipe.transform(MOCK_CASE_DECISION.offenceDecisions[3])).toEqual('Dismissed');
+  });
 });

@@ -8,6 +8,7 @@ import { FormatDatePipeModule, SavedDecisionInformationPipeModule } from '../../
 import { RouterTestingModule } from '@angular/router/testing';
 import { CaseDecisionsComponent } from '../case-decisions.component';
 import { FirstLastNamePipeModule } from '../../../../shared/pipes/first-last-name/first-last-name.module';
+import { VerdictTypePipeModule } from '../../../../shared//pipes/verdict-type/verdict-type.module';
 
 describe('CaseDecisionComponent', () => {
   let fixture: ComponentFixture<TestCaseDecisionsComponent>;
@@ -23,7 +24,8 @@ describe('CaseDecisionComponent', () => {
         FormatDatePipeModule,
         RouterTestingModule,
         FirstLastNamePipeModule,
-        SavedDecisionInformationPipeModule
+        SavedDecisionInformationPipeModule,
+        VerdictTypePipeModule
       ]
     });
     fixture = TestBed.createComponent(TestCaseDecisionsComponent);

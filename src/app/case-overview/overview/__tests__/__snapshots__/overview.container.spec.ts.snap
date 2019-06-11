@@ -142,6 +142,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "offenceId": "offenceId1",
             "decisionType": "WITHDRAW",
             "reason": "Insufficient evidence",
+            "verdict": "NO_VERDICT",
             "offenceTitle": "offence title 1"
           },
           {
@@ -149,31 +150,42 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "offenceId": "offenceId2",
             "decisionType": "WITHDRAW",
             "reason": "Insufficient evidence",
+            "verdict": "NO_VERDICT",
             "offenceTitle": "offence title 2"
           },
           {
             "id": "mock-case-offence-decision-3",
             "offenceId": "offenceId3",
             "decisionType": "ADJOURN",
-            "adjournedTo": "2019-06-11"
+            "adjournedTo": "2019-06-11",
+            "verdict": "NO_VERDICT"
           },
           {
             "id": "mock-case-offence-decision-4",
             "offenceId": "offenceId4",
             "decisionType": "ADJOURN",
-            "adjournedTo": "2019-07-11"
+            "adjournedTo": "2019-07-11",
+            "verdict": "NO_VERDICT"
           },
           {
             "id": "mock-case-offence-decision-5",
             "offenceId": "offenceId5",
             "decisionType": "ADJOURN",
-            "adjournedTo": "2019-06-21"
+            "adjournedTo": "2019-06-21",
+            "verdict": "NO_VERDICT"
           },
           {
             "id": "mock-case-offence-decision-6",
             "offenceId": "offenceId6",
             "decisionType": "REFER_FOR_COURT_HEARING",
-            "referralReason": "Not suitable for SJP"
+            "referralReason": "Not suitable for SJP",
+            "verdict": "NO_VERDICT"
+          },
+          {
+            "id": "mock-case-offence-decision-7",
+            "offenceId": "offenceId7",
+            "decisionType": "DISMISS",
+            "verdict": "PROVED_SJP"
           }
         ]
       }
@@ -311,6 +323,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "offenceId": "offenceId1",
           "decisionType": "WITHDRAW",
           "reason": "Insufficient evidence",
+          "verdict": "NO_VERDICT",
           "offenceTitle": "offence title 1"
         },
         {
@@ -318,31 +331,42 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "offenceId": "offenceId2",
           "decisionType": "WITHDRAW",
           "reason": "Insufficient evidence",
+          "verdict": "NO_VERDICT",
           "offenceTitle": "offence title 2"
         },
         {
           "id": "mock-case-offence-decision-3",
           "offenceId": "offenceId3",
           "decisionType": "ADJOURN",
-          "adjournedTo": "2019-06-11"
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT"
         },
         {
           "id": "mock-case-offence-decision-4",
           "offenceId": "offenceId4",
           "decisionType": "ADJOURN",
-          "adjournedTo": "2019-07-11"
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT"
         },
         {
           "id": "mock-case-offence-decision-5",
           "offenceId": "offenceId5",
           "decisionType": "ADJOURN",
-          "adjournedTo": "2019-06-21"
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT"
         },
         {
           "id": "mock-case-offence-decision-6",
           "offenceId": "offenceId6",
           "decisionType": "REFER_FOR_COURT_HEARING",
-          "referralReason": "Not suitable for SJP"
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT"
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP"
         }
       ]
     }

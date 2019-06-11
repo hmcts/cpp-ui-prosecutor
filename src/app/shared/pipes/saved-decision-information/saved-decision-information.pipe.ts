@@ -27,6 +27,11 @@ export class SavedDecisionInformationPipe implements PipeTransform {
         const courtReferralOffenceDecision = offenceDecision as CourtReferralOffenceDecision;
         return `Referred for court hearing - ${courtReferralOffenceDecision.referralReason}`;
       }
+      case 'DISMISS': {
+        return `Dismissed`;
+      }
+      default:
+        throw new Error('Invalid decision type ' + offenceDecision.decisionType);
     }
   }
 }

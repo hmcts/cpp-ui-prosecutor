@@ -207,6 +207,7 @@ export interface OffenceDecision {
   offenceId: string;
   offenceTitle: string;
   decisionType: string;
+  verdict: VerdictType;
 }
 
 export interface WithdrawOffenceDecision extends OffenceDecision {
@@ -220,6 +221,9 @@ export interface AdjournOffenceDecision extends OffenceDecision {
 export interface CourtReferralOffenceDecision extends OffenceDecision {
   referralReason: string;
 }
+
+// tslint:disable-next-line
+export interface DismissOffenceDecision extends OffenceDecision {}
 
 export interface Session {
   sessionId: string;
@@ -239,3 +243,5 @@ export interface CaseDecision {
   savedAt: string;
   offenceDecisions: OffenceDecision[];
 }
+
+export type VerdictType = 'PROVED_SJP' | 'FOUND_NOT_GUILTY' | 'FOUND_GUILTY' | 'NO_VERDICT';
