@@ -1,4 +1,4 @@
-import {Case} from '../../src/app/contexts/sjp';
+import { Case } from '../../src/app/contexts/sjp';
 
 const { pleadOnlinePayload } = require('../fixtures/json/plead-online.json');
 
@@ -21,20 +21,22 @@ export class CaseDataBuilder {
     };
   }
 
-  public static buildPleadNotGuiltyPayload(interpreterLanguage = null, speakWelsh = false) {
+  public static buildPleadNotGuiltyPayload(offenceId: string, defendantId: string) {
     const payload = {
-      interpreterRequired: !!interpreterLanguage,
-      speakWelsh,
-      plea: 'NOT_GUILTY'
+      defendantCourtOptions: {
+        welshHearing: false,
+        interpreter: {
+          needed: false
+        }
+      },
+      pleas: [
+        {
+          offenceId: `${offenceId}`,
+          defendantId: `${defendantId}`,
+          pleaType: 'NOT_GUILTY'
+        }
+      ]
     };
-
-    if (interpreterLanguage) {
-      return {
-        ...payload,
-        interpreterLanguage
-      };
-    }
-
     return payload;
   }
 

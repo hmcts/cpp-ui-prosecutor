@@ -17,6 +17,7 @@
     "ci:build:prod": "npm run-script ci:build -- --configuration=production",
     "ci:build:staging": "npm run-script ci:build -- --configuration=staging",
     "ci:build:test": "npm run-script ci:build:staging",
+    "ci:prime": "echo no-priming-needed",
     "nsp": "nsp",
     "ci:nsp": "mkdirp ./build/dependency-check && nsp check --reporter owasp 1> ./build/dependency-check/dependency-check-report.xml || rm ./build/dependency-check/dependency-check-report.xml || true",
     "protractor": "protractor",
@@ -27,7 +28,8 @@
     "vagrant:start": "ng serve --base-href=\"/prosecutor/\" -c idam --port 9009 --public-host http://localhost:9009/sockjs-node --deploy-url /prosecutor/",
     "vagrant:e2e": "npm run ci:e2e -- --baseUrl http://localhost:7080  --params.apiUrl http://localhost:8080 --params.integration=integrated  --visible",
     "e2e": "ng e2e",
-    "case": "ts-node tools/cases.ts"
+    "case": "ts-node tools/cases.ts",
+    "update-webdriver": "webdriver-manager update"
   },
   "private": true,
   "dependencies": {

@@ -43,9 +43,9 @@ export const pleadOnline = (caseId: string, defendantId: string, body) => {
 export const pleadGuilty = (offenceId: string, caseId: string, body: any) => {
   return request({
     method: 'POST',
-    url: `${COMMAND}/cases/${caseId}/offences/${offenceId}/pleas`,
+    url: `${COMMAND}/cases/${caseId}/set-pleas`,
     headers: {
-      'Content-Type': 'application/vnd.sjp.update-plea+json',
+      'Content-Type': 'application/vnd.sjp.set-pleas+json',
       charset: 'UTF-8'
     },
     body,
