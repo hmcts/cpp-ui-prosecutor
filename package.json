@@ -23,7 +23,7 @@
     "protractor": "protractor",
     "sonar:scanner": "sonar-scanner -Dsonar.projectVersion=${version}",
     "sonar:local_verify": "SONAR_SCANNER_OPTS=\"-Dhttp.nonProxyHosts=localhost|127.0.0.1\" npm run-script sonar:scanner -- -Dsonar.analysis.mode=preview -Dsonar.host.url=http://10.124.22.71:9000 -Dsonar.branch=master",
-    "ci:e2e": "rimraf build/axeReport/ && protractor ./e2e/protractor.conf.js",
+    "ci:e2e": "npm run update-webdriver && rimraf build/axeReport/ && protractor ./e2e/protractor.conf.js",
     "ptr": "npm run ci:e2e -- --baseUrl http://localhost:4750 --visible",
     "vagrant:start": "ng serve --base-href=\"/prosecutor/\" -c idam --port 9009 --public-host http://localhost:9009/sockjs-node --deploy-url /prosecutor/",
     "vagrant:e2e": "npm run ci:e2e -- --baseUrl http://localhost:7080  --params.apiUrl http://localhost:8080 --params.integration=integrated  --visible",
