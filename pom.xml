@@ -174,7 +174,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-              <arguments>run-script ci:e2e -- --baseUrl=${protractor.baseUrl}/prosecutor/ --params.apiUrl=${protractor.apiUrl}
+              <arguments>run-script ci:e2e -- --baseUrl=${protractor.baseUrl}/prosecutor-atcm/ --params.apiUrl=${protractor.apiUrl}
                 ${npm.e2e.options} --logLevel=DEBUG --params.integration=integrated
               </arguments>
               <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
