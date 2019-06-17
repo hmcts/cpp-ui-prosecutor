@@ -25,7 +25,10 @@ describe('review not guilty pleas', () => {
 
     // assert on the link text to match the count
     await expect(dashboardPage.reviewNotGuiltyPleasLink.getText()).toContain(
-      'Review not guilty pleas (' + expectedCasesPendingDatesToAvoid + ' cases)'
+      'Review not guilty pleas (' +
+        expectedCasesPendingDatesToAvoid +
+        (expectedCasesPendingDatesToAvoid > 1 ? ' cases' : ' case') +
+        ')'
     );
 
     // click on the link
@@ -36,7 +39,10 @@ describe('review not guilty pleas', () => {
 
     // assert the heading on the page
     await expect(reviewNotGuiltyPleaCasesPage.subHeading.getText()).toContain(
-      'Review not guilty pleas (' + expectedCasesPendingDatesToAvoid + ' cases)'
+      'Review not guilty pleas (' +
+        expectedCasesPendingDatesToAvoid +
+        (expectedCasesPendingDatesToAvoid > 1 ? ' cases' : ' case') +
+        ')'
     );
 
     // get the LAST case on the pending cases table

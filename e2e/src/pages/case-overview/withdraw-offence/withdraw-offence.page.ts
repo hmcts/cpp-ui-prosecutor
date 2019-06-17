@@ -8,7 +8,7 @@ export class WithdrawOffencePage extends BasePage {
 
   public readonly withdrawOffenceHeading = $(`[data-test='withdraw-offence-heading']`);
   public readonly withdrawOffenceRadioButtonYes = $(`input[type=radio][value='true']`);
-  public readonly withdrawOffenceRadioButtonReasonInsufficient = $(`input[type=radio][value='Other']`);
+  public readonly withdrawOffenceRadioButtonReasonInsufficient = element(by.cssContainingText('label', 'Other'));
   public readonly withdrawOffenceSubmitButton = element(by.cssContainingText('button', 'Confirm'));
 
   constructor(role: string, caseId: string) {
