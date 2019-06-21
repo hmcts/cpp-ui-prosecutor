@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details
+    ng-reflect-case-decision-with-offence-decisions="[object Object]"
+  >
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+                pdk-padding-vertical="2"
+              >
+                <b>
+                  Decision made
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+              <div
+                pdk-padding-vertical="2"
+              >
+                <div>
+                   1 Dec 2018 
+                </div>
+                <div>
+                   04:10pm 
+                </div>
+                <div
+                  class="pre-line"
+                >
+                   
+                </div>
+                
+                <div>
+                   Legal Adviser: Mark Adams 
+                </div>
+                
+                <div
+                  pdk-text-colour="grey-1"
+                >
+                   Wimbledon Magistrates' Court 
+                </div>
+              </div>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 1 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 2 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 3 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 11 Jun 2019 (or after)
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 4 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 11 Jul 2019 (or after)
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 5 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 21 Jun 2019 (or after)
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 6 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p
+                data-role="offence-decision"
+              >
+                Referred for court hearing - Not suitable for SJP
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div>
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-one-third=""
+            one-third=""
+          >
+            <div
+              class="govuk-grid-column-one-third"
+            >
+              <div
+                pdk-margin-left="2"
+              >
+                <b>
+                  Offence 7 
+                </b>
+              </div>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+                
+              
+              <p>
+                Proved SJP
+              </p>
+              <p
+                data-role="offence-decision"
+              >
+                Dismissed
+              </p>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;

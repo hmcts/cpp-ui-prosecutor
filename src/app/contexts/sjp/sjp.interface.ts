@@ -207,6 +207,7 @@ export interface OffenceDecision {
   id: string;
   offenceId: string;
   offenceTitle: string;
+  offenceSequenceNumber: number;
   decisionType: string;
   verdict: VerdictType;
 }

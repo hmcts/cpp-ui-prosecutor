@@ -32,7 +32,7 @@ export const MOCK_OFFENCES: Offence[] = [
     offenceCode: 'CA03013',
     title: 'offence title 2',
     legislation: 'legislation 1',
-    offenceSequenceNumber: 1,
+    offenceSequenceNumber: 2,
     wording:
       'On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of ' +
       'London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was ' +
@@ -133,7 +133,7 @@ export const MOCK_CASE_DECISION: CaseDecision = {
     localJusticeAreaNationalCourtCode: '2577',
     startedAt: '2018-12-01T16:10:28.259Z',
     endedAt: '2018-12-01T16:10:28.259Z',
-    sessionType: 'DELEGATEDPOwERS',
+    sessionType: 'DELEGATEDPOWERS',
     legalAdviser: {
       userId: 'legal-adviser-1',
       firstName: 'Mark',
@@ -148,7 +148,8 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       decisionType: 'WITHDRAW',
       withdrawalReason: 'Insufficient evidence',
       withdrawalReasonId: '1',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 1
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-2',
@@ -156,41 +157,99 @@ export const MOCK_CASE_DECISION: CaseDecision = {
       decisionType: 'WITHDRAW',
       withdrawalReason: 'Insufficient evidence',
       withdrawalReasonId: '1',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 2
     } as WithdrawOffenceDecision,
     {
       id: 'mock-case-offence-decision-3',
       offenceId: 'offenceId3',
       decisionType: 'ADJOURN',
       adjournedTo: '2019-06-11',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 3
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-4',
       offenceId: 'offenceId4',
       decisionType: 'ADJOURN',
       adjournedTo: '2019-07-11',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 4
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-5',
       offenceId: 'offenceId5',
       decisionType: 'ADJOURN',
       adjournedTo: '2019-06-21',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 5
     } as AdjournOffenceDecision,
     {
       id: 'mock-case-offence-decision-6',
       offenceId: 'offenceId6',
       decisionType: 'REFER_FOR_COURT_HEARING',
       referralReason: 'Not suitable for SJP',
-      verdict: 'NO_VERDICT'
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 6
     } as CourtReferralOffenceDecision,
     {
       id: 'mock-case-offence-decision-7',
       offenceId: 'offenceId7',
       decisionType: 'DISMISS',
-      verdict: 'PROVED_SJP'
+      verdict: 'PROVED_SJP',
+      offenceSequenceNumber: 7
     } as DismissOffenceDecision
+  ]
+};
+
+export const MOCK_CASE_DECISION_2: CaseDecision = {
+  id: 'mock-case-decision-2',
+  session: {
+    sessionId: 'mock-case-decision-session-2',
+    legalAdviserUserId: 'mock-case-decision-session-userid-2',
+    courtHouseCode: 'B01OK',
+    courtHouseName: `Wimbledon Magistrates' Court`,
+    localJusticeAreaNationalCourtCode: '2577',
+    startedAt: '2019-12-01T16:10:28.259Z',
+    endedAt: '2019-12-01T16:10:28.259Z',
+    sessionType: 'DELEGATEDPOWERS',
+    legalAdviser: {
+      userId: 'legal-adviser-2',
+      firstName: 'Mark',
+      lastName: 'Adams'
+    }
+  },
+  savedAt: '2019-12-01T16:10:28.259Z',
+  offenceDecisions: [
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId3',
+      decisionType: 'WITHDRAW',
+      withdrawalReasonId: '1',
+      withdrawalReason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 3,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as WithdrawOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId4',
+      decisionType: 'WITHDRAW',
+      withdrawalReasonId: '1',
+      withdrawalReason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 4,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as WithdrawOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId5',
+      decisionType: 'WITHDRAW',
+      withdrawalReasonId: '1',
+      withdrawalReason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 5,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as WithdrawOffenceDecision
   ]
 };

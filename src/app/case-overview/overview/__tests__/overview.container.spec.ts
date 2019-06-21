@@ -7,7 +7,6 @@ import { MOCK_CASE, MOCK_CASE_DECISION } from '../../__tests__/test-mock-data';
 import { FeatureState } from '../../case-overview.selectors';
 import { Case, CaseDecision, Defendant, Offence } from '../../../contexts/sjp';
 import { OverviewContainer } from '../overview.container';
-import { RouterTestingModule } from '@angular/router/testing';
 import { LoadCaseSuccess } from '../../../core/actions';
 
 describe('OverviewContainer', () => {
@@ -17,11 +16,7 @@ describe('OverviewContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OverviewContainer, MockCaseOverviewComponent],
-      imports: [
-        RouterTestingModule,
-        StoreModule.forRoot(reducers),
-        StoreModule.forFeature('caseOverview', caseOverviewReducer)
-      ]
+      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('caseOverview', caseOverviewReducer)]
     });
 
     store = TestBed.get(Store);
@@ -38,10 +33,10 @@ describe('OverviewContainer', () => {
   @Component({
     selector: 'case-overview',
     template: `
-      <div>{{ kase | json }}</div>
-      <div>{{ defendant | json }}</div>
-      <div>{{ offences | json }}</div>
-      <div>{{ caseDecisions | json }}</div>
+      <div>kase: {{ kase | json }}</div>
+      <div>defendant: {{ defendant | json }}</div>
+      <div>offences: {{ offences | json }}</div>
+      <div>caseDecisions: {{ caseDecisions | json }}</div>
     `
   })
   class MockCaseOverviewComponent {

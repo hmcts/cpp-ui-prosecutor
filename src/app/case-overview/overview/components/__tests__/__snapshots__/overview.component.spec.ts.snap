@@ -91,7 +91,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -338,7 +338,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -663,7 +663,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -772,7 +772,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "offenceCode": "CA03013",
     "title": "offence title 2",
     "legislation": "legislation 1",
-    "offenceSequenceNumber": 1,
+    "offenceSequenceNumber": 2,
     "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
     "cjsCode": "CA03013",
     "sequenceNumber": 1,
@@ -815,7 +815,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -904,24 +904,26 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -952,107 +954,113 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -1148,7 +1156,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -1395,7 +1403,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -1654,7 +1662,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -1763,7 +1771,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
     "offenceCode": "CA03013",
     "title": "offence title 2",
     "legislation": "legislation 1",
-    "offenceSequenceNumber": 1,
+    "offenceSequenceNumber": 2,
     "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
     "cjsCode": "CA03013",
     "sequenceNumber": 1,
@@ -1806,7 +1814,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -1895,24 +1903,26 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -1943,107 +1953,113 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -2139,7 +2155,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -2386,7 +2402,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -2645,7 +2661,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -2754,7 +2770,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     "offenceCode": "CA03013",
     "title": "offence title 2",
     "legislation": "legislation 1",
-    "offenceSequenceNumber": 1,
+    "offenceSequenceNumber": 2,
     "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
     "cjsCode": "CA03013",
     "sequenceNumber": 1,
@@ -2797,7 +2813,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -2886,24 +2902,26 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -2934,107 +2952,113 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -3130,7 +3154,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -3467,7 +3491,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -3794,7 +3818,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -3883,24 +3907,26 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -3931,107 +3957,113 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -4127,7 +4159,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -4413,7 +4445,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -4738,7 +4770,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -4847,7 +4879,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     "offenceCode": "CA03013",
     "title": "offence title 2",
     "legislation": "legislation 1",
-    "offenceSequenceNumber": 1,
+    "offenceSequenceNumber": 2,
     "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
     "cjsCode": "CA03013",
     "sequenceNumber": 1,
@@ -4890,7 +4922,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -4979,24 +5011,26 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -5027,107 +5061,113 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -5223,7 +5263,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -5470,7 +5510,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -5796,7 +5836,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -5892,24 +5932,26 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -5940,107 +5982,113 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
       },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
-      }
-    ]
-  }
-                          </div>
-                        </case-decisions>
-                      </div>
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
                     </section>
                   </pdk-tab>
                 </div>
               </pdk-tabs>
             </div>
-          </div>
-        </pdk-grid>
-      </div>
-    </pdk-grid>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;
@@ -6136,7 +6184,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -6383,7 +6431,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -6708,7 +6756,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -6797,24 +6845,26 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
-    <pdk-grid
-      container=""
-      ng-reflect-container=""
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <div
+          class="govuk-grid-row"
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
           >
             <div
-              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-              ng-reflect-vertical="8"
-              pdk-margin-vertical="8"
+              class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
                 <div
@@ -6845,98 +6895,668 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       </a>
                     </li>
                   </ul>
-                  
                   <pdk-tab
                     heading="Decisions"
+                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="0"
                       role="tabpanel"
                     >
                       
-                      
-                      <div>
-                        <case-decisions
-                          ng-reflect-case-decision="[object Object]"
-                        >
-                          <div>
-                            {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOwERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
+      },
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
+  </case-overview>
+</case-overview-test>
+`;
+
+exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] = `
+<case-overview-test
+  caseDecisions={[Function Array]}
+  defendant={[Function Object]}
+  kase={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-overview
+    ng-reflect-case-decisions="[object Object]"
+    ng-reflect-defendant="[object Object]"
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offences="[object Object],[object Object"
+  >
+    <ol
+      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink="../../../"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink="../../search"
+        >
+           Search for a case 
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+         Case details 
+      </li>
+    </ol>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
       }
     },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
       {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
       },
       {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT"
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP"
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
       }
-    ]
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
   }
-                          </div>
-                        </case-decisions>
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <h1
+              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
+              ng-reflect-type="heading-xlarge"
+              ng-reflect-vertical="4"
+              pdk-margin-vertical="4"
+              pdk-typography="heading-xlarge"
+            >
+               Guy SMITH 
+            </h1>
+            <p
+              class="govuk-body-m"
+              ng-reflect-type="body-medium"
+              pdk-typography="body-medium"
+            >
+               14 Feb 2000 (17 years old)
+              <br />
+               Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
+            </p>
+            <personal-details-change-alert
+              ng-reflect-personal-details="[object Object]"
+            >
+              
+              <pdk-alert
+                aria-describedby="personal-details-updated-alert"
+                class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+                icon="true"
+                ng-reflect-icon="true"
+                ng-reflect-type="warning"
+                ng-reflect-vertical="1"
+                pdk-margin-vertical="1"
+                type="warning"
+              >
+                <div
+                  class="pdk-alert pdk-alert--warning"
+                  role="alert"
+                >
+                  <div
+                    class="pdk-alert__container"
+                  >
+                    
+                    <i
+                      aria-hidden="true"
+                      class="pdk-alert__icon pdk-alert__icon--alert"
+                      role="presentation"
+                    />
+                    <div
+                      class="pdk-alert__message"
+                    >
+                      <div>
+                         The following defendant details have been updated: 
+                        
+                        <div>
+                          Date of birth
+                        </div>
+                        
+                        
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </pdk-alert>
+            </personal-details-change-alert>
+            <case-warnings
+              ng-reflect-defendant="[object Object]"
+              ng-reflect-offences="[object Object],[object Object"
+            >
+              
+              
+              
+              
+            </case-warnings>
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Case details 
+                        
+                        
+                      </a>
+                    </li>
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="1"
+                        aria-selected="false"
+                        class="govuk-tabs__tab"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="-1"
+                      >
+                        
+                        
+                         Defendant details 
+                        
+                        
+                      </a>
+                    </li>
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="2"
+                        aria-selected="false"
+                        class="govuk-tabs__tab"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="-1"
+                      >
+                        
+                        
+                         Documents 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  <pdk-tab
+                    heading="Case details"
+                    ng-reflect-heading="Case details"
+                  >
+                    <section
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
+                      id="0"
+                      role="tabpanel"
+                    >
+                      
+                      <case-details
+                        ng-reflect-kase="[object Object]"
+                      >
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                        </div>
+                        <div>
+                          
+                        </div>
+                      </case-details>
+                    </section>
+                  </pdk-tab>
+                  <pdk-tab
+                    heading="Defendant details"
+                    ng-reflect-heading="Defendant details"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="1"
+                      role="tabpanel"
+                    >
+                      
+                      <defendant-details
+                        ng-reflect-defendant-details="[object Object]"
+                      >
+                        <div>
+                          
+                        </div>
+                        <div>
+                          {
+    "title": "Mr",
+    "firstName": "Guy",
+    "lastName": "Smith",
+    "dateOfBirth": "2000-02-14",
+    "gender": "Male",
+    "address": {
+      "address1": "Flat 1, Armageddon House",
+      "address2": "13 Old Road",
+      "address3": "Giggleswick",
+      "address4": "Merton",
+      "postcode": "CV8 1AB"
+    },
+    "contactDetails": {
+      "mobile": "77777777",
+      "email": "a@a.com",
+      "home": "333333333"
+    },
+    "dobChanged": true,
+    "addressChanged": false,
+    "nameChanged": false
+  }
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                      </defendant-details>
+                    </section>
+                  </pdk-tab>
+                  
+                  <pdk-tab
+                    heading="Documents"
+                    ng-reflect-heading="Documents"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      <document-list
+                        ng-reflect-case-id="case-id-test"
+                        ng-reflect-documents="[object Object],[object Object"
+                      >
+                        <div>
+                          [
+    {
+      "id": "documentId1",
+      "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+      "documentType": "PLEA",
+      "documentNumber": 1,
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
+    },
+    {
+      "id": "documentId2",
+      "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+      "documentType": "SJPN",
+      "documentNumber": 1,
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
+    }
+  ]
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          case-id-test
+                        </div>
+                      </document-list>
                     </section>
                   </pdk-tab>
                 </div>
@@ -6944,8 +7564,1573 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
             </div>
           </div>
         </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div
+            class="govuk-grid-column-one-third"
+          >
+            <div
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
+            >
+              <pdk-related
+                _nghost-c52=""
+              >
+                <div
+                  _ngcontent-c52=""
+                  class="pdk-related"
+                >
+                  <div
+                    _ngcontent-c52=""
+                    class="pdk-related__section"
+                  >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case options
+                    </h1>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </pdk-related>
+            </div>
+          </div>
+        </pdk-grid>
       </div>
     </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="1"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  1
+                </div>
+                <div>
+                  {
+    "id": "offenceId1",
+    "offenceCode": "CA03013",
+    "title": "offence title 1",
+    "legislation": "legislation 2",
+    "offenceSequenceNumber": 1,
+    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+    "cjsCode": "CA03013",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-19",
+    "chargeDate": "2019-01-24",
+    "compensation": 30,
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
+    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+  }
+                </div>
+                <div>
+                  {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              
+              <pdk-divider>
+                <hr
+                  class="pdk-divider"
+                />
+              </pdk-divider>
+            </div>
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="2"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  2
+                </div>
+                <div>
+                  {
+    "id": "offenceId2",
+    "offenceCode": "CA03013",
+    "title": "offence title 2",
+    "legislation": "legislation 1",
+    "offenceSequenceNumber": 2,
+    "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+    "cjsCode": "CA03013",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-15",
+    "chargeDate": "2019-01-27",
+    "compensation": 23,
+    "plea": "NOT_GUILTY",
+    "pleaMethod": "POSTAL",
+    "pleaDate": "2019-02-27T15:32:20.593Z",
+    "pendingWithdrawal": true,
+    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+  }
+                </div>
+                <div>
+                  {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
+                </div>
+              </statement-of-facts>
+              
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
+    >
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-if="caseDecisions?.length"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
+                      id="0"
+                      role="tabpanel"
+                    >
+                      
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: [
+    {
+      "id": "mock-case-decision-1",
+      "session": {
+        "sessionId": "mock-case-decision-session-1",
+        "legalAdviserUserId": "mock-case-decision-session-userid-1",
+        "courtHouseCode": "B01OK",
+        "courtHouseName": "Wimbledon Magistrates' Court",
+        "localJusticeAreaNationalCourtCode": "2577",
+        "startedAt": "2018-12-01T16:10:28.259Z",
+        "endedAt": "2018-12-01T16:10:28.259Z",
+        "sessionType": "DELEGATEDPOWERS",
+        "legalAdviser": {
+          "userId": "legal-adviser-1",
+          "firstName": "Mark",
+          "lastName": "Adams"
+        }
+      },
+      "savedAt": "2018-12-01T16:10:28.259Z",
+      "offenceDecisions": [
+        {
+          "id": "mock-case-offence-decision-1",
+          "offenceId": "offenceId1",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1
+        },
+        {
+          "id": "mock-case-offence-decision-2",
+          "offenceId": "offenceId2",
+          "decisionType": "WITHDRAW",
+          "withdrawalReason": "Insufficient evidence",
+          "withdrawalReasonId": "1",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2
+        },
+        {
+          "id": "mock-case-offence-decision-3",
+          "offenceId": "offenceId3",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
+        },
+        {
+          "id": "mock-case-offence-decision-4",
+          "offenceId": "offenceId4",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-07-11",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
+        },
+        {
+          "id": "mock-case-offence-decision-5",
+          "offenceId": "offenceId5",
+          "decisionType": "ADJOURN",
+          "adjournedTo": "2019-06-21",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
+        },
+        {
+          "id": "mock-case-offence-decision-6",
+          "offenceId": "offenceId6",
+          "decisionType": "REFER_FOR_COURT_HEARING",
+          "referralReason": "Not suitable for SJP",
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
+        },
+        {
+          "id": "mock-case-offence-decision-7",
+          "offenceId": "offenceId7",
+          "decisionType": "DISMISS",
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
+        }
+      ]
+    }
+  ]
+                        </div>
+                      </case-decisions>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
+  </case-overview>
+</case-overview-test>
+`;
+
+exports[`OverviewComponent should display empty Decisions tab without Case Decisions 1`] = `
+<case-overview-test
+  caseDecisions={[Function Array]}
+  defendant={[Function Object]}
+  kase={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-overview
+    ng-reflect-case-decisions=""
+    ng-reflect-defendant="[object Object]"
+    ng-reflect-kase="[object Object]"
+    ng-reflect-offences="[object Object],[object Object"
+  >
+    <ol
+      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+      ng-reflect-top="4"
+      pdk-breadcrumb-list=""
+      pdk-margin-top="4"
+    >
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink="../../../"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+        <a
+          class="govuk-breadcrumbs__link"
+          href="javascript: void(0)"
+          ng-reflect-active=""
+          pdk-breadcrumb=""
+          routerlink="../../search"
+        >
+           Search for a case 
+        </a>
+      </li>
+      <li
+        class="govuk-breadcrumbs__list-item"
+        pdk-breadcrumb-list-item=""
+      >
+         Case details 
+      </li>
+    </ol>
+    <case-header-badge-container>
+      <pre>
+        case badge
+      </pre>
+    </case-header-badge-container>
+    <case-submission-messages
+      ng-reflect-kase="[object Object]"
+    >
+      <span>
+        {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+      </span>
+      <span>
+        
+      </span>
+      <span>
+        
+      </span>
+    </case-submission-messages>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <h1
+              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
+              ng-reflect-type="heading-xlarge"
+              ng-reflect-vertical="4"
+              pdk-margin-vertical="4"
+              pdk-typography="heading-xlarge"
+            >
+               Guy SMITH 
+            </h1>
+            <p
+              class="govuk-body-m"
+              ng-reflect-type="body-medium"
+              pdk-typography="body-medium"
+            >
+               14 Feb 2000 (17 years old)
+              <br />
+               Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
+            </p>
+            <personal-details-change-alert
+              ng-reflect-personal-details="[object Object]"
+            >
+              
+              <pdk-alert
+                aria-describedby="personal-details-updated-alert"
+                class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+                icon="true"
+                ng-reflect-icon="true"
+                ng-reflect-type="warning"
+                ng-reflect-vertical="1"
+                pdk-margin-vertical="1"
+                type="warning"
+              >
+                <div
+                  class="pdk-alert pdk-alert--warning"
+                  role="alert"
+                >
+                  <div
+                    class="pdk-alert__container"
+                  >
+                    
+                    <i
+                      aria-hidden="true"
+                      class="pdk-alert__icon pdk-alert__icon--alert"
+                      role="presentation"
+                    />
+                    <div
+                      class="pdk-alert__message"
+                    >
+                      <div>
+                         The following defendant details have been updated: 
+                        
+                        <div>
+                          Date of birth
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </pdk-alert>
+            </personal-details-change-alert>
+            <case-warnings
+              ng-reflect-defendant="[object Object]"
+              ng-reflect-offences="[object Object],[object Object"
+            >
+              
+              
+              
+              
+            </case-warnings>
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Case details 
+                        
+                        
+                      </a>
+                    </li>
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="1"
+                        aria-selected="false"
+                        class="govuk-tabs__tab"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="-1"
+                      >
+                        
+                        
+                         Defendant details 
+                        
+                        
+                      </a>
+                    </li>
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="2"
+                        aria-selected="false"
+                        class="govuk-tabs__tab"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="-1"
+                      >
+                        
+                        
+                         Documents 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  <pdk-tab
+                    heading="Case details"
+                    ng-reflect-heading="Case details"
+                  >
+                    <section
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
+                      id="0"
+                      role="tabpanel"
+                    >
+                      
+                      <case-details
+                        ng-reflect-kase="[object Object]"
+                      >
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                        </div>
+                        <div>
+                          
+                        </div>
+                      </case-details>
+                    </section>
+                  </pdk-tab>
+                  <pdk-tab
+                    heading="Defendant details"
+                    ng-reflect-heading="Defendant details"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="1"
+                      role="tabpanel"
+                    >
+                      
+                      <defendant-details
+                        ng-reflect-defendant-details="[object Object]"
+                      >
+                        <div>
+                          
+                        </div>
+                        <div>
+                          {
+    "title": "Mr",
+    "firstName": "Guy",
+    "lastName": "Smith",
+    "dateOfBirth": "2000-02-14",
+    "gender": "Male",
+    "address": {
+      "address1": "Flat 1, Armageddon House",
+      "address2": "13 Old Road",
+      "address3": "Giggleswick",
+      "address4": "Merton",
+      "postcode": "CV8 1AB"
+    },
+    "contactDetails": {
+      "mobile": "77777777",
+      "email": "a@a.com",
+      "home": "333333333"
+    },
+    "dobChanged": true,
+    "addressChanged": false,
+    "nameChanged": false
+  }
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                      </defendant-details>
+                    </section>
+                  </pdk-tab>
+                  
+                  <pdk-tab
+                    heading="Documents"
+                    ng-reflect-heading="Documents"
+                  >
+                    <section
+                      aria-hidden="true"
+                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      role="tabpanel"
+                    >
+                      
+                      <document-list
+                        ng-reflect-case-id="case-id-test"
+                        ng-reflect-documents="[object Object],[object Object"
+                      >
+                        <div>
+                          [
+    {
+      "id": "documentId1",
+      "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+      "documentType": "PLEA",
+      "documentNumber": 1,
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "metadata": {}
+    },
+    {
+      "id": "documentId2",
+      "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+      "documentType": "SJPN",
+      "documentNumber": 1,
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "metadata": {}
+    }
+  ]
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          case-id-test
+                        </div>
+                      </document-list>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
+            </div>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div
+            class="govuk-grid-column-one-third"
+          >
+            <div
+              class="govuk-!-margin-top-5"
+              ng-reflect-top="5"
+              pdk-margin-top="5"
+            >
+              <pdk-related
+                _nghost-c59=""
+              >
+                <div
+                  _ngcontent-c59=""
+                  class="pdk-related"
+                >
+                  <div
+                    _ngcontent-c59=""
+                    class="pdk-related__section"
+                  >
+                    <h1
+                      class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                      ng-reflect-type="heading-medium"
+                      ng-reflect-vertical="1"
+                      pdk-margin-vertical="1"
+                      pdk-typography="heading-medium"
+                    >
+                      Case options
+                    </h1>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="withdraw-offence"
+                      >
+                        Manage offence withdrawals
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        class="govuk-link govuk-section-break govuk-section-break--s"
+                        href="javascript: void(0)"
+                        ng-reflect-type="small"
+                        pdk-link=""
+                        pdk-section="small"
+                        routerlink="dates-to-avoid"
+                      >
+                        
+                        
+                        <span>
+                          Change dates to avoid
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </pdk-related>
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="1"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  1
+                </div>
+                <div>
+                  {
+    "id": "offenceId1",
+    "offenceCode": "CA03013",
+    "title": "offence title 1",
+    "legislation": "legislation 2",
+    "offenceSequenceNumber": 1,
+    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+    "cjsCode": "CA03013",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-19",
+    "chargeDate": "2019-01-24",
+    "compensation": 30,
+    "withdrawalRequestReasonId": "1",
+    "withdrawalRequestReason": "Insufficient Evidence",
+    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+  }
+                </div>
+                <div>
+                  {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
+                </div>
+              </statement-of-facts>
+              
+              
+              <pdk-divider>
+                <hr
+                  class="pdk-divider"
+                />
+              </pdk-divider>
+            </div>
+            <div
+              class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
+              ng-reflect-vertical="8"
+              pdk-margin-vertical="8"
+            >
+              <defendant-offence
+                ng-reflect-index="2"
+                ng-reflect-kase="[object Object]"
+                ng-reflect-offence="[object Object]"
+              >
+                <div>
+                  2
+                </div>
+                <div>
+                  {
+    "id": "offenceId2",
+    "offenceCode": "CA03013",
+    "title": "offence title 2",
+    "legislation": "legislation 1",
+    "offenceSequenceNumber": 2,
+    "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+    "cjsCode": "CA03013",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-15",
+    "chargeDate": "2019-01-27",
+    "compensation": 23,
+    "plea": "NOT_GUILTY",
+    "pleaMethod": "POSTAL",
+    "pleaDate": "2019-02-27T15:32:20.593Z",
+    "pendingWithdrawal": true,
+    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+  }
+                </div>
+                <div>
+                  {
+    "id": "case-id-test",
+    "datesToAvoid": "datesToAvoid1",
+    "urn": "TFL26168N21T5",
+    "defendant": {
+      "id": "defendantId1",
+      "offences": [
+        {
+          "id": "offenceId1",
+          "offenceCode": "CA03013",
+          "title": "offence title 1",
+          "legislation": "legislation 2",
+          "offenceSequenceNumber": 1,
+          "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-19",
+          "chargeDate": "2019-01-24",
+          "compensation": 30,
+          "withdrawalRequestReasonId": "1",
+          "withdrawalRequestReason": "Insufficient Evidence",
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
+        },
+        {
+          "id": "offenceId2",
+          "offenceCode": "CA03013",
+          "title": "offence title 2",
+          "legislation": "legislation 1",
+          "offenceSequenceNumber": 2,
+          "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
+          "cjsCode": "CA03013",
+          "sequenceNumber": 1,
+          "startDate": "2019-01-15",
+          "chargeDate": "2019-01-27",
+          "compensation": 23,
+          "plea": "NOT_GUILTY",
+          "pleaMethod": "POSTAL",
+          "pleaDate": "2019-02-27T15:32:20.593Z",
+          "pendingWithdrawal": true,
+          "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
+        }
+      ],
+      "caseId": "case-id-test",
+      "interpreter": {
+        "needed": false
+      },
+      "speakWelsh": false,
+      "numPreviousConvictions": 2,
+      "personalDetails": {
+        "title": "Mr",
+        "firstName": "Guy",
+        "lastName": "Smith",
+        "dateOfBirth": "2000-02-14",
+        "gender": "Male",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "postcode": "CV8 1AB"
+        },
+        "contactDetails": {
+          "mobile": "77777777",
+          "email": "a@a.com",
+          "home": "333333333"
+        },
+        "dobChanged": true,
+        "addressChanged": false,
+        "nameChanged": false
+      }
+    },
+    "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+    "caseDocuments": [
+      {
+        "id": "documentId1",
+        "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+        "documentType": "PLEA",
+        "documentNumber": 1,
+        "addedAt": "2019-02-25T09:30:24.442Z",
+        "metadata": {}
+      },
+      {
+        "id": "documentId2",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "SJPN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {}
+      }
+    ],
+    "prosecutingAuthority": "TFL",
+    "completed": false,
+    "assigned": false,
+    "costs": 19,
+    "postingDate": "2019-01-27",
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "onlinePleaReceived": false,
+    "status": "COMPLETED",
+    "listedInCriminalCourts": false
+  }
+                </div>
+              </defendant-offence>
+              
+              <statement-of-facts
+                ng-reflect-statement-of-facts="An incident took place at GREE"
+              >
+                <div>
+                  An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
+                </div>
+              </statement-of-facts>
+              
+              
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <div
+      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
+      ng-reflect-bottom="0"
+      ng-reflect-top="5"
+      pdk-margin-bottom="0"
+      pdk-margin-top="5"
+    >
+      <pdk-grid
+        container=""
+        ng-reflect-container=""
+      >
+        <div
+          class="govuk-grid-row"
+        >
+          <pdk-grid
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+            <div
+              class="govuk-grid-column-two-thirds"
+            >
+              <pdk-tabs>
+                <div
+                  class="js-enabled govuk-tabs"
+                >
+                  <ul
+                    class="govuk-tabs__list"
+                    role="tablist"
+                  >
+                    
+                    <li
+                      class="govuk-tabs__list-item"
+                      role="presentation"
+                    >
+                      <a
+                        aria-controls="0"
+                        aria-selected="true"
+                        class="govuk-tabs__tab govuk-tabs__tab--selected"
+                        href="javascript:void(0);"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        
+                        
+                         Decisions 
+                        
+                        
+                      </a>
+                    </li>
+                  </ul>
+                  <pdk-tab
+                    heading="Decisions"
+                    ng-if="caseDecisions?.length"
+                    ng-reflect-heading="Decisions"
+                  >
+                    <section
+                      aria-hidden="false"
+                      class="govuk-tabs__panel"
+                      id="0"
+                      role="tabpanel"
+                    >
+                      
+                      <case-decisions
+                        ng-reflect-case-decisions-with-offence-decisions=""
+                      >
+                        <div>
+                          caseDecisionsWithOffenceDecisions: []
+                        </div>
+                      </case-decisions>
+                    </section>
+                  </pdk-tab>
+                </div>
+              </pdk-tabs>
+            </div>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
   </case-overview>
 </case-overview-test>
 `;

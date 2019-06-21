@@ -1,21 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { CaseDecision } from '../../../../contexts/sjp';
-import { MOCK_CASE_DECISION } from '../../../__tests__/test-mock-data';
+import { MOCK_CASE_DECISION, MOCK_CASE_DECISION_2 } from '../../../../case-overview/__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
 import { PdkDividerModule, PdkGridModule, PdkTabsModule } from '@cpp/pdk';
-import { FormatDatePipeModule, SavedDecisionInformationPipeModule } from '../../../../shared/pipes';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CaseDecisionsComponent } from '../case-decisions.component';
-import { FirstLastNamePipeModule } from '../../../../shared/pipes/first-last-name/first-last-name.module';
-import { VerdictTypePipeModule } from '../../../../shared//pipes/verdict-type/verdict-type.module';
+import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
+import {
+  FirstLastNamePipeModule,
+  FormatDatePipeModule,
+  SavedDecisionInformationPipeModule
+} from '../../../../shared/pipes';
 
-describe('CaseDecisionComponent', () => {
-  let fixture: ComponentFixture<TestCaseDecisionsComponent>;
+describe('CaseDecisionsComponent', () => {
+  let fixture: ComponentFixture<CaseDecisionsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseDecisionsComponent, TestCaseDecisionsComponent],
+      declarations: [CaseDecisionsComponent, TestCaseDecisionsDetailsComponent],
       imports: [
         CommonModule,
         PdkDividerModule,
@@ -28,22 +31,22 @@ describe('CaseDecisionComponent', () => {
         VerdictTypePipeModule
       ]
     });
-    fixture = TestBed.createComponent(TestCaseDecisionsComponent);
+    fixture = TestBed.createComponent(CaseDecisionsComponent);
   });
 
   it('should compile correctly', () => {
-    fixture.componentInstance.caseDecision = MOCK_CASE_DECISION;
+    fixture.componentInstance.caseDecisionsWithOffenceDecisions = [MOCK_CASE_DECISION, MOCK_CASE_DECISION_2];
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   @Component({
-    selector: 'case-decisions-test',
+    selector: 'case-decisions-details',
     template: `
-      <case-decisions [caseDecision]="caseDecision"></case-decisions>
+      <div>caseDecisionWithOffenceDecisions: {{ caseDecisionWithOffenceDecisions | json }}</div>
     `
   })
-  class TestCaseDecisionsComponent {
-    @Input() caseDecision: CaseDecision;
+  class TestCaseDecisionsDetailsComponent {
+    @Input() caseDecisionWithOffenceDecisions: CaseDecision;
   }
 });

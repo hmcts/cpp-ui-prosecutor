@@ -19,7 +19,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
     ng-reflect-offences="[object Object],[object Object"
   >
     <div>
-      {
+      kase: {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -47,7 +47,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "offenceCode": "CA03013",
           "title": "offence title 2",
           "legislation": "legislation 1",
-          "offenceSequenceNumber": 1,
+          "offenceSequenceNumber": 2,
           "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
           "cjsCode": "CA03013",
           "sequenceNumber": 1,
@@ -129,7 +129,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "localJusticeAreaNationalCourtCode": "2577",
           "startedAt": "2018-12-01T16:10:28.259Z",
           "endedAt": "2018-12-01T16:10:28.259Z",
-          "sessionType": "DELEGATEDPOwERS",
+          "sessionType": "DELEGATEDPOWERS",
           "legalAdviser": {
             "userId": "legal-adviser-1",
             "firstName": "Mark",
@@ -145,6 +145,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "withdrawalReason": "Insufficient evidence",
             "withdrawalReasonId": "1",
             "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 1,
             "offenceTitle": "offence title 1"
           },
           {
@@ -154,6 +155,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "withdrawalReason": "Insufficient evidence",
             "withdrawalReasonId": "1",
             "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 2,
             "offenceTitle": "offence title 2"
           },
           {
@@ -161,34 +163,39 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "offenceId": "offenceId3",
             "decisionType": "ADJOURN",
             "adjournedTo": "2019-06-11",
-            "verdict": "NO_VERDICT"
+            "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 3
           },
           {
             "id": "mock-case-offence-decision-4",
             "offenceId": "offenceId4",
             "decisionType": "ADJOURN",
             "adjournedTo": "2019-07-11",
-            "verdict": "NO_VERDICT"
+            "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 4
           },
           {
             "id": "mock-case-offence-decision-5",
             "offenceId": "offenceId5",
             "decisionType": "ADJOURN",
             "adjournedTo": "2019-06-21",
-            "verdict": "NO_VERDICT"
+            "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 5
           },
           {
             "id": "mock-case-offence-decision-6",
             "offenceId": "offenceId6",
             "decisionType": "REFER_FOR_COURT_HEARING",
             "referralReason": "Not suitable for SJP",
-            "verdict": "NO_VERDICT"
+            "verdict": "NO_VERDICT",
+            "offenceSequenceNumber": 6
           },
           {
             "id": "mock-case-offence-decision-7",
             "offenceId": "offenceId7",
             "decisionType": "DISMISS",
-            "verdict": "PROVED_SJP"
+            "verdict": "PROVED_SJP",
+            "offenceSequenceNumber": 7
           }
         ]
       }
@@ -196,7 +203,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
   }
     </div>
     <div>
-      {
+      defendant: {
     "id": "defendantId1",
     "offences": [
       {
@@ -220,7 +227,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
         "offenceCode": "CA03013",
         "title": "offence title 2",
         "legislation": "legislation 1",
-        "offenceSequenceNumber": 1,
+        "offenceSequenceNumber": 2,
         "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
         "cjsCode": "CA03013",
         "sequenceNumber": 1,
@@ -265,7 +272,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
   }
     </div>
     <div>
-      [
+      offences: [
     {
       "id": "offenceId1",
       "offenceCode": "CA03013",
@@ -287,7 +294,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
       "offenceCode": "CA03013",
       "title": "offence title 2",
       "legislation": "legislation 1",
-      "offenceSequenceNumber": 1,
+      "offenceSequenceNumber": 2,
       "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
       "cjsCode": "CA03013",
       "sequenceNumber": 1,
@@ -303,7 +310,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
   ]
     </div>
     <div>
-      [
+      caseDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -314,7 +321,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
         "localJusticeAreaNationalCourtCode": "2577",
         "startedAt": "2018-12-01T16:10:28.259Z",
         "endedAt": "2018-12-01T16:10:28.259Z",
-        "sessionType": "DELEGATEDPOwERS",
+        "sessionType": "DELEGATEDPOWERS",
         "legalAdviser": {
           "userId": "legal-adviser-1",
           "firstName": "Mark",
@@ -330,6 +337,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "withdrawalReason": "Insufficient evidence",
           "withdrawalReasonId": "1",
           "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 1,
           "offenceTitle": "offence title 1"
         },
         {
@@ -339,6 +347,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "withdrawalReason": "Insufficient evidence",
           "withdrawalReasonId": "1",
           "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 2,
           "offenceTitle": "offence title 2"
         },
         {
@@ -346,34 +355,39 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "offenceId": "offenceId3",
           "decisionType": "ADJOURN",
           "adjournedTo": "2019-06-11",
-          "verdict": "NO_VERDICT"
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 3
         },
         {
           "id": "mock-case-offence-decision-4",
           "offenceId": "offenceId4",
           "decisionType": "ADJOURN",
           "adjournedTo": "2019-07-11",
-          "verdict": "NO_VERDICT"
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 4
         },
         {
           "id": "mock-case-offence-decision-5",
           "offenceId": "offenceId5",
           "decisionType": "ADJOURN",
           "adjournedTo": "2019-06-21",
-          "verdict": "NO_VERDICT"
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 5
         },
         {
           "id": "mock-case-offence-decision-6",
           "offenceId": "offenceId6",
           "decisionType": "REFER_FOR_COURT_HEARING",
           "referralReason": "Not suitable for SJP",
-          "verdict": "NO_VERDICT"
+          "verdict": "NO_VERDICT",
+          "offenceSequenceNumber": 6
         },
         {
           "id": "mock-case-offence-decision-7",
           "offenceId": "offenceId7",
           "decisionType": "DISMISS",
-          "verdict": "PROVED_SJP"
+          "verdict": "PROVED_SJP",
+          "offenceSequenceNumber": 7
         }
       ]
     }

@@ -86,19 +86,18 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
         </div>
       </pdk-grid>
     </pdk-grid>
-    <pdk-grid container>
-      <pdk-grid two-thirds>
-        <div pdk-margin-vertical="8">
+
+    <div pdk-margin-top="5" pdk-margin-bottom="0">
+      <pdk-grid container>
+        <pdk-grid two-thirds>
           <pdk-tabs>
-            <pdk-tab heading="Decisions" *ngIf="caseDecisions?.length" [selected]="true">
-              <div *ngFor="let caseDecision of caseDecisions">
-                <case-decisions [caseDecision]="caseDecision"></case-decisions>
-              </div>
+            <pdk-tab heading="Decisions" ng-if="caseDecisions?.length">
+              <case-decisions [caseDecisionsWithOffenceDecisions]="caseDecisions"></case-decisions>
             </pdk-tab>
           </pdk-tabs>
-        </div>
+        </pdk-grid>
       </pdk-grid>
-    </pdk-grid>
+    </div>
   `
 })
 export class OverviewComponent {

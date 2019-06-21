@@ -19,13 +19,15 @@ export const getCaseDecisionsWithOffenceDecisions = createSelector(
   getCaseDecisions,
   getOffences,
   (caseDecisions, offences) => {
+    caseDecisions.sort((a, b) => (new Date(a.savedAt) > new Date(b.savedAt) ? -1 : 1));
     caseDecisions.forEach(caseDecision => {
       caseDecision.offenceDecisions.forEach(offenceDecision => {
         offences
           .filter(offence => offence.id === offenceDecision.offenceId)
           .map(offence => {
             Object.assign(offenceDecision, {
-              offenceTitle: offence.title
+              offenceTitle: offence.title,
+              offenceSequenceNumber: offence.offenceSequenceNumber
             });
           });
       });

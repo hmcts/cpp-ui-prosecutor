@@ -11,7 +11,7 @@ import {
   PdkTabsModule,
   PdkWarningTextModule
 } from '@cpp/pdk';
-import { MOCK_CASE, MOCK_OFFENCES, MOCK_CASE_DECISION } from '../../../__tests__/test-mock-data';
+import { MOCK_CASE, MOCK_CASE_DECISION, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   DefendantNamePipeModule,
@@ -41,7 +41,7 @@ describe('OverviewComponent', () => {
         MockSubComponent,
         PersonalDetailsChangeAlertComponent,
         MockSubmissionMessagesComponent,
-        MockCaseDecisionsComponent
+        MockCaseDecisionComponent
       ],
       imports: [
         PdkCoreModule,
@@ -136,17 +136,13 @@ describe('OverviewComponent', () => {
       }
     ];
     fixture.detectChanges();
-    const debugElement = fixture.debugElement.nativeElement;
-    const caseDecisions = debugElement.querySelector('case-decisions');
-    expect(caseDecisions.textContent).toContain('Decisions');
+    expect(fixture).toMatchSnapshot();
   });
 
-  it('should Not display Decisions tab without Case Decisions', () => {
+  it('should display empty Decisions tab without Case Decisions', () => {
     fixture.componentInstance.caseDecisions = [];
     fixture.detectChanges();
-    const debugElement = fixture.debugElement.nativeElement;
-    const caseDecisions = debugElement.querySelector('case-decisions');
-    expect(caseDecisions).toBeNull();
+    expect(fixture).toMatchSnapshot();
   });
 
   @Component({
@@ -242,11 +238,10 @@ describe('OverviewComponent', () => {
   @Component({
     selector: 'case-decisions',
     template: `
-      <div>{{ caseDecision | json }}</div>
+      <div>caseDecisionsWithOffenceDecisions: {{ caseDecisionsWithOffenceDecisions | json }}</div>
     `
   })
-  class MockCaseDecisionsComponent {
-    @Input()
-    caseDecision: CaseDecision;
+  class MockCaseDecisionComponent {
+    @Input() caseDecisionsWithOffenceDecisions: CaseDecision[];
   }
 });

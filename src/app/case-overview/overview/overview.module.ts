@@ -35,6 +35,7 @@ import { CaseSubmissionMessagesComponent } from './components/case-submission-me
 import { CaseDecisionsComponent } from './components/case-decisions.component';
 import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
 import { VerdictTypePipeModule } from '../../shared/pipes/verdict-type/verdict-type.module';
+import { CaseDecisionsDetailsComponent } from './components/case-decisions-details.component';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -49,7 +50,8 @@ const DECLARATIONS = [
   PleaMitigationComponent,
   PersonalDetailsChangeAlertComponent,
   CaseSubmissionMessagesComponent,
-  CaseDecisionsComponent
+  CaseDecisionsComponent,
+  CaseDecisionsDetailsComponent
 ];
 
 @NgModule({
