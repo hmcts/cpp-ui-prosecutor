@@ -117,7 +117,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Withdrawn - Insufficient evidence
                   </p>
                 </div>
@@ -164,7 +166,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Withdrawn - Insufficient evidence
                   </p>
                 </div>
@@ -211,7 +215,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Adjourned to 11 Jun 2019 (or after)
                   </p>
                 </div>
@@ -258,7 +264,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Adjourned to 11 Jul 2019 (or after)
                   </p>
                 </div>
@@ -305,7 +313,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Adjourned to 21 Jun 2019 (or after)
                   </p>
                 </div>
@@ -352,7 +362,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                 >
                     
                   
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Referred for court hearing - Not suitable for SJP
                   </p>
                 </div>
@@ -402,7 +414,9 @@ exports[`CaseDecisionComponent should compile correctly 1`] = `
                   <p>
                     Proved SJP
                   </p>
-                  <p>
+                  <p
+                    data-role="offence-decision"
+                  >
                     Dismissed
                   </p>
                 </div>

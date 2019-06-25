@@ -43,7 +43,7 @@ import { CaseDecision } from '../../../contexts/sjp';
           <pdk-grid two-thirds>
             {{ offenceDecision.offenceTitle }}
             <p *ngIf="offenceDecision.verdict != 'NO_VERDICT'">{{ offenceDecision.verdict | verdictType }}</p>
-            <p>{{ offenceDecision | savedDecisionInformation }}</p>
+            <p data-role="offence-decision">{{ offenceDecision | savedDecisionInformation }}</p>
           </pdk-grid>
         </pdk-grid>
         <pdk-divider *ngIf="!last"></pdk-divider>
