@@ -904,6 +904,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -956,8 +957,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -1903,6 +1904,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -1955,8 +1957,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -2902,6 +2904,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -2954,8 +2957,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -3907,6 +3910,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -3959,8 +3963,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -5011,6 +5015,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -5063,8 +5068,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -5932,6 +5937,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -5984,8 +5990,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -6845,6 +6851,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -6897,8 +6904,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -7949,6 +7956,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
         </pdk-grid>
       </div>
     </pdk-grid>
+    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
       ng-reflect-bottom="0"
@@ -8001,8 +8009,8 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   </ul>
                   <pdk-tab
                     heading="Decisions"
-                    ng-if="caseDecisions?.length"
                     ng-reflect-heading="Decisions"
+                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -9053,84 +9061,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
         </pdk-grid>
       </div>
     </pdk-grid>
-    <div
-      class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
-      pdk-margin-bottom="0"
-      pdk-margin-top="5"
-    >
-      <pdk-grid
-        container=""
-        ng-reflect-container=""
-      >
-        <div
-          class="govuk-grid-row"
-        >
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
-                >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
-                  >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-if="caseDecisions?.length"
-                    ng-reflect-heading="Decisions"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
-                    >
-                      
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions=""
-                      >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: []
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                </div>
-              </pdk-tabs>
-            </div>
-          </pdk-grid>
-        </div>
-      </pdk-grid>
-    </div>
+    
   </case-overview>
 </case-overview-test>
 `;

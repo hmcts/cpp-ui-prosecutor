@@ -87,11 +87,11 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
       </pdk-grid>
     </pdk-grid>
 
-    <div pdk-margin-top="5" pdk-margin-bottom="0">
+    <div pdk-margin-top="5" pdk-margin-bottom="0" *ngIf="caseDecisions?.length">
       <pdk-grid container>
         <pdk-grid two-thirds>
           <pdk-tabs>
-            <pdk-tab heading="Decisions" ng-if="caseDecisions?.length">
+            <pdk-tab heading="Decisions" [selected]="true">
               <case-decisions [caseDecisionsWithOffenceDecisions]="caseDecisions"></case-decisions>
             </pdk-tab>
           </pdk-tabs>
