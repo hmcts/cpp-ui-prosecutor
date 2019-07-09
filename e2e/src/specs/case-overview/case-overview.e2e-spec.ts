@@ -6,7 +6,7 @@ import { by, element } from 'protractor';
 import { DatesToAvoidPage } from '../../pages/case-overview/dates-to-avoid.page';
 
 describe('prosecutor', () => {
-  let caseOverviewPage;
+  let caseOverviewPage: CaseOverviewPage;
   let kase;
   let datesToAvoidPage;
 
@@ -50,6 +50,21 @@ describe('prosecutor', () => {
     await expect(datesToAvoidPage.datesToAvoidInputTextArea.getAttribute('value')).toContain(
       'hello from protractor test'
     );
+  });
+
+  it('should be able to fold and unfold offence text', async () => {
+    await navigate(caseOverviewPage.getUrl(), TVL_USER);
+
+    // default behavior is folded
+    await expect(caseOverviewPage.isFirstOffenceTextFolded()).toBe(true);
+
+    // unfold text
+    await caseOverviewPage.toggleFirstOffenceFoldableTextState();
+    await expect(caseOverviewPage.isFirstOffenceTextUnfolded()).toBe(true);
+
+    // fold text again
+    await caseOverviewPage.toggleFirstOffenceFoldableTextState();
+    await expect(caseOverviewPage.isFirstOffenceTextFolded()).toBe(true);
   });
 });
 

@@ -34,8 +34,8 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
               >
                 
                 <pdk-form-group
-                  ng-reflect-error="false"
-                  style="display: block;"
+                  class="pdk-form-group"
+                  ng-reflect-has-error="false"
                 >
                   
                   
@@ -57,6 +57,7 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
                     id="pdk-form-control-1"
                     minrows="10"
                     name="datesToAvoid"
+                    ng-reflect-input-width=""
                     ng-reflect-min-rows="10"
                     ng-reflect-model="datesToAvoid1"
                     ng-reflect-name="datesToAvoid"
@@ -139,8 +140,8 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
               >
                 
                 <pdk-form-group
-                  ng-reflect-error="false"
-                  style="display: block;"
+                  class="pdk-form-group"
+                  ng-reflect-has-error="false"
                 >
                   
                   
@@ -162,6 +163,7 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
                     id="pdk-form-control-3"
                     minrows="10"
                     name="datesToAvoid"
+                    ng-reflect-input-width=""
                     ng-reflect-min-rows="10"
                     ng-reflect-model="datesToAvoid1"
                     ng-reflect-name="datesToAvoid"

@@ -92,3 +92,12 @@ export const build = <T>(name: string, fn: (...args: any[]) => Promise<T & { urn
 
 export const stringFormat = (stringToFormat: string, ...values: any) =>
   stringToFormat.replace(/{(\d+)}/g, (match, index) => (values[index] ? values[index] : match));
+
+export const compareClassNames = (classNamesString1: string, classNamesString2: string) => {
+  const sortedClassList1 = classNamesString1.split(' ').sort();
+  const sortedClassList2 = classNamesString2.split(' ').sort();
+  return (
+    sortedClassList1.length === sortedClassList2.length &&
+    sortedClassList1.every((className: string, idx: number) => className === sortedClassList2[idx])
+  );
+};

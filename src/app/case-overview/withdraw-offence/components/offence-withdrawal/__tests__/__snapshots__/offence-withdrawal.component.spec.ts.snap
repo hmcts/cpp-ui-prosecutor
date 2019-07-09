@@ -67,8 +67,8 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
         <pdk-form-field>
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
@@ -173,8 +173,8 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
               >
                 
                 <pdk-form-group
-                  ng-reflect-error="false"
-                  style="display: block;"
+                  class="pdk-form-group"
+                  ng-reflect-has-error="false"
                 >
                   
                   <fieldset
@@ -334,8 +334,8 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
         <pdk-form-field>
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
@@ -440,8 +440,8 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               >
                 
                 <pdk-form-group
-                  ng-reflect-error="false"
-                  style="display: block;"
+                  class="pdk-form-group"
+                  ng-reflect-has-error="false"
                 >
                   
                   <fieldset
@@ -601,8 +601,8 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
         <pdk-form-field>
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
@@ -707,8 +707,8 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               >
                 
                 <pdk-form-group
-                  ng-reflect-error="false"
-                  style="display: block;"
+                  class="pdk-form-group"
+                  ng-reflect-has-error="false"
                 >
                   
                   <fieldset

@@ -35,8 +35,8 @@ exports[`DevTools - Select User component compiles 1`] = `
       <pdk-form-field>
         
         <pdk-form-group
-          ng-reflect-error="false"
-          style="display: block;"
+          class="pdk-form-group"
+          ng-reflect-has-error="false"
         >
           
           
@@ -94,7 +94,7 @@ exports[`DevTools - Select User component compiles 1`] = `
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group
-        style="display: block;"
+        class="pdk-form-group"
       >
         <button
           disabled=""
@@ -145,8 +145,8 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
       <pdk-form-field>
         
         <pdk-form-group
-          ng-reflect-error="false"
-          style="display: block;"
+          class="pdk-form-group"
+          ng-reflect-has-error="false"
         >
           
           
@@ -205,7 +205,7 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group
-        style="display: block;"
+        class="pdk-form-group"
       >
         <button
           pdk-button=""
@@ -254,8 +254,8 @@ exports[`DevTools - Select User component it shows error messages when form is s
       <pdk-form-field>
         
         <pdk-form-group
-          ng-reflect-error="false"
-          style="display: block;"
+          class="pdk-form-group"
+          ng-reflect-has-error="false"
         >
           
           
@@ -313,7 +313,7 @@ exports[`DevTools - Select User component it shows error messages when form is s
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group
-        style="display: block;"
+        class="pdk-form-group"
       >
         <button
           disabled=""

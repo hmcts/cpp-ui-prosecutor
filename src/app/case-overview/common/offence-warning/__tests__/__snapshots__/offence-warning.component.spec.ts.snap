@@ -4,9 +4,8 @@ exports[`OffenceWarning should compile correctly with all warnings 1`] = `
 <offence-warning-test>
   <offence-warning>
     <pdk-form-group
-      class="govuk-form-group--error"
-      ng-reflect-error="true"
-      style="display: block;"
+      class="pdk-form-group govuk-form-group--error"
+      ng-reflect-has-error="true"
     >
       <div
         class="pdk-!-text-color-red govuk-heading-s"

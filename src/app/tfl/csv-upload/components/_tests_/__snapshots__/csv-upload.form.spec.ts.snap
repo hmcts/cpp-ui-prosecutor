@@ -38,8 +38,8 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                 >
                   
                   <pdk-form-group
-                    ng-reflect-error="false"
-                    style="display: block;"
+                    class="pdk-form-group"
+                    ng-reflect-has-error="false"
                   >
                     
                     
@@ -58,7 +58,7 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                     
                     <input
                       accept=".csv"
-                      class="ng-untouched ng-pristine ng-valid"
+                      class="ng-untouched ng-pristine ng-valid govuk-input"
                       csvtype="Header"
                       csvupload=""
                       filetypetovalidateagainst="Offence"
@@ -70,6 +70,7 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                       ng-reflect-model=""
                       ng-reflect-name="headerCsv"
                       ng-reflect-required=""
+                      ng-reflect-width=""
                       ngmodel=""
                       pdk-text-input=""
                       required=""
@@ -88,8 +89,8 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                 >
                   
                   <pdk-form-group
-                    ng-reflect-error="false"
-                    style="display: block;"
+                    class="pdk-form-group"
+                    ng-reflect-has-error="false"
                   >
                     
                     
@@ -108,7 +109,7 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                     
                     <input
                       accept=".csv"
-                      class="ng-untouched ng-pristine ng-valid"
+                      class="ng-untouched ng-pristine ng-valid govuk-input"
                       csvtype="Offence"
                       csvupload=""
                       filetypetovalidateagainst="Header"
@@ -120,6 +121,7 @@ exports[`CsvUploadFormComponent should compile correctly 1`] = `
                       ng-reflect-model=""
                       ng-reflect-name="offencesCsv"
                       ng-reflect-required=""
+                      ng-reflect-width=""
                       ngmodel=""
                       pdk-text-input=""
                       required=""

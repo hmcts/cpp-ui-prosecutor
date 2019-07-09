@@ -69,8 +69,8 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
                 <pdk-form-field>
                   
                   <pdk-form-group
-                    ng-reflect-error="false"
-                    style="display: block;"
+                    class="pdk-form-group"
+                    ng-reflect-has-error="false"
                   >
                     
                     
@@ -98,7 +98,7 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
                         <input
                           class="pdk-searchbar__input govuk-input"
                           id="pdk-form-control-1"
-                          ng-reflect-error="false"
+                          ng-reflect-has-error="false"
                           ng-reflect-width=""
                           pdk-input=""
                           placeholder=""

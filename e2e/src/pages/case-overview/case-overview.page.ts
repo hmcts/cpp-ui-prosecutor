@@ -1,5 +1,6 @@
 import { BasePage } from '../base.page';
 import { $, $$, by, element } from 'protractor';
+import { compareClassNames } from '../../../../tools/utils';
 
 export class CaseOverviewPage extends BasePage {
   public readonly pageHeaderBar = $('pdk-page-header');
@@ -21,5 +22,46 @@ export class CaseOverviewPage extends BasePage {
 
   goToTab(linkName: string) {
     return element(by.linkText(linkName)).click();
+  }
+
+  async toggleFirstOffenceFoldableTextState() {
+    await $$(`defendant-offence pdk-foldable-text`)
+      .first()
+      .$('a')
+      .click();
+  }
+
+  async isFirstOffenceTextFolded() {
+    return (
+      compareClassNames(
+        await $$(`defendant-offence pdk-foldable-text`)
+          .first()
+          .$$('div')
+          .first()
+          .getAttribute('class'),
+        'pdk-foldable--overflowed pdk-foldable'
+      ) &&
+      (await $$(`defendant-offence pdk-foldable-text`)
+        .first()
+        .$('a')
+        .getText()) === 'More'
+    );
+  }
+
+  async isFirstOffenceTextUnfolded() {
+    return (
+      compareClassNames(
+        await $$(`defendant-offence pdk-foldable-text`)
+          .first()
+          .$$('div')
+          .first()
+          .getAttribute('class'),
+        'pdk-foldable pdk-foldable--overflowed pdk-foldable--expanded'
+      ) &&
+      (await $$(`defendant-offence pdk-foldable-text`)
+        .first()
+        .$('a')
+        .getText()) === 'Less'
+    );
   }
 }

@@ -24,8 +24,8 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
         >
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
@@ -86,7 +86,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="day"
                       id="pdk-form-control-1-day"
                       name="dateDay"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="day"
                       ng-reflect-required=""
                       ng-reflect-width="2"
@@ -114,7 +114,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="month"
                       id="pdk-form-control-1-month"
                       name="dateMonth"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="month"
                       ng-reflect-required=""
                       ng-reflect-width="2"
@@ -142,7 +142,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="year"
                       id="pdk-form-control-1-year"
                       name="dateYear"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="year"
                       ng-reflect-required=""
                       ng-reflect-width="4"
@@ -166,8 +166,8 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
         >
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
@@ -229,7 +229,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="day"
                       id="pdk-form-control-2-day"
                       name="dateDay"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="day"
                       ng-reflect-required=""
                       ng-reflect-width="2"
@@ -257,7 +257,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="month"
                       id="pdk-form-control-2-month"
                       name="dateMonth"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="month"
                       ng-reflect-required=""
                       ng-reflect-width="2"
@@ -285,7 +285,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       formcontrolname="year"
                       id="pdk-form-control-2-year"
                       name="dateYear"
-                      ng-reflect-error="false"
+                      ng-reflect-has-error="false"
                       ng-reflect-name="year"
                       ng-reflect-required=""
                       ng-reflect-width="4"

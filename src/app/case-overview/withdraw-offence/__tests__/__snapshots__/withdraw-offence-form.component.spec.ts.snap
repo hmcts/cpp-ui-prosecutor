@@ -30,8 +30,8 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
         <pdk-form-field>
           
           <pdk-form-group
-            ng-reflect-error="false"
-            style="display: block;"
+            class="pdk-form-group"
+            ng-reflect-has-error="false"
           >
             
             <fieldset
