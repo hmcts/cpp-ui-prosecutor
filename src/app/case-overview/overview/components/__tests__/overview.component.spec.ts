@@ -41,7 +41,8 @@ describe('OverviewComponent', () => {
         MockSubComponent,
         PersonalDetailsChangeAlertComponent,
         MockSubmissionMessagesComponent,
-        MockCaseDecisionComponent
+        MockCaseDecisionComponent,
+        MockDateOfBirthComponent
       ],
       imports: [
         PdkCoreModule,
@@ -243,5 +244,17 @@ describe('OverviewComponent', () => {
   })
   class MockCaseDecisionComponent {
     @Input() caseDecisionsWithOffenceDecisions: CaseDecision[];
+  }
+
+  @Component({
+    selector: 'date-of-birth',
+    template: `
+      <div>dateOfBirth: {{ dateOfBirth }}</div>
+      <div>defaultSubstitute: {{ defaultSubstitute }}</div>
+    `
+  })
+  class MockDateOfBirthComponent {
+    @Input() dateOfBirth: string;
+    @Input() defaultSubstitute = '–';
   }
 });

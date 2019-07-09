@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PdkCoreModule, PdkDateInputModule, PdkFormModule } from '@cpp/pdk';
 import { CommonModule } from '@angular/common';
 import { FromToDatesModule } from './from-to-dates/from-to-dates.module';
+import { DateOfBirthModule } from './date-of-birth/date-of-birth.module';
 import {
   AgePipeModule,
   CaseProsecutorPipeModule,
@@ -41,7 +42,8 @@ import {
     FormatDatePipeModule,
     FirstLastNamePipeModule,
     IfEmptyPipeModule,
-    PleaStatusPipeModule
+    PleaStatusPipeModule,
+    DateOfBirthModule
   ]
 })
 export class SharedModule {}

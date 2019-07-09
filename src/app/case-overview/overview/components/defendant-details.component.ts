@@ -27,8 +27,7 @@ import { PersonalDetails } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid two-thirds data-role="date-of-birth">
         <div pdk-padding-vertical="2">
-          {{ defendantDetails.dateOfBirth | formatDate: 'd MMM y' }}
-          ({{ defendantDetails.dateOfBirth | age }} years old)
+          <date-of-birth [dateOfBirth]="defendantDetails.dateOfBirth"></date-of-birth>
         </div>
       </pdk-grid>
     </pdk-grid>

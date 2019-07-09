@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import {
@@ -20,7 +20,7 @@ describe('DefendantDetailsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantDetailsComponent, TestDefendantDetailsComponent],
+      declarations: [DefendantDetailsComponent, TestDefendantDetailsComponent, MockDateOfBirthComponent],
       imports: [
         CommonModule,
         PdkCoreModule,
@@ -54,5 +54,17 @@ describe('DefendantDetailsComponent', () => {
   })
   class TestDefendantDetailsComponent {
     defendantDetails: PersonalDetails;
+  }
+
+  @Component({
+    selector: 'date-of-birth',
+    template: `
+      <div>dateOfBirth: {{ dateOfBirth }}</div>
+      <div>defaultSubstitute: {{ defaultSubstitute }}</div>
+    `
+  })
+  class MockDateOfBirthComponent {
+    @Input() dateOfBirth: string;
+    @Input() defaultSubstitute = '–';
   }
 });

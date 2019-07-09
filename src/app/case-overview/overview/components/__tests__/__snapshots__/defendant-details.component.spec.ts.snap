@@ -96,7 +96,16 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >
-               11 Mar 1957 (59 years old) 
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
             </div>
           </div>
         </pdk-grid>

@@ -32,8 +32,7 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
         </h1>
 
         <p pdk-typography="body-medium">
-          {{ defendant.personalDetails.dateOfBirth | formatDate: 'd MMM y' }}
-          ({{ defendant.personalDetails.dateOfBirth | age }} years old)<br />
+          <date-of-birth [dateOfBirth]="defendant.personalDetails.dateOfBirth" [defaultSubstitute]=""></date-of-birth>
           {{ defendant.personalDetails.address | formatAddress: ', ' }}
         </p>
 

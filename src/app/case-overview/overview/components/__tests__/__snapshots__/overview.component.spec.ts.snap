@@ -199,8 +199,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               11 Mar 1957 (59 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -1265,8 +1273,16 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               11 Mar 1957 (59 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -2265,8 +2281,16 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               11 Mar 1957 (59 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -3265,8 +3289,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               14 Feb 2000 (17 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="2000-02-14"
+              >
+                <div>
+                  dateOfBirth: 2000-02-14
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -4271,8 +4303,16 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               14 Feb 2000 (17 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="2000-02-14"
+              >
+                <div>
+                  dateOfBirth: 2000-02-14
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -5376,8 +5416,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               11 Mar 1957 (59 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -6298,8 +6346,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               11 Mar 1957 (59 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="1957-03-11"
+              >
+                <div>
+                  dateOfBirth: 1957-03-11
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -7212,8 +7268,16 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               14 Feb 2000 (17 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="2000-02-14"
+              >
+                <div>
+                  dateOfBirth: 2000-02-14
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
@@ -8317,8 +8381,16 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               ng-reflect-type="body-medium"
               pdk-typography="body-medium"
             >
-               14 Feb 2000 (17 years old)
-              <br />
+              <date-of-birth
+                ng-reflect-date-of-birth="2000-02-14"
+              >
+                <div>
+                  dateOfBirth: 2000-02-14
+                </div>
+                <div>
+                  defaultSubstitute: –
+                </div>
+              </date-of-birth>
                Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
             </p>
             <personal-details-change-alert
