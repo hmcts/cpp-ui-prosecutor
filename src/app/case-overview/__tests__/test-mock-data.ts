@@ -253,3 +253,70 @@ export const MOCK_CASE_DECISION_2: CaseDecision = {
     } as WithdrawOffenceDecision
   ]
 };
+
+export const MOCK_CASE_DECISION_WITH_UNSORTED_OFFENCE_DECISIONS: CaseDecision = {
+  id: 'mock-case-decision-1',
+  session: {
+    sessionId: 'mock-case-decision-session-1',
+    legalAdviserUserId: 'mock-case-decision-session-userid-1',
+    courtHouseCode: 'B01OK',
+    courtHouseName: `Wimbledon Magistrates' Court`,
+    localJusticeAreaNationalCourtCode: '2577',
+    startedAt: '2018-12-01T16:10:28.259Z',
+    endedAt: '2018-12-01T16:10:28.259Z',
+    sessionType: 'DELEGATEDPOWERS',
+    legalAdviser: {
+      userId: 'legal-adviser-1',
+      firstName: 'Mark',
+      lastName: 'Adams'
+    }
+  },
+  savedAt: '2018-12-01T16:10:28.259Z',
+  offenceDecisions: [
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId1',
+      decisionType: 'WITHDRAW',
+      withdrawalReasonId: '1',
+      withdrawalReason: 'Insufficient evidence',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 1,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as WithdrawOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-4',
+      offenceId: 'offenceId3',
+      decisionType: 'ADJOURN',
+      adjournedTo: '2019-06-11',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 4,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as AdjournOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-2',
+      offenceId: 'offenceId5',
+      decisionType: 'ADJOURN',
+      adjournedTo: '2019-06-21',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 2,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as AdjournOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-5',
+      offenceId: 'offenceId6',
+      decisionType: 'REFER_FOR_COURT_HEARING',
+      referralReason: 'Not suitable for SJP',
+      verdict: 'NO_VERDICT',
+      offenceSequenceNumber: 5,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as CourtReferralOffenceDecision,
+    {
+      id: 'mock-case-offence-decision-3',
+      offenceId: 'offenceId7',
+      decisionType: 'DISMISS',
+      verdict: 'PROVED_SJP',
+      offenceSequenceNumber: 3,
+      offenceTitle: 'Use / install a television set without a licence'
+    } as DismissOffenceDecision
+  ]
+};

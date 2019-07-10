@@ -31,6 +31,7 @@ export const getCaseDecisionsWithOffenceDecisions = createSelector(
             });
           });
       });
+      caseDecision.offenceDecisions.sort((a, b) => (a.offenceSequenceNumber < b.offenceSequenceNumber ? -1 : 1));
     });
 
     return caseDecisions ? caseDecisions : [];

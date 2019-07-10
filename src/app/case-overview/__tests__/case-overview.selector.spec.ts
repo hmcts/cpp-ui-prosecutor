@@ -4,7 +4,12 @@ import * as fromSelectors from '../case-overview.selectors';
 import { caseOverviewReducer as caseOverview } from '../case-overview.reducer';
 import { reducers } from '../../reducers';
 import { EntitiesAction, LoadCaseSuccess } from '../../core/actions';
-import { MOCK_CASE, MOCK_CASE_DECISION, MOCK_CASE_DECISION_2 } from './test-mock-data';
+import {
+  MOCK_CASE,
+  MOCK_CASE_DECISION,
+  MOCK_CASE_DECISION_2,
+  MOCK_CASE_DECISION_WITH_UNSORTED_OFFENCE_DECISIONS
+} from './test-mock-data';
 
 describe('case overview/selectors', () => {
   const reducer = combineReducers({ ...reducers, caseOverview });
@@ -45,6 +50,12 @@ describe('case overview/selectors', () => {
 
     it('should select and sort multiple case decisions from the store', () => {
       MOCK_CASE.caseDecisions = [MOCK_CASE_DECISION, MOCK_CASE_DECISION_2];
+      const state = createCaseState([new LoadCaseSuccess(MOCK_CASE)]);
+      expect(fromSelectors.getCaseDecisionsWithOffenceDecisions(state)).toMatchSnapshot();
+    });
+
+    it('should select and sort offence decisions from the store', () => {
+      MOCK_CASE.caseDecisions = [MOCK_CASE_DECISION_WITH_UNSORTED_OFFENCE_DECISIONS];
       const state = createCaseState([new LoadCaseSuccess(MOCK_CASE)]);
       expect(fromSelectors.getCaseDecisionsWithOffenceDecisions(state)).toMatchSnapshot();
     });
