@@ -43,10 +43,10 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
                 pdk-padding-vertical="2"
               >
                 <div>
-                   1 Dec 2018 
+                   1 December 2018 
                 </div>
                 <div>
-                   04:10pm 
+                   4:10pm 
                 </div>
                 <div
                   class="pre-line"

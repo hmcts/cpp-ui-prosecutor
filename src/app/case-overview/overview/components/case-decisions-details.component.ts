@@ -15,10 +15,10 @@ import { CaseDecision } from '../../../contexts/sjp';
         <pdk-grid two-thirds>
           <div pdk-padding-vertical="2">
             <div>
-              {{ caseDecisionWithOffenceDecisions.savedAt | formatDate: 'd MMM y' }}
+              {{ caseDecisionWithOffenceDecisions.savedAt | formatDate: 'd MMMM y' }}
             </div>
             <div>
-              {{ caseDecisionWithOffenceDecisions.savedAt | formatDate: 'hh:mma' }}
+              {{ caseDecisionWithOffenceDecisions.savedAt | formatDate: 'h:mma' }}
             </div>
             <div class="pre-line">&nbsp;</div>
             <div *ngIf="caseDecisionWithOffenceDecisions.session.legalAdviser">
