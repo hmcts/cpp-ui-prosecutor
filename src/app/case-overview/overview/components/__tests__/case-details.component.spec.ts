@@ -13,6 +13,7 @@ import {
 } from '../../../../shared/pipes';
 import { CaseDetailsComponent } from '../case-details.component';
 import { Case } from '../../../../contexts/sjp';
+import { MOCK_SEARCH_RESULTS } from '../../../../search/__tests__/test-mock-data';
 
 describe('CaseDetailsComponent', () => {
   let fixture: ComponentFixture<TestCaseDetailsComponent>;
@@ -55,14 +56,24 @@ describe('CaseDetailsComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should compile correctly if listed in criminal court', () => {
+  it(`should display Awaiting listing for refer to court yet to be listed`, () => {
     fixture.componentInstance.kase = {
       ...MOCK_CASE,
+      status: 'REFERRED_FOR_COURT_HEARING',
+      listedInCriminalCourts: false
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should display the court details for listed in criminal courts case', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE,
+      status: 'REFERRED_FOR_COURT_HEARING',
       listedInCriminalCourts: true,
       hearingCourtName: 'Hearing court ',
       hearingTime: '2018-12-12'
     };
-
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

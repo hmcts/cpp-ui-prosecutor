@@ -31,6 +31,12 @@ import { Case } from '../../../contexts/sjp';
               {{ kase.hearingTime | date:'d MMM yyyy \\'at\\' h:mm a' | ifEmpty: '–' }}<br />
               Summons issued
             </div>
+            <div
+              *ngIf="kase.status === 'REFERRED_FOR_COURT_HEARING' && !kase.listedInCriminalCourts"
+              pdk-typography="body-xsmall"
+            >
+              Awaiting Listing
+            </div>
           </div>
         </pdk-grid>
       </ng-template>

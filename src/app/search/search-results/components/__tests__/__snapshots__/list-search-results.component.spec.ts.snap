@@ -106,9 +106,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <div>
               
             </div>
-            <div>
-              
-            </div>
+            
           </td>
           <td
             pdk-table-cell=""
@@ -160,9 +158,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <div>
               
             </div>
-            <div>
-              
-            </div>
+            
           </td>
           <td
             pdk-table-cell=""
@@ -222,9 +218,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
                  Upload and enter postal reply 
               </a>
             </div>
-            <div>
-              
-            </div>
+            
           </td>
           <td
             pdk-table-cell=""
@@ -276,9 +270,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             <div>
               
             </div>
-            <div>
-              
-            </div>
+            
           </td>
           <td
             pdk-table-cell=""
@@ -504,9 +496,7 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             <div>
               
             </div>
-            <div>
-              
-            </div>
+            
           </td>
           <td
             pdk-table-cell=""
@@ -518,6 +508,145 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             pdk-table-cell=""
           >
             11 Mar 1957
+          </td>
+          <td
+            class="no-wrap"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should display Awaiting listing for refer to court yet to be listed 1`] = `
+<list-search-results-test
+  searchResults={[Function Array]}
+>
+  <list-search-results
+    ng-reflect-search-results="[object Object]"
+  >
+    
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      ng-reflect-top="6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         1 
+        <span
+          ng-reflect-ng-plural="1"
+        >
+          
+          result
+          
+        </span>
+         available 
+        
+      </div>
+    </pdk-inset-text>
+    
+    <table
+      pdk-table=""
+    >
+      <thead
+        pdk-table-head=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <th
+            pdk-table-header=""
+          >
+            Name
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case reference number
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Case status
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Prosecutor
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Date of birth
+          </th>
+          <th
+            pdk-table-header=""
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        pdk-table-body=""
+      >
+        
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+          >
+            
+            
+            <a
+              class="govuk-link"
+              href="/case-overview/caseId2"
+              ng-reflect-router-link="../../case-overview,caseId2"
+              pdk-link=""
+            >
+              <b>
+                SMITH Jonti Jonti Jonti
+              </b>
+            </a>
+          </td>
+          <td
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26116MZMMI
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+             Referred for court hearing 
+            <div>
+              
+            </div>
+            
+            <div
+              class="govuk-body-s"
+              ng-reflect-type="body-small"
+              pdk-typography="body-small"
+            >
+               Awaiting Listing 
+            </div>
+          </td>
+          <td
+            pdk-table-cell=""
+          >
+            TV Licensing
+          </td>
+          <td
+            class="no-wrap"
+            pdk-table-cell=""
+          >
+            04 Mar 1985
           </td>
           <td
             class="no-wrap"
@@ -646,151 +775,7 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
                  Upload and enter postal reply 
               </a>
             </div>
-            <div>
-              
-            </div>
-          </td>
-          <td
-            pdk-table-cell=""
-          >
-            TV Licensing
-          </td>
-          <td
-            class="no-wrap"
-            pdk-table-cell=""
-          >
-            04 Mar 1985
-          </td>
-          <td
-            class="no-wrap"
-            pdk-table-cell=""
-          >
-            27 Jan 2019
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </list-search-results>
-</list-search-results-test>
-`;
-
-exports[`ListSearchResultsComponent should display the 'View in Criminal Courts' link 1`] = `
-<list-search-results-test
-  searchResults={[Function Array]}
->
-  <list-search-results
-    ng-reflect-search-results="[object Object]"
-  >
-    
-    <pdk-inset-text
-      class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
-      pdk-margin-top="6"
-    >
-      <div
-        class="govuk-inset-text"
-      >
-         1 
-        <span
-          ng-reflect-ng-plural="1"
-        >
-          
-          result
-          
-        </span>
-         available 
-        
-      </div>
-    </pdk-inset-text>
-    
-    <table
-      pdk-table=""
-    >
-      <thead
-        pdk-table-head=""
-      >
-        <tr
-          pdk-table-row=""
-        >
-          <th
-            pdk-table-header=""
-          >
-            Name
-          </th>
-          <th
-            pdk-table-header=""
-          >
-            Case reference number
-          </th>
-          <th
-            pdk-table-header=""
-          >
-            Case status
-          </th>
-          <th
-            pdk-table-header=""
-          >
-            Prosecutor
-          </th>
-          <th
-            pdk-table-header=""
-          >
-            Date of birth
-          </th>
-          <th
-            pdk-table-header=""
-          >
-            Notice served
-          </th>
-        </tr>
-      </thead>
-      <tbody
-        pdk-table-body=""
-      >
-        
-        <tr
-          pdk-table-row=""
-        >
-          <td
-            pdk-table-cell=""
-          >
             
-            
-            <a
-              class="govuk-link"
-              href="/case-overview/caseId2"
-              ng-reflect-router-link="../../case-overview,caseId2"
-              pdk-link=""
-            >
-              <b>
-                SMITH Jonti Jonti Jonti
-              </b>
-            </a>
-          </td>
-          <td
-            data-role="urn"
-            pdk-table-cell=""
-          >
-            TVL26116MZMMI
-          </td>
-          <td
-            pdk-table-cell=""
-          >
-             Referred for court hearing 
-            <div>
-              
-            </div>
-            <div>
-              
-              <a
-                class="govuk-link"
-                href="/%23/caseId2"
-                ng-reflect-router-link="#,caseId2"
-                pdk-link=""
-              >
-                 View in Criminal Courts 
-              </a>
-            </div>
           </td>
           <td
             pdk-table-cell=""

@@ -59,12 +59,13 @@ describe('ListSearchResultsComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it(`should display the 'View in Criminal Courts' link`, () => {
+  it(`should display Awaiting listing for refer to court yet to be listed`, () => {
     const caseDetails = MOCK_SEARCH_RESULTS.results[0];
     fixture.componentInstance.searchResults = [
       {
         ...caseDetails,
-        status: 'REFERRED_FOR_COURT_HEARING'
+        status: 'REFERRED_FOR_COURT_HEARING',
+        listedInCriminalCourts: false
       }
     ];
     fixture.detectChanges();

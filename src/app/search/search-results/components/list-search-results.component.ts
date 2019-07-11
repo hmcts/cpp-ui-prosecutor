@@ -56,15 +56,11 @@ import { CaseDetails } from '../../../contexts/sjp';
                 Upload and enter postal reply
               </a>
             </div>
-            <div>
-              <a
-                href="javascript:void(0)"
-                pdk-link
-                [routerLink]="['#', searchResult.caseId]"
-                *ngIf="isReferredForCourtHearing(searchResult)"
-              >
-                View in Criminal Courts
-              </a>
+            <div
+              *ngIf="searchResult.status === 'REFERRED_FOR_COURT_HEARING' && !searchResult.listedInCriminalCourts"
+              pdk-typography="body-small"
+            >
+              Awaiting Listing
             </div>
           </td>
           <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutor }}</td>
