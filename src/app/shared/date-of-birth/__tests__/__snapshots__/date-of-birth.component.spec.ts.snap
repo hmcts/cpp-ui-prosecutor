@@ -13,7 +13,7 @@ exports[`DateOfBirthComponent should compile correctly 1`] = `
     >
       
       <div>
-         31 Jan 1998 (21 years old) 
+         31 Jan 1998 (30 years old) 
       </div>
       
     </date-of-birth>
@@ -26,7 +26,7 @@ exports[`DateOfBirthComponent should compile correctly 1`] = `
     >
       
       <div>
-         31 Jan 1998 (21 years old) 
+         31 Jan 1998 (30 years old) 
       </div>
       
     </date-of-birth>
