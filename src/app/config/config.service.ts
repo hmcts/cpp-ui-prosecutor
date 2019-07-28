@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { CppHttpConfig } from '@cpp/core';
-import { AppConfig } from './interfaces';
-import { tap } from 'rxjs/operators';
+import { CppHttp, CppHttpConfig } from '@cpp/core';
+import { AppConfig, UserGroup } from './interfaces';
+import { of } from 'rxjs';
+import { catchError, switchMap, tap } from 'rxjs/operators';
 
 // AppConfigService can be used as the provider for all configuration
 // dependencies required by submodules, so long as it implements their
@@ -11,11 +12,13 @@ import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class AppConfigService implements CppHttpConfig {
-  baseUrl: string;
-  logoutUrl: string;
   accountUrl: string;
+  baseUrl: string;
+  cppHomeUrl: string;
+  logoutUrl: string;
+  searchEnabled = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private injector: Injector) {}
 
   load() {
     return this.http
@@ -24,8 +27,30 @@ export class AppConfigService implements CppHttpConfig {
         tap((config: AppConfig) => {
           this.baseUrl = config.apiRoot;
           this.accountUrl = config.idamProfilePage;
+          this.cppHomeUrl = config.cppHomeUrl;
           this.logoutUrl = config.idamLogoutPage;
-        })
+        }),
+        switchMap(() =>
+          this.injector
+            .get(CppHttp)
+            .query<{ groups: UserGroup[] }>({
+              url: '/usersgroups-query-api/query/api/rest/usersgroups/users/logged-in-user/groups',
+              requestType: 'application/vnd.usersgroups.get-logged-in-user-groups+json'
+            })
+            .pipe(
+              tap(
+                result => {
+                  this.searchEnabled = result.groups.some(userGroup =>
+                    ['Crown Court Admin', 'Court Clerks', 'Legal Advisers', 'Listing Officers'].includes(
+                      userGroup.groupName
+                    )
+                  );
+                },
+                () => console.warn('Failed to determine eligibility for unified search.')
+              ),
+              catchError(() => of(null))
+            )
+        )
       )
       .toPromise();
   }

@@ -1,5 +1,5 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { AppContainer } from '../app.container';
 import { CommonModule } from '@angular/common';
@@ -41,8 +41,10 @@ describe('App page component', () => {
         {
           provide: AppConfigService,
           useValue: {
+            cppHomeUrl: 'https://cpp.home.nonlive',
             getAccountUrl: () => 'path/to/account',
-            getLogoutUrl: () => 'path/to/logout'
+            getLogoutUrl: () => 'path/to/logout',
+            searchEnabled: false
           }
         },
         {
@@ -65,10 +67,10 @@ describe('App page component', () => {
 
     store = TestBed.get(Store);
     mockParseUrl.mockReturnValue({ url: 'home' });
-    fixture = TestBed.createComponent(AppContainer);
   });
 
   it('should compile correctly', () => {
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -76,6 +78,7 @@ describe('App page component', () => {
   it('should detect when the app is busy', fakeAsync(() => {
     store.dispatch(new PendingApiRequest({ url: '/' } as any));
     mockRouterEvent.next(new RouteConfigLoadStart(null));
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     tick(2);
 
@@ -85,7 +88,7 @@ describe('App page component', () => {
   it('should set the title correctly from route data when set', fakeAsync(() => {
     routeData.next({ title: 'Page title' });
     mockRouterEvent.next(new NavigationEnd(0, 'test/url', 'test/redirect/url'));
-
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     tick();
 
@@ -93,6 +96,7 @@ describe('App page component', () => {
   }));
 
   it('should track the offline status of the container', () => {
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     global.dispatchEvent(new Event('offline'));
     fixture.detectChanges();
@@ -100,6 +104,7 @@ describe('App page component', () => {
   });
 
   it('should track the online status of the container', () => {
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     global.dispatchEvent(new Event('offline'));
     global.dispatchEvent(new Event('online'));
@@ -110,6 +115,18 @@ describe('App page component', () => {
 
   it('should track any api errors', () => {
     store.dispatch(new ApiError({ status: 500 }));
+    fixture = TestBed.createComponent(AppContainer);
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should compile correctly when search is available', () => {
+    Object.defineProperty(document, 'baseURI', {
+      value: 'https://cpp.nonlive/prosecutor',
+      writable: true
+    });
+    TestBed.get(AppConfigService).searchEnabled = true;
+    fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -121,6 +138,7 @@ describe('App page component', () => {
       <div>activity: {{ activity }}</div>
       <div>offline: {{ offline }}</div>
       <div>apiError: {{ apiError }}</div>
+      <div>searchEnabled: {{ searchEnabled }}</div>
     `
   })
   class MockLayoutComponent {
@@ -128,5 +146,7 @@ describe('App page component', () => {
     @Input() activity: boolean;
     @Input() offline: boolean;
     @Input() apiError: boolean;
+    @Input() searchEnabled: boolean;
+    @Output() search = new EventEmitter<string>();
   }
 });

@@ -1,24 +1,73 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { LayoutComponent } from '../layout.component';
+import { Component } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { PdkCoreModule, PdkCppPatternModule } from '@cpp/pdk';
+import { LayoutComponent } from '../layout.component';
 
 describe('Layout', () => {
-  let component: LayoutComponent;
-  let fixture: ComponentFixture<LayoutComponent>;
+  let fixture: ComponentFixture<LayoutTestComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LayoutComponent],
-      imports: [CommonModule, PdkCoreModule, PdkCppPatternModule],
-      providers: [],
-      schemas: [NO_ERRORS_SCHEMA]
+      declarations: [LayoutComponent, LayoutTestComponent],
+      imports: [CommonModule, PdkCoreModule, PdkCppPatternModule]
     });
 
-    fixture = TestBed.createComponent(LayoutComponent);
-    component = fixture.componentInstance;
-    component.headerNavItems = [
+    fixture = TestBed.createComponent(LayoutTestComponent);
+    fixture.detectChanges();
+  }));
+
+  it('should render', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should render correctly with online status', () => {
+    fixture.componentInstance.offline = true;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should render correctly with api error', () => {
+    fixture.componentInstance.apiError = true;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should render correctly with activity', () => {
+    fixture.componentInstance.activity = true;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should render correctly when search is enabled', () => {
+    fixture.componentInstance.searchEnabled = true;
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should propagate a `search` event', () => {
+    fixture.debugElement.query(By.directive(LayoutComponent)).componentInstance.search.emit('*');
+
+    expect(fixture.componentInstance.search).toHaveBeenCalledWith('*');
+  });
+
+  @Component({
+    selector: 'app-layout-test',
+    template: `
+      <app-layout
+        [activity]="activity"
+        [apiError]="apiError"
+        [headerNavItems]="headerNavItems"
+        [offline]="offline"
+        [searchEnabled]="searchEnabled"
+        (search)="search($event)"
+      >
+      </app-layout>
+    `
+  })
+  class LayoutTestComponent {
+    headerNavItems = [
       {
         title: 'Your account',
         href: 'http://account'
@@ -28,28 +77,10 @@ describe('Layout', () => {
         href: 'http://signout'
       }
     ];
-  }));
-
-  it('should render', () => {
-    fixture.detectChanges();
-    expect(fixture).toMatchSnapshot();
-  });
-
-  it('should render correctly with online status', () => {
-    component.offline = true;
-    fixture.detectChanges();
-    expect(fixture).toMatchSnapshot();
-  });
-
-  it('should render correctly with api error', () => {
-    component.apiError = true;
-    fixture.detectChanges();
-    expect(fixture).toMatchSnapshot();
-  });
-
-  it('should render correctly with activity', () => {
-    component.activity = true;
-    fixture.detectChanges();
-    expect(fixture).toMatchSnapshot();
-  });
+    apiError: boolean;
+    offline: boolean;
+    activity: boolean;
+    searchEnabled: boolean;
+    search = jest.fn();
+  }
 });

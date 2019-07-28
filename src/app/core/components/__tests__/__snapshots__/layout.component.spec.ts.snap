@@ -1,1381 +1,1836 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout should render 1`] = `
-<app-layout
+<app-layout-test
   headerNavItems={[Function Array]}
+  search={[Function Function]}
 >
-  <pdk-cpp-layout
-    _nghost-c0=""
-    ng-reflect-cookie-message="true"
+  <app-layout
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
-    
-    
-    <pdk-skip-link
-      _ngcontent-c0=""
-      ng-reflect-target="main-content"
-      target="main-content"
+    <pdk-cpp-layout
+      _nghost-c0=""
+      ng-reflect-cookie-message="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-search-label="Search by case or application "
+      ng-reflect-search-placeholder="Case or application reference"
+      searchlabel="Search by case or application reference"
+      searchplaceholder="Case or application reference"
     >
-      <a
-        class="govuk-skip-link"
-        href="javascript:void(0)"
+      
+      
+      <pdk-skip-link
+        _ngcontent-c0=""
+        ng-reflect-target="main-content"
+        target="main-content"
       >
-         Skip to main content 
-      </a>
-    </pdk-skip-link>
-    
-    <pdk-cookie-message
-      _ngcontent-c0=""
-    >
-      <div
-        class="pdk-cookie-message"
-      >
-        <p
-          class="govuk-width-container"
+        <a
+          class="govuk-skip-link"
+          href="javascript:void(0)"
         >
-           GOV.UK uses cookies to make the site simpler. 
-          <a
-            class="govuk-link"
-            href="https://www.gov.uk/help/cookies"
-            pdk-link=""
-          >
-            Find out more about cookies.
-          </a>
-        </p>
-      </div>
-    </pdk-cookie-message>
-    <pdk-header
-      _ngcontent-c0=""
-    >
-      <header
-        class="govuk-header js-enabled"
-        data-module="header"
-        role="banner"
+           Skip to main content 
+        </a>
+      </pdk-skip-link>
+      
+      <pdk-cookie-message
+        _ngcontent-c0=""
       >
         <div
-          class="govuk-header__container govuk-width-container"
+          class="pdk-cookie-message"
         >
-          <div
-            class="pdk-header__content"
+          <p
+            class="govuk-width-container"
           >
+             GOV.UK uses cookies to make the site simpler. 
             <a
-              _ngcontent-c0=""
-              class="govuk-header__link govuk-header__link--service-name"
-              href="#"
-              pdk-header-title=""
-            >
-              Common Platform Programme
-            </a>
-            <div
-              _ngcontent-c0=""
-              class="cpp-layout__header-content"
-            >
-              
-              
-              
-              <pdk-header-nav
-                _ngcontent-c0=""
-              >
-                <button
-                  aria-controls="navigation"
-                  aria-expanded="false"
-                  aria-label="Show or hide Top Level Navigation"
-                  class="govuk-header__menu-button"
-                  type="button"
-                >
-                   Menu 
-                </button>
-                <nav>
-                  <div
-                    aria-label="Top Level Navigation"
-                    class="govuk-header__navigation"
-                    role="list"
-                  >
-                    
-                    <pdk-header-nav-item
-                      _ngcontent-c0=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c0=""
-                        class="govuk-header__link"
-                        href="http://account"
-                        pdk-header-link=""
-                      >
-                         Your account 
-                      </a>
-                    </pdk-header-nav-item>
-                    <pdk-header-nav-item
-                      _ngcontent-c0=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c0=""
-                        class="govuk-header__link"
-                        href="http://signout"
-                        pdk-header-link=""
-                      >
-                         Sign out 
-                      </a>
-                    </pdk-header-nav-item>
-                  </div>
-                </nav>
-              </pdk-header-nav>
-            </div>
-          </div>
-        </div>
-      </header>
-    </pdk-header>
-    <pdk-container
-      _ngcontent-c0=""
-      class="govuk-width-container"
-      style="display: block;"
-    >
-      <pdk-phase-banner
-        _ngcontent-c0=""
-        ng-reflect-type="beta"
-      >
-        <p
-          class="govuk-phase-banner__content"
-        >
-          <strong
-            class="govuk-tag govuk-phase-banner__content__tag"
-          >
-            beta
-          </strong>
-          <span
-            class="govuk-phase-banner__text"
-          >
-             This is a new service – your 
-            <a
-              _ngcontent-c0=""
               class="govuk-link"
-              data-test-id="feedback"
-              href="javascript:void(0)"
+              href="https://www.gov.uk/help/cookies"
               pdk-link=""
             >
-              feedback
+              Find out more about cookies.
             </a>
-             will help us improve it 
-          </span>
-        </p>
-      </pdk-phase-banner>
-    </pdk-container>
-    <pdk-main
-      _ngcontent-c0=""
-      class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
-      ng-reflect-type="body"
-      pdk-typography="body"
-    >
-      <main
-        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
-        id="main-content"
-        ng-reflect-bottom="9"
-        pdk-container=""
-        pdk-margin-bottom="9"
-        style="display: block;"
-      />
-    </pdk-main>
-    <pdk-footer
-      _ngcontent-c0=""
-    >
-      <footer
-        class="govuk-footer"
-        role="contentinfo"
+          </p>
+        </div>
+      </pdk-cookie-message>
+      <pdk-header
+        _ngcontent-c0=""
       >
-        <div
-          class="govuk-width-container"
+        <header
+          class="govuk-header js-enabled"
+          data-module="header"
+          role="banner"
         >
-          <pdk-footer-meta
-            _ngcontent-c0=""
+          <div
+            class="govuk-header__container govuk-width-container"
           >
             <div
-              class="govuk-footer__meta"
+              class="pdk-header__content"
             >
-              <div
-                class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
+              <a
+                _ngcontent-c0=""
+                class="govuk-header__link govuk-header__link--service-name"
+                href="#"
+                pdk-header-title=""
               >
-                <h2
-                  _ngcontent-c0=""
-                  class="govuk-heading-m"
-                  ng-reflect-type="heading-medium"
-                  pdk-typography="heading-medium"
-                >
-                  Help desk
-                </h2>
-                <dl
-                  _ngcontent-c0=""
-                >
-                  <dt
-                    _ngcontent-c0=""
-                  >
-                    Telephone
-                  </dt>
-                  <dd
-                    _ngcontent-c0=""
-                  >
-                    0300 303 0688
-                  </dd>
-                  <dd
-                    _ngcontent-c0=""
-                  >
-                    Monday to Friday, 8am to 6pm (excluding public holidays)
-                  </dd>
-                </dl>
-                <h3
+                Common Platform Programme
+              </a>
+              <div
+                _ngcontent-c0=""
+                class="cpp-layout__header-content"
+              >
+                
+                
+                
+                <pdk-header-nav
                   _ngcontent-c0=""
                 >
-                  Help by email
-                </h3>
-                <dl
-                  _ngcontent-c0=""
-                >
-                  <dt
-                    _ngcontent-c0=""
+                  <button
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                    aria-label="Show or hide Top Level Navigation"
+                    class="govuk-header__menu-button"
+                    type="button"
                   >
-                    CPS users only
-                  </dt>
-                  <dd
-                    _ngcontent-c0=""
-                  >
-                    <a
-                      _ngcontent-c0=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                      pdk-footer-link=""
+                     Menu 
+                  </button>
+                  <nav>
+                    <div
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
+                      role="list"
                     >
-                       CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                    </a>
-                  </dd>
-                  <dt
-                    _ngcontent-c0=""
-                  >
-                    All other users
-                  </dt>
-                  <dd
-                    _ngcontent-c0=""
-                  >
-                    <a
-                      _ngcontent-c0=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.net 
-                    </a>
-                  </dd>
-                </dl>
+                      
+                      <pdk-header-nav-item
+                        _ngcontent-c0=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c0=""
+                          class="govuk-header__link"
+                          href="http://account"
+                          pdk-header-link=""
+                        >
+                           Your account 
+                        </a>
+                      </pdk-header-nav-item>
+                      <pdk-header-nav-item
+                        _ngcontent-c0=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c0=""
+                          class="govuk-header__link"
+                          href="http://signout"
+                          pdk-header-link=""
+                        >
+                           Sign out 
+                        </a>
+                      </pdk-header-nav-item>
+                    </div>
+                  </nav>
+                </pdk-header-nav>
               </div>
             </div>
-          </pdk-footer-meta>
-          <pdk-footer-list
-            _ngcontent-c0=""
+          </div>
+        </header>
+      </pdk-header>
+      <pdk-container
+        _ngcontent-c0=""
+        class="govuk-width-container"
+        style="display: block;"
+      >
+        <pdk-phase-banner
+          _ngcontent-c0=""
+          ng-reflect-type="beta"
+        >
+          <p
+            class="govuk-phase-banner__content"
           >
-            <hr
-              class="govuk-footer__section-break"
-            />
-            <ul
-              class="govuk-footer__inline-list"
+            <strong
+              class="govuk-tag govuk-phase-banner__content__tag"
             >
-              <pdk-footer-list-item
+              beta
+            </strong>
+            <span
+              class="govuk-phase-banner__text"
+            >
+               This is a new service – your 
+              <a
                 _ngcontent-c0=""
+                class="govuk-link"
+                data-test-id="feedback"
+                href="javascript:void(0)"
+                pdk-link=""
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c0=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c0=""
+                feedback
+              </a>
+               will help us improve it 
+            </span>
+          </p>
+        </pdk-phase-banner>
+      </pdk-container>
+      <pdk-main
+        _ngcontent-c0=""
+        class="govuk-body-m"
+        contentid="main-content"
+        ng-reflect-content-id="main-content"
+        ng-reflect-type="body"
+        pdk-typography="body"
+      >
+        <main
+          class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
+          id="main-content"
+          ng-reflect-bottom="9"
+          pdk-container=""
+          pdk-margin-bottom="9"
+          style="display: block;"
+        />
+      </pdk-main>
+      <pdk-footer
+        _ngcontent-c0=""
+      >
+        <footer
+          class="govuk-footer"
+          role="contentinfo"
+        >
+          <div
+            class="govuk-width-container"
+          >
+            <pdk-footer-meta
+              _ngcontent-c0=""
+            >
+              <div
+                class="govuk-footer__meta"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
+                <div
+                  class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
-                  <a
+                  <h2
                     _ngcontent-c0=""
-                    class="govuk-footer__link"
-                    href="https://www.gov.uk/help/cookies"
-                    pdk-footer-link=""
-                    target="_blank"
+                    class="govuk-heading-m"
+                    ng-reflect-type="heading-medium"
+                    pdk-typography="heading-medium"
                   >
-                    Cookies
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-            </ul>
-          </pdk-footer-list>
+                    Help desk
+                  </h2>
+                  <dl
+                    _ngcontent-c0=""
+                  >
+                    <dt
+                      _ngcontent-c0=""
+                    >
+                      Telephone
+                    </dt>
+                    <dd
+                      _ngcontent-c0=""
+                    >
+                      0300 303 0688
+                    </dd>
+                    <dd
+                      _ngcontent-c0=""
+                    >
+                      Monday to Friday, 8am to 6pm (excluding public holidays)
+                    </dd>
+                  </dl>
+                  <h3
+                    _ngcontent-c0=""
+                  >
+                    Help by email
+                  </h3>
+                  <dl
+                    _ngcontent-c0=""
+                  >
+                    <dt
+                      _ngcontent-c0=""
+                    >
+                      CPS users only
+                    </dt>
+                    <dd
+                      _ngcontent-c0=""
+                    >
+                      <a
+                        _ngcontent-c0=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
+                      </a>
+                    </dd>
+                    <dt
+                      _ngcontent-c0=""
+                    >
+                      All other users
+                    </dt>
+                    <dd
+                      _ngcontent-c0=""
+                    >
+                      <a
+                        _ngcontent-c0=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.net 
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </pdk-footer-meta>
+            <pdk-footer-list
+              _ngcontent-c0=""
+            >
+              <hr
+                class="govuk-footer__section-break"
+              />
+              <div
+                class="govuk-footer__inline-list"
+                role="list"
+              >
+                <pdk-footer-list-item
+                  _ngcontent-c0=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c0=""
+                      class="govuk-footer__link"
+                      href="javascript:void(0)"
+                      pdk-footer-link=""
+                    >
+                      Terms and conditions
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+                <pdk-footer-list-item
+                  _ngcontent-c0=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c0=""
+                      class="govuk-footer__link"
+                      href="https://www.gov.uk/help/cookies"
+                      pdk-footer-link=""
+                      target="_blank"
+                    >
+                      Cookies
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+              </div>
+            </pdk-footer-list>
+          </div>
+        </footer>
+      </pdk-footer>
+    </pdk-cpp-layout>
+  </app-layout>
+</app-layout-test>
+`;
+
+exports[`Layout should render correctly when search is enabled 1`] = `
+<app-layout-test
+  headerNavItems={[Function Array]}
+  search={[Function Function]}
+  searchEnabled={[Function Boolean]}
+>
+  <app-layout
+    ng-reflect-header-nav-items="[object Object],[object Object"
+    ng-reflect-search-enabled="true"
+  >
+    <pdk-cpp-layout
+      _nghost-c36=""
+      ng-reflect-cookie-message="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-search-enabled="true"
+      ng-reflect-search-label="Search by case or application "
+      ng-reflect-search-placeholder="Case or application reference"
+      searchlabel="Search by case or application reference"
+      searchplaceholder="Case or application reference"
+    >
+      
+      
+      <pdk-skip-link
+        _ngcontent-c36=""
+        ng-reflect-target="main-content"
+        target="main-content"
+      >
+        <a
+          class="govuk-skip-link"
+          href="javascript:void(0)"
+        >
+           Skip to main content 
+        </a>
+      </pdk-skip-link>
+      
+      <pdk-cookie-message
+        _ngcontent-c36=""
+      >
+        <div
+          class="pdk-cookie-message"
+        >
+          <p
+            class="govuk-width-container"
+          >
+             GOV.UK uses cookies to make the site simpler. 
+            <a
+              class="govuk-link"
+              href="https://www.gov.uk/help/cookies"
+              pdk-link=""
+            >
+              Find out more about cookies.
+            </a>
+          </p>
         </div>
-      </footer>
-    </pdk-footer>
-  </pdk-cpp-layout>
-</app-layout>
+      </pdk-cookie-message>
+      <pdk-header
+        _ngcontent-c36=""
+      >
+        <header
+          class="govuk-header js-enabled"
+          data-module="header"
+          role="banner"
+        >
+          <div
+            class="govuk-header__container govuk-width-container"
+          >
+            <div
+              class="pdk-header__content"
+            >
+              <a
+                _ngcontent-c36=""
+                class="govuk-header__link govuk-header__link--service-name"
+                href="#"
+                pdk-header-title=""
+              >
+                Common Platform Programme
+              </a>
+              <div
+                _ngcontent-c36=""
+                class="cpp-layout__header-content"
+              >
+                
+                <form
+                  _ngcontent-c36=""
+                  class="cpp-layout__search ng-untouched ng-pristine ng-valid"
+                  novalidate=""
+                >
+                  <pdk-searchbar
+                    _ngcontent-c36=""
+                    borderless=""
+                    class="ng-untouched ng-pristine ng-valid"
+                    id="global-search"
+                    name="q"
+                    ng-reflect-aria-label="Search by case or application "
+                    ng-reflect-borderless=""
+                    ng-reflect-id="global-search"
+                    ng-reflect-model=""
+                    ng-reflect-name="q"
+                    ng-reflect-placeholder="Case or application reference"
+                    ngmodel=""
+                  >
+                    <div
+                      class="pdk-searchbar"
+                    >
+                      <input
+                        aria-label="Search by case or application reference"
+                        class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
+                        id="global-search"
+                        ng-reflect-has-error="false"
+                        ng-reflect-width=""
+                        pdk-input=""
+                        placeholder="Case or application reference"
+                        type="text"
+                      />
+                      <button
+                        class="pdk-searchbar__button pdk-searchbar__button--borderless"
+                        type="submit"
+                      >
+                        <pdk-search-icon
+                          color="#fff"
+                          ng-reflect-color="#fff"
+                          style="display: flex; align-items: center; justify-content: center;"
+                        >
+                          <i
+                            style="height: 20px; width: 20px; fill: #fff;"
+                          >
+                            <svg
+                              height="100%"
+                              viewBox="0 0 512 512"
+                              width="100%"
+                            >
+                              <path
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                              />
+                            </svg>
+                          </i>
+                        </pdk-search-icon>
+                        <span
+                          class="pdk-searchbar__label govuk-visually-hidden"
+                          ng-reflect-hidden=""
+                          pdk-visually-hidden=""
+                        >
+                           Search by case or application reference 
+                        </span>
+                      </button>
+                    </div>
+                  </pdk-searchbar>
+                </form>
+                
+                
+                <pdk-header-nav
+                  _ngcontent-c36=""
+                >
+                  <button
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                    aria-label="Show or hide Top Level Navigation"
+                    class="govuk-header__menu-button"
+                    type="button"
+                  >
+                     Menu 
+                  </button>
+                  <nav>
+                    <div
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
+                      role="list"
+                    >
+                      
+                      <pdk-header-nav-item
+                        _ngcontent-c36=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c36=""
+                          class="govuk-header__link"
+                          href="http://account"
+                          pdk-header-link=""
+                        >
+                           Your account 
+                        </a>
+                      </pdk-header-nav-item>
+                      <pdk-header-nav-item
+                        _ngcontent-c36=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c36=""
+                          class="govuk-header__link"
+                          href="http://signout"
+                          pdk-header-link=""
+                        >
+                           Sign out 
+                        </a>
+                      </pdk-header-nav-item>
+                    </div>
+                  </nav>
+                </pdk-header-nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </pdk-header>
+      <pdk-container
+        _ngcontent-c36=""
+        class="govuk-width-container"
+        style="display: block;"
+      >
+        <pdk-phase-banner
+          _ngcontent-c36=""
+          ng-reflect-type="beta"
+        >
+          <p
+            class="govuk-phase-banner__content"
+          >
+            <strong
+              class="govuk-tag govuk-phase-banner__content__tag"
+            >
+              beta
+            </strong>
+            <span
+              class="govuk-phase-banner__text"
+            >
+               This is a new service – your 
+              <a
+                _ngcontent-c36=""
+                class="govuk-link"
+                data-test-id="feedback"
+                href="javascript:void(0)"
+                pdk-link=""
+              >
+                feedback
+              </a>
+               will help us improve it 
+            </span>
+          </p>
+        </pdk-phase-banner>
+      </pdk-container>
+      <pdk-main
+        _ngcontent-c36=""
+        class="govuk-body-m"
+        contentid="main-content"
+        ng-reflect-content-id="main-content"
+        ng-reflect-type="body"
+        pdk-typography="body"
+      >
+        <main
+          class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
+          id="main-content"
+          ng-reflect-bottom="9"
+          pdk-container=""
+          pdk-margin-bottom="9"
+          style="display: block;"
+        />
+      </pdk-main>
+      <pdk-footer
+        _ngcontent-c36=""
+      >
+        <footer
+          class="govuk-footer"
+          role="contentinfo"
+        >
+          <div
+            class="govuk-width-container"
+          >
+            <pdk-footer-meta
+              _ngcontent-c36=""
+            >
+              <div
+                class="govuk-footer__meta"
+              >
+                <div
+                  class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
+                >
+                  <h2
+                    _ngcontent-c36=""
+                    class="govuk-heading-m"
+                    ng-reflect-type="heading-medium"
+                    pdk-typography="heading-medium"
+                  >
+                    Help desk
+                  </h2>
+                  <dl
+                    _ngcontent-c36=""
+                  >
+                    <dt
+                      _ngcontent-c36=""
+                    >
+                      Telephone
+                    </dt>
+                    <dd
+                      _ngcontent-c36=""
+                    >
+                      0300 303 0688
+                    </dd>
+                    <dd
+                      _ngcontent-c36=""
+                    >
+                      Monday to Friday, 8am to 6pm (excluding public holidays)
+                    </dd>
+                  </dl>
+                  <h3
+                    _ngcontent-c36=""
+                  >
+                    Help by email
+                  </h3>
+                  <dl
+                    _ngcontent-c36=""
+                  >
+                    <dt
+                      _ngcontent-c36=""
+                    >
+                      CPS users only
+                    </dt>
+                    <dd
+                      _ngcontent-c36=""
+                    >
+                      <a
+                        _ngcontent-c36=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
+                      </a>
+                    </dd>
+                    <dt
+                      _ngcontent-c36=""
+                    >
+                      All other users
+                    </dt>
+                    <dd
+                      _ngcontent-c36=""
+                    >
+                      <a
+                        _ngcontent-c36=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.net 
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </pdk-footer-meta>
+            <pdk-footer-list
+              _ngcontent-c36=""
+            >
+              <hr
+                class="govuk-footer__section-break"
+              />
+              <div
+                class="govuk-footer__inline-list"
+                role="list"
+              >
+                <pdk-footer-list-item
+                  _ngcontent-c36=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c36=""
+                      class="govuk-footer__link"
+                      href="javascript:void(0)"
+                      pdk-footer-link=""
+                    >
+                      Terms and conditions
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+                <pdk-footer-list-item
+                  _ngcontent-c36=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c36=""
+                      class="govuk-footer__link"
+                      href="https://www.gov.uk/help/cookies"
+                      pdk-footer-link=""
+                      target="_blank"
+                    >
+                      Cookies
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+              </div>
+            </pdk-footer-list>
+          </div>
+        </footer>
+      </pdk-footer>
+    </pdk-cpp-layout>
+  </app-layout>
+</app-layout-test>
 `;
 
 exports[`Layout should render correctly with activity 1`] = `
-<app-layout
+<app-layout-test
   activity={[Function Boolean]}
   headerNavItems={[Function Array]}
+  search={[Function Function]}
 >
-  <pdk-cpp-layout
-    _nghost-c27=""
+  <app-layout
     ng-reflect-activity="true"
-    ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
-    
-    <pdk-activity-indicator
-      _ngcontent-c27=""
+    <pdk-cpp-layout
+      _nghost-c27=""
+      ng-reflect-activity="true"
+      ng-reflect-cookie-message="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-search-label="Search by case or application "
+      ng-reflect-search-placeholder="Case or application reference"
+      searchlabel="Search by case or application reference"
+      searchplaceholder="Case or application reference"
     >
-      <div
-        class="pdk-activity-indicator"
+      
+      <pdk-activity-indicator
+        _ngcontent-c27=""
       >
         <div
-          class="pdk-activity-indicator__loader"
+          class="pdk-activity-indicator"
         >
           <div
-            class="pdk-activity-indicator__spinner"
-          />
-          <b
-            class="pdk_activity-indicator__title"
+            class="pdk-activity-indicator__loader"
           >
-            Page loading
-          </b>
-          <p
-            style="margin-top: 4px"
-          >
-            This may take a moment, please wait.
-          </p>
-        </div>
-      </div>
-      <div
-        class="pdk-activity-indicator__backdrop"
-      />
-    </pdk-activity-indicator>
-    
-    <pdk-skip-link
-      _ngcontent-c27=""
-      ng-reflect-target="main-content"
-      target="main-content"
-    >
-      <a
-        class="govuk-skip-link"
-        href="javascript:void(0)"
-      >
-         Skip to main content 
-      </a>
-    </pdk-skip-link>
-    
-    <pdk-cookie-message
-      _ngcontent-c27=""
-    >
-      <div
-        class="pdk-cookie-message"
-      >
-        <p
-          class="govuk-width-container"
-        >
-           GOV.UK uses cookies to make the site simpler. 
-          <a
-            class="govuk-link"
-            href="https://www.gov.uk/help/cookies"
-            pdk-link=""
-          >
-            Find out more about cookies.
-          </a>
-        </p>
-      </div>
-    </pdk-cookie-message>
-    <pdk-header
-      _ngcontent-c27=""
-    >
-      <header
-        class="govuk-header js-enabled"
-        data-module="header"
-        role="banner"
-      >
-        <div
-          class="govuk-header__container govuk-width-container"
-        >
-          <div
-            class="pdk-header__content"
-          >
-            <a
-              _ngcontent-c27=""
-              class="govuk-header__link govuk-header__link--service-name"
-              href="#"
-              pdk-header-title=""
-            >
-              Common Platform Programme
-            </a>
             <div
-              _ngcontent-c27=""
-              class="cpp-layout__header-content"
+              class="pdk-activity-indicator__spinner"
+            />
+            <b
+              class="pdk_activity-indicator__title"
             >
-              
-              
-              
-              <pdk-header-nav
-                _ngcontent-c27=""
-              >
-                <button
-                  aria-controls="navigation"
-                  aria-expanded="false"
-                  aria-label="Show or hide Top Level Navigation"
-                  class="govuk-header__menu-button"
-                  type="button"
-                >
-                   Menu 
-                </button>
-                <nav>
-                  <div
-                    aria-label="Top Level Navigation"
-                    class="govuk-header__navigation"
-                    role="list"
-                  >
-                    
-                    <pdk-header-nav-item
-                      _ngcontent-c27=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c27=""
-                        class="govuk-header__link"
-                        href="http://account"
-                        pdk-header-link=""
-                      >
-                         Your account 
-                      </a>
-                    </pdk-header-nav-item>
-                    <pdk-header-nav-item
-                      _ngcontent-c27=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c27=""
-                        class="govuk-header__link"
-                        href="http://signout"
-                        pdk-header-link=""
-                      >
-                         Sign out 
-                      </a>
-                    </pdk-header-nav-item>
-                  </div>
-                </nav>
-              </pdk-header-nav>
-            </div>
+              Page loading
+            </b>
+            <p
+              style="margin-top: 4px"
+            >
+              This may take a moment, please wait.
+            </p>
           </div>
         </div>
-      </header>
-    </pdk-header>
-    <pdk-container
-      _ngcontent-c27=""
-      class="govuk-width-container"
-      style="display: block;"
-    >
-      <pdk-phase-banner
+        <div
+          class="pdk-activity-indicator__backdrop"
+        />
+      </pdk-activity-indicator>
+      
+      <pdk-skip-link
         _ngcontent-c27=""
-        ng-reflect-type="beta"
+        ng-reflect-target="main-content"
+        target="main-content"
       >
-        <p
-          class="govuk-phase-banner__content"
+        <a
+          class="govuk-skip-link"
+          href="javascript:void(0)"
         >
-          <strong
-            class="govuk-tag govuk-phase-banner__content__tag"
-          >
-            beta
-          </strong>
-          <span
-            class="govuk-phase-banner__text"
-          >
-             This is a new service – your 
-            <a
-              _ngcontent-c27=""
-              class="govuk-link"
-              data-test-id="feedback"
-              href="javascript:void(0)"
-              pdk-link=""
-            >
-              feedback
-            </a>
-             will help us improve it 
-          </span>
-        </p>
-      </pdk-phase-banner>
-    </pdk-container>
-    <pdk-main
-      _ngcontent-c27=""
-      class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
-      ng-reflect-type="body"
-      pdk-typography="body"
-    >
-      <main
-        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
-        id="main-content"
-        ng-reflect-bottom="9"
-        pdk-container=""
-        pdk-margin-bottom="9"
-        style="display: block;"
-      />
-    </pdk-main>
-    <pdk-footer
-      _ngcontent-c27=""
-    >
-      <footer
-        class="govuk-footer"
-        role="contentinfo"
+           Skip to main content 
+        </a>
+      </pdk-skip-link>
+      
+      <pdk-cookie-message
+        _ngcontent-c27=""
       >
         <div
-          class="govuk-width-container"
+          class="pdk-cookie-message"
         >
-          <pdk-footer-meta
-            _ngcontent-c27=""
+          <p
+            class="govuk-width-container"
+          >
+             GOV.UK uses cookies to make the site simpler. 
+            <a
+              class="govuk-link"
+              href="https://www.gov.uk/help/cookies"
+              pdk-link=""
+            >
+              Find out more about cookies.
+            </a>
+          </p>
+        </div>
+      </pdk-cookie-message>
+      <pdk-header
+        _ngcontent-c27=""
+      >
+        <header
+          class="govuk-header js-enabled"
+          data-module="header"
+          role="banner"
+        >
+          <div
+            class="govuk-header__container govuk-width-container"
           >
             <div
-              class="govuk-footer__meta"
+              class="pdk-header__content"
             >
-              <div
-                class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
+              <a
+                _ngcontent-c27=""
+                class="govuk-header__link govuk-header__link--service-name"
+                href="#"
+                pdk-header-title=""
               >
-                <h2
-                  _ngcontent-c27=""
-                  class="govuk-heading-m"
-                  ng-reflect-type="heading-medium"
-                  pdk-typography="heading-medium"
-                >
-                  Help desk
-                </h2>
-                <dl
-                  _ngcontent-c27=""
-                >
-                  <dt
-                    _ngcontent-c27=""
-                  >
-                    Telephone
-                  </dt>
-                  <dd
-                    _ngcontent-c27=""
-                  >
-                    0300 303 0688
-                  </dd>
-                  <dd
-                    _ngcontent-c27=""
-                  >
-                    Monday to Friday, 8am to 6pm (excluding public holidays)
-                  </dd>
-                </dl>
-                <h3
+                Common Platform Programme
+              </a>
+              <div
+                _ngcontent-c27=""
+                class="cpp-layout__header-content"
+              >
+                
+                
+                
+                <pdk-header-nav
                   _ngcontent-c27=""
                 >
-                  Help by email
-                </h3>
-                <dl
-                  _ngcontent-c27=""
-                >
-                  <dt
-                    _ngcontent-c27=""
+                  <button
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                    aria-label="Show or hide Top Level Navigation"
+                    class="govuk-header__menu-button"
+                    type="button"
                   >
-                    CPS users only
-                  </dt>
-                  <dd
-                    _ngcontent-c27=""
-                  >
-                    <a
-                      _ngcontent-c27=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                      pdk-footer-link=""
+                     Menu 
+                  </button>
+                  <nav>
+                    <div
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
+                      role="list"
                     >
-                       CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                    </a>
-                  </dd>
-                  <dt
-                    _ngcontent-c27=""
-                  >
-                    All other users
-                  </dt>
-                  <dd
-                    _ngcontent-c27=""
-                  >
-                    <a
-                      _ngcontent-c27=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.net 
-                    </a>
-                  </dd>
-                </dl>
+                      
+                      <pdk-header-nav-item
+                        _ngcontent-c27=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c27=""
+                          class="govuk-header__link"
+                          href="http://account"
+                          pdk-header-link=""
+                        >
+                           Your account 
+                        </a>
+                      </pdk-header-nav-item>
+                      <pdk-header-nav-item
+                        _ngcontent-c27=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c27=""
+                          class="govuk-header__link"
+                          href="http://signout"
+                          pdk-header-link=""
+                        >
+                           Sign out 
+                        </a>
+                      </pdk-header-nav-item>
+                    </div>
+                  </nav>
+                </pdk-header-nav>
               </div>
             </div>
-          </pdk-footer-meta>
-          <pdk-footer-list
-            _ngcontent-c27=""
+          </div>
+        </header>
+      </pdk-header>
+      <pdk-container
+        _ngcontent-c27=""
+        class="govuk-width-container"
+        style="display: block;"
+      >
+        <pdk-phase-banner
+          _ngcontent-c27=""
+          ng-reflect-type="beta"
+        >
+          <p
+            class="govuk-phase-banner__content"
           >
-            <hr
-              class="govuk-footer__section-break"
-            />
-            <ul
-              class="govuk-footer__inline-list"
+            <strong
+              class="govuk-tag govuk-phase-banner__content__tag"
             >
-              <pdk-footer-list-item
+              beta
+            </strong>
+            <span
+              class="govuk-phase-banner__text"
+            >
+               This is a new service – your 
+              <a
                 _ngcontent-c27=""
+                class="govuk-link"
+                data-test-id="feedback"
+                href="javascript:void(0)"
+                pdk-link=""
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c27=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c27=""
+                feedback
+              </a>
+               will help us improve it 
+            </span>
+          </p>
+        </pdk-phase-banner>
+      </pdk-container>
+      <pdk-main
+        _ngcontent-c27=""
+        class="govuk-body-m"
+        contentid="main-content"
+        ng-reflect-content-id="main-content"
+        ng-reflect-type="body"
+        pdk-typography="body"
+      >
+        <main
+          class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
+          id="main-content"
+          ng-reflect-bottom="9"
+          pdk-container=""
+          pdk-margin-bottom="9"
+          style="display: block;"
+        />
+      </pdk-main>
+      <pdk-footer
+        _ngcontent-c27=""
+      >
+        <footer
+          class="govuk-footer"
+          role="contentinfo"
+        >
+          <div
+            class="govuk-width-container"
+          >
+            <pdk-footer-meta
+              _ngcontent-c27=""
+            >
+              <div
+                class="govuk-footer__meta"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
+                <div
+                  class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
-                  <a
+                  <h2
                     _ngcontent-c27=""
-                    class="govuk-footer__link"
-                    href="https://www.gov.uk/help/cookies"
-                    pdk-footer-link=""
-                    target="_blank"
+                    class="govuk-heading-m"
+                    ng-reflect-type="heading-medium"
+                    pdk-typography="heading-medium"
                   >
-                    Cookies
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-            </ul>
-          </pdk-footer-list>
-        </div>
-      </footer>
-    </pdk-footer>
-  </pdk-cpp-layout>
-</app-layout>
+                    Help desk
+                  </h2>
+                  <dl
+                    _ngcontent-c27=""
+                  >
+                    <dt
+                      _ngcontent-c27=""
+                    >
+                      Telephone
+                    </dt>
+                    <dd
+                      _ngcontent-c27=""
+                    >
+                      0300 303 0688
+                    </dd>
+                    <dd
+                      _ngcontent-c27=""
+                    >
+                      Monday to Friday, 8am to 6pm (excluding public holidays)
+                    </dd>
+                  </dl>
+                  <h3
+                    _ngcontent-c27=""
+                  >
+                    Help by email
+                  </h3>
+                  <dl
+                    _ngcontent-c27=""
+                  >
+                    <dt
+                      _ngcontent-c27=""
+                    >
+                      CPS users only
+                    </dt>
+                    <dd
+                      _ngcontent-c27=""
+                    >
+                      <a
+                        _ngcontent-c27=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
+                      </a>
+                    </dd>
+                    <dt
+                      _ngcontent-c27=""
+                    >
+                      All other users
+                    </dt>
+                    <dd
+                      _ngcontent-c27=""
+                    >
+                      <a
+                        _ngcontent-c27=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.net 
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </pdk-footer-meta>
+            <pdk-footer-list
+              _ngcontent-c27=""
+            >
+              <hr
+                class="govuk-footer__section-break"
+              />
+              <div
+                class="govuk-footer__inline-list"
+                role="list"
+              >
+                <pdk-footer-list-item
+                  _ngcontent-c27=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c27=""
+                      class="govuk-footer__link"
+                      href="javascript:void(0)"
+                      pdk-footer-link=""
+                    >
+                      Terms and conditions
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+                <pdk-footer-list-item
+                  _ngcontent-c27=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c27=""
+                      class="govuk-footer__link"
+                      href="https://www.gov.uk/help/cookies"
+                      pdk-footer-link=""
+                      target="_blank"
+                    >
+                      Cookies
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+              </div>
+            </pdk-footer-list>
+          </div>
+        </footer>
+      </pdk-footer>
+    </pdk-cpp-layout>
+  </app-layout>
+</app-layout-test>
 `;
 
 exports[`Layout should render correctly with api error 1`] = `
-<app-layout
+<app-layout-test
   apiError={[Function Boolean]}
   headerNavItems={[Function Array]}
+  search={[Function Function]}
 >
-  <pdk-cpp-layout
-    _nghost-c18=""
+  <app-layout
     ng-reflect-api-error="true"
-    ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
-    
-    
-    <pdk-alert
-      _ngcontent-c18=""
+    <pdk-cpp-layout
+      _nghost-c18=""
+      ng-reflect-api-error="true"
+      ng-reflect-cookie-message="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-search-label="Search by case or application "
+      ng-reflect-search-placeholder="Case or application reference"
+      searchlabel="Search by case or application reference"
+      searchplaceholder="Case or application reference"
     >
-      <div
-        class="pdk-alert pdk-alert--warning"
-        role="alert"
-      >
-        <div
-          class="pdk-alert__container"
-        >
-          
-          <div
-            class="pdk-alert__message"
-          >
-            <div>
-              
-              <span
-                _ngcontent-c18=""
-              >
-                 There’s a technical problem. You can’t save anything new – try again later. 
-              </span>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </pdk-alert>
-    <pdk-skip-link
-      _ngcontent-c18=""
-      ng-reflect-target="main-content"
-      target="main-content"
-    >
-      <a
-        class="govuk-skip-link"
-        href="javascript:void(0)"
-      >
-         Skip to main content 
-      </a>
-    </pdk-skip-link>
-    
-    <pdk-cookie-message
-      _ngcontent-c18=""
-    >
-      <div
-        class="pdk-cookie-message"
-      >
-        <p
-          class="govuk-width-container"
-        >
-           GOV.UK uses cookies to make the site simpler. 
-          <a
-            class="govuk-link"
-            href="https://www.gov.uk/help/cookies"
-            pdk-link=""
-          >
-            Find out more about cookies.
-          </a>
-        </p>
-      </div>
-    </pdk-cookie-message>
-    <pdk-header
-      _ngcontent-c18=""
-    >
-      <header
-        class="govuk-header js-enabled"
-        data-module="header"
-        role="banner"
-      >
-        <div
-          class="govuk-header__container govuk-width-container"
-        >
-          <div
-            class="pdk-header__content"
-          >
-            <a
-              _ngcontent-c18=""
-              class="govuk-header__link govuk-header__link--service-name"
-              href="#"
-              pdk-header-title=""
-            >
-              Common Platform Programme
-            </a>
-            <div
-              _ngcontent-c18=""
-              class="cpp-layout__header-content"
-            >
-              
-              
-              
-              <pdk-header-nav
-                _ngcontent-c18=""
-              >
-                <button
-                  aria-controls="navigation"
-                  aria-expanded="false"
-                  aria-label="Show or hide Top Level Navigation"
-                  class="govuk-header__menu-button"
-                  type="button"
-                >
-                   Menu 
-                </button>
-                <nav>
-                  <div
-                    aria-label="Top Level Navigation"
-                    class="govuk-header__navigation"
-                    role="list"
-                  >
-                    
-                    <pdk-header-nav-item
-                      _ngcontent-c18=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c18=""
-                        class="govuk-header__link"
-                        href="http://account"
-                        pdk-header-link=""
-                      >
-                         Your account 
-                      </a>
-                    </pdk-header-nav-item>
-                    <pdk-header-nav-item
-                      _ngcontent-c18=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c18=""
-                        class="govuk-header__link"
-                        href="http://signout"
-                        pdk-header-link=""
-                      >
-                         Sign out 
-                      </a>
-                    </pdk-header-nav-item>
-                  </div>
-                </nav>
-              </pdk-header-nav>
-            </div>
-          </div>
-        </div>
-      </header>
-    </pdk-header>
-    <pdk-container
-      _ngcontent-c18=""
-      class="govuk-width-container"
-      style="display: block;"
-    >
-      <pdk-phase-banner
+      
+      
+      <pdk-alert
         _ngcontent-c18=""
-        ng-reflect-type="beta"
-      >
-        <p
-          class="govuk-phase-banner__content"
-        >
-          <strong
-            class="govuk-tag govuk-phase-banner__content__tag"
-          >
-            beta
-          </strong>
-          <span
-            class="govuk-phase-banner__text"
-          >
-             This is a new service – your 
-            <a
-              _ngcontent-c18=""
-              class="govuk-link"
-              data-test-id="feedback"
-              href="javascript:void(0)"
-              pdk-link=""
-            >
-              feedback
-            </a>
-             will help us improve it 
-          </span>
-        </p>
-      </pdk-phase-banner>
-    </pdk-container>
-    <pdk-main
-      _ngcontent-c18=""
-      class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
-      ng-reflect-type="body"
-      pdk-typography="body"
-    >
-      <main
-        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
-        id="main-content"
-        ng-reflect-bottom="9"
-        pdk-container=""
-        pdk-margin-bottom="9"
-        style="display: block;"
-      />
-    </pdk-main>
-    <pdk-footer
-      _ngcontent-c18=""
-    >
-      <footer
-        class="govuk-footer"
-        role="contentinfo"
       >
         <div
-          class="govuk-width-container"
+          class="pdk-alert pdk-alert--warning"
+          role="alert"
         >
-          <pdk-footer-meta
-            _ngcontent-c18=""
+          <div
+            class="pdk-alert__container"
           >
+            
             <div
-              class="govuk-footer__meta"
+              class="pdk-alert__message"
             >
-              <div
-                class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
-              >
-                <h2
-                  _ngcontent-c18=""
-                  class="govuk-heading-m"
-                  ng-reflect-type="heading-medium"
-                  pdk-typography="heading-medium"
-                >
-                  Help desk
-                </h2>
-                <dl
+              <div>
+                
+                <span
                   _ngcontent-c18=""
                 >
-                  <dt
-                    _ngcontent-c18=""
-                  >
-                    Telephone
-                  </dt>
-                  <dd
-                    _ngcontent-c18=""
-                  >
-                    0300 303 0688
-                  </dd>
-                  <dd
-                    _ngcontent-c18=""
-                  >
-                    Monday to Friday, 8am to 6pm (excluding public holidays)
-                  </dd>
-                </dl>
-                <h3
-                  _ngcontent-c18=""
-                >
-                  Help by email
-                </h3>
-                <dl
-                  _ngcontent-c18=""
-                >
-                  <dt
-                    _ngcontent-c18=""
-                  >
-                    CPS users only
-                  </dt>
-                  <dd
-                    _ngcontent-c18=""
-                  >
-                    <a
-                      _ngcontent-c18=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                    </a>
-                  </dd>
-                  <dt
-                    _ngcontent-c18=""
-                  >
-                    All other users
-                  </dt>
-                  <dd
-                    _ngcontent-c18=""
-                  >
-                    <a
-                      _ngcontent-c18=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.net 
-                    </a>
-                  </dd>
-                </dl>
+                   There’s a technical problem. You can’t save anything new – try again later. 
+                </span>
+                
               </div>
             </div>
-          </pdk-footer-meta>
-          <pdk-footer-list
-            _ngcontent-c18=""
-          >
-            <hr
-              class="govuk-footer__section-break"
-            />
-            <ul
-              class="govuk-footer__inline-list"
-            >
-              <pdk-footer-list-item
-                _ngcontent-c18=""
-              >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c18=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c18=""
-              >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c18=""
-                    class="govuk-footer__link"
-                    href="https://www.gov.uk/help/cookies"
-                    pdk-footer-link=""
-                    target="_blank"
-                  >
-                    Cookies
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-            </ul>
-          </pdk-footer-list>
+          </div>
         </div>
-      </footer>
-    </pdk-footer>
-  </pdk-cpp-layout>
-</app-layout>
+      </pdk-alert>
+      <pdk-skip-link
+        _ngcontent-c18=""
+        ng-reflect-target="main-content"
+        target="main-content"
+      >
+        <a
+          class="govuk-skip-link"
+          href="javascript:void(0)"
+        >
+           Skip to main content 
+        </a>
+      </pdk-skip-link>
+      
+      <pdk-cookie-message
+        _ngcontent-c18=""
+      >
+        <div
+          class="pdk-cookie-message"
+        >
+          <p
+            class="govuk-width-container"
+          >
+             GOV.UK uses cookies to make the site simpler. 
+            <a
+              class="govuk-link"
+              href="https://www.gov.uk/help/cookies"
+              pdk-link=""
+            >
+              Find out more about cookies.
+            </a>
+          </p>
+        </div>
+      </pdk-cookie-message>
+      <pdk-header
+        _ngcontent-c18=""
+      >
+        <header
+          class="govuk-header js-enabled"
+          data-module="header"
+          role="banner"
+        >
+          <div
+            class="govuk-header__container govuk-width-container"
+          >
+            <div
+              class="pdk-header__content"
+            >
+              <a
+                _ngcontent-c18=""
+                class="govuk-header__link govuk-header__link--service-name"
+                href="#"
+                pdk-header-title=""
+              >
+                Common Platform Programme
+              </a>
+              <div
+                _ngcontent-c18=""
+                class="cpp-layout__header-content"
+              >
+                
+                
+                
+                <pdk-header-nav
+                  _ngcontent-c18=""
+                >
+                  <button
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                    aria-label="Show or hide Top Level Navigation"
+                    class="govuk-header__menu-button"
+                    type="button"
+                  >
+                     Menu 
+                  </button>
+                  <nav>
+                    <div
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
+                      role="list"
+                    >
+                      
+                      <pdk-header-nav-item
+                        _ngcontent-c18=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c18=""
+                          class="govuk-header__link"
+                          href="http://account"
+                          pdk-header-link=""
+                        >
+                           Your account 
+                        </a>
+                      </pdk-header-nav-item>
+                      <pdk-header-nav-item
+                        _ngcontent-c18=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c18=""
+                          class="govuk-header__link"
+                          href="http://signout"
+                          pdk-header-link=""
+                        >
+                           Sign out 
+                        </a>
+                      </pdk-header-nav-item>
+                    </div>
+                  </nav>
+                </pdk-header-nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </pdk-header>
+      <pdk-container
+        _ngcontent-c18=""
+        class="govuk-width-container"
+        style="display: block;"
+      >
+        <pdk-phase-banner
+          _ngcontent-c18=""
+          ng-reflect-type="beta"
+        >
+          <p
+            class="govuk-phase-banner__content"
+          >
+            <strong
+              class="govuk-tag govuk-phase-banner__content__tag"
+            >
+              beta
+            </strong>
+            <span
+              class="govuk-phase-banner__text"
+            >
+               This is a new service – your 
+              <a
+                _ngcontent-c18=""
+                class="govuk-link"
+                data-test-id="feedback"
+                href="javascript:void(0)"
+                pdk-link=""
+              >
+                feedback
+              </a>
+               will help us improve it 
+            </span>
+          </p>
+        </pdk-phase-banner>
+      </pdk-container>
+      <pdk-main
+        _ngcontent-c18=""
+        class="govuk-body-m"
+        contentid="main-content"
+        ng-reflect-content-id="main-content"
+        ng-reflect-type="body"
+        pdk-typography="body"
+      >
+        <main
+          class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
+          id="main-content"
+          ng-reflect-bottom="9"
+          pdk-container=""
+          pdk-margin-bottom="9"
+          style="display: block;"
+        />
+      </pdk-main>
+      <pdk-footer
+        _ngcontent-c18=""
+      >
+        <footer
+          class="govuk-footer"
+          role="contentinfo"
+        >
+          <div
+            class="govuk-width-container"
+          >
+            <pdk-footer-meta
+              _ngcontent-c18=""
+            >
+              <div
+                class="govuk-footer__meta"
+              >
+                <div
+                  class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
+                >
+                  <h2
+                    _ngcontent-c18=""
+                    class="govuk-heading-m"
+                    ng-reflect-type="heading-medium"
+                    pdk-typography="heading-medium"
+                  >
+                    Help desk
+                  </h2>
+                  <dl
+                    _ngcontent-c18=""
+                  >
+                    <dt
+                      _ngcontent-c18=""
+                    >
+                      Telephone
+                    </dt>
+                    <dd
+                      _ngcontent-c18=""
+                    >
+                      0300 303 0688
+                    </dd>
+                    <dd
+                      _ngcontent-c18=""
+                    >
+                      Monday to Friday, 8am to 6pm (excluding public holidays)
+                    </dd>
+                  </dl>
+                  <h3
+                    _ngcontent-c18=""
+                  >
+                    Help by email
+                  </h3>
+                  <dl
+                    _ngcontent-c18=""
+                  >
+                    <dt
+                      _ngcontent-c18=""
+                    >
+                      CPS users only
+                    </dt>
+                    <dd
+                      _ngcontent-c18=""
+                    >
+                      <a
+                        _ngcontent-c18=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
+                      </a>
+                    </dd>
+                    <dt
+                      _ngcontent-c18=""
+                    >
+                      All other users
+                    </dt>
+                    <dd
+                      _ngcontent-c18=""
+                    >
+                      <a
+                        _ngcontent-c18=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.net 
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </pdk-footer-meta>
+            <pdk-footer-list
+              _ngcontent-c18=""
+            >
+              <hr
+                class="govuk-footer__section-break"
+              />
+              <div
+                class="govuk-footer__inline-list"
+                role="list"
+              >
+                <pdk-footer-list-item
+                  _ngcontent-c18=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c18=""
+                      class="govuk-footer__link"
+                      href="javascript:void(0)"
+                      pdk-footer-link=""
+                    >
+                      Terms and conditions
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+                <pdk-footer-list-item
+                  _ngcontent-c18=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c18=""
+                      class="govuk-footer__link"
+                      href="https://www.gov.uk/help/cookies"
+                      pdk-footer-link=""
+                      target="_blank"
+                    >
+                      Cookies
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+              </div>
+            </pdk-footer-list>
+          </div>
+        </footer>
+      </pdk-footer>
+    </pdk-cpp-layout>
+  </app-layout>
+</app-layout-test>
 `;
 
 exports[`Layout should render correctly with online status 1`] = `
-<app-layout
+<app-layout-test
   headerNavItems={[Function Array]}
   offline={[Function Boolean]}
+  search={[Function Function]}
 >
-  <pdk-cpp-layout
-    _nghost-c9=""
-    ng-reflect-cookie-message="true"
+  <app-layout
     ng-reflect-header-nav-items="[object Object],[object Object"
     ng-reflect-offline="true"
   >
-    
-    
-    <pdk-alert
-      _ngcontent-c9=""
+    <pdk-cpp-layout
+      _nghost-c9=""
+      ng-reflect-cookie-message="true"
+      ng-reflect-header-nav-items="[object Object],[object Object"
+      ng-reflect-offline="true"
+      ng-reflect-search-label="Search by case or application "
+      ng-reflect-search-placeholder="Case or application reference"
+      searchlabel="Search by case or application reference"
+      searchplaceholder="Case or application reference"
     >
-      <div
-        class="pdk-alert pdk-alert--warning"
-        role="alert"
-      >
-        <div
-          class="pdk-alert__container"
-        >
-          
-          <div
-            class="pdk-alert__message"
-          >
-            <div>
-              
-              
-              <span
-                _ngcontent-c9=""
-              >
-                 You are offline. You cannot save anything new - check your connection and try again. 
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </pdk-alert>
-    <pdk-skip-link
-      _ngcontent-c9=""
-      ng-reflect-target="main-content"
-      target="main-content"
-    >
-      <a
-        class="govuk-skip-link"
-        href="javascript:void(0)"
-      >
-         Skip to main content 
-      </a>
-    </pdk-skip-link>
-    
-    <pdk-cookie-message
-      _ngcontent-c9=""
-    >
-      <div
-        class="pdk-cookie-message"
-      >
-        <p
-          class="govuk-width-container"
-        >
-           GOV.UK uses cookies to make the site simpler. 
-          <a
-            class="govuk-link"
-            href="https://www.gov.uk/help/cookies"
-            pdk-link=""
-          >
-            Find out more about cookies.
-          </a>
-        </p>
-      </div>
-    </pdk-cookie-message>
-    <pdk-header
-      _ngcontent-c9=""
-    >
-      <header
-        class="govuk-header js-enabled"
-        data-module="header"
-        role="banner"
-      >
-        <div
-          class="govuk-header__container govuk-width-container"
-        >
-          <div
-            class="pdk-header__content"
-          >
-            <a
-              _ngcontent-c9=""
-              class="govuk-header__link govuk-header__link--service-name"
-              href="#"
-              pdk-header-title=""
-            >
-              Common Platform Programme
-            </a>
-            <div
-              _ngcontent-c9=""
-              class="cpp-layout__header-content"
-            >
-              
-              
-              
-              <pdk-header-nav
-                _ngcontent-c9=""
-              >
-                <button
-                  aria-controls="navigation"
-                  aria-expanded="false"
-                  aria-label="Show or hide Top Level Navigation"
-                  class="govuk-header__menu-button"
-                  type="button"
-                >
-                   Menu 
-                </button>
-                <nav>
-                  <div
-                    aria-label="Top Level Navigation"
-                    class="govuk-header__navigation"
-                    role="list"
-                  >
-                    
-                    <pdk-header-nav-item
-                      _ngcontent-c9=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c9=""
-                        class="govuk-header__link"
-                        href="http://account"
-                        pdk-header-link=""
-                      >
-                         Your account 
-                      </a>
-                    </pdk-header-nav-item>
-                    <pdk-header-nav-item
-                      _ngcontent-c9=""
-                      class="govuk-header__navigation-item"
-                      role="list-item"
-                    >
-                      <a
-                        _ngcontent-c9=""
-                        class="govuk-header__link"
-                        href="http://signout"
-                        pdk-header-link=""
-                      >
-                         Sign out 
-                      </a>
-                    </pdk-header-nav-item>
-                  </div>
-                </nav>
-              </pdk-header-nav>
-            </div>
-          </div>
-        </div>
-      </header>
-    </pdk-header>
-    <pdk-container
-      _ngcontent-c9=""
-      class="govuk-width-container"
-      style="display: block;"
-    >
-      <pdk-phase-banner
+      
+      
+      <pdk-alert
         _ngcontent-c9=""
-        ng-reflect-type="beta"
-      >
-        <p
-          class="govuk-phase-banner__content"
-        >
-          <strong
-            class="govuk-tag govuk-phase-banner__content__tag"
-          >
-            beta
-          </strong>
-          <span
-            class="govuk-phase-banner__text"
-          >
-             This is a new service – your 
-            <a
-              _ngcontent-c9=""
-              class="govuk-link"
-              data-test-id="feedback"
-              href="javascript:void(0)"
-              pdk-link=""
-            >
-              feedback
-            </a>
-             will help us improve it 
-          </span>
-        </p>
-      </pdk-phase-banner>
-    </pdk-container>
-    <pdk-main
-      _ngcontent-c9=""
-      class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
-      ng-reflect-type="body"
-      pdk-typography="body"
-    >
-      <main
-        class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
-        id="main-content"
-        ng-reflect-bottom="9"
-        pdk-container=""
-        pdk-margin-bottom="9"
-        style="display: block;"
-      />
-    </pdk-main>
-    <pdk-footer
-      _ngcontent-c9=""
-    >
-      <footer
-        class="govuk-footer"
-        role="contentinfo"
       >
         <div
-          class="govuk-width-container"
+          class="pdk-alert pdk-alert--warning"
+          role="alert"
         >
-          <pdk-footer-meta
-            _ngcontent-c9=""
+          <div
+            class="pdk-alert__container"
           >
+            
             <div
-              class="govuk-footer__meta"
+              class="pdk-alert__message"
             >
-              <div
-                class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
-              >
-                <h2
-                  _ngcontent-c9=""
-                  class="govuk-heading-m"
-                  ng-reflect-type="heading-medium"
-                  pdk-typography="heading-medium"
-                >
-                  Help desk
-                </h2>
-                <dl
+              <div>
+                
+                
+                <span
                   _ngcontent-c9=""
                 >
-                  <dt
-                    _ngcontent-c9=""
-                  >
-                    Telephone
-                  </dt>
-                  <dd
-                    _ngcontent-c9=""
-                  >
-                    0300 303 0688
-                  </dd>
-                  <dd
-                    _ngcontent-c9=""
-                  >
-                    Monday to Friday, 8am to 6pm (excluding public holidays)
-                  </dd>
-                </dl>
-                <h3
-                  _ngcontent-c9=""
-                >
-                  Help by email
-                </h3>
-                <dl
-                  _ngcontent-c9=""
-                >
-                  <dt
-                    _ngcontent-c9=""
-                  >
-                    CPS users only
-                  </dt>
-                  <dd
-                    _ngcontent-c9=""
-                  >
-                    <a
-                      _ngcontent-c9=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                    </a>
-                  </dd>
-                  <dt
-                    _ngcontent-c9=""
-                  >
-                    All other users
-                  </dt>
-                  <dd
-                    _ngcontent-c9=""
-                  >
-                    <a
-                      _ngcontent-c9=""
-                      class="govuk-footer__link"
-                      href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
-                      pdk-footer-link=""
-                    >
-                       CJSCP-ServiceDesk@hmcts.net 
-                    </a>
-                  </dd>
-                </dl>
+                   You are offline. You cannot save anything new - check your connection and try again. 
+                </span>
               </div>
             </div>
-          </pdk-footer-meta>
-          <pdk-footer-list
-            _ngcontent-c9=""
-          >
-            <hr
-              class="govuk-footer__section-break"
-            />
-            <ul
-              class="govuk-footer__inline-list"
-            >
-              <pdk-footer-list-item
-                _ngcontent-c9=""
-              >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c9=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c9=""
-              >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c9=""
-                    class="govuk-footer__link"
-                    href="https://www.gov.uk/help/cookies"
-                    pdk-footer-link=""
-                    target="_blank"
-                  >
-                    Cookies
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-            </ul>
-          </pdk-footer-list>
+          </div>
         </div>
-      </footer>
-    </pdk-footer>
-  </pdk-cpp-layout>
-</app-layout>
+      </pdk-alert>
+      <pdk-skip-link
+        _ngcontent-c9=""
+        ng-reflect-target="main-content"
+        target="main-content"
+      >
+        <a
+          class="govuk-skip-link"
+          href="javascript:void(0)"
+        >
+           Skip to main content 
+        </a>
+      </pdk-skip-link>
+      
+      <pdk-cookie-message
+        _ngcontent-c9=""
+      >
+        <div
+          class="pdk-cookie-message"
+        >
+          <p
+            class="govuk-width-container"
+          >
+             GOV.UK uses cookies to make the site simpler. 
+            <a
+              class="govuk-link"
+              href="https://www.gov.uk/help/cookies"
+              pdk-link=""
+            >
+              Find out more about cookies.
+            </a>
+          </p>
+        </div>
+      </pdk-cookie-message>
+      <pdk-header
+        _ngcontent-c9=""
+      >
+        <header
+          class="govuk-header js-enabled"
+          data-module="header"
+          role="banner"
+        >
+          <div
+            class="govuk-header__container govuk-width-container"
+          >
+            <div
+              class="pdk-header__content"
+            >
+              <a
+                _ngcontent-c9=""
+                class="govuk-header__link govuk-header__link--service-name"
+                href="#"
+                pdk-header-title=""
+              >
+                Common Platform Programme
+              </a>
+              <div
+                _ngcontent-c9=""
+                class="cpp-layout__header-content"
+              >
+                
+                
+                
+                <pdk-header-nav
+                  _ngcontent-c9=""
+                >
+                  <button
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                    aria-label="Show or hide Top Level Navigation"
+                    class="govuk-header__menu-button"
+                    type="button"
+                  >
+                     Menu 
+                  </button>
+                  <nav>
+                    <div
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
+                      role="list"
+                    >
+                      
+                      <pdk-header-nav-item
+                        _ngcontent-c9=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c9=""
+                          class="govuk-header__link"
+                          href="http://account"
+                          pdk-header-link=""
+                        >
+                           Your account 
+                        </a>
+                      </pdk-header-nav-item>
+                      <pdk-header-nav-item
+                        _ngcontent-c9=""
+                        class="govuk-header__navigation-item"
+                        role="listitem"
+                      >
+                        <a
+                          _ngcontent-c9=""
+                          class="govuk-header__link"
+                          href="http://signout"
+                          pdk-header-link=""
+                        >
+                           Sign out 
+                        </a>
+                      </pdk-header-nav-item>
+                    </div>
+                  </nav>
+                </pdk-header-nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </pdk-header>
+      <pdk-container
+        _ngcontent-c9=""
+        class="govuk-width-container"
+        style="display: block;"
+      >
+        <pdk-phase-banner
+          _ngcontent-c9=""
+          ng-reflect-type="beta"
+        >
+          <p
+            class="govuk-phase-banner__content"
+          >
+            <strong
+              class="govuk-tag govuk-phase-banner__content__tag"
+            >
+              beta
+            </strong>
+            <span
+              class="govuk-phase-banner__text"
+            >
+               This is a new service – your 
+              <a
+                _ngcontent-c9=""
+                class="govuk-link"
+                data-test-id="feedback"
+                href="javascript:void(0)"
+                pdk-link=""
+              >
+                feedback
+              </a>
+               will help us improve it 
+            </span>
+          </p>
+        </pdk-phase-banner>
+      </pdk-container>
+      <pdk-main
+        _ngcontent-c9=""
+        class="govuk-body-m"
+        contentid="main-content"
+        ng-reflect-content-id="main-content"
+        ng-reflect-type="body"
+        pdk-typography="body"
+      >
+        <main
+          class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
+          id="main-content"
+          ng-reflect-bottom="9"
+          pdk-container=""
+          pdk-margin-bottom="9"
+          style="display: block;"
+        />
+      </pdk-main>
+      <pdk-footer
+        _ngcontent-c9=""
+      >
+        <footer
+          class="govuk-footer"
+          role="contentinfo"
+        >
+          <div
+            class="govuk-width-container"
+          >
+            <pdk-footer-meta
+              _ngcontent-c9=""
+            >
+              <div
+                class="govuk-footer__meta"
+              >
+                <div
+                  class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
+                >
+                  <h2
+                    _ngcontent-c9=""
+                    class="govuk-heading-m"
+                    ng-reflect-type="heading-medium"
+                    pdk-typography="heading-medium"
+                  >
+                    Help desk
+                  </h2>
+                  <dl
+                    _ngcontent-c9=""
+                  >
+                    <dt
+                      _ngcontent-c9=""
+                    >
+                      Telephone
+                    </dt>
+                    <dd
+                      _ngcontent-c9=""
+                    >
+                      0300 303 0688
+                    </dd>
+                    <dd
+                      _ngcontent-c9=""
+                    >
+                      Monday to Friday, 8am to 6pm (excluding public holidays)
+                    </dd>
+                  </dl>
+                  <h3
+                    _ngcontent-c9=""
+                  >
+                    Help by email
+                  </h3>
+                  <dl
+                    _ngcontent-c9=""
+                  >
+                    <dt
+                      _ngcontent-c9=""
+                    >
+                      CPS users only
+                    </dt>
+                    <dd
+                      _ngcontent-c9=""
+                    >
+                      <a
+                        _ngcontent-c9=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
+                      </a>
+                    </dd>
+                    <dt
+                      _ngcontent-c9=""
+                    >
+                      All other users
+                    </dt>
+                    <dd
+                      _ngcontent-c9=""
+                    >
+                      <a
+                        _ngcontent-c9=""
+                        class="govuk-footer__link"
+                        href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
+                        pdk-footer-link=""
+                      >
+                         CJSCP-ServiceDesk@hmcts.net 
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </pdk-footer-meta>
+            <pdk-footer-list
+              _ngcontent-c9=""
+            >
+              <hr
+                class="govuk-footer__section-break"
+              />
+              <div
+                class="govuk-footer__inline-list"
+                role="list"
+              >
+                <pdk-footer-list-item
+                  _ngcontent-c9=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c9=""
+                      class="govuk-footer__link"
+                      href="javascript:void(0)"
+                      pdk-footer-link=""
+                    >
+                      Terms and conditions
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+                <pdk-footer-list-item
+                  _ngcontent-c9=""
+                  role="listitem"
+                >
+                  <div
+                    class="govuk-footer__inline-list-item"
+                  >
+                    <a
+                      _ngcontent-c9=""
+                      class="govuk-footer__link"
+                      href="https://www.gov.uk/help/cookies"
+                      pdk-footer-link=""
+                      target="_blank"
+                    >
+                      Cookies
+                    </a>
+                  </div>
+                </pdk-footer-list-item>
+              </div>
+            </pdk-footer-list>
+          </div>
+        </footer>
+      </pdk-footer>
+    </pdk-cpp-layout>
+  </app-layout>
+</app-layout-test>
 `;
