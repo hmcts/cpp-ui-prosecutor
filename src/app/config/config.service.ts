@@ -41,9 +41,13 @@ export class AppConfigService implements CppHttpConfig {
               tap(
                 result => {
                   this.searchEnabled = result.groups.some(userGroup =>
-                    ['Crown Court Admin', 'Court Clerks', 'Legal Advisers', 'Listing Officers'].includes(
-                      userGroup.groupName
-                    )
+                    [
+                      'Court Administrators',
+                      'Crown Court Admin',
+                      'Court Clerks',
+                      'Legal Advisers',
+                      'Listing Officers'
+                    ].includes(userGroup.groupName)
                   );
                 },
                 () => console.warn('Failed to determine eligibility for unified search.')
