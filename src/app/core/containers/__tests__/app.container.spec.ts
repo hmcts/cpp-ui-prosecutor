@@ -15,6 +15,7 @@ import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
 import { reducers } from '../../reducers';
 import { global } from '@angular/compiler/src/util';
 import { AppRouterContainer } from '../app.router.container';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 describe('App page component', () => {
   window.scrollTo = jest.fn();
@@ -25,14 +26,21 @@ describe('App page component', () => {
   let store: Store<any>;
   let mockRouterEvent: BehaviorSubject<any>;
   let routeData: BehaviorSubject<{}>;
+  let mockTranslateUse: jest.Mock;
 
   beforeEach(() => {
     mockRouterEvent = new BehaviorSubject<any>({});
     routeData = new BehaviorSubject<{}>({});
+    mockTranslateUse = jest.fn();
 
     TestBed.configureTestingModule({
       declarations: [AppContainer, AppRouterContainer, MockLayoutComponent],
-      imports: [CommonModule, PdkCoreModule, PdkCppPatternModule, StoreModule.forRoot(reducers), RouterTestingModule],
+      imports: [CommonModule,
+        PdkCoreModule,
+        PdkCppPatternModule,
+        StoreModule.forRoot(reducers),
+        RouterTestingModule,
+        TranslateModule.forRoot()],
       providers: [
         {
           provide: Title,
@@ -58,7 +66,8 @@ describe('App page component', () => {
             outlet: PRIMARY_OUTLET,
             data: routeData
           }
-        }
+        },
+        TranslateService
       ],
       schemas: []
     });
@@ -71,6 +80,13 @@ describe('App page component', () => {
   it('should compile correctly', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
+  });
+
+  it('should check translate service is being called', () => {
+    const translate = TestBed.get(TranslateService);
+    const translateSpy = jest.spyOn(translate, 'use');
+    fixture = TestBed.createComponent(AppContainer);
+    expect(translateSpy).toHaveBeenCalledWith('en');
   });
 
   it('should detect when the app is busy', fakeAsync(() => {

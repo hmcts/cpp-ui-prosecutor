@@ -10,6 +10,7 @@ import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
       [cookieMessage]="true"
       [activity]="activity"
       [headerNavItems]="headerNavItems"
+      accessibilityLink="accessibility"
     >
       <ng-content></ng-content>
     </pdk-cpp-layout>

@@ -36,6 +36,10 @@ import { CaseDecisionsComponent } from './components/case-decisions.component';
 import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
 import { VerdictTypePipeModule } from '../../shared/pipes/verdict-type/verdict-type.module';
 import { CaseDecisionsDetailsComponent } from './components/case-decisions-details.component';
+import { FinancialImpositionsComponent } from './components/financial-impositions.component';
+import { FinancialOffenceDecisionComponent } from './components/financial-offence-decision.component';
+import { PaymentAndCollectionComponent } from './components/payment-and-collection.component';
+import { ReferredToOpenCourtOffenceDecisionComponent } from './components/referred-open-court-offence-decision.component';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -51,7 +55,11 @@ const DECLARATIONS = [
   PersonalDetailsChangeAlertComponent,
   CaseSubmissionMessagesComponent,
   CaseDecisionsComponent,
-  CaseDecisionsDetailsComponent
+  CaseDecisionsDetailsComponent,
+  ReferredToOpenCourtOffenceDecisionComponent,
+  FinancialImpositionsComponent,
+  FinancialOffenceDecisionComponent,
+  PaymentAndCollectionComponent
 ];
 
 @NgModule({

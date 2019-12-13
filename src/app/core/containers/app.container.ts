@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  PRIMARY_OUTLET,
-  RouteConfigLoadEnd,
-  RouteConfigLoadStart,
-  Router
-} from '@angular/router';
+import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, RouteConfigLoadEnd, RouteConfigLoadStart, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { select, Store } from '@ngrx/store';
 
@@ -19,6 +12,7 @@ import { State } from '../reducers';
 import { getHasApiActivity, getHasApiError } from '../selectors';
 import { AppConfigService } from '../../config';
 import { environment } from '../../../environments/environment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -47,8 +41,15 @@ export class AppContainer {
     activatedRoute: ActivatedRoute,
     router: Router,
     store: Store<State>,
-    titleService: Title
+    titleService: Title,
+    private translate: TranslateService
   ) {
+    // Translate
+    this.translate.addLangs(['en']);
+    this.translate.setDefaultLang('en');
+    const browserLang = this.translate.getBrowserLang();
+    this.translate.use(browserLang.match(/en|cy/) ? browserLang : 'en');
+
     this.isBusy$ = combineLatest(
       store.pipe(
         select(getHasApiActivity),

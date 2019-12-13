@@ -24,6 +24,7 @@ import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
 import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
 import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -59,8 +60,9 @@ describe('OverviewComponent', () => {
         PdkBreadcrumbsModule,
         PdkRelatedModule,
         SavedDecisionInformationPipeModule,
-        VerdictTypePipeModule
-      ]
+        VerdictTypePipeModule,
+        RouterTestingModule
+      ],
     });
 
     Date.now = jest.fn(() => Date.parse('2017-02-14'));

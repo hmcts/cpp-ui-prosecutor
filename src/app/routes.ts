@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { TechnicalErrorComponent } from './shared/error-pages';
-import {CaseDataGuard, PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard} from './core/guards';
+import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
 
 export const routes: Routes = [
   {
@@ -36,5 +36,6 @@ export const routes: Routes = [
     path: ':role/defendant-details-updates',
     loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule'
   },
-  { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent }
+  { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent },
+  { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule'}
 ];

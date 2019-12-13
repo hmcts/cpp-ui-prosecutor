@@ -9,6 +9,7 @@ import { PleadedNotGuiltyDataGuard } from './guards/pleaded-not-guilty-data.guar
 import {DefendantDetailsUpdatesLinkDataGuard} from './guards/defendant-details-updates-data.guard';
 import { AppRouterContainer } from './containers/app.router.container';
 import { CaseDataGuard } from './guards/case-data.guard';
+import { OnlinePleaGuard } from './guards/online-plea.guard';
 
 const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
 
@@ -16,6 +17,6 @@ const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
   imports: [CommonModule, PdkCoreModule, PdkCppPatternModule, RouterModule, ContextsModule],
   declarations: [...DECLARATIONS],
   exports: [AppContainer],
-  providers: [CaseDataGuard, PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard]
+  providers: [CaseDataGuard, PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard, OnlinePleaGuard]
 })
 export class CoreModule {}

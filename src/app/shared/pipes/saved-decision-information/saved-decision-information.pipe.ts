@@ -30,6 +30,12 @@ export class SavedDecisionInformationPipe implements PipeTransform {
       case 'DISMISS': {
         return `Dismissed`;
       }
+      case 'REFERRED_FOR_FUTURE_SJP_SESSION': {
+        return 'Referred for future SJP session';
+      }
+      case 'REFERRED_TO_OPEN_COURT': {
+        return 'Referred to full court hearing';
+      }
       default:
         throw new Error('Invalid decision type ' + offenceDecision.decisionType);
     }

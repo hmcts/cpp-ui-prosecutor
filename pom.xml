@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -174,8 +174,8 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-              <arguments>run-script ci:e2e -- --baseUrl=${protractor.baseUrl}/prosecutor-atcm/ --params.apiUrl=${protractor.apiUrl}
-                ${npm.e2e.options} --logLevel=DEBUG --params.integration=integrated
+              <arguments>run-script e2e:ci -- --baseUrl=${protractor.baseUrl}/prosecutor/ --params.apiUrl=${protractor.apiUrl}
+                ${npm.e2e.options} --logLevel=DEBUG
               </arguments>
               <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
               <skip>${skip.dat.tests}</skip>

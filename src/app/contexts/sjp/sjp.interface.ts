@@ -228,6 +228,48 @@ export interface CourtReferralOffenceDecision extends OffenceDecision {
 // tslint:disable-next-line
 export interface DismissOffenceDecision extends OffenceDecision {}
 
+export interface DischargeOffenceDecision extends OffenceDecision {
+  dischargeType?: DischargeType;
+  dischargedFor?: DischargePeriodForm;
+  compensation?: number;
+  noCompensationReason?: string;
+  guiltyPleaTakenIntoAccount: boolean;
+}
+
+export interface FinancialPenaltyOffenceDecision extends OffenceDecision {
+  fine: number;
+  compensation?: number;
+  noCompensationReason?: string;
+  guiltyPleaTakenIntoAccount: boolean;
+}
+
+export interface ReferredToOpenCourtOffenceDecision extends OffenceDecision {
+  referredToCourt: string;
+  referredToRoom: number;
+  referredToDateTime: string;
+  reason: string;
+  magistratesCourt: string;
+}
+
+export interface FinancialImposition {
+  costsAndSurcharge?: CostsAndSurchargeParam;
+  payment?: Payment;
+}
+
+export interface Payment {
+  paymentType: PaymentType;
+  totalSum?: number;
+  reasonWhyNotAttachedOrDeducted?: string;
+  reasonForDeductingFromBenefits?: ReasonForDeductingBenefits;
+  paymentTerms?: PaymentTermsParam;
+  fineTransferredTo?: TransferOfFine;
+}
+
+export interface TransferOfFine {
+  nationalCourtCode: string;
+  nationalCourtName: string;
+}
+
 export interface Session {
   sessionId: string;
   legalAdviserUserId: string;
@@ -238,6 +280,7 @@ export interface Session {
   endedAt: string;
   sessionType: string;
   legalAdviser: LegalAdviser;
+  magistrate?: string;
 }
 
 export interface CaseDecision {
@@ -245,6 +288,103 @@ export interface CaseDecision {
   session: Session;
   savedAt: string;
   offenceDecisions: OffenceDecision[];
+  financialImposition?: FinancialImposition;
 }
 
 export type VerdictType = 'PROVED_SJP' | 'FOUND_NOT_GUILTY' | 'FOUND_GUILTY' | 'NO_VERDICT';
+
+export interface CostsAndSurchargeParam {
+  costs: number;
+  reasonForNoCosts?: string;
+  victimSurcharge: number;
+  reasonForNoVictimSurcharge?: string;
+  collectionOrderMade: boolean;
+}
+
+export interface LumpSumParam {
+  amount?: number;
+  withinDays?: number;
+  payByDate?: string;
+}
+
+export interface InstallmentsParam {
+  amount: number;
+  period: InstallmentPeriod;
+  startDate: string;
+}
+
+export interface PaymentTermsParam {
+  reserveTerms: boolean;
+  lumpSum?: LumpSumParam;
+  installments?: InstallmentsParam;
+}
+
+export interface PaymentParam {
+  paymentType: PaymentType;
+  totalSum?: number;
+  reasonWhyNotAttachedOrDeducted?: string;
+  reasonForDeductingFromBenefits?: ReasonForDeductingBenefits;
+}
+
+export type InstallmentPeriod = 'WEEKLY' | 'FORTNIGHTLY' | 'MONTHLY';
+
+export type ReasonForDeductingBenefits = 'COMPENSATION_ORDERED' | 'DEFENDANT_KNOWN_DEFAULTER' | 'DEFENDANT_REQUESTED';
+
+export type PaymentType = 'PAY_TO_COURT' | 'ATTACH_TO_EARNINGS' | 'DEDUCT_FROM_BENEFITS';
+
+export type DischargeType = 'ABSOLUTE' | 'CONDITIONAL';
+
+export interface DischargePeriodForm {
+  value: number;
+  unit: PeriodUnit;
+}
+
+export type PeriodUnit = 'DAY' | 'WEEK' | 'MONTH' | 'YEAR';
+
+export interface OnlinePlea {
+  caseId: string;
+  defendantId: string;
+  submittedOn: string;
+  pleaDetails: PleaDetails;
+  onlinePleaDetails: OnlinePleaDetail[];
+  personalDetails: OnlinePleaPersonalDetails;
+  employer?: OnlinePleaEmployer;
+}
+
+export interface PleaDetails {
+  comeToCourt: boolean;
+  interpreterLanguage: string;
+  interpreterRequired: boolean;
+  witnessDetails?: string;
+  unavailability: string;
+  speakWelsh: boolean;
+  outstandingFines: boolean;
+}
+
+export interface OnlinePleaDetail {
+  id: string;
+  offenceId: string;
+  caseId: string;
+  defendantId: string;
+  plea: string;
+  notGuiltyBecause?: string;
+  mitigation?: string;
+  offenceTitle: string;
+}
+
+export interface OnlinePleaEmployer {
+  employeeReference: string;
+  name: string;
+  phone: string;
+  address: Address;
+}
+export interface OnlinePleaPersonalDetails {
+  firstName: string;
+  lastName: string;
+  address: Address;
+  homeTelephone: string;
+  mobile: string;
+  email: string;
+  dateOfBirth: string;
+  nationalInsuranceNumber: string;
+}

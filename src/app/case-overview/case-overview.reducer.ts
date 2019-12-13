@@ -1,17 +1,20 @@
 import { CaseOverviewAction, CaseOverviewActionType } from './case-overview.action';
+import { OnlinePlea } from '../contexts/sjp';
 
 export interface CaseOverviewState {
   withdrawOffencesSuccess: boolean;
   withdrawOffencesFailed: boolean;
   datesToAvoidSuccess: boolean;
   datesToAvoidFailed: boolean;
+  onlinePlea: OnlinePlea;
 }
 
 const initialState: CaseOverviewState = {
   withdrawOffencesSuccess: false,
   withdrawOffencesFailed: false,
   datesToAvoidSuccess: false,
-  datesToAvoidFailed: false
+  datesToAvoidFailed: false,
+  onlinePlea: undefined
 };
 
 export function caseOverviewReducer(
@@ -34,7 +37,10 @@ export function caseOverviewReducer(
     }
 
     case CaseOverviewActionType.RESET_CASE_OVERVIEW_STATE: {
-      return initialState;
+      return {
+        ...initialState,
+        onlinePlea: state.onlinePlea
+      };
     }
 
     case CaseOverviewActionType.RESET_DATES_TO_AVOID_STATE: {
@@ -55,6 +61,13 @@ export function caseOverviewReducer(
       return {
         ...state,
         datesToAvoidFailed: true
+      };
+    }
+
+    case CaseOverviewActionType.LOAD_ONLINE_PLEA_SUCCESS: {
+      return {
+        ...state,
+        onlinePlea: action.onlinePlea
       };
     }
 

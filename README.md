@@ -4,9 +4,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## App set up
 
-Node version: `8.15.0` and above
+- Node version: `8.16.1`
+- Npm version: `6.4.1`
+- Angular CLI version: `7.3.0`
 
-Npm version: `6.4.1` and above
+It is recommended to use [NVM](https://github.com/nvm-sh/nvm) for Node installations
+
+```
+nvm install 8.16.1
+npm install -g @angular/cli@7.3.0
+```
 
 Add the following configs to the `~/.npmrc` file.
 
@@ -15,32 +22,49 @@ registry=https://libraries.mdv.cpp.nonlive/artifactory/api/npm/npm-virtual
 strict-ssl=false
 ```
 
-Make sure that angular cli is installed globally or run `npm install -g @angular/cli`
-
 Create a new json file in `src/app/config/` folder with name `app.override.config.json` and add the below config
 
 ```
 {
   "_WARNING": "Do not commit this file, as it's overwritten during deployment. Feel free to use it to test overrides of app.config.json properties locally",
   "apiRoot": "http://localhost:8181/api",
-  "idamProfilePage": "/idam/manage-account",
-  "idamLogoutPage": "/gateway/SPInitiatedSLO"
 }
 
 ```
 
 Forward port 8181 to any one of the ATCM dev servers
 
-`ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
+`ssh -L 8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
 
 Finally run `npm install` to install all packages
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4750/prosecutor`. The app will automatically reload if you change any of the source files.
 
-### Run app in local vagrant with idam simulator
+## Run using local vagrant
 
-Change `apiRoot` in `app.override.config.json` file to `http://localhost:7080/api` and then run
-`npm run start:idam`. You can browse the app using url `http://localhost:7080/prosecutor/`
+Using the application with atcm-vagrant will provide an environment closer to the target environment ie
+
+- Sign in via IdAM
+- Integration with other UIs
+- However the prosecutor app must be manually opened by url: http://localhost:7080/prosecutor/<tfl/tvl>
+
+#### Configuration
+
+1. Run
+   `cp src/app/config/app.override.config.sample.json src/app/config/app.override.config.json`
+
+2. Set the VAGRANT_DIR environment variable to the location of your atcm-vagrant workspace.
+
+#### Deployment
+
+1. Run
+   `npm run start:vagrant`.
+2. Browse to the url `http://localhost:7080` and login
+3. Manually change to the prosecutor app using
+   http://localhost:7080/prosecutor/tfl or
+   http://localhost:7080/prosecutor/tvl
+
+Code changes will be automatically deployed. There is no live reload of the browser.
 
 ## Code scaffolding
 
@@ -58,17 +82,43 @@ Run `npm run test` to execute the unit tests via jest.
 
 Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-### Running end-to-end tests locally
+You may need to run `npm run webdriver-manager update` before running the test suite. 
 
-If you want to target a specifc ste environment follow these steps:
+Results are output in console with a detailed HTML report generated in `build/e2e/screenshots/index.html`
 
-- Forward port 8181 to any of the ATCM dev servers
-  (make sure you have this configured in `app.override.config.json`).
+### Running against remote backend
 
-`ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive`
+Make sure you have `app.override.config.json` setup as above.
 
-- Run the application locally from another command line (`npm start` or `npm run start`).
-- After this run end to end tests locally with either `npm run e2e` or `npm run ptr` to run tests on visible browser.
+```bash
+# terminal 1 - tunnel to backend
+ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive
+
+# terminal 2 - run the frontend app
+npm start
+
+# terminal 3 - run the e2e tests
+npm run e2e
+```
+
+### Running against remote frontend
+
+If running against STE or DEV, you will need to setup a network proxy:
+
+1. On Mac, open Network Preferences > Advanced > Proxies
+2. Enable SOCKS proxy with localhost:8182
+
+```bash
+# terminal 1 - tunnel to frontend slave
+# note that with proxy enabled, all traffic is routed here, hence you will lose network if this tunnel is not up
+ssh -C -D 8182 STECCMSLAVE01.cpp.nonlive
+
+# terminal 2 - tunnel to backend
+ssh -L8181:localhost:8080 STECCM05ACTAP01.cpp.nonlive
+
+# terminal 3 - run the e2e tests against the remote url
+npm run e2e:remote -- --baseUrl http://steccm05wrpxy01.cpp.nonlive/prosecutor/
+```
 
 ## Further help
 

@@ -58,6 +58,10 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
                    Legal Adviser: Mark Adams 
                 </div>
                 
+                <div>
+                   Magistrate: Jenny 
+                </div>
+                
                 <div
                   pdk-text-colour="grey-1"
                 >
@@ -108,11 +112,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Withdrawn - Insufficient evidence
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -157,11 +165,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Withdrawn - Insufficient evidence
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -206,11 +218,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Adjourned to 11 Jun 2019 (or after)
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -255,11 +271,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Adjourned to 11 Jul 2019 (or after)
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -304,11 +324,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Adjourned to 21 Jun 2019 (or after)
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -353,11 +377,15 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
             >
                 
               
+              
               <p
                 data-role="offence-decision"
               >
                 Referred for court hearing - Not suitable for SJP
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
@@ -405,17 +433,22 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               <p>
                 Proved SJP
               </p>
+              
               <p
                 data-role="offence-decision"
               >
                 Dismissed
               </p>
+              
+              
+              
             </div>
           </pdk-grid>
         </div>
       </pdk-grid>
       
     </div>
+    
   </case-decisions-details>
 </case-decisions-test>
 `;

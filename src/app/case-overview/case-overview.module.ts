@@ -28,6 +28,10 @@ import { OverviewContainer } from './overview/overview.container';
       {
         path: 'dates-to-avoid',
         loadChildren: './dates-to-avoid/dates-to-avoid.module#DatesToAvoidModule'
+      },
+      {
+        path: 'online-plea-details',
+        loadChildren: './online-plea-details/online-plea-details.module#OnlinePleaDetailsModule'
       }
     ])
   ]

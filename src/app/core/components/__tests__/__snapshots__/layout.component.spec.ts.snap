@@ -6,6 +6,8 @@ exports[`Layout should render 1`] = `
 >
   <pdk-cpp-layout
     _nghost-c0=""
+    accessibilitylink="accessibility"
+    ng-reflect-accessibility-link="accessibility"
     ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
@@ -95,7 +97,7 @@ exports[`Layout should render 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c0=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c0=""
@@ -109,7 +111,7 @@ exports[`Layout should render 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c0=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c0=""
@@ -166,8 +168,8 @@ exports[`Layout should render 1`] = `
     <pdk-main
       _ngcontent-c0=""
       class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
+      contentid="main-content"
+      ng-reflect-content-id="main-content"
       ng-reflect-type="body"
       pdk-typography="body"
     >
@@ -278,29 +280,17 @@ exports[`Layout should render 1`] = `
             <hr
               class="govuk-footer__section-break"
             />
-            <ul
+            <div
               class="govuk-footer__inline-list"
+              role="list"
             >
+              
+              
               <pdk-footer-list-item
                 _ngcontent-c0=""
+                role="listitem"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c0=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c0=""
-              >
-                <li
+                <div
                   class="govuk-footer__inline-list-item"
                 >
                   <a
@@ -312,9 +302,28 @@ exports[`Layout should render 1`] = `
                   >
                     Cookies
                   </a>
-                </li>
+                </div>
               </pdk-footer-list-item>
-            </ul>
+              
+              <pdk-footer-list-item
+                _ngcontent-c0=""
+                role="listitem"
+              >
+                <div
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    _ngcontent-c0=""
+                    class="govuk-footer__link"
+                    href="accessibility"
+                    pdk-footer-link=""
+                    target="_blank"
+                  >
+                    Accessibility
+                  </a>
+                </div>
+              </pdk-footer-list-item>
+            </div>
           </pdk-footer-list>
         </div>
       </footer>
@@ -330,6 +339,8 @@ exports[`Layout should render correctly with activity 1`] = `
 >
   <pdk-cpp-layout
     _nghost-c27=""
+    accessibilitylink="accessibility"
+    ng-reflect-accessibility-link="accessibility"
     ng-reflect-activity="true"
     ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
@@ -448,7 +459,7 @@ exports[`Layout should render correctly with activity 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c27=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c27=""
@@ -462,7 +473,7 @@ exports[`Layout should render correctly with activity 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c27=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c27=""
@@ -519,8 +530,8 @@ exports[`Layout should render correctly with activity 1`] = `
     <pdk-main
       _ngcontent-c27=""
       class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
+      contentid="main-content"
+      ng-reflect-content-id="main-content"
       ng-reflect-type="body"
       pdk-typography="body"
     >
@@ -631,29 +642,17 @@ exports[`Layout should render correctly with activity 1`] = `
             <hr
               class="govuk-footer__section-break"
             />
-            <ul
+            <div
               class="govuk-footer__inline-list"
+              role="list"
             >
+              
+              
               <pdk-footer-list-item
                 _ngcontent-c27=""
+                role="listitem"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c27=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c27=""
-              >
-                <li
+                <div
                   class="govuk-footer__inline-list-item"
                 >
                   <a
@@ -665,9 +664,28 @@ exports[`Layout should render correctly with activity 1`] = `
                   >
                     Cookies
                   </a>
-                </li>
+                </div>
               </pdk-footer-list-item>
-            </ul>
+              
+              <pdk-footer-list-item
+                _ngcontent-c27=""
+                role="listitem"
+              >
+                <div
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    _ngcontent-c27=""
+                    class="govuk-footer__link"
+                    href="accessibility"
+                    pdk-footer-link=""
+                    target="_blank"
+                  >
+                    Accessibility
+                  </a>
+                </div>
+              </pdk-footer-list-item>
+            </div>
           </pdk-footer-list>
         </div>
       </footer>
@@ -683,6 +701,8 @@ exports[`Layout should render correctly with api error 1`] = `
 >
   <pdk-cpp-layout
     _nghost-c18=""
+    accessibilitylink="accessibility"
+    ng-reflect-accessibility-link="accessibility"
     ng-reflect-api-error="true"
     ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
@@ -800,7 +820,7 @@ exports[`Layout should render correctly with api error 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c18=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c18=""
@@ -814,7 +834,7 @@ exports[`Layout should render correctly with api error 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c18=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c18=""
@@ -871,8 +891,8 @@ exports[`Layout should render correctly with api error 1`] = `
     <pdk-main
       _ngcontent-c18=""
       class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
+      contentid="main-content"
+      ng-reflect-content-id="main-content"
       ng-reflect-type="body"
       pdk-typography="body"
     >
@@ -983,29 +1003,17 @@ exports[`Layout should render correctly with api error 1`] = `
             <hr
               class="govuk-footer__section-break"
             />
-            <ul
+            <div
               class="govuk-footer__inline-list"
+              role="list"
             >
+              
+              
               <pdk-footer-list-item
                 _ngcontent-c18=""
+                role="listitem"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c18=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c18=""
-              >
-                <li
+                <div
                   class="govuk-footer__inline-list-item"
                 >
                   <a
@@ -1017,9 +1025,28 @@ exports[`Layout should render correctly with api error 1`] = `
                   >
                     Cookies
                   </a>
-                </li>
+                </div>
               </pdk-footer-list-item>
-            </ul>
+              
+              <pdk-footer-list-item
+                _ngcontent-c18=""
+                role="listitem"
+              >
+                <div
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    _ngcontent-c18=""
+                    class="govuk-footer__link"
+                    href="accessibility"
+                    pdk-footer-link=""
+                    target="_blank"
+                  >
+                    Accessibility
+                  </a>
+                </div>
+              </pdk-footer-list-item>
+            </div>
           </pdk-footer-list>
         </div>
       </footer>
@@ -1035,6 +1062,8 @@ exports[`Layout should render correctly with online status 1`] = `
 >
   <pdk-cpp-layout
     _nghost-c9=""
+    accessibilitylink="accessibility"
+    ng-reflect-accessibility-link="accessibility"
     ng-reflect-cookie-message="true"
     ng-reflect-header-nav-items="[object Object],[object Object"
     ng-reflect-offline="true"
@@ -1152,7 +1181,7 @@ exports[`Layout should render correctly with online status 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c9=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c9=""
@@ -1166,7 +1195,7 @@ exports[`Layout should render correctly with online status 1`] = `
                     <pdk-header-nav-item
                       _ngcontent-c9=""
                       class="govuk-header__navigation-item"
-                      role="list-item"
+                      role="listitem"
                     >
                       <a
                         _ngcontent-c9=""
@@ -1223,8 +1252,8 @@ exports[`Layout should render correctly with online status 1`] = `
     <pdk-main
       _ngcontent-c9=""
       class="govuk-body-m"
-      id="main-content"
-      ng-reflect-id="main-content"
+      contentid="main-content"
+      ng-reflect-content-id="main-content"
       ng-reflect-type="body"
       pdk-typography="body"
     >
@@ -1335,29 +1364,17 @@ exports[`Layout should render correctly with online status 1`] = `
             <hr
               class="govuk-footer__section-break"
             />
-            <ul
+            <div
               class="govuk-footer__inline-list"
+              role="list"
             >
+              
+              
               <pdk-footer-list-item
                 _ngcontent-c9=""
+                role="listitem"
               >
-                <li
-                  class="govuk-footer__inline-list-item"
-                >
-                  <a
-                    _ngcontent-c9=""
-                    class="govuk-footer__link"
-                    href="javascript:void(0)"
-                    pdk-footer-link=""
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-              </pdk-footer-list-item>
-              <pdk-footer-list-item
-                _ngcontent-c9=""
-              >
-                <li
+                <div
                   class="govuk-footer__inline-list-item"
                 >
                   <a
@@ -1369,9 +1386,28 @@ exports[`Layout should render correctly with online status 1`] = `
                   >
                     Cookies
                   </a>
-                </li>
+                </div>
               </pdk-footer-list-item>
-            </ul>
+              
+              <pdk-footer-list-item
+                _ngcontent-c9=""
+                role="listitem"
+              >
+                <div
+                  class="govuk-footer__inline-list-item"
+                >
+                  <a
+                    _ngcontent-c9=""
+                    class="govuk-footer__link"
+                    href="accessibility"
+                    pdk-footer-link=""
+                    target="_blank"
+                  >
+                    Accessibility
+                  </a>
+                </div>
+              </pdk-footer-list-item>
+            </div>
           </pdk-footer-list>
         </div>
       </footer>

@@ -42,14 +42,6 @@ exports[`DevTools - Select User component compiles 1`] = `
           
           
           
-          <label
-            class="govuk-label"
-            for="pdk-form-control-1"
-            ng-reflect-hidden="false"
-            ng-reflect-type="default"
-          >
-              
-          </label>
           
           
           
@@ -152,14 +144,6 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
           
           
           
-          <label
-            class="govuk-label"
-            for="pdk-form-control-3"
-            ng-reflect-hidden="false"
-            ng-reflect-type="default"
-          >
-              
-          </label>
           
           
           
@@ -261,14 +245,6 @@ exports[`DevTools - Select User component it shows error messages when form is s
           
           
           
-          <label
-            class="govuk-label"
-            for="pdk-form-control-5"
-            ng-reflect-hidden="false"
-            ng-reflect-type="default"
-          >
-              
-          </label>
           
           
           

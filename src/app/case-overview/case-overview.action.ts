@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { WithdrawOffenceRequestParam } from '../contexts/sjp';
+import { WithdrawOffenceRequestParam, OnlinePlea } from '../contexts/sjp';
 
 export const enum CaseOverviewActionType {
   WITHDRAW_OFFENCES = '[ATCM] Withdraw offences',
@@ -9,7 +9,8 @@ export const enum CaseOverviewActionType {
   SUBMIT_DATES_TO_AVOID_SUCCESS = '[ATCM] Submit Dates to Avoid Success',
   SUBMIT_DATES_TO_AVOID_FAILED = '[ATCM] Submit Dates to Avoid Failed',
   RESET_CASE_OVERVIEW_STATE = '[ATCM] Clear case overview state',
-  RESET_DATES_TO_AVOID_STATE = '[ATCM] Clear dates to avoid state'
+  RESET_DATES_TO_AVOID_STATE = '[ATCM] Clear dates to avoid state',
+  LOAD_ONLINE_PLEA_SUCCESS = '[ATCM] Load online plea success'
 }
 
 export class WithdrawOffences implements Action {
@@ -60,6 +61,12 @@ export class SubmitDatesToAvoidFailed implements Action {
   constructor() {}
 }
 
+export class LoadOnlinePleaSuccess implements Action {
+  readonly type = CaseOverviewActionType.LOAD_ONLINE_PLEA_SUCCESS;
+
+  constructor(public onlinePlea: OnlinePlea) {}
+}
+
 export type CaseOverviewAction =
   | WithdrawOffences
   | WithdrawOffencesSuccess
@@ -68,4 +75,5 @@ export type CaseOverviewAction =
   | ResetDatesToAvoidState
   | SubmitDatesToAvoid
   | SubmitDatesToAvoidSuccess
-  | SubmitDatesToAvoidFailed;
+  | SubmitDatesToAvoidFailed
+  | LoadOnlinePleaSuccess;
