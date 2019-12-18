@@ -9,6 +9,7 @@ exports[`App page component should compile correctly 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled="false"
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div
@@ -64,6 +65,7 @@ exports[`App page component should compile correctly when search is available 1`
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled={[Function Boolean]}
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div
@@ -123,6 +125,7 @@ exports[`App page component should detect when the app is busy 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled="false"
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div
@@ -178,6 +181,7 @@ exports[`App page component should track any api errors 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled="false"
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div
@@ -233,6 +237,7 @@ exports[`App page component should track the offline status of the container 1`]
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled="false"
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div
@@ -288,6 +293,7 @@ exports[`App page component should track the online status of the container 1`] 
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled="false"
+  translate={[Function TranslateService]}
 >
   <pdk-provider>
     <div

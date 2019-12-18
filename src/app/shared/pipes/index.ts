@@ -10,3 +10,4 @@ export * from './upload-status/upload-status-pipe.module';
 export * from './upload-error/upload-error-pipe.module';
 export * from './first-last-name/first-last-name.module';
 export * from './saved-decision-information/saved-decision-information-pipe.module';
+export * from './yes-no/yes-no-pipe.module';

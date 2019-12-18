@@ -7,7 +7,8 @@ let appLoaded: boolean;
 let loggedInUser: User;
 
 export const navigate = async (url: string, user: User) => {
-  if (browser.params.integration !== 'integrated') {
+
+  if (browser.params.dev === 'dev') {
     if (!appLoaded) {
       await browser.get('./'); // need to load the app the first time this is run, to enable setting session storage
       appLoaded = true;
@@ -17,13 +18,14 @@ export const navigate = async (url: string, user: User) => {
     await loginAs({ email: user.email });
     loggedInUser = user;
   }
+
   await browser.get(join('.', url));
   await isStable();
 };
 
 export const isStable = () => {
   return Promise.all([
-    browser.driver.wait(ExpectedConditions.invisibilityOf($('pdk-activity-indicator'))),
+    browser.driver.wait(ExpectedConditions.invisibilityOf($('pdk-activity-indicator')), 30000, 'failed on isStable activity indicator'),
     browser.waitForAngular()
   ]);
 };

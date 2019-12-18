@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CaseDecision } from '../../../contexts/sjp';
+import {CaseDecision, OffenceDecision} from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-decisions-details',
@@ -23,6 +23,9 @@ import { CaseDecision } from '../../../contexts/sjp';
             <div class="pre-line">&nbsp;</div>
             <div *ngIf="caseDecisionWithOffenceDecisions.session.legalAdviser">
               Legal Adviser: {{ caseDecisionWithOffenceDecisions.session.legalAdviser | firstLastName: false:false }}
+            </div>
+            <div *ngIf="caseDecisionWithOffenceDecisions.session.magistrate">
+              Magistrate: {{ caseDecisionWithOffenceDecisions.session.magistrate }}
             </div>
             <div *ngIf="caseDecisionWithOffenceDecisions.session.courtHouseName" pdk-text-colour="grey-1">
               {{ caseDecisionWithOffenceDecisions.session.courtHouseName }}
@@ -48,13 +51,33 @@ import { CaseDecision } from '../../../contexts/sjp';
         <pdk-grid two-thirds>
           {{ offenceDecision.offenceTitle }}
           <p *ngIf="offenceDecision.verdict != 'NO_VERDICT'">{{ offenceDecision.verdict | verdictType }}</p>
-          <p data-role="offence-decision">{{ offenceDecision | savedDecisionInformation }}</p>
+          <financial-offence-decision *ngIf="isFinancial(offenceDecision);else nonFinancial"
+                                      [offenceDecision]="offenceDecision">
+          </financial-offence-decision>
+          <ng-template #nonFinancial>
+            <p data-role="offence-decision">{{ offenceDecision | savedDecisionInformation }}</p>
+            <refer-to-open-court-offence-decision *ngIf="offenceDecision.decisionType==='REFERRED_TO_OPEN_COURT'"
+                                                  [offenceDecision]="offenceDecision">
+            </refer-to-open-court-offence-decision>
+          </ng-template>
         </pdk-grid>
       </pdk-grid>
       <pdk-divider *ngIf="!last"></pdk-divider>
+    </div>
+    <div *ngIf='caseDecisionWithOffenceDecisions.financialImposition'>
+      <pdk-divider></pdk-divider>
+      <financial-impositions
+          [caseDecision]="caseDecisionWithOffenceDecisions"></financial-impositions>
+      <pdk-divider></pdk-divider>
+      <payment-and-collection
+          [caseDecision]="caseDecisionWithOffenceDecisions"></payment-and-collection>
     </div>
   `
 })
 export class CaseDecisionsDetailsComponent {
   @Input() caseDecisionWithOffenceDecisions: CaseDecision;
+
+  isFinancial(offenceDecision: OffenceDecision): boolean {
+    return offenceDecision.decisionType === 'FINANCIAL_PENALTY' || offenceDecision.decisionType === 'DISCHARGE';
+  }
 }

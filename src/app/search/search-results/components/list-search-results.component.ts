@@ -46,16 +46,6 @@ import { CaseDetails } from '../../../contexts/sjp';
           <td pdk-table-cell data-role="urn">{{ searchResult.urn }}</td>
           <td pdk-table-cell>
             {{ searchResult.status | caseStatus }}
-            <div>
-              <a
-                href="javascript:void(0)"
-                pdk-link
-                [routerLink]="['#', searchResult.caseId]"
-                *ngIf="isNoPleaReceived(searchResult)"
-              >
-                Upload and enter postal reply
-              </a>
-            </div>
             <div
               *ngIf="searchResult.status === 'REFERRED_FOR_COURT_HEARING' && !searchResult.listedInCriminalCourts"
               pdk-typography="body-small"
@@ -74,14 +64,6 @@ import { CaseDetails } from '../../../contexts/sjp';
 })
 export class ListSearchResultsComponent {
   @Input() searchResults: CaseDetails[];
-
-  isNoPleaReceived(kase: CaseDetails): boolean {
-    return kase.status === 'NO_PLEA_RECEIVED_READY_FOR_DECISION';
-  }
-
-  isReferredForCourtHearing(kase: CaseDetails): boolean {
-    return kase.status === 'REFERRED_FOR_COURT_HEARING';
-  }
 
   get areDefendantDetailsUpdated() {
     return this.searchResults.some(({ defendant }) => !!defendant.outdated);

@@ -81,8 +81,8 @@ import { CsvFileUploadReport } from '../../../contexts/staging-tfl';
     </pdk-grid>
     <pdk-grid container>
       <h3>After you've fixed all errors</h3>
-      <p>You noe need to upload both header and offences CSVs again</p>
-      <p>The CSVs mut include:</p>
+      <p>You now need to upload both header and offences CSVs again</p>
+      <p>The CSVs must include:</p>
 
       <ul>
         <li>your correct data</li>

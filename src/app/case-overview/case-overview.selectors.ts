@@ -37,3 +37,5 @@ export const getCaseDecisionsWithOffenceDecisions = createSelector(
     return caseDecisions ? caseDecisions : [];
   }
 );
+
+export const getOnlinePlea = (state: FeatureState) => state.caseOverview.onlinePlea;

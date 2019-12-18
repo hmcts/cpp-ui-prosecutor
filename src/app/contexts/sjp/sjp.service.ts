@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import {
   Case,
-  CaseDetails,
   CasesMissingSjpNoticeResult,
   CaseSummary,
   DefendantDetailsUpdatesResult,
   PleadedNotGuiltyCaseResult,
-  SearchResult
+  SearchResult,
+  OnlinePlea
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 import { Observable } from 'rxjs';
@@ -93,6 +93,13 @@ export class SjpService {
       requestType: 'application/vnd.sjp.acknowledge-defendant-details-updates+json',
       successEvent: 'public.sjp.defendant-details-updates-acknowledged',
       errorEvent: []
+    });
+  }
+
+  getDefendantsOnlinePlea(caseId: string, defendantId: string): Observable<OnlinePlea> {
+    return this.http.query({
+      url: `${this.query}/cases/${caseId}/defendants/${defendantId}/defendants-online-plea`,
+      requestType: 'application/vnd.sjp.query.defendants-online-plea+json',
     });
   }
 }

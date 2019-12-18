@@ -8,12 +8,29 @@ import {
   CaseProsecutorPipeModule,
   CaseStatusPipeModule,
   DefendantNamePipeModule,
+  FirstLastNamePipeModule,
   FormatAddressPipeModule,
   FormatDatePipeModule,
   IfEmptyPipeModule,
   PleaStatusPipeModule,
-  FirstLastNamePipeModule
+  YesNoPipeModule
 } from './pipes';
+import { PaymentTypePipeModule } from './pipes/payment-type/payment-type-pipe.module';
+import { SjpCurrencyPipeModule } from './pipes/sjp-currency/sjp-currency.module';
+import { TranslateModule } from '@ngx-translate/core';
+
+const MODULE_EXPORT = [
+  AgePipeModule,
+  CaseProsecutorPipeModule,
+  CaseStatusPipeModule,
+  DefendantNamePipeModule,
+  FormatAddressPipeModule,
+  FormatDatePipeModule,
+  IfEmptyPipeModule,
+  PleaStatusPipeModule,
+  YesNoPipeModule,
+  FirstLastNamePipeModule
+];
 
 @NgModule({
   declarations: [],
@@ -22,28 +39,16 @@ import {
     PdkCoreModule,
     PdkFormModule,
     PdkDateInputModule,
-    AgePipeModule,
-    CaseProsecutorPipeModule,
-    CaseStatusPipeModule,
-    DefendantNamePipeModule,
-    FormatAddressPipeModule,
-    FormatDatePipeModule,
-    IfEmptyPipeModule,
-    PleaStatusPipeModule
+    ...MODULE_EXPORT
   ],
   exports: [
     FromToDatesModule,
     PdkCoreModule,
-    AgePipeModule,
-    CaseProsecutorPipeModule,
-    CaseStatusPipeModule,
-    DefendantNamePipeModule,
-    FormatAddressPipeModule,
-    FormatDatePipeModule,
-    FirstLastNamePipeModule,
-    IfEmptyPipeModule,
-    PleaStatusPipeModule,
-    DateOfBirthModule
+    DateOfBirthModule,
+    PaymentTypePipeModule,
+    SjpCurrencyPipeModule,
+    TranslateModule,
+    ...MODULE_EXPORT
   ]
 })
 export class SharedModule {}

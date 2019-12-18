@@ -4,6 +4,7 @@ exports[` Case Overview reducer default should set the state 1`] = `
 Object {
   "datesToAvoidFailed": false,
   "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
   "withdrawOffencesFailed": false,
   "withdrawOffencesSuccess": false,
 }
@@ -13,6 +14,7 @@ exports[` Case Overview reducer default should update the dates to avoid failed 
 Object {
   "datesToAvoidFailed": true,
   "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
   "withdrawOffencesFailed": false,
   "withdrawOffencesSuccess": false,
 }
@@ -22,6 +24,7 @@ exports[` Case Overview reducer default should update the dates to avoid success
 Object {
   "datesToAvoidFailed": false,
   "datesToAvoidSuccess": true,
+  "onlinePlea": undefined,
   "withdrawOffencesFailed": false,
   "withdrawOffencesSuccess": false,
 }
@@ -31,6 +34,7 @@ exports[` Case Overview reducer default should update the withdraw offences fail
 Object {
   "datesToAvoidFailed": false,
   "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
   "withdrawOffencesFailed": true,
   "withdrawOffencesSuccess": false,
 }
@@ -40,6 +44,7 @@ exports[` Case Overview reducer default should update the withdraw offences succ
 Object {
   "datesToAvoidFailed": false,
   "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
   "withdrawOffencesFailed": false,
   "withdrawOffencesSuccess": true,
 }

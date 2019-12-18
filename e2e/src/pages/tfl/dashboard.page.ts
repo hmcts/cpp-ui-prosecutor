@@ -3,7 +3,7 @@ import { $ } from 'protractor';
 
 export class TflDashboardPage extends BasePage {
   public readonly csvUploadErrorLink = $(`a[title='CSV errors in last upload']`);
-  public readonly casesMissingSjpNoticeLink = $(`a[title='Cases missing SJP notices']`);
+  public readonly casesMissingSjpNoticeLink = $(`a[title*='Cases missing'] span.pdk-summary-item__number`);
   public readonly documentUploadErrorLink = $(`a[title = 'Document errors in last upload']`);
 
   constructor() {

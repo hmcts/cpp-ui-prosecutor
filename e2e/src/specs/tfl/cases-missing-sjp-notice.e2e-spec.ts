@@ -2,30 +2,26 @@ import { CasesMissingSjpNoticePage } from '../../pages/tfl/cases-missing-sjp-not
 import { navigate } from '../../util';
 import { TFL_USER } from '../../../../tools/utils';
 import { TflDashboardPage } from '../../pages/tfl/dashboard.page';
-import { browser } from 'protractor';
 
-describe('tfl prosecutor', () => {
-  const page = new CasesMissingSjpNoticePage();
-  const tflDashboard = new TflDashboardPage();
+describe('TFL Prosecutor', () => {
+  describe('Cases missing SJP Notice', () => {
+    const missingNoticesPage = new CasesMissingSjpNoticePage();
+    const tflDashboard = new TflDashboardPage();
 
-  it('should have link to navigate to cases missing sjp notice', async () => {
-    await navigate(tflDashboard.getUrl(), TFL_USER);
-    await tflDashboard.casesMissingSjpNoticeLink.click();
-    await expect(browser.getCurrentUrl()).toContain(page.getUrl());
-  });
+    beforeAll(async () => {
+      // TODO: create case without notice
+    });
 
-  it('should show number of cases missing notice', async () => {
-    await navigate(page.getUrl(), TFL_USER);
-    await expect(page.casesNumberParagraph.getText()).toMatch(/No cases|1 case|\d* cases/g);
-  });
+    xit('should be able to view number of cases missing SJP notices', async () => {
+      await navigate(tflDashboard.getUrl(), TFL_USER);
+      const numberOfMissingCases = await tflDashboard.casesMissingSjpNoticeLink.getText();
+      expect(Number(numberOfMissingCases)).toBeGreaterThan(0);
+    });
 
-  it('should show cases missing notice table', async () => {
-    await navigate(page.getUrl(), TFL_USER);
-    const casesParagraph = await page.casesNumberParagraph.getText();
-    if (casesParagraph !== 'No cases') {
-      await expect(page.casesTable.isPresent()).toBe(true);
-    } else {
-      await expect(page.casesTable.isPresent()).toBe(false);
-    }
+    xit('should be able to view details for cases missing SJP notices', async () => {
+      await navigate(missingNoticesPage.getUrl(), TFL_USER);
+      expect(await missingNoticesPage.casesNumberParagraph.getText()).toMatch(/No cases|1 case|\d* cases/g);
+      expect(await missingNoticesPage.casesTable.isPresent()).toBe(true);
+    });
   });
 });

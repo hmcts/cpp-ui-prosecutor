@@ -173,29 +173,24 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
               _ngcontent-c1=""
               class="pdk-related"
             >
-              <div
-                _ngcontent-c1=""
-                class="pdk-related__section"
+              <h1
+                class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
+                ng-reflect-type="heading-medium"
+                ng-reflect-vertical="1"
+                pdk-margin-vertical="1"
+                pdk-typography="heading-medium"
               >
-                <h1
-                  class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                  ng-reflect-type="heading-medium"
-                  ng-reflect-vertical="1"
-                  pdk-margin-vertical="1"
-                  pdk-typography="heading-medium"
+                Related links
+              </h1>
+              <div>
+                <a
+                  class="govuk-link"
+                  href="javascript: void(0)"
+                  pdk-link=""
+                  routerlink="../../../csv-upload"
                 >
-                  Related links
-                </h1>
-                <div>
-                  <a
-                    class="govuk-link"
-                    href="javascript: void(0)"
-                    pdk-link=""
-                    routerlink="../../../csv-upload"
-                  >
-                     Upload CSVs 
-                  </a>
-                </div>
+                   Upload CSVs 
+                </a>
               </div>
             </div>
           </pdk-related>
@@ -213,10 +208,10 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
         After you've fixed all errors
       </h3>
       <p>
-        You noe need to upload both header and offences CSVs again
+        You now need to upload both header and offences CSVs again
       </p>
       <p>
-        The CSVs mut include:
+        The CSVs must include:
       </p>
       <ul>
         <li>
@@ -400,10 +395,10 @@ exports[`ViewCsvUploadReportComponent should compile correctly if the status is 
         After you've fixed all errors
       </h3>
       <p>
-        You noe need to upload both header and offences CSVs again
+        You now need to upload both header and offences CSVs again
       </p>
       <p>
-        The CSVs mut include:
+        The CSVs must include:
       </p>
       <ul>
         <li>

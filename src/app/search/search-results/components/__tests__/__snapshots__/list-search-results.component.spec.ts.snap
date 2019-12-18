@@ -103,9 +103,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              Completed 
-            <div>
-              
-            </div>
             
           </td>
           <td
@@ -155,9 +152,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              No plea received 
-            <div>
-              
-            </div>
             
           </td>
           <td
@@ -207,17 +201,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              No plea received - ready for decision 
-            <div>
-              
-              <a
-                class="govuk-link"
-                href="/%23/caseId4"
-                ng-reflect-router-link="#,caseId4"
-                pdk-link=""
-              >
-                 Upload and enter postal reply 
-              </a>
-            </div>
             
           </td>
           <td
@@ -267,9 +250,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              Completed 
-            <div>
-              
-            </div>
             
           </td>
           <td
@@ -493,9 +473,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             pdk-table-cell=""
           >
              Completed 
-            <div>
-              
-            </div>
             
           </td>
           <td
@@ -625,9 +602,6 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
             pdk-table-cell=""
           >
              Referred for court hearing 
-            <div>
-              
-            </div>
             
             <div
               class="govuk-body-s"
@@ -764,17 +738,6 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
             pdk-table-cell=""
           >
              No plea received - ready for decision 
-            <div>
-              
-              <a
-                class="govuk-link"
-                href="/%23/caseId2"
-                ng-reflect-router-link="#,caseId2"
-                pdk-link=""
-              >
-                 Upload and enter postal reply 
-              </a>
-            </div>
             
           </td>
           <td

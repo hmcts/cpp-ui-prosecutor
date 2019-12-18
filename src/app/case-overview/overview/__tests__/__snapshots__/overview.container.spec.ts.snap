@@ -134,7 +134,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
             "userId": "legal-adviser-1",
             "firstName": "Mark",
             "lastName": "Adams"
-          }
+          },
+          "magistrate": "Jenny"
         },
         "savedAt": "2018-12-01T16:10:28.259Z",
         "offenceDecisions": [
@@ -326,7 +327,8 @@ exports[`OverviewContainer should compile correctly 1`] = `
           "userId": "legal-adviser-1",
           "firstName": "Mark",
           "lastName": "Adams"
-        }
+        },
+        "magistrate": "Jenny"
       },
       "savedAt": "2018-12-01T16:10:28.259Z",
       "offenceDecisions": [

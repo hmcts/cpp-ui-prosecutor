@@ -9,7 +9,7 @@
 
   <groupId>uk.gov.moj.cpp.ui</groupId>
   <artifactId>ui-prosecutor</artifactId>
-  <version>0.0.121-SC-SNAPSHOT</version>
+  <version>0.0.122-SC-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <protractor.baseUrl>http://localhost:4650</protractor.baseUrl>
@@ -174,8 +174,8 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-              <arguments>run-script ci:e2e -- --baseUrl=${protractor.baseUrl}/prosecutor-atcm/ --params.apiUrl=${protractor.apiUrl}
-                ${npm.e2e.options} --logLevel=DEBUG --params.integration=integrated
+              <arguments>run-script e2e:ci -- --baseUrl=${protractor.baseUrl}/prosecutor/ --params.apiUrl=${protractor.apiUrl}
+                ${npm.e2e.options} --logLevel=DEBUG
               </arguments>
               <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
               <skip>${skip.dat.tests}</skip>

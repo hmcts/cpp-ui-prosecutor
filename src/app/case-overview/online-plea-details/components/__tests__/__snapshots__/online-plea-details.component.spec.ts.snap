@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnlinePleaComponent should display online plea 1`] = `
+<online-plea-container
+  onlinePlea={[Function Object]}
+>
+  <online-plea-details
+    ng-reflect-online-plea="[object Object]"
+  >
+    <h1
+      pdk-margin-vertical="3"
+      pdk-typography="heading-xlarge"
+    >
+      Defendant’s online plea
+    </h1>
+    <p
+      pdk-margin-bottom="8"
+      pdk-typography="body-medium"
+    >
+       Submitted online on 2019-10-18T15:10:28.881Z at 2019-10-18T15:10:28.881Z 
+    </p>
+    <h3
+      pdk-margin-bottom="0"
+      pdk-typography="heading-medium"
+    >
+      Personal details
+    </h3>
+    <table
+      pdk-table=""
+    >
+      <tbody
+        class="column-width"
+        pdk-table-body=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Name
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Seyit Ahmet Kamil GUNGOR
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Address
+          </td>
+          <td
+            class="pre-line"
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+             Line 11
+  Line 22
+  Line 33
+  Line 44
+  Line 55
+  SE16 5UD 
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Home telephone
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            1111111111
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Mobile number
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            22222222222
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Email address
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            a@b.co
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Date of birth
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            <date-of-birth
+              ng-reflect-date-of-birth="1960-09-09"
+            >
+              
+              <div>
+                 9 Sep 1960 (59 years old) 
+              </div>
+              
+            </date-of-birth>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <h3
+      pdk-margin-bottom="0"
+      pdk-typography="heading-medium"
+    >
+      Plea for offence 1
+    </h3>
+    <table
+      pdk-table=""
+    >
+      <tbody
+        class="column-width"
+        pdk-table-body=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Charge
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Obstruct person executing search warrant for TV receiver
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            How they pleaded
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Notified Not Guilty
+          </td>
+        </tr>
+        
+        
+        
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Why do they believe they’re not guilty?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Not guilty plea1
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3
+      pdk-margin-bottom="0"
+      pdk-typography="heading-medium"
+    >
+      Plea for offence 2
+    </h3>
+    <table
+      pdk-table=""
+    >
+      <tbody
+        class="column-width"
+        pdk-table-body=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Charge
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Use / install a television set without a licence
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            How they pleaded
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Notified Guilty
+          </td>
+        </tr>
+        
+        
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Guilty plea mitigation
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Guilty plea mitigation2
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    
+    <h3
+      pdk-margin-bottom="0"
+      pdk-typography="heading-medium"
+    >
+      Court hearing
+    </h3>
+    <table
+      pdk-table=""
+    >
+      <tbody
+        class="column-width"
+        pdk-table-body=""
+      >
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Are they bringing their own witness?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Yes
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Their witness’ details
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            ter the name and add
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Are there any dates they can not attend court?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Yes
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Dates they can’t attend court
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            no days
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Do they need an Interpreter?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Yes
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Language
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            turkish
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Deduct from earnings?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            No
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Do they wish to speak Welsh?
+          </td>
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Yes
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </online-plea-details>
+</online-plea-container>
+`;

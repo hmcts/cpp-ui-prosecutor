@@ -14,6 +14,7 @@ import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
       searchPlaceholder="Case or application reference"
       searchLabel="Search by case or application reference"
       (search)="search.emit($event)"
+      accessibilityLink="accessibility"
     >
       <ng-content></ng-content>
     </pdk-cpp-layout>

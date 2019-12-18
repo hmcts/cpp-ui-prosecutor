@@ -17,9 +17,15 @@ import { AppContainer } from './core/containers/app.container';
 import { CustomRouterStateSerializer } from './core/utils/router-state';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { SearchModule } from './search/search.module';
 import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
+}
 
 @NgModule({
   imports: [
@@ -33,6 +39,13 @@ import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
     AppConfigModule,
     SearchModule,
     ErrorPagesModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     ...environment.modules
   ],
   providers: [

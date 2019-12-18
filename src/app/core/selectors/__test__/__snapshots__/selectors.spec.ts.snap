@@ -179,6 +179,7 @@ Array [
       },
       "legalAdviserUserId": "mock-case-decision-session-userid-1",
       "localJusticeAreaNationalCourtCode": "2577",
+      "magistrate": "Jenny",
       "sessionId": "mock-case-decision-session-1",
       "sessionType": "DELEGATEDPOWERS",
       "startedAt": "2018-12-01T16:10:28.259Z",

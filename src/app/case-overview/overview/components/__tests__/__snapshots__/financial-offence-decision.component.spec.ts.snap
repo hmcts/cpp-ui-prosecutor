@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinancialOffenceDecisionComponent should compile correctly with discharge offence decision with absolute discharge 1`] = `
+<financial-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <financial-offence-decision
+    ng-reflect-offence-decision="[object Object]"
+  >
+    
+    <div>
+      Discharged Absolutely
+    </div>
+    
+    <div>
+      No compensation ordered because some reason
+    </div>
+    
+    <div>
+       Defendant's guilty plea Taken into account when imposing sentence 
+    </div>
+  </financial-offence-decision>
+</financial-offence-decision-test>
+`;
+
+exports[`FinancialOffenceDecisionComponent should compile correctly with discharge offence decision with conditional discharge 1`] = `
+<financial-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <financial-offence-decision
+    ng-reflect-offence-decision="[object Object]"
+  >
+    
+    <div>
+      Discharged conditionally for 10 week
+    </div>
+    
+    <div>
+      No compensation ordered because some reason
+    </div>
+    
+    <div>
+       Defendant's guilty plea Taken into account when imposing sentence 
+    </div>
+  </financial-offence-decision>
+</financial-offence-decision-test>
+`;
+
+exports[`FinancialOffenceDecisionComponent should compile correctly with financial penalty offence decision 1`] = `
+<financial-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <financial-offence-decision
+    ng-reflect-offence-decision="[object Object]"
+  >
+    
+    
+    <div>
+      Fine £10.23
+    </div>
+    <div>
+      To pay compensation of £20.01
+    </div>
+    
+  </financial-offence-decision>
+</financial-offence-decision-test>
+`;
+
+exports[`FinancialOffenceDecisionComponent should compile correctly with financial penalty offence decision with no fine 1`] = `
+<financial-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <financial-offence-decision
+    ng-reflect-offence-decision="[object Object]"
+  >
+    
+    
+    <div>
+      To pay compensation of £20.01
+    </div>
+    
+  </financial-offence-decision>
+</financial-offence-decision-test>
+`;

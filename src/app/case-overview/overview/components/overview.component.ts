@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../../contexts/sjp';
 
 @Component({
@@ -54,21 +54,30 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
           </pdk-tabs>
         </div>
       </pdk-grid>
-      <pdk-grid one-third *ngIf="!kase.assigned && !kase.completed">
+      <pdk-grid one-third *ngIf="showSideBar">
         <div pdk-margin-top="5">
           <pdk-related>
-            <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Case options</h1>
-            <div>
-              <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
-                >Manage offence withdrawals</a
-              >
-            </div>
-            <div>
-              <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="dates-to-avoid">
-                <span *ngIf="!this.kase.datesToAvoid">Add dates to avoid</span>
-                <span *ngIf="!!this.kase.datesToAvoid">Change dates to avoid</span>
+            <ng-container *ngIf="!kase.assigned && !kase.completed">
+              <h1 pdk-typography="heading-medium" pdk-margin-vertical="1">Case options</h1>
+              <div>
+                <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="withdraw-offence"
+                  >Manage offence withdrawals</a
+                >
+              </div>
+              <div>
+                <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="dates-to-avoid">
+                  <span *ngIf="!this.kase.datesToAvoid">Add dates to avoid</span>
+                  <span *ngIf="!!this.kase.datesToAvoid">Change dates to avoid</span>
+                </a>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="kase.onlinePleaReceived">
+              <h1 pdk-typography="heading-medium" pdk-margin-top="3" pdk-margin-bottom="1">Online plea</h1>
+              <a href="javascript: void(0)" pdk-link pdk-section="small"
+                [routerLink]="['online-plea-details']" data-role="online-plea-details">
+                Defendant's online plea
               </a>
-            </div>
+            </ng-container>
           </pdk-related>
         </div>
       </pdk-grid>
@@ -99,11 +108,18 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
     </div>
   `
 })
-export class OverviewComponent {
+export class OverviewComponent implements OnInit {
   @Input() kase: Case;
   @Input() defendant: Defendant;
   @Input() offences: Offence[];
   @Input() displayOffencesWithdrawnBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   @Input() caseDecisions: CaseDecision[];
+
+  showSideBar: boolean;
+
+  ngOnInit(): void {
+    this.showSideBar = (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived;
+  }
+
 }
