@@ -7,7 +7,7 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
   template: `
     <ol pdk-breadcrumb-list pdk-margin-top="4">
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../" pdk-breadcrumb>Home</a>
+        <a href="javascript: void(0)" routerLink="../../" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
         <a href="javascript: void(0)" routerLink="../../search" pdk-breadcrumb>

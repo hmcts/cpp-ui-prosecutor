@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { tflReducer } from '../../tfl.reducer';
 import { reducers, State } from '../../../reducers';
 import { LoadPleadedNotGuiltyCases } from '../../../core/actions';
-import { PleadedNotGuiltyCaseResult } from '../../../contexts/sjp';
+import { PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult } from '../../../contexts/sjp';
 import { LoadCasesWithSjpNoticeCountSuccess, LoadFileUploadStatsSuccess } from '../../tfl.action';
 import { MOCK_PENDING_DATES_TO_AVOID } from '../../../dashboard/__tests__/test-mock-data';
 import { TflDashboardContainer } from '../tfl-dashboard.container';
@@ -53,6 +53,7 @@ describe('TflDashboardContainer', () => {
       <span>{{ casesMissingSjpNoticeCount }}</span>
       <span>{{ documentsUploadErrorCount }}</span>
       <span>{{ csvUploadErrorCount }}</span>
+      <span>{{ defendantDetailsUpdates }}</span>
     `
   })
   class MockTflDashboardComponent {
@@ -60,5 +61,6 @@ describe('TflDashboardContainer', () => {
     @Input() casesMissingSjpNoticeCount: number;
     @Input() documentsUploadErrorCount: number;
     @Input() csvUploadErrorCount: number;
+    @Input() defendantDetailsUpdates: DefendantDetailsUpdatesResult;
   }
 });

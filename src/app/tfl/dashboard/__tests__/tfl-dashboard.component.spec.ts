@@ -9,7 +9,7 @@ describe('TflDashboardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TflDashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink],
+      declarations: [TflDashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink, DefendantDetailsUpdateLink],
       imports: [PdkCoreModule, PdkGridModule, PdkSummaryItemModule]
     });
     fixture = TestBed.createComponent(TflDashboardComponent);
@@ -21,6 +21,7 @@ describe('TflDashboardComponent', () => {
     component.casesWithSjpNoticeCount = 5;
     component.documentsUploadErrorCount = 5;
     component.csvUploadErrorCount = 5;
+    component.defendantDetailsUpdates = 1;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -33,6 +34,16 @@ describe('TflDashboardComponent', () => {
   })
   class ReviewNotGuiltyPleasLink {
     @Input() numberOfCases;
+  }
+
+  @Component({
+    selector: 'defendant-details-updates-link',
+    template: `
+      <span>{{ numberOfUpdates }}</span>
+    `
+  })
+  class DefendantDetailsUpdateLink {
+    @Input() numberOfUpdates;
   }
 
   @Component({

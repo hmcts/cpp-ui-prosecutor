@@ -41,11 +41,12 @@ exports[`DashboardComponent should compile correctly 1`] = `
     </span>
   </defendant-details-updates-link><div>
     <a
-      href=""
+      href="javascript:void(0)"
       pdk-link=""
       pdk-section="small"
+      routerlink="search"
     >
-      Withdraw an offence
+      Manage offence withdrawals
     </a>
   </div><div
     pdk-margin-top="6"

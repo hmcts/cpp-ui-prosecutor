@@ -4,6 +4,7 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
 <tfl-dashboard
   casesWithSjpNoticeCount={[Function Number]}
   csvUploadErrorCount={[Function Number]}
+  defendantDetailsUpdates={[Function Number]}
   documentsUploadErrorCount={[Function Number]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
 >
@@ -134,22 +135,21 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
               1
             </span>
           </review-not-guilty-pleas-link>
-          <p
-            class="govuk-caption-m"
-            ng-reflect-type="caption-medium"
-            pdk-typography="caption-medium"
-          >
-            Defendant details updates (0)
-          </p>
+          <defendant-details-updates-link>
+            <span>
+              
+            </span>
+          </defendant-details-updates-link>
           <div>
             <a
               class="govuk-link govuk-section-break govuk-section-break--s"
-              href=""
+              href="javascript:void(0)"
               ng-reflect-type="small"
               pdk-link=""
               pdk-section="small"
+              routerlink="search"
             >
-              Withdraw an offence
+              Manage offence withdrawals
             </a>
           </div>
           <div
@@ -159,8 +159,9 @@ exports[`TflDashboardComponent should compile correctly 1`] = `
           >
             <a
               class="govuk-link"
-              href=""
+              href="javascript:void(0)"
               pdk-link=""
+              routerlink="export-case-decisions"
             >
               Export case results by date
             </a>
