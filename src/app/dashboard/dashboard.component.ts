@@ -19,7 +19,7 @@ import { DefendantDetailsUpdatesResult, PleadedNotGuiltyCaseResult } from '../co
     <defendant-details-updates-link [numberOfUpdates]="defendantDetailsUpdates?.total"></defendant-details-updates-link>
 
     <div>
-      <a href="" pdk-link pdk-section="small">Withdraw an offence</a>
+      <a href="javascript:void(0)" routerLink="search" pdk-link pdk-section="small">Manage offence withdrawals</a>
     </div>
     <div pdk-margin-top="6">
       <a href="javascript:void(0)" routerLink="export-case-decisions" pdk-link>Export case results by date</a>

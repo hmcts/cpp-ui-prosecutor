@@ -6,7 +6,7 @@ import { Case } from '../../contexts/sjp';
   template: `
     <ol pdk-breadcrumb-list pdk-margin-vertical="4">
       <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="/" pdk-breadcrumb>Home</a>
+        <a href="javascript: void(0)" routerLink="../../../../../../" pdk-breadcrumb>Home</a>
       </li>
       <li pdk-breadcrumb-list-item>
         <a href="javascript: void(0)" routerLink="../../../../../../search" pdk-breadcrumb>

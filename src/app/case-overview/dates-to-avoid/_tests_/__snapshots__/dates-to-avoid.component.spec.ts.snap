@@ -16,7 +16,7 @@ exports[`DatesToAvoidComponent should compile correctly 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="/"
+        routerlink="../../../../../../"
       >
         Home
       </a>
@@ -84,7 +84,7 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="/"
+        routerlink="../../../../../../"
       >
         Home
       </a>
@@ -172,7 +172,7 @@ exports[`DatesToAvoidComponent should display the dates to avoid component 1`] =
       <a
         href="javascript: void(0)"
         pdk-breadcrumb=""
-        routerlink="/"
+        routerlink="../../../../../../"
       >
         Home
       </a>

@@ -4,6 +4,7 @@ exports[`TflDashboardContainer should compile correctly 1`] = `
 <tfl-dashboard-container
   casesMissingSjpNoticeCount$={[Function Store]}
   csvUploadErrorCount$={[Function Store]}
+  defendantDetailsUpdates$={[Function Store]}
   documentsUploadErrorCount$={[Function Store]}
   pleadedNotGuiltyCasesDetail$={[Function Store]}
   store={[Function Store]}
@@ -61,6 +62,9 @@ exports[`TflDashboardContainer should compile correctly 1`] = `
     </span>
     <span>
       10
+    </span>
+    <span>
+      
     </span>
   </tfl-dashboard>
 </tfl-dashboard-container>
