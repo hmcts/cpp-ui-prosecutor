@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
 
 @Component({
@@ -10,6 +10,10 @@ import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
       [cookieMessage]="true"
       [activity]="activity"
       [headerNavItems]="headerNavItems"
+      [searchEnabled]="searchEnabled"
+      searchPlaceholder="Case or application reference"
+      searchLabel="Search by case or application reference"
+      (search)="search.emit($event)"
       accessibilityLink="accessibility"
     >
       <ng-content></ng-content>
@@ -21,4 +25,6 @@ export class LayoutComponent {
   @Input() apiError: boolean;
   @Input() offline: boolean;
   @Input() activity: boolean;
+  @Input() searchEnabled: boolean;
+  @Output() search = new EventEmitter<string>();
 }

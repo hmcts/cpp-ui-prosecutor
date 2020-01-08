@@ -23,6 +23,8 @@ import { TranslateService } from '@ngx-translate/core';
         [activity]="isBusy$ | async"
         [offline]="offline$ | async"
         [apiError]="apiError$ | async"
+        [searchEnabled]="searchEnabled"
+        (search)="handleSearch($event)"
       >
         <router-container></router-container>
       </app-layout>
@@ -35,9 +37,10 @@ export class AppContainer {
   offline$: Observable<boolean>;
   apiError$: Observable<boolean>;
   isBusy$: Observable<boolean>;
+  searchEnabled = false;
 
   constructor(
-    appConfigService: AppConfigService,
+    private appConfigService: AppConfigService,
     activatedRoute: ActivatedRoute,
     router: Router,
     store: Store<State>,
@@ -63,6 +66,7 @@ export class AppContainer {
     ).pipe(map(([hasApiActivity, isBeingLazyLoaded]) => hasApiActivity || isBeingLazyLoaded));
 
     this.apiError$ = store.pipe(select(getHasApiError));
+    this.searchEnabled = this.appConfigService.searchEnabled;
 
     this.offline$ = merge(
       fromEvent(window, 'online').pipe(mapTo(true)),
@@ -91,11 +95,11 @@ export class AppContainer {
     this.headerNavItems = [
       {
         title: 'Your account',
-        href: appConfigService.getAccountUrl()
+        href: this.appConfigService.getAccountUrl()
       },
       {
         title: 'Sign out',
-        href: appConfigService.getLogoutUrl()
+        href: this.appConfigService.getLogoutUrl()
       }
     ];
 
@@ -105,5 +109,20 @@ export class AppContainer {
         href: '/prosecutor/dev-tools'
       });
     }
+
+    if (this.searchEnabled) {
+      this.headerNavItems.unshift({
+        title: 'Detailed search',
+        href: this.searchUrl
+      });
+    }
+  }
+
+  get searchUrl() {
+    return `${this.appConfigService.cppHomeUrl}/search?referrer=${encodeURIComponent(document.baseURI)}`;
+  }
+
+  handleSearch(caseReference: string) {
+    window.location.href = `${this.searchUrl}&caseReference=${caseReference}`;
   }
 }
