@@ -12,6 +12,8 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with dischar
       Discharged Absolutely
     </div>
     
+    
+    
     <div>
       No compensation ordered because some reason
     </div>
@@ -34,6 +36,8 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with dischar
     <div>
       Discharged conditionally for 10 week
     </div>
+    
+    
     
     <div>
       No compensation ordered because some reason
@@ -58,6 +62,8 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with financi
     <div>
       Fine £10.23
     </div>
+    
+    
     <div>
       To pay compensation of £20.01
     </div>
@@ -75,8 +81,32 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with financi
   >
     
     
+    
+    
     <div>
       To pay compensation of £20.01
+    </div>
+    
+  </financial-offence-decision>
+</financial-offence-decision-test>
+`;
+
+exports[`FinancialOffenceDecisionComponent should not display reason if no reason is given 1`] = `
+<financial-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <financial-offence-decision
+    ng-reflect-offence-decision="[object Object]"
+  >
+    
+    
+    <div>
+      Fine £10
+    </div>
+    
+    
+    <div>
+      
     </div>
     
   </financial-offence-decision>

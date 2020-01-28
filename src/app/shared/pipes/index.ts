@@ -1,5 +1,4 @@
 export * from './age/age.module';
-export * from './case-prosecutor/case-prosecutor.module';
 export * from './case-status/case-status.module';
 export * from './format-address/format-address-pipe.module';
 export * from './format-date/format-date-pipe.module';

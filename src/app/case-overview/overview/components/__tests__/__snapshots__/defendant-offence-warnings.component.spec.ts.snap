@@ -9,7 +9,7 @@ exports[`DefendantOffenceWarnings should compile correctly with all warnings 1`]
   >
     
     <offence-warning>
-       Offence is out of time 
+       Offence may be out of time 
     </offence-warning>
     
     <offence-warning>

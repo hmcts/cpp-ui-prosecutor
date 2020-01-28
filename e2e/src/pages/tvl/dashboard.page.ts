@@ -7,7 +7,7 @@ export class DashboardPage extends BasePage {
   public readonly reviewNotGuiltyPleasLink = $('review-not-guilty-pleas-link');
 
   constructor() {
-    super(`/tvl`);
+    super(`/user`);
   }
 
   async searchForUrn(urn: string) {

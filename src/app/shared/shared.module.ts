@@ -5,7 +5,6 @@ import { FromToDatesModule } from './from-to-dates/from-to-dates.module';
 import { DateOfBirthModule } from './date-of-birth/date-of-birth.module';
 import {
   AgePipeModule,
-  CaseProsecutorPipeModule,
   CaseStatusPipeModule,
   DefendantNamePipeModule,
   FirstLastNamePipeModule,
@@ -21,7 +20,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 const MODULE_EXPORT = [
   AgePipeModule,
-  CaseProsecutorPipeModule,
   CaseStatusPipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,

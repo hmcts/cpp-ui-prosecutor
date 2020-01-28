@@ -10,7 +10,10 @@
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
       "stopOnEntry": false,
-      "args": ["${workspaceRoot}/e2e/protractor.conf.js"]
+      "args": [
+        "${workspaceRoot}/e2e/protractor.conf.js",
+        "--params.dev", "dev"
+      ]
     },
     {
       "name": "e2e:remote",

@@ -1,10 +1,11 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component, Input} from '@angular/core';
-import {CaseDecision, DischargeOffenceDecision} from '../../../../contexts/sjp';
+import {CaseDecision, DischargeOffenceDecision, FinancialPenaltyOffenceDecision} from '../../../../contexts/sjp';
 import {CommonModule} from '@angular/common';
 import {PdkDividerModule, PdkGridModule} from '@cpp/pdk';
 import {FinancialImpositionsComponent} from '../financial-impositions.component';
 import {MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION} from '../../../../case-overview/__tests__/test-mock-data';
+import { By } from '@angular/platform-browser';
 
 describe('FinancialImpositionsComponent', () => {
   let fixture: ComponentFixture<TestFinancialImpositionsComponent>;
@@ -57,6 +58,94 @@ describe('FinancialImpositionsComponent', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
+
+  it('should display excisePenalty and not display calculated fine, if case decision is FINANCIAL_PENALTY and excisePenalty > 0', () => {
+
+    fixture.componentInstance.caseDecision = {
+      ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
+      offenceDecisions: [
+        {
+          decisionType: 'FINANCIAL_PENALTY',
+          excisePenalty: 20.0,
+          fine: 0
+        } as FinancialPenaltyOffenceDecision,
+        {
+          decisionType: 'FINANCIAL_PENALTY',
+          excisePenalty: 30.0,
+          fine: 0
+        } as FinancialPenaltyOffenceDecision
+      ]
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+
+    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`));
+    expect(fineField).toBe(null);
+
+    const excisePenaltyField = fixture.debugElement.query(
+      By.css(`[data-role="imposition-excise-penalty-amount"] div`)).nativeElement.innerHTML;
+    expect(excisePenaltyField).toBe(' £50 ');
+
+
+  });
+
+  it('should display backDuty and calculated fine, if case decision is FINANCIAL_PENALTY and backDuty > 0', () => {
+
+    fixture.componentInstance.caseDecision = {
+      ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
+      offenceDecisions: [
+        {
+          decisionType: 'FINANCIAL_PENALTY',
+          backDuty: 20.0,
+          fine: 30.0
+        } as FinancialPenaltyOffenceDecision,
+        {
+          decisionType: 'FINANCIAL_PENALTY',
+          backDuty: 30.0,
+          fine: 40.0
+        } as FinancialPenaltyOffenceDecision
+      ]
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+
+    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"] div`)).nativeElement.innerHTML;
+    expect(fineField).toBe(' £70 ');
+
+
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"] div`)).nativeElement.innerHTML;
+    expect(backdutyField).toBe(' £50 ');
+
+
+
+  });
+
+  it('should display backDuty, if case decision is FINANCIAL_PENALTY or DISCHARGE and backDuty > 0', () => {
+
+    fixture.componentInstance.caseDecision = {
+      ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
+      offenceDecisions: [
+        {
+          decisionType: 'FINANCIAL_PENALTY',
+          backDuty: 20.0
+        } as DischargeOffenceDecision,
+        {
+          decisionType: 'DISCHARGE',
+          backDuty: 30.0,
+        } as DischargeOffenceDecision
+      ]
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+
+    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`));
+    expect(fineField).toBe(null);
+
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"] div`)).nativeElement.innerHTML;
+    expect(backdutyField).toBe(' £50 ');
+
+  });
+
 
   @Component({
     selector: 'financial-impositions-test',

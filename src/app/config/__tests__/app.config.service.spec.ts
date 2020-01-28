@@ -2,13 +2,20 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { AppConfigService } from '../config.service';
 import { cold } from 'jasmine-marbles';
+import { Injector } from '@angular/core';
+import { CppHttp } from '@cpp/core';
+import { of } from 'rxjs';
 
 describe('AppConfigService', () => {
   let get: jest.Mock;
+  let query: jest.Mock;
+  let pipe: jest.Mock;
   let service: AppConfigService;
 
   beforeEach(() => {
     get = jest.fn();
+    query = jest.fn();
+    pipe = jest.fn();
 
     TestBed.configureTestingModule({
       providers: [
@@ -16,9 +23,18 @@ describe('AppConfigService', () => {
           provide: HttpClient,
           useValue: { get }
         },
+        {
+          provide: CppHttp,
+          useValue: {
+            query
+          }
+        },
         AppConfigService
       ]
     });
+
+    query.mockReturnValue({pipe});
+    pipe.mockReturnValue(of(true));
 
     service = TestBed.get(AppConfigService);
   });

@@ -66,7 +66,7 @@ describe('Case Overview Effects', () => {
           ...reducers,
           router: (state, routerAction) => ({
             state: {
-              params: { role: 'tvl' }
+              params: { role: 'user' }
             }
           }),
           caseOverview: caseOverviewReducer
@@ -132,7 +132,7 @@ describe('Case Overview Effects', () => {
       withdrawOffences.mockReturnValue(cold('--x|', { x: true }));
 
       expect(effects.withdrawOffences).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
+      expect(navigate).toHaveBeenCalledWith(['user', 'case-overview', MOCK_CASE.id]);
     });
 
     it('should respond with error when case is assigned and navigate to case overview', () => {
@@ -157,7 +157,7 @@ describe('Case Overview Effects', () => {
       withdrawOffences.mockReturnValue(cold('-#|', {}, MOCK_CASE_ERROR));
 
       expect(effects.withdrawOffences).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
+      expect(navigate).toHaveBeenCalledWith(['user', 'case-overview', MOCK_CASE.id]);
     });
   });
 
@@ -176,7 +176,7 @@ describe('Case Overview Effects', () => {
       submitDatesToAvoid.mockReturnValue(cold('--x|', { x: true }));
 
       expect(effects.submitDatesToAvoid).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id, 'dates-to-avoid']);
+      expect(navigate).toHaveBeenCalledWith(['user', 'case-overview', MOCK_CASE.id, 'dates-to-avoid']);
     });
 
     it('should respond with error and navigate to case overview', () => {
@@ -204,7 +204,7 @@ describe('Case Overview Effects', () => {
       submitDatesToAvoid.mockReturnValue(cold('-#|', {}, MOCK_CASE_ERROR));
 
       expect(effects.submitDatesToAvoid).toBeObservable(expected$);
-      expect(navigate).toHaveBeenCalledWith(['tvl', 'case-overview', MOCK_CASE.id]);
+      expect(navigate).toHaveBeenCalledWith(['user', 'case-overview', MOCK_CASE.id]);
     });
   });
 });

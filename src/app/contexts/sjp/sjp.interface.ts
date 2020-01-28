@@ -15,6 +15,7 @@ export interface Case {
   reopenedInLibraReason?: string;
   reopenedDate?: string;
   prosecutingAuthority: string;
+  prosecutingAuthorityName: string;
   status: string;
   caseDocuments: CaseDocument[];
   defendant: Defendant;
@@ -147,6 +148,7 @@ interface PleadNotGuiltyCase {
   lastName: string;
   address: Address;
   referenceNumber: string;
+  region: string;
   dateOfBirth: string;
 }
 
@@ -156,6 +158,7 @@ interface DefendantDetailsUpdate {
   defendantId: string;
   caseId: string;
   caseUrn: string;
+  region: string;
   dateOfBirth: string;
   nameUpdated: boolean;
   dateOfBirthUpdated: boolean;
@@ -210,6 +213,8 @@ export interface OffenceDecision {
   offenceSequenceNumber: number;
   decisionType: string;
   verdict: VerdictType;
+  excisePenalty?: number;
+  backDuty?: number;
 }
 
 export interface WithdrawOffenceDecision extends OffenceDecision {
@@ -298,6 +303,7 @@ export interface CostsAndSurchargeParam {
   reasonForNoCosts?: string;
   victimSurcharge: number;
   reasonForNoVictimSurcharge?: string;
+  reasonForReducedVictimSurcharge?: string;
   collectionOrderMade: boolean;
 }
 

@@ -13,8 +13,8 @@ export class ReviewNotGuiltyPleaCasesPage extends BasePage {
       name: lastRowCells.get(0).getText(),
       address: lastRowCells.get(1).getText(),
       referenceNumber: lastRowCells.get(2).getText(),
-      dateOfBirth: lastRowCells.get(3).getText(),
-      pleaEntry: lastRowCells.get(4).getText()
+      dateOfBirth: lastRowCells.get(4).getText(),
+      pleaEntry: lastRowCells.get(5).getText()
     };
   };
 

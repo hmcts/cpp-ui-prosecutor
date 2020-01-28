@@ -76,7 +76,9 @@ exports.config = {
     // and fails if it is not present
     const outputDirectory = './build/axeReport/';
     const axeFilename = 'axeReport.html';
-    fs.mkdirSync(outputDirectory);
-    fs.writeFileSync(path.resolve(outputDirectory, axeFilename), 'Dummy axe report', { encoding: 'UTF-8' });
+    if(!fs.existsSync(outputDirectory, axeFilename)) {
+      fs.mkdirSync(outputDirectory);
+      fs.writeFileSync(path.resolve(outputDirectory, axeFilename), 'Dummy axe report', { encoding: 'UTF-8' });
+    }
   }
 };

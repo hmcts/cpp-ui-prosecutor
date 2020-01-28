@@ -17,6 +17,7 @@ export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
         postcode: 'LE3 1AB'
       },
       referenceNumber: 'TVL640029AGBG',
+      region: 'London',
       dateOfBirth: '1975-03-25'
     },
     {
@@ -33,6 +34,7 @@ export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
         postcode: 'SE21 1AB'
       },
       referenceNumber: 'TVL143468N9KN',
+      region: 'London',
       dateOfBirth: '2001-03-23'
     }
   ],
@@ -55,6 +57,7 @@ export const MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE: PleadedNotGuiltyCases
         postcode: 'SE21 1AB'
       },
       referenceNumber: 'TVL143468N9KN',
+      region: 'London',
       dateOfBirth: '2001-03-23'
     }
   ],
@@ -69,6 +72,7 @@ export const MOCK_DEFENDANT_DETAILS_UPDATES: DefendantDetailsUpdatesState = {
       lastName: 'Jones',
       defendantId: '1844b883-1646-428a-a0f8-cb92706af5d2',
       caseId: '842054bb-3e72-4166-ae67-52355f047765',
+      region: 'London',
       caseUrn: 'TVL7105556000',
       dateOfBirth: '1977-10-17',
       nameUpdated: true,
@@ -81,6 +85,7 @@ export const MOCK_DEFENDANT_DETAILS_UPDATES: DefendantDetailsUpdatesState = {
       lastName: 'Last',
       defendantId: '4ab78156-d8d0-4b99-9e96-da50a311aaba',
       caseId: '12ca0803-d10b-44dd-bf6b-c0242c207e55',
+      region: 'London',
       caseUrn: 'TVL9772166531',
       dateOfBirth: '1991-02-19',
       nameUpdated: true,

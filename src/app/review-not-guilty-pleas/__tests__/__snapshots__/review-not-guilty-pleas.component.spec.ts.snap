@@ -115,6 +115,11 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
           <th
             pdk-table-header=""
           >
+            Region
+          </th>
+          <th
+            pdk-table-header=""
+          >
             Date of birth
           </th>
           <th
@@ -162,6 +167,12 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
              TVL640029AGBG 
           </td>
           <td
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
+          </td>
+          <td
             pdk-table-cell=""
           >
              25 Mar 1975 
@@ -204,6 +215,12 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
             pdk-table-cell=""
           >
              TVL143468N9KN 
+          </td>
+          <td
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
           </td>
           <td
             pdk-table-cell=""
@@ -337,6 +354,11 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
           <th
             pdk-table-header=""
           >
+            Region
+          </th>
+          <th
+            pdk-table-header=""
+          >
             Date of birth
           </th>
           <th
@@ -382,6 +404,12 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
             pdk-table-cell=""
           >
              TVL143468N9KN 
+          </td>
+          <td
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
           </td>
           <td
             pdk-table-cell=""

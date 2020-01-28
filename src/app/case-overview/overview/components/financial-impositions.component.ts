@@ -20,16 +20,16 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
           <pdk-grid one-third>
             <b>To pay fine of</b>
           </pdk-grid>
-          <pdk-grid two-thirds>
+          <pdk-grid two-thirds data-role="imposition-fine-amount">
             {{ formatCurrency(this.calcFine()) }}
           </pdk-grid>
         </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1">
+        <pdk-grid container pdk-padding-vertical="1" *ngIf="showCompensation">
           <pdk-grid one-third>
             <b>To pay compensation of</b>
           </pdk-grid>
-          <pdk-grid two-thirds>
-            {{ this.calcTotalCompensation() }}
+          <pdk-grid two-thirds data-role="imposition-compensation-amount">
+            {{ formatCurrency(this.calcTotalCompensation()) }}
           </pdk-grid>
         </pdk-grid>
         <pdk-grid container *ngIf="payment.fineTransferredTo" pdk-padding-vertical="1">
@@ -40,7 +40,23 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
             {{ payment.fineTransferredTo.nationalCourtName }}
           </pdk-grid>
         </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1">
+        <pdk-grid container pdk-padding-vertical="1" *ngIf="calcTotalExcisePenalty() > 0">
+          <pdk-grid one-third>
+            <b>To pay excise penalty of</b>
+          </pdk-grid>
+          <pdk-grid two-thirds data-role="imposition-excise-penalty-amount">
+            {{ formatCurrency(this.calcTotalExcisePenalty()) }}
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid container pdk-padding-vertical="1" *ngIf="calcTotalBackDuty() > 0">
+          <pdk-grid one-third>
+            <b>To pay back duty of</b>
+          </pdk-grid>
+          <pdk-grid two-thirds data-role="imposition-backduty-amount">
+            {{ formatCurrency(this.calcTotalBackDuty()) }}
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid container pdk-padding-vertical="1" *ngIf="showCosts">
           <pdk-grid one-third>
             <b>To pay costs of</b>
           </pdk-grid>
@@ -48,21 +64,39 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
             {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.costs) }}
           </pdk-grid>
         </pdk-grid>
-        <pdk-grid container *ngIf="hasVictimSurcharge" pdk-padding-vertical="1">
+        <pdk-grid container pdk-padding-vertical="1" *ngIf="!showCosts && reasonForNoCosts">
           <pdk-grid one-third>
-            <b>To pay victim surcharge of</b>
+            <b>No order for costs because</b>
           </pdk-grid>
           <pdk-grid two-thirds>
-            {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.victimSurcharge) }}
+            {{ reasonForNoCosts }}
           </pdk-grid>
         </pdk-grid>
-
-        <pdk-grid container *ngIf="!hasVictimSurcharge" pdk-padding-vertical="1">
+        <ng-container *ngIf="hasVictimSurcharge">
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay victim surcharge of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-surcharge-amount">
+              {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.victimSurcharge) }}
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-grid container pdk-padding-vertical="1"
+            *ngIf="caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge">
+            <pdk-grid one-third>
+              <b>Victim surcharge reduced because</b>
+            </pdk-grid>
+            <pdk-grid two-thirds>
+                {{ this.caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge }}
+            </pdk-grid>
+          </pdk-grid>
+        </ng-container>
+        <pdk-grid *ngIf="!hasVictimSurcharge && noVictimSurchargeReason" container pdk-padding-vertical="1">
           <pdk-grid one-third>
-            <b>Victim surcharge not imposed because</b>
+              <b>Victim surcharge not imposed because</b>
           </pdk-grid>
           <pdk-grid two-thirds>
-            {{ noVictimSurchargeReason }}
+              {{ noVictimSurchargeReason }}
           </pdk-grid>
         </pdk-grid>
       </div>
@@ -70,18 +104,46 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
   `
 })
 export class FinancialImpositionsComponent {
-  @Input() caseDecision: CaseDecision;
+  mCaseDecision: CaseDecision;
+  @Input()
+  set caseDecision(value: CaseDecision) {
+    this.mCaseDecision = value;
+    this.offenceDecisions = value.offenceDecisions
+      .filter(a => a.decisionType === 'DISCHARGE' || a.decisionType === 'FINANCIAL_PENALTY');
+  }
+  get caseDecision() {
+    return this.mCaseDecision;
+  }
+  offenceDecisions: OffenceDecision[];
   formatCurrency = formatCurrency;
 
-  calcTotalCompensation(): string {
-    return formatCurrency(this.caseDecision.offenceDecisions.reduce((a, b) => a + this.getCompensation(b), 0));
+
+  calcTotalCompensation(): number {
+    return this.offenceDecisions.reduce((a, b) => a + this.getCompensation(b), 0);
   }
 
   calcFine(): number {
-    return this.caseDecision.offenceDecisions
-      .filter(a => a.decisionType === 'FINANCIAL_PENALTY')
+    const calculatedTotal = this.offenceDecisions
       .map(offenceDecision => offenceDecision as FinancialPenaltyOffenceDecision)
+      .filter(offenceDecision => offenceDecision.decisionType === 'FINANCIAL_PENALTY' && !!offenceDecision.fine)
       .reduce((sumOfFine, offenceDecision) => sumOfFine + offenceDecision.fine, 0);
+    return calculatedTotal;
+  }
+
+  calcTotalExcisePenalty(): number {
+    const calculatedTotal = this.offenceDecisions
+      .map(offenceDecision => offenceDecision as FinancialPenaltyOffenceDecision)
+      .filter(offenceDecision => offenceDecision.excisePenalty > 0)
+      .reduce((sumOfExcisePenalty, offenceDecision) => sumOfExcisePenalty + offenceDecision.excisePenalty, 0);
+    return calculatedTotal;
+  }
+
+  calcTotalBackDuty(): number {
+    const calculatedTotal = this.offenceDecisions
+      .map(offenceDecision => offenceDecision as FinancialPenaltyOffenceDecision)
+      .filter(offenceDecision => offenceDecision.backDuty > 0)
+      .reduce((sumOfBackDuty, offenceDecision) => sumOfBackDuty + offenceDecision.backDuty, 0);
+    return calculatedTotal;
   }
 
   getCompensation(offenceDecision: OffenceDecision): number {
@@ -97,7 +159,7 @@ export class FinancialImpositionsComponent {
   }
 
   get noVictimSurchargeReason(): string {
-    return this.allAbsoluteDischarge()
+    return this.allAbsoluteDischarge() && this.caseDecision.financialImposition.costsAndSurcharge.victimSurcharge === 0
       ? 'Absolute Discharge'
       : this.caseDecision.financialImposition.costsAndSurcharge.reasonForNoVictimSurcharge;
   }
@@ -108,5 +170,17 @@ export class FinancialImpositionsComponent {
 
   get payment() {
     return this.caseDecision.financialImposition.payment;
+  }
+
+  get showCosts(): boolean {
+    return this.caseDecision.financialImposition.costsAndSurcharge.costs > 0;
+  }
+
+  get showCompensation(): boolean {
+    return this.calcTotalCompensation() > 0;
+  }
+
+  get reasonForNoCosts(): string {
+    return this.caseDecision.financialImposition.costsAndSurcharge.reasonForNoCosts;
   }
 }

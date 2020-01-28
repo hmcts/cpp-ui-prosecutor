@@ -11,7 +11,7 @@ import {
   PdkWarningTextModule
 } from '@cpp/pdk';
 import { RouterModule } from '@angular/router';
-import { CaseProsecutorPipeModule, CaseStatusPipeModule, DefendantNamePipeModule } from '../../shared/pipes';
+import { CaseStatusPipeModule, DefendantNamePipeModule } from '../../shared/pipes';
 import { SearchResultsComponent } from './components/search-results.component';
 
 @NgModule({
@@ -26,7 +26,6 @@ import { SearchResultsComponent } from './components/search-results.component';
     PdkWarningTextModule,
     SearchInputModule,
     CaseStatusPipeModule,
-    CaseProsecutorPipeModule,
     DefendantNamePipeModule
   ],
   exports: [SearchResultsContainer]

@@ -67,7 +67,7 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
           >
             Warning
           </span>
-           Offence is out of time 
+           Offence may be out of time 
         </strong>
       </div>
     </pdk-warning-text>

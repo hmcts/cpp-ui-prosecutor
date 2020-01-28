@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { CaseDetails } from '../../../../contexts/sjp';
-import { CaseProsecutorPipeModule, CaseStatusPipeModule, DefendantNamePipeModule } from '../../../../shared/pipes';
+import { CaseStatusPipeModule, DefendantNamePipeModule } from '../../../../shared/pipes';
 import { PdkCoreModule, PdkGridModule, PdkInsetTextModule, PdkWarningTextModule } from '@cpp/pdk';
 import { ListSearchResultsComponent } from '../list-search-results.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -21,8 +21,7 @@ describe('ListSearchResultsComponent', () => {
         PdkInsetTextModule,
         PdkWarningTextModule,
         DefendantNamePipeModule,
-        CaseStatusPipeModule,
-        CaseProsecutorPipeModule
+        CaseStatusPipeModule
       ]
     });
     fixture = TestBed.createComponent(TestListSearchResultsComponent);

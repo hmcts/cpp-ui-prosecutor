@@ -38,6 +38,7 @@ import { Component, Input } from '@angular/core';
             <th pdk-table-header>Name</th>
             <th pdk-table-header>Address</th>
             <th pdk-table-header>Reference Number</th>
+            <th pdk-table-header>Region</th>
             <th pdk-table-header>Date of birth</th>
             <th pdk-table-header>Plea entry</th>
           </tr>
@@ -54,6 +55,9 @@ import { Component, Input } from '@angular/core';
             </td>
             <td pdk-table-cell data-role="urn">
               {{ pleadedNotGuiltyCase.referenceNumber }}
+            </td>
+            <td pdk-table-cell data-role="region">
+              {{ pleadedNotGuiltyCase.region }}
             </td>
             <td pdk-table-cell>
               {{ pleadedNotGuiltyCase.dateOfBirth | date: 'dd MMM yyyy' }}

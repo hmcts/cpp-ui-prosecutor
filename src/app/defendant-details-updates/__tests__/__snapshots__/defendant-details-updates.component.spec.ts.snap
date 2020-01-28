@@ -74,6 +74,11 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         <th
           pdk-table-header=""
         >
+          Region
+        </th>
+        <th
+          pdk-table-header=""
+        >
           Date of birth
         </th>
         <th
@@ -121,6 +126,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
            TVL7105556000 
         </td>
         <td
+          data-role="region"
+          pdk-table-cell=""
+        >
+           London 
+        </td>
+        <td
           data-role="date-of-birth"
           pdk-table-cell=""
         >
@@ -138,6 +149,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
     "lastName": "Jones",
     "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
     "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+    "region": "London",
     "caseUrn": "TVL7105556000",
     "dateOfBirth": "1977-10-17",
     "nameUpdated": true,
@@ -190,6 +202,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
            TVL9772166531 
         </td>
         <td
+          data-role="region"
+          pdk-table-cell=""
+        >
+           London 
+        </td>
+        <td
           data-role="date-of-birth"
           pdk-table-cell=""
         >
@@ -207,6 +225,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
     "lastName": "Last",
     "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
     "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+    "region": "London",
     "caseUrn": "TVL9772166531",
     "dateOfBirth": "1991-02-19",
     "nameUpdated": true,
@@ -327,6 +346,11 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         <th
           pdk-table-header=""
         >
+          Region
+        </th>
+        <th
+          pdk-table-header=""
+        >
           Date of birth
         </th>
         <th
@@ -374,6 +398,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
            TVL7105556000 
         </td>
         <td
+          data-role="region"
+          pdk-table-cell=""
+        >
+           London 
+        </td>
+        <td
           data-role="date-of-birth"
           pdk-table-cell=""
         >
@@ -391,6 +421,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
     "lastName": "Jones",
     "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
     "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+    "region": "London",
     "caseUrn": "TVL7105556000",
     "dateOfBirth": "1977-10-17",
     "nameUpdated": true,
@@ -443,6 +474,12 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
            TVL9772166531 
         </td>
         <td
+          data-role="region"
+          pdk-table-cell=""
+        >
+           London 
+        </td>
+        <td
           data-role="date-of-birth"
           pdk-table-cell=""
         >
@@ -460,6 +497,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
     "lastName": "Last",
     "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
     "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+    "region": "London",
     "caseUrn": "TVL9772166531",
     "dateOfBirth": "1991-02-19",
     "nameUpdated": true,

@@ -61,8 +61,8 @@ Using the application with atcm-vagrant will provide an environment closer to th
    `npm run start:vagrant`.
 2. Browse to the url `http://localhost:7080` and login
 3. Manually change to the prosecutor app using
-   http://localhost:7080/prosecutor/tfl or
-   http://localhost:7080/prosecutor/tvl
+   http://localhost:7080/prosecutor or
+   http://localhost:7080/prosecutor/tfl
 
 Code changes will be automatically deployed. There is no live reload of the browser.
 

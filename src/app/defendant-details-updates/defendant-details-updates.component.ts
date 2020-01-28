@@ -32,6 +32,7 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
       <tr pdk-table-row>
         <th pdk-table-header>Name</th>
         <th pdk-table-header>Case reference number</th>
+        <th pdk-table-header>Region</th>
         <th pdk-table-header>Date of birth</th>
         <th pdk-table-header>What changed?</th>
         <th pdk-table-header>Updated on</th>
@@ -47,6 +48,9 @@ import {AcknowledgeDefendantDetailsUpdatesParam} from '../contexts/sjp';
         </td>
         <td pdk-table-cell data-role="urn">
           {{ defendantDetailsUpdate.caseUrn }}
+        </td>
+        <td pdk-table-cell data-role="region">
+          {{ defendantDetailsUpdate.region }}
         </td>
         <td pdk-table-cell data-role="date-of-birth">
           {{ defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy' }}

@@ -50,7 +50,7 @@ import { Case } from '../../../contexts/sjp';
       </pdk-grid>
       <pdk-grid two-thirds>
         <div pdk-padding-vertical="2" data-role="prosecutor">
-          {{ kase.prosecutingAuthority | caseProsecutor }}
+          {{ kase.prosecutingAuthorityName }}
         </div>
       </pdk-grid>
     </pdk-grid>

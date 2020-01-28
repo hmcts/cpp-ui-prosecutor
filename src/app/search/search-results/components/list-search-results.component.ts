@@ -53,7 +53,7 @@ import { CaseDetails } from '../../../contexts/sjp';
               Awaiting Listing
             </div>
           </td>
-          <td pdk-table-cell>{{ searchResult.prosecutingAuthority | caseProsecutor }}</td>
+          <td pdk-table-cell>{{ searchResult.prosecutingAuthority }}</td>
           <td pdk-table-cell class="no-wrap">{{ searchResult.defendant.dateOfBirth | date: 'dd MMM yyyy' }}</td>
           <td pdk-table-cell class="no-wrap">{{ searchResult.postingDate | date: 'dd MMM yyyy' }}</td>
         </tr>

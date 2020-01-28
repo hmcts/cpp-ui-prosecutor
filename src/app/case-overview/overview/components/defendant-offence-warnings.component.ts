@@ -6,7 +6,7 @@ import { Offence } from '../../../contexts/sjp';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <offence-warning *ngIf="offence.outOfTime">
-      Offence is out of time
+      Offence may be out of time
     </offence-warning>
     <offence-warning *ngIf="offence.notInEffect">
       Offence not in effect - refer to court and see SJPN for offence details

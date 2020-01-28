@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'what-changed',
   template: `
-    <ul class="govuk-list">
+    <ul class="govuk-list" pdk-margin-vertical="2">
       <li data-role="date-of-birth-updated" *ngIf="defendantDetailsUpdate.dateOfBirthUpdated">
         Date of birth
       </li>

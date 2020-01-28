@@ -4,12 +4,7 @@ import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDa
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'tvl', // todo remove or change based on server config
-    pathMatch: 'full'
-  },
-  {
-    path: 'tvl',
+    path: 'user',
     loadChildren: './dashboard/dashboard.module#DashboardModule',
     canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard]
   },
@@ -37,5 +32,18 @@ export const routes: Routes = [
     loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule'
   },
   { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent },
-  { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule'}
+  { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule'},
+
+  // Fallbacks for if the user enters /prosecutor/tvl or /prosecutor
+  // These will need to be updated when the TFL dashboard is removed
+  {
+    path: ':role',
+    redirectTo: 'user',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    redirectTo: 'user',
+    pathMatch: 'full'
+  }
 ];

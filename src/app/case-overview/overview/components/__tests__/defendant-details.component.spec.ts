@@ -4,7 +4,6 @@ import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
-  CaseProsecutorPipeModule,
   CaseStatusPipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,
@@ -30,7 +29,6 @@ describe('DefendantDetailsComponent', () => {
         IfEmptyPipeModule,
         DefendantNamePipeModule,
         CaseStatusPipeModule,
-        CaseProsecutorPipeModule,
         FormatDatePipeModule,
         FormatAddressPipeModule
       ]

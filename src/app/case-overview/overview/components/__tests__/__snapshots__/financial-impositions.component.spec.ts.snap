@@ -40,6 +40,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
               </div>
             </pdk-grid>
             <pdk-grid
+              data-role="imposition-fine-amount"
               ng-reflect-two-thirds=""
               two-thirds=""
             >
@@ -51,38 +52,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
             </pdk-grid>
           </div>
         </pdk-grid>
-        <pdk-grid
-          container=""
-          ng-reflect-container=""
-          pdk-padding-vertical="1"
-        >
-          <div
-            class="govuk-grid-row"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  To pay compensation of
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                  
-              </div>
-            </pdk-grid>
-          </div>
-        </pdk-grid>
+        
         
         <pdk-grid
           container=""
@@ -116,6 +86,9 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
             </pdk-grid>
           </div>
         </pdk-grid>
+        
+        
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -149,6 +122,8 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         
+        
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -170,6 +145,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
               </div>
             </pdk-grid>
             <pdk-grid
+              data-role="imposition-surcharge-amount"
               ng-reflect-two-thirds=""
               two-thirds=""
             >
@@ -181,6 +157,8 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
             </pdk-grid>
           </div>
         </pdk-grid>
+        
+        
         
       </div>
     </div>
@@ -207,6 +185,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
       </div>
       <div>
         
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -228,6 +207,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
               </div>
             </pdk-grid>
             <pdk-grid
+              data-role="imposition-compensation-amount"
               ng-reflect-two-thirds=""
               two-thirds=""
             >
@@ -272,6 +252,9 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
             </pdk-grid>
           </div>
         </pdk-grid>
+        
+        
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -304,6 +287,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
             </pdk-grid>
           </div>
         </pdk-grid>
+        
         
         
         <pdk-grid
@@ -363,38 +347,7 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
       </div>
       <div>
         
-        <pdk-grid
-          container=""
-          ng-reflect-container=""
-          pdk-padding-vertical="1"
-        >
-          <div
-            class="govuk-grid-row"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  To pay compensation of
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £0 
-              </div>
-            </pdk-grid>
-          </div>
-        </pdk-grid>
+        
         
         <pdk-grid
           container=""
@@ -428,6 +381,9 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
             </pdk-grid>
           </div>
         </pdk-grid>
+        
+        
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -462,6 +418,7 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
         </pdk-grid>
         
         
+        
         <pdk-grid
           container=""
           ng-reflect-container=""
@@ -490,6 +447,525 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
                 class="govuk-grid-column-two-thirds"
               >
                  Absolute Discharge 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display backDuty and calculated fine, if case decision is FINANCIAL_PENALTY and backDuty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions
+    ng-reflect-case-decision="[object Object]"
+  >
+    <div
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay fine of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              data-role="imposition-fine-amount"
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £70 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Transfer of fine made to 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 Magistrates 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay back duty of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              data-role="imposition-backduty-amount"
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £50 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay costs of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £120.23 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Victim surcharge not imposed because
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 reasonForNoVictimSurcharge 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display backDuty, if case decision is FINANCIAL_PENALTY or DISCHARGE and backDuty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions
+    ng-reflect-case-decision="[object Object]"
+  >
+    <div
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Transfer of fine made to 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 Magistrates 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay back duty of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              data-role="imposition-backduty-amount"
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £50 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay costs of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £120.23 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Victim surcharge not imposed because
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 reasonForNoVictimSurcharge 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display excisePenalty and not display calculated fine, if case decision is FINANCIAL_PENALTY and excisePenalty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions
+    ng-reflect-case-decision="[object Object]"
+  >
+    <div
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Transfer of fine made to 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 Magistrates 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay excise penalty of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              data-role="imposition-excise-penalty-amount"
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £50 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  To pay costs of
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 £120.23 
+              </div>
+            </pdk-grid>
+          </div>
+        </pdk-grid>
+        
+        
+        
+        <pdk-grid
+          container=""
+          ng-reflect-container=""
+          pdk-padding-vertical="1"
+        >
+          <div
+            class="govuk-grid-row"
+          >
+            <pdk-grid
+              ng-reflect-one-third=""
+              one-third=""
+            >
+              <div
+                class="govuk-grid-column-one-third"
+              >
+                <b>
+                  Victim surcharge not imposed because
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              ng-reflect-two-thirds=""
+              two-thirds=""
+            >
+              <div
+                class="govuk-grid-column-two-thirds"
+              >
+                 reasonForNoVictimSurcharge 
               </div>
             </pdk-grid>
           </div>

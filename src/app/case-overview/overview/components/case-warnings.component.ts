@@ -10,7 +10,7 @@ import { isUnderAge } from '../../../contexts/sjp/util/sjp-util';
       Defendant under 18 at date of charge
     </pdk-warning-text>
     <pdk-warning-text error *ngIf="isOffenceOutOfTime">
-      Offence is out of time
+      Offence may be out of time
     </pdk-warning-text>
     <pdk-warning-text error *ngIf="isOffenceNotInEffect">
       Offence not in effect - refer to court and see SJPN for offence details

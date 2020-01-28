@@ -99,6 +99,7 @@ Object {
   "onlinePleaReceived": false,
   "postingDate": "2019-01-27",
   "prosecutingAuthority": "TFL",
+  "prosecutingAuthorityName": "Transport for London",
   "status": "COMPLETED",
   "urn": "TFL26168N21T5",
 }
@@ -324,6 +325,7 @@ Object {
       "lastName": "Smith",
       "pleaEntry": "2019-03-14T11:54:08.167Z",
       "referenceNumber": "TVL640029AGBG",
+      "region": "London",
     },
     Object {
       "address": Object {
@@ -340,6 +342,7 @@ Object {
       "lastName": "Smith",
       "pleaEntry": "2019-03-19T16:56:14.915Z",
       "referenceNumber": "TVL143468N9KN",
+      "region": "London",
     },
   ],
   "count": 2,

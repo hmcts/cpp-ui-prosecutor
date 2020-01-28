@@ -108,7 +108,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            TV Licensing
+            TVL
           </td>
           <td
             class="no-wrap"
@@ -157,7 +157,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            Transport for London
+            TFL
           </td>
           <td
             class="no-wrap"
@@ -206,7 +206,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            Transport for London
+            TFL
           </td>
           <td
             class="no-wrap"
@@ -255,7 +255,7 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            TV Licensing
+            TVL
           </td>
           <td
             class="no-wrap"
@@ -478,7 +478,7 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
           <td
             pdk-table-cell=""
           >
-            Transport for London
+            TFL
           </td>
           <td
             class="no-wrap"
@@ -614,7 +614,7 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
           <td
             pdk-table-cell=""
           >
-            TV Licensing
+            TVL
           </td>
           <td
             class="no-wrap"
@@ -743,7 +743,7 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
           <td
             pdk-table-cell=""
           >
-            TV Licensing
+            TVL
           </td>
           <td
             class="no-wrap"

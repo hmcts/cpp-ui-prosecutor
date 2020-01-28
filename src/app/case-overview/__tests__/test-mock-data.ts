@@ -116,6 +116,7 @@ export const MOCK_CASE: Case = {
     }
   ],
   prosecutingAuthority: 'TFL',
+  prosecutingAuthorityName: 'Transport for London',
   completed: true,
   assigned: false,
   costs: 19,

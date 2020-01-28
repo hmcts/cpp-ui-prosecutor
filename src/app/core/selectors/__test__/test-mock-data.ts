@@ -18,6 +18,7 @@ export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
         postcode: 'LE3 1AB'
       },
       referenceNumber: 'TVL640029AGBG',
+      region: 'London',
       dateOfBirth: '1975-03-25'
     },
     {
@@ -34,6 +35,7 @@ export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
         postcode: 'SE21 1AB'
       },
       referenceNumber: 'TVL143468N9KN',
+      region: 'London',
       dateOfBirth: '2001-03-23'
     }
   ],
@@ -136,6 +138,7 @@ export const MOCK_CASE: Case = {
     }
   ],
   prosecutingAuthority: 'TFL',
+  prosecutingAuthorityName: 'Transport for London',
   completed: true,
   assigned: false,
   costs: 19,

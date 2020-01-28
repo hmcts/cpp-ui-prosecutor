@@ -100,6 +100,7 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
       }
     ],
     "prosecutingAuthority": "TFL",
+    "prosecutingAuthorityName": "Transport for London",
     "completed": true,
     "assigned": false,
     "costs": 19,

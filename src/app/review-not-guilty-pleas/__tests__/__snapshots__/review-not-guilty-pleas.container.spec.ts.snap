@@ -25,6 +25,7 @@ exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
           "postcode": "LE3 1AB"
         },
         "referenceNumber": "TVL640029AGBG",
+        "region": "London",
         "dateOfBirth": "1975-03-25"
       },
       {
@@ -41,6 +42,7 @@ exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
           "postcode": "SE21 1AB"
         },
         "referenceNumber": "TVL143468N9KN",
+        "region": "London",
         "dateOfBirth": "2001-03-23"
       }
     ],

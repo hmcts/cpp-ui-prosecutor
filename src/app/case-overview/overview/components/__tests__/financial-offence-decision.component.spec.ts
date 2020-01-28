@@ -66,6 +66,7 @@ describe('FinancialOffenceDecisionComponent', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
+
   it('should compile correctly with financial penalty offence decision with no fine', () => {
     fixture.componentInstance.offenceDecision = {
       ...financialOffence,
@@ -75,6 +76,23 @@ describe('FinancialOffenceDecisionComponent', () => {
       guiltyPleaTakenIntoAccount: false
     } as FinancialPenaltyOffenceDecision;
     fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it('should not display reason if no reason is given', () => {
+    fixture.componentInstance.offenceDecision = {
+      ...financialOffence,
+      decisionType: 'FINANCIAL_PENALTY',
+      backDuty: 0,
+      fine: 10,
+      compensation: 0,
+      noCompensationReason: undefined,
+      excisePenalty: 0,
+      guiltyPleaTakenIntoAccount: false
+    } as FinancialPenaltyOffenceDecision;
+    fixture.detectChanges();
+
+    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('No compensation ordered');
     expect(fixture).toMatchSnapshot();
   });
 

@@ -19,6 +19,10 @@ export const mockUsers: User[] = [
     displayName: 'David Brown (Tfl)'
   },
   {
+    id: '8dcc4c93-2fe4-44aa-896e-511a28da0a70',
+    displayName: 'Frank Michaels (DVLA)'
+  },
+  {
     id: 'a9448185-672e-4aea-94d6-5988355ed459',
     displayName: 'Helen Sutton (Court Admin)'
   },
