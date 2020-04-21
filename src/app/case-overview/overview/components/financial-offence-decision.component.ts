@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { DischargeOffenceDecision, FinancialPenaltyOffenceDecision } from '../../../contexts/sjp';
 import { formatString, formatCurrency } from '../../../contexts/sjp/util/sjp-util';
+import { DisqualificationPeriodPipe } from '../../../shared/pipes/disqualification-period/disqualification-period.pipe';
+import { DISQUALIFICATION_DECISION_TEXT } from './disqualification/disqualification.constants';
 
 @Component({
   selector: 'financial-offence-decision',
@@ -11,6 +13,15 @@ import { formatString, formatCurrency } from '../../../contexts/sjp/util/sjp-uti
     <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty">Excise penalty {{ excisePenalty }}</div>
     <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty">Back duty {{ backDuty }}</div>
     <div>{{ compensation }}</div>
+    <div *ngIf="offenceDecision.licenceEndorsement">
+      {{ licenceEndorsement }}
+    </div>
+    <div *ngIf="offenceDecision.licenceEndorsement && offenceDecision.additionalPointsReason">
+      {{ 'Reason for penalty points being imposed on more than one offence: ' + offenceDecision.additionalPointsReason }}
+    </div>
+    <div *ngIf="offenceDecision.disqualification">
+      {{ disqualification }}
+    </div>
     <div *ngIf="offenceDecision.guiltyPleaTakenIntoAccount">
       {{ "Defendant's guilty plea Taken into account when imposing sentence" }}
     </div>
@@ -18,6 +29,7 @@ import { formatString, formatCurrency } from '../../../contexts/sjp/util/sjp-uti
 })
 export class FinancialOffenceDecisionComponent {
   @Input() offenceDecision: FinancialPenaltyOffenceDecision | DischargeOffenceDecision;
+  disqualificationPeriodPipe = new DisqualificationPeriodPipe();
 
   get dischargeType(): string {
     if (this.asDischarge().dischargeType === 'ABSOLUTE') {
@@ -40,6 +52,31 @@ export class FinancialOffenceDecisionComponent {
       return this.offenceDecision.noCompensationReason ?
         'No compensation ordered because ' + this.offenceDecision.noCompensationReason : null;
     }
+  }
+
+  get licenceEndorsement() {
+    let endorsement = '';
+    if (this.offenceDecision.penaltyPointsImposed > 0) {
+      endorsement = 'Driver record endorsed with ' + this.offenceDecision.penaltyPointsImposed + ' points';
+    } else {
+      endorsement = 'Driver licence record endorsed (no points)';
+    }
+    return endorsement;
+  }
+
+  get disqualification() {
+    let disqualification = '';
+    if (this.offenceDecision.disqualification) {
+      const period = this.disqualificationPeriodPipe.transform(this.offenceDecision.disqualificationPeriod);
+      disqualification = DISQUALIFICATION_DECISION_TEXT[this.offenceDecision.disqualificationType];
+      if (disqualification) {
+        disqualification = disqualification
+            .replace('#period', period)
+            .replace('#notionalPenaltyPoint', this.offenceDecision.notionalPenaltyPoints ?
+                `Notional penalty points determined ${this.offenceDecision.notionalPenaltyPoints} penalty points. ` : '');
+      }
+    }
+    return disqualification;
   }
 
   get fine() {

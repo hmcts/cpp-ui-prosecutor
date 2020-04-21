@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { TechnicalErrorComponent } from './shared/error-pages';
 import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
+import { CaseNotesGuard } from './core/guards/case-notes.guard';
 
 export const routes: Routes = [
   {
@@ -16,7 +17,7 @@ export const routes: Routes = [
   {
     path: ':role/case-overview/:caseId',
     loadChildren: './case-overview/case-overview.module#CaseOverviewModule',
-    canActivate: [CaseDataGuard]
+    canActivate: [CaseDataGuard, CaseNotesGuard]
   },
   {
     path: ':role/review-not-guilty-pleas',

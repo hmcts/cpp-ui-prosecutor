@@ -54,104 +54,111 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             </pdk-hint>
             
             <pdk-date-input
-              _nghost-c0=""
+              _nghost-a-c0=""
               class="ng-untouched ng-pristine ng-valid"
               name="fromDate"
               ng-reflect-model="2018-09-15"
               ng-reflect-name="fromDate"
+              ng-reflect-past-date=""
               ng-reflect-required=""
               pastdate=""
               required=""
             >
               <div
-                _ngcontent-c0=""
-                class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
+                _ngcontent-a-c0=""
+                class="pdk-date-input"
               >
                 <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
+                  _ngcontent-a-c0=""
+                  class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  ng-reflect-form="[object Object]"
                 >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-1-day"
-                    ng-reflect-type=""
-                    pdk-label=""
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Day 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                    formcontrolname="day"
-                    id="pdk-form-control-1-day"
-                    name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
-                    required=""
-                    type="number"
-                  />
-                </div>
-                <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
-                >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-1-month"
-                    ng-reflect-type=""
-                    pdk-label=""
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-1-day"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Day 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                      formcontrolname="day"
+                      id="pdk-form-control-1-day"
+                      name="dateDay"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="day"
+                      ng-reflect-required=""
+                      ng-reflect-width="2"
+                      required=""
+                      type="number"
+                    />
+                  </div>
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Month 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                    formcontrolname="month"
-                    id="pdk-form-control-1-month"
-                    name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
-                    required=""
-                    type="number"
-                  />
-                </div>
-                <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
-                >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-1-year"
-                    ng-reflect-type=""
-                    pdk-label=""
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-1-month"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Month 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                      formcontrolname="month"
+                      id="pdk-form-control-1-month"
+                      name="dateMonth"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="month"
+                      ng-reflect-required=""
+                      ng-reflect-width="2"
+                      required=""
+                      type="number"
+                    />
+                  </div>
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Year 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
-                    formcontrolname="year"
-                    id="pdk-form-control-1-year"
-                    name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
-                    required=""
-                    type="number"
-                  />
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-1-year"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Year 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                      formcontrolname="year"
+                      id="pdk-form-control-1-year"
+                      name="dateYear"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="year"
+                      ng-reflect-required=""
+                      ng-reflect-width="4"
+                      required=""
+                      type="number"
+                    />
+                  </div>
                 </div>
+                
               </div>
             </pdk-date-input>
             
@@ -196,105 +203,112 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             </pdk-hint>
             
             <pdk-date-input
-              _nghost-c0=""
+              _nghost-a-c0=""
               class="ng-untouched ng-pristine ng-valid"
               name="toDate"
               ng-reflect-max-days-value="31"
               ng-reflect-model="2018-10-01"
               ng-reflect-name="toDate"
+              ng-reflect-past-date=""
               ng-reflect-required=""
               pastdate=""
               required=""
             >
               <div
-                _ngcontent-c0=""
-                class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
+                _ngcontent-a-c0=""
+                class="pdk-date-input"
               >
                 <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
+                  _ngcontent-a-c0=""
+                  class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  ng-reflect-form="[object Object]"
                 >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-2-day"
-                    ng-reflect-type=""
-                    pdk-label=""
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Day 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                    formcontrolname="day"
-                    id="pdk-form-control-2-day"
-                    name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
-                    required=""
-                    type="number"
-                  />
-                </div>
-                <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
-                >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-2-month"
-                    ng-reflect-type=""
-                    pdk-label=""
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-2-day"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Day 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                      formcontrolname="day"
+                      id="pdk-form-control-2-day"
+                      name="dateDay"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="day"
+                      ng-reflect-required=""
+                      ng-reflect-width="2"
+                      required=""
+                      type="number"
+                    />
+                  </div>
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Month 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                    formcontrolname="month"
-                    id="pdk-form-control-2-month"
-                    name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
-                    required=""
-                    type="number"
-                  />
-                </div>
-                <div
-                  _ngcontent-c0=""
-                  class="govuk-date-input__item"
-                >
-                  <label
-                    _ngcontent-c0=""
-                    class="govuk-date-input__label govuk-label"
-                    for="pdk-form-control-2-year"
-                    ng-reflect-type=""
-                    pdk-label=""
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-2-month"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Month 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                      formcontrolname="month"
+                      id="pdk-form-control-2-month"
+                      name="dateMonth"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="month"
+                      ng-reflect-required=""
+                      ng-reflect-width="2"
+                      required=""
+                      type="number"
+                    />
+                  </div>
+                  <div
+                    _ngcontent-a-c0=""
+                    class="govuk-date-input__item"
                   >
-                     Year 
-                  </label>
-                  <input
-                    _ngcontent-c0=""
-                    autocomplete="off"
-                    class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
-                    formcontrolname="year"
-                    id="pdk-form-control-2-year"
-                    name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
-                    required=""
-                    type="number"
-                  />
+                    <label
+                      _ngcontent-a-c0=""
+                      class="govuk-date-input__label govuk-label"
+                      for="pdk-form-control-2-year"
+                      ng-reflect-type=""
+                      pdk-label=""
+                    >
+                       Year 
+                    </label>
+                    <input
+                      _ngcontent-a-c0=""
+                      autocomplete="off"
+                      class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                      formcontrolname="year"
+                      id="pdk-form-control-2-year"
+                      name="dateYear"
+                      ng-reflect-has-error="false"
+                      ng-reflect-name="year"
+                      ng-reflect-required=""
+                      ng-reflect-width="4"
+                      required=""
+                      type="number"
+                    />
+                  </div>
                 </div>
+                
               </div>
             </pdk-date-input>
             

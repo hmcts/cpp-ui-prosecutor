@@ -231,7 +231,7 @@ exports[`DevTools - Select User component it shows error messages when form is s
       Select a user
     </h3>
     <form
-      class="ng-untouched ng-pristine ng-valid"
+      class="ng-untouched ng-pristine ng-invalid"
       novalidate=""
       pdk-form=""
     >
@@ -249,7 +249,7 @@ exports[`DevTools - Select User component it shows error messages when form is s
           
           
           <pdk-select
-            class="ng-untouched ng-pristine ng-valid"
+            class="ng-untouched ng-pristine ng-invalid"
             id="selectUser"
             name="userId"
             ng-reflect-id="selectUser"

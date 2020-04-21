@@ -167,10 +167,10 @@ exports[`ViewCsvUploadReportComponent should compile correctly 1`] = `
           class="govuk-grid-column-one-third"
         >
           <pdk-related
-            _nghost-c1=""
+            _nghost-a-c1=""
           >
             <div
-              _ngcontent-c1=""
+              _ngcontent-a-c1=""
               class="pdk-related"
             >
               <h1

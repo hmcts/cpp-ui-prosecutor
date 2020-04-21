@@ -142,6 +142,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             </date-of-birth>
           </td>
         </tr>
+        
       </tbody>
     </table>
     

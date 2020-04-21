@@ -121,6 +121,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               
               
               
+              
             </div>
           </pdk-grid>
         </div>
@@ -171,6 +172,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               >
                 Withdrawn - Insufficient evidence
               </p>
+              
               
               
               
@@ -227,6 +229,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               
               
               
+              
             </div>
           </pdk-grid>
         </div>
@@ -277,6 +280,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               >
                 Adjourned to 11 Jul 2019 (or after)
               </p>
+              
               
               
               
@@ -333,6 +337,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               
               
               
+              
             </div>
           </pdk-grid>
         </div>
@@ -386,6 +391,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               
               
               
+              
             </div>
           </pdk-grid>
         </div>
@@ -431,7 +437,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
                 
               
               <p>
-                Proved SJP
+                 Proved SJP 
               </p>
               
               <p
@@ -439,6 +445,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
               >
                 Dismissed
               </p>
+              
               
               
               

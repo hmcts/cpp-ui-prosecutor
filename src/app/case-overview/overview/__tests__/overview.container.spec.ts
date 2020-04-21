@@ -5,7 +5,7 @@ import { Store, StoreModule } from '@ngrx/store';
 import { caseOverviewReducer } from '../../case-overview.reducer';
 import { MOCK_CASE, MOCK_CASE_DECISION } from '../../__tests__/test-mock-data';
 import { FeatureState } from '../../case-overview.selectors';
-import { Case, CaseDecision, Defendant, Offence } from '../../../contexts/sjp';
+import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../contexts/sjp';
 import { OverviewContainer } from '../overview.container';
 import { LoadCaseSuccess } from '../../../core/actions';
 
@@ -36,6 +36,7 @@ describe('OverviewContainer', () => {
       <div>kase: {{ kase | json }}</div>
       <div>defendant: {{ defendant | json }}</div>
       <div>offences: {{ offences | json }}</div>
+      <div>caseNotes: {{ caseNotes | json }}</div>
       <div>caseDecisions: {{ caseDecisions | json }}</div>
     `
   })
@@ -47,5 +48,6 @@ describe('OverviewContainer', () => {
     @Input() displayOffencesWithdrawnFailedBanner: boolean;
     @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
     @Input() caseDecisions: CaseDecision[];
+    @Input() caseNotes: CaseNotes;
   }
 });

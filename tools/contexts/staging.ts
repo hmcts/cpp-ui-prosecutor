@@ -7,6 +7,7 @@ const COMMAND_TFL = `/stagingtfl-command-api/command/api/rest`;
 const QUERY_TFL = `/stagingtfl-query-api/query/api/rest/stagingtfl`;
 
 const COMMAND_TVL = `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v1`;
+const COMMAND_STAGING_V2 = `/stagingprosecutors-command-api/command/api/rest/stagingprosecutors/v2`;
 
 export const stageTflCase = (param: StagingParam, user: User): Promise<any> => {
   const form = {
@@ -84,6 +85,19 @@ export const getFileUploadStats = (user: User): Promise<FileUploadStatResult> =>
     url: `${QUERY_TFL}/uploads-status-information`,
     headers: {
       Accept: 'application/vnd.stagingtfl.query.uploads-status-information+json'
+    },
+    user
+  });
+};
+
+export const stageProsecutorCaseV2 = (body: CaseData, user: User, prosecutingAuthority: string): Promise<any> => {
+  return request({
+    method: 'POST',
+    url: `${COMMAND_STAGING_V2}/prosecutions/${prosecutingAuthority}`,
+    body,
+    headers: {
+      'Content-Type': 'application/vnd.hmcts.cjs.sjp-prosecution.v2+json',
+      charset: 'UTF-8'
     },
     user
   });

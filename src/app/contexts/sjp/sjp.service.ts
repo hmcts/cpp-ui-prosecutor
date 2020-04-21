@@ -7,10 +7,11 @@ import {
   DefendantDetailsUpdatesResult,
   PleadedNotGuiltyCaseResult,
   SearchResult,
-  OnlinePlea
+  OnlinePlea,
+  CaseNotes
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
@@ -100,6 +101,13 @@ export class SjpService {
     return this.http.query({
       url: `${this.query}/cases/${caseId}/defendants/${defendantId}/defendants-online-plea`,
       requestType: 'application/vnd.sjp.query.defendants-online-plea+json',
+    });
+  }
+
+  getCaseNotes(caseId: string): Observable<CaseNotes> {
+    return this.http.query({
+      url: `${this.query}/cases/${caseId}/notes`,
+      requestType: 'application/vnd.sjp.query.case-notes+json'
     });
   }
 }

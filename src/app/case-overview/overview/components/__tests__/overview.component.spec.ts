@@ -11,7 +11,7 @@ import {
   PdkTabsModule,
   PdkWarningTextModule
 } from '@cpp/pdk';
-import { MOCK_CASE, MOCK_CASE_DECISION, MOCK_OFFENCES } from '../../../__tests__/test-mock-data';
+import { MOCK_CASE, MOCK_CASE_DECISION, MOCK_OFFENCES, MOCK_CASE_NOTES } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   DefendantNamePipeModule,
@@ -19,12 +19,13 @@ import {
   FormatDatePipeModule,
   SavedDecisionInformationPipeModule
 } from '../../../../shared/pipes';
-import { Case, CaseDecision, CaseDocument, Defendant, Offence } from '../../../../contexts/sjp';
+import { Case, CaseDecision, CaseDocument, Defendant, Offence, CaseNotes } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
 import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
 import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MockModule } from 'src/app/shared/mock-components/mock.module';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
@@ -61,7 +62,8 @@ describe('OverviewComponent', () => {
         PdkRelatedModule,
         SavedDecisionInformationPipeModule,
         VerdictTypePipeModule,
-        RouterTestingModule
+        RouterTestingModule,
+        MockModule
       ],
     });
 
@@ -72,6 +74,7 @@ describe('OverviewComponent', () => {
     fixture.componentInstance.defendant = MOCK_CASE.defendant;
     fixture.componentInstance.offences = MOCK_OFFENCES;
     fixture.componentInstance.caseDecisions = [MOCK_CASE_DECISION];
+    fixture.componentInstance.caseNotes = MOCK_CASE_NOTES;
   });
 
   it('should compile correctly', () => {
@@ -148,6 +151,17 @@ describe('OverviewComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
+  it('should display case notes if present', () => {
+    fixture.detectChanges();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('case-notes-tab');
+  });
+
+  it('should not display case notes if none are present', () => {
+    fixture.componentInstance.caseNotes = null;
+    fixture.detectChanges();
+    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('case-notes-tab');
+  });
+
   @Component({
     selector: 'case-overview-test',
     template: `
@@ -156,6 +170,7 @@ describe('OverviewComponent', () => {
         [defendant]="defendant"
         [offences]="offences"
         [caseDecisions]="caseDecisions"
+        [caseNotes]="caseNotes"
       ></case-overview>
     `
   })
@@ -164,6 +179,7 @@ describe('OverviewComponent', () => {
     defendant: Defendant;
     offences: Offence[];
     caseDecisions: CaseDecision[];
+    caseNotes: CaseNotes;
   }
 
   @Component({

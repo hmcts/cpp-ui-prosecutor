@@ -39,3 +39,11 @@ export const getCaseDecisionsWithOffenceDecisions = createSelector(
 );
 
 export const getOnlinePlea = (state: FeatureState) => state.caseOverview.onlinePlea;
+
+export const getCaseNotes = createSelector(
+  (state: State) => state.caseNotes,
+  caseNotes => {
+    caseNotes.notes.sort((a, b) => (new Date(a.addedAt) > new Date(b.addedAt) ? -1 : 1));
+    return caseNotes;
+  }
+);

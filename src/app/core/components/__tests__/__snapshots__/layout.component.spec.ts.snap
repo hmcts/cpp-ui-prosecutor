@@ -9,7 +9,7 @@ exports[`Layout should render 1`] = `
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
     <pdk-cpp-layout
-      _nghost-c0=""
+      _nghost-a-c0=""
       accessibilitylink="accessibility"
       ng-reflect-accessibility-link="accessibility"
       ng-reflect-cookie-message="true"
@@ -22,7 +22,7 @@ exports[`Layout should render 1`] = `
       
       
       <pdk-skip-link
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
         ng-reflect-target="main-content"
         target="main-content"
       >
@@ -35,7 +35,7 @@ exports[`Layout should render 1`] = `
       </pdk-skip-link>
       
       <pdk-cookie-message
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
       >
         <div
           class="pdk-cookie-message"
@@ -55,7 +55,7 @@ exports[`Layout should render 1`] = `
         </div>
       </pdk-cookie-message>
       <pdk-header
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
       >
         <header
           class="govuk-header js-enabled"
@@ -69,7 +69,7 @@ exports[`Layout should render 1`] = `
               class="pdk-header__content"
             >
               <a
-                _ngcontent-c0=""
+                _ngcontent-a-c0=""
                 class="govuk-header__link govuk-header__link--service-name"
                 href="#"
                 pdk-header-title=""
@@ -77,14 +77,14 @@ exports[`Layout should render 1`] = `
                 Common Platform Programme
               </a>
               <div
-                _ngcontent-c0=""
+                _ngcontent-a-c0=""
                 class="cpp-layout__header-content"
               >
                 
                 
                 
                 <pdk-header-nav
-                  _ngcontent-c0=""
+                  _ngcontent-a-c0=""
                 >
                   <button
                     aria-controls="navigation"
@@ -103,12 +103,12 @@ exports[`Layout should render 1`] = `
                     >
                       
                       <pdk-header-nav-item
-                        _ngcontent-c0=""
+                        _ngcontent-a-c0=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c0=""
+                          _ngcontent-a-c0=""
                           class="govuk-header__link"
                           href="http://account"
                           pdk-header-link=""
@@ -117,12 +117,12 @@ exports[`Layout should render 1`] = `
                         </a>
                       </pdk-header-nav-item>
                       <pdk-header-nav-item
-                        _ngcontent-c0=""
+                        _ngcontent-a-c0=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c0=""
+                          _ngcontent-a-c0=""
                           class="govuk-header__link"
                           href="http://signout"
                           pdk-header-link=""
@@ -139,12 +139,12 @@ exports[`Layout should render 1`] = `
         </header>
       </pdk-header>
       <pdk-container
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
         class="govuk-width-container"
         style="display: block;"
       >
         <pdk-phase-banner
-          _ngcontent-c0=""
+          _ngcontent-a-c0=""
           ng-reflect-type="beta"
         >
           <p
@@ -160,7 +160,7 @@ exports[`Layout should render 1`] = `
             >
                This is a new service – your 
               <a
-                _ngcontent-c0=""
+                _ngcontent-a-c0=""
                 class="govuk-link"
                 data-test-id="feedback"
                 href="javascript:void(0)"
@@ -174,7 +174,7 @@ exports[`Layout should render 1`] = `
         </pdk-phase-banner>
       </pdk-container>
       <pdk-main
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
         class="govuk-body-m"
         contentid="main-content"
         ng-reflect-content-id="main-content"
@@ -191,7 +191,7 @@ exports[`Layout should render 1`] = `
         />
       </pdk-main>
       <pdk-footer
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
       >
         <footer
           class="govuk-footer"
@@ -201,7 +201,7 @@ exports[`Layout should render 1`] = `
             class="govuk-width-container"
           >
             <pdk-footer-meta
-              _ngcontent-c0=""
+              _ngcontent-a-c0=""
             >
               <div
                 class="govuk-footer__meta"
@@ -210,7 +210,7 @@ exports[`Layout should render 1`] = `
                   class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
                   <h2
-                    _ngcontent-c0=""
+                    _ngcontent-a-c0=""
                     class="govuk-heading-m"
                     ng-reflect-type="heading-medium"
                     pdk-typography="heading-medium"
@@ -218,42 +218,42 @@ exports[`Layout should render 1`] = `
                     Help desk
                   </h2>
                   <dl
-                    _ngcontent-c0=""
+                    _ngcontent-a-c0=""
                   >
                     <dt
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       Telephone
                     </dt>
                     <dd
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       0300 303 0688
                     </dd>
                     <dd
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
                   <h3
-                    _ngcontent-c0=""
+                    _ngcontent-a-c0=""
                   >
                     Help by email
                   </h3>
                   <dl
-                    _ngcontent-c0=""
+                    _ngcontent-a-c0=""
                   >
                     <dt
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       CPS users only
                     </dt>
                     <dd
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       <a
-                        _ngcontent-c0=""
+                        _ngcontent-a-c0=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -262,15 +262,15 @@ exports[`Layout should render 1`] = `
                       </a>
                     </dd>
                     <dt
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       All other users
                     </dt>
                     <dd
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                     >
                       <a
-                        _ngcontent-c0=""
+                        _ngcontent-a-c0=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -283,7 +283,7 @@ exports[`Layout should render 1`] = `
               </div>
             </pdk-footer-meta>
             <pdk-footer-list
-              _ngcontent-c0=""
+              _ngcontent-a-c0=""
             >
               <hr
                 class="govuk-footer__section-break"
@@ -295,14 +295,14 @@ exports[`Layout should render 1`] = `
                 
                 
                 <pdk-footer-list-item
-                  _ngcontent-c0=""
+                  _ngcontent-a-c0=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                       class="govuk-footer__link"
                       href="https://www.gov.uk/help/cookies"
                       pdk-footer-link=""
@@ -314,14 +314,14 @@ exports[`Layout should render 1`] = `
                 </pdk-footer-list-item>
                 
                 <pdk-footer-list-item
-                  _ngcontent-c0=""
+                  _ngcontent-a-c0=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c0=""
+                      _ngcontent-a-c0=""
                       class="govuk-footer__link"
                       href="accessibility"
                       pdk-footer-link=""
@@ -352,7 +352,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
     ng-reflect-search-enabled="true"
   >
     <pdk-cpp-layout
-      _nghost-c36=""
+      _nghost-a-c36=""
       accessibilitylink="accessibility"
       ng-reflect-accessibility-link="accessibility"
       ng-reflect-cookie-message="true"
@@ -366,7 +366,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
       
       
       <pdk-skip-link
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
         ng-reflect-target="main-content"
         target="main-content"
       >
@@ -379,7 +379,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
       </pdk-skip-link>
       
       <pdk-cookie-message
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
       >
         <div
           class="pdk-cookie-message"
@@ -399,7 +399,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
         </div>
       </pdk-cookie-message>
       <pdk-header
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
       >
         <header
           class="govuk-header js-enabled"
@@ -413,7 +413,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
               class="pdk-header__content"
             >
               <a
-                _ngcontent-c36=""
+                _ngcontent-a-c36=""
                 class="govuk-header__link govuk-header__link--service-name"
                 href="#"
                 pdk-header-title=""
@@ -421,17 +421,17 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                 Common Platform Programme
               </a>
               <div
-                _ngcontent-c36=""
+                _ngcontent-a-c36=""
                 class="cpp-layout__header-content"
               >
                 
                 <form
-                  _ngcontent-c36=""
+                  _ngcontent-a-c36=""
                   class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                   novalidate=""
                 >
                   <pdk-searchbar
-                    _ngcontent-c36=""
+                    _ngcontent-a-c36=""
                     borderless=""
                     class="ng-untouched ng-pristine ng-valid"
                     name="q"
@@ -448,7 +448,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                       <input
                         aria-label="Search by case or application reference"
                         class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                        id="pdk-search-1"
+                        id="searchbar_pdk-search-1"
                         ng-reflect-has-error="false"
                         ng-reflect-width=""
                         pdk-input=""
@@ -492,7 +492,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                 
                 
                 <pdk-header-nav
-                  _ngcontent-c36=""
+                  _ngcontent-a-c36=""
                 >
                   <button
                     aria-controls="navigation"
@@ -511,12 +511,12 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                     >
                       
                       <pdk-header-nav-item
-                        _ngcontent-c36=""
+                        _ngcontent-a-c36=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c36=""
+                          _ngcontent-a-c36=""
                           class="govuk-header__link"
                           href="http://account"
                           pdk-header-link=""
@@ -525,12 +525,12 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                         </a>
                       </pdk-header-nav-item>
                       <pdk-header-nav-item
-                        _ngcontent-c36=""
+                        _ngcontent-a-c36=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c36=""
+                          _ngcontent-a-c36=""
                           class="govuk-header__link"
                           href="http://signout"
                           pdk-header-link=""
@@ -547,12 +547,12 @@ exports[`Layout should render correctly when search is enabled 1`] = `
         </header>
       </pdk-header>
       <pdk-container
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
         class="govuk-width-container"
         style="display: block;"
       >
         <pdk-phase-banner
-          _ngcontent-c36=""
+          _ngcontent-a-c36=""
           ng-reflect-type="beta"
         >
           <p
@@ -568,7 +568,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
             >
                This is a new service – your 
               <a
-                _ngcontent-c36=""
+                _ngcontent-a-c36=""
                 class="govuk-link"
                 data-test-id="feedback"
                 href="javascript:void(0)"
@@ -582,7 +582,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
         </pdk-phase-banner>
       </pdk-container>
       <pdk-main
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
         class="govuk-body-m"
         contentid="main-content"
         ng-reflect-content-id="main-content"
@@ -599,7 +599,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
         />
       </pdk-main>
       <pdk-footer
-        _ngcontent-c36=""
+        _ngcontent-a-c36=""
       >
         <footer
           class="govuk-footer"
@@ -609,7 +609,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
             class="govuk-width-container"
           >
             <pdk-footer-meta
-              _ngcontent-c36=""
+              _ngcontent-a-c36=""
             >
               <div
                 class="govuk-footer__meta"
@@ -618,7 +618,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                   class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
                   <h2
-                    _ngcontent-c36=""
+                    _ngcontent-a-c36=""
                     class="govuk-heading-m"
                     ng-reflect-type="heading-medium"
                     pdk-typography="heading-medium"
@@ -626,42 +626,42 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                     Help desk
                   </h2>
                   <dl
-                    _ngcontent-c36=""
+                    _ngcontent-a-c36=""
                   >
                     <dt
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       Telephone
                     </dt>
                     <dd
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       0300 303 0688
                     </dd>
                     <dd
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
                   <h3
-                    _ngcontent-c36=""
+                    _ngcontent-a-c36=""
                   >
                     Help by email
                   </h3>
                   <dl
-                    _ngcontent-c36=""
+                    _ngcontent-a-c36=""
                   >
                     <dt
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       CPS users only
                     </dt>
                     <dd
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       <a
-                        _ngcontent-c36=""
+                        _ngcontent-a-c36=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -670,15 +670,15 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                       </a>
                     </dd>
                     <dt
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       All other users
                     </dt>
                     <dd
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                     >
                       <a
-                        _ngcontent-c36=""
+                        _ngcontent-a-c36=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -691,7 +691,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
               </div>
             </pdk-footer-meta>
             <pdk-footer-list
-              _ngcontent-c36=""
+              _ngcontent-a-c36=""
             >
               <hr
                 class="govuk-footer__section-break"
@@ -703,14 +703,14 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                 
                 
                 <pdk-footer-list-item
-                  _ngcontent-c36=""
+                  _ngcontent-a-c36=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                       class="govuk-footer__link"
                       href="https://www.gov.uk/help/cookies"
                       pdk-footer-link=""
@@ -722,14 +722,14 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                 </pdk-footer-list-item>
                 
                 <pdk-footer-list-item
-                  _ngcontent-c36=""
+                  _ngcontent-a-c36=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c36=""
+                      _ngcontent-a-c36=""
                       class="govuk-footer__link"
                       href="accessibility"
                       pdk-footer-link=""
@@ -760,7 +760,7 @@ exports[`Layout should render correctly with activity 1`] = `
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
     <pdk-cpp-layout
-      _nghost-c27=""
+      _nghost-a-c27=""
       accessibilitylink="accessibility"
       ng-reflect-accessibility-link="accessibility"
       ng-reflect-activity="true"
@@ -773,7 +773,7 @@ exports[`Layout should render correctly with activity 1`] = `
     >
       
       <pdk-activity-indicator
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
       >
         <div
           class="pdk-activity-indicator"
@@ -802,7 +802,7 @@ exports[`Layout should render correctly with activity 1`] = `
       </pdk-activity-indicator>
       
       <pdk-skip-link
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
         ng-reflect-target="main-content"
         target="main-content"
       >
@@ -815,7 +815,7 @@ exports[`Layout should render correctly with activity 1`] = `
       </pdk-skip-link>
       
       <pdk-cookie-message
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
       >
         <div
           class="pdk-cookie-message"
@@ -835,7 +835,7 @@ exports[`Layout should render correctly with activity 1`] = `
         </div>
       </pdk-cookie-message>
       <pdk-header
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
       >
         <header
           class="govuk-header js-enabled"
@@ -849,7 +849,7 @@ exports[`Layout should render correctly with activity 1`] = `
               class="pdk-header__content"
             >
               <a
-                _ngcontent-c27=""
+                _ngcontent-a-c27=""
                 class="govuk-header__link govuk-header__link--service-name"
                 href="#"
                 pdk-header-title=""
@@ -857,14 +857,14 @@ exports[`Layout should render correctly with activity 1`] = `
                 Common Platform Programme
               </a>
               <div
-                _ngcontent-c27=""
+                _ngcontent-a-c27=""
                 class="cpp-layout__header-content"
               >
                 
                 
                 
                 <pdk-header-nav
-                  _ngcontent-c27=""
+                  _ngcontent-a-c27=""
                 >
                   <button
                     aria-controls="navigation"
@@ -883,12 +883,12 @@ exports[`Layout should render correctly with activity 1`] = `
                     >
                       
                       <pdk-header-nav-item
-                        _ngcontent-c27=""
+                        _ngcontent-a-c27=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c27=""
+                          _ngcontent-a-c27=""
                           class="govuk-header__link"
                           href="http://account"
                           pdk-header-link=""
@@ -897,12 +897,12 @@ exports[`Layout should render correctly with activity 1`] = `
                         </a>
                       </pdk-header-nav-item>
                       <pdk-header-nav-item
-                        _ngcontent-c27=""
+                        _ngcontent-a-c27=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c27=""
+                          _ngcontent-a-c27=""
                           class="govuk-header__link"
                           href="http://signout"
                           pdk-header-link=""
@@ -919,12 +919,12 @@ exports[`Layout should render correctly with activity 1`] = `
         </header>
       </pdk-header>
       <pdk-container
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
         class="govuk-width-container"
         style="display: block;"
       >
         <pdk-phase-banner
-          _ngcontent-c27=""
+          _ngcontent-a-c27=""
           ng-reflect-type="beta"
         >
           <p
@@ -940,7 +940,7 @@ exports[`Layout should render correctly with activity 1`] = `
             >
                This is a new service – your 
               <a
-                _ngcontent-c27=""
+                _ngcontent-a-c27=""
                 class="govuk-link"
                 data-test-id="feedback"
                 href="javascript:void(0)"
@@ -954,7 +954,7 @@ exports[`Layout should render correctly with activity 1`] = `
         </pdk-phase-banner>
       </pdk-container>
       <pdk-main
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
         class="govuk-body-m"
         contentid="main-content"
         ng-reflect-content-id="main-content"
@@ -971,7 +971,7 @@ exports[`Layout should render correctly with activity 1`] = `
         />
       </pdk-main>
       <pdk-footer
-        _ngcontent-c27=""
+        _ngcontent-a-c27=""
       >
         <footer
           class="govuk-footer"
@@ -981,7 +981,7 @@ exports[`Layout should render correctly with activity 1`] = `
             class="govuk-width-container"
           >
             <pdk-footer-meta
-              _ngcontent-c27=""
+              _ngcontent-a-c27=""
             >
               <div
                 class="govuk-footer__meta"
@@ -990,7 +990,7 @@ exports[`Layout should render correctly with activity 1`] = `
                   class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
                   <h2
-                    _ngcontent-c27=""
+                    _ngcontent-a-c27=""
                     class="govuk-heading-m"
                     ng-reflect-type="heading-medium"
                     pdk-typography="heading-medium"
@@ -998,42 +998,42 @@ exports[`Layout should render correctly with activity 1`] = `
                     Help desk
                   </h2>
                   <dl
-                    _ngcontent-c27=""
+                    _ngcontent-a-c27=""
                   >
                     <dt
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       Telephone
                     </dt>
                     <dd
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       0300 303 0688
                     </dd>
                     <dd
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
                   <h3
-                    _ngcontent-c27=""
+                    _ngcontent-a-c27=""
                   >
                     Help by email
                   </h3>
                   <dl
-                    _ngcontent-c27=""
+                    _ngcontent-a-c27=""
                   >
                     <dt
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       CPS users only
                     </dt>
                     <dd
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       <a
-                        _ngcontent-c27=""
+                        _ngcontent-a-c27=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1042,15 +1042,15 @@ exports[`Layout should render correctly with activity 1`] = `
                       </a>
                     </dd>
                     <dt
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       All other users
                     </dt>
                     <dd
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                     >
                       <a
-                        _ngcontent-c27=""
+                        _ngcontent-a-c27=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1063,7 +1063,7 @@ exports[`Layout should render correctly with activity 1`] = `
               </div>
             </pdk-footer-meta>
             <pdk-footer-list
-              _ngcontent-c27=""
+              _ngcontent-a-c27=""
             >
               <hr
                 class="govuk-footer__section-break"
@@ -1075,14 +1075,14 @@ exports[`Layout should render correctly with activity 1`] = `
                 
                 
                 <pdk-footer-list-item
-                  _ngcontent-c27=""
+                  _ngcontent-a-c27=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                       class="govuk-footer__link"
                       href="https://www.gov.uk/help/cookies"
                       pdk-footer-link=""
@@ -1094,14 +1094,14 @@ exports[`Layout should render correctly with activity 1`] = `
                 </pdk-footer-list-item>
                 
                 <pdk-footer-list-item
-                  _ngcontent-c27=""
+                  _ngcontent-a-c27=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c27=""
+                      _ngcontent-a-c27=""
                       class="govuk-footer__link"
                       href="accessibility"
                       pdk-footer-link=""
@@ -1132,7 +1132,7 @@ exports[`Layout should render correctly with api error 1`] = `
     ng-reflect-header-nav-items="[object Object],[object Object"
   >
     <pdk-cpp-layout
-      _nghost-c18=""
+      _nghost-a-c18=""
       accessibilitylink="accessibility"
       ng-reflect-accessibility-link="accessibility"
       ng-reflect-api-error="true"
@@ -1146,7 +1146,7 @@ exports[`Layout should render correctly with api error 1`] = `
       
       
       <pdk-alert
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
       >
         <div
           class="pdk-alert pdk-alert--warning"
@@ -1162,7 +1162,7 @@ exports[`Layout should render correctly with api error 1`] = `
               <div>
                 
                 <span
-                  _ngcontent-c18=""
+                  _ngcontent-a-c18=""
                 >
                    There’s a technical problem. You can’t save anything new – try again later. 
                 </span>
@@ -1173,7 +1173,7 @@ exports[`Layout should render correctly with api error 1`] = `
         </div>
       </pdk-alert>
       <pdk-skip-link
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
         ng-reflect-target="main-content"
         target="main-content"
       >
@@ -1186,7 +1186,7 @@ exports[`Layout should render correctly with api error 1`] = `
       </pdk-skip-link>
       
       <pdk-cookie-message
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
       >
         <div
           class="pdk-cookie-message"
@@ -1206,7 +1206,7 @@ exports[`Layout should render correctly with api error 1`] = `
         </div>
       </pdk-cookie-message>
       <pdk-header
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
       >
         <header
           class="govuk-header js-enabled"
@@ -1220,7 +1220,7 @@ exports[`Layout should render correctly with api error 1`] = `
               class="pdk-header__content"
             >
               <a
-                _ngcontent-c18=""
+                _ngcontent-a-c18=""
                 class="govuk-header__link govuk-header__link--service-name"
                 href="#"
                 pdk-header-title=""
@@ -1228,14 +1228,14 @@ exports[`Layout should render correctly with api error 1`] = `
                 Common Platform Programme
               </a>
               <div
-                _ngcontent-c18=""
+                _ngcontent-a-c18=""
                 class="cpp-layout__header-content"
               >
                 
                 
                 
                 <pdk-header-nav
-                  _ngcontent-c18=""
+                  _ngcontent-a-c18=""
                 >
                   <button
                     aria-controls="navigation"
@@ -1254,12 +1254,12 @@ exports[`Layout should render correctly with api error 1`] = `
                     >
                       
                       <pdk-header-nav-item
-                        _ngcontent-c18=""
+                        _ngcontent-a-c18=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c18=""
+                          _ngcontent-a-c18=""
                           class="govuk-header__link"
                           href="http://account"
                           pdk-header-link=""
@@ -1268,12 +1268,12 @@ exports[`Layout should render correctly with api error 1`] = `
                         </a>
                       </pdk-header-nav-item>
                       <pdk-header-nav-item
-                        _ngcontent-c18=""
+                        _ngcontent-a-c18=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c18=""
+                          _ngcontent-a-c18=""
                           class="govuk-header__link"
                           href="http://signout"
                           pdk-header-link=""
@@ -1290,12 +1290,12 @@ exports[`Layout should render correctly with api error 1`] = `
         </header>
       </pdk-header>
       <pdk-container
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
         class="govuk-width-container"
         style="display: block;"
       >
         <pdk-phase-banner
-          _ngcontent-c18=""
+          _ngcontent-a-c18=""
           ng-reflect-type="beta"
         >
           <p
@@ -1311,7 +1311,7 @@ exports[`Layout should render correctly with api error 1`] = `
             >
                This is a new service – your 
               <a
-                _ngcontent-c18=""
+                _ngcontent-a-c18=""
                 class="govuk-link"
                 data-test-id="feedback"
                 href="javascript:void(0)"
@@ -1325,7 +1325,7 @@ exports[`Layout should render correctly with api error 1`] = `
         </pdk-phase-banner>
       </pdk-container>
       <pdk-main
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
         class="govuk-body-m"
         contentid="main-content"
         ng-reflect-content-id="main-content"
@@ -1342,7 +1342,7 @@ exports[`Layout should render correctly with api error 1`] = `
         />
       </pdk-main>
       <pdk-footer
-        _ngcontent-c18=""
+        _ngcontent-a-c18=""
       >
         <footer
           class="govuk-footer"
@@ -1352,7 +1352,7 @@ exports[`Layout should render correctly with api error 1`] = `
             class="govuk-width-container"
           >
             <pdk-footer-meta
-              _ngcontent-c18=""
+              _ngcontent-a-c18=""
             >
               <div
                 class="govuk-footer__meta"
@@ -1361,7 +1361,7 @@ exports[`Layout should render correctly with api error 1`] = `
                   class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
                   <h2
-                    _ngcontent-c18=""
+                    _ngcontent-a-c18=""
                     class="govuk-heading-m"
                     ng-reflect-type="heading-medium"
                     pdk-typography="heading-medium"
@@ -1369,42 +1369,42 @@ exports[`Layout should render correctly with api error 1`] = `
                     Help desk
                   </h2>
                   <dl
-                    _ngcontent-c18=""
+                    _ngcontent-a-c18=""
                   >
                     <dt
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       Telephone
                     </dt>
                     <dd
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       0300 303 0688
                     </dd>
                     <dd
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
                   <h3
-                    _ngcontent-c18=""
+                    _ngcontent-a-c18=""
                   >
                     Help by email
                   </h3>
                   <dl
-                    _ngcontent-c18=""
+                    _ngcontent-a-c18=""
                   >
                     <dt
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       CPS users only
                     </dt>
                     <dd
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       <a
-                        _ngcontent-c18=""
+                        _ngcontent-a-c18=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1413,15 +1413,15 @@ exports[`Layout should render correctly with api error 1`] = `
                       </a>
                     </dd>
                     <dt
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       All other users
                     </dt>
                     <dd
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                     >
                       <a
-                        _ngcontent-c18=""
+                        _ngcontent-a-c18=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1434,7 +1434,7 @@ exports[`Layout should render correctly with api error 1`] = `
               </div>
             </pdk-footer-meta>
             <pdk-footer-list
-              _ngcontent-c18=""
+              _ngcontent-a-c18=""
             >
               <hr
                 class="govuk-footer__section-break"
@@ -1446,14 +1446,14 @@ exports[`Layout should render correctly with api error 1`] = `
                 
                 
                 <pdk-footer-list-item
-                  _ngcontent-c18=""
+                  _ngcontent-a-c18=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                       class="govuk-footer__link"
                       href="https://www.gov.uk/help/cookies"
                       pdk-footer-link=""
@@ -1465,14 +1465,14 @@ exports[`Layout should render correctly with api error 1`] = `
                 </pdk-footer-list-item>
                 
                 <pdk-footer-list-item
-                  _ngcontent-c18=""
+                  _ngcontent-a-c18=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c18=""
+                      _ngcontent-a-c18=""
                       class="govuk-footer__link"
                       href="accessibility"
                       pdk-footer-link=""
@@ -1503,7 +1503,7 @@ exports[`Layout should render correctly with online status 1`] = `
     ng-reflect-offline="true"
   >
     <pdk-cpp-layout
-      _nghost-c9=""
+      _nghost-a-c9=""
       accessibilitylink="accessibility"
       ng-reflect-accessibility-link="accessibility"
       ng-reflect-cookie-message="true"
@@ -1517,7 +1517,7 @@ exports[`Layout should render correctly with online status 1`] = `
       
       
       <pdk-alert
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
       >
         <div
           class="pdk-alert pdk-alert--warning"
@@ -1534,7 +1534,7 @@ exports[`Layout should render correctly with online status 1`] = `
                 
                 
                 <span
-                  _ngcontent-c9=""
+                  _ngcontent-a-c9=""
                 >
                    You are offline. You cannot save anything new - check your connection and try again. 
                 </span>
@@ -1544,7 +1544,7 @@ exports[`Layout should render correctly with online status 1`] = `
         </div>
       </pdk-alert>
       <pdk-skip-link
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
         ng-reflect-target="main-content"
         target="main-content"
       >
@@ -1557,7 +1557,7 @@ exports[`Layout should render correctly with online status 1`] = `
       </pdk-skip-link>
       
       <pdk-cookie-message
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
       >
         <div
           class="pdk-cookie-message"
@@ -1577,7 +1577,7 @@ exports[`Layout should render correctly with online status 1`] = `
         </div>
       </pdk-cookie-message>
       <pdk-header
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
       >
         <header
           class="govuk-header js-enabled"
@@ -1591,7 +1591,7 @@ exports[`Layout should render correctly with online status 1`] = `
               class="pdk-header__content"
             >
               <a
-                _ngcontent-c9=""
+                _ngcontent-a-c9=""
                 class="govuk-header__link govuk-header__link--service-name"
                 href="#"
                 pdk-header-title=""
@@ -1599,14 +1599,14 @@ exports[`Layout should render correctly with online status 1`] = `
                 Common Platform Programme
               </a>
               <div
-                _ngcontent-c9=""
+                _ngcontent-a-c9=""
                 class="cpp-layout__header-content"
               >
                 
                 
                 
                 <pdk-header-nav
-                  _ngcontent-c9=""
+                  _ngcontent-a-c9=""
                 >
                   <button
                     aria-controls="navigation"
@@ -1625,12 +1625,12 @@ exports[`Layout should render correctly with online status 1`] = `
                     >
                       
                       <pdk-header-nav-item
-                        _ngcontent-c9=""
+                        _ngcontent-a-c9=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c9=""
+                          _ngcontent-a-c9=""
                           class="govuk-header__link"
                           href="http://account"
                           pdk-header-link=""
@@ -1639,12 +1639,12 @@ exports[`Layout should render correctly with online status 1`] = `
                         </a>
                       </pdk-header-nav-item>
                       <pdk-header-nav-item
-                        _ngcontent-c9=""
+                        _ngcontent-a-c9=""
                         class="govuk-header__navigation-item"
                         role="listitem"
                       >
                         <a
-                          _ngcontent-c9=""
+                          _ngcontent-a-c9=""
                           class="govuk-header__link"
                           href="http://signout"
                           pdk-header-link=""
@@ -1661,12 +1661,12 @@ exports[`Layout should render correctly with online status 1`] = `
         </header>
       </pdk-header>
       <pdk-container
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
         class="govuk-width-container"
         style="display: block;"
       >
         <pdk-phase-banner
-          _ngcontent-c9=""
+          _ngcontent-a-c9=""
           ng-reflect-type="beta"
         >
           <p
@@ -1682,7 +1682,7 @@ exports[`Layout should render correctly with online status 1`] = `
             >
                This is a new service – your 
               <a
-                _ngcontent-c9=""
+                _ngcontent-a-c9=""
                 class="govuk-link"
                 data-test-id="feedback"
                 href="javascript:void(0)"
@@ -1696,7 +1696,7 @@ exports[`Layout should render correctly with online status 1`] = `
         </pdk-phase-banner>
       </pdk-container>
       <pdk-main
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
         class="govuk-body-m"
         contentid="main-content"
         ng-reflect-content-id="main-content"
@@ -1713,7 +1713,7 @@ exports[`Layout should render correctly with online status 1`] = `
         />
       </pdk-main>
       <pdk-footer
-        _ngcontent-c9=""
+        _ngcontent-a-c9=""
       >
         <footer
           class="govuk-footer"
@@ -1723,7 +1723,7 @@ exports[`Layout should render correctly with online status 1`] = `
             class="govuk-width-container"
           >
             <pdk-footer-meta
-              _ngcontent-c9=""
+              _ngcontent-a-c9=""
             >
               <div
                 class="govuk-footer__meta"
@@ -1732,7 +1732,7 @@ exports[`Layout should render correctly with online status 1`] = `
                   class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                 >
                   <h2
-                    _ngcontent-c9=""
+                    _ngcontent-a-c9=""
                     class="govuk-heading-m"
                     ng-reflect-type="heading-medium"
                     pdk-typography="heading-medium"
@@ -1740,42 +1740,42 @@ exports[`Layout should render correctly with online status 1`] = `
                     Help desk
                   </h2>
                   <dl
-                    _ngcontent-c9=""
+                    _ngcontent-a-c9=""
                   >
                     <dt
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       Telephone
                     </dt>
                     <dd
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       0300 303 0688
                     </dd>
                     <dd
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
                   <h3
-                    _ngcontent-c9=""
+                    _ngcontent-a-c9=""
                   >
                     Help by email
                   </h3>
                   <dl
-                    _ngcontent-c9=""
+                    _ngcontent-a-c9=""
                   >
                     <dt
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       CPS users only
                     </dt>
                     <dd
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       <a
-                        _ngcontent-c9=""
+                        _ngcontent-a-c9=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1784,15 +1784,15 @@ exports[`Layout should render correctly with online status 1`] = `
                       </a>
                     </dd>
                     <dt
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       All other users
                     </dt>
                     <dd
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                     >
                       <a
-                        _ngcontent-c9=""
+                        _ngcontent-a-c9=""
                         class="govuk-footer__link"
                         href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                         pdk-footer-link=""
@@ -1805,7 +1805,7 @@ exports[`Layout should render correctly with online status 1`] = `
               </div>
             </pdk-footer-meta>
             <pdk-footer-list
-              _ngcontent-c9=""
+              _ngcontent-a-c9=""
             >
               <hr
                 class="govuk-footer__section-break"
@@ -1817,14 +1817,14 @@ exports[`Layout should render correctly with online status 1`] = `
                 
                 
                 <pdk-footer-list-item
-                  _ngcontent-c9=""
+                  _ngcontent-a-c9=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                       class="govuk-footer__link"
                       href="https://www.gov.uk/help/cookies"
                       pdk-footer-link=""
@@ -1836,14 +1836,14 @@ exports[`Layout should render correctly with online status 1`] = `
                 </pdk-footer-list-item>
                 
                 <pdk-footer-list-item
-                  _ngcontent-c9=""
+                  _ngcontent-a-c9=""
                   role="listitem"
                 >
                   <div
                     class="govuk-footer__inline-list-item"
                   >
                     <a
-                      _ngcontent-c9=""
+                      _ngcontent-a-c9=""
                       class="govuk-footer__link"
                       href="accessibility"
                       pdk-footer-link=""

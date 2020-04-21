@@ -5,9 +5,10 @@ import {
   FeatureState,
   getCaseDecisionsWithOffenceDecisions,
   getDatesToAvoidFailed,
-  getWithdrawOffenceStatus
+  getWithdrawOffenceStatus,
+  getCaseNotes
 } from '../case-overview.selectors';
-import { Case, CaseDecision, Defendant, Offence } from '../../contexts/sjp';
+import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../contexts/sjp';
 import { ResetCaseOverviewState } from '../case-overview.action';
 import { getCase, getDefendant, getOffences } from '../../core/selectors';
 
@@ -22,6 +23,7 @@ import { getCase, getDefendant, getOffences } from '../../core/selectors';
       [displayOffencesWithdrawnBanner]="displayOffencesWithdrawnBanner$ | async"
       [displayDatesToAvoidUpdateFailedBanner]="displayDatesToAvoidUpdateFailedBanner$ | async"
       [caseDecisions]="caseDecisions$ | async"
+      [caseNotes]="caseNotes$ | async"
     ></case-overview>
   `
 })
@@ -32,6 +34,7 @@ export class OverviewContainer implements OnDestroy {
   displayOffencesWithdrawnBanner$: Observable<boolean>;
   displayDatesToAvoidUpdateFailedBanner$: Observable<boolean>;
   caseDecisions$: Observable<CaseDecision[]>;
+  caseNotes$: Observable<CaseNotes>;
 
   constructor(private store: Store<FeatureState>) {
     this.kase$ = this.store.pipe(select(getCase));
@@ -40,6 +43,7 @@ export class OverviewContainer implements OnDestroy {
     this.displayOffencesWithdrawnBanner$ = this.store.pipe(select(getWithdrawOffenceStatus));
     this.displayDatesToAvoidUpdateFailedBanner$ = this.store.pipe(select(getDatesToAvoidFailed));
     this.caseDecisions$ = this.store.pipe(select(getCaseDecisionsWithOffenceDecisions));
+    this.caseNotes$ = this.store.pipe(select(getCaseNotes));
   }
 
   ngOnDestroy(): void {

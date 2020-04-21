@@ -34,6 +34,11 @@ const REOPENED_IN_LIBRA = {
   expected: 'Reopened in Libra'
 };
 
+const SET_ASIDE_READY_FOR_DECISION = {
+  actual: 'SET_ASIDE_READY_FOR_DECISION',
+  expected: 'Set aside - ready for decision'
+};
+
 const UNEXPECTED = 'This is not expected';
 
 describe('Case Status Pipe', () => {
@@ -79,6 +84,10 @@ describe('Case Status Pipe', () => {
 
   it('should map REOPENED_IN_LIBRA to Reopened in Libra', () => {
     expect(pipe.transform(REOPENED_IN_LIBRA.actual)).toEqual(REOPENED_IN_LIBRA.expected);
+  });
+
+  it('should map SET_ASIDE_READY_FOR_DECISION to Set aside - ready for decision', () => {
+    expect(pipe.transform(SET_ASIDE_READY_FOR_DECISION.actual)).toEqual(SET_ASIDE_READY_FOR_DECISION.expected);
   });
 
   it('should not map any other response', () => {

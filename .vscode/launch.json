@@ -12,7 +12,8 @@
       "stopOnEntry": false,
       "args": [
         "${workspaceRoot}/e2e/protractor.conf.js",
-        "--params.dev", "dev"
+        "--params.dev", "dev",
+        "--visible", "visible"
       ]
     },
     {
@@ -23,6 +24,7 @@
       "stopOnEntry": false,
       "args": [
         "${workspaceRoot}/e2e/protractor.conf.js",
+        "--visible", "visible",
         "--baseUrl", "http://steccm04wrpxy01.cpp.nonlive/prosecutor/"
       ]
     }

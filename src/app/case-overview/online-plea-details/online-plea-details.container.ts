@@ -60,6 +60,11 @@ export class OnlinePleaDetailsContainer {
       onlinePleaUi.pleaDetails.doHaveOwnWitness = !!onlinePlea.pleaDetails.witnessDetails;
       onlinePleaUi.pleaDetails.existsUnavailability = !!onlinePlea.pleaDetails.unavailability;
     }
+    if (onlinePlea.personalDetails) {
+      onlinePleaUi.personalDetails.hasDriverLicense = !!onlinePlea.personalDetails.driverNumber
+        || !!onlinePlea.personalDetails.driverLicenceDetails;
+      onlinePleaUi.personalDetails.hasUkDriverLicense = !!onlinePlea.personalDetails.driverNumber;
+    }
     // Only show court hearing if there's at least one not guilty or guilty request hearing
     onlinePleaUi.pleaDetails.hasHearing = onlinePlea.onlinePleaDetails
       .some(plea => plea.plea === 'NOT_GUILTY' || plea.plea === 'GUILTY_REQUEST_HEARING');

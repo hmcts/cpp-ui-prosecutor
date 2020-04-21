@@ -50,7 +50,9 @@ import {CaseDecision, OffenceDecision} from '../../../contexts/sjp';
         </pdk-grid>
         <pdk-grid two-thirds>
           {{ offenceDecision.offenceTitle }}
-          <p *ngIf="offenceDecision.verdict != 'NO_VERDICT'">{{ offenceDecision.verdict | verdictType }}</p>
+          <p *ngIf="offenceDecision.verdict && offenceDecision.verdict !== 'NO_VERDICT'">
+            {{ offenceDecision.verdict | verdictType }}
+          </p>
           <financial-offence-decision *ngIf="isFinancial(offenceDecision);else nonFinancial"
                                       [offenceDecision]="offenceDecision">
           </financial-offence-decision>
@@ -59,6 +61,9 @@ import {CaseDecision, OffenceDecision} from '../../../contexts/sjp';
             <refer-to-open-court-offence-decision *ngIf="offenceDecision.decisionType==='REFERRED_TO_OPEN_COURT'"
                                                   [offenceDecision]="offenceDecision">
             </refer-to-open-court-offence-decision>
+            <no-separate-penalty-offence-decision *ngIf="offenceDecision.decisionType==='NO_SEPARATE_PENALTY'"
+              [offenceDecision]="offenceDecision">
+            </no-separate-penalty-offence-decision>
           </ng-template>
         </pdk-grid>
       </pdk-grid>

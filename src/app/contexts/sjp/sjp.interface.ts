@@ -104,6 +104,7 @@ export interface PersonalDetails {
   nameChanged: boolean;
   gender: string;
   nationalInsuranceNumber?: string;
+  driverNumber?: string;
   title: string;
   outdated?: boolean; // todo unaccounted for
 }
@@ -233,19 +234,33 @@ export interface CourtReferralOffenceDecision extends OffenceDecision {
 // tslint:disable-next-line
 export interface DismissOffenceDecision extends OffenceDecision {}
 
-export interface DischargeOffenceDecision extends OffenceDecision {
+export interface DischargeOffenceDecision extends FinancialImpositionOffenceDecision {
   dischargeType?: DischargeType;
   dischargedFor?: DischargePeriodForm;
-  compensation?: number;
-  noCompensationReason?: string;
-  guiltyPleaTakenIntoAccount: boolean;
 }
 
-export interface FinancialPenaltyOffenceDecision extends OffenceDecision {
+export interface FinancialPenaltyOffenceDecision extends FinancialImpositionOffenceDecision {
   fine: number;
+  excisePenalty?: number;
+}
+
+export interface FinancialImpositionOffenceDecision extends OffenceDecision {
   compensation?: number;
   noCompensationReason?: string;
   guiltyPleaTakenIntoAccount: boolean;
+  backDuty?: number;
+  licenceEndorsement: boolean;
+  penaltyPointsImposed: number;
+  additionalPointsReason: string;
+  disqualification: boolean;
+  disqualificationType: DisqualificationType;
+  disqualificationPeriod: DisqualificationPeriod;
+  notionalPenaltyPoints?: number;
+}
+
+export interface NoSeparatePenaltyOffenceDecision extends OffenceDecision {
+  licenseEndorsement?: boolean;
+  guiltyPleaTakenIntoAccount?: boolean;
 }
 
 export interface ReferredToOpenCourtOffenceDecision extends OffenceDecision {
@@ -393,4 +408,28 @@ export interface OnlinePleaPersonalDetails {
   email: string;
   dateOfBirth: string;
   nationalInsuranceNumber: string;
+  driverNumber?: string;
+  driverLicenceDetails?: string;
+}
+
+export interface Notes {
+  noteId: string;
+  decisionId?: string;
+  noteType: string;
+  noteText: string;
+  addedAt: string;
+  authorFirstName: string;
+  authorLastName: string;
+}
+
+export interface CaseNotes {
+  caseId: string;
+  notes: Notes[];
+}
+
+export type DisqualificationType = 'DISCRETIONARY' | 'POINTS' | 'OBLIGATORY';
+
+export interface DisqualificationPeriod {
+  value: number;
+  unit: 'DAY' | 'MONTH' | 'YEAR';
 }

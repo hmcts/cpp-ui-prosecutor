@@ -3,7 +3,7 @@ import {
   WithdrawOffenceDecision,
   AdjournOffenceDecision,
   CourtReferralOffenceDecision,
-  DismissOffenceDecision, ReferredToOpenCourtOffenceDecision, OffenceDecision
+  DismissOffenceDecision, ReferredToOpenCourtOffenceDecision, OffenceDecision, NoSeparatePenaltyOffenceDecision
 } from 'src/app/contexts/sjp';
 
 export const MOCK_CASE_DECISION: CaseDecision = {
@@ -89,3 +89,34 @@ export const MOCK_CASE_DECISSION_WITH_LEGACY_OFFENCE_DECISION: CaseDecision = {
       ]
 
 };
+
+
+export const MOCK_NO_SEPARATE_CASE_DECISION: CaseDecision = {
+  id: 'mock-case-decision-1',
+  session: {
+    sessionId: 'mock-case-decision-session-1',
+    legalAdviserUserId: 'mock-case-decision-session-userid-1',
+    courtHouseCode: 'B01OK',
+    courtHouseName: `Wimbledon Magistrates' Court`,
+    localJusticeAreaNationalCourtCode: '2577',
+    startedAt: '2018-12-01T16:10:28.259Z',
+    endedAt: '2018-12-01T16:10:28.259Z',
+    sessionType: 'DELEGATED_POWERS',
+    legalAdviser: {
+      userId: 'legal-adviser-1',
+      firstName: 'Mark',
+      lastName: 'Adams'
+    }
+  },
+  savedAt: '2018-12-01T16:10:28.259Z',
+  offenceDecisions: [
+    {
+      id: 'mock-case-offence-decision-1',
+      offenceId: 'offenceId1',
+      decisionType: 'NO_SEPARATE_PENALTY',
+      licenseEndorsement: false
+    } as NoSeparatePenaltyOffenceDecision
+  ]
+};
+
+

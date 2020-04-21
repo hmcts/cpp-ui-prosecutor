@@ -1,10 +1,13 @@
 import { stageProsecutorCase } from '../contexts/staging';
 import { build, SYSTEM_TVL_USER } from '../utils';
-import { fetchCaseByUrn } from '../helpers';
-import { ProsecutorCaseDataBuilder } from '../helpers/prosecutor-case-data-builder';
+import { fetchCaseByUrn, TvlCaseDataBuilder } from '../helpers';
 
-export const buildTvlCaseWithMultipleOffences = async (postedDays = 28) => {
-  const caseDataBuilder = ProsecutorCaseDataBuilder.createCaseDataForMultipleOffences(null, postedDays);
+export const buildTvlCaseWithMultipleOffences = async (postedDays?: number, numberOfOffences?: number) => {
+  const caseDataBuilder = TvlCaseDataBuilder.createCaseDataForMultipleOffences(
+    null,
+    postedDays,
+    numberOfOffences
+  );
 
   await stageProsecutorCase(caseDataBuilder.getData(), SYSTEM_TVL_USER);
   const kase = await fetchCaseByUrn(caseDataBuilder.getUrn());

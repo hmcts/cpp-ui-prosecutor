@@ -29,7 +29,7 @@ describe('Prosecutor', () => {
     });
 
     it('should be able to view details of updates', async () => {
-      if (beforeDefendantDetailsUpdatesCount <= maximumUpdatesDisplayed) {
+      if (beforeDefendantDetailsUpdatesCount < maximumUpdatesDisplayed) {
         const defendantDetailsUpdatesRow = defendantDetailsUpdatesPage.getDefendantDetailsUpdatesTableRow(
           beforeDefendantDetailsUpdatesCount + 1
         );

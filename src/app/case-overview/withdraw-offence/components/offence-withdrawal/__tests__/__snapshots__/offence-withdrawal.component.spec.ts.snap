@@ -43,17 +43,17 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
           </b>
         </div>
         <pdk-foldable-text
-          _nghost-c1=""
+          _nghost-a-c1=""
           class="govuk-!-margin-top-2"
           ng-reflect-top="2"
           pdk-margin-top="2"
         >
           <div
-            _ngcontent-c1=""
+            _ngcontent-a-c1=""
             class="pdk-foldable"
           >
             <span
-              _ngcontent-c1=""
+              _ngcontent-a-c1=""
               aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-1"
@@ -310,17 +310,17 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
           </b>
         </div>
         <pdk-foldable-text
-          _nghost-c10=""
+          _nghost-a-c10=""
           class="govuk-!-margin-top-2"
           ng-reflect-top="2"
           pdk-margin-top="2"
         >
           <div
-            _ngcontent-c10=""
+            _ngcontent-a-c10=""
             class="pdk-foldable"
           >
             <span
-              _ngcontent-c10=""
+              _ngcontent-a-c10=""
               aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-10"
@@ -577,17 +577,17 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
           </b>
         </div>
         <pdk-foldable-text
-          _nghost-c19=""
+          _nghost-a-c19=""
           class="govuk-!-margin-top-2"
           ng-reflect-top="2"
           pdk-margin-top="2"
         >
           <div
-            _ngcontent-c19=""
+            _ngcontent-a-c19=""
             class="pdk-foldable"
           >
             <span
-              _ngcontent-c19=""
+              _ngcontent-a-c19=""
               aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-19"

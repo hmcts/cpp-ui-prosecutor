@@ -20,6 +20,8 @@ export class CaseStatusPipe implements PipeTransform {
         return 'Referred for court hearing';
       case 'REOPENED_IN_LIBRA':
         return 'Reopened in Libra';
+      case 'SET_ASIDE_READY_FOR_DECISION':
+        return 'Set aside - ready for decision';
       default:
         return content;
     }

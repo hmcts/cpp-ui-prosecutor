@@ -20,7 +20,8 @@ import {
   DocumentListComponent,
   OverviewComponent,
   PleaMitigationComponent,
-  StatementOfFactsComponent
+  StatementOfFactsComponent,
+  NoSeparatePenaltyOffenceDecisionComponent
 } from './components';
 import { SharedModule } from '../../shared';
 import { OverviewContainer } from './overview.container';
@@ -40,6 +41,7 @@ import { FinancialImpositionsComponent } from './components/financial-imposition
 import { FinancialOffenceDecisionComponent } from './components/financial-offence-decision.component';
 import { PaymentAndCollectionComponent } from './components/payment-and-collection.component';
 import { ReferredToOpenCourtOffenceDecisionComponent } from './components/referred-open-court-offence-decision.component';
+import { CaseNotesComponent } from './components/case-notes.component';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -54,11 +56,13 @@ const DECLARATIONS = [
   PleaMitigationComponent,
   PersonalDetailsChangeAlertComponent,
   CaseSubmissionMessagesComponent,
+  CaseNotesComponent,
   CaseDecisionsComponent,
   CaseDecisionsDetailsComponent,
   ReferredToOpenCourtOffenceDecisionComponent,
   FinancialImpositionsComponent,
   FinancialOffenceDecisionComponent,
+  NoSeparatePenaltyOffenceDecisionComponent,
   PaymentAndCollectionComponent
 ];
 

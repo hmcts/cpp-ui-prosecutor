@@ -336,28 +336,28 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
          available 
         
         <pdk-warning-text
-          _nghost-c3=""
+          _nghost-a-c3=""
           class="govuk-!-margin-top-2"
           ng-reflect-top="2"
           pdk-margin-top="2"
         >
           <div
-            _ngcontent-c3=""
+            _ngcontent-a-c3=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-c3=""
+              _ngcontent-a-c3=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-c3=""
+              _ngcontent-a-c3=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-c3=""
+                _ngcontent-a-c3=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -422,28 +422,28 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
           >
             
             <pdk-warning-text
-              _nghost-c3=""
+              _nghost-a-c3=""
               class="govuk-!-margin-top-5"
               ng-reflect-top="5"
               pdk-margin-top="5"
             >
               <div
-                _ngcontent-c3=""
+                _ngcontent-a-c3=""
                 class="govuk-warning-text"
               >
                 <span
-                  _ngcontent-c3=""
+                  _ngcontent-a-c3=""
                   aria-hidden="true"
                   class="govuk-warning-text__icon"
                 >
                   !
                 </span>
                 <strong
-                  _ngcontent-c3=""
+                  _ngcontent-a-c3=""
                   class="govuk-warning-text__text"
                 >
                   <span
-                    _ngcontent-c3=""
+                    _ngcontent-a-c3=""
                     class="govuk-warning-text__assistive"
                   >
                     Warning

@@ -40,6 +40,28 @@ import { OnlinePleaUi } from '../online-plea-interface';
             <date-of-birth [dateOfBirth]="onlinePlea?.personalDetails?.dateOfBirth"></date-of-birth>
           </td>
         </tr>
+        <ng-container *ngIf="onlinePlea?.personalDetails?.hasDriverLicense">
+          <tr pdk-table-row>
+            <td pdk-table-cell pdk-typography="body-small">Do they have a GB driving licence?</td>
+            <td pdk-table-cell pdk-typography="body-small" data-locator="hasUkLicense">
+              {{ !!onlinePlea?.personalDetails?.hasUkDriverLicense | yesNo }}
+            </td>
+          </tr>
+          <tr pdk-table-row *ngIf="onlinePlea?.personalDetails?.hasUkDriverLicense;else nonUkDriverLicense">
+            <td pdk-table-cell pdk-typography="body-small">GB driving licence number</td>
+            <td pdk-table-cell pdk-typography="body-small" data-locator="ukLicense">
+              {{ onlinePlea?.personalDetails?.driverNumber }}
+            </td>
+          </tr>
+          <ng-template #nonUkDriverLicense>
+            <tr pdk-table-row>
+              <td pdk-table-cell pdk-typography="body-small">What kind of driving licence they hold </td>
+              <td pdk-table-cell pdk-typography="body-small" data-locator="nonUkLicense">
+                {{ onlinePlea?.personalDetails?.driverLicenceDetails }}
+              </td>
+            </tr>
+          </ng-template>
+        </ng-container>
       </tbody>
     </table>
 

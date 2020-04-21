@@ -308,7 +308,7 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
               pdk-padding-vertical="2"
             >
               <b>
-                National Insurance Number
+                National Insurance number
               </b>
             </div>
           </div>
@@ -322,6 +322,50 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
           >
             <div
               class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+               – 
+            </div>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div
+            class="govuk-grid-column-one-third"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              ng-reflect-vertical="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Driver licence number
+              </b>
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            class="govuk-grid-column-two-thirds"
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              data-role="defendant-driver-number"
               ng-reflect-vertical="2"
               pdk-padding-vertical="2"
             >

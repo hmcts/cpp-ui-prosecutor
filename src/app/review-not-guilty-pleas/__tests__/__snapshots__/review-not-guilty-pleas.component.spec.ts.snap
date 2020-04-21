@@ -54,25 +54,25 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         pdk-section="large"
       >
         <pdk-warning-text
-          _nghost-c6=""
+          _nghost-a-c6=""
         >
           <div
-            _ngcontent-c6=""
+            _ngcontent-a-c6=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-c6=""
+              _ngcontent-a-c6=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-c6=""
+              _ngcontent-a-c6=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-c6=""
+                _ngcontent-a-c6=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -293,25 +293,25 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
         pdk-section="large"
       >
         <pdk-warning-text
-          _nghost-c3=""
+          _nghost-a-c3=""
         >
           <div
-            _ngcontent-c3=""
+            _ngcontent-a-c3=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-c3=""
+              _ngcontent-a-c3=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-c3=""
+              _ngcontent-a-c3=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-c3=""
+                _ngcontent-a-c3=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -462,25 +462,25 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
     pdk-section="large"
   >
     <pdk-warning-text
-      _nghost-c0=""
+      _nghost-a-c0=""
     >
       <div
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
         class="govuk-warning-text"
       >
         <span
-          _ngcontent-c0=""
+          _ngcontent-a-c0=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-c0=""
+          _ngcontent-a-c0=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-c0=""
+            _ngcontent-a-c0=""
             class="govuk-warning-text__assistive"
           >
             Warning

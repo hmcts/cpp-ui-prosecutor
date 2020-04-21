@@ -1,4 +1,4 @@
-import { Case, PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult } from '../../contexts/sjp';
+import { Case, PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult, CaseNotes } from '../../contexts/sjp';
 import { EntitiesAction, EntitiesActionType } from '../actions/entities';
 import { OffenceWithdrawalReason } from '../../contexts/reference-data';
 
@@ -46,6 +46,14 @@ export const offenceWithdrawalReasonsReducer = (
 ): OffenceWithdrawalReason[] => {
   if (action.type === EntitiesActionType.LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS) {
     return action.offenceWithdrawalReasons;
+  }
+  return state;
+};
+
+export type CaseNotesState = CaseNotes;
+export const caseNotesReducer = (state: CaseNotesState = null, action: EntitiesAction): CaseNotes => {
+  if (action.type === EntitiesActionType.LOAD_CASE_NOTES_SUCCESS) {
+    return action.caseNotes;
   }
   return state;
 };

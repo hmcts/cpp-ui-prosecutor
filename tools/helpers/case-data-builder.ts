@@ -1,9 +1,25 @@
 import { Case } from '../../src/app/contexts/sjp';
+import { getFixture } from '../../tools/utils';
 
+const { prosecutorCaseData } = require('../fixtures/json/prosecutor-case-template.json');
 const { pleadOnlinePayload } = require('../fixtures/json/plead-online.json');
 
 export class CaseDataBuilder {
   constructor() {}
+
+  static createCaseDataPayload(): any {
+    const payload = JSON.parse(JSON.stringify(prosecutorCaseData));
+    return payload;
+  }
+
+  static createSjpnDocData(urn: string) {
+    return {
+      material: getFixture('docs/sjp_session_URN_SJPN.PDF'),
+      caseUrn: urn,
+      prosecutingAuthority: 'GAEAA01',
+      materialType: 'SJPN'
+    };
+  }
 
   public static buildPleadOnlinePayload(kase: Case) {
     return {

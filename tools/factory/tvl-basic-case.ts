@@ -1,9 +1,9 @@
 import { stageProsecutorCase } from '../contexts/staging';
 import { build, SYSTEM_TVL_USER } from '../utils';
-import { fetchCaseByUrn, ProsecutorCaseDataBuilder } from '../helpers';
+import { fetchCaseByUrn, TvlCaseDataBuilder } from '../helpers';
 
 export const buildTvlBasicCase = async (postedDays = 28) => {
-  const caseDataBuilder = ProsecutorCaseDataBuilder.createCaseDataForTvl(null, postedDays);
+  const caseDataBuilder = TvlCaseDataBuilder.createCaseData(null, postedDays);
 
   await stageProsecutorCase(caseDataBuilder.getData(), SYSTEM_TVL_USER);
   return await fetchCaseByUrn(caseDataBuilder.getUrn());

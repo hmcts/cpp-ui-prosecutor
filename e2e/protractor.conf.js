@@ -1,84 +1,27 @@
-const { SpecReporter } = require('jasmine-spec-reporter');
+// Protractor configuration file, see link for more information
+// https://github.com/angular/protractor/blob/master/lib/config.ts
+const protractorConfig = require('@cpp/ui.config').protractorFirefoxConfig;
+const protractorHelper = require('@cpp/ui.test-utils').protractorHelper;
 const { defaults } = require('@cpp/ui.priming');
-const path = require('path');
-const fs = require('fs');
+const { SpecReporter } = require('jasmine-spec-reporter');
+const { argv } = require('yargs');
 
-exports.config = {
-  allScriptsTimeout: 40000,
-  getPageTimeout: 10000,
-  baseUrl: 'http://localhost:4750/prosecutor/',
+exports.config = { 
+  ...protractorConfig,
+  baseUrl: 'http://localhost:4750/prosecutor',
   params: {
-    apiUrl: 'http://localhost:8181/api'
+    apiUrl: 'http://localhost:8181/api',
   },
-  capabilities: {
-    browserName: 'firefox',
-    'moz:firefoxOptions': process.argv.includes('--headless') ? { args: ['--headless'] } : {}
-  },
-  directConnect: true,
-  SELENIUM_PROMISE_MANAGER: false,
   specs: ['./src/specs/**/*.e2e-spec.ts'],
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() {}
-  },
-  plugins: [
-    {
-      package: 'protractor-screenshoter-plugin',
-      screenshotPath: 'build/e2e/screenshots',
-      screenshotOnExpect: 'failure+success',
-      screenshotOnSpec: 'failure+success',
-      withLogs: false,
-      writeReportFreq: 'asap',
-      clearFoldersBeforeTest: true
-    }
-  ],
-
-  beforeLaunch() {
+  capabilities: protractorHelper.firefoxCapability({ headless: !argv.visible }),
+  geckoDriver: null,
+  disableChecks: true,
+  async onPrepare() {
     require('ts-node').register({
-      project: require('path').join(__dirname, './tsconfig.json')
+      project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
-  },
-
-  onPrepare() {
-    jasmine.getEnv().addReporter(
-      new SpecReporter({
-        suite: {
-          displayNumber: false
-        },
-        spec: {
-          displaySuccessful: true,
-          displayFailed: true,
-          displayErrorMessages: true,
-          displayPending: true,
-          displayDuration: true,
-          displayStacktrace: true
-        },
-        summary: {
-          displaySuccessful: true,
-          displayFailed: true,
-          displayErrorMessages: true,
-          displayPending: true,
-          displayDuration: true
-        }
-      })
-    );
-
-    defaults({
-      baseUrl: browser.params.apiUrl
-    });
-
-    return browser.getProcessedConfig();
-  },
-
-  onComplete() {
-    // Create a dummy axeReport - Jenkins always looks for a report
-    // and fails if it is not present
-    const outputDirectory = './build/axeReport/';
-    const axeFilename = 'axeReport.html';
-    if(!fs.existsSync(outputDirectory, axeFilename)) {
-      fs.mkdirSync(outputDirectory);
-      fs.writeFileSync(path.resolve(outputDirectory, axeFilename), 'Dummy axe report', { encoding: 'UTF-8' });
-    }
+    const { browser } = require('protractor');
+    defaults({ baseUrl: browser.params.apiUrl });
+    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
 };

@@ -4,7 +4,8 @@ import * as fromSelectors from '../../selectors';
 import { combineReducers } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { MOCK_CASE, MOCK_PENDING_DATES_TO_AVOID, MOCK_OFFENCE_WITHDRAWAL_REASON } from './test-mock-data';
-import { MOCK_CASE_DECISION } from '../../../case-overview/__tests__/test-mock-data';
+import { MOCK_CASE_DECISION, MOCK_CASE_NOTES } from '../../../case-overview/__tests__/test-mock-data';
+import { getCaseNotes } from 'src/app/case-overview/case-overview.selectors';
 
 describe('selectors', () => {
   const reducer = combineReducers({ ...reducers });
@@ -60,6 +61,15 @@ describe('selectors', () => {
     it('should select offences withdrawal request reasons from the store', () => {
       const state = createState([new fromActions.LoadOffenceWithdrawalReasonsSuccess(MOCK_OFFENCE_WITHDRAWAL_REASON)]);
       expect(fromSelectors.getOffenceWithdrawalRequestReasons(state)).toMatchSnapshot();
+    });
+  });
+
+  describe('getCaseNotes', () => {
+    it('should select and sort the case notes in desc', () => {
+      const state = createState([new fromActions.LoadCaseNotesSuccess(MOCK_CASE_NOTES)]);
+      expect(getCaseNotes(state)).toMatchSnapshot();
+      expect(new Date(getCaseNotes(state).notes[0].addedAt) >
+        new Date(getCaseNotes(state).notes[0].addedAt));
     });
   });
 });

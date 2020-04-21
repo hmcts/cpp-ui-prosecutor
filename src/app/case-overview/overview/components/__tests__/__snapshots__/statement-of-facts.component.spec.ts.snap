@@ -20,17 +20,17 @@ exports[`StatementOfFactsComponent should compile correctly 1`] = `
       pdk-margin-bottom="8"
     >
       <pdk-foldable-text
-        _nghost-c0=""
+        _nghost-a-c0=""
         class="govuk-body-m"
         ng-reflect-type="body-medium"
         pdk-typography="body-medium"
       >
         <div
-          _ngcontent-c0=""
+          _ngcontent-a-c0=""
           class="pdk-foldable"
         >
           <span
-            _ngcontent-c0=""
+            _ngcontent-a-c0=""
             aria-expanded="false"
             class="pdk-foldable__content"
             id="pdk-foldable-text-1"

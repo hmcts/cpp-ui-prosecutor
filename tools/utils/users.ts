@@ -1,5 +1,13 @@
 import { User } from '@cpp/ui.priming/dist/interfaces/users-groups';
 
+export const WARWICKSHIRE_POLICE_USER: User = {
+  userId: 'c2a3f402-7b77-4b0a-b284-454ff0c58e06',
+  firstName: 'Glenn',
+  lastName: 'Thornton',
+  email: 'glenn@test.police.net',
+  source: 'CPP'
+};
+
 export const TFL_USER: User = {
   userId: '1bf60455-11c9-427e-b087-d8331dcea44f',
   firstName: 'David',
@@ -53,5 +61,13 @@ export const LEGAL_ADVISER_2 = {
   firstName: 'Evan',
   lastName: 'Roberts',
   email: 'evan@test.hmcts.net',
+  source: 'CPP'
+};
+
+export const SYSTEM_DVLA_USER: User = {
+  userId: '5d92bed6-8149-4926-9e4e-9dcfd7f319dc',
+  firstName: 'cppidvlaconsumer',
+  lastName: 'system',
+  email: 'cppidvlaconsumer@system.gov',
   source: 'CPP'
 };

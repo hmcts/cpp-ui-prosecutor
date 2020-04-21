@@ -10,7 +10,8 @@ import {
   DismissOffenceDecision,
   FinancialPenaltyOffenceDecision,
   DischargeOffenceDecision,
-  OnlinePlea
+  OnlinePlea,
+  CaseNotes
 } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
@@ -458,3 +459,51 @@ export const MOCK_ONLINE_PLEA_DETAIL: OnlinePlea = {
     interpreterRequired: true
   }
 };
+
+export const MOCK_CASE_NOTES = {
+  caseId: '0f03e10f-d9a5-47f9-92ba-a8e220448451',
+  notes: [
+    {
+      noteId: '751e8907-2c67-4f02-94b7-309a39ef2030',
+      noteType: 'ADJOURNMENT',
+      noteText: 'Not enough documents',
+      addedAt: '2019-07-04T10:53:15.149',
+      authorFirstName: 'Erica',
+      authorLastName: 'Wilson',
+      decisionId: '009879ca-7817-42ed-b742-c782316936c7'
+    },
+    {
+      noteId: '6614df24-d9bb-4bcd-9a3f-57c436177d67',
+      noteType: 'ADJOURNMENT',
+      noteText: 'Not enough documents',
+      addedAt: '2019-07-02T21:26:21.784',
+      authorFirstName: 'Erica',
+      authorLastName: 'Wilson',
+      decisionId: 'cb42e4e9-a23e-45de-8e62-a15e6ed948ac'
+    }
+  ]
+} as CaseNotes;
+
+export const MOCK_CASE_MANAGEMENT_NOTES = {
+  caseId: '0f03e10f-d9a5-47f9-92ba-a8e220448451',
+  notes: [
+    {
+      noteId: '751e8907-2c67-4f02-94b7-309a39ef2030',
+      noteType: 'CASE_MANAGEMENT',
+      noteText: 'Not enough documents',
+      addedAt: '2019-07-04T10:53:15.149',
+      authorFirstName: 'Erica',
+      authorLastName: 'Wilson',
+      decisionId: '009879ca-7817-42ed-b742-c782316936c7'
+    },
+    {
+      noteId: '6614df24-d9bb-4bcd-9a3f-57c436177d67',
+      noteType: 'CASE_MANAGEMENT',
+      noteText: 'Not enough documents',
+      addedAt: '2019-07-02T21:26:21.784',
+      authorFirstName: 'Erica',
+      authorLastName: 'Wilson',
+      decisionId: 'cb42e4e9-a23e-45de-8e62-a15e6ed948ac'
+    }
+  ]
+} as CaseNotes;

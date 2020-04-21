@@ -1,11 +1,11 @@
-import { createBasicTvlCase, createTvlCaseWithDoc } from '../../../tools/factory';
-import { TVL_USER } from '../../../tools/utils';
-import { navigate } from '../util';
-import { CaseOverviewPage } from '../pages';
+import { createBasicTvlCase, createTvlCaseWithDoc } from '../../../../tools/factory';
+import { TVL_USER } from '../../../../tools/utils';
+import { navigate } from '../../util';
+import { CaseOverviewPage } from '../../pages';
 import { by, element } from 'protractor';
-import { DatesToAvoidPage } from '../pages/case-overview/dates-to-avoid.page';
+import { DatesToAvoidPage } from '../../pages/case-overview/dates-to-avoid.page';
 
-describe('Prosecutor', () => {
+describe('TVL', () => {
   describe('Case overview', () => {
     let caseOverviewPage: CaseOverviewPage;
     let kase;
@@ -38,9 +38,6 @@ describe('Prosecutor', () => {
       expect(await caseOverviewPage.defendantEmail.getText()).toContain('john@email.com');
 
       expect(await caseOverviewPage.offenceHeadings.get(0).getText()).toContain('Offence');
-      expect(await caseOverviewPage.offenceTitles.get(0).getText()).toContain(
-        'Obstruct person executing search warrant for TV receiver'
-      );
     });
 
     it('should be able submit court dates to avoid', async () => {
@@ -85,14 +82,6 @@ describe('Prosecutor', () => {
 
       expect(await multiOffenceOverviewPage.offenceHeadings.get(0).getText()).toContain('Offence 1');
       expect(await multiOffenceOverviewPage.offenceHeadings.get(1).getText()).toContain('Offence 2');
-
-      expect(await multiOffenceOverviewPage.offenceTitles.get(0).getText()).toContain(
-        'Obstruct person executing search warrant for TV receiver'
-      );
-
-      expect(await multiOffenceOverviewPage.offenceTitles.get(1).getText()).toContain(
-        'TV set with intent another use install without a licence'
-      );
     });
   });
 });

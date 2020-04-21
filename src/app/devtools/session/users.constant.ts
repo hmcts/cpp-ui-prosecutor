@@ -6,10 +6,6 @@ export interface User {
 
 export const mockUsers: User[] = [
   {
-    id: '1bf60455-11c9-427e-b087-d8331dcea44f',
-    displayName: 'ATCM - Court Admin'
-  },
-  {
     id: '85435116-0f4b-4616-ae9a-9954ed1c3ee1',
     displayName: 'Trevor Lawson (Tvl)',
     default: true
@@ -21,6 +17,10 @@ export const mockUsers: User[] = [
   {
     id: '8dcc4c93-2fe4-44aa-896e-511a28da0a70',
     displayName: 'Frank Michaels (DVLA)'
+  },
+  {
+    id: 'c2a3f402-7b77-4b0a-b284-454ff0c58e06',
+    displayName: 'Glenn Thornton (Warwickshire Police)'
   },
   {
     id: 'a9448185-672e-4aea-94d6-5988355ed459',

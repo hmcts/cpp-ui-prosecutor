@@ -45,17 +45,17 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-c0=""
+      _nghost-a-c0=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c0=""
+        _ngcontent-a-c0=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c0=""
+          _ngcontent-a-c0=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-1"
@@ -150,17 +150,17 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-c10=""
+      _nghost-a-c10=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c10=""
+        _ngcontent-a-c10=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c10=""
+          _ngcontent-a-c10=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-6"
@@ -254,17 +254,17 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       offence title 2
     </h3>
     <pdk-foldable-text
-      _nghost-c8=""
+      _nghost-a-c8=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c8=""
+        _ngcontent-a-c8=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c8=""
+          _ngcontent-a-c8=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-5"
@@ -356,17 +356,17 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-c2=""
+      _nghost-a-c2=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c2=""
+        _ngcontent-a-c2=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c2=""
+          _ngcontent-a-c2=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-2"
@@ -463,17 +463,17 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-c6=""
+      _nghost-a-c6=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c6=""
+        _ngcontent-a-c6=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c6=""
+          _ngcontent-a-c6=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-4"
@@ -565,17 +565,17 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-c4=""
+      _nghost-a-c4=""
       class="govuk-body-m"
       ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-c4=""
+        _ngcontent-a-c4=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-c4=""
+          _ngcontent-a-c4=""
           aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-3"

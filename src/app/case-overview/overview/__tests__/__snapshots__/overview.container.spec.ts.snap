@@ -3,6 +3,7 @@
 exports[`OverviewContainer should compile correctly 1`] = `
 <case-overview-container
   caseDecisions$={[Function Store]}
+  caseNotes$={[Function Store]}
   defendant$={[Function Store]}
   displayDatesToAvoidUpdateFailedBanner$={[Function Store]}
   displayOffencesWithdrawnBanner$={[Function Store]}
@@ -310,6 +311,9 @@ exports[`OverviewContainer should compile correctly 1`] = `
       "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
     }
   ]
+    </div>
+    <div>
+      caseNotes: null
     </div>
     <div>
       caseDecisions: [

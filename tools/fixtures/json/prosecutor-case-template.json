@@ -4,8 +4,7 @@
       "urn": "TVL12345TVL004",
       "prosecutingAuthority": "GAEAA01",
       "informant": "Adam",
-      "writtenChargePostingDate": "2018-03-20",
-      "additionalNewProperty": "test"
+      "writtenChargePostingDate": "2018-03-20"
     },
     "defendant": {
       "prosecutorDefendantId": "123",
@@ -33,7 +32,7 @@
         },
         "occupation": "TA",
         "occupationCode": 666,
-        "driverNumber": "AS",
+        "driverNumber": "MORGA753116SM9IJ",
         "address": {
           "address1": "Flat 55",
           "address2": "1 Oxford Road",

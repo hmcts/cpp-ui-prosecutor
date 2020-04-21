@@ -12,6 +12,8 @@ import {
     SavedDecisionInformationPipeModule
 } from '../../../../shared/pipes';
 import { MockModule } from '../../../../shared/mock-components/mock.module';
+import { NoSeparatePenaltyOffenceDecisionComponent } from '../no-separate-penalty-decision.component';
+import { MockNoSeparatePenaltyDecisionComponent } from 'src/app/shared/mock-components/mock-no-separate-penalty-decision.component';
 
 describe('CaseDecisionsDetailsComponent', () => {
     let fixture: ComponentFixture<TestCaseDecisionsDetailsComponent>;
@@ -20,7 +22,8 @@ describe('CaseDecisionsDetailsComponent', () => {
         TestBed.configureTestingModule({
             declarations: [
                 CaseDecisionsDetailsComponent,
-                TestCaseDecisionsDetailsComponent
+                TestCaseDecisionsDetailsComponent,
+                NoSeparatePenaltyOffenceDecisionComponent
             ],
             imports: [
                 CommonModule,
@@ -33,6 +36,11 @@ describe('CaseDecisionsDetailsComponent', () => {
                 VerdictTypePipeModule,
                 MockModule
             ]
+        }).overrideModule(MockModule, {
+          remove: {
+            declarations: [MockNoSeparatePenaltyDecisionComponent],
+            exports: [MockNoSeparatePenaltyDecisionComponent]
+          }
         });
         fixture = TestBed.createComponent(TestCaseDecisionsDetailsComponent);
     });

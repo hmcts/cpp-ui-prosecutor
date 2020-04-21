@@ -7,7 +7,9 @@ import {
   DefendantDetailsUpdatesState,
   defendantDetailsUpdatesReducer,
   OffenceWithdrawalReasonsState,
-  offenceWithdrawalReasonsReducer
+  offenceWithdrawalReasonsReducer,
+  caseNotesReducer,
+  CaseNotesState
 } from './entities.reducer';
 
 export interface State {
@@ -16,6 +18,7 @@ export interface State {
   readonly pleadedNotGuiltyCases: PleadedNotGuiltyCasesState;
   readonly defendantDetailsUpdates: DefendantDetailsUpdatesState;
   readonly offenceWithdrawalReasons: OffenceWithdrawalReasonsState;
+  readonly caseNotes: CaseNotesState;
 }
 
 export const reducers = {
@@ -23,5 +26,6 @@ export const reducers = {
   case: caseReducer,
   pleadedNotGuiltyCases: pleadedNotGuiltyReducer,
   defendantDetailsUpdates: defendantDetailsUpdatesReducer,
-  offenceWithdrawalReasons: offenceWithdrawalReasonsReducer
+  offenceWithdrawalReasons: offenceWithdrawalReasonsReducer,
+  caseNotes: caseNotesReducer
 };

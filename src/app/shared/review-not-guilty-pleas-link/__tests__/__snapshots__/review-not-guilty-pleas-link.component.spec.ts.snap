@@ -7,25 +7,25 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
   <p>
     
     <pdk-warning-text
-      _nghost-c3=""
+      _nghost-a-c3=""
     >
       <div
-        _ngcontent-c3=""
+        _ngcontent-a-c3=""
         class="govuk-warning-text"
       >
         <span
-          _ngcontent-c3=""
+          _ngcontent-a-c3=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-c3=""
+          _ngcontent-a-c3=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-c3=""
+            _ngcontent-a-c3=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -64,25 +64,25 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with si
   <p>
     
     <pdk-warning-text
-      _nghost-c2=""
+      _nghost-a-c2=""
     >
       <div
-        _ngcontent-c2=""
+        _ngcontent-a-c2=""
         class="govuk-warning-text"
       >
         <span
-          _ngcontent-c2=""
+          _ngcontent-a-c2=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-c2=""
+          _ngcontent-a-c2=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-c2=""
+            _ngcontent-a-c2=""
             class="govuk-warning-text__assistive"
           >
             Warning

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../../contexts/sjp';
+import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-overview',
@@ -95,13 +95,18 @@ import { Case, CaseDecision, Defendant, Offence, OffenceDecision } from '../../.
       </pdk-grid>
     </pdk-grid>
 
-    <div pdk-margin-top="5" pdk-margin-bottom="0" *ngIf="caseDecisions?.length">
+    <div pdk-margin-top="5" pdk-margin-bottom="0" *ngIf="showInformationTabs">
       <pdk-grid container>
         <pdk-grid two-thirds>
           <pdk-tabs>
-            <pdk-tab heading="Decisions" [selected]="true">
+            <pdk-tab *ngIf="showDecisionsTab" heading="Decisions" [selected]="showDecisionsTab">
               <case-decisions [caseDecisionsWithOffenceDecisions]="caseDecisions"></case-decisions>
             </pdk-tab>
+            <div *ngIf="showNotesTab">
+              <pdk-tab heading="Notes" [selected]="!showDecisionsTab" data-locator="case-notes-tab">
+                <case-notes [caseNotes]="caseNotes"></case-notes>
+              </pdk-tab>
+            </div>
           </pdk-tabs>
         </pdk-grid>
       </pdk-grid>
@@ -115,11 +120,23 @@ export class OverviewComponent implements OnInit {
   @Input() displayOffencesWithdrawnBanner: boolean;
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   @Input() caseDecisions: CaseDecision[];
+  @Input() caseNotes: CaseNotes;
 
   showSideBar: boolean;
+
+  get showInformationTabs(): boolean {
+    return this.showNotesTab || this.showDecisionsTab;
+  }
+
+  get showDecisionsTab(): boolean {
+    return this.caseDecisions && this.caseDecisions.length > 0;
+  }
+
+  get showNotesTab(): boolean {
+    return this.caseNotes && this.caseNotes.notes && this.caseNotes.notes.length > 0;
+  }
 
   ngOnInit(): void {
     this.showSideBar = (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived;
   }
-
 }

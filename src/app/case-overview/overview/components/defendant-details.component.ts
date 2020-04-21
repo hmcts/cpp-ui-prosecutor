@@ -87,12 +87,25 @@ import { PersonalDetails } from '../../../contexts/sjp';
     <pdk-grid container>
       <pdk-grid one-third>
         <div pdk-padding-vertical="2">
-          <b>National Insurance Number</b>
+          <b>National Insurance number</b>
         </div>
       </pdk-grid>
       <pdk-grid two-thirds>
         <div pdk-padding-vertical="2">
           {{ defendantDetails.nationalInsuranceNumber | ifEmpty: '–' }}
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+
+    <pdk-grid container>
+      <pdk-grid one-third>
+        <div pdk-padding-vertical="2">
+          <b>Driver licence number</b>
+        </div>
+      </pdk-grid>
+      <pdk-grid two-thirds>
+        <div pdk-padding-vertical="2" data-role="defendant-driver-number">
+          {{ defendantDetails.driverNumber | ifEmpty: '–' }}
         </div>
       </pdk-grid>
     </pdk-grid>

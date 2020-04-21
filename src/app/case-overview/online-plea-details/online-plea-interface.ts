@@ -9,8 +9,13 @@ import {
 export interface OnlinePleaUi extends OnlinePlea {
   pleaDetails: PleaDetailsUi;
   onlinePleaDetails: OnlinePleaDetailUi[];
-  personalDetails: OnlinePleaPersonalDetails;
+  personalDetails: OnlinePleaPersonalDetailsUi;
   employer: OnlinePleaEmployer;
+}
+
+export interface OnlinePleaPersonalDetailsUi extends OnlinePleaPersonalDetails {
+  hasDriverLicense: boolean;
+  hasUkDriverLicense: boolean;
 }
 
 export interface PleaDetailsUi extends PleaDetails {
