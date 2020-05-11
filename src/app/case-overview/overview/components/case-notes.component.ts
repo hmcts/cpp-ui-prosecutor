@@ -12,12 +12,12 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
             <div pdk-margin-left="2">
               <div pdk-typography="heading-medium">
                 {{ checkCaseNoteType(caseNote.noteType) }}
-                <br>
+                <br />
                 <span pdk-text-colour="grey-1" pdk-typography="body-medium">
-                  {{ caseNote.addedAt | formatDate: 'd MMMM y' }} at {{ caseNote.addedAt | formatDate: 'h:mma' }}
-                  by {{
+                  {{ caseNote.addedAt | formatDate: 'd MMMM y' }} at {{ caseNote.addedAt | formatDate: 'h:mma' }} by
+                  {{
                     { firstName: caseNote.authorFirstName, lastName: caseNote.authorLastName }
-                    | firstLastName: false:false
+                      | firstLastName: false:false
                   }}
                 </span>
               </div>

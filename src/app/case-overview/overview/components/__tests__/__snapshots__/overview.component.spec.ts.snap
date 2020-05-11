@@ -236,94 +236,97 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -424,32 +427,32 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -471,33 +474,33 @@ exports[`OverviewComponent should compile correctly 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -515,20 +518,21 @@ exports[`OverviewComponent should compile correctly 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -547,10 +551,10 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c3=""
+                _nghost-a-c2=""
               >
                 <div
-                  _ngcontent-a-c3=""
+                  _ngcontent-a-c2=""
                   class="pdk-related"
                 >
                   
@@ -943,70 +947,73 @@ exports[`OverviewComponent should compile correctly 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -1087,33 +1094,34 @@ exports[`OverviewComponent should compile correctly 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -1360,94 +1368,97 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -1548,32 +1559,32 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -1595,33 +1606,33 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -1639,20 +1650,21 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -2001,70 +2013,73 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -2145,33 +2160,34 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -2418,94 +2434,97 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -2606,32 +2625,32 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -2653,33 +2672,33 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -2697,20 +2716,21 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -3059,70 +3079,73 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -3203,33 +3226,34 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -3467,27 +3491,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             >
               
               <pdk-warning-text
-                _nghost-a-c41=""
+                _nghost-a-c40=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c41=""
+                  _ngcontent-a-c40=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c41=""
+                      _ngcontent-a-c40=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3498,27 +3522,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-a-c41=""
+                _nghost-a-c40=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c41=""
+                  _ngcontent-a-c40=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c41=""
+                      _ngcontent-a-c40=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3529,27 +3553,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-a-c41=""
+                _nghost-a-c40=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c41=""
+                  _ngcontent-a-c40=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c41=""
+                    _ngcontent-a-c40=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c41=""
+                      _ngcontent-a-c40=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3566,94 +3590,97 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -3754,32 +3781,32 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -3801,33 +3828,33 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -3845,20 +3872,21 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -3877,10 +3905,10 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c38=""
+                _nghost-a-c37=""
               >
                 <div
-                  _ngcontent-a-c38=""
+                  _ngcontent-a-c37=""
                   class="pdk-related"
                 >
                   
@@ -4122,70 +4150,73 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -4266,33 +4297,34 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -4578,94 +4610,97 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -4766,32 +4801,32 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -4813,33 +4848,33 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -4857,20 +4892,21 @@ exports[`OverviewComponent should compile correctly with personal detail change 
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -4889,10 +4925,10 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c45=""
+                _nghost-a-c44=""
               >
                 <div
-                  _ngcontent-a-c45=""
+                  _ngcontent-a-c44=""
                   class="pdk-related"
                 >
                   
@@ -5285,70 +5321,73 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -5429,33 +5468,34 @@ exports[`OverviewComponent should compile correctly with personal detail change 
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -5702,94 +5742,97 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -5890,32 +5933,32 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -5937,33 +5980,33 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -5981,20 +6024,21 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -6013,10 +6057,10 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c31=""
+                _nghost-a-c30=""
               >
                 <div
-                  _ngcontent-a-c31=""
+                  _ngcontent-a-c30=""
                   class="pdk-related"
                 >
                   
@@ -6264,70 +6308,73 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -6408,33 +6455,34 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -6681,94 +6729,97 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -6869,32 +6920,32 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -6916,33 +6967,33 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -6960,20 +7011,21 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -6992,10 +7044,10 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c24=""
+                _nghost-a-c23=""
               >
                 <div
-                  _ngcontent-a-c24=""
+                  _ngcontent-a-c23=""
                   class="pdk-related"
                 >
                   
@@ -7235,70 +7287,73 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -7379,33 +7434,34 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -7691,94 +7747,97 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -7879,32 +7938,32 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -7926,33 +7985,33 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -7970,20 +8029,21 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -8002,10 +8062,10 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c52=""
+                _nghost-a-c51=""
               >
                 <div
-                  _ngcontent-a-c52=""
+                  _ngcontent-a-c51=""
                   class="pdk-related"
                 >
                   
@@ -8398,70 +8458,73 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Decisions 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  <pdk-tab
-                    heading="Decisions"
-                    ng-reflect-heading="Decisions"
-                    ng-reflect-selected="true"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-decisions
-                        ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
-                          caseDecisionsWithOffenceDecisions: [
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          
+                          
+                           Decisions 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <pdk-tab
+                      heading="Decisions"
+                      ng-reflect-heading="Decisions"
+                      ng-reflect-selected="true"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        role="tabpanel"
+                      >
+                        
+                        <case-decisions
+                          ng-reflect-case-decisions-with-offence-decisions="[object Object]"
+                        >
+                          <div>
+                            caseDecisionsWithOffenceDecisions: [
     {
       "id": "mock-case-decision-1",
       "session": {
@@ -8542,33 +8605,34 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
       ]
     }
   ]
-                        </div>
-                      </case-decisions>
-                    </section>
-                  </pdk-tab>
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="false"
-                    >
-                      <section
-                        aria-hidden="true"
-                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
-                        >
-                          case notes
-                        </case-notes>
+                          </div>
+                        </case-decisions>
                       </section>
                     </pdk-tab>
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="false"
+                      >
+                        <section
+                          aria-hidden="true"
+                          class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>
@@ -8854,94 +8918,97 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               pdk-margin-vertical="8"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        
-                        
-                         Case details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="1"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Defendant details 
-                        
-                        
-                      </a>
-                    </li>
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
-                    >
-                      <a
-                        aria-controls="2"
-                        aria-selected="false"
-                        class="govuk-tabs__tab"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        
-                        
-                         Documents 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <pdk-tab
-                    heading="Case details"
-                    ng-reflect-heading="Case details"
-                  >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="0"
-                      role="tabpanel"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
                       
-                      <case-details
-                        ng-reflect-kase="[object Object]"
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        <div>
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
+                        >
                           
-                        </div>
-                        <div>
                           
-                        </div>
-                        <div>
-                          {
+                           Case details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="1"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Defendant details 
+                          
+                          
+                        </a>
+                      </li>
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
+                      >
+                        <a
+                          aria-controls="2"
+                          aria-selected="false"
+                          class="govuk-tabs__tab"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="-1"
+                        >
+                          
+                          
+                           Documents 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <pdk-tab
+                      heading="Case details"
+                      ng-reflect-heading="Case details"
+                    >
+                      <section
+                        aria-hidden="false"
+                        class="govuk-tabs__panel"
+                        id="0"
+                        role="tabpanel"
+                      >
+                        
+                        <case-details
+                          ng-reflect-kase="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "id": "case-id-test",
     "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
@@ -9042,32 +9109,32 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
     "status": "COMPLETED",
     "listedInCriminalCourts": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </case-details>
-                    </section>
-                  </pdk-tab>
-                  <pdk-tab
-                    heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="1"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </case-details>
+                      </section>
+                    </pdk-tab>
+                    <pdk-tab
+                      heading="Defendant details"
+                      ng-reflect-heading="Defendant details"
                     >
-                      
-                      <defendant-details
-                        ng-reflect-defendant-details="[object Object]"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        id="1"
+                        role="tabpanel"
                       >
-                        <div>
-                          
-                        </div>
-                        <div>
-                          {
+                        
+                        <defendant-details
+                          ng-reflect-defendant-details="[object Object]"
+                        >
+                          <div>
+                            
+                          </div>
+                          <div>
+                            {
     "title": "Mr",
     "firstName": "Guy",
     "lastName": "Smith",
@@ -9089,33 +9156,33 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
     "addressChanged": false,
     "nameChanged": false
   }
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                      </defendant-details>
-                    </section>
-                  </pdk-tab>
-                  
-                  <pdk-tab
-                    heading="Documents"
-                    ng-reflect-heading="Documents"
-                  >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      role="tabpanel"
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                        </defendant-details>
+                      </section>
+                    </pdk-tab>
+                    
+                    <pdk-tab
+                      heading="Documents"
+                      ng-reflect-heading="Documents"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
+                      <section
+                        aria-hidden="true"
+                        class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                        role="tabpanel"
                       >
-                        <div>
-                          [
+                        
+                        <document-list
+                          ng-reflect-case-id="case-id-test"
+                          ng-reflect-documents="[object Object],[object Object"
+                        >
+                          <div>
+                            [
     {
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -9133,20 +9200,21 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
       "metadata": {}
     }
   ]
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          
-                        </div>
-                        <div>
-                          case-id-test
-                        </div>
-                      </document-list>
-                    </section>
-                  </pdk-tab>
-                </div>
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            
+                          </div>
+                          <div>
+                            case-id-test
+                          </div>
+                        </document-list>
+                      </section>
+                    </pdk-tab>
+                  </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </div>
@@ -9165,10 +9233,10 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c59=""
+                _nghost-a-c58=""
               >
                 <div
-                  _ngcontent-a-c59=""
+                  _ngcontent-a-c58=""
                   class="pdk-related"
                 >
                   
@@ -9561,58 +9629,62 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               class="govuk-grid-column-two-thirds"
             >
               <pdk-tabs>
-                <div
-                  class="js-enabled govuk-tabs"
+                <pdk-tabs-container
+                  ng-reflect-vertical="false"
                 >
-                  <ul
-                    class="govuk-tabs__list"
-                    role="tablist"
+                  <div
+                    class="js-enabled govuk-tabs"
                   >
-                    
-                    <li
-                      class="govuk-tabs__list-item"
-                      role="presentation"
+                    <ul
+                      class="govuk-tabs__list"
+                      role="tablist"
                     >
-                      <a
-                        aria-controls="0"
-                        aria-selected="true"
-                        class="govuk-tabs__tab govuk-tabs__tab--selected"
-                        href="javascript:void(0);"
-                        role="tab"
-                        tabindex="0"
+                      
+                      <li
+                        class="govuk-tabs__list-item"
+                        role="presentation"
                       >
-                        
-                        
-                         Notes 
-                        
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  
-                  
-                  <div>
-                    <pdk-tab
-                      data-locator="case-notes-tab"
-                      heading="Notes"
-                      ng-reflect-heading="Notes"
-                      ng-reflect-selected="true"
-                    >
-                      <section
-                        aria-hidden="false"
-                        class="govuk-tabs__panel"
-                        role="tabpanel"
-                      >
-                        
-                        <case-notes
-                          ng-reflect-case-notes="[object Object]"
+                        <a
+                          aria-controls="0"
+                          aria-selected="true"
+                          class="govuk-tabs__tab govuk-tabs__tab--selected"
+                          href="javascript:void(0);"
+                          role="tab"
+                          tabindex="0"
                         >
-                          case notes
-                        </case-notes>
-                      </section>
-                    </pdk-tab>
+                          
+                          
+                           Notes 
+                          
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    
+                    <div>
+                      <pdk-tab
+                        data-locator="case-notes-tab"
+                        heading="Notes"
+                        ng-reflect-heading="Notes"
+                        ng-reflect-selected="true"
+                      >
+                        <section
+                          aria-hidden="false"
+                          class="govuk-tabs__panel"
+                          role="tabpanel"
+                        >
+                          
+                          <case-notes
+                            ng-reflect-case-notes="[object Object]"
+                          >
+                            case notes
+                          </case-notes>
+                        </section>
+                      </pdk-tab>
+                    </div>
                   </div>
-                </div>
+                </pdk-tabs-container>
               </pdk-tabs>
             </div>
           </pdk-grid>

@@ -11,7 +11,14 @@ describe('Case note component', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CaseNotesComponent],
-      imports: [PdkFoldableTextModule, CommonModule, PdkDividerModule, PdkGridModule, FormatDatePipeModule, FirstLastNamePipeModule]
+      imports: [
+        PdkFoldableTextModule,
+        CommonModule,
+        PdkDividerModule,
+        PdkGridModule,
+        FormatDatePipeModule,
+        FirstLastNamePipeModule
+      ]
     });
     fixture = TestBed.createComponent(CaseNotesComponent);
   });

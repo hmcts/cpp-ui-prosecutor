@@ -3,7 +3,10 @@ import {
   WithdrawOffenceDecision,
   AdjournOffenceDecision,
   CourtReferralOffenceDecision,
-  DismissOffenceDecision, ReferredToOpenCourtOffenceDecision, OffenceDecision, NoSeparatePenaltyOffenceDecision
+  DismissOffenceDecision,
+  ReferredToOpenCourtOffenceDecision,
+  OffenceDecision,
+  NoSeparatePenaltyOffenceDecision
 } from 'src/app/contexts/sjp';
 
 export const MOCK_CASE_DECISION: CaseDecision = {
@@ -51,45 +54,41 @@ export const MOCK_CASE_DECISION: CaseDecision = {
 };
 
 export const MOCK_CASE_DECISSION_WITH_LEGACY_OFFENCE_DECISION: CaseDecision = {
-
-
-      id: '79bc1d15-0608-4000-9843-706452a09fc7',
-      session: {
-        sessionId: '9917917f-ab2e-4be6-8e89-97f864450c3e',
-        legalAdviserUserId: '31ec3a16-8721-498c-8da5-f099390ee254',
-        courtHouseCode: 'B01LY00',
-        courtHouseName: 'Lavender Hill Magistrates\' Court',
-        localJusticeAreaNationalCourtCode: '2577',
-        startedAt: '2018-12-14T11:16:50.970Z',
-        endedAt: '2018-12-14T12:10:28.259Z',
-        sessionType: 'DELEGATED_POWERS',
-        legalAdviser: {
-          userId: '31ec3a16-8721-498c-8da5-f099390ee254',
-          firstName: 'Erica',
-          lastName: 'Wilson'
-        }
-      },
-      savedAt: '2018-12-14T11:17:03.972Z',
-      offenceDecisions: [
-        {
-          offenceId: 'c92d4210-1ce2-49dd-81c1-2542ce4edafa',
-          decisionType: 'REFERRED_TO_OPEN_COURT',
-          verdict: 'NO_VERDICT',
-          magistratesCourt: 'Lavender Hill Magistrates\' Court',
-          reason: 'For trial',
-          referredToCourt: 'South West London Magistrates\' Court',
-          referredToDateTime: '2018-12-15T11:16:00.000Z',
-          referredToRoom: 1
-        } as ReferredToOpenCourtOffenceDecision,
-        {
-          offenceId: 'offenceId2',
-          decisionType: 'REFERRED_FOR_FUTURE_SJP_SESSION',
-          verdict: 'NO_VERDICT',
-        } as OffenceDecision
-      ]
-
+  id: '79bc1d15-0608-4000-9843-706452a09fc7',
+  session: {
+    sessionId: '9917917f-ab2e-4be6-8e89-97f864450c3e',
+    legalAdviserUserId: '31ec3a16-8721-498c-8da5-f099390ee254',
+    courtHouseCode: 'B01LY00',
+    courtHouseName: 'Lavender Hill Magistrates\' Court',
+    localJusticeAreaNationalCourtCode: '2577',
+    startedAt: '2018-12-14T11:16:50.970Z',
+    endedAt: '2018-12-14T12:10:28.259Z',
+    sessionType: 'DELEGATED_POWERS',
+    legalAdviser: {
+      userId: '31ec3a16-8721-498c-8da5-f099390ee254',
+      firstName: 'Erica',
+      lastName: 'Wilson'
+    }
+  },
+  savedAt: '2018-12-14T11:17:03.972Z',
+  offenceDecisions: [
+    {
+      offenceId: 'c92d4210-1ce2-49dd-81c1-2542ce4edafa',
+      decisionType: 'REFERRED_TO_OPEN_COURT',
+      verdict: 'NO_VERDICT',
+      magistratesCourt: 'Lavender Hill Magistrates\' Court',
+      reason: 'For trial',
+      referredToCourt: 'South West London Magistrates\' Court',
+      referredToDateTime: '2018-12-15T11:16:00.000Z',
+      referredToRoom: 1
+    } as ReferredToOpenCourtOffenceDecision,
+    {
+      offenceId: 'offenceId2',
+      decisionType: 'REFERRED_FOR_FUTURE_SJP_SESSION',
+      verdict: 'NO_VERDICT'
+    } as OffenceDecision
+  ]
 };
-
 
 export const MOCK_NO_SEPARATE_CASE_DECISION: CaseDecision = {
   id: 'mock-case-decision-1',
@@ -118,5 +117,3 @@ export const MOCK_NO_SEPARATE_CASE_DECISION: CaseDecision = {
     } as NoSeparatePenaltyOffenceDecision
   ]
 };
-
-

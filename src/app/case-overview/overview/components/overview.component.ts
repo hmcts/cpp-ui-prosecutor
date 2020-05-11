@@ -73,8 +73,13 @@ import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../cont
             </ng-container>
             <ng-container *ngIf="kase.onlinePleaReceived">
               <h1 pdk-typography="heading-medium" pdk-margin-top="3" pdk-margin-bottom="1">Online plea</h1>
-              <a href="javascript: void(0)" pdk-link pdk-section="small"
-                [routerLink]="['online-plea-details']" data-role="online-plea-details">
+              <a
+                href="javascript: void(0)"
+                pdk-link
+                pdk-section="small"
+                [routerLink]="['online-plea-details']"
+                data-role="online-plea-details"
+              >
                 Defendant's online plea
               </a>
             </ng-container>

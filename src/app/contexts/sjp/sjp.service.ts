@@ -100,7 +100,7 @@ export class SjpService {
   getDefendantsOnlinePlea(caseId: string, defendantId: string): Observable<OnlinePlea> {
     return this.http.query({
       url: `${this.query}/cases/${caseId}/defendants/${defendantId}/defendants-online-plea`,
-      requestType: 'application/vnd.sjp.query.defendants-online-plea+json',
+      requestType: 'application/vnd.sjp.query.defendants-online-plea+json'
     });
   }
 

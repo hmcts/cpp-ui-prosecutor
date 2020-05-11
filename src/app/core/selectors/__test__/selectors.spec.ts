@@ -68,8 +68,7 @@ describe('selectors', () => {
     it('should select and sort the case notes in desc', () => {
       const state = createState([new fromActions.LoadCaseNotesSuccess(MOCK_CASE_NOTES)]);
       expect(getCaseNotes(state)).toMatchSnapshot();
-      expect(new Date(getCaseNotes(state).notes[0].addedAt) >
-        new Date(getCaseNotes(state).notes[0].addedAt));
+      expect(new Date(getCaseNotes(state).notes[0].addedAt) > new Date(getCaseNotes(state).notes[0].addedAt));
     });
   });
 });

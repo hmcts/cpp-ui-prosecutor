@@ -10,8 +10,12 @@ import { DISQUALIFICATION_DECISION_TEXT } from './disqualification/disqualificat
   template: `
     <div *ngIf="offenceDecision.decisionType === 'DISCHARGE'">{{ dischargeType }}</div>
     <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && fine">Fine {{ fine }}</div>
-    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty">Excise penalty {{ excisePenalty }}</div>
-    <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty">Back duty {{ backDuty }}</div>
+    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty">
+      Excise penalty {{ excisePenalty }}
+    </div>
+    <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty">
+      Back duty {{ backDuty }}
+    </div>
     <div>{{ compensation }}</div>
     <div *ngIf="offenceDecision.licenceEndorsement">
       {{ licenceEndorsement }}
@@ -49,8 +53,9 @@ export class FinancialOffenceDecisionComponent {
     if (this.offenceDecision.compensation > 0) {
       return 'To pay compensation of ' + formatCurrency(this.offenceDecision.compensation);
     } else {
-      return this.offenceDecision.noCompensationReason ?
-        'No compensation ordered because ' + this.offenceDecision.noCompensationReason : null;
+      return this.offenceDecision.noCompensationReason
+        ? 'No compensation ordered because ' + this.offenceDecision.noCompensationReason
+        : null;
     }
   }
 

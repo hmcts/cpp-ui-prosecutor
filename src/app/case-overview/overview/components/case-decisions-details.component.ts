@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import {CaseDecision, OffenceDecision} from '../../../contexts/sjp';
+import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
 
 @Component({
   selector: 'case-decisions-details',
@@ -53,29 +53,33 @@ import {CaseDecision, OffenceDecision} from '../../../contexts/sjp';
           <p *ngIf="offenceDecision.verdict && offenceDecision.verdict !== 'NO_VERDICT'">
             {{ offenceDecision.verdict | verdictType }}
           </p>
-          <financial-offence-decision *ngIf="isFinancial(offenceDecision);else nonFinancial"
-                                      [offenceDecision]="offenceDecision">
+          <financial-offence-decision
+            *ngIf="isFinancial(offenceDecision); else nonFinancial"
+            [offenceDecision]="offenceDecision"
+          >
           </financial-offence-decision>
           <ng-template #nonFinancial>
             <p data-role="offence-decision">{{ offenceDecision | savedDecisionInformation }}</p>
-            <refer-to-open-court-offence-decision *ngIf="offenceDecision.decisionType==='REFERRED_TO_OPEN_COURT'"
-                                                  [offenceDecision]="offenceDecision">
+            <refer-to-open-court-offence-decision
+              *ngIf="offenceDecision.decisionType === 'REFERRED_TO_OPEN_COURT'"
+              [offenceDecision]="offenceDecision"
+            >
             </refer-to-open-court-offence-decision>
-            <no-separate-penalty-offence-decision *ngIf="offenceDecision.decisionType==='NO_SEPARATE_PENALTY'"
-              [offenceDecision]="offenceDecision">
+            <no-separate-penalty-offence-decision
+              *ngIf="offenceDecision.decisionType === 'NO_SEPARATE_PENALTY'"
+              [offenceDecision]="offenceDecision"
+            >
             </no-separate-penalty-offence-decision>
           </ng-template>
         </pdk-grid>
       </pdk-grid>
       <pdk-divider *ngIf="!last"></pdk-divider>
     </div>
-    <div *ngIf='caseDecisionWithOffenceDecisions.financialImposition'>
+    <div *ngIf="caseDecisionWithOffenceDecisions.financialImposition">
       <pdk-divider></pdk-divider>
-      <financial-impositions
-          [caseDecision]="caseDecisionWithOffenceDecisions"></financial-impositions>
+      <financial-impositions [caseDecision]="caseDecisionWithOffenceDecisions"></financial-impositions>
       <pdk-divider></pdk-divider>
-      <payment-and-collection
-          [caseDecision]="caseDecisionWithOffenceDecisions"></payment-and-collection>
+      <payment-and-collection [caseDecision]="caseDecisionWithOffenceDecisions"></payment-and-collection>
     </div>
   `
 })

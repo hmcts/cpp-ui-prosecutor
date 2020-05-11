@@ -83,7 +83,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            1111111111
+             1111111111 
           </td>
         </tr>
         <tr
@@ -324,7 +324,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            ter the name and add
+             ter the name and add 
           </td>
         </tr>
         <tr
@@ -340,7 +340,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            Yes
+             Yes 
           </td>
         </tr>
         <tr
@@ -356,7 +356,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            no days
+             no days 
           </td>
         </tr>
         <tr
@@ -372,7 +372,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            Yes
+             Yes 
           </td>
         </tr>
         <tr
@@ -388,7 +388,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            turkish
+             turkish 
           </td>
         </tr>
         <tr
@@ -404,7 +404,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             pdk-table-cell=""
             pdk-typography="body-small"
           >
-            No
+             No 
           </td>
         </tr>
         <tr

@@ -6,7 +6,6 @@ import { CaseDataBuilder } from './case-data-builder';
 import { stageProsecutorCaseV2 } from '../../tools/contexts/staging';
 
 export class PoliceCaseDataBuilder extends ProsecutorCaseDataBuilder {
-
   public static readonly ProsecutorAuthority = '0230000';
 
   constructor(protected data: CaseData) {

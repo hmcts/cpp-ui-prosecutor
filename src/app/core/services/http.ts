@@ -18,7 +18,7 @@ export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandS
 @Injectable()
 export class CustomHttp extends CppHttp {
   constructor(
-    generateUniqueKey: InjectionToken<{}>,
+    generateUniqueKey: any,
     backend: CppHttpBackend,
     notifications: Notifications,
     private store: Store<State>
