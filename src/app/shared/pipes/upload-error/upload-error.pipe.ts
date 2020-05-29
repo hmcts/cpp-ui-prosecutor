@@ -33,7 +33,8 @@ export const errorMessageMap = {
   OFFENCE_TAKES_NO_EFFECT: 'You must enter offence date which is valid for offence',
   DUPLICATED_CASE_FOUND: 'Case already exists',
   DEFENDANT_DATE_OF_BIRTH_MISSING: 'You must enter date of birth in YYYY-MM-DD format',
-  POSTCODE_MISSING: 'You must enter defendant’s postcode'
+  POSTCODE_MISSING: 'You must enter defendant’s postcode',
+  POSTCODE_INVALID_FORMAT: 'You must enter a valid defendant postcode including the space, for example WC2A 2LL',
 };
 
 @Pipe({ name: 'uploadError' })

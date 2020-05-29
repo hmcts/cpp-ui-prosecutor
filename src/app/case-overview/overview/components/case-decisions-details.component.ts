@@ -41,6 +41,7 @@ import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
         let idx = index;
         let last = last
       "
+      [attr.data-role]="'offence-decision-container-' + offenceDecision.offenceId"
     >
       <pdk-grid container>
         <pdk-grid one-third>

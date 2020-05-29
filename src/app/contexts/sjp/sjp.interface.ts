@@ -91,7 +91,7 @@ export interface CaseDocumentMetaData {
   mimeType: string;
 }
 
-export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER';
+export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER' | 'CITN';
 
 export interface PersonalDetails {
   address: Address;

@@ -79,7 +79,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       </pdk-divider>
     </div>
     
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -133,7 +135,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -187,7 +191,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -241,7 +247,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -295,7 +303,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -349,7 +359,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""
@@ -403,7 +415,9 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
         />
       </pdk-divider>
     </div>
-    <div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
       <pdk-grid
         container=""
         ng-reflect-container=""

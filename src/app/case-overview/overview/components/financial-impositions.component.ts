@@ -60,7 +60,7 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
           <pdk-grid one-third>
             <b>To pay costs of</b>
           </pdk-grid>
-          <pdk-grid two-thirds>
+          <pdk-grid two-thirds data-role="imposition-costs-amount">
             {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.costs) }}
           </pdk-grid>
         </pdk-grid>

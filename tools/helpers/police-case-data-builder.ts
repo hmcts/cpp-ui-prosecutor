@@ -30,7 +30,7 @@ export class PoliceCaseDataBuilder extends ProsecutorCaseDataBuilder {
 
   setupProsecutorSpecificBaseData() {
     this.data.prosecutionSubmissionDetails.prosecutingAuthority = PoliceCaseDataBuilder.ProsecutorAuthority;
-    this.data.defendant.offences.forEach(offence => offence.cjsOffenceCode = 'RT88971');
+    this.data.defendant.offences.forEach(offence => (offence.cjsOffenceCode = 'RT88971'));
   }
 
   async sendCase() {

@@ -1,4 +1,4 @@
-import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER } from '../utils';
+import { COURT_ADMIN, SYSTEM_ONLINE_PLEA_USER, TFL_USER, TVL_USER, SYSTEM_SJP_USER } from '../utils';
 import { request, User } from '@cpp/ui.priming';
 import { Case } from '../../src/app/contexts/sjp';
 
@@ -83,6 +83,71 @@ export const getDefendantDetailsUpdates = (user: User, limit: number) => {
     url: `${QUERY}/defendant-details-updates?limit=${limit}`,
     headers: {
       Accept: 'application/vnd.sjp.query.defendant-details-updates+json'
+    },
+    user
+  });
+};
+
+export const assignCase = (caseId: string, user: User) => {
+  return request({
+    method: 'POST',
+    url: `${COMMAND}/cases/${caseId}`,
+    headers: {
+      'Content-Type': 'application/vnd.sjp.assign-case+json',
+      charset: 'UTF-8'
+    },
+    body: {
+      userId : user.userId
+    },
+    user: SYSTEM_SJP_USER
+  });
+};
+
+export const startSJPSession = (sessionId: string, user: User, courtHouseOUCode) => {
+  return request({
+    method: 'POST',
+    url: `${COMMAND}/sessions/${sessionId}`,
+    headers: {
+      'Content-Type': 'application/vnd.sjp.start-session+json',
+      charset: 'UTF-8'
+    },
+    body: {
+      courtHouseOUCode,
+      magistrate: 'E2E Test'
+    },
+    user
+  });
+};
+
+export const getSession = (sessionId: string, user: User): Promise<any> => {
+  return request({
+    method: 'GET',
+    url: `${QUERY}/sessions/${sessionId}`,
+    headers: {
+      Accept: 'application/vnd.sjp.query.session+json'
+    },
+    user
+  });
+};
+
+export const makeDecision = (
+  sessionId: string,
+  user: User,
+  kase: Case,
+  offenceDecisions: any,
+  financialImposition: any = undefined
+): Promise<any> => {
+  return request({
+    method: 'POST',
+    url: `${COMMAND}/cases/${kase.id}/decision`,
+    headers: {
+      'Content-Type': 'application/vnd.sjp.save-decision+json',
+      charset: 'UTF-8'
+    },
+    body: {
+      sessionId,
+      offenceDecisions,
+      financialImposition
     },
     user
   });

@@ -8,25 +8,30 @@ import { DISQUALIFICATION_DECISION_TEXT } from './disqualification/disqualificat
   selector: 'financial-offence-decision',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div *ngIf="offenceDecision.decisionType === 'DISCHARGE'">{{ dischargeType }}</div>
-    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && fine">Fine {{ fine }}</div>
-    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty">
+    <div *ngIf="offenceDecision.decisionType === 'DISCHARGE'" data-role="discharge-type">{{ dischargeType }}</div>
+    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && fine" data-role="fine">Fine {{ fine }}</div>
+    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty" data-role="excise-penalty">
       Excise penalty {{ excisePenalty }}
     </div>
-    <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty">
+    <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty" data-role="back-duty">
       Back duty {{ backDuty }}
     </div>
-    <div>{{ compensation }}</div>
-    <div *ngIf="offenceDecision.licenceEndorsement">
+    <div data-role="compensation">{{ compensation }}</div>
+    <div *ngIf="offenceDecision.licenceEndorsement" data-role="licence-endorsement">
       {{ licenceEndorsement }}
     </div>
-    <div *ngIf="offenceDecision.licenceEndorsement && offenceDecision.additionalPointsReason">
-      {{ 'Reason for penalty points being imposed on more than one offence: ' + offenceDecision.additionalPointsReason }}
+    <div
+      *ngIf="offenceDecision.licenceEndorsement && offenceDecision.additionalPointsReason"
+      data-role="additional-points-reason"
+    >
+      {{
+        'Reason for penalty points being imposed on more than one offence: ' + offenceDecision.additionalPointsReason
+      }}
     </div>
-    <div *ngIf="offenceDecision.disqualification">
+    <div *ngIf="offenceDecision.disqualification" data-role="disqualification">
       {{ disqualification }}
     </div>
-    <div *ngIf="offenceDecision.guiltyPleaTakenIntoAccount">
+    <div *ngIf="offenceDecision.guiltyPleaTakenIntoAccount" data-role="guilty-plea-taken-into-account">
       {{ "Defendant's guilty plea Taken into account when imposing sentence" }}
     </div>
   `
@@ -76,9 +81,13 @@ export class FinancialOffenceDecisionComponent {
       disqualification = DISQUALIFICATION_DECISION_TEXT[this.offenceDecision.disqualificationType];
       if (disqualification) {
         disqualification = disqualification
-            .replace('#period', period)
-            .replace('#notionalPenaltyPoint', this.offenceDecision.notionalPenaltyPoints ?
-                `Notional penalty points determined ${this.offenceDecision.notionalPenaltyPoints} penalty points. ` : '');
+          .replace('#period', period)
+          .replace(
+            '#notionalPenaltyPoint',
+            this.offenceDecision.notionalPenaltyPoints
+              ? `Notional penalty points determined ${this.offenceDecision.notionalPenaltyPoints} penalty points. `
+              : ''
+          );
       }
     }
     return disqualification;

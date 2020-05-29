@@ -16,6 +16,28 @@ export class CaseOverviewPage extends BasePage {
 
   public readonly downloadDocumentLink = $(`download-document a`);
 
+  // Financial impositions area
+  public readonly totalCompensation = $(`[data-role='imposition-compensation-amount']`);
+  public readonly totalExcisePenalty = $(`[data-role='imposition-excise-penalty-amount']`);
+  public readonly totalFinancialPenalty = $(`[data-role='imposition-fine-amount']`);
+  public readonly totalBackDuty = $(`[data-role='imposition-backduty-amount']`);
+  public readonly totalVictimSurcharge = $(`[data-role='imposition-surcharge-amount']`);
+  public readonly totalCosts = $(`[data-role='imposition-costs-amount']`);
+
+  // Offence decision
+  public readonly offenceDecisionContainer = (offenceId: string) =>
+    $(`[data-role='offence-decision-container-${offenceId}']`);
+  public readonly fine = (offenceId: string) => $(`[data-role='offence-decision-container-${offenceId}']`).
+    $(`[data-role='fine']`);
+  public readonly excisePenalty = (offenceId: string) => this.offenceDecisionContainer(offenceId).
+    $(`[data-role='excise-penalty']`);
+  public readonly compensation = (offenceId: string) => this.offenceDecisionContainer(offenceId).
+    $(`[data-role='compensation']`);
+  public readonly backDuty = (offenceId: string) => this.offenceDecisionContainer(offenceId).
+    $(`[data-role='back-duty']`);
+  public readonly dischargeType = (offenceId: string) => this.offenceDecisionContainer(offenceId).
+    $(`[data-role='discharge-type']`);
+
   constructor(role: string, caseId: string) {
     super(`/${role}/case-overview/${caseId}`);
   }

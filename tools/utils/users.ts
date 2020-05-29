@@ -71,3 +71,11 @@ export const SYSTEM_DVLA_USER: User = {
   email: 'cppidvlaconsumer@system.gov',
   source: 'CPP'
 };
+
+export const SYSTEM_SJP_USER: User = {
+  userId: '1ac91935-4f82-4a4f-bd17-fb50397e42dd',
+  firstName: 'sjp',
+  lastName: 'context',
+  email: 'sjp@hmcts.gov',
+  source: 'CPP'
+};

@@ -4,7 +4,7 @@ import { CaseDocumentType } from '../../../contexts/sjp';
 export const fileNameMap = {
   SJPN: 'SJP notice',
   PLEA: 'Plea',
-  CITN: 'CITN',
+  CITN: 'Previous convictions',
   EMPLOYER_ATTACHMENT_TO_EARNINGS: `Employer's AEO`,
   RESULT_ORDER: 'Result order'
 };
