@@ -1,6 +1,6 @@
 {
   "name": "prosecutor",
-  "version": "0.0.0",
+  "version": "0.0.145-SNAPSHOT",
   "scripts": {
     "ng": "ng",
     "format": "pretty-quick --staged",
