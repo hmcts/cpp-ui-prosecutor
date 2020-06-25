@@ -51,6 +51,52 @@ describe('CaseDecisionsDetailsComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
+  it('should show set aside', () => {
+    const decisions = MOCK_CASE_DECISION;
+    decisions.offenceDecisions.forEach(od => (od.decisionType = 'SET_ASIDE'));
+    fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('Decision set aside');
+  });
+
+  it('should show press restriction when requested', () => {
+    const decisions = MOCK_CASE_DECISION;
+    decisions.offenceDecisions.forEach(od => (od.pressRestriction = {
+      requested: true,
+      name: 'Test name'
+    }));
+    fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('Reporting restrictions');
+  });
+
+  it('should show press restriction revoked when requested=false', () => {
+    const decisions = MOCK_CASE_DECISION;
+    decisions.offenceDecisions.forEach(od => (od.pressRestriction = {
+      requested: false,
+      name: null
+    }));
+    fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('Direction restricting publicity revoked');
+  });
+
+  it('should not show press restriction when undefined', () => {
+    const decisions = MOCK_CASE_DECISION;
+    decisions.offenceDecisions.forEach(od => (od.pressRestriction = undefined));
+    fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('Reporting restrictions');
+  });
+
   @Component({
     selector: 'case-decisions-test',
     template: `

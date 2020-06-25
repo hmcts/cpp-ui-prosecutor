@@ -216,6 +216,7 @@ export interface OffenceDecision {
   verdict: VerdictType;
   excisePenalty?: number;
   backDuty?: number;
+  pressRestriction?: PressRestriction;
 }
 
 export interface WithdrawOffenceDecision extends OffenceDecision {
@@ -432,4 +433,9 @@ export type DisqualificationType = 'DISCRETIONARY' | 'POINTS' | 'OBLIGATORY';
 export interface DisqualificationPeriod {
   value: number;
   unit: 'DAY' | 'MONTH' | 'YEAR';
+}
+
+export interface PressRestriction {
+  requested: boolean;
+  name: string;
 }

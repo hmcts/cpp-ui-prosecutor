@@ -43,13 +43,13 @@ import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
       "
       [attr.data-role]="'offence-decision-container-' + offenceDecision.offenceId"
     >
-      <pdk-grid container>
+      <pdk-grid container pdk-padding-horizontal="2">
         <pdk-grid one-third>
-          <div pdk-margin-left="2">
+          <div>
             <b>Offence {{ offenceDecision.offenceSequenceNumber }} </b>
           </div>
         </pdk-grid>
-        <pdk-grid two-thirds>
+        <pdk-grid two-thirds pdk-padding-bottom="2">
           {{ offenceDecision.offenceTitle }}
           <p *ngIf="offenceDecision.verdict && offenceDecision.verdict !== 'NO_VERDICT'">
             {{ offenceDecision.verdict | verdictType }}
@@ -73,6 +73,28 @@ import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
             </no-separate-penalty-offence-decision>
           </ng-template>
         </pdk-grid>
+        <!-- START Press restriction -->
+        <div *ngIf="offenceDecision.pressRestriction" data-role="press-restrictions">
+          <pdk-grid one-third>
+            <div>
+              <p><b>Reporting restrictions</b></p>
+            </div>
+          </pdk-grid>
+          <pdk-grid two-thirds>
+            <ng-container *ngIf="offenceDecision.pressRestriction.requested">
+              <p data-role="reporting-restriction">
+                Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of
+                {{ offenceDecision.pressRestriction.name }}
+              </p>
+            </ng-container>
+            <ng-container *ngIf="!offenceDecision.pressRestriction.requested">
+              <p data-role="reporting-restriction">
+                Direction restricting publicity revoked
+              </p>
+            </ng-container>
+          </pdk-grid>
+        </div>
+        <!-- END Press restriction -->
       </pdk-grid>
       <pdk-divider *ngIf="!last"></pdk-divider>
     </div>
