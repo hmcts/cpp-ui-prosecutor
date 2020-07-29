@@ -25,6 +25,10 @@ exports[`App page component should compile correctly 1`] = `
         <div>
           headerNavItems : [
     {
+      "title": "Home",
+      "href": "path/to/home"
+    },
+    {
       "title": "Your account",
       "href": "path/to/account"
     },
@@ -85,6 +89,10 @@ exports[`App page component should compile correctly when search is available 1`
       "href": "https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fcpp.nonlive%2Fprosecutor"
     },
     {
+      "title": "Home",
+      "href": "path/to/home"
+    },
+    {
       "title": "Your account",
       "href": "path/to/account"
     },
@@ -140,6 +148,10 @@ exports[`App page component should detect when the app is busy 1`] = `
       >
         <div>
           headerNavItems : [
+    {
+      "title": "Home",
+      "href": "path/to/home"
+    },
     {
       "title": "Your account",
       "href": "path/to/account"
@@ -197,6 +209,10 @@ exports[`App page component should track any api errors 1`] = `
         <div>
           headerNavItems : [
     {
+      "title": "Home",
+      "href": "path/to/home"
+    },
+    {
       "title": "Your account",
       "href": "path/to/account"
     },
@@ -253,6 +269,10 @@ exports[`App page component should track the offline status of the container 1`]
         <div>
           headerNavItems : [
     {
+      "title": "Home",
+      "href": "path/to/home"
+    },
+    {
       "title": "Your account",
       "href": "path/to/account"
     },
@@ -308,6 +328,10 @@ exports[`App page component should track the online status of the container 1`] 
       >
         <div>
           headerNavItems : [
+    {
+      "title": "Home",
+      "href": "path/to/home"
+    },
     {
       "title": "Your account",
       "href": "path/to/account"

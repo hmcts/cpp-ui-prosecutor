@@ -94,6 +94,10 @@ export class AppContainer {
 
     this.headerNavItems = [
       {
+        title: 'Home',
+        href: this.appConfigService.getAppUrl()
+      },
+      {
         title: 'Your account',
         href: this.appConfigService.getAccountUrl()
       },

@@ -16,6 +16,7 @@ export class AppConfigService implements CppHttpConfig {
   baseUrl: string;
   cppHomeUrl: string;
   logoutUrl: string;
+  appUrl: string;
   searchEnabled = false;
 
   constructor(private http: HttpClient, private injector: Injector) {}
@@ -29,24 +30,25 @@ export class AppConfigService implements CppHttpConfig {
           this.accountUrl = config.idamProfilePage;
           this.cppHomeUrl = config.cppHomeUrl;
           this.logoutUrl = config.idamLogoutPage;
+          this.appUrl = config.appUrl;
         }),
         switchMap(() =>
           this.injector
             .get(CppHttp)
             .query<{ groups: UserGroup[] }>({
               url: '/usersgroups-query-api/query/api/rest/usersgroups/users/logged-in-user/groups',
-              requestType: 'application/vnd.usersgroups.get-logged-in-user-groups+json'
+              requestType: 'application/vnd.usersgroups.get-logged-in-user-groups+json',
             })
             .pipe(
               tap(
-                result => {
-                  this.searchEnabled = result.groups.some(userGroup =>
+                (result) => {
+                  this.searchEnabled = result.groups.some((userGroup) =>
                     [
                       'Court Administrators',
                       'Crown Court Admin',
                       'Court Clerks',
                       'Legal Advisers',
-                      'Listing Officers'
+                      'Listing Officers',
                     ].includes(userGroup.groupName)
                   );
                 },
@@ -61,6 +63,10 @@ export class AppConfigService implements CppHttpConfig {
 
   getLogoutUrl(): string {
     return this.logoutUrl;
+  }
+
+  getAppUrl(): string {
+    return this.appUrl;
   }
 
   getAccountUrl(): string {

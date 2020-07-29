@@ -52,6 +52,8 @@ describe('App page component', () => {
             cppHomeUrl: 'https://cpp.home.nonlive',
             getAccountUrl: () => 'path/to/account',
             getLogoutUrl: () => 'path/to/logout',
+            getBaseUrl: () => 'path/to/home',
+            getAppUrl: () => 'path/to/home',
             searchEnabled: false
           }
         },
@@ -82,6 +84,12 @@ describe('App page component', () => {
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
+  });
+
+  it('should display the list of links', () => {
+    fixture = TestBed.createComponent(AppContainer);
+    const component = fixture.componentInstance;
+    expect(component.headerNavItems.length).toBe(4);
   });
 
   it('should check translate service is being called', () => {
