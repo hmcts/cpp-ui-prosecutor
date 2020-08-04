@@ -423,6 +423,40 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             Yes
           </td>
         </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Do they have disability or accessibility needs?
+          </td>
+          <td
+            data-locator="disabilityNeedsRequired"
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+             No 
+          </td>
+        </tr>
+        <tr
+          pdk-table-row=""
+        >
+          <td
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+            Disability or accessibility needs
+          </td>
+          <td
+            data-locator="disabilityNeeds"
+            pdk-table-cell=""
+            pdk-typography="body-small"
+          >
+             – 
+          </td>
+        </tr>
       </tbody>
     </table>
   </online-plea-details>

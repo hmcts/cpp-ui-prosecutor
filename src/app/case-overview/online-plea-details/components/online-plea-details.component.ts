@@ -144,6 +144,18 @@ import { OnlinePleaUi } from '../online-plea-interface';
             <td pdk-table-cell pdk-typography="body-small">Do they wish to speak Welsh?</td>
             <td pdk-table-cell pdk-typography="body-small">{{ onlinePlea?.pleaDetails?.speakWelsh | yesNo }}</td>
           </tr>
+          <tr pdk-table-row>
+            <td pdk-table-cell pdk-typography="body-small">Do they have disability or accessibility needs?</td>
+            <td pdk-table-cell pdk-typography="body-small" data-locator="disabilityNeedsRequired">
+              {{ onlinePlea?.pleaDetails?.disabilityNeeds?.needed | yesNo }}
+            </td>
+          </tr>
+          <tr pdk-table-row>
+            <td pdk-table-cell pdk-typography="body-small">Disability or accessibility needs</td>
+            <td pdk-table-cell pdk-typography="body-small" data-locator="disabilityNeeds">
+              {{ onlinePlea?.pleaDetails?.disabilityNeeds?.disabilityNeeds | ifEmpty: '–' }}
+            </td>
+          </tr>
         </tbody>
       </table>
     </ng-container>

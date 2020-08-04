@@ -14,13 +14,13 @@ describe('Case overview', () => {
       expect(await caseOverviewPage.pageHeaderBar.getText()).toContain(kase.urn);
 
       // Offence 1
-      let offenceId = kase.caseDecisions[0].offenceDecisions[0].offenceId;
+      let offenceId = kase.defendant.offences[0].id;
       expect(await caseOverviewPage.excisePenalty(offenceId).getText()).toContain('£40');
       expect(await caseOverviewPage.backDuty(offenceId).getText()).toContain('£12');
       expect(await caseOverviewPage.compensation(offenceId).getText()).toContain('£15.30');
 
       // Offence 2
-      offenceId = kase.caseDecisions[0].offenceDecisions[1].offenceId;
+      offenceId = kase.defendant.offences[1].id;
       expect(await caseOverviewPage.excisePenalty(offenceId).getText()).toContain('£60');
       expect(await caseOverviewPage.backDuty(offenceId).getText()).toContain('£14');
       expect(await caseOverviewPage.compensation(offenceId).getText()).toContain('£15.30');
@@ -40,13 +40,13 @@ describe('Case overview', () => {
       expect(await caseOverviewPage.pageHeaderBar.getText()).toContain(kase.urn);
 
       // Offence 1
-      let offenceId = kase.caseDecisions[0].offenceDecisions[0].offenceId;
+      let offenceId = kase.defendant.offences[0].id;
       expect(await caseOverviewPage.dischargeType(offenceId).getText()).toContain('Discharged conditionally for 3 month');
       expect(await caseOverviewPage.backDuty(offenceId).getText()).toContain('£12');
       expect(await caseOverviewPage.compensation(offenceId).getText()).toContain('£15');
 
       // Offence 2
-      offenceId = kase.caseDecisions[0].offenceDecisions[1].offenceId;
+      offenceId = kase.defendant.offences[1].id;
       expect(await caseOverviewPage.dischargeType(offenceId).getText()).toContain('Discharged conditionally for 3 month');
       expect(await caseOverviewPage.backDuty(offenceId).getText()).toContain('£14');
       expect(await caseOverviewPage.compensation(offenceId).getText()).toContain('£15');

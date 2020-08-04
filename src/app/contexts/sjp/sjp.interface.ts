@@ -381,6 +381,12 @@ export interface PleaDetails {
   unavailability: string;
   speakWelsh: boolean;
   outstandingFines: boolean;
+  disabilityNeeds?: DisabilityNeeds;
+}
+
+export interface DisabilityNeeds {
+  needed: boolean;
+  disabilityNeeds?: string;
 }
 
 export interface OnlinePleaDetail {
