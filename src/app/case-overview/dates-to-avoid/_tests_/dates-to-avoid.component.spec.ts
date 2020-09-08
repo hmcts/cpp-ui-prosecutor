@@ -4,6 +4,7 @@ import { PdkCoreModule, PdkErrorSummaryModule, PdkGridModule } from '@cpp/pdk';
 import { Case } from '../../../contexts/sjp';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { DatesToAvoidComponent } from '../dates-to-avoid.component';
+import { MockModule } from '../../../shared/mock-components/mock.module';
 
 describe('DatesToAvoidComponent', () => {
   let component: DatesToAvoidComponent;
@@ -12,11 +13,12 @@ describe('DatesToAvoidComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DatesToAvoidComponent],
-      imports: [PdkCoreModule, PdkGridModule, PdkErrorSummaryModule],
+      imports: [PdkCoreModule, PdkGridModule, PdkErrorSummaryModule, MockModule],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
 
     fixture = TestBed.createComponent(DatesToAvoidComponent);
+    fixture.componentInstance.kase = {id: 'case-id'} as any;
     component = fixture.componentInstance;
   });
 

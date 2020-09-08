@@ -1,5 +1,6 @@
 import { DefendantDetailsUpdatesState, PleadedNotGuiltyCasesState } from '../../core/reducers/entities.reducer';
 import { OffenceWithdrawalReason } from '../../contexts/reference-data';
+import { CasesMissingSjpNoticeResult } from '../../contexts/sjp';
 
 export const MOCK_PENDING_DATES_TO_AVOID: PleadedNotGuiltyCasesState = {
   cases: [
@@ -119,3 +120,7 @@ export const MOCK_OFFENCE_WITHDRAWAL_REASON: OffenceWithdrawalReason[] = [
     prosecutor: true
   }
 ];
+
+export const MOCK_CASES_MISSING_SJP_NOTICE_COUNT: CasesMissingSjpNoticeResult = {
+  count: 3
+};

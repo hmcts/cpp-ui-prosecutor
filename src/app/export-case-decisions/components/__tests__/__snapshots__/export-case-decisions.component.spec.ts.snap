@@ -5,43 +5,13 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
   loadCaseCount={[Function Function]}
 >
   <export-case-decisions>
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
+      ng-reflect-show-title="true"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="javascript: void(0)"
-          ng-reflect-active=""
-          pdk-breadcrumb=""
-          routerlink=".."
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Export case results by date 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     
-    <h1
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
-      pdk-typography="heading-xlarge"
-    >
-      Export case results by date
-    </h1>
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>
@@ -58,43 +28,13 @@ exports[`ExportCaseDecisionsComponent should compile correctly with case count r
   <export-case-decisions
     ng-reflect-case-count-result="[object Object]"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
+      ng-reflect-show-title="true"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="javascript: void(0)"
-          ng-reflect-active=""
-          pdk-breadcrumb=""
-          routerlink=".."
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Export case results by date 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     
-    <h1
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
-      pdk-typography="heading-xlarge"
-    >
-      Export case results by date
-    </h1>
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>
@@ -117,33 +57,12 @@ exports[`ExportCaseDecisionsComponent should compile correctly with errors 1`] =
   loadCaseCount={[Function Function]}
 >
   <export-case-decisions>
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
+      ng-reflect-show-title="true"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="javascript: void(0)"
-          ng-reflect-active=""
-          pdk-breadcrumb=""
-          routerlink=".."
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Export case results by date 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     
     <pdk-error-summary
       focusonchange=""
@@ -181,15 +100,6 @@ exports[`ExportCaseDecisionsComponent should compile correctly with errors 1`] =
         </div>
       </div>
     </pdk-error-summary>
-    <h1
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
-      pdk-typography="heading-xlarge"
-    >
-      Export case results by date
-    </h1>
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>

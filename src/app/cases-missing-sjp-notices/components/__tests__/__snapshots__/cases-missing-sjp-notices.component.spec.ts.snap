@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with multiple rows 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-show-title="true"
+  >
+    breadcrumb-links
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+      ng-reflect-ng-plural="2"
+    >
+      
+      
+      
+      2 cases
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices
+    ng-reflect-cases-missing-notices="[object Object],[object Object"
+  >
+    <div>
+      [
+    {
+      "id": "caseId1",
+      "urn": "22C22222222",
+      "defendant": {
+        "id": "defendantId1",
+        "title": "Mr",
+        "firstName": "Abel",
+        "lastName": "Krumps",
+        "dateOfBirth": "1972-01-01",
+        "gender": "Male",
+        "nationalInsuranceNumber": "SR67854OP"
+      },
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-05-03"
+    },
+    {
+      "id": "caseId2",
+      "urn": "33C2DF22222",
+      "defendant": {
+        "id": "defendantId2",
+        "title": "Mrs",
+        "firstName": "Linda",
+        "lastName": "Craig",
+        "dateOfBirth": "1980-07-12",
+        "gender": "Female",
+        "nationalInsuranceNumber": "SR63344OQ"
+      },
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-05-03"
+    }
+  ]
+    </div>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with no data 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-show-title="true"
+  >
+    breadcrumb-links
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+      ng-reflect-ng-plural="0"
+    >
+      
+      No cases
+      
+      
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices
+    ng-reflect-cases-missing-notices=""
+  >
+    <div>
+      []
+    </div>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with single row 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-show-title="true"
+  >
+    breadcrumb-links
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    ng-reflect-type="heading-medium"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+      ng-reflect-ng-plural="1"
+    >
+      
+      
+      
+      1 cases
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices
+    ng-reflect-cases-missing-notices="[object Object]"
+  >
+    <div>
+      [
+    {
+      "id": "caseId1",
+      "urn": "22C22222222",
+      "defendant": {
+        "id": "defendantId1",
+        "title": "Mr",
+        "firstName": "Abel",
+        "lastName": "Krumps",
+        "dateOfBirth": "1972-01-01",
+        "gender": "Male",
+        "nationalInsuranceNumber": "SR67854OP"
+      },
+      "prosecutingAuthority": "TFL",
+      "postingDate": "2019-05-03"
+    }
+  ]
+    </div>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;

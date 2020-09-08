@@ -8,6 +8,12 @@ Object {
 
 exports[`caseReducer undefined action should initialize the default state 1`] = `null`;
 
+exports[`defendantDetailsUpdatesReducer LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS should set the new state 1`] = `
+Object {
+  "count": 3,
+}
+`;
+
 exports[`defendantDetailsUpdatesReducer LOAD_DEFENDANT_DETAILS_UPDATES_SUCCESS should set the new state 1`] = `
 Object {
   "defendantDetailsUpdates": Array [

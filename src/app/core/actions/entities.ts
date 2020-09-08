@@ -1,5 +1,12 @@
 import { Action } from '@ngrx/store';
-import { Case, PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult, CaseNotes } from '../../contexts/sjp';
+import {
+  Case,
+  PleadedNotGuiltyCaseResult,
+  DefendantDetailsUpdatesResult,
+  CaseNotes,
+  CasesMissingSjpNoticeResult,
+  Region
+} from '../../contexts/sjp';
 import { OffenceWithdrawalReason } from '../../contexts/reference-data';
 
 export const enum EntitiesActionType {
@@ -7,7 +14,10 @@ export const enum EntitiesActionType {
   LOAD_CASE_NOTES_SUCCESS = '[ATCM] Load case notes success',
   LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS = '[ATCM] Load pleaded not guilty cases success',
   LOAD_DEFENDANT_DETAILS_UPDATES_SUCCESS = '[ATCM] Load defendant details updates success',
-  LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS = '[ATCM] Load offence withdrawal reasons success'
+  LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS = '[ATCM] Load offence withdrawal reasons success',
+  LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS = '[ATCM] Load cases missing SJP notice count success',
+  LOAD_REGIONS_SUCCESS = '[ATCM] Load regions success',
+  LOAD_SELECTED_REGION_SUCCESS = '[ATCM] Load selected region success'
 }
 
 export class LoadCaseSuccess implements Action {
@@ -40,9 +50,30 @@ export class LoadCaseNotesSuccess implements Action {
   constructor(public caseNotes: CaseNotes) {}
 }
 
+export class LoadCasesWithSjpNoticeCountSuccess implements Action {
+  readonly type = EntitiesActionType.LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS;
+
+  constructor(public casesMissingSJPNoticeCount: CasesMissingSjpNoticeResult) {}
+}
+
+export class LoadRegionsSuccess implements Action {
+  readonly type = EntitiesActionType.LOAD_REGIONS_SUCCESS;
+
+  constructor(public regions: Region[]) {}
+}
+
+export class LoadSelectedRegionSuccess implements Action {
+  readonly type = EntitiesActionType.LOAD_SELECTED_REGION_SUCCESS;
+
+  constructor(public selectedRegion: string) {}
+}
+
 export type EntitiesAction =
   | LoadPleadedNotGuiltyCases
   | LoadDefendantDetailsUpdates
   | LoadCaseSuccess
   | LoadCaseNotesSuccess
-  | LoadOffenceWithdrawalReasonsSuccess;
+  | LoadOffenceWithdrawalReasonsSuccess
+  | LoadCasesWithSjpNoticeCountSuccess
+  | LoadRegionsSuccess
+  | LoadSelectedRegionSuccess;

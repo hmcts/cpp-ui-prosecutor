@@ -8,11 +8,13 @@ import {
   PleadedNotGuiltyCaseResult,
   SearchResult,
   OnlinePlea,
-  CaseNotes
+  CaseNotes,
+  Region,
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class SjpService {
@@ -28,39 +30,55 @@ export class SjpService {
     });
   }
 
-  getPendingDatesToAvoid(): Observable<PleadedNotGuiltyCaseResult> {
+  getPendingDatesToAvoid(regionId: string = null): Observable<PleadedNotGuiltyCaseResult> {
+    const params = new HttpParams();
+    if (regionId && regionId !== 'ALL') {
+      params.set('regionId', regionId);
+    }
     return this.http.query({
       url: `${this.query}/cases/pending-dates-to-avoid`,
+      params,
       requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
     });
   }
 
   getCasesMissingSjpNoticeCount(): Observable<CasesMissingSjpNoticeResult> {
+    const params = new HttpParams().set('limit', '0').set('daysSincePosting', '14');
     return this.http.query({
-      url: `${this.query}/cases-missing-sjpn?limit=0`,
+      url: `${this.query}/cases-missing-sjpn`,
+      params,
       requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
     });
   }
 
   getCasesMissingSjpNotice(): Observable<CaseSummary[]> {
+    const params = new HttpParams().set('daysSincePosting', '14');
     return this.http
       .query({
         url: `${this.query}/cases-missing-sjpn`,
+        params,
         requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
       })
       .pipe(map((result: CasesMissingSjpNoticeResult) => result.cases));
   }
 
   getCasesDetails(searchKeyword: string): Observable<SearchResult> {
+    const params = new HttpParams().set('q', searchKeyword);
     return this.http.query({
-      url: `${this.query}/search?q=${searchKeyword}`,
+      url: `${this.query}/search`,
+      params,
       requestType: 'application/vnd.sjp.query.case-search-results+json'
     });
   }
 
-  getDefendantDetailsUpdates(limit: number): Observable<DefendantDetailsUpdatesResult> {
+  getDefendantDetailsUpdates(limit: number, regionId: string = null): Observable<DefendantDetailsUpdatesResult> {
+    const params = new HttpParams().set('limit', limit.toString());
+    if (regionId && regionId !== 'ALL') {
+      params.set('regionId', regionId);
+    }
     return this.http.query({
-      url: `${this.query}/defendant-details-updates?limit=${limit}`,
+      url: `${this.query}/defendant-details-updates`,
+      params,
       requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
     });
   }
@@ -109,5 +127,20 @@ export class SjpService {
       url: `${this.query}/cases/${caseId}/notes`,
       requestType: 'application/vnd.sjp.query.case-notes+json'
     });
+  }
+
+  getRegions(): Observable<Region[]> {
+    return this.http
+      .query({
+        url: `${this.query}/regions`,
+        requestType: 'application/vnd.sjp.query.regions+json'
+      })
+      .pipe(
+        map((result: any) =>
+          result.regions.map(region => {
+            return { value: region.id, label: region.name };
+          })
+        )
+      );
   }
 }

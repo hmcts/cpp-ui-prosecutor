@@ -6,6 +6,7 @@ import { CaseCountResult } from '../../../contexts/mi-report';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { InputValues } from '../../../shared/from-to-dates/from-to-dates.component';
 import { By } from '@angular/platform-browser';
+import { MockModule } from '../../../shared/mock-components/mock.module';
 
 describe('ExportCaseDecisionsComponent', () => {
   let fixture: ComponentFixture<TestExportCaseDecisionsComponent>;
@@ -19,7 +20,7 @@ describe('ExportCaseDecisionsComponent', () => {
         MockDownloadCaseDecisionsFormComponent,
         TestExportCaseDecisionsComponent
       ],
-      imports: [PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule]
+      imports: [PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule]
     });
     fixture = TestBed.createComponent(TestExportCaseDecisionsComponent);
     form = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent));

@@ -2,77 +2,53 @@
 
 exports[`ReviewNotGuiltyPleasComponent then the component should be created with out failure 1`] = `
 <review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form={[Function NgForm]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
+  setRegion={[Function EventEmitter]}
+  viewCase={[Function EventEmitter]}
 >
-  <ol
-    pdk-breadcrumb-list=""
-    pdk-margin-top="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
   >
-    <li
-      pdk-breadcrumb-list-item=""
+    breadcrumb-links
+  </breadcrumb-links><h2
+    pdk-section="large"
+  >
+     Review not guilty pleas (2 
+    <span
+      ng-reflect-ng-plural="2"
     >
-      <a
-        href="/"
-        ng-reflect-router-link="../"
-        pdk-breadcrumb=""
-        routerlink="../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-       Review not guilty pleas 
       
-      <span
-        ng-reflect-ng-plural="2"
-      >
-         (2 
-        
-        
-        cases
-        ) 
-      </span>
-    </li>
-  </ol><span>
+      
+      cases
+    </span>
+    ) 
+  </h2><span>
     <span>
-      <h2
-        pdk-section="large"
-      >
-         Review not guilty pleas (2 
-        <span
-          ng-reflect-ng-plural="2"
-        >
-          
-          
-          cases
-        </span>
-        ) 
-      </h2>
       <h4
         pdk-section="large"
       >
         <pdk-warning-text
-          _nghost-a-c6=""
+          _nghost-a-c14=""
         >
           <div
-            _ngcontent-a-c6=""
+            _ngcontent-a-c14=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-a-c6=""
+              _ngcontent-a-c14=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-a-c6=""
+              _ngcontent-a-c14=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-a-c6=""
+                _ngcontent-a-c14=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -88,6 +64,72 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         </pdk-divider>
       </h4>
     </span>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <form
+              class="ng-untouched ng-pristine ng-valid"
+              novalidate=""
+              pdk-form=""
+            >
+              <label
+                class="govuk-label"
+                ng-reflect-type=""
+                pdk-label=""
+              >
+                Filter by region
+              </label>
+              <div
+                style="display: inline-flex"
+              >
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  ng-reflect-name="selectedRegion"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-2"
+                    name="selectedRegion"
+                    required=""
+                  >
+                    
+                    
+                  </select>
+                </pdk-select>
+                <pdk-form-group
+                  class="pdk-form-group"
+                >
+                  <button
+                    class="govuk-button"
+                    ng-reflect-type=""
+                    pdk-button=""
+                    pdk-margin-left="2"
+                    type="submit"
+                  >
+                    Filter
+                  </button>
+                </pdk-form-group>
+              </div>
+            </form>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    
     <table
       pdk-table=""
     >
@@ -140,8 +182,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
             pdk-table-cell=""
           >
             <a
-              href="/case-overview/f10c88de-e577-47df-98af-c8944c5094d0"
-              ng-reflect-router-link="../case-overview,f10c88de-e577"
+              href="javascript:void(0)"
               pdk-link=""
             >
               <b>
@@ -190,8 +231,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
             pdk-table-cell=""
           >
             <a
-              href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
-              ng-reflect-router-link="../case-overview,facca075-d7a5"
+              href="javascript:void(0)"
               pdk-link=""
             >
               <b>
@@ -235,83 +275,69 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
         </tr>
       </tbody>
     </table>
-  </span>
+  </span><button
+    class="govuk-button"
+    ng-reflect-router-link="/"
+    ng-reflect-type=""
+    pdk-button=""
+    routerlink="/"
+    tabindex="0"
+    type="button"
+  >
+    Back to home
+  </button>
 </review-not-guilty-pleas>
 `;
 
 exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case then the component should be created with out failure 1`] = `
 <review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form={[Function NgForm]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
+  setRegion={[Function EventEmitter]}
+  viewCase={[Function EventEmitter]}
 >
-  <ol
-    pdk-breadcrumb-list=""
-    pdk-margin-top="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
   >
-    <li
-      pdk-breadcrumb-list-item=""
+    breadcrumb-links
+  </breadcrumb-links><h2
+    pdk-section="large"
+  >
+     Review not guilty pleas (2 
+    <span
+      ng-reflect-ng-plural="2"
     >
-      <a
-        href="/"
-        ng-reflect-router-link="../"
-        pdk-breadcrumb=""
-        routerlink="../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-       Review not guilty pleas 
       
-      <span
-        ng-reflect-ng-plural="2"
-      >
-         (2 
-        
-        
-        cases
-        ) 
-      </span>
-    </li>
-  </ol><span>
+      
+      cases
+    </span>
+    ) 
+  </h2><span>
     <span>
-      <h2
-        pdk-section="large"
-      >
-         Review not guilty pleas (2 
-        <span
-          ng-reflect-ng-plural="2"
-        >
-          
-          
-          cases
-        </span>
-        ) 
-      </h2>
       <h4
         pdk-section="large"
       >
         <pdk-warning-text
-          _nghost-a-c3=""
+          _nghost-a-c7=""
         >
           <div
-            _ngcontent-a-c3=""
+            _ngcontent-a-c7=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-a-c3=""
+              _ngcontent-a-c7=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-a-c3=""
+              _ngcontent-a-c7=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-a-c3=""
+                _ngcontent-a-c7=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -327,6 +353,72 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
         </pdk-divider>
       </h4>
     </span>
+    <pdk-grid
+      container=""
+      ng-reflect-container=""
+    >
+      <div
+        class="govuk-grid-row"
+      >
+        <pdk-grid
+          ng-reflect-one-half=""
+          one-half=""
+        >
+          <div
+            class="govuk-grid-column-one-half"
+          >
+            <form
+              class="ng-untouched ng-pristine ng-valid"
+              novalidate=""
+              pdk-form=""
+            >
+              <label
+                class="govuk-label"
+                ng-reflect-type=""
+                pdk-label=""
+              >
+                Filter by region
+              </label>
+              <div
+                style="display: inline-flex"
+              >
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  ng-reflect-name="selectedRegion"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-1"
+                    name="selectedRegion"
+                    required=""
+                  >
+                    
+                    
+                  </select>
+                </pdk-select>
+                <pdk-form-group
+                  class="pdk-form-group"
+                >
+                  <button
+                    class="govuk-button"
+                    ng-reflect-type=""
+                    pdk-button=""
+                    pdk-margin-left="2"
+                    type="submit"
+                  >
+                    Filter
+                  </button>
+                </pdk-form-group>
+              </div>
+            </form>
+          </div>
+        </pdk-grid>
+      </div>
+    </pdk-grid>
+    
     <table
       pdk-table=""
     >
@@ -379,8 +471,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
             pdk-table-cell=""
           >
             <a
-              href="/case-overview/facca075-d7a5-4f66-ac54-c2e0a2b47d77"
-              ng-reflect-router-link="../case-overview,facca075-d7a5"
+              href="javascript:void(0)"
               pdk-link=""
             >
               <b>
@@ -424,40 +515,44 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
         </tr>
       </tbody>
     </table>
-  </span>
+  </span><button
+    class="govuk-button"
+    ng-reflect-router-link="/"
+    ng-reflect-type=""
+    pdk-button=""
+    routerlink="/"
+    tabindex="0"
+    type="button"
+  >
+    Back to home
+  </button>
 </review-not-guilty-pleas>
 `;
 
 exports[`ReviewNotGuiltyPleasComponent when the component is created with zero cases then the component should display message "There are no cases to review" 1`] = `
 <review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form="undefined"
   pleadedNotGuiltyCasesDetail={[Function Object]}
+  setRegion={[Function EventEmitter]}
+  viewCase={[Function EventEmitter]}
 >
-  <ol
-    pdk-breadcrumb-list=""
-    pdk-margin-top="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
   >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="/"
-        ng-reflect-router-link="../"
-        pdk-breadcrumb=""
-        routerlink="../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-       Review not guilty pleas 
-      
-    </li>
-  </ol><h2
+    breadcrumb-links
+  </breadcrumb-links><h2
     pdk-section="large"
   >
-     Review not guilty pleas 
+     Review not guilty pleas (0 
+    <span
+      ng-reflect-ng-plural="0"
+    >
+      
+      
+      cases
+    </span>
+    ) 
   </h2><h4
     pdk-section="large"
   >
@@ -496,14 +591,14 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
     </pdk-divider>
   </h4><button
     class="govuk-button"
-    ng-reflect-router-link="../"
+    ng-reflect-router-link="/"
     ng-reflect-type=""
     pdk-button=""
-    routerlink="../"
+    routerlink="/"
     tabindex="0"
     type="button"
   >
-    Done
+    Back to home
   </button>
 </review-not-guilty-pleas>
 `;

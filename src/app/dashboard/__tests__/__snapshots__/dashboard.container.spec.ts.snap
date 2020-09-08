@@ -2,6 +2,7 @@
 
 exports[`DashboardContainer should compile correctly 1`] = `
 <prosecutor-dashboard-container
+  casesMissingSjpNoticeCount$={[Function Store]}
   defendantDetailsUpdates$={[Function Store]}
   pleadedNotGuiltyCasesDetail$={[Function Store]}
   store={[Function Store]}
@@ -83,6 +84,9 @@ exports[`DashboardContainer should compile correctly 1`] = `
       }
     ]
   }
+    </span>
+    <span>
+      
     </span>
   </prosecutor-dashboard>
 </prosecutor-dashboard-container>

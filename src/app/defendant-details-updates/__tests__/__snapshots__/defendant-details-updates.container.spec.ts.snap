@@ -3,10 +3,13 @@
 exports[`DefendantDetailsUpdatesContainer should create container 1`] = `
 <defendant-details-updates-container
   defendantDetailsUpdates$={[Function Store]}
+  region$={[Function Store]}
+  router={[Function Object]}
   store={[Function Store]}
 >
   <defendant-details-updates
     ng-reflect-defendant-details-updates="[object Object]"
+    ng-reflect-region="[object Object]"
   >
     <span>
       {
@@ -39,6 +42,12 @@ exports[`DefendantDetailsUpdatesContainer should create container 1`] = `
         "updatedOn": "2019-04-04"
       }
     ]
+  }
+    </span>
+    <span>
+      {
+    "regions": [],
+    "selectedRegion": "ALL"
   }
     </span>
   </defendant-details-updates>

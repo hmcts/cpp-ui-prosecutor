@@ -9,13 +9,18 @@ import {
   PdkCoreModule,
   PdkDividerModule,
   PdkInsetTextModule,
-  PdkTableModule
+  PdkTableModule,
+  PdkSelectModule,
+  PdkFormModule,
+  PdkGridModule,
+  PdkWarningTextModule
 } from '@cpp/pdk';
 import { DefendantNamePipeModule } from '../shared/pipes';
 import { DefendantDetailsUpdatesPageDataGuard } from '../defendant-details-updates/defendant-details-updates.guard';
 import {WhatChangedComponent} from './what-changed/what-changed.component';
 import {EffectsModule} from '@ngrx/effects';
 import {DefendantDetailsUpdatesEffects} from './defendant-details-updates.effects';
+import { BreadcrumbLinksModule } from '../shared/breadcrumb-links/breadcrumb-links.module';
 
 const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesContainer, WhatChangedComponent];
 
@@ -25,10 +30,14 @@ const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesC
     PdkCoreModule,
     PdkTableModule,
     PdkDividerModule,
-    PdkBreadcrumbsModule,
     PdkButtonModule,
     PdkInsetTextModule,
     DefendantNamePipeModule,
+    BreadcrumbLinksModule,
+    PdkSelectModule,
+    PdkFormModule,
+    PdkGridModule,
+    PdkWarningTextModule,
     EffectsModule.forFeature([DefendantDetailsUpdatesEffects]),
     RouterModule.forChild([
       {

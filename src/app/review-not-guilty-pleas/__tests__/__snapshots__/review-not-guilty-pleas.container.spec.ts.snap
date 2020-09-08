@@ -3,10 +3,13 @@
 exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
 <review-not-guilty-pleas-container
   pleadedNotGuiltyCasesDetail$={[Function Store]}
+  region$={[Function Store]}
+  router={[Function Object]}
   store={[Function Store]}
 >
   <review-not-guilty-pleas
     ng-reflect-pleaded-not-guilty-cases-detail="[object Object]"
+    ng-reflect-region="[object Object]"
   >
     <span>
       {
@@ -47,6 +50,12 @@ exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
       }
     ],
     "count": 2
+  }
+    </span>
+    <span>
+      {
+    "regions": [],
+    "selectedRegion": "ALL"
   }
     </span>
   </review-not-guilty-pleas>

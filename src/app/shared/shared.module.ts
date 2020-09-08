@@ -17,6 +17,7 @@ import {
 import { PaymentTypePipeModule } from './pipes/payment-type/payment-type-pipe.module';
 import { SjpCurrencyPipeModule } from './pipes/sjp-currency/sjp-currency.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { BreadcrumbLinksModule } from './breadcrumb-links/breadcrumb-links.module';
 
 const MODULE_EXPORT = [
   AgePipeModule,

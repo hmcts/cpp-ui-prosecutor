@@ -1,6 +1,5 @@
 import { State } from '../../reducers';
 import { createSelector } from '@ngrx/store';
-import { map } from 'rxjs/operators';
 
 export const getRouteParams = (state: State) =>
   (state.router && state.router.state && (state.router.state.params as { [key: string]: string })) || {};
@@ -35,8 +34,10 @@ export const getWithdrawCaseStatus = createSelector(
 );
 
 export const getPleadedNotGuiltyCasesDetail = (state: State) => state.pleadedNotGuiltyCases;
+export const getRegion = (state: State) => state.region;
 
 export const getDefendantDetailsUpdates = (state: State) => state.defendantDetailsUpdates;
+export const getCasesMissingSJPNotice = (state: State) => state.casesMissingSJPNoticeCount;
 
 export const getCaseDecisions = (state: State) => state.case && state.case.caseDecisions;
 

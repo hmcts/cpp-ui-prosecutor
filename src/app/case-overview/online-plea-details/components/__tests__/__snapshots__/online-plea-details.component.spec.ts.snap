@@ -2,11 +2,22 @@
 
 exports[`OnlinePleaComponent should display online plea 1`] = `
 <online-plea-container
+  kase={[Function Object]}
   onlinePlea={[Function Object]}
 >
   <online-plea-details
+    ng-reflect-kase="[object Object]"
     ng-reflect-online-plea="[object Object]"
   >
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
+      ng-reflect-case-id="case-id-test"
+    >
+      breadcrumb-links
+    </breadcrumb-links>
+    <case-header-badge-container>
+       mock case header 
+    </case-header-badge-container>
     <h1
       pdk-margin-vertical="3"
       pdk-typography="heading-xlarge"
@@ -459,6 +470,14 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
         </tr>
       </tbody>
     </table>
+    <button
+      id="onlinePleaBackButton"
+      pdk-button=""
+      pdk-margin-top="4"
+      routerlink="../../../../"
+    >
+       Back 
+    </button>
   </online-plea-details>
 </online-plea-container>
 `;

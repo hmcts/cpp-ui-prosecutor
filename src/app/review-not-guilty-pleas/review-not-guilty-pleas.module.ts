@@ -9,9 +9,15 @@ import {
   PdkCoreModule,
   PdkDividerModule,
   PdkTableModule,
-  PdkWarningTextModule
+  PdkWarningTextModule,
+  PdkSelectModule,
+  PdkGridModule,
+  PdkFormModule
 } from '@cpp/pdk';
 import { DefendantNamePipeModule, FormatAddressPipeModule } from '../shared/pipes';
+import { SharedModule } from '../shared';
+import { BreadcrumbLinksModule } from '../shared/breadcrumb-links/breadcrumb-links.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContainer];
 
@@ -24,8 +30,11 @@ const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContain
     PdkTableModule,
     PdkWarningTextModule,
     PdkDividerModule,
-    PdkBreadcrumbsModule,
     DefendantNamePipeModule,
+    BreadcrumbLinksModule,
+    PdkSelectModule,
+    PdkGridModule,
+    PdkFormModule,
     RouterModule.forChild([
       {
         path: '',

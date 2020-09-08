@@ -11,6 +11,8 @@ import { AppRouterContainer } from './containers/app.router.container';
 import { CaseDataGuard } from './guards/case-data.guard';
 import { CaseNotesGuard } from './guards/case-notes.guard';
 import { OnlinePleaGuard } from './guards/online-plea.guard';
+import { SjpNoticeCasesDataGuard } from '../cases-missing-sjp-notices/sjp-notice-cases-data.guard';
+import { RegionsGuard } from './guards/regions.guard';
 
 const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
 
@@ -23,7 +25,9 @@ const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
     PleadedNotGuiltyDataGuard,
     DefendantDetailsUpdatesLinkDataGuard,
     OnlinePleaGuard,
-    CaseNotesGuard
+    CaseNotesGuard,
+    SjpNoticeCasesDataGuard,
+    RegionsGuard
   ]
 })
 export class CoreModule {}

@@ -7,38 +7,12 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
   <search-results
     ng-reflect-search-result-cases="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
+      ng-reflect-show-title="true"
     >
-      <li
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          href="/"
-          ng-reflect-router-link="../"
-          pdk-breadcrumb=""
-        >
-          Home
-        </a>
-      </li>
-      <li
-        pdk-breadcrumb-list-item=""
-      >
-         Search for a case 
-      </li>
-    </ol>
-    <h1
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
-      pdk-margin-vertical="8"
-      pdk-typography="heading-xlarge"
-    >
-      Search for a case
-    </h1>
+      breadcrumb-links
+    </breadcrumb-links>
     <search-input>
       <label
         class="govuk-label"

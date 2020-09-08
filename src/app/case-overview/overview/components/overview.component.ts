@@ -1,23 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../contexts/sjp';
+import { Breadcrumb } from '../../../shared/breadcrumb-links/breadcrumb-links.interface';
+import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.constant';
 
 @Component({
   selector: 'case-overview',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ol pdk-breadcrumb-list pdk-margin-top="4">
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../" pdk-breadcrumb>Home</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../search" pdk-breadcrumb>
-          Search for a case
-        </a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        Case details
-      </li>
-    </ol>
+    <breadcrumb-links [breadcrumbs]="breadcrumbs"></breadcrumb-links>
     <case-header-badge-container></case-header-badge-container>
     <case-submission-messages
       [kase]="kase"
@@ -127,6 +117,7 @@ export class OverviewComponent implements OnInit {
   @Input() caseDecisions: CaseDecision[];
   @Input() caseNotes: CaseNotes;
 
+  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW];
   showSideBar: boolean;
 
   get showInformationTabs(): boolean {

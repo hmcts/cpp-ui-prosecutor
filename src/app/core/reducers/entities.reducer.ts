@@ -1,4 +1,12 @@
-import { Case, PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult, CaseNotes } from '../../contexts/sjp';
+import {
+  Case,
+  PleadedNotGuiltyCaseResult,
+  DefendantDetailsUpdatesResult,
+  CaseNotes,
+  CaseSummary,
+  CasesMissingSjpNoticeResult,
+  Region
+} from '../../contexts/sjp';
 import { EntitiesAction, EntitiesActionType } from '../actions/entities';
 import { OffenceWithdrawalReason } from '../../contexts/reference-data';
 
@@ -57,3 +65,34 @@ export const caseNotesReducer = (state: CaseNotesState = null, action: EntitiesA
   }
   return state;
 };
+
+export type CasesMissingSjpNoticesState = CaseSummary[];
+export function casesMissingSjpNoticesReducer(
+  state: CasesMissingSjpNoticeResult,
+  action: EntitiesAction
+): CasesMissingSjpNoticeResult {
+  if (action.type === EntitiesActionType.LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS) {
+    return action.casesMissingSJPNoticeCount;
+  }
+
+  return state;
+}
+
+export interface RegionState {
+  selectedRegion: string;
+  regions: Region[];
+}
+
+export function regionsReducer(
+  state: RegionState = {regions: [], selectedRegion: 'ALL'},
+  action: EntitiesAction
+): RegionState {
+  switch (action.type) {
+    case EntitiesActionType.LOAD_REGIONS_SUCCESS:
+      return {...state, regions: action.regions};
+    case EntitiesActionType.LOAD_SELECTED_REGION_SUCCESS:
+      return {...state, selectedRegion: action.selectedRegion};
+    default:
+      return state;
+  }
+}

@@ -1,30 +1,14 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Case } from '../../contexts/sjp';
+import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.constant';
+import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.interface';
 
 @Component({
   selector: 'dates-to-avoid-page',
   template: `
-    <ol pdk-breadcrumb-list pdk-margin-vertical="4">
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../../../../" pdk-breadcrumb>Home</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../../../../search" pdk-breadcrumb>
-          Search for a case
-        </a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb href="javascript: void(0)" routerLink="../../../../">Case Overview</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb>Dates to avoid</a>
-      </li>
-    </ol>
-
+    <breadcrumb-links [caseId]="kase.id" [breadcrumbs]="breadcrumbs"></breadcrumb-links>
     <case-header-badge-container></case-header-badge-container>
-    <div>
-      <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5">Dates to avoid</h1>
-    </div>
+    <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5">{{breadcrumb.title}}</h1>
     <div pdk-margin-vertical="1" *ngIf="displayDatesToAvoidBanner">
       <pdk-alert [type]="'confirmation'">
         Dates to avoid court submitted
@@ -47,4 +31,6 @@ export class DatesToAvoidComponent {
   @Input() kase: Case;
   @Input() displayDatesToAvoidBanner: boolean;
   @Output() formSubmit = new EventEmitter<string>();
+  breadcrumb = Breadcrumbs.DATES_TO_AVOID;
+  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW, Breadcrumbs.DATES_TO_AVOID];
 }

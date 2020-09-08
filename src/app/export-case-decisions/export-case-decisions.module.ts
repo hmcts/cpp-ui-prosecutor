@@ -19,6 +19,7 @@ import { ExportCaseDecisionsEffects } from './export-case-decisions.effects';
 import { exportCaseDecisionsReducer } from './export-case-decisions.reducer';
 import { DownloadCaseDecisionsComponent } from './components/download-case-decisions.component';
 import { CommonModule } from '@angular/common';
+import { BreadcrumbLinksModule } from '../shared/breadcrumb-links/breadcrumb-links.module';
 
 const DECLARATIONS = [
   ExportCaseDecisionsComponent,
@@ -38,6 +39,7 @@ const DECLARATIONS = [
     PdkInsetTextModule,
     FromToDatesModule,
     PdkErrorSummaryModule,
+    BreadcrumbLinksModule,
     StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer),
     EffectsModule.forFeature([ExportCaseDecisionsEffects]),
     RouterModule.forChild([

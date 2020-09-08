@@ -23,6 +23,7 @@ import { DefendantNamePipeModule } from '../../shared/pipes';
 import { DatesToAvoidFormComponent } from './dates-to-avoid-form.component';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 import { DatesToAvoidGuard } from './dates-to-avoid.guard';
+import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
 
 const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoidFormComponent];
 
@@ -36,7 +37,6 @@ const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoid
     PdkTextInputModule,
     PdkInputModule,
     PdkTextareaModule,
-    PdkBreadcrumbsModule,
     PdkCheckboxInputModule,
     PdkGridModule,
     PdkButtonModule,
@@ -46,6 +46,7 @@ const DECLARATIONS = [DatesToAvoidContainer, DatesToAvoidComponent, DatesToAvoid
     DefendantNamePipeModule,
     CaseHeaderBadgeModule,
     PdkPageHeaderModule,
+    BreadcrumbLinksModule,
     RouterModule.forChild([
       {
         path: '',

@@ -19,6 +19,7 @@ describe('WithdrawOffenceComponent', () => {
       .then(() => {
         fixture = TestBed.createComponent(WithdrawOffenceComponent);
         component = fixture.componentInstance;
+        fixture.componentInstance.kase = MOCK_CASE;
       });
   });
 
@@ -29,7 +30,6 @@ describe('WithdrawOffenceComponent', () => {
 
   it('should display the offence component', () => {
     fixture.componentInstance.offences = MOCK_OFFENCES;
-    fixture.componentInstance.kase = MOCK_CASE;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

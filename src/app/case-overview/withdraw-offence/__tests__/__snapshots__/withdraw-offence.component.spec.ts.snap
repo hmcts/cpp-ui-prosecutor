@@ -2,57 +2,11 @@
 
 exports[`WithdrawOffenceComponent should compile correctly 1`] = `
 <withdraw-offence-list
+  breadcrumbs={[Function Array]}
   formSubmit={[Function EventEmitter]}
+  kase={[Function Object]}
 >
-  <ol
-    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-    ng-reflect-vertical="4"
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
-  >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Withdraw offence
-      </a>
-    </li>
-  </ol><case-header-badge-container /><div>
+  <breadcrumb-links /><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       data-test="withdraw-offence-heading"
@@ -98,59 +52,12 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
 
 exports[`WithdrawOffenceComponent should display the offence component 1`] = `
 <withdraw-offence-list
+  breadcrumbs={[Function Array]}
   formSubmit={[Function EventEmitter]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <ol
-    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-    ng-reflect-vertical="4"
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
-  >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Withdraw offence
-      </a>
-    </li>
-  </ol><case-header-badge-container /><div>
+  <breadcrumb-links /><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       data-test="withdraw-offence-heading"

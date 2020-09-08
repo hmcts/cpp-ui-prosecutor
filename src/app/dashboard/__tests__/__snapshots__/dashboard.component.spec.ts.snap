@@ -5,59 +5,119 @@ exports[`DashboardComponent should compile correctly 1`] = `
   defendantDetailsUpdates={[Function Object]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
 >
-  <h1
-    pdk-margin-vertical="8"
-    pdk-typography="heading-xlarge"
+  <pdk-grid>
+    <div>
+      <h1
+        pdk-margin-vertical="8"
+        pdk-typography="heading-xlarge"
+      >
+        <span
+          pdk-typography="caption-xlarge"
+        >
+          Prosecutor
+        </span>
+         Single Justice Procedure 
+      </h1>
+      <h2
+        pdk-margin-top="8"
+        pdk-typography="heading-medium"
+      >
+        Search for a case
+      </h2>
+      <search-input-container>
+        <div />
+      </search-input-container>
+    </div>
+  </pdk-grid><pdk-grid
+    container=""
+    ng-reflect-container=""
   >
-    <span
-      pdk-typography="caption-xlarge"
+    <div
+      class="govuk-grid-row"
     >
-      Prosecutor
-    </span>
-     Single Justice Procedure 
-  </h1><h2
-    pdk-margin-top="8"
-    pdk-typography="heading-medium"
-  >
-    Search for a case
-  </h2><search-input-container>
-    <div />
-  </search-input-container><h2
-    pdk-margin-top="8"
-    pdk-typography="heading-medium"
-  >
-    Other tasks
-  </h2><review-not-guilty-pleas-link
-    ng-reflect-number-of-cases="2"
-  >
-    <span>
-      2
-    </span>
-  </review-not-guilty-pleas-link><defendant-details-updates-link
-    ng-reflect-number-of-updates="2"
-  >
-    <span>
-      2
-    </span>
-  </defendant-details-updates-link><div>
-    <a
-      href="javascript:void(0)"
-      pdk-link=""
-      pdk-section="small"
-      routerlink="search"
-    >
-      Manage offence withdrawals
-    </a>
-  </div><div
-    pdk-margin-top="6"
-  >
-    <a
-      href="javascript:void(0)"
-      pdk-link=""
-      routerlink="export-case-decisions"
-    >
-      Export case results by date
-    </a>
-  </div>
+      <pdk-grid
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-grid-column-two-thirds"
+        >
+          <h2
+            pdk-margin-top="8"
+            pdk-typography="heading-medium"
+          >
+            Other tasks
+          </h2>
+          <review-not-guilty-pleas-link
+            ng-reflect-number-of-cases="2"
+          >
+            <span>
+              2
+            </span>
+          </review-not-guilty-pleas-link>
+          <defendant-details-updates-link
+            ng-reflect-number-of-updates="2"
+          >
+            <span>
+              2
+            </span>
+          </defendant-details-updates-link>
+          <div>
+            <a
+              href="javascript:void(0)"
+              pdk-link=""
+              pdk-section="small"
+              routerlink="search"
+            >
+              Manage offence withdrawals
+            </a>
+          </div>
+          <div
+            pdk-margin-top="6"
+          >
+            <a
+              href="javascript:void(0)"
+              pdk-link=""
+              routerlink="export-case-decisions"
+            >
+              Export case results by date
+            </a>
+          </div>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-grid-column-one-third"
+        >
+          
+          <pdk-summary-item
+            hero=""
+            label="cases missing SJP notices"
+            ng-reflect-hero=""
+            ng-reflect-label="cases missing SJP notices"
+          >
+            <div
+              class="pdk-summary-item"
+            >
+              <span
+                class="pdk-summary-item__number pdk-summary-item__number--hero"
+              >
+                  
+              </span>
+              <span
+                class="pdk-summary-item__label"
+              >
+                cases missing SJP notices
+              </span>
+            </div>
+          </pdk-summary-item>
+          
+        </div>
+      </pdk-grid>
+    </div>
+  </pdk-grid>
 </prosecutor-dashboard>
 `;

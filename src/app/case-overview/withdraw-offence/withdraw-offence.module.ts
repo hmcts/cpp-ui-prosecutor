@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence-withdrawal.module';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 import { OffenceWithdrawalReasonsGuard } from './withdraw-offence.guard';
+import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
 const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
 @NgModule({
@@ -29,7 +30,6 @@ const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, Withdr
     FormsModule,
     PdkFormModule,
     PdkRadioInputModule,
-    PdkBreadcrumbsModule,
     PdkCheckboxInputModule,
     PdkGridModule,
     PdkButtonModule,
@@ -37,6 +37,7 @@ const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, Withdr
     PdkBadgeModule,
     CaseHeaderBadgeModule,
     OffenceWithdrawalModule,
+    BreadcrumbLinksModule,
     RouterModule.forChild([
       {
         path: '',

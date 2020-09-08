@@ -2,26 +2,13 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { Case, Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { Option } from '../../shared/interfaces';
+import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.interface';
+import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.constant';
 
 @Component({
   selector: 'withdraw-offence-list',
   template: `
-    <ol pdk-breadcrumb-list pdk-margin-vertical="4">
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../../../../" pdk-breadcrumb>Home</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../../../../../../search" pdk-breadcrumb>
-          Search for a case
-        </a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb href="javascript: void(0)" routerLink="../../../../">Case Overview</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        <a pdk-breadcrumb>Withdraw offence</a>
-      </li>
-    </ol>
+    <breadcrumb-links [caseId]="kase.id" [breadcrumbs]="breadcrumbs"></breadcrumb-links>
     <case-header-badge-container></case-header-badge-container>
     <pdk-error-summary *ngIf="errors" pdk-margin-top="5" focusOnChange title="Fix the following" [errors]="errors">
     </pdk-error-summary>
@@ -55,4 +42,5 @@ export class WithdrawOffenceComponent {
   @Input() offenceWithdrawalReasons: Option[];
   @Output() formSubmit = new EventEmitter<WithdrawOffenceParam[]>();
   errors: ValidationError[];
+  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW, Breadcrumbs.WITHDRAW_OFFENCE];
 }

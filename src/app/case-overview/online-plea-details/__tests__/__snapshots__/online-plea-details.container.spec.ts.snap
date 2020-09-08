@@ -2,64 +2,14 @@
 
 exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
 <online-plea-details-container
+  case$={[Function Store]}
   onlinePlea$={[Function Store]}
   store={[Function Store]}
 >
-  <ol
-    pdk-breadcrumb-list=""
-    pdk-margin-top="4"
-  >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="/"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-         Case Details 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-       Online plea 
-    </li>
-  </ol><case-header-badge-container>
-     mock case header 
-  </case-header-badge-container><online-plea-details>
+  <online-plea-details>
     <div>
       null
     </div>
-  </online-plea-details><button
-    id="onlinePleaBackButton"
-    pdk-button=""
-    pdk-margin-top="4"
-    routerlink="../../../../"
-  >
-     Back 
-  </button>
+  </online-plea-details>
 </online-plea-details-container>
 `;

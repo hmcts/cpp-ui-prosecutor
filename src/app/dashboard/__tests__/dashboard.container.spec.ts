@@ -46,10 +46,12 @@ describe('DashboardContainer', () => {
     template: `
       <span>{{ pleadedNotGuiltyCasesDetail | json }}</span>
       <span>{{ defendantDetailsUpdates | json }}</span>
+      <span>{{ casesMissingSjpNoticeCount | json }}</span>
     `
   })
   class MockDashboardComponent {
     @Input() pleadedNotGuiltyCasesDetail;
     @Input() defendantDetailsUpdates;
+    @Input() casesMissingSjpNoticeCount;
   }
 });

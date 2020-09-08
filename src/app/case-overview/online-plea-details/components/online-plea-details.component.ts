@@ -1,10 +1,15 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { OnlinePleaUi } from '../online-plea-interface';
+import { Case } from '../../../contexts/sjp';
+import { Breadcrumb } from '../../../shared/breadcrumb-links/breadcrumb-links.interface';
+import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.constant';
 
 @Component({
   selector: 'online-plea-details',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
+    <breadcrumb-links [caseId]="kase.id" [breadcrumbs]="breadcrumbs"></breadcrumb-links>
+    <case-header-badge-container></case-header-badge-container>
     <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="3">Defendant’s online plea</h1>
     <p pdk-typography="body-medium" pdk-margin-bottom="8">
       Submitted online on {{ onlinePlea.submittedOn | formatDate: 'd MMMM y' }} at
@@ -159,6 +164,9 @@ import { OnlinePleaUi } from '../online-plea-interface';
         </tbody>
       </table>
     </ng-container>
+    <button pdk-margin-top="4" id="onlinePleaBackButton" pdk-button routerLink="../../../../">
+      Back
+    </button>
   `,
   styles: [
     `
@@ -170,4 +178,6 @@ import { OnlinePleaUi } from '../online-plea-interface';
 })
 export class OnlinePleaDetailsComponent {
   @Input() onlinePlea: OnlinePleaUi;
+  @Input() kase: Case;
+  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW, Breadcrumbs.ONLINE_PLEA];
 }

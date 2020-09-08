@@ -1,13 +1,13 @@
 import { Store, StoreModule } from '@ngrx/store';
-import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
+import { reducers, State } from '../../reducers';
 import { Case, Defendant, SjpService } from '../../../contexts/sjp';
 import { LoadCaseSuccess } from '../../actions';
 import { OnlinePleaGuard } from '../online-plea.guard';
-import { MOCK_ONLINE_PLEA_DETAIL } from 'src/app/case-overview/__tests__/test-mock-data';
-import { LoadOnlinePleaSuccess } from 'src/app/case-overview/case-overview.action';
+import { LoadOnlinePleaSuccess } from '../../../case-overview/case-overview.action';
+import { MOCK_ONLINE_PLEA_DETAIL } from '../../../case-overview/__tests__/test-mock-data';
 
 describe('OnlinePleaGuard', () => {
   let guard: OnlinePleaGuard;

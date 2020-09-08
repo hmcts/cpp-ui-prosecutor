@@ -15,49 +15,11 @@ exports[`OverviewComponent should compile correctly 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -551,10 +513,10 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c2=""
+                _nghost-a-c1=""
               >
                 <div
-                  _ngcontent-a-c2=""
+                  _ngcontent-a-c1=""
                   class="pdk-related"
                 >
                   
@@ -1147,49 +1109,11 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -2213,49 +2137,11 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -3279,49 +3165,11 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -3491,27 +3339,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             >
               
               <pdk-warning-text
-                _nghost-a-c40=""
+                _nghost-a-c34=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c40=""
+                  _ngcontent-a-c34=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c40=""
+                      _ngcontent-a-c34=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3522,27 +3370,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-a-c40=""
+                _nghost-a-c34=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c40=""
+                  _ngcontent-a-c34=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c40=""
+                      _ngcontent-a-c34=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3553,27 +3401,27 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               </pdk-warning-text>
               
               <pdk-warning-text
-                _nghost-a-c40=""
+                _nghost-a-c34=""
                 error=""
                 ng-reflect-error=""
               >
                 <div
-                  _ngcontent-a-c40=""
+                  _ngcontent-a-c34=""
                   class="govuk-warning-text pdk-warning-text--error"
                 >
                   <span
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     aria-hidden="true"
                     class="govuk-warning-text__icon"
                   >
                     !
                   </span>
                   <strong
-                    _ngcontent-a-c40=""
+                    _ngcontent-a-c34=""
                     class="govuk-warning-text__text"
                   >
                     <span
-                      _ngcontent-a-c40=""
+                      _ngcontent-a-c34=""
                       class="govuk-warning-text__assistive"
                     >
                       Warning
@@ -3905,10 +3753,10 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c37=""
+                _nghost-a-c31=""
               >
                 <div
-                  _ngcontent-a-c37=""
+                  _ngcontent-a-c31=""
                   class="pdk-related"
                 >
                   
@@ -4350,49 +4198,11 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -4925,10 +4735,10 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c44=""
+                _nghost-a-c37=""
               >
                 <div
-                  _ngcontent-a-c44=""
+                  _ngcontent-a-c37=""
                   class="pdk-related"
                 >
                   
@@ -5521,49 +5331,11 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -6057,10 +5829,10 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c30=""
+                _nghost-a-c25=""
               >
                 <div
-                  _ngcontent-a-c30=""
+                  _ngcontent-a-c25=""
                   class="pdk-related"
                 >
                   
@@ -6508,49 +6280,11 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object]"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -7044,10 +6778,10 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c23=""
+                _nghost-a-c19=""
               >
                 <div
-                  _ngcontent-a-c23=""
+                  _ngcontent-a-c19=""
                   class="pdk-related"
                 >
                   
@@ -7487,49 +7221,11 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -8062,10 +7758,10 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c51=""
+                _nghost-a-c43=""
               >
                 <div
-                  _ngcontent-a-c51=""
+                  _ngcontent-a-c43=""
                   class="pdk-related"
                 >
                   
@@ -8658,49 +8354,11 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
     ng-reflect-kase="[object Object]"
     ng-reflect-offences="[object Object],[object Object"
   >
-    <ol
-      class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
-      ng-reflect-top="4"
-      pdk-breadcrumb-list=""
-      pdk-margin-top="4"
+    <breadcrumb-links
+      ng-reflect-breadcrumbs="[object Object],[object Object"
     >
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../"
-          pdk-breadcrumb=""
-          routerlink="../../"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-        <a
-          class="govuk-breadcrumbs__link"
-          href="/search"
-          ng-reflect-active=""
-          ng-reflect-router-link="../../search"
-          pdk-breadcrumb=""
-          routerlink="../../search"
-        >
-           Search for a case 
-        </a>
-      </li>
-      <li
-        class="govuk-breadcrumbs__list-item"
-        pdk-breadcrumb-list-item=""
-      >
-         Case details 
-      </li>
-    </ol>
+      breadcrumb-links
+    </breadcrumb-links>
     <case-header-badge-container>
       <pre>
         case badge
@@ -9233,10 +8891,10 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               pdk-margin-top="5"
             >
               <pdk-related
-                _nghost-a-c58=""
+                _nghost-a-c49=""
               >
                 <div
-                  _ngcontent-a-c58=""
+                  _ngcontent-a-c49=""
                   class="pdk-related"
                 >
                   

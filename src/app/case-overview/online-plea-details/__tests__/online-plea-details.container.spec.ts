@@ -1,14 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
-import { reducers } from 'src/app/reducers';
 import { Input, Component } from '@angular/core';
-
-import { LoadOnlinePleaSuccess } from 'src/app/case-overview/case-overview.action';
-import { FeatureState } from 'src/app/case-overview/case-overview.selectors';
-import { MOCK_ONLINE_PLEA_DETAIL } from 'src/app/case-overview/__tests__/test-mock-data';
 import { OnlinePleaDetailsContainer } from '../online-plea-details.container';
 import { OnlinePleaUi } from '../online-plea-interface';
-import { OnlinePlea } from 'src/app/contexts/sjp';
+import { reducers } from '../../../reducers';
+import { FeatureState } from '../../case-overview.selectors';
+import { Case, OnlinePlea } from '../../../contexts/sjp';
+import { MOCK_ONLINE_PLEA_DETAIL } from '../../__tests__/test-mock-data';
+import { LoadOnlinePleaSuccess } from '../../case-overview.action';
 
 describe('OnlinePleaDetailsContainer', () => {
   let fixture: ComponentFixture<OnlinePleaDetailsContainer>;
@@ -16,7 +15,7 @@ describe('OnlinePleaDetailsContainer', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent, MockCaseHeaderBadgeContainer],
+      declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent],
       imports: [StoreModule.forRoot(reducers)]
     });
 
@@ -32,16 +31,8 @@ describe('OnlinePleaDetailsContainer', () => {
   })
   class MockOnlinePleaDetailsComponent {
     @Input() onlinePlea: OnlinePleaUi;
+    @Input() kase: Case;
   }
-
-  @Component({
-      selector: 'case-header-badge-container',
-      template: `
-        mock case header
-      `
-  })
-  class MockCaseHeaderBadgeContainer {  }
-
 
   it('should compile correctly', () => {
     store.dispatch(new LoadOnlinePleaSuccess(MOCK_ONLINE_PLEA_DETAIL));

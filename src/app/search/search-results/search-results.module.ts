@@ -13,6 +13,8 @@ import {
 import { RouterModule } from '@angular/router';
 import { CaseStatusPipeModule, DefendantNamePipeModule } from '../../shared/pipes';
 import { SearchResultsComponent } from './components/search-results.component';
+import { SharedModule } from '../../shared';
+import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
 
 @NgModule({
   declarations: [SearchResultsContainer, SearchResultsComponent, ListSearchResultsComponent],
@@ -20,13 +22,13 @@ import { SearchResultsComponent } from './components/search-results.component';
     CommonModule,
     RouterModule,
     PdkCoreModule,
-    PdkBreadcrumbsModule,
     PdkInsetTextModule,
     PdkTableModule,
     PdkWarningTextModule,
     SearchInputModule,
     CaseStatusPipeModule,
-    DefendantNamePipeModule
+    DefendantNamePipeModule,
+    BreadcrumbLinksModule
   ],
   exports: [SearchResultsContainer]
 })

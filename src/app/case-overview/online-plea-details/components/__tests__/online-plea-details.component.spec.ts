@@ -1,4 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PdkGridModule } from '@cpp/pdk';
+import { CommonModule } from '@angular/common';
+import { Component, PipeTransform, Pipe } from '@angular/core';
+import { StoreModule, Store } from '@ngrx/store';
+import { By } from '@angular/platform-browser';
 import { OnlinePleaDetailsComponent } from '../online-plea-details.component';
 import {
   FormatAddressPipeModule,
@@ -6,28 +11,24 @@ import {
   YesNoPipeModule,
   IfEmptyPipeModule,
   PleaStatusPipeModule
-} from 'src/app/shared/pipes';
-import { PdkGridModule } from '@cpp/pdk';
-import { CommonModule } from '@angular/common';
-import { Component, PipeTransform, Pipe } from '@angular/core';
-
-import { OnlinePleaDetailsContainer } from 'src/app/case-overview/online-plea-details/online-plea-details.container';
-import { DateOfBirthModule } from 'src/app/shared/date-of-birth/date-of-birth.module';
-import { StoreModule, Store } from '@ngrx/store';
-import { reducers } from 'src/app/reducers';
-import { FeatureState } from 'src/app/case-overview/case-overview.selectors';
-import { SjpCurrencyPipeModule } from 'src/app/shared/pipes/sjp-currency/sjp-currency.module';
+} from '../../../../shared/pipes';
 import { OnlinePleaUi } from '../../online-plea-interface';
-import { MOCK_ONLINE_PLEA_DETAIL } from 'src/app/case-overview/__tests__/test-mock-data';
-import { By } from '@angular/platform-browser';
+import { Case } from '../../../../contexts/sjp';
+import { MockModule } from '../../../../shared/mock-components/mock.module';
+import { MOCK_CASE, MOCK_ONLINE_PLEA_DETAIL } from '../../../__tests__/test-mock-data';
+import { SjpCurrencyPipeModule } from '../../../../shared/pipes/sjp-currency/sjp-currency.module';
+import { FeatureState } from '../../../case-overview.selectors';
+import { DateOfBirthModule } from '../../../../shared/date-of-birth/date-of-birth.module';
+import { OnlinePleaDetailsContainer } from '../../online-plea-details.container';
+import { reducers } from '../../../../reducers';
 
 describe('OnlinePleaComponent', () => {
-  let fixture: ComponentFixture<OnlinePleaDetailsComponent>;
+  let fixture: ComponentFixture<MockDefendantOnlinePleaDetailsContainer>;
   let store: Store<FeatureState>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OnlinePleaDetailsComponent, MockDefendantOnlinePleaDetailsContainer, MockFormatDatePipe],
+      declarations: [OnlinePleaDetailsComponent, MockDefendantOnlinePleaDetailsContainer, MockFormatDatePipe, MockCaseHeaderBadgeContainer],
       imports: [
         CommonModule,
         PdkGridModule,
@@ -38,6 +39,7 @@ describe('OnlinePleaComponent', () => {
         SjpCurrencyPipeModule,
         DateOfBirthModule,
         PleaStatusPipeModule,
+        MockModule,
         StoreModule.forRoot(reducers)
       ]
     });
@@ -59,11 +61,12 @@ describe('OnlinePleaComponent', () => {
   @Component({
     selector: 'online-plea-container',
     template: `
-      <online-plea-details [onlinePlea]="onlinePlea"></online-plea-details>
+      <online-plea-details [kase]="kase" [onlinePlea]="onlinePlea"></online-plea-details>
     `
   })
   class MockDefendantOnlinePleaDetailsContainer {
     onlinePlea: OnlinePleaUi;
+    kase: Case = MOCK_CASE;
     constructor() {
       const container = new OnlinePleaDetailsContainer(store);
       this.onlinePlea = container.transformToUiModel(MOCK_ONLINE_PLEA_DETAIL);
@@ -79,3 +82,11 @@ describe('OnlinePleaComponent', () => {
     }
   }
 });
+
+@Component({
+  selector: 'case-header-badge-container',
+  template: `
+    mock case header
+  `
+})
+class MockCaseHeaderBadgeContainer {  }

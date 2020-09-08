@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
 import { SearchInputModule } from '../../../search-input/search-input.module';
 import { SearchResultsComponent } from '../search-results.component';
+import { MockModule } from '../../../../shared/mock-components/mock.module';
 
 describe('SearchResultsComponent', () => {
   let fixture: ComponentFixture<TestSearchResultsComponent>;
@@ -13,7 +14,7 @@ describe('SearchResultsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SearchResultsComponent, TestSearchResultsComponent, MockListSearchComponent],
-      imports: [RouterTestingModule, PdkCoreModule, PdkGridModule, PdkInsetTextModule, SearchInputModule]
+      imports: [RouterTestingModule, PdkCoreModule, PdkGridModule, PdkInsetTextModule, SearchInputModule, MockModule]
     });
 
     fixture = TestBed.createComponent(TestSearchResultsComponent);

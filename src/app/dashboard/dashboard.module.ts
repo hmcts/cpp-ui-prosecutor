@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { DashboardContainer } from './dashboard.container';
 import { DashboardComponent } from './dashboard.component';
-import { PdkCoreModule, PdkWarningTextModule } from '@cpp/pdk';
+import { PdkCoreModule, PdkWarningTextModule, PdkGridModule, PdkSummaryItemModule } from '@cpp/pdk';
 import { SearchInputModule } from '../search/search-input/search-input.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -19,6 +19,8 @@ const DECLARATIONS = [DashboardContainer, DashboardComponent];
     PdkWarningTextModule,
     ReviewNotGuiltyPleasLinkModule,
     DefendantDetailsUpdatesLinkModule,
+    PdkGridModule,
+    PdkSummaryItemModule,
     RouterModule.forChild([
       {
         path: '',

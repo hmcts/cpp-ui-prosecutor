@@ -42,6 +42,7 @@ import { FinancialOffenceDecisionComponent } from './components/financial-offenc
 import { PaymentAndCollectionComponent } from './components/payment-and-collection.component';
 import { ReferredToOpenCourtOffenceDecisionComponent } from './components/referred-open-court-offence-decision.component';
 import { CaseNotesComponent } from './components/case-notes.component';
+import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -87,7 +88,8 @@ const DECLARATIONS = [
     DownloadDocumentModule,
     CaseHeaderBadgeModule,
     SavedDecisionInformationPipeModule,
-    VerdictTypePipeModule
+    VerdictTypePipeModule,
+    BreadcrumbLinksModule
   ],
   exports: [OverviewContainer]
 })

@@ -2,135 +2,50 @@
 
 exports[`DatesToAvoidComponent should compile correctly 1`] = `
 <dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
   formSubmit={[Function EventEmitter]}
+  kase={[Function Object]}
 >
-  <ol
-    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-    ng-reflect-vertical="4"
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-case-id="case-id"
   >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Dates to avoid
-      </a>
-    </li>
-  </ol><case-header-badge-container /><div>
-    <h1
-      class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="5"
-      pdk-margin-vertical="5"
-      pdk-typography="heading-xlarge"
-    >
-      Dates to avoid
-    </h1>
-  </div><dates-to-avoid-form />
+    breadcrumb-links
+  </breadcrumb-links><case-header-badge-container /><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="5"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><dates-to-avoid-form />
 </dates-to-avoid-page>
 `;
 
 exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
 <dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
   displayDatesToAvoidBanner={[Function Boolean]}
   formSubmit={[Function EventEmitter]}
   kase={[Function Object]}
 >
-  <ol
-    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-    ng-reflect-vertical="4"
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-case-id="case-id-test"
   >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Dates to avoid
-      </a>
-    </li>
-  </ol><case-header-badge-container /><div>
-    <h1
-      class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="5"
-      pdk-margin-vertical="5"
-      pdk-typography="heading-xlarge"
-    >
-      Dates to avoid
-    </h1>
-  </div><div
+    breadcrumb-links
+  </breadcrumb-links><case-header-badge-container /><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="5"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><div
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
     ng-reflect-vertical="1"
     pdk-margin-vertical="1"
@@ -156,68 +71,25 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
 
 exports[`DatesToAvoidComponent should display the dates to avoid component 1`] = `
 <dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
   displayDatesToAvoidBanner="false"
   formSubmit={[Function EventEmitter]}
   kase={[Function Object]}
 >
-  <ol
-    class="govuk-!-margin-top-4 govuk-!-margin-bottom-4"
-    ng-reflect-vertical="4"
-    pdk-breadcrumb-list=""
-    pdk-margin-vertical="4"
+  <breadcrumb-links
+    ng-reflect-breadcrumbs="[object Object],[object Object"
+    ng-reflect-case-id="case-id-test"
   >
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../"
-      >
-        Home
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../../../search"
-      >
-         Search for a case 
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        href="javascript: void(0)"
-        pdk-breadcrumb=""
-        routerlink="../../../../"
-      >
-        Case Overview
-      </a>
-    </li>
-    <li
-      pdk-breadcrumb-list-item=""
-    >
-      <a
-        pdk-breadcrumb=""
-      >
-        Dates to avoid
-      </a>
-    </li>
-  </ol><case-header-badge-container /><div>
-    <h1
-      class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="5"
-      pdk-margin-vertical="5"
-      pdk-typography="heading-xlarge"
-    >
-      Dates to avoid
-    </h1>
-  </div><dates-to-avoid-form />
+    breadcrumb-links
+  </breadcrumb-links><case-header-badge-container /><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    ng-reflect-vertical="5"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><dates-to-avoid-form />
 </dates-to-avoid-page>
 `;

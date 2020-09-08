@@ -2,18 +2,21 @@ import {
   caseReducer,
   defendantDetailsUpdatesReducer,
   offenceWithdrawalReasonsReducer,
-  pleadedNotGuiltyReducer
+  pleadedNotGuiltyReducer,
+  casesMissingSjpNoticesReducer
 } from '../entities.reducer';
 import {
   LoadCaseSuccess,
   LoadDefendantDetailsUpdates,
   LoadOffenceWithdrawalReasonsSuccess,
-  LoadPleadedNotGuiltyCases
+  LoadPleadedNotGuiltyCases,
+  LoadCasesWithSjpNoticeCountSuccess
 } from '../../actions/entities';
 import {
   MOCK_DEFENDANT_DETAILS_UPDATES,
   MOCK_OFFENCE_WITHDRAWAL_REASON,
-  MOCK_PENDING_DATES_TO_AVOID
+  MOCK_PENDING_DATES_TO_AVOID,
+  MOCK_CASES_MISSING_SJP_NOTICE_COUNT
 } from '../../../dashboard/__tests__/test-mock-data';
 import { Case } from '../../../contexts/sjp';
 
@@ -81,6 +84,17 @@ describe('defendantDetailsUpdatesReducer', () => {
       const result = offenceWithdrawalReasonsReducer(
         undefined,
         new LoadOffenceWithdrawalReasonsSuccess(MOCK_OFFENCE_WITHDRAWAL_REASON)
+      );
+
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS', () => {
+    it('should set the new state', () => {
+      const result = casesMissingSjpNoticesReducer(
+        undefined,
+        new LoadCasesWithSjpNoticeCountSuccess(MOCK_CASES_MISSING_SJP_NOTICE_COUNT)
       );
 
       expect(result).toMatchSnapshot();

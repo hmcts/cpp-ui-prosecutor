@@ -2,12 +2,15 @@ import { Routes } from '@angular/router';
 import { TechnicalErrorComponent } from './shared/error-pages';
 import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
 import { CaseNotesGuard } from './core/guards/case-notes.guard';
+import { SjpNoticeCasesDataGuard } from './cases-missing-sjp-notices/sjp-notice-cases-data.guard';
+import { RegionsGuard } from './core/guards/regions.guard';
+import { CanActivate } from '@angular/router/src/utils/preactivation';
 
 export const routes: Routes = [
   {
     path: 'user',
     loadChildren: './dashboard/dashboard.module#DashboardModule',
-    canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard]
+    canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard, SjpNoticeCasesDataGuard]
   },
   {
     path: 'tfl',
@@ -22,7 +25,16 @@ export const routes: Routes = [
   {
     path: ':role/review-not-guilty-pleas',
     loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
-    canActivate: [PleadedNotGuiltyDataGuard]
+    canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard]
+  },
+  {
+    path: ':role/review-not-guilty-pleas/:regionFilter',
+    loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
+    canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard]
+  },
+  {
+    path: 'user/cases-missing-sjp-notices',
+    loadChildren: './cases-missing-sjp-notices/cases-missing-sjp-notices.module#CasesMissingSjpNoticesModule'
   },
   {
     path: ':role/export-case-decisions',
@@ -30,7 +42,13 @@ export const routes: Routes = [
   },
   {
     path: ':role/defendant-details-updates',
-    loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule'
+    loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
+    canActivate: [RegionsGuard]
+  },
+  {
+    path: ':role/defendant-details-updates/:regionFilter',
+    loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
+    canActivate: [RegionsGuard]
   },
   { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent },
   { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule' },

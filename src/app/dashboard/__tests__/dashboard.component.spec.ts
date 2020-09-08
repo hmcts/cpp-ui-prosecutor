@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { DashboardComponent } from '../dashboard.component';
 import { MOCK_DEFENDANT_DETAILS_UPDATES, MOCK_PENDING_DATES_TO_AVOID } from './test-mock-data';
+import { PdkGridModule, PdkSummaryItemModule } from '@cpp/pdk';
 
 describe('DashboardComponent', () => {
   let fixture: ComponentFixture<DashboardComponent>;
@@ -10,7 +11,10 @@ describe('DashboardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink, DefendantDetailsUpdateLink],
-      imports: []
+      imports: [
+        PdkGridModule,
+        PdkSummaryItemModule
+      ]
     });
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;

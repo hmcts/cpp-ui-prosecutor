@@ -5,6 +5,7 @@ import { MockPaymentAndCollectionComponent } from './mock-payment-and-collection
 import { MockReferredToOpenCourtOffenceDecisionComponent } from './mock-referred-to-open-court-decision.component';
 import { MockNoSeparatePenaltyDecisionComponent } from './mock-no-separate-penalty-decision.component';
 import { MockCaseNotesComponent } from './mock-case-notes-component';
+import { MockBreadcrumbLinksComponent } from './mock-breadcrumb-links.component';
 
 const DECLARATIONS = [
   MockFinancialImpositionComponent,
@@ -12,7 +13,8 @@ const DECLARATIONS = [
   MockPaymentAndCollectionComponent,
   MockReferredToOpenCourtOffenceDecisionComponent,
   MockNoSeparatePenaltyDecisionComponent,
-  MockCaseNotesComponent
+  MockCaseNotesComponent,
+  MockBreadcrumbLinksComponent
 ];
 
 @NgModule({

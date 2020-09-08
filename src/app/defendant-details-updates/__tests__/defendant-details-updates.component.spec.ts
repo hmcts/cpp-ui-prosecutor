@@ -4,9 +4,18 @@ import { DefendantDetailsUpdatesComponent } from '../defendant-details-updates.c
 import { DefendantNamePipeModule } from '../../shared/pipes';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
-import { PdkButtonModule, PdkInsetTextModule } from '@cpp/pdk';
+import {
+  PdkButtonModule,
+  PdkInsetTextModule,
+  PdkGridModule,
+  PdkSelectModule,
+  PdkFormModule,
+  PdkWarningTextModule,
+  PdkDividerModule
+} from '@cpp/pdk';
 import { Component, Input } from '@angular/core';
 import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
+import { MockModule } from '../../shared/mock-components/mock.module';
 
 let component: DefendantDetailsUpdatesComponent;
 let fixture: ComponentFixture<DefendantDetailsUpdatesComponent>;
@@ -18,7 +27,18 @@ describe('DefendantDetailsUpdatesComponent', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DefendantDetailsUpdatesComponent, MockWhatChangedComponent],
-      imports: [RouterTestingModule, PdkButtonModule, PdkInsetTextModule, DefendantNamePipeModule]
+      imports: [
+        RouterTestingModule,
+        PdkButtonModule,
+        PdkGridModule,
+        PdkSelectModule,
+        PdkFormModule,
+        PdkInsetTextModule,
+        DefendantNamePipeModule,
+        MockModule,
+        PdkWarningTextModule,
+        PdkDividerModule
+      ]
     });
 
     fixture = TestBed.createComponent(DefendantDetailsUpdatesComponent);
@@ -74,8 +94,10 @@ describe('DefendantDetailsUpdatesComponent', () => {
   selector: 'what-changed',
   template: `
     <span>{{ defendantDetailsUpdate | json }}</span>
+    <span>{{ region | json }}</span>
   `
 })
 class MockWhatChangedComponent {
   @Input() defendantDetailsUpdate;
+  @Input() region;
 }

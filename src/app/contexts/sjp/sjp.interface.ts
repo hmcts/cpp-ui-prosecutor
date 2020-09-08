@@ -445,3 +445,8 @@ export interface PressRestriction {
   requested: boolean;
   name: string;
 }
+
+export interface Region {
+  label: string;
+  value: string;
+}

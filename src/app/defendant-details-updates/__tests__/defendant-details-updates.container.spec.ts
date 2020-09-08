@@ -6,18 +6,28 @@ import { CommonModule } from '@angular/common';
 import { LoadDefendantDetailsUpdates } from '../../core/actions/entities';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
 import { DefendantDetailsUpdatesContainer } from '../defendant-details-updates.container';
-import {AcknowledgeDefendantDetailsUpdates} from '../defendant-details-updates.action';
-import {AcknowledgeDefendantDetailsUpdatesParam} from '../../contexts/sjp';
+import { AcknowledgeDefendantDetailsUpdates } from '../defendant-details-updates.action';
+import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
+import { Router } from '@angular/router';
 
 describe('DefendantDetailsUpdatesContainer', () => {
   let fixture: ComponentFixture<DefendantDetailsUpdatesContainer>;
   let store: Store<State>;
+  let navigate: jest.Mock;
 
   beforeEach(() => {
+    navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DefendantDetailsUpdatesContainer, MockDefendantDetailsUpdatesComponent],
       imports: [CommonModule, StoreModule.forRoot(reducers)],
-      providers: []
+      providers: [
+        {
+          provide: Router,
+          useValue: {
+            navigate
+          }
+        }
+      ]
     });
 
     store = TestBed.get(Store);
@@ -53,8 +63,10 @@ describe('DefendantDetailsUpdatesContainer', () => {
   selector: 'defendant-details-updates',
   template: `
     <span>{{ defendantDetailsUpdates | json }}</span>
+    <span>{{ region | json }}</span>
   `
 })
 class MockDefendantDetailsUpdatesComponent {
   @Input() defendantDetailsUpdates;
+  @Input() region;
 }

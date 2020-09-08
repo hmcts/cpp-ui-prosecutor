@@ -2,7 +2,7 @@ import { BasePage } from '../base.page';
 import { $, $$, by, element, protractor } from 'protractor';
 
 export class ReviewNotGuiltyPleaCasesPage extends BasePage {
-  public readonly subHeading = $('review-not-guilty-pleas-container span h2');
+  public readonly subHeading = $('review-not-guilty-pleas-container h2');
 
   public getNthCasePendingDatesToAvoid = (n: number) => {
     const lastRowIndex = n - 1;

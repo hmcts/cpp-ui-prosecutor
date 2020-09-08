@@ -9,8 +9,12 @@ import {
   OffenceWithdrawalReasonsState,
   offenceWithdrawalReasonsReducer,
   caseNotesReducer,
-  CaseNotesState
+  CaseNotesState,
+  casesMissingSjpNoticesReducer,
+  regionsReducer,
+  RegionState
 } from './entities.reducer';
+import { CasesMissingSjpNoticeResult } from '../../contexts/sjp';
 
 export interface State {
   readonly api: ApiState;
@@ -19,6 +23,8 @@ export interface State {
   readonly defendantDetailsUpdates: DefendantDetailsUpdatesState;
   readonly offenceWithdrawalReasons: OffenceWithdrawalReasonsState;
   readonly caseNotes: CaseNotesState;
+  readonly casesMissingSJPNoticeCount: CasesMissingSjpNoticeResult;
+  readonly region: RegionState;
 }
 
 export const reducers = {
@@ -27,5 +33,7 @@ export const reducers = {
   pleadedNotGuiltyCases: pleadedNotGuiltyReducer,
   defendantDetailsUpdates: defendantDetailsUpdatesReducer,
   offenceWithdrawalReasons: offenceWithdrawalReasonsReducer,
-  caseNotes: caseNotesReducer
+  caseNotes: caseNotesReducer,
+  casesMissingSJPNoticeCount: casesMissingSjpNoticesReducer,
+  region: regionsReducer
 };

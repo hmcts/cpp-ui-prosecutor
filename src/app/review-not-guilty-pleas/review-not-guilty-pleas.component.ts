@@ -1,29 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interface';
+import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
+import { NgForm } from '@angular/forms';
+import { RegionState } from '../core/reducers/entities.reducer';
 
 @Component({
   selector: 'review-not-guilty-pleas',
   template: `
-    <ol pdk-breadcrumb-list pdk-margin-top="4">
-      <li pdk-breadcrumb-list-item>
-        <a href="javascript: void(0)" routerLink="../" pdk-breadcrumb>Home</a>
-      </li>
-      <li pdk-breadcrumb-list-item>
-        Review not guilty pleas
-        <span *ngIf="pleadedNotGuiltyCasesDetail.count > 0" [ngPlural]="pleadedNotGuiltyCasesDetail.count">
-          ({{ pleadedNotGuiltyCasesDetail.count }} <ng-template ngPluralCase="=1">case</ng-template>
-          <ng-template ngPluralCase="other">cases</ng-template>)
-        </span>
-      </li>
-    </ol>
-    <span *ngIf="pleadedNotGuiltyCasesDetail.count > 0; else noNotGuiltyPleaCases">
-      <span>
-        <h2 pdk-section="large">
-          Review not guilty pleas ({{ pleadedNotGuiltyCasesDetail.count }}
+    <breadcrumb-links [breadcrumbs]="breadcrumbs"></breadcrumb-links>
+    <h2 pdk-section="large">
+        Review not guilty pleas ({{ pleadedNotGuiltyCasesDetail.count }}
           <span [ngPlural]="pleadedNotGuiltyCasesDetail.count">
             <ng-template ngPluralCase="=1">case</ng-template>
             <ng-template ngPluralCase="other">cases</ng-template> </span
           >)
-        </h2>
+      </h2>
+    <span *ngIf="pleadedNotGuiltyCasesDetail.count > 0; else noNotGuiltyPleaCases">
+      <span>
         <h4 pdk-section="large">
           <pdk-warning-text>
             These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working
@@ -32,7 +25,26 @@ import { Component, Input } from '@angular/core';
           <pdk-divider></pdk-divider>
         </h4>
       </span>
-      <table pdk-table>
+      <pdk-grid container>
+        <pdk-grid one-half>
+          <form pdk-form (validSubmit)="setRegion.emit(form.value.selectedRegion)">
+            <label pdk-label>Filter by region</label>
+            <div style="display: inline-flex">
+              <pdk-select
+                [ngModel]="region?.selectedRegion"
+                [options]="region?.regions"
+                name="selectedRegion"
+                required
+              >
+              </pdk-select>
+              <pdk-form-group>
+                <button pdk-button pdk-margin-left="2" type="submit">Filter</button>
+              </pdk-form-group>
+            </div>
+          </form>
+        </pdk-grid>
+      </pdk-grid>
+      <table pdk-table *ngIf="pleadedNotGuiltyCasesDetail.cases.length > 0; else noNotGuiltyPleaCases">
         <thead pdk-table-head>
           <tr pdk-table-row>
             <th pdk-table-header>Name</th>
@@ -46,7 +58,7 @@ import { Component, Input } from '@angular/core';
         <tbody pdk-table-body>
           <tr pdk-table-row *ngFor="let pleadedNotGuiltyCase of pleadedNotGuiltyCasesDetail.cases">
             <td pdk-table-cell>
-              <a href="javascript:void(0)" pdk-link [routerLink]="['../case-overview', pleadedNotGuiltyCase.caseId]">
+              <a href="javascript:void(0)" pdk-link (click)="viewCase.emit(pleadedNotGuiltyCase.caseId)">
                 <b>{{ pleadedNotGuiltyCase | defendantName: false }}</b>
               </a>
             </td>
@@ -70,19 +82,21 @@ import { Component, Input } from '@angular/core';
       </table>
     </span>
     <ng-template #noNotGuiltyPleaCases>
-      <h2 pdk-section="large">
-        Review not guilty pleas
-      </h2>
       <h4 pdk-section="large">
         <pdk-warning-text>
           There are no cases to review
         </pdk-warning-text>
         <pdk-divider></pdk-divider>
       </h4>
-      <button pdk-button="" type="button" routerLink="../">Done</button>
     </ng-template>
+    <button pdk-button="" type="button" routerLink="/">Back to home</button>
   `
 })
 export class ReviewNotGuiltyPleasComponent {
+  @ViewChild(NgForm) form: NgForm;
   @Input() pleadedNotGuiltyCasesDetail;
+  @Input() region: RegionState;
+  @Output() setRegion = new EventEmitter();
+  @Output() viewCase = new EventEmitter();
+  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.REVIEW_NOT_GUILTY_PLEAS];
 }

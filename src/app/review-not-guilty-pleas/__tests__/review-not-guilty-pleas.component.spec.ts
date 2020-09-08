@@ -7,7 +7,8 @@ import {
   MOCK_PENDING_DATES_TO_AVOID,
   MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE
 } from '../../dashboard/__tests__/test-mock-data';
-import { PdkButtonModule, PdkDividerModule, PdkWarningTextModule } from '@cpp/pdk';
+import { PdkButtonModule, PdkDividerModule, PdkWarningTextModule, PdkSelectModule, PdkGridModule, PdkFormModule } from '@cpp/pdk';
+import { MockModule } from '../../shared/mock-components/mock.module';
 
 describe('ReviewNotGuiltyPleasComponent', () => {
   let navigate: jest.Mock;
@@ -24,7 +25,11 @@ describe('ReviewNotGuiltyPleasComponent', () => {
         DefendantNamePipeModule,
         PdkDividerModule,
         PdkWarningTextModule,
-        PdkButtonModule
+        PdkButtonModule,
+        MockModule,
+        PdkSelectModule,
+        PdkGridModule,
+        PdkFormModule
       ]
     });
 

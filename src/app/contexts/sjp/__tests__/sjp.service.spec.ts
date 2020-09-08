@@ -3,8 +3,9 @@ import { cold } from 'jasmine-marbles';
 import { CommonModule } from '@angular/common';
 import { CppHttp, HttpModule } from '@cpp/core';
 import { SjpService } from '../sjp.service';
-import { Case, CaseDetails, SearchResult } from '../sjp.interface';
+import { Case, CaseDetails, SearchResult, Region } from '../sjp.interface';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/test-mock-data';
+import { HttpParams } from '@angular/common/http';
 
 const MOCK_CASE_ID = 'mock-case-id';
 const MOCK_DATES_TO_AVOID = 'dates to avoid content';
@@ -116,9 +117,11 @@ describe('SjpService', () => {
       const query$ = service.getCasesDetails('testing');
 
       expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('q', 'testing');
 
       expect(http.query).toHaveBeenCalledWith({
-        url: '/sjp-query-api/query/api/rest/sjp/search?q=testing',
+        url: '/sjp-query-api/query/api/rest/sjp/search',
+        params,
         requestType: 'application/vnd.sjp.query.case-search-results+json'
       });
     });
@@ -135,9 +138,11 @@ describe('SjpService', () => {
       const query$ = service.getDefendantDetailsUpdates(10);
 
       expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '10');
 
       expect(http.query).toHaveBeenCalledWith({
-        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates?limit=10',
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
         requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
       });
     });
@@ -198,9 +203,11 @@ describe('SjpService', () => {
       const query$ = service.getCasesMissingSjpNoticeCount();
 
       expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '0').set('daysSincePosting', '14');
 
       expect(http.query).toHaveBeenCalledWith({
-        url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn?limit=0',
+        url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn',
+        params,
         requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
       });
     });
@@ -219,9 +226,11 @@ describe('SjpService', () => {
       const query$ = service.getCasesMissingSjpNotice();
 
       expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('daysSincePosting', '14');
 
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/cases-missing-sjpn',
+        params,
         requestType: 'application/vnd.sjp.query.cases-missing-sjpn+json'
       });
     });
@@ -238,9 +247,11 @@ describe('SjpService', () => {
       const query$ = service.getPendingDatesToAvoid();
 
       expect(query$).toBeObservable(expected$);
+      const params = new HttpParams();
 
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
         requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
       });
     });
@@ -255,6 +266,29 @@ describe('SjpService', () => {
   describe('changeDatesToAvoid', () => {
     it('should make a call', () => {
       submitDatesToAvoidInternal(false, 'public.sjp.dates-to-avoid-updated');
+    });
+  });
+
+  describe('getRegions', () => {
+    it('should make a call', () => {
+      const data: Region[] = [{ value: 'testid', label: 'testvalue' }];
+      const result = {
+        regions: [{ id: 'testid', name: 'testvalue' }]
+      };
+
+      const expected$ = cold('-b|', { b: data });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getRegions();
+
+      expect(query$).toBeObservable(expected$);
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/regions',
+        requestType: 'application/vnd.sjp.query.regions+json'
+      });
     });
   });
 
