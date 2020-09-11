@@ -31,9 +31,9 @@ export class SjpService {
   }
 
   getPendingDatesToAvoid(regionId: string = null): Observable<PleadedNotGuiltyCaseResult> {
-    const params = new HttpParams();
+    let params = new HttpParams();
     if (regionId && regionId !== 'ALL') {
-      params.set('regionId', regionId);
+      params = params.set('regionId', regionId);
     }
     return this.http.query({
       url: `${this.query}/cases/pending-dates-to-avoid`,
@@ -72,9 +72,9 @@ export class SjpService {
   }
 
   getDefendantDetailsUpdates(limit: number, regionId: string = null): Observable<DefendantDetailsUpdatesResult> {
-    const params = new HttpParams().set('limit', limit.toString());
+    let params = new HttpParams().set('limit', limit.toString());
     if (regionId && regionId !== 'ALL') {
-      params.set('regionId', regionId);
+      params = params.set('regionId', regionId);
     }
     return this.http.query({
       url: `${this.query}/defendant-details-updates`,

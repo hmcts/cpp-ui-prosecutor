@@ -146,6 +146,25 @@ describe('SjpService', () => {
         requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
       });
     });
+
+    it('should make a call with region', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10, 'testRegionId');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '10').set('regionId', 'testRegionId');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
   });
 
   describe('acknowledgeDefendantDetailsUpdates', () => {
@@ -248,6 +267,25 @@ describe('SjpService', () => {
 
       expect(query$).toBeObservable(expected$);
       const params = new HttpParams();
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+
+    it('should make a call with region', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid('testRegionId');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('regionId', 'testRegionId');
 
       expect(http.query).toHaveBeenCalledWith({
         url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
