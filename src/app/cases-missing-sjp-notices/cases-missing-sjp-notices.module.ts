@@ -21,7 +21,7 @@ import { BreadcrumbLinksModule } from '../shared/breadcrumb-links/breadcrumb-lin
         path: '',
         canActivate: [CasesMissingSjpNoticesGuard],
         data: {
-          title: 'Cases missing SJP notices - Prosecutor'
+          title: 'Cases missing SJP notices | Common platform'
         },
         component: CasesMissingSjpNoticesContainer
       }

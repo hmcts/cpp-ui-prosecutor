@@ -39,7 +39,7 @@ const DECLARATIONS = [ReviewNotGuiltyPleasComponent, ReviewNotGuiltyPleasContain
       {
         path: '',
         data: {
-          title: 'Review not guilty pleas'
+          title: 'Review not guilty pleas | Common platform'
         },
         component: ReviewNotGuiltyPleasContainer
       }

@@ -25,7 +25,7 @@ const DECLARATIONS = [TflDashboardContainer, TflDashboardComponent];
       {
         path: '',
         data: {
-          title: 'Single Justice Procedure - Tfl'
+          title: 'Single Justice Procedure | Common platform'
         },
         component: TflDashboardContainer
       }

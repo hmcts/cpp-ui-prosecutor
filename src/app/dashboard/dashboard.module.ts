@@ -25,7 +25,7 @@ const DECLARATIONS = [DashboardContainer, DashboardComponent];
       {
         path: '',
         data: {
-          title: 'Single Justice Procedure - Prosecutor'
+          title: 'Single Justice Procedure | Common platform'
         },
         component: DashboardContainer
       }

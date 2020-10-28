@@ -12,7 +12,7 @@ import { DocumentUploadDetails } from '../../../contexts/staging-tfl';
           <th pdk-table-header>At</th>
           <th pdk-table-header>File name</th>
           <th pdk-table-header>Status</th>
-          <th pdk-table-header>&nbsp;</th>
+          <th pdk-table-header><span pdk-visually-hidden>Action</span></th>
         </tr>
       </thead>
       <tbody pdk-table-body>

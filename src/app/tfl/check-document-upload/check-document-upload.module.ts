@@ -26,7 +26,7 @@ import { FormatDatePipeModule, UploadStatusPipeModule } from '../../shared/pipes
       {
         path: '',
         data: {
-          title: 'Check document uploads - Prosecute SJP cases'
+          title: 'Check document uploads - Prosecute SJP cases | Common platform'
         },
         canActivate: [CheckDocumentUploadGuard],
         component: CheckDocumentUploadContainer

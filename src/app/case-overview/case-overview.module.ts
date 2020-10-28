@@ -19,19 +19,23 @@ import { OverviewContainer } from './overview/overview.container';
     RouterModule.forChild([
       {
         path: '',
-        component: OverviewContainer
+        component: OverviewContainer,
+        data: { title: 'Case Overview | Common platform' }
       },
       {
         path: 'withdraw-offence',
-        loadChildren: './withdraw-offence/withdraw-offence.module#WithdrawOffenceModule'
+        loadChildren: './withdraw-offence/withdraw-offence.module#WithdrawOffenceModule',
+        data: { title: 'Manage offence withdrawals | Common platform'}
       },
       {
         path: 'dates-to-avoid',
-        loadChildren: './dates-to-avoid/dates-to-avoid.module#DatesToAvoidModule'
+        loadChildren: './dates-to-avoid/dates-to-avoid.module#DatesToAvoidModule',
+        data: {title: 'Dates to avoid | Common platform'}
       },
       {
         path: 'online-plea-details',
-        loadChildren: './online-plea-details/online-plea-details.module#OnlinePleaDetailsModule'
+        loadChildren: './online-plea-details/online-plea-details.module#OnlinePleaDetailsModule',
+        data: { title: 'Online plea | Common platform' }
       }
     ])
   ]

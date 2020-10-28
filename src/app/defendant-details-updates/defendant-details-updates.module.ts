@@ -43,7 +43,7 @@ const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesC
       {
         path: '',
         data: {
-          title: 'Defendant details updates'
+          title: 'Defendant details updates | Common platform'
         },
         component: DefendantDetailsUpdatesContainer,
         canActivate: [DefendantDetailsUpdatesPageDataGuard]

@@ -54,7 +54,13 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with  multiple r
           pdk-table-header=""
           scope="col"
         >
-           
+          <span
+            class="govuk-visually-hidden"
+            ng-reflect-hidden=""
+            pdk-visually-hidden=""
+          >
+            Action
+          </span>
         </th>
       </tr>
     </thead>
@@ -227,7 +233,13 @@ exports[`ListCsvUploadDetailsComponent should compile correctly with single row 
           pdk-table-header=""
           scope="col"
         >
-           
+          <span
+            class="govuk-visually-hidden"
+            ng-reflect-hidden=""
+            pdk-visually-hidden=""
+          >
+            Action
+          </span>
         </th>
       </tr>
     </thead>

@@ -20,7 +20,7 @@ import { casesMissingSjpNoticesReducer } from './cases-missing-sjp-notices.reduc
         path: '',
         canActivate: [CasesMissingSjpNoticesGuard],
         data: {
-          title: 'Cases missing SJP notices - Prosecutor'
+          title: 'Cases missing SJP notices | Common platform'
         },
         component: CasesMissingSjpNoticesContainer
       }

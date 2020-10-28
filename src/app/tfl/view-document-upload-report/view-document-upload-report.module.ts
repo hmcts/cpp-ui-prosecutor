@@ -41,7 +41,7 @@ import { DocumentAndErrorTypesPipe } from './document-and-error-types.pipe';
       {
         path: ':uploadId',
         data: {
-          title: 'View document upload report - Prosecutor'
+          title: 'View document upload report | Common platform'
         },
         canActivate: [ViewDocumentUploadReportGuard],
         component: ViewDocumentUploadReportContainer

@@ -47,7 +47,7 @@ const DECLARATIONS = [
         path: '',
         component: ExportCaseDecisionsContainer,
         data: {
-          title: 'Export Case Decisions'
+          title: 'Export Case Decisions | Common platform'
         }
       }
     ])

@@ -4,7 +4,6 @@ import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDa
 import { CaseNotesGuard } from './core/guards/case-notes.guard';
 import { SjpNoticeCasesDataGuard } from './cases-missing-sjp-notices/sjp-notice-cases-data.guard';
 import { RegionsGuard } from './core/guards/regions.guard';
-import { CanActivate } from '@angular/router/src/utils/preactivation';
 
 export const routes: Routes = [
   {
@@ -50,7 +49,12 @@ export const routes: Routes = [
     loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
     canActivate: [RegionsGuard]
   },
-  { path: 'technical-error', pathMatch: 'full', component: TechnicalErrorComponent },
+  {
+    path: 'technical-error',
+    pathMatch: 'full',
+    component: TechnicalErrorComponent,
+    data: { title: 'Technical problem | Common platform' }
+  },
   { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule' },
 
   // Fallbacks for if the user enters /prosecutor/tvl or /prosecutor

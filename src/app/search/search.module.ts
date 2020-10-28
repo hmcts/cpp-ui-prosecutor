@@ -24,7 +24,7 @@ const DECLARATIONS = [];
       {
         path: ':role/search',
         data: {
-          title: 'Search for a case'
+          title: 'Search for a case | Common platform'
         },
         children: [
           {

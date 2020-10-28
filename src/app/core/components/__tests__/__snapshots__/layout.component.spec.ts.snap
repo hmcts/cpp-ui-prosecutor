@@ -16,8 +16,10 @@ exports[`Layout should render 1`] = `
       ng-reflect-header-nav-items="[object Object],[object Object"
       ng-reflect-search-label="Search by case or application "
       ng-reflect-search-placeholder="Case or application reference"
+      ng-reflect-service-name="CJS Common Platform"
       searchlabel="Search by case or application reference"
       searchplaceholder="Case or application reference"
+      servicename="CJS Common Platform"
     >
       
       
@@ -74,7 +76,7 @@ exports[`Layout should render 1`] = `
                 href="#"
                 pdk-header-title=""
               >
-                Common Platform Programme
+                CJS Common Platform
               </a>
               <div
                 _ngcontent-a-c0=""
@@ -360,8 +362,10 @@ exports[`Layout should render correctly when search is enabled 1`] = `
       ng-reflect-search-enabled="true"
       ng-reflect-search-label="Search by case or application "
       ng-reflect-search-placeholder="Case or application reference"
+      ng-reflect-service-name="CJS Common Platform"
       searchlabel="Search by case or application reference"
       searchplaceholder="Case or application reference"
+      servicename="CJS Common Platform"
     >
       
       
@@ -418,7 +422,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                 href="#"
                 pdk-header-title=""
               >
-                Common Platform Programme
+                CJS Common Platform
               </a>
               <div
                 _ngcontent-a-c36=""
@@ -768,8 +772,10 @@ exports[`Layout should render correctly with activity 1`] = `
       ng-reflect-header-nav-items="[object Object],[object Object"
       ng-reflect-search-label="Search by case or application "
       ng-reflect-search-placeholder="Case or application reference"
+      ng-reflect-service-name="CJS Common Platform"
       searchlabel="Search by case or application reference"
       searchplaceholder="Case or application reference"
+      servicename="CJS Common Platform"
     >
       
       <pdk-activity-indicator
@@ -854,7 +860,7 @@ exports[`Layout should render correctly with activity 1`] = `
                 href="#"
                 pdk-header-title=""
               >
-                Common Platform Programme
+                CJS Common Platform
               </a>
               <div
                 _ngcontent-a-c27=""
@@ -1140,8 +1146,10 @@ exports[`Layout should render correctly with api error 1`] = `
       ng-reflect-header-nav-items="[object Object],[object Object"
       ng-reflect-search-label="Search by case or application "
       ng-reflect-search-placeholder="Case or application reference"
+      ng-reflect-service-name="CJS Common Platform"
       searchlabel="Search by case or application reference"
       searchplaceholder="Case or application reference"
+      servicename="CJS Common Platform"
     >
       
       
@@ -1225,7 +1233,7 @@ exports[`Layout should render correctly with api error 1`] = `
                 href="#"
                 pdk-header-title=""
               >
-                Common Platform Programme
+                CJS Common Platform
               </a>
               <div
                 _ngcontent-a-c18=""
@@ -1511,8 +1519,10 @@ exports[`Layout should render correctly with online status 1`] = `
       ng-reflect-offline="true"
       ng-reflect-search-label="Search by case or application "
       ng-reflect-search-placeholder="Case or application reference"
+      ng-reflect-service-name="CJS Common Platform"
       searchlabel="Search by case or application reference"
       searchplaceholder="Case or application reference"
+      servicename="CJS Common Platform"
     >
       
       
@@ -1596,7 +1606,7 @@ exports[`Layout should render correctly with online status 1`] = `
                 href="#"
                 pdk-header-title=""
               >
-                Common Platform Programme
+                CJS Common Platform
               </a>
               <div
                 _ngcontent-a-c9=""

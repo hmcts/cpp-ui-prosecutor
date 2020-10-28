@@ -11,6 +11,7 @@ import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
       [activity]="activity"
       [headerNavItems]="headerNavItems"
       [searchEnabled]="searchEnabled"
+      serviceName="CJS Common Platform"
       searchPlaceholder="Case or application reference"
       searchLabel="Search by case or application reference"
       (search)="search.emit($event)"

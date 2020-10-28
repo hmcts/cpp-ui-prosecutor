@@ -35,7 +35,7 @@ import { IfEmptyPipeModule, UploadErrorPipeModule, UploadStatusPipeModule } from
       {
         path: ':uploadId',
         data: {
-          title: 'View CSV upload report - Prosecutor'
+          title: 'View CSV upload report | Common platform'
         },
         canActivate: [ViewCsvUploadReportGuard],
         component: ViewCsvUploadReportContainer

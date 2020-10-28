@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: AccessibilityComponent,
+    data: { title: 'Accessibility | Common platform'}
   }
 ];
 const DECLARATIONS = [AccessibilityComponent];

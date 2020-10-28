@@ -26,7 +26,7 @@ import { FormatDatePipeModule, UploadStatusPipeModule } from '../../shared/pipes
       {
         path: '',
         data: {
-          title: 'Check CSV uploads - Prosecutor'
+          title: 'Check CSV uploads | Common platform'
         },
         canActivate: [CheckCsvUploadGuard],
         component: CheckCsvUploadContainer
