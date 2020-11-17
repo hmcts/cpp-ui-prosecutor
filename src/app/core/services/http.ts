@@ -1,13 +1,13 @@
-import { Injectable, InjectionToken } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
   CppHttp,
-  CppHttpBackend,
+  CppHttpBackend, GenerateUniqueKeyFn,
   HttpComandOptions,
   HttpCommandSyncOptions,
   HttpQueryOptions,
-  Notifications
+  NotificationDispatcher
 } from '@cpp/core';
 import { CompletedApiRequest, PendingApiRequest } from '../actions/api';
 import { State } from '../reducers';
@@ -18,9 +18,9 @@ export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandS
 @Injectable()
 export class CustomHttp extends CppHttp {
   constructor(
-    generateUniqueKey: any,
+    generateUniqueKey: GenerateUniqueKeyFn,
     backend: CppHttpBackend,
-    notifications: Notifications,
+    notifications: NotificationDispatcher,
     private store: Store<State>
   ) {
     super(generateUniqueKey, backend, notifications);
@@ -61,9 +61,9 @@ export class CustomHttp extends CppHttp {
 }
 
 export function loadHttpFactory(
-  generateUniqueKey: InjectionToken<{}>,
+  generateUniqueKey: GenerateUniqueKeyFn,
   backend: CppHttpBackend,
-  notifications: Notifications,
+  notifications: NotificationDispatcher,
   store: Store<State>
 ) {
   return new CustomHttp(generateUniqueKey, backend, notifications, store);

@@ -27,147 +27,107 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
       </div>
       <div>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <b>
-                  Collection order made
-                </b>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Deduct from benefits. 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <b>
+              Collection order made
+            </b>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                
-                <div>
-                  <b>
-                    Application made for benefit deductions 
-                  </b>
-                </div>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Sum to be recovered £100.23. Reason: Compensation ordered 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Reserve terms(if deductions fail)
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Outstanding balance to be paid as a Lump sum within 10 days 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Outstanding balance to be paid as a Lump sum within 10 days 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Total to pay
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
         </pdk-grid>
       </div>
     </div>
@@ -202,147 +162,107 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
       </div>
       <div>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <b>
-                  No collection order made
-                </b>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Deduct from benefits. 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <b>
+              No collection order made
+            </b>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                
-                <div>
-                  <b>
-                    Application made for benefit deductions 
-                  </b>
-                </div>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Sum to be recovered £100.23. Reason: Compensation ordered 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Reserve terms(if deductions fail)
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Instalments of £100.23 to be paid fortnightly starting 10/10/2020 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Instalments of £100.23 to be paid fortnightly starting 10/10/2020 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Total to pay
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
         </pdk-grid>
       </div>
     </div>
@@ -377,147 +297,107 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
       </div>
       <div>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <b>
-                  Collection order made
-                </b>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Deduct from benefits. 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <b>
+              Collection order made
+            </b>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                
-                <div>
-                  <b>
-                    Application made for benefit deductions 
-                  </b>
-                </div>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Sum to be recovered £100.23. Reason: Compensation ordered 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Reserve terms(if deductions fail)
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 A lump sum of £100.23 to be paid, followed by instalments of £100.23 paid fortnightly starting on 20 Oct 2010 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             A lump sum of £100.23 to be paid, followed by instalments of £100.23 paid fortnightly starting on 20 Oct 2010 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Total to pay
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
         </pdk-grid>
       </div>
     </div>
@@ -552,147 +432,107 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
       </div>
       <div>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <b>
-                  Collection order made
-                </b>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Attach to earnings. 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <b>
+              Collection order made
+            </b>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Attach to earnings. 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                
-                
-                <div>
-                  <b>
-                    Attachment of Earnings Order made for the collection of 
-                  </b>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23. Reason: Compensation ordered 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            
+            
+            <div>
+              <b>
+                Attachment of Earnings Order made for the collection of 
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23. Reason: Compensation ordered 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Reserve terms(if deductions fail)
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Outstanding balance to be paid as a Lump sum within 10 days 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Outstanding balance to be paid as a Lump sum within 10 days 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Total to pay
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
         </pdk-grid>
       </div>
     </div>
@@ -727,147 +567,107 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
       </div>
       <div>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <b>
-                  Collection order made
-                </b>
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 Pay to court. 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <b>
+              Collection order made
+            </b>
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             Pay to court. 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                
-                <div>
-                  <b>
-                    Reason no deduction or attachment made
-                  </b>
-                </div>
-                
-                
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 some reason 
-              </div>
-            </pdk-grid>
-          </div>
+            
+            <div>
+              <b>
+                Reason no deduction or attachment made
+              </b>
+            </div>
+            
+            
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             some reason 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Payment terms
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 To be paid as a lump sum within 10 days 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Payment terms
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 To be paid as a lump sum within 10 days 
+          </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           ng-reflect-container=""
           ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
-          <div
-            class="govuk-grid-row"
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            ng-reflect-one-third=""
+            one-third=""
           >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <b>
-                  Total to pay
-                </b>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                 £100.23 
-              </div>
-            </pdk-grid>
-          </div>
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            ng-reflect-two-thirds=""
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
         </pdk-grid>
       </div>
     </div>

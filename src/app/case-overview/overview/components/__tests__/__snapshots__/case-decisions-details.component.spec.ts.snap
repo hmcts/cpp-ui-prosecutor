@@ -9,68 +9,59 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
   >
     <div>
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div
-                pdk-margin-left="2"
-                pdk-padding-vertical="2"
-              >
-                <b>
-                  Decision made
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <div
-                pdk-padding-vertical="2"
-              >
-                <div>
-                   1 December 2018 
-                </div>
-                <div>
-                   4:10pm 
-                </div>
-                <div
-                  class="pre-line"
-                >
-                   
-                </div>
-                
-                <div>
-                   Legal Adviser: Mark Adams 
-                </div>
-                
-                <div>
-                   Magistrate: Jenny 
-                </div>
-                
-                <div
-                  pdk-text-colour="grey-1"
-                >
-                   Wimbledon Magistrates' Court 
-                </div>
-              </div>
+            <div>
+               1 December 2018 
             </div>
-          </pdk-grid>
-        </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
       </pdk-grid>
       <pdk-divider>
         <hr
@@ -83,51 +74,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 1 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Withdrawn - Insufficient evidence
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Withdrawn - Insufficient evidence
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -140,51 +122,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 2 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Withdrawn - Insufficient evidence
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Withdrawn - Insufficient evidence
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -197,51 +170,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 3 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Adjourned to 11 Jun 2019 (or after)
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 11 Jun 2019 (or after)
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -254,51 +218,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 4 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Adjourned to 11 Jul 2019 (or after)
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 11 Jul 2019 (or after)
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -311,51 +266,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 5 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Adjourned to 21 Jun 2019 (or after)
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 21 Jun 2019 (or after)
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -368,51 +314,42 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 6 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Referred for court hearing - Not suitable for SJP
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Referred for court hearing - Not suitable for SJP
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -425,54 +362,45 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 7 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              <p>
-                 Proved SJP 
-              </p>
-              
-              <p
-                data-role="offence-decision"
-              >
-                Dismissed
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Dismissed
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
     </div>
@@ -490,68 +418,59 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
   >
     <div>
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div
-                pdk-margin-left="2"
-                pdk-padding-vertical="2"
-              >
-                <b>
-                  Decision made
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <div
-                pdk-padding-vertical="2"
-              >
-                <div>
-                   1 December 2018 
-                </div>
-                <div>
-                   4:10pm 
-                </div>
-                <div
-                  class="pre-line"
-                >
-                   
-                </div>
-                
-                <div>
-                   Legal Adviser: Mark Adams 
-                </div>
-                
-                <div>
-                   Magistrate: Jenny 
-                </div>
-                
-                <div
-                  pdk-text-colour="grey-1"
-                >
-                   Wimbledon Magistrates' Court 
-                </div>
-              </div>
+            <div>
+               1 December 2018 
             </div>
-          </pdk-grid>
-        </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
       </pdk-grid>
       <pdk-divider>
         <hr
@@ -564,51 +483,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 1 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -621,51 +531,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 2 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -678,51 +579,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 3 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -735,51 +627,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 4 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -792,51 +675,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 5 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -849,51 +723,42 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 6 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -906,54 +771,45 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 7 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              <p>
-                 Proved SJP 
-              </p>
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
     </div>
@@ -971,68 +827,59 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
   >
     <div>
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div
-                pdk-margin-left="2"
-                pdk-padding-vertical="2"
-              >
-                <b>
-                  Decision made
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <div
-                pdk-padding-vertical="2"
-              >
-                <div>
-                   1 December 2018 
-                </div>
-                <div>
-                   4:10pm 
-                </div>
-                <div
-                  class="pre-line"
-                >
-                   
-                </div>
-                
-                <div>
-                   Legal Adviser: Mark Adams 
-                </div>
-                
-                <div>
-                   Magistrate: Jenny 
-                </div>
-                
-                <div
-                  pdk-text-colour="grey-1"
-                >
-                   Wimbledon Magistrates' Court 
-                </div>
-              </div>
+            <div>
+               1 December 2018 
             </div>
-          </pdk-grid>
-        </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
       </pdk-grid>
       <pdk-divider>
         <hr
@@ -1045,87 +892,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 1 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1139,87 +971,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 2 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1233,87 +1050,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 3 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1327,87 +1129,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 4 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1421,87 +1208,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 5 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1515,87 +1287,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 6 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1609,90 +1366,75 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 7 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              <p>
-                 Proved SJP 
-              </p>
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction restricting publicity revoked 
+            </p>
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction restricting publicity revoked 
-                </p>
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1711,68 +1453,59 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
   >
     <div>
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div
-                pdk-margin-left="2"
-                pdk-padding-vertical="2"
-              >
-                <b>
-                  Decision made
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <div
-                pdk-padding-vertical="2"
-              >
-                <div>
-                   1 December 2018 
-                </div>
-                <div>
-                   4:10pm 
-                </div>
-                <div
-                  class="pre-line"
-                >
-                   
-                </div>
-                
-                <div>
-                   Legal Adviser: Mark Adams 
-                </div>
-                
-                <div>
-                   Magistrate: Jenny 
-                </div>
-                
-                <div
-                  pdk-text-colour="grey-1"
-                >
-                   Wimbledon Magistrates' Court 
-                </div>
-              </div>
+            <div>
+               1 December 2018 
             </div>
-          </pdk-grid>
-        </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
       </pdk-grid>
       <pdk-divider>
         <hr
@@ -1785,87 +1518,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 1 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1879,87 +1597,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 2 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -1973,87 +1676,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 3 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -2067,87 +1755,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 4 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -2161,87 +1834,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 5 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -2255,87 +1913,72 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 6 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -2349,90 +1992,75 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
         <div
-          class="govuk-grid-row"
+          data-role="press-restrictions"
         >
           <pdk-grid
+            class="govuk-grid-column-one-third"
             ng-reflect-one-third=""
             one-third=""
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
+            <div>
+              <p>
                 <b>
-                  Offence 7 
+                  Reporting restrictions
                 </b>
-              </div>
+              </p>
             </div>
           </pdk-grid>
           <pdk-grid
+            class="govuk-grid-column-two-thirds"
             ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
             two-thirds=""
           >
-            <div
-              class="govuk-grid-column-two-thirds"
+            
+            
+            <p
+              data-role="reporting-restriction"
             >
-                
-              
-              <p>
-                 Proved SJP 
-              </p>
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+            
           </pdk-grid>
-          
-          <div
-            data-role="press-restrictions"
-          >
-            <pdk-grid
-              ng-reflect-one-third=""
-              one-third=""
-            >
-              <div
-                class="govuk-grid-column-one-third"
-              >
-                <div>
-                  <p>
-                    <b>
-                      Reporting restrictions
-                    </b>
-                  </p>
-                </div>
-              </div>
-            </pdk-grid>
-            <pdk-grid
-              ng-reflect-two-thirds=""
-              two-thirds=""
-            >
-              <div
-                class="govuk-grid-column-two-thirds"
-              >
-                
-                
-                <p
-                  data-role="reporting-restriction"
-                >
-                   Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
-                </p>
-                
-              </div>
-            </pdk-grid>
-          </div>
         </div>
       </pdk-grid>
       
@@ -2451,68 +2079,59 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
   >
     <div>
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div
-                pdk-margin-left="2"
-                pdk-padding-vertical="2"
-              >
-                <b>
-                  Decision made
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            two-thirds=""
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
           >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-              <div
-                pdk-padding-vertical="2"
-              >
-                <div>
-                   1 December 2018 
-                </div>
-                <div>
-                   4:10pm 
-                </div>
-                <div
-                  class="pre-line"
-                >
-                   
-                </div>
-                
-                <div>
-                   Legal Adviser: Mark Adams 
-                </div>
-                
-                <div>
-                   Magistrate: Jenny 
-                </div>
-                
-                <div
-                  pdk-text-colour="grey-1"
-                >
-                   Wimbledon Magistrates' Court 
-                </div>
-              </div>
+            <div>
+               1 December 2018 
             </div>
-          </pdk-grid>
-        </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
       </pdk-grid>
       <pdk-divider>
         <hr
@@ -2525,51 +2144,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 1 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2582,51 +2192,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 2 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2639,51 +2240,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 3 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2696,51 +2288,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 4 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2753,51 +2336,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 5 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2810,51 +2384,42 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 6 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
       <pdk-divider>
@@ -2867,54 +2432,45 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
+        class="govuk-grid-row"
         container=""
         ng-reflect-container=""
         pdk-padding-horizontal="2"
       >
-        <div
-          class="govuk-grid-row"
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
         >
-          <pdk-grid
-            ng-reflect-one-third=""
-            one-third=""
-          >
-            <div
-              class="govuk-grid-column-one-third"
-            >
-              <div>
-                <b>
-                  Offence 7 
-                </b>
-              </div>
-            </div>
-          </pdk-grid>
-          <pdk-grid
-            ng-reflect-two-thirds=""
-            pdk-padding-bottom="2"
-            two-thirds=""
-          >
-            <div
-              class="govuk-grid-column-two-thirds"
-            >
-                
-              
-              <p>
-                 Proved SJP 
-              </p>
-              
-              <p
-                data-role="offence-decision"
-              >
-                Decision set aside
-              </p>
-              
-              
-              
-              
-            </div>
-          </pdk-grid>
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
           
-        </div>
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
       </pdk-grid>
       
     </div>

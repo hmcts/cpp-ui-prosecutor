@@ -35,69 +35,63 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
       
     </div>
   </pdk-inset-text><pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
-    <div
-      class="govuk-grid-row"
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      ng-reflect-one-half=""
+      one-half=""
     >
-      <pdk-grid
-        ng-reflect-one-half=""
-        one-half=""
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
       >
-        <div
-          class="govuk-grid-column-one-half"
+        <label
+          class="govuk-label"
+          ng-reflect-type=""
+          pdk-label=""
         >
-          <form
+          Filter by region
+        </label>
+        <div
+          style="display: inline-flex"
+        >
+          <pdk-select
             class="ng-untouched ng-pristine ng-valid"
-            novalidate=""
-            pdk-form=""
+            name="selectedRegion"
+            ng-reflect-name="selectedRegion"
+            ng-reflect-required=""
+            required=""
           >
-            <label
-              class="govuk-label"
+            <select
+              class="govuk-select"
+              id="pdk-select-1"
+              name="selectedRegion"
+              required=""
+            >
+              
+              
+            </select>
+          </pdk-select>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <button
+              class="govuk-button"
               ng-reflect-type=""
-              pdk-label=""
+              pdk-button=""
+              pdk-margin-left="2"
+              type="submit"
             >
-              Filter by region
-            </label>
-            <div
-              style="display: inline-flex"
-            >
-              <pdk-select
-                class="ng-untouched ng-pristine ng-valid"
-                name="selectedRegion"
-                ng-reflect-name="selectedRegion"
-                ng-reflect-required=""
-                required=""
-              >
-                <select
-                  class="govuk-select"
-                  id="pdk-select-1"
-                  name="selectedRegion"
-                  required=""
-                >
-                  
-                  
-                </select>
-              </pdk-select>
-              <pdk-form-group
-                class="pdk-form-group"
-              >
-                <button
-                  class="govuk-button"
-                  ng-reflect-type=""
-                  pdk-button=""
-                  pdk-margin-left="2"
-                  type="submit"
-                >
-                  Filter
-                </button>
-              </pdk-form-group>
-            </div>
-          </form>
+              Filter
+            </button>
+          </pdk-form-group>
         </div>
-      </pdk-grid>
-    </div>
+      </form>
+    </pdk-grid>
   </pdk-grid><table
     id="cases"
     pdk-table=""
@@ -358,69 +352,63 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
       </span>
     </div>
   </pdk-inset-text><pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
-    <div
-      class="govuk-grid-row"
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      ng-reflect-one-half=""
+      one-half=""
     >
-      <pdk-grid
-        ng-reflect-one-half=""
-        one-half=""
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
       >
-        <div
-          class="govuk-grid-column-one-half"
+        <label
+          class="govuk-label"
+          ng-reflect-type=""
+          pdk-label=""
         >
-          <form
+          Filter by region
+        </label>
+        <div
+          style="display: inline-flex"
+        >
+          <pdk-select
             class="ng-untouched ng-pristine ng-valid"
-            novalidate=""
-            pdk-form=""
+            name="selectedRegion"
+            ng-reflect-name="selectedRegion"
+            ng-reflect-required=""
+            required=""
           >
-            <label
-              class="govuk-label"
+            <select
+              class="govuk-select"
+              id="pdk-select-2"
+              name="selectedRegion"
+              required=""
+            >
+              
+              
+            </select>
+          </pdk-select>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <button
+              class="govuk-button"
               ng-reflect-type=""
-              pdk-label=""
+              pdk-button=""
+              pdk-margin-left="2"
+              type="submit"
             >
-              Filter by region
-            </label>
-            <div
-              style="display: inline-flex"
-            >
-              <pdk-select
-                class="ng-untouched ng-pristine ng-valid"
-                name="selectedRegion"
-                ng-reflect-name="selectedRegion"
-                ng-reflect-required=""
-                required=""
-              >
-                <select
-                  class="govuk-select"
-                  id="pdk-select-2"
-                  name="selectedRegion"
-                  required=""
-                >
-                  
-                  
-                </select>
-              </pdk-select>
-              <pdk-form-group
-                class="pdk-form-group"
-              >
-                <button
-                  class="govuk-button"
-                  ng-reflect-type=""
-                  pdk-button=""
-                  pdk-margin-left="2"
-                  type="submit"
-                >
-                  Filter
-                </button>
-              </pdk-form-group>
-            </div>
-          </form>
+              Filter
+            </button>
+          </pdk-form-group>
         </div>
-      </pdk-grid>
-    </div>
+      </form>
+    </pdk-grid>
   </pdk-grid><table
     id="cases"
     pdk-table=""

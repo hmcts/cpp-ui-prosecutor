@@ -9,98 +9,92 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
     ng-reflect-kase="[object Object]"
   >
     <pdk-grid
+      class="govuk-grid-row"
       container=""
       ng-reflect-container=""
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label="Enter dates this case shouldn'"
           >
-            <form
-              class="ng-untouched ng-pristine ng-valid"
-              novalidate=""
-              pdk-form=""
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
             >
-              <pdk-form-field
-                label="Enter dates this case shouldn't be listed or write 'none'."
-                ng-reflect-error-messages="[object Object]"
-                ng-reflect-label="Enter dates this case shouldn'"
+              
+              
+              
+              
+              <label
+                class="govuk-label"
+                for="pdk-form-control-1"
+                ng-reflect-hidden="false"
+                ng-reflect-type="default"
               >
-                
-                <pdk-form-group
-                  class="pdk-form-group"
-                  ng-reflect-has-error="false"
-                >
-                  
-                  
-                  
-                  
-                  <label
-                    class="govuk-label"
-                    for="pdk-form-control-1"
-                    ng-reflect-hidden="false"
-                    ng-reflect-type="default"
-                  >
-                     Enter dates this case shouldn't be listed or write 'none'. 
-                  </label>
-                  
-                  
-                  
-                  <textarea
-                    class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-1"
-                    minrows="10"
-                    name="datesToAvoid"
-                    ng-reflect-input-width=""
-                    ng-reflect-min-rows="10"
-                    ng-reflect-model="datesToAvoid1"
-                    ng-reflect-name="datesToAvoid"
-                    ng-reflect-required=""
-                    ng-reflect-width=""
-                    pdk-input=""
-                    pdk-resize=""
-                    pdk-text-input=""
-                    required=""
-                    style="resize: none; min-height: NaNpx; max-height: NaNpx;"
-                  >
-                                
-                  </textarea>
-                  
-                  
-                </pdk-form-group>
-              </pdk-form-field>
-              <button
-                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
-                ng-reflect-type=""
-                ng-reflect-vertical="5"
-                pdk-button=""
-                pdk-margin-vertical="5"
-                type="submit"
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              
+              
+              
+              <textarea
+                class="ng-untouched ng-pristine ng-valid govuk-input"
+                id="pdk-form-control-1"
+                minrows="10"
+                name="datesToAvoid"
+                ng-reflect-input-width=""
+                ng-reflect-min-rows="10"
+                ng-reflect-model="datesToAvoid1"
+                ng-reflect-name="datesToAvoid"
+                ng-reflect-required=""
+                ng-reflect-width=""
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; min-height: NaNpx; max-height: NaNpx;"
               >
-                 Submit 
-              </button>
-              <div>
-                <a
-                  class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
-                  href="javascript:void(0)"
-                  ng-reflect-vertical="5"
-                  pdk-link=""
-                  pdk-margin-vertical="5"
-                  routerlink="../../../../"
-                >
-                  Cancel
-                </a>
-              </div>
-            </form>
+                            
+              </textarea>
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            ng-reflect-type=""
+            ng-reflect-vertical="5"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+              href="javascript:void(0)"
+              ng-reflect-vertical="5"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../../../../"
+            >
+              Cancel
+            </a>
           </div>
-        </pdk-grid>
-      </div>
+        </form>
+      </pdk-grid>
     </pdk-grid>
   </dates-to-avoid-form>
 </test-dates-to-avoid-form>
@@ -115,98 +109,92 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
     ng-reflect-kase="[object Object]"
   >
     <pdk-grid
+      class="govuk-grid-row"
       container=""
       ng-reflect-container=""
     >
-      <div
-        class="govuk-grid-row"
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
       >
-        <pdk-grid
-          ng-reflect-two-thirds=""
-          two-thirds=""
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
         >
-          <div
-            class="govuk-grid-column-two-thirds"
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label="Enter dates this case shouldn'"
           >
-            <form
-              class="ng-untouched ng-pristine ng-valid"
-              novalidate=""
-              pdk-form=""
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
             >
-              <pdk-form-field
-                label="Enter dates this case shouldn't be listed or write 'none'."
-                ng-reflect-error-messages="[object Object]"
-                ng-reflect-label="Enter dates this case shouldn'"
+              
+              
+              
+              
+              <label
+                class="govuk-label"
+                for="pdk-form-control-3"
+                ng-reflect-hidden="false"
+                ng-reflect-type="default"
               >
-                
-                <pdk-form-group
-                  class="pdk-form-group"
-                  ng-reflect-has-error="false"
-                >
-                  
-                  
-                  
-                  
-                  <label
-                    class="govuk-label"
-                    for="pdk-form-control-3"
-                    ng-reflect-hidden="false"
-                    ng-reflect-type="default"
-                  >
-                     Enter dates this case shouldn't be listed or write 'none'. 
-                  </label>
-                  
-                  
-                  
-                  <textarea
-                    class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-3"
-                    minrows="10"
-                    name="datesToAvoid"
-                    ng-reflect-input-width=""
-                    ng-reflect-min-rows="10"
-                    ng-reflect-model="datesToAvoid1"
-                    ng-reflect-name="datesToAvoid"
-                    ng-reflect-required=""
-                    ng-reflect-width=""
-                    pdk-input=""
-                    pdk-resize=""
-                    pdk-text-input=""
-                    required=""
-                    style="resize: none; min-height: NaNpx; max-height: NaNpx;"
-                  >
-                                
-                  </textarea>
-                  
-                  
-                </pdk-form-group>
-              </pdk-form-field>
-              <button
-                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
-                ng-reflect-type=""
-                ng-reflect-vertical="5"
-                pdk-button=""
-                pdk-margin-vertical="5"
-                type="submit"
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              
+              
+              
+              <textarea
+                class="ng-untouched ng-pristine ng-valid govuk-input"
+                id="pdk-form-control-3"
+                minrows="10"
+                name="datesToAvoid"
+                ng-reflect-input-width=""
+                ng-reflect-min-rows="10"
+                ng-reflect-model="datesToAvoid1"
+                ng-reflect-name="datesToAvoid"
+                ng-reflect-required=""
+                ng-reflect-width=""
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; min-height: NaNpx; max-height: NaNpx;"
               >
-                 Submit 
-              </button>
-              <div>
-                <a
-                  class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
-                  href="javascript:void(0)"
-                  ng-reflect-vertical="5"
-                  pdk-link=""
-                  pdk-margin-vertical="5"
-                  routerlink="../../../../"
-                >
-                  Cancel
-                </a>
-              </div>
-            </form>
+                            
+              </textarea>
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            ng-reflect-type=""
+            ng-reflect-vertical="5"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+              href="javascript:void(0)"
+              ng-reflect-vertical="5"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../../../../"
+            >
+              Cancel
+            </a>
           </div>
-        </pdk-grid>
-      </div>
+        </form>
+      </pdk-grid>
     </pdk-grid>
   </dates-to-avoid-form>
 </test-dates-to-avoid-form>

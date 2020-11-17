@@ -7,100 +7,94 @@ exports[`UploadDocumentFormComponent should compile correctly 1`] = `
   formSubmit={[Function EventEmitter]}
 >
   <pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
-    <div
-      class="govuk-grid-row"
+    <pdk-grid
+      class="govuk-grid-column-two-thirds"
+      ng-reflect-two-thirds=""
+      two-thirds=""
     >
-      <pdk-grid
-        ng-reflect-two-thirds=""
-        two-thirds=""
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
       >
         <div
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
         >
-          <form
-            class="ng-untouched ng-pristine ng-valid"
-            novalidate=""
-            pdk-form=""
+          <pdk-form-field
+            label="Select file"
+            labeltype="medium"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label="Select file"
+            ng-reflect-label-type="medium"
           >
-            <div
-              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-              ng-reflect-vertical="2"
-              pdk-padding-vertical="2"
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
             >
-              <pdk-form-field
-                label="Select file"
-                labeltype="medium"
-                ng-reflect-error-messages="[object Object]"
-                ng-reflect-label="Select file"
-                ng-reflect-label-type="medium"
+              
+              
+              
+              
+              <label
+                class="govuk-label govuk-label--m"
+                for="pdk-form-control-1"
+                ng-reflect-hidden="false"
+                ng-reflect-type="medium"
               >
-                
-                <pdk-form-group
-                  class="pdk-form-group"
-                  ng-reflect-has-error="false"
-                >
-                  
-                  
-                  
-                  
-                  <label
-                    class="govuk-label govuk-label--m"
-                    for="pdk-form-control-1"
-                    ng-reflect-hidden="false"
-                    ng-reflect-type="medium"
-                  >
-                     Select file 
-                  </label>
-                  
-                  
-                  
-                  <input
-                    accept=".zip"
-                    class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-1"
-                    name="documentsZipFile"
-                    ng-reflect-model=""
-                    ng-reflect-name="documentsZipFile"
-                    ng-reflect-required=""
-                    ng-reflect-width=""
-                    ngmodel=""
-                    pdk-text-input=""
-                    required=""
-                    type="file"
-                  />
-                  
-                  
-                </pdk-form-group>
-              </pdk-form-field>
-            </div>
-            <button
-              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
-              ng-reflect-vertical="5"
-              pdk-button=""
-              pdk-margin-vertical="5"
-              type="submit"
-            >
-               Send to court 
-            </button>
-            <div>
-              <a
-                class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
-                href="javascript:void(0)"
-                ng-reflect-vertical="5"
-                pdk-link=""
-                pdk-margin-vertical="5"
-                routerlink="../../"
-              >
-                Cancel
-              </a>
-            </div>
-          </form>
+                 Select file 
+              </label>
+              
+              
+              
+              <input
+                accept=".zip"
+                class="ng-untouched ng-pristine ng-valid govuk-input"
+                id="pdk-form-control-1"
+                name="documentsZipFile"
+                ng-reflect-model=""
+                ng-reflect-name="documentsZipFile"
+                ng-reflect-required=""
+                ng-reflect-width=""
+                ngmodel=""
+                pdk-text-input=""
+                required=""
+                type="file"
+              />
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
         </div>
-      </pdk-grid>
-    </div>
+        <button
+          class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+          ng-reflect-vertical="5"
+          pdk-button=""
+          pdk-margin-vertical="5"
+          type="submit"
+        >
+           Send to court 
+        </button>
+        <div>
+          <a
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+            href="javascript:void(0)"
+            ng-reflect-vertical="5"
+            pdk-link=""
+            pdk-margin-vertical="5"
+            routerlink="../../"
+          >
+            Cancel
+          </a>
+        </div>
+      </form>
+    </pdk-grid>
   </pdk-grid>
 </upload-document-form>
 `;

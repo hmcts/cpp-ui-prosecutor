@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { ExportCaseDecisionsFormComponent } from '../export-case-decisions-form.component';
 import { FromToDatesModule } from '../../../shared/from-to-dates/from-to-dates.module';
@@ -37,12 +37,14 @@ describe('ExportCaseDecisionsComponent', () => {
     });
   });
 
-  it('should emit errors', () => {
+  it('should emit errors', fakeAsync(() => {
     formComponent.currentDate = '2015-23-10';
     fixture.detectChanges();
     fixture.debugElement.query(By.css('button')).nativeElement.click();
+    tick();
+
     expect(fixture.componentInstance.errors).toHaveBeenCalled();
-  });
+  }));
 
   @Component({
     selector: 'export-case-decisions-form-test',

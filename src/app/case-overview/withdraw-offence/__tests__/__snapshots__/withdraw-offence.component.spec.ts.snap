@@ -26,26 +26,19 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
   >
     You can ask a legal adviser to withdraw offences or the case.
   </div><pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
-    <div
-      class="govuk-grid-row"
+    <pdk-grid
+      class="govuk-!-margin-top-5 govuk-grid-column-three-quarters"
+      ng-reflect-three-quarters=""
+      ng-reflect-top="5"
+      pdk-margin-top="5"
+      three-quarters=""
     >
-      <pdk-grid
-        class="govuk-!-margin-top-5"
-        ng-reflect-three-quarters=""
-        ng-reflect-top="5"
-        pdk-margin-top="5"
-        three-quarters=""
-      >
-        <div
-          class="govuk-grid-column-three-quarters"
-        >
-          <withdraw-list-form />
-        </div>
-      </pdk-grid>
-    </div>
+      <withdraw-list-form />
+    </pdk-grid>
   </pdk-grid>
 </withdraw-offence-list>
 `;
@@ -77,26 +70,19 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
   >
     You can ask a legal adviser to withdraw offences or the case.
   </div><pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
-    <div
-      class="govuk-grid-row"
+    <pdk-grid
+      class="govuk-!-margin-top-5 govuk-grid-column-three-quarters"
+      ng-reflect-three-quarters=""
+      ng-reflect-top="5"
+      pdk-margin-top="5"
+      three-quarters=""
     >
-      <pdk-grid
-        class="govuk-!-margin-top-5"
-        ng-reflect-three-quarters=""
-        ng-reflect-top="5"
-        pdk-margin-top="5"
-        three-quarters=""
-      >
-        <div
-          class="govuk-grid-column-three-quarters"
-        >
-          <withdraw-list-form />
-        </div>
-      </pdk-grid>
-    </div>
+      <withdraw-list-form />
+    </pdk-grid>
   </pdk-grid>
 </withdraw-offence-list>
 `;

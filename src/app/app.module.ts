@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { META_REDUCERS, Store, StoreModule } from '@ngrx/store';
 import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
-import { CppHttp, CppHttpBackend, GENERATE_UNIQUE_KEY, HttpModule, Notifications } from '@cpp/core';
+import { CppHttp, CppHttpBackend, GENERATE_UNIQUE_KEY, HttpModule, NotificationDispatcher } from '@cpp/core';
 
 import { routes } from './routes';
 import { getMetaReducers, getReducers, reducerToken } from './reducers';
@@ -65,7 +65,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     {
       provide: CppHttp,
       useFactory: loadHttpFactory,
-      deps: [GENERATE_UNIQUE_KEY, CppHttpBackend, Notifications, Store]
+      deps: [GENERATE_UNIQUE_KEY, CppHttpBackend, NotificationDispatcher, Store]
     },
     {
       provide: RouterStateSerializer,

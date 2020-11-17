@@ -5,29 +5,27 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
   caseDecisionsWithOffenceDecisions={[Function Array]}
 >
   <pdk-grid
+    class="govuk-grid-row"
     container=""
     ng-reflect-container=""
   >
     <div
-      class="govuk-grid-row"
+      pdk-margin-bottom="3"
+      pdk-margin-left="2"
     >
-      <div
-        pdk-margin-bottom="3"
-        pdk-margin-left="2"
+      <b
+        pdk-typography="heading-medium"
       >
-        <b
-          pdk-typography="heading-medium"
-        >
-          Court decision
-        </b>
-      </div>
-      
-      <div>
-        <case-decisions-details
-          ng-reflect-case-decision-with-offence-decisions="[object Object]"
-        >
-          <div>
-            caseDecisionWithOffenceDecisions: {
+        Court decision
+      </b>
+    </div>
+    
+    <div>
+      <case-decisions-details
+        ng-reflect-case-decision-with-offence-decisions="[object Object]"
+      >
+        <div>
+          caseDecisionWithOffenceDecisions: {
     "id": "mock-case-decision-1",
     "session": {
       "sessionId": "mock-case-decision-session-1",
@@ -106,34 +104,34 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
       }
     ]
   }
-          </div>
-        </case-decisions-details>
-      </div>
-      
-      
-      <pdk-divider>
-        <hr
-          class="pdk-divider"
-        />
-      </pdk-divider>
-      
-      <div>
-        <div
-          pdk-margin-bottom="3"
-          pdk-margin-left="2"
-        >
-          <b
-            pdk-typography="heading-medium"
-            style="margin-top: 70px;"
-          >
-            Previous court decisions
-          </b>
         </div>
-        <case-decisions-details
-          ng-reflect-case-decision-with-offence-decisions="[object Object]"
+      </case-decisions-details>
+    </div>
+    
+    
+    <pdk-divider>
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
+    
+    <div>
+      <div
+        pdk-margin-bottom="3"
+        pdk-margin-left="2"
+      >
+        <b
+          pdk-typography="heading-medium"
+          style="margin-top: 70px;"
         >
-          <div>
-            caseDecisionWithOffenceDecisions: {
+          Previous court decisions
+        </b>
+      </div>
+      <case-decisions-details
+        ng-reflect-case-decision-with-offence-decisions="[object Object]"
+      >
+        <div>
+          caseDecisionWithOffenceDecisions: {
     "id": "mock-case-decision-2",
     "session": {
       "sessionId": "mock-case-decision-session-2",
@@ -184,12 +182,11 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
       }
     ]
   }
-          </div>
-        </case-decisions-details>
-        
-      </div>
+        </div>
+      </case-decisions-details>
       
     </div>
+    
   </pdk-grid>
 </case-decisions>
 `;

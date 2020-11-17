@@ -160,17 +160,7 @@ exports[`Layout should render 1`] = `
             <span
               class="govuk-phase-banner__text"
             >
-               This is a new service – your 
-              <a
-                _ngcontent-a-c0=""
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
+              This is a new service
             </span>
           </p>
         </pdk-phase-banner>
@@ -238,6 +228,8 @@ exports[`Layout should render 1`] = `
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
+                  
+                  
                   <h3
                     _ngcontent-a-c0=""
                   >
@@ -246,6 +238,8 @@ exports[`Layout should render 1`] = `
                   <dl
                     _ngcontent-a-c0=""
                   >
+                    
+                    
                     <dt
                       _ngcontent-a-c0=""
                     >
@@ -263,6 +257,7 @@ exports[`Layout should render 1`] = `
                          CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
                       </a>
                     </dd>
+                    
                     <dt
                       _ngcontent-a-c0=""
                     >
@@ -570,17 +565,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
             <span
               class="govuk-phase-banner__text"
             >
-               This is a new service – your 
-              <a
-                _ngcontent-a-c36=""
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
+              This is a new service
             </span>
           </p>
         </pdk-phase-banner>
@@ -648,6 +633,8 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
+                  
+                  
                   <h3
                     _ngcontent-a-c36=""
                   >
@@ -656,6 +643,8 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                   <dl
                     _ngcontent-a-c36=""
                   >
+                    
+                    
                     <dt
                       _ngcontent-a-c36=""
                     >
@@ -673,6 +662,7 @@ exports[`Layout should render correctly when search is enabled 1`] = `
                          CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
                       </a>
                     </dd>
+                    
                     <dt
                       _ngcontent-a-c36=""
                     >
@@ -944,17 +934,7 @@ exports[`Layout should render correctly with activity 1`] = `
             <span
               class="govuk-phase-banner__text"
             >
-               This is a new service – your 
-              <a
-                _ngcontent-a-c27=""
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
+              This is a new service
             </span>
           </p>
         </pdk-phase-banner>
@@ -1022,6 +1002,8 @@ exports[`Layout should render correctly with activity 1`] = `
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
+                  
+                  
                   <h3
                     _ngcontent-a-c27=""
                   >
@@ -1030,6 +1012,8 @@ exports[`Layout should render correctly with activity 1`] = `
                   <dl
                     _ngcontent-a-c27=""
                   >
+                    
+                    
                     <dt
                       _ngcontent-a-c27=""
                     >
@@ -1047,6 +1031,7 @@ exports[`Layout should render correctly with activity 1`] = `
                          CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
                       </a>
                     </dd>
+                    
                     <dt
                       _ngcontent-a-c27=""
                     >
@@ -1317,17 +1302,7 @@ exports[`Layout should render correctly with api error 1`] = `
             <span
               class="govuk-phase-banner__text"
             >
-               This is a new service – your 
-              <a
-                _ngcontent-a-c18=""
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
+              This is a new service
             </span>
           </p>
         </pdk-phase-banner>
@@ -1395,6 +1370,8 @@ exports[`Layout should render correctly with api error 1`] = `
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
+                  
+                  
                   <h3
                     _ngcontent-a-c18=""
                   >
@@ -1403,6 +1380,8 @@ exports[`Layout should render correctly with api error 1`] = `
                   <dl
                     _ngcontent-a-c18=""
                   >
+                    
+                    
                     <dt
                       _ngcontent-a-c18=""
                     >
@@ -1420,6 +1399,7 @@ exports[`Layout should render correctly with api error 1`] = `
                          CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
                       </a>
                     </dd>
+                    
                     <dt
                       _ngcontent-a-c18=""
                     >
@@ -1690,17 +1670,7 @@ exports[`Layout should render correctly with online status 1`] = `
             <span
               class="govuk-phase-banner__text"
             >
-               This is a new service – your 
-              <a
-                _ngcontent-a-c9=""
-                class="govuk-link"
-                data-test-id="feedback"
-                href="javascript:void(0)"
-                pdk-link=""
-              >
-                feedback
-              </a>
-               will help us improve it 
+              This is a new service
             </span>
           </p>
         </pdk-phase-banner>
@@ -1768,6 +1738,8 @@ exports[`Layout should render correctly with online status 1`] = `
                       Monday to Friday, 8am to 6pm (excluding public holidays)
                     </dd>
                   </dl>
+                  
+                  
                   <h3
                     _ngcontent-a-c9=""
                   >
@@ -1776,6 +1748,8 @@ exports[`Layout should render correctly with online status 1`] = `
                   <dl
                     _ngcontent-a-c9=""
                   >
+                    
+                    
                     <dt
                       _ngcontent-a-c9=""
                     >
@@ -1793,6 +1767,7 @@ exports[`Layout should render correctly with online status 1`] = `
                          CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
                       </a>
                     </dd>
+                    
                     <dt
                       _ngcontent-a-c9=""
                     >

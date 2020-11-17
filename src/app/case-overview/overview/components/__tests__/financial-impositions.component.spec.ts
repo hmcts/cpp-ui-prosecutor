@@ -83,7 +83,7 @@ describe('FinancialImpositionsComponent', () => {
     expect(fineField).toBe(null);
 
     const excisePenaltyField = fixture.debugElement.query(
-      By.css(`[data-role="imposition-excise-penalty-amount"] div`)).nativeElement.innerHTML;
+      By.css(`[data-role="imposition-excise-penalty-amount"]`)).nativeElement.innerHTML;
     expect(excisePenaltyField).toBe(' £50 ');
 
 
@@ -109,11 +109,11 @@ describe('FinancialImpositionsComponent', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
 
-    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"] div`)).nativeElement.innerHTML;
+    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`)).nativeElement.innerHTML;
     expect(fineField).toBe(' £70 ');
 
 
-    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"] div`)).nativeElement.innerHTML;
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement.innerHTML;
     expect(backdutyField).toBe(' £50 ');
 
 
@@ -141,7 +141,7 @@ describe('FinancialImpositionsComponent', () => {
     const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`));
     expect(fineField).toBe(null);
 
-    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"] div`)).nativeElement.innerHTML;
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement.innerHTML;
     expect(backdutyField).toBe(' £50 ');
 
   });
