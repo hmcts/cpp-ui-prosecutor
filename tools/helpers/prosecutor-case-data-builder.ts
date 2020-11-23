@@ -3,7 +3,7 @@ import { OFFENCE_CODES, randomIntFromRange } from '../utils';
 import { subtractDays } from '../utils/date';
 import * as _ from 'lodash';
 import { stageProsecutorCase } from '../../tools/contexts/staging';
-import { fetchCaseByUrn } from './cases';
+import { fetchCaseWithCondition } from './cases';
 import { User, info, error } from '@cpp/ui.priming';
 
 const { offenceData } = require('../fixtures/json/offence.json');
@@ -90,7 +90,7 @@ export abstract class ProsecutorCaseDataBuilder {
 
   async sendAndFetchCase() {
     await this.sendCase();
-    const kase = await fetchCaseByUrn(this.getUrn());
+    const kase = await fetchCaseWithCondition(this.getUrn(), pollCase => pollCase.status === 'NO_PLEA_RECEIVED_READY_FOR_DECISION');
     return kase;
   }
 

@@ -1,12 +1,12 @@
-import { User } from '@cpp/ui.priming';
 import { $, browser, ExpectedConditions } from 'protractor';
 import { join } from 'path';
 import { loginAs } from './loginAs';
+import { TestUser } from '../../../tools/utils';
 
 let appLoaded: boolean;
-let loggedInUser: User;
+let loggedInUser: TestUser;
 
-export const navigate = async (url: string, user: User) => {
+export const navigate = async (url: string, user: TestUser) => {
 
   if (browser.params.dev === 'dev') {
     if (!appLoaded) {
@@ -15,7 +15,7 @@ export const navigate = async (url: string, user: User) => {
     }
     await browser.executeScript(`return window.sessionStorage.setItem('CJSCPPUID', '${user.userId}')`);
   } else if (!loggedInUser || loggedInUser !== user) {
-    await loginAs({ email: user.email });
+    await loginAs(user);
     loggedInUser = user;
   }
 

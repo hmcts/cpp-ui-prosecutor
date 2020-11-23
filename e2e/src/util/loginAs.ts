@@ -1,5 +1,6 @@
 import { $, browser, by, element, ExpectedConditions } from 'protractor';
 import { parse } from 'url';
+import { isStable } from './navigate';
 
 export const loginAs = ({ email, password = '1Password2!' }: { email: string; password?: string }) => {
   const $logout = element(by.linkText('Sign out'));
@@ -7,6 +8,7 @@ export const loginAs = ({ email, password = '1Password2!' }: { email: string; pa
   const $password = $('#idToken2');
   const $submitBtn = $('#loginButton_0');
   const $confirmSignoutButton = $('#sign-out-button');
+  let signedOut = false;
 
   return browser.controlFlow().execute(async () => {
     await browser.waitForAngularEnabled(false);
@@ -16,7 +18,9 @@ export const loginAs = ({ email, password = '1Password2!' }: { email: string; pa
       .then(async present => {
         if (present) {
           await $logout.click();
+          await browser.wait(ExpectedConditions.presenceOf($confirmSignoutButton), 10000);
           await $confirmSignoutButton.click();
+          signedOut = true;
         } else {
           await browser.get('./');
         }
@@ -27,18 +31,13 @@ export const loginAs = ({ email, password = '1Password2!' }: { email: string; pa
         await $password.sendKeys(password);
         await $submitBtn.click();
 
-        // match on url hostname to determine when login redirect has completed, as
-        // this accommodates basic auth params being present in the baseUrl
-        return browser.wait(
-          () =>
-            browser.getCurrentUrl().then(currentUrl => {
-              const { hostname: current } = parse(currentUrl);
-              const { hostname: target } = parse(browser.baseUrl);
+        await isStable();
 
-              return current === target;
-            }),
-          10000
-        );
+        await browser.sleep(2000);
+
+        if (signedOut) {
+          await browser.refresh();
+        }
       })
       .then(() => browser.waitForAngularEnabled(true));
   });

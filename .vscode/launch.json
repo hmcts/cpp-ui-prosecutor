@@ -6,7 +6,7 @@
   "configurations": [
     {
       "name": "e2e",
-      "type": "node",
+      "type": "pwa-node",
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
       "stopOnEntry": false,
@@ -14,11 +14,15 @@
         "${workspaceRoot}/e2e/protractor.conf.js",
         "--params.dev", "dev",
         "--visible", "visible"
+      ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
       ]
     },
     {
-      "name": "e2e:remote",
-      "type": "node",
+      "name": "e2e:ste",
+      "type": "pwa-node",
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
       "stopOnEntry": false,
@@ -26,6 +30,26 @@
         "${workspaceRoot}/e2e/protractor.conf.js",
         "--visible", "visible",
         "--baseUrl", "http://steccm04wrpxy01.cpp.nonlive/prosecutor/"
+      ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ]
+    },
+    {
+      "name": "e2e:sit",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+      "stopOnEntry": false,
+      "args": [
+        "${workspaceRoot}/e2e/protractor.conf.js",
+        "--baseUrl", "https://cpp-sit.nftpr1.cjscp.org.uk/prosecutor/",
+        "--visible", "visible"
+      ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
       ]
     }
   ]
