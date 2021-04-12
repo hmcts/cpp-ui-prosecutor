@@ -16,7 +16,7 @@ export const WARWICKSHIRE_POLICE_USER: TestUser = {
 };
 
 export const TFL_USER: TestUser = {
-  userId: '1bf60455-11c9-427e-b087-d8331dcea44f',
+  userId: 'b07c8200-5d04-4266-9521-c2312734a9d3',
   firstName: 'David',
   lastName: 'Brown',
   email: 'david@test.tfl.net',
@@ -25,7 +25,7 @@ export const TFL_USER: TestUser = {
 };
 
 export const TVL_USER: TestUser = {
-  userId: '85435116-0f4b-4616-ae9a-9954ed1c3ee1',
+  userId: '2c033c03-31bb-4b30-83a4-a846de941064',
   firstName: 'Trevor',
   lastName: 'Lawson',
   email: 'trevor@test.tvl.uk',
@@ -50,7 +50,7 @@ export const SYSTEM_ONLINE_PLEA_USER: TestUser = {
 };
 
 export const COURT_ADMIN: TestUser = {
-  userId: 'a9448185-672e-4aea-94d6-5988355ed459',
+  userId: 'aa17cf1d-1363-4e50-918c-4005ac64d7f0',
   firstName: 'Helen',
   lastName: 'Sutton',
   email: 'helen@test.hmcts.net',
