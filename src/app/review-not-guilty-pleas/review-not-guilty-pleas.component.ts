@@ -19,7 +19,7 @@ import { RegionState } from '../core/reducers/entities.reducer';
       <span>
         <h4 pdk-section="large">
           <pdk-warning-text>
-            These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10
+            These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working
             days from plea entry whichever is sooner
           </pdk-warning-text>
           <pdk-divider></pdk-divider>

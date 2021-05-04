@@ -53,7 +53,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
               >
                 Warning
               </span>
-               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 days from plea entry whichever is sooner 
+               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working days from plea entry whichever is sooner 
             </strong>
           </div>
         </pdk-warning-text>
@@ -336,7 +336,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
               >
                 Warning
               </span>
-               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 days from plea entry whichever is sooner 
+               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working days from plea entry whichever is sooner 
             </strong>
           </div>
         </pdk-warning-text>
