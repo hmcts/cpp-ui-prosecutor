@@ -9,18 +9,18 @@ import { RegionState } from '../core/reducers/entities.reducer';
   template: `
     <breadcrumb-links [breadcrumbs]="breadcrumbs"></breadcrumb-links>
     <h2 pdk-section="large">
-        Review not guilty pleas ({{ pleadedNotGuiltyCasesDetail.count }}
-          <span [ngPlural]="pleadedNotGuiltyCasesDetail.count">
-            <ng-template ngPluralCase="=1">case</ng-template>
-            <ng-template ngPluralCase="other">cases</ng-template> </span
-          >)
-      </h2>
+      Review not guilty pleas ({{ pleadedNotGuiltyCasesDetail.count }}
+      <span [ngPlural]="pleadedNotGuiltyCasesDetail.count">
+        <ng-template ngPluralCase="=1">case</ng-template>
+        <ng-template ngPluralCase="other">cases</ng-template> </span
+      >)
+    </h2>
     <span *ngIf="pleadedNotGuiltyCasesDetail.count > 0; else noNotGuiltyPleaCases">
       <span>
         <h4 pdk-section="large">
           <pdk-warning-text>
-            These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working
-            days from plea entry whichever is sooner
+            These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 days
+            from plea entry whichever is sooner
           </pdk-warning-text>
           <pdk-divider></pdk-divider>
         </h4>
@@ -30,12 +30,7 @@ import { RegionState } from '../core/reducers/entities.reducer';
           <form pdk-form (validSubmit)="setRegion.emit(form.value.selectedRegion)">
             <label pdk-label>Filter by region</label>
             <div style="display: inline-flex">
-              <pdk-select
-                [ngModel]="region?.selectedRegion"
-                [options]="region?.regions"
-                name="selectedRegion"
-                required
-              >
+              <pdk-select [ngModel]="region?.selectedRegion" [options]="region?.regions" name="selectedRegion" required>
               </pdk-select>
               <pdk-form-group>
                 <button pdk-button pdk-margin-left="2" type="submit">Filter</button>
