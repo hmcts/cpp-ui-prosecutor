@@ -19,6 +19,8 @@ describe('FromToDatesComponent', () => {
     fixture.componentInstance.maxDaysForToDate = 31;
     fixture.componentInstance.fromDate = '2018-09-15';
     fixture.componentInstance.toDate = '2018-10-01';
+
+    fixture.detectChanges();
   });
 
   it('should compile correctly', () => {
@@ -28,26 +30,35 @@ describe('FromToDatesComponent', () => {
 
   it('should submit the form', fakeAsync(() => {
     fixture.detectChanges();
-    tick();
 
     fixture.debugElement.query(By.css('button')).nativeElement.click();
+    fixture.detectChanges();
     tick();
 
-    expect(fixture.componentInstance.submit).toHaveBeenCalledWith({
-      fromDate: '2018-09-15',
-      toDate: '2018-10-01'
+    fixture.whenStable().then(() => {
+      expect(fixture.componentInstance.submit).toHaveBeenCalledWith({
+        fromDate: '2018-09-15',
+        toDate: '2018-10-01'
+      });
     });
   }));
 
   it('should emit errors if the duration is more that 31 days', fakeAsync(() => {
-    fixture.componentInstance.toDate = '2018-12-30';
+    fixture.componentInstance.toDate = '2018-10-30';
     fixture.detectChanges();
     tick();
 
     fixture.debugElement.query(By.css('button')).nativeElement.click();
+    fixture.detectChanges();
     tick();
 
-    expect(fixture.componentInstance.errors).toHaveBeenCalled();
+    fixture.debugElement.query(By.css('button')).nativeElement.click();
+    fixture.detectChanges();
+    tick();
+
+    fixture.whenStable().then(() => {
+      expect(fixture.componentInstance.errors).toHaveBeenCalled();
+    });
   }));
 
   @Component({

@@ -1,6 +1,6 @@
 import { CanActivate, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { State } from '../../reducers';
 import { Store } from '@ngrx/store';
 import { SjpService } from '../../contexts/sjp';
@@ -15,7 +15,21 @@ export class CasesMissingSjpNoticesGuard implements CanActivate {
     return this.sjpService.getCasesMissingSjpNotice().pipe(
       tap(result => this.store.dispatch(new LoadCasesMissingSjpNoticeSuccess(result))),
       mapTo(true),
-      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      catchError(error => {
+        switch (error.status) {
+          case 403:
+            this.router.navigate(['/unauthorised-access']);
+            break;
+          case 404:
+            this.router.navigate(['/page-not-found']);
+            break;
+          default:
+            this.router.navigate(['/technical-error']);
+            break;
+        }
+
+        return of(false);
+      }),
       take(1)
     );
   }

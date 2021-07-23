@@ -7,7 +7,7 @@ import { InputValues } from '../../shared/from-to-dates/from-to-dates.component'
   selector: 'export-case-decisions-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <form pdk-form (validSubmit)="loadCaseCount.emit(form.value)" (errors)="errors.emit($event)">
+    <form pdk-form (validSubmit)="submit(form.value)" (errors)="errors.emit($event)">
       <from-to-dates [maxDaysForToDate]="31" [fromDate]="currentDate" [toDate]="currentDate"></from-to-dates>
       <button pdk-button type="submit" pdk-margin-top="6">
         Search
@@ -24,4 +24,9 @@ export class ExportCaseDecisionsFormComponent {
 
   @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
   @Output() errors: EventEmitter<ValidationError[]> = new EventEmitter();
+
+  submit(formValue) {
+    this.errors.emit();
+    this.loadCaseCount.emit(formValue);
+  }
 }

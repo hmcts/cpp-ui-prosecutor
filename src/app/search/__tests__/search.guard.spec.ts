@@ -61,6 +61,36 @@ describe('SearchGuard', () => {
     expect(navigate).not.toHaveBeenCalled();
   });
 
+  it('should resolve to false and navigate to unauthorised access page on 403 response', () => {
+    const error$ = cold('--#', { status: 403 });
+
+    getCasesDetails.mockReturnValue(error$);
+
+    const activate$ = guard.canActivate(snapshot);
+
+    expect(store.dispatch).not.toHaveBeenCalled();
+    navigate.mockReturnValue(Promise.resolve(true));
+    activate$.subscribe(value => {
+      expect(value).toBeFalsy();
+      expect(navigate).toHaveBeenCalledWith(['/unauthorised-access']);
+    });
+  });
+
+  it('should resolve to false and navigate to not found page on 404 response', () => {
+    const error$ = cold('--#', { status: 404 });
+
+    getCasesDetails.mockReturnValue(error$);
+
+    const activate$ = guard.canActivate(snapshot);
+
+    expect(store.dispatch).not.toHaveBeenCalled();
+    navigate.mockReturnValue(Promise.resolve(true));
+    activate$.subscribe(value => {
+      expect(value).toBeFalsy();
+      expect(navigate).toHaveBeenCalledWith(['/page-not-found']);
+    });
+  });
+
   it('should reject the activation and redirect when an error occurs during resolution', () => {
     const error$ = cold('---#');
     const expected$ = cold('---(a|)', { a: false });

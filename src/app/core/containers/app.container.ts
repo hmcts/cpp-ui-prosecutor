@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, RouteConfigLoadEnd, RouteConfigLoadStart, Router } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  PRIMARY_OUTLET,
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router
+} from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { select, Store } from '@ngrx/store';
 
 import { combineLatest, fromEvent, merge, Observable } from 'rxjs';
 import { distinctUntilChanged, filter, map, mapTo, mergeMap, startWith } from 'rxjs/operators';
 
-import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
+import { HeaderNavItem } from '@cpp/application/layout/layout.component';
 import { State } from '../reducers';
 
 import { getHasApiActivity, getHasApiError } from '../selectors';
@@ -18,16 +25,20 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-root',
   template: `
     <pdk-provider>
-      <app-layout
-        [headerNavItems]="headerNavItems"
-        [activity]="isBusy$ | async"
-        [offline]="offline$ | async"
+      <cpp-application-layout
         [apiError]="apiError$ | async"
+        [offline]="offline$ | async"
+        [activity]="isBusy$ | async"
+        [headerNavItems]="headerNavItems"
         [searchEnabled]="searchEnabled"
+        serviceName="CJS Common Platform"
+        searchPlaceholder="Case or application reference"
+        searchLabel="Search by case or application reference"
         (search)="handleSearch($event)"
+        accessibilityLink="accessibility"
       >
         <router-container></router-container>
-      </app-layout>
+      </cpp-application-layout>
     </pdk-provider>
   `
 })
@@ -54,10 +65,7 @@ export class AppContainer {
     this.translate.use(browserLang.match(/en|cy/) ? browserLang : 'en');
 
     this.isBusy$ = combineLatest(
-      store.pipe(
-        select(getHasApiActivity),
-        startWith(false)
-      ),
+      store.pipe(select(getHasApiActivity), startWith(false)),
       router.events.pipe(
         filter(event => event instanceof RouteConfigLoadStart || event instanceof RouteConfigLoadEnd),
         map(event => event instanceof RouteConfigLoadStart),

@@ -1,5 +1,5 @@
 import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, map, take } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { StagingTflService } from '../../contexts/staging-tfl';
@@ -21,7 +21,21 @@ export class ViewDocumentUploadReportGuard implements CanActivate {
         }
         return false;
       }),
-      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      catchError(error => {
+        switch (error.status) {
+          case 403:
+            this.router.navigate(['/unauthorised-access']);
+            break;
+          case 404:
+            this.router.navigate(['/page-not-found']);
+            break;
+          default:
+            this.router.navigate(['/technical-error']);
+            break;
+        }
+
+        return of(false);
+      }),
       take(1)
     );
   }

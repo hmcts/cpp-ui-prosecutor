@@ -1,5 +1,5 @@
 import { CanActivate, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Store, select } from '@ngrx/store';
@@ -22,7 +22,21 @@ export class OnlinePleaGuard implements CanActivate {
           mapTo(true)
         )
       ),
-      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      catchError(error => {
+        switch (error.status) {
+          case 403:
+            this.router.navigate(['/unauthorised-access']);
+            break;
+          case 404:
+            this.router.navigate(['/page-not-found']);
+            break;
+          default:
+            this.router.navigate(['/technical-error']);
+            break;
+        }
+
+        return of(false);
+      }),
       take(1)
     );
   }

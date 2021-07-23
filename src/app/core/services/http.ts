@@ -3,7 +3,8 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
   CppHttp,
-  CppHttpBackend, GenerateUniqueKeyFn,
+  CppHttpBackend,
+  GenerateUniqueKeyFn,
   HttpComandOptions,
   HttpCommandSyncOptions,
   HttpQueryOptions,
@@ -15,6 +16,7 @@ import { finalize } from 'rxjs/operators';
 
 export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandSyncOptions;
 
+/* istanbul ignore file */
 @Injectable()
 export class CustomHttp extends CppHttp {
   constructor(

@@ -57,6 +57,36 @@ describe('FileUploadStatsDataGuard', () => {
     expect(navigate).not.toHaveBeenCalled();
   });
 
+  it('should resolve to false and navigate to unauthorised access page on 403 response', () => {
+    const error$ = cold('--#', { status: 403 });
+
+    getFileUploadStats.mockReturnValue(error$);
+
+    const activate$ = guard.canActivate();
+
+    expect(store.dispatch).not.toHaveBeenCalled();
+    navigate.mockReturnValue(Promise.resolve(true));
+    activate$.subscribe(value => {
+      expect(value).toBeFalsy();
+      expect(navigate).toHaveBeenCalledWith(['/unauthorised-access']);
+    });
+  });
+
+  it('should resolve to false and navigate to not found page on 404 response', () => {
+    const error$ = cold('--#', { status: 404 });
+
+    getFileUploadStats.mockReturnValue(error$);
+
+    const activate$ = guard.canActivate();
+
+    expect(store.dispatch).not.toHaveBeenCalled();
+    navigate.mockReturnValue(Promise.resolve(true));
+    activate$.subscribe(value => {
+      expect(value).toBeFalsy();
+      expect(navigate).toHaveBeenCalledWith(['/page-not-found']);
+    });
+  });
+
   it('should resolve to false and navigate to technical error page on failures', () => {
     const error$ = cold('--#');
 

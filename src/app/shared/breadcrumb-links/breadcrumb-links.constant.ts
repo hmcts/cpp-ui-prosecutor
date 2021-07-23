@@ -1,6 +1,7 @@
 import { Breadcrumb } from './breadcrumb-links.interface';
 
-export const Breadcrumbs: {[name: string]: Breadcrumb} = {
+/* istanbul ignore file */
+export const Breadcrumbs: { [name: string]: Breadcrumb } = {
   HOME: {
     id: 'home',
     title: 'Home',

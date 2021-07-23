@@ -15,7 +15,21 @@ export class DefendantDetailsUpdatesLinkDataGuard implements CanActivate {
     return this.sjpService.getDefendantDetailsUpdates(0).pipe(
       tap(d => this.store.dispatch(new LoadDefendantDetailsUpdates(d))),
       mapTo(true),
-      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      catchError(error => {
+        switch (error.status) {
+          case 403:
+            this.router.navigate(['/unauthorised-access']);
+            break;
+          case 404:
+            this.router.navigate(['/page-not-found']);
+            break;
+          default:
+            this.router.navigate(['/technical-error']);
+            break;
+        }
+
+        return of(false);
+      }),
       take(1)
     );
   }

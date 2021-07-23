@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { LayoutComponent } from './components/layout.component';
 import { AppContainer } from './containers/app.container';
-import { PdkCoreModule, PdkCppPatternModule } from '@cpp/pdk';
+import { PdkCoreModule } from '@cpp/pdk';
 import { ContextsModule } from '../contexts/contexts.module';
 import { PleadedNotGuiltyDataGuard } from './guards/pleaded-not-guilty-data.guard';
 import { DefendantDetailsUpdatesLinkDataGuard } from './guards/defendant-details-updates-data.guard';
@@ -13,11 +12,12 @@ import { CaseNotesGuard } from './guards/case-notes.guard';
 import { OnlinePleaGuard } from './guards/online-plea.guard';
 import { SjpNoticeCasesDataGuard } from '../cases-missing-sjp-notices/sjp-notice-cases-data.guard';
 import { RegionsGuard } from './guards/regions.guard';
+import { ApplicationModule } from '@cpp/application';
 
-const DECLARATIONS = [LayoutComponent, AppContainer, AppRouterContainer];
+const DECLARATIONS = [AppContainer, AppRouterContainer];
 
 @NgModule({
-  imports: [CommonModule, PdkCoreModule, PdkCppPatternModule, RouterModule, ContextsModule],
+  imports: [CommonModule, ApplicationModule, PdkCoreModule, RouterModule, ContextsModule],
   declarations: [...DECLARATIONS],
   exports: [AppContainer],
   providers: [

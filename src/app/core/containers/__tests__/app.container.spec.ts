@@ -1,6 +1,4 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-
 import { AppContainer } from '../app.container';
 import { CommonModule } from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -10,12 +8,12 @@ import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, RouteConfigLoadStart, Ro
 import { BehaviorSubject } from 'rxjs';
 import { ApiError, PendingApiRequest } from '../../actions/api';
 import { Title } from '@angular/platform-browser';
-import { PdkCoreModule, PdkCppPatternModule } from '@cpp/pdk';
-import { HeaderNavItem } from '@cpp/pdk/patterns/cpp.component';
+import { PdkCoreModule } from '@cpp/pdk';
 import { reducers } from '../../reducers';
 import { global } from '@angular/compiler/src/util';
 import { AppRouterContainer } from '../app.router.container';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ApplicationModule } from '@cpp/application';
 
 describe('App page component', () => {
   window.scrollTo = jest.fn();
@@ -34,13 +32,15 @@ describe('App page component', () => {
     mockTranslateUse = jest.fn();
 
     TestBed.configureTestingModule({
-      declarations: [AppContainer, AppRouterContainer, MockLayoutComponent],
-      imports: [CommonModule,
+      declarations: [AppContainer, AppRouterContainer],
+      imports: [
+        CommonModule,
         PdkCoreModule,
-        PdkCppPatternModule,
+        ApplicationModule,
         StoreModule.forRoot(reducers),
         RouterTestingModule,
-        TranslateModule.forRoot()],
+        TranslateModule.forRoot()
+      ],
       providers: [
         {
           provide: Title,
@@ -154,23 +154,4 @@ describe('App page component', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
-
-  @Component({
-    selector: 'app-layout',
-    template: `
-      <div>headerNavItems : {{ headerNavItems | json }}</div>
-      <div>activity: {{ activity }}</div>
-      <div>offline: {{ offline }}</div>
-      <div>apiError: {{ apiError }}</div>
-      <div>searchEnabled: {{ searchEnabled }}</div>
-    `
-  })
-  class MockLayoutComponent {
-    @Input() headerNavItems: HeaderNavItem[];
-    @Input() activity: boolean;
-    @Input() offline: boolean;
-    @Input() apiError: boolean;
-    @Input() searchEnabled: boolean;
-    @Output() search = new EventEmitter<string>();
-  }
 });

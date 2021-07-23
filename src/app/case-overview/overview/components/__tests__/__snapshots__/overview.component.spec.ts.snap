@@ -206,13 +206,13 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -902,13 +902,13 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -1279,13 +1279,13 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -1912,13 +1912,13 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -2289,13 +2289,13 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -2922,13 +2922,13 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -3389,13 +3389,13 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -3934,13 +3934,13 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -4350,13 +4350,13 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -5046,13 +5046,13 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -5423,13 +5423,13 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -5974,13 +5974,13 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -6351,13 +6351,13 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -6894,13 +6894,13 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -7310,13 +7310,13 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -8006,13 +8006,13 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -8422,13 +8422,13 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"
@@ -9118,13 +9118,13 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                 >
                   
                   <li
-                    class="govuk-tabs__list-item"
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
                   >
                     <a
                       aria-controls="0"
                       aria-selected="true"
-                      class="govuk-tabs__tab govuk-tabs__tab--selected"
+                      class="govuk-tabs__tab"
                       href="javascript:void(0);"
                       role="tab"
                       tabindex="0"

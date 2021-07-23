@@ -1,5 +1,5 @@
 import { CanActivate, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
 import { Injectable } from '@angular/core';
 import { catchError, mapTo, take, tap } from 'rxjs/operators';
@@ -14,18 +14,34 @@ export class RegionsGuard implements CanActivate {
   canActivate(): Observable<boolean> {
     return this.sjpService.getRegions().pipe(
       tap(regions => {
-        regions.unshift({
-          label: 'All',
-          value: 'ALL'
-        },
-        {
-          label: 'Blank',
-          value: 'UNKNOWN'
-        });
+        regions.unshift(
+          {
+            label: 'All',
+            value: 'ALL'
+          },
+          {
+            label: 'Blank',
+            value: 'UNKNOWN'
+          }
+        );
         this.store.dispatch(new LoadRegionsSuccess(regions));
       }),
       mapTo(true),
-      catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+      catchError(error => {
+        switch (error.status) {
+          case 403:
+            this.router.navigate(['/unauthorised-access']);
+            break;
+          case 404:
+            this.router.navigate(['/page-not-found']);
+            break;
+          default:
+            this.router.navigate(['/technical-error']);
+            break;
+        }
+
+        return of(false);
+      }),
       take(1)
     );
   }

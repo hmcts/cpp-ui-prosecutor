@@ -49,7 +49,7 @@ exports[`SearchInputComponent should compile correctly 1`] = `
                 >
                   <input
                     class="pdk-searchbar__input govuk-input"
-                    id="pdk-form-control-1"
+                    id="pdk-search-2"
                     ng-reflect-has-error="false"
                     ng-reflect-width=""
                     pdk-input=""

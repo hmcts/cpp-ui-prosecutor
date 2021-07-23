@@ -25,7 +25,21 @@ export class SearchGuard implements CanActivate {
         return this.sjpService.getCasesDetails(keyword).pipe(
           tap(searchResult => this.store.dispatch(new SearchSuccess({ ...searchResult, keyword }))),
           mapTo(true),
-          catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+          catchError(error => {
+            switch (error.status) {
+              case 403:
+                this.router.navigate(['/unauthorised-access']);
+                break;
+              case 404:
+                this.router.navigate(['/page-not-found']);
+                break;
+              default:
+                this.router.navigate(['/technical-error']);
+                break;
+            }
+
+            return of(false);
+          }),
           take(1)
         );
       })

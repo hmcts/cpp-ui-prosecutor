@@ -1,11 +1,16 @@
 import { Routes } from '@angular/router';
-import { TechnicalErrorComponent } from './shared/error-pages';
 import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDataGuard } from './core/guards';
 import { CaseNotesGuard } from './core/guards/case-notes.guard';
 import { SjpNoticeCasesDataGuard } from './cases-missing-sjp-notices/sjp-notice-cases-data.guard';
 import { RegionsGuard } from './core/guards/regions.guard';
+import { ERROR_PAGES_ROUTES } from '@cpp/application';
 
 export const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'user'
+  },
   {
     path: 'user',
     loadChildren: './dashboard/dashboard.module#DashboardModule',
@@ -49,13 +54,8 @@ export const routes: Routes = [
     loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
     canActivate: [RegionsGuard]
   },
-  {
-    path: 'technical-error',
-    pathMatch: 'full',
-    component: TechnicalErrorComponent,
-    data: { title: 'Technical problem | Common platform' }
-  },
   { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule' },
+  ...ERROR_PAGES_ROUTES,
 
   // Fallbacks for if the user enters /prosecutor/tvl or /prosecutor
   // These will need to be updated when the TFL dashboard is removed

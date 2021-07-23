@@ -1,5 +1,5 @@
 import { CanActivate, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
 import { Injectable } from '@angular/core';
 import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
@@ -10,11 +10,7 @@ import { getRegion } from '../selectors';
 
 @Injectable()
 export class PleadedNotGuiltyDataGuard implements CanActivate {
-  constructor(
-    private store: Store<State>,
-    private sjpService: SjpService,
-    private router: Router
-  ) {}
+  constructor(private store: Store<State>, private sjpService: SjpService, private router: Router) {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(
@@ -26,7 +22,21 @@ export class PleadedNotGuiltyDataGuard implements CanActivate {
             this.store.dispatch(new LoadPleadedNotGuiltyCases(pleadedNotGuiltyCasesDetail))
           ),
           mapTo(true),
-          catchError(() => this.router.navigate(['/technical-error']).then(() => false)),
+          catchError(error => {
+            switch (error.status) {
+              case 403:
+                this.router.navigate(['/unauthorised-access']);
+                break;
+              case 404:
+                this.router.navigate(['/page-not-found']);
+                break;
+              default:
+                this.router.navigate(['/technical-error']);
+                break;
+            }
+
+            return of(false);
+          }),
           take(1)
         );
       })

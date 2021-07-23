@@ -18,10 +18,10 @@ import { CustomRouterStateSerializer } from './core/utils/router-state';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { SearchModule } from './search/search.module';
-import { ErrorPagesModule } from './shared/error-pages/error-pages.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ApplicationModule } from '@cpp/application';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
@@ -38,7 +38,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     EffectsModule.forRoot([]),
     AppConfigModule,
     SearchModule,
-    ErrorPagesModule,
+    ApplicationModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

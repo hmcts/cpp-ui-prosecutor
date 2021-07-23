@@ -30,8 +30,19 @@ export class OffenceWithdrawalReasonsGuard implements CanActivate {
             this.store.dispatch(new LoadOffenceWithdrawalReasonsSuccess(offenceWithdrawReasons))
           ),
           mapTo(true),
-          catchError(() => {
-            this.router.navigate(['/technical-error']);
+          catchError(error => {
+            switch (error.status) {
+              case 403:
+                this.router.navigate(['/unauthorised-access']);
+                break;
+              case 404:
+                this.router.navigate(['/page-not-found']);
+                break;
+              default:
+                this.router.navigate(['/technical-error']);
+                break;
+            }
+
             return of(false);
           }),
           take(1)

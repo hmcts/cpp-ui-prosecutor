@@ -78,7 +78,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-1-day"
+                        for="pdk-date-input-2-day"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -89,7 +89,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-form-control-1-day"
+                        id="pdk-date-input-2-day"
                         name="dateDay"
                         ng-reflect-has-error="false"
                         ng-reflect-name="day"
@@ -106,7 +106,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-1-month"
+                        for="pdk-date-input-2-month"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -117,7 +117,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-form-control-1-month"
+                        id="pdk-date-input-2-month"
                         name="dateMonth"
                         ng-reflect-has-error="false"
                         ng-reflect-name="month"
@@ -134,7 +134,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-1-year"
+                        for="pdk-date-input-2-year"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -145,7 +145,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-form-control-1-year"
+                        id="pdk-date-input-2-year"
                         name="dateYear"
                         ng-reflect-has-error="false"
                         ng-reflect-name="year"
@@ -228,7 +228,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-2-day"
+                        for="pdk-date-input-4-day"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -239,7 +239,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-form-control-2-day"
+                        id="pdk-date-input-4-day"
                         name="dateDay"
                         ng-reflect-has-error="false"
                         ng-reflect-name="day"
@@ -256,7 +256,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-2-month"
+                        for="pdk-date-input-4-month"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -267,7 +267,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-form-control-2-month"
+                        id="pdk-date-input-4-month"
                         name="dateMonth"
                         ng-reflect-has-error="false"
                         ng-reflect-name="month"
@@ -284,7 +284,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                       <label
                         _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-form-control-2-year"
+                        for="pdk-date-input-4-year"
                         ng-reflect-type=""
                         pdk-label=""
                       >
@@ -295,7 +295,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-form-control-2-year"
+                        id="pdk-date-input-4-year"
                         name="dateYear"
                         ng-reflect-has-error="false"
                         ng-reflect-name="year"
