@@ -22,7 +22,40 @@ export interface Case {
   datesToAvoid?: string;
   libraCaseNumber?: string; // todo check
   caseDecisions?: CaseDecision[];
+  caseApplication?: Application;
+  ccApplicationStatus?: ApplicationStatus;
 }
+
+export interface Application {
+  applicationId: string;
+  parentApplicationId: string;
+  applicationReference: string;
+  applicationStatus: ApplicationStatus;
+  typeCode: string;
+  typeId: string;
+  applicationType: ApplicationType;
+  dateReceived: string;
+  outOfTimeReason?: string;
+  outOfTime?: boolean;
+}
+
+export type ApplicationStatus =
+  'STATUTORY_DECLARATION_PENDING'
+  | 'STATUTORY_DECLARATION_GRANTED'
+  | 'STATUTORY_DECLARATION_REFUSED'
+  | 'STATUTORY_DECLARATION_WITHDRAWN'
+  | 'REOPENING_PENDING'
+  | 'REOPENING_GRANTED'
+  | 'REOPENING_REFUSED'
+  | 'REOPENING_WITHDRAWN'
+  | 'APPEAL_PENDING'
+  | 'APPEAL_ALLOWED'
+  | 'APPEAL_REFUSED'
+  | 'APPEAL_WITHDRAWN'
+  | 'APPEAL_DISMISSED'
+  | 'APPEAL_ABANDONED'
+  | 'APPLICATION_STATUS_NOT_KNOWN'
+  | 'APPLICATION_DISMISSED_SENTENCE_VARIED';
 
 export interface Defendant {
   id: string;
@@ -91,7 +124,7 @@ export interface CaseDocumentMetaData {
   mimeType: string;
 }
 
-export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER' | 'CITN';
+export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER' | 'CITN' | 'APPLICATION';
 
 export interface PersonalDetails {
   address: Address;
@@ -309,6 +342,7 @@ export interface CaseDecision {
   session: Session;
   savedAt: string;
   offenceDecisions: OffenceDecision[];
+  applicationDecision?: ApplicationDecision;
   financialImposition?: FinancialImposition;
 }
 
@@ -450,3 +484,15 @@ export interface Region {
   label: string;
   value: string;
 }
+
+export interface ApplicationDecision {
+  granted: boolean;
+  rejectionReason?: string;
+  outOfTime?: boolean;
+  outOfTimeReason?: string;
+  sessionId?: string;
+  applicationType?: ApplicationType;
+  previousFinalDecision?: string;
+}
+
+export type ApplicationType = 'STAT_DEC' | 'REOPENING';

@@ -63,11 +63,13 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
       </pdk-grid>
+      
       <pdk-divider>
         <hr
           class="pdk-divider"
         />
       </pdk-divider>
+      
     </div>
     
     <div
@@ -472,11 +474,424 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
       </pdk-grid>
+      
       <pdk-divider>
         <hr
           class="pdk-divider"
         />
       </pdk-divider>
+      
+    </div>
+    
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+            
+          
+          <p>
+             Proved SJP 
+          </p>
+          
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+          
+          
+          
+          
+        </pdk-grid>
+        
+      </pdk-grid>
+      
+    </div>
+    
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should show application 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details
+    ng-reflect-case-decision-with-offence-decisions="[object Object]"
+  >
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+        ng-reflect-container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          ng-reflect-one-third=""
+          one-third=""
+        >
+          <div
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          ng-reflect-two-thirds=""
+          two-thirds=""
+        >
+          <div
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               4:10pm 
+            </div>
+            <div
+              class="pre-line"
+            >
+               
+            </div>
+            
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            
+            <div>
+               Magistrate: Jenny 
+            </div>
+            
+            <div
+              pdk-text-colour="grey-1"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      
+      <application-decision-details
+        ng-reflect-application-decision="[object Object]"
+      >
+         application-decision-details 
+      </application-decision-details>
+      
     </div>
     
     <div
@@ -881,11 +1296,13 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
       </pdk-grid>
+      
       <pdk-divider>
         <hr
           class="pdk-divider"
         />
       </pdk-divider>
+      
     </div>
     
     <div
@@ -1507,11 +1924,13 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
       </pdk-grid>
+      
       <pdk-divider>
         <hr
           class="pdk-divider"
         />
       </pdk-divider>
+      
     </div>
     
     <div
@@ -2133,11 +2552,13 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
       </pdk-grid>
+      
       <pdk-divider>
         <hr
           class="pdk-divider"
         />
       </pdk-divider>
+      
     </div>
     
     <div

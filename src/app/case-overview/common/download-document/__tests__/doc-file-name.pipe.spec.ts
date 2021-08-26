@@ -8,5 +8,6 @@ describe('DocFileNamePipe', () => {
     expect(pipe.transform('PLEA')).toBe('Plea');
     expect(pipe.transform('CITN')).toBe('Previous convictions');
     expect(pipe.transform('EMPLOYER_ATTACHMENT_TO_EARNINGS')).toBe(`Employer's AEO`);
+    expect(pipe.transform('APPLICATION')).toBe('Application');
   });
 });

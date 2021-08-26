@@ -12,7 +12,7 @@ import {
 } from '../../../../shared/pipes';
 import { CaseDetailsComponent } from '../case-details.component';
 import { Case } from '../../../../contexts/sjp';
-import { MOCK_SEARCH_RESULTS } from '../../../../search/__tests__/test-mock-data';
+import { ApplicationStatusPipeModule } from 'src/app/shared/pipes/application-status/application-status.module';
 
 describe('CaseDetailsComponent', () => {
   let fixture: ComponentFixture<TestCaseDetailsComponent>;
@@ -29,7 +29,8 @@ describe('CaseDetailsComponent', () => {
         DefendantNamePipeModule,
         CaseStatusPipeModule,
         FormatDatePipeModule,
-        FormatAddressPipeModule
+        FormatAddressPipeModule,
+        ApplicationStatusPipeModule
       ]
     });
 
@@ -74,6 +75,31 @@ describe('CaseDetailsComponent', () => {
     };
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
+  });
+
+  it('should not display application details if no application is present', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE,
+      caseApplication: null
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.nativeElement.innerHTML).not.toContain('Date application received');
+    expect(fixture.nativeElement.innerHTML).not.toContain('Application status');
+  });
+
+  it('should display application if application is present', () => {
+    fixture.componentInstance.kase = {
+      ...MOCK_CASE,
+      caseApplication: {
+        applicationStatus: 'APPEAL_ABANDONED',
+        dateReceived: '2020-01-01'
+      } as any
+    };
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.nativeElement.innerHTML).toContain('Date application received');
+    expect(fixture.nativeElement.innerHTML).toContain('Application status');
   });
 
   @Component({

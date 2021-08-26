@@ -53,6 +53,9 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
       </pdk-grid>
       
     </pdk-grid>
+    
+    
+    
     <pdk-grid
       class="govuk-grid-row"
       container=""
@@ -218,6 +221,9 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
       </pdk-grid>
       
     </pdk-grid>
+    
+    
+    
     <pdk-grid
       class="govuk-grid-row"
       container=""
@@ -384,6 +390,242 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
         </div>
       </pdk-grid>
       
+    </pdk-grid>
+    
+    
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           datesToAvoid1 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should display application if application is present 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details
+    ng-reflect-kase="[object Object]"
+  >
+    <h4
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           Completed 
+          
+          
+        </div>
+      </pdk-grid>
+      
+    </pdk-grid>
+    
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Date application received
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           1 Jan 2020 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Application status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           Appeal abandoned 
+        </div>
+      </pdk-grid>
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-row"
@@ -554,6 +796,172 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
       </pdk-grid>
       
     </pdk-grid>
+    
+    
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           datesToAvoid1 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should not display application details if no application is present 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details
+    ng-reflect-kase="[object Object]"
+  >
+    <h4
+      class="govuk-heading-m"
+      ng-reflect-type="heading-medium"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        ng-reflect-one-third=""
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          ng-reflect-vertical="2"
+          pdk-padding-vertical="2"
+        >
+           Completed 
+          
+          
+        </div>
+      </pdk-grid>
+      
+    </pdk-grid>
+    
+    
+    
     <pdk-grid
       class="govuk-grid-row"
       container=""

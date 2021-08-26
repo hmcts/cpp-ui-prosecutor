@@ -22,6 +22,12 @@ export class CaseStatusPipe implements PipeTransform {
         return 'Reopened in Libra';
       case 'SET_ASIDE_READY_FOR_DECISION':
         return 'Set aside - ready for decision';
+      case 'COMPLETED_APPLICATION_PENDING':
+        return 'Completed - application pending';
+      case 'APPEALED':
+        return 'Appealed';
+      case 'RELISTED':
+        return 'Relisted';
       default:
         return content;
     }

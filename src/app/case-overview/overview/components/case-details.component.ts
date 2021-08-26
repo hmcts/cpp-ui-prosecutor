@@ -42,6 +42,45 @@ import { Case } from '../../../contexts/sjp';
       </ng-template>
     </pdk-grid>
 
+    <pdk-grid container *ngIf="!!kase.ccApplicationStatus">
+      <pdk-grid one-third>
+        <div pdk-padding-vertical="2">
+          <b>CC Application Status</b>
+        </div>
+      </pdk-grid>
+      <pdk-grid two-thirds>
+        <div pdk-padding-vertical="2" data-role="cc-application-status">
+          {{ kase.ccApplicationStatus | applicationStatus }}
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+
+    <pdk-grid container *ngIf="!!kase.caseApplication">
+      <pdk-grid one-third>
+        <div pdk-padding-vertical="2">
+          <b>Date application received</b>
+        </div>
+      </pdk-grid>
+      <pdk-grid two-thirds>
+        <div pdk-padding-vertical="2" data-role="prosecutor">
+          {{ kase.caseApplication.dateReceived | date: 'd MMM y' | ifEmpty: '–' }}
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+
+    <pdk-grid container *ngIf="!!kase.caseApplication">
+      <pdk-grid one-third>
+        <div pdk-padding-vertical="2">
+          <b>Application status</b>
+        </div>
+      </pdk-grid>
+      <pdk-grid two-thirds>
+        <div pdk-padding-vertical="2" data-role="prosecutor">
+          {{ kase.caseApplication.applicationStatus | applicationStatus }}
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+
     <pdk-grid container>
       <pdk-grid one-third>
         <div pdk-padding-vertical="2">

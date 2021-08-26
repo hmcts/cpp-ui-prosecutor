@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { CaseDecision } from '../../../../contexts/sjp';
+import { ApplicationDecision, CaseDecision } from '../../../../contexts/sjp';
 import { MOCK_CASE_DECISION } from '../../../../case-overview/__tests__/test-mock-data';
 import { CommonModule } from '@angular/common';
 import { PdkDividerModule, PdkGridModule, PdkTabsModule } from '@cpp/pdk';
@@ -23,7 +23,8 @@ describe('CaseDecisionsDetailsComponent', () => {
       declarations: [
         CaseDecisionsDetailsComponent,
         TestCaseDecisionsDetailsComponent,
-        NoSeparatePenaltyOffenceDecisionComponent
+        NoSeparatePenaltyOffenceDecisionComponent,
+        MockApplicationDecisionComponent
       ],
       imports: [
         CommonModule,
@@ -97,6 +98,21 @@ describe('CaseDecisionsDetailsComponent', () => {
     expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('Reporting restrictions');
   });
 
+  it('should show application', () => {
+    const decisions = {
+      ...MOCK_CASE_DECISION,
+      applicationDecision: {
+        granted: false,
+        rejectionReason: 'Test reason'
+      }
+    };
+    fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('application-decision-details');
+  });
+
   @Component({
     selector: 'case-decisions-test',
     template: `
@@ -107,5 +123,15 @@ describe('CaseDecisionsDetailsComponent', () => {
   })
   class TestCaseDecisionsDetailsComponent {
     @Input() caseDecisionWithOffenceDecisions: CaseDecision;
+  }
+
+  @Component({
+    selector: 'application-decision-details',
+    template: `
+      application-decision-details
+    `
+  })
+  class MockApplicationDecisionComponent {
+    @Input() applicationDecision: ApplicationDecision;
   }
 });

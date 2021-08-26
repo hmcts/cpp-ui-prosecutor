@@ -6,7 +6,8 @@ export const fileNameMap = {
   PLEA: 'Plea',
   CITN: 'Previous convictions',
   EMPLOYER_ATTACHMENT_TO_EARNINGS: `Employer's AEO`,
-  RESULT_ORDER: 'Result order'
+  RESULT_ORDER: 'Result order',
+  APPLICATION: 'Application',
 };
 
 @Pipe({ name: 'docFileName' })

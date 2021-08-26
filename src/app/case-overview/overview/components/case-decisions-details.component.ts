@@ -33,7 +33,13 @@ import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
           </div>
         </pdk-grid>
       </pdk-grid>
-      <pdk-divider></pdk-divider>
+      <application-decision-details
+        *ngIf="!!caseDecisionWithOffenceDecisions.applicationDecision; else addDivider"
+        [applicationDecision]="caseDecisionWithOffenceDecisions.applicationDecision"
+      ></application-decision-details>
+      <ng-template #addDivider>
+        <pdk-divider></pdk-divider>
+      </ng-template>
     </div>
     <div
       *ngFor="

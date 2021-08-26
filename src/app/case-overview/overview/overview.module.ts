@@ -34,7 +34,7 @@ import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-b
 import { PersonalDetailsChangeAlertComponent } from './components/personal-details-change-alert.component';
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
 import { CaseDecisionsComponent } from './components/case-decisions.component';
-import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
+import { FormatDatePipeModule, SavedDecisionInformationPipeModule } from '../../shared/pipes';
 import { VerdictTypePipeModule } from '../../shared/pipes/verdict-type/verdict-type.module';
 import { CaseDecisionsDetailsComponent } from './components/case-decisions-details.component';
 import { FinancialImpositionsComponent } from './components/financial-impositions.component';
@@ -43,6 +43,7 @@ import { PaymentAndCollectionComponent } from './components/payment-and-collecti
 import { ReferredToOpenCourtOffenceDecisionComponent } from './components/referred-open-court-offence-decision.component';
 import { CaseNotesComponent } from './components/case-notes.component';
 import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
+import { ApplicationDecisionDetailsComponent } from './components/application-decision-details.component';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -64,7 +65,8 @@ const DECLARATIONS = [
   FinancialImpositionsComponent,
   FinancialOffenceDecisionComponent,
   NoSeparatePenaltyOffenceDecisionComponent,
-  PaymentAndCollectionComponent
+  PaymentAndCollectionComponent,
+  ApplicationDecisionDetailsComponent
 ];
 
 @NgModule({

@@ -28,15 +28,25 @@ const REFERRED_FOR_COURT_HEARING = {
   actual: 'REFERRED_FOR_COURT_HEARING',
   expected: 'Referred for court hearing'
 };
-
 const REOPENED_IN_LIBRA = {
   actual: 'REOPENED_IN_LIBRA',
   expected: 'Reopened in Libra'
 };
-
 const SET_ASIDE_READY_FOR_DECISION = {
   actual: 'SET_ASIDE_READY_FOR_DECISION',
   expected: 'Set aside - ready for decision'
+};
+const COMPLETED_APPLICATION_PENDING = {
+  actual: 'COMPLETED_APPLICATION_PENDING',
+  expected: 'Completed - application pending'
+};
+const APPEALED = {
+  actual: 'APPEALED',
+  expected: 'Appealed'
+};
+const RELISTED = {
+  actual: 'RELISTED',
+  expected: 'Relisted'
 };
 
 const UNEXPECTED = 'This is not expected';
@@ -86,8 +96,20 @@ describe('Case Status Pipe', () => {
     expect(pipe.transform(REOPENED_IN_LIBRA.actual)).toEqual(REOPENED_IN_LIBRA.expected);
   });
 
-  it('should map SET_ASIDE_READY_FOR_DECISION to Set aside - ready for decision', () => {
+  it('should map SET_ASIDE_READY_FOR_DECISION to Reopened in Libra', () => {
     expect(pipe.transform(SET_ASIDE_READY_FOR_DECISION.actual)).toEqual(SET_ASIDE_READY_FOR_DECISION.expected);
+  });
+
+  it('should map COMPLETED_APPLICATION_PENDING to Completed - application pending', () => {
+    expect(pipe.transform(COMPLETED_APPLICATION_PENDING.actual)).toEqual(COMPLETED_APPLICATION_PENDING.expected);
+  });
+
+  it('should map APPEALED to Appealed', () => {
+    expect(pipe.transform(APPEALED.actual)).toEqual(APPEALED.expected);
+  });
+
+  it('should map RELISTED to Relisted', () => {
+    expect(pipe.transform(RELISTED.actual)).toEqual(RELISTED.expected);
   });
 
   it('should not map any other response', () => {
