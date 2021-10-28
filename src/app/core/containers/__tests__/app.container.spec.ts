@@ -36,7 +36,7 @@ describe('App page component', () => {
       imports: [
         CommonModule,
         PdkCoreModule,
-        ApplicationModule,
+        ApplicationModule.forRoot({ production: false }),
         StoreModule.forRoot(reducers),
         RouterTestingModule,
         TranslateModule.forRoot()

@@ -32,7 +32,7 @@ import { TranslateService } from '@ngx-translate/core';
         [headerNavItems]="headerNavItems"
         [searchEnabled]="searchEnabled"
         serviceName="CJS Common Platform"
-        searchPlaceholder="Case or application reference"
+        searchPlaceholder="Search by reference"
         searchLabel="Search by case or application reference"
         (search)="handleSearch($event)"
         accessibilityLink="accessibility"

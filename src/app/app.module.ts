@@ -38,7 +38,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     EffectsModule.forRoot([]),
     AppConfigModule,
     SearchModule,
-    ApplicationModule,
+    ApplicationModule.forRoot(environment),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

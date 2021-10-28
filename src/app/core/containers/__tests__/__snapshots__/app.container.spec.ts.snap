@@ -25,10 +25,10 @@ exports[`App page component should compile correctly 1`] = `
         ng-reflect-offline="false"
         ng-reflect-search-enabled="false"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         
@@ -495,10 +495,10 @@ exports[`App page component should compile correctly when search is available 1`
         ng-reflect-offline="false"
         ng-reflect-search-enabled="true"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         
@@ -650,7 +650,7 @@ exports[`App page component should compile correctly when search is available 1`
                       ng-reflect-borderless=""
                       ng-reflect-model=""
                       ng-reflect-name="q"
-                      ng-reflect-placeholder="Case or application reference"
+                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -663,7 +663,7 @@ exports[`App page component should compile correctly when search is available 1`
                           ng-reflect-has-error="false"
                           ng-reflect-width=""
                           pdk-input=""
-                          placeholder="Case or application reference"
+                          placeholder="Search by reference"
                           type="text"
                         />
                         <button
@@ -1043,10 +1043,10 @@ exports[`App page component should detect when the app is busy 1`] = `
         ng-reflect-offline="false"
         ng-reflect-search-enabled="false"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         
@@ -1541,10 +1541,10 @@ exports[`App page component should track any api errors 1`] = `
         ng-reflect-offline="false"
         ng-reflect-search-enabled="false"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         
@@ -2038,10 +2038,10 @@ exports[`App page component should track the offline status of the container 1`]
         ng-reflect-offline="true"
         ng-reflect-search-enabled="false"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         
@@ -2535,10 +2535,10 @@ exports[`App page component should track the online status of the container 1`] 
         ng-reflect-offline="false"
         ng-reflect-search-enabled="false"
         ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Case or application reference"
+        ng-reflect-search-placeholder="Search by reference"
         ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
-        searchplaceholder="Case or application reference"
+        searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
         

@@ -13,11 +13,12 @@ import { OnlinePleaGuard } from './guards/online-plea.guard';
 import { SjpNoticeCasesDataGuard } from '../cases-missing-sjp-notices/sjp-notice-cases-data.guard';
 import { RegionsGuard } from './guards/regions.guard';
 import { ApplicationModule } from '@cpp/application';
+import { environment } from 'src/environments/environment';
 
 const DECLARATIONS = [AppContainer, AppRouterContainer];
 
 @NgModule({
-  imports: [CommonModule, ApplicationModule, PdkCoreModule, RouterModule, ContextsModule],
+  imports: [CommonModule, ApplicationModule.forRoot(environment), PdkCoreModule, RouterModule, ContextsModule],
   declarations: [...DECLARATIONS],
   exports: [AppContainer],
   providers: [

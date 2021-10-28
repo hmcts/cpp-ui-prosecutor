@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
   CppHttp,
   CppHttpBackend,
   GenerateUniqueKeyFn,
+  GENERATE_UNIQUE_KEY,
   HttpComandOptions,
   HttpCommandSyncOptions,
   HttpQueryOptions,
@@ -20,7 +21,7 @@ export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandS
 @Injectable()
 export class CustomHttp extends CppHttp {
   constructor(
-    generateUniqueKey: GenerateUniqueKeyFn,
+    @Inject(GENERATE_UNIQUE_KEY) generateUniqueKey: GenerateUniqueKeyFn,
     backend: CppHttpBackend,
     notifications: NotificationDispatcher,
     private store: Store<State>
