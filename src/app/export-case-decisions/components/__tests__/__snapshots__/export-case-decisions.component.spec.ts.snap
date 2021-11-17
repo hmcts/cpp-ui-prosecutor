@@ -46,7 +46,7 @@ exports[`ExportCaseDecisionsComponent should compile correctly with case count r
     "casesResultedCount": 0,
     "fromDate": "2019-10-01",
     "toDate": "2019-10-10"
-  } 
+  }  
     </download-case-decisions>
   </export-case-decisions>
 </export-case-decisions-test>

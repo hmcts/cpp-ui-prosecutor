@@ -3,10 +3,11 @@
 exports[`ExportCaseDecisionsContainer should compile correctly 1`] = `
 <export-case-decisions-container
   caseCountResult$={[Function Store]}
+  role$={[Function AnonymousSubject]}
   store={[Function Store]}
 >
   <export-case-decisions>
-     null 
+     null  
   </export-case-decisions>
 </export-case-decisions-container>
 `;
@@ -14,6 +15,7 @@ exports[`ExportCaseDecisionsContainer should compile correctly 1`] = `
 exports[`ExportCaseDecisionsContainer should compile correctly with resulted case count 1`] = `
 <export-case-decisions-container
   caseCountResult$={[Function Store]}
+  role$={[Function AnonymousSubject]}
   store={[Function Store]}
 >
   <export-case-decisions
@@ -21,7 +23,7 @@ exports[`ExportCaseDecisionsContainer should compile correctly with resulted cas
   >
      {
     "casesResultedCount": 10
-  } 
+  }  
   </export-case-decisions>
 </export-case-decisions-container>
 `;

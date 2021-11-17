@@ -7,6 +7,7 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { InputValues } from '../../../shared/from-to-dates/from-to-dates.component';
 import { By } from '@angular/platform-browser';
 import { MockModule } from '../../../shared/mock-components/mock.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ExportCaseDecisionsComponent', () => {
   let fixture: ComponentFixture<TestExportCaseDecisionsComponent>;
@@ -20,7 +21,7 @@ describe('ExportCaseDecisionsComponent', () => {
         MockDownloadCaseDecisionsFormComponent,
         TestExportCaseDecisionsComponent
       ],
-      imports: [PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule]
+      imports: [RouterTestingModule, PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule]
     });
     fixture = TestBed.createComponent(TestExportCaseDecisionsComponent);
     form = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent));
@@ -66,11 +67,12 @@ describe('ExportCaseDecisionsComponent', () => {
   @Component({
     selector: 'export-case-decisions-test',
     template: `
-      <export-case-decisions [caseCountResult]="caseCountResult" (loadCaseCount)="loadCaseCount($event)">
+      <export-case-decisions [role]="role" [caseCountResult]="caseCountResult" (loadCaseCount)="loadCaseCount($event)">
       </export-case-decisions>
     `
   })
   class TestExportCaseDecisionsComponent {
+    role: string;
     caseCountResult: CaseCountResult;
     loadCaseCount = jest.fn();
   }
@@ -79,9 +81,11 @@ describe('ExportCaseDecisionsComponent', () => {
     selector: 'download-case-decisions',
     template: `
       {{ caseCountResult | json }}
+      {{ role | json }}
     `
   })
   class MockDownloadCaseDecisionsFormComponent {
+    @Input() role: string;
     @Input() caseCountResult: CaseCountResult;
   }
 

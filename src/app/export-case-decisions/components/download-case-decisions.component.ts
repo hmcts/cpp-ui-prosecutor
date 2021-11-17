@@ -15,19 +15,31 @@ import { CaseCountResult } from '../../contexts/mi-report';
         </span>
         found from {{ caseCountResult.fromDate }} to {{ caseCountResult.toDate }}
       </p>
-      <a [href]="downloadUrl" target="_blank" pdk-button="secondary" *ngIf="caseCountResult.casesResultedCount">
-        Download results in json file
-      </a>
+
+      <ng-container *ngIf="caseCountResult.casesResultedCount">
+        <a [href]="jsonDownloadUrl" target="_blank" pdk-button="secondary">
+          Download results in json file
+        </a>
+
+        <a *ngIf="role !== 'tfl'" [href]="csvDownloadUrl" target="_blank" pdk-button="secondary" pdk-margin-left="2">
+          Download results in excel/csv file
+        </a>
+      </ng-container>
     </pdk-inset-text>
   `
 })
 export class DownloadCaseDecisionsComponent {
+  @Input() role: string;
   @Input() caseCountResult: CaseCountResult;
 
-  get downloadUrl() {
+  get jsonDownloadUrl() {
     return (
       '/api/mireportdata-query-api/query/api/rest/mireportdata/case-export?' +
       `fromDate=${this.caseCountResult.fromDate}&toDate=${this.caseCountResult.toDate}`
     );
+  }
+
+  get csvDownloadUrl() {
+    return `${this.jsonDownloadUrl}&csvExport=true`;
   }
 }

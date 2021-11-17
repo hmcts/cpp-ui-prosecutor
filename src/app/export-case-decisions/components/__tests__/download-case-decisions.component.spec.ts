@@ -40,10 +40,11 @@ describe('DownloadCaseDecisionsComponent', () => {
   @Component({
     selector: 'download-case-decisions-test',
     template: `
-      <download-case-decisions [caseCountResult]="caseCountResult"></download-case-decisions>
+      <download-case-decisions [role]="role" [caseCountResult]="caseCountResult"></download-case-decisions>
     `
   })
   class TestDownloadCaseDecisionsComponent {
+    role: string;
     caseCountResult: CaseCountResult;
   }
 });

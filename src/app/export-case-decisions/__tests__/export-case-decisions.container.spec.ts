@@ -9,6 +9,7 @@ import { CaseCountResult } from '../../contexts/mi-report';
 import { InputValues } from '../../shared/from-to-dates/from-to-dates.component';
 import { By } from '@angular/platform-browser';
 import { LoadResultedCaseCount, LoadResultedCaseCountSuccess } from '../export-case-decisions.actions';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ExportCaseDecisionsContainer', () => {
   let fixture: ComponentFixture<ExportCaseDecisionsContainer>;
@@ -19,6 +20,7 @@ describe('ExportCaseDecisionsContainer', () => {
     TestBed.configureTestingModule({
       declarations: [ExportCaseDecisionsContainer, MockExportCaseDecisionsComponent],
       imports: [
+        RouterTestingModule,
         CommonModule,
         StoreModule.forRoot(reducers),
         StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)
@@ -58,9 +60,11 @@ describe('ExportCaseDecisionsContainer', () => {
     selector: 'export-case-decisions',
     template: `
       {{ caseCountResult | json }}
+      {{ role | json }}
     `
   })
   class MockExportCaseDecisionsComponent {
+    @Input() role: string;
     @Input() caseCountResult: CaseCountResult;
     @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
   }

@@ -13,10 +13,15 @@ import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.cons
     <pdk-error-summary *ngIf="errors" [errors]="errors" title="Fix the following" focusOnChange></pdk-error-summary>
     <export-case-decisions-form (errors)="handleFormErrors($event)" (loadCaseCount)="loadCaseCount.emit($event)">
     </export-case-decisions-form>
-    <download-case-decisions *ngIf="caseCountResult" [caseCountResult]="caseCountResult"> </download-case-decisions>
+    <download-case-decisions
+      *ngIf="caseCountResult"
+      [caseCountResult]="caseCountResult"
+      [role]="role"
+    ></download-case-decisions>
   `
 })
 export class ExportCaseDecisionsComponent {
+  @Input() role: string;
   @Input() caseCountResult: CaseCountResult;
   @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
   @Output() errorsOutput: EventEmitter<ValidationError[]> = new EventEmitter();
