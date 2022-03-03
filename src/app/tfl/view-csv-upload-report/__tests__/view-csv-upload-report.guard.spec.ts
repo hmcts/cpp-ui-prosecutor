@@ -21,7 +21,7 @@ describe('ViewCsvUploadReportGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(csvFileUploadReportReducer)],
+      imports: [StoreModule.forRoot(csvFileUploadReportReducer, {runtimeChecks: {}})],
       providers: [
         ViewCsvUploadReportGuard,
         {

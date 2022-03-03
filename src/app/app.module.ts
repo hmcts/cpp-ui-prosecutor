@@ -1,13 +1,13 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { META_REDUCERS, Store, StoreModule } from '@ngrx/store';
-import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { Store, StoreModule } from '@ngrx/store';
+import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 import { CppHttp, CppHttpBackend, GENERATE_UNIQUE_KEY, HttpModule, NotificationDispatcher } from '@cpp/core';
 
 import { routes } from './routes';
-import { getMetaReducers, getReducers, reducerToken } from './reducers';
+import { getReducers, metaReducers, reducerToken } from './reducers';
 import { loadHttpFactory } from './core/services/http';
 // temporary, pending ui.core fix
 import * as uuid from 'uuid/v4';
@@ -22,6 +22,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ApplicationModule } from '@cpp/application';
+import { UsersGroupsModule } from '@cpp/users-groups';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
@@ -33,12 +34,16 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HttpModule,
     CoreModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot(reducerToken),
-    StoreRouterConnectingModule,
+    StoreModule.forRoot(reducerToken, {metaReducers }),
+    StoreRouterConnectingModule.forRoot({
+    routerState: RouterState.Minimal,
+    serializer: CustomRouterStateSerializer
+    }),
     EffectsModule.forRoot([]),
     AppConfigModule,
     SearchModule,
     ApplicationModule.forRoot(environment),
+    UsersGroupsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -55,10 +60,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       useFactory: getReducers
     },
     {
-      provide: META_REDUCERS,
-      useFactory: getMetaReducers
-    },
-    {
       provide: GENERATE_UNIQUE_KEY,
       useValue: uuid
     },
@@ -66,10 +67,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       provide: CppHttp,
       useFactory: loadHttpFactory,
       deps: [GENERATE_UNIQUE_KEY, CppHttpBackend, NotificationDispatcher, Store]
-    },
-    {
-      provide: RouterStateSerializer,
-      useClass: CustomRouterStateSerializer
     },
     ...environment.providers
   ],

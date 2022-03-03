@@ -14,7 +14,7 @@ describe('CaseHeaderBadgeContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CaseHeaderBadgeContainer, MockCaseHeaderBadgeComponent],
-      imports: [StoreModule.forRoot(reducers)]
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

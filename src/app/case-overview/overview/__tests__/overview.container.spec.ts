@@ -16,7 +16,7 @@ describe('OverviewContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OverviewContainer, MockCaseOverviewComponent],
-      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('caseOverview', caseOverviewReducer)]
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('caseOverview', caseOverviewReducer)]
     });
 
     store = TestBed.get(Store);

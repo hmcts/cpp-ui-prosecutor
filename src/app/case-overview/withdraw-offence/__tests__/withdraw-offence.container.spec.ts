@@ -16,7 +16,7 @@ describe('WithdrawOffenceContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [WithdrawOffenceContainer, MockWithdrawOffenceListComponent],
-      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)],
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('kase', caseOverviewReducer)],
       providers: [
         {
           provide: Router,

@@ -22,7 +22,7 @@ describe('ExportCaseDecisionsContainer', () => {
       imports: [
         RouterTestingModule,
         CommonModule,
-        StoreModule.forRoot(reducers),
+        StoreModule.forRoot(reducers, {runtimeChecks: {}}),
         StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)
       ]
     });

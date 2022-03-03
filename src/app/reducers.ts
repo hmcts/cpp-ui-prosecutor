@@ -5,8 +5,9 @@ import { storeLogger } from 'ngrx-store-logger';
 import { environment } from '../environments/environment';
 import { reducers as coreReducers, State as CoreState } from './core/reducers';
 import { RouterStoreState } from './core/utils/router-state';
+import { usersGroups, UsersGroupsState } from '@cpp/users-groups';
 
-export interface State extends CoreState {
+export interface State extends CoreState, UsersGroupsState {
   router: RouterReducerState<RouterStoreState>;
 }
 
@@ -18,6 +19,7 @@ export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
 
 export const reducers: ActionReducerMap<State> = {
   ...coreReducers,
+  usersGroups,
   router
 };
 

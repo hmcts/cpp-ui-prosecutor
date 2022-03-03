@@ -10,7 +10,7 @@ describe('ResetGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers)],
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
       providers: [ResetGuard]
     });
 

@@ -23,7 +23,7 @@ describe('CsvUploadContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [CsvUploadContainer, MockCsvUploadComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer }, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

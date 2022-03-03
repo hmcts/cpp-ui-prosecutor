@@ -21,7 +21,7 @@ describe('ViewDocumentUploadReportGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(documentUploadReportReducer)],
+      imports: [StoreModule.forRoot(documentUploadReportReducer, {runtimeChecks: {}})],
       providers: [
         ViewDocumentUploadReportGuard,
         {

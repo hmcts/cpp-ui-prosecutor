@@ -20,7 +20,7 @@ describe('FileUploadStatsDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(tflReducer)],
+      imports: [StoreModule.forRoot(tflReducer, {runtimeChecks: {}})],
       providers: [
         FileUploadStatsDataGuard,
         {

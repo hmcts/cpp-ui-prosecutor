@@ -70,6 +70,8 @@ describe('Case Overview Effects', () => {
             }
           }),
           caseOverview: caseOverviewReducer
+        }, {
+          runtimeChecks: {}
         })
       ],
       providers: [

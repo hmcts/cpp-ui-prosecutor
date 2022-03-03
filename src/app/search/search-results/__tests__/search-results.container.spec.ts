@@ -28,7 +28,7 @@ describe('SearchResultsContainer', () => {
 
     TestBed.configureTestingModule({
       declarations: [SearchResultsContainer, MockSearchResultsComponent],
-      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('search', searchReducer), RouterTestingModule],
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('search', searchReducer), RouterTestingModule],
       providers: [
         {
           provide: Router,

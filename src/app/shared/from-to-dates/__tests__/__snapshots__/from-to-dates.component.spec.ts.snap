@@ -34,6 +34,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            
             <legend
               class="govuk-fieldset__legend"
               ng-reflect-hidden="false"
@@ -183,6 +184,7 @@ exports[`FromToDatesComponent should compile correctly 1`] = `
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            
             <legend
               class="govuk-fieldset__legend"
               ng-reflect-hidden="false"

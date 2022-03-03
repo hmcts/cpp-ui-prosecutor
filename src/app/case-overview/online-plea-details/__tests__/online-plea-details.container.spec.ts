@@ -16,7 +16,7 @@ describe('OnlinePleaDetailsContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent],
-      imports: [StoreModule.forRoot(reducers)]
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

@@ -23,7 +23,7 @@ describe('ViewCsvUploadReportContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [ViewCsvUploadReportContainer, MockViewCsvUploadReportComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, csvFileUploadReport: csvFileUploadReportReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, csvFileUploadReport: csvFileUploadReportReducer }, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

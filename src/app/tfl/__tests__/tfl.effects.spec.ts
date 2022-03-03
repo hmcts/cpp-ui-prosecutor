@@ -19,7 +19,7 @@ describe('TflEffects', () => {
   beforeEach(() => {
     uploadDocuments = jest.fn();
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, StoreModule.forRoot(reducers)],
+      imports: [RouterTestingModule, StoreModule.forRoot(reducers, {runtimeChecks: {}})],
       providers: [
         TflEffects,
         {

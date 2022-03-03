@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -10,16 +10,17 @@ import {
 import { Title } from '@angular/platform-browser';
 import { select, Store } from '@ngrx/store';
 
-import { combineLatest, fromEvent, merge, Observable } from 'rxjs';
-import { distinctUntilChanged, filter, map, mapTo, mergeMap, startWith } from 'rxjs/operators';
+import { combineLatest, fromEvent, merge, Observable, Subscription } from 'rxjs';
+import { distinctUntilChanged, filter, map, mapTo, mergeMap, startWith, tap } from 'rxjs/operators';
 
-import { HeaderNavItem } from '@cpp/application/layout/layout.component';
-import { State } from '../reducers';
+import { HeaderNavItem } from '@cpp/application';
 
 import { getHasApiActivity, getHasApiError } from '../selectors';
 import { AppConfigService } from '../../config';
 import { environment } from '../../../environments/environment';
 import { TranslateService } from '@ngx-translate/core';
+import { getUserGroups } from '@cpp/users-groups';
+import { State } from '../../reducers';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +30,8 @@ import { TranslateService } from '@ngx-translate/core';
         [apiError]="apiError$ | async"
         [offline]="offline$ | async"
         [activity]="isBusy$ | async"
-        [headerNavItems]="headerNavItems"
-        [searchEnabled]="searchEnabled"
+        [headerNavItems]="headerNavItems$ | async"
+        [searchEnabled]="searchEnabled$ | async"
         serviceName="CJS Common Platform"
         searchPlaceholder="Search by reference"
         searchLabel="Search by case or application reference"
@@ -43,12 +44,12 @@ import { TranslateService } from '@ngx-translate/core';
   `
 })
 export class AppContainer {
-  headerNavItems: HeaderNavItem[];
+  headerNavItems$: Observable<HeaderNavItem[]>;
   devTools = environment.devTools;
   offline$: Observable<boolean>;
   apiError$: Observable<boolean>;
   isBusy$: Observable<boolean>;
-  searchEnabled = false;
+  searchEnabled$: Observable<boolean>;
 
   constructor(
     private appConfigService: AppConfigService,
@@ -74,7 +75,18 @@ export class AppContainer {
     ).pipe(map(([hasApiActivity, isBeingLazyLoaded]) => hasApiActivity || isBeingLazyLoaded));
 
     this.apiError$ = store.pipe(select(getHasApiError));
-    this.searchEnabled = this.appConfigService.searchEnabled;
+
+    this.searchEnabled$ = store.pipe(
+      select(getUserGroups),
+      map(userGroups => (userGroups || []).some(group => [
+                      'Court Administrators',
+                      'Crown Court Admin',
+                      'Court Clerks',
+                      'Legal Advisers',
+                      'Listing Officers',
+                    ].includes(group.groupName))
+                    )
+    );
 
     this.offline$ = merge(
       fromEvent(window, 'online').pipe(mapTo(true)),
@@ -100,34 +112,43 @@ export class AppContainer {
       )
       .subscribe(data => titleService.setTitle(data.title || 'Criminal Justice Service Online'));
 
-    this.headerNavItems = [
-      {
-        title: 'Home',
-        href: this.appConfigService.getAppUrl()
-      },
-      {
-        title: 'Your account',
-        href: this.appConfigService.getAccountUrl()
-      },
-      {
-        title: 'Sign out',
-        href: this.appConfigService.getLogoutUrl()
-      }
-    ];
+    this.headerNavItems$ = this.searchEnabled$.pipe(
+        map((searchEnabled) => {
+          let navItems: HeaderNavItem[] = [];
 
-    if (this.devTools) {
-      this.headerNavItems.push({
-        title: 'Dev tools',
-        href: '/prosecutor/dev-tools'
-      });
-    }
+          if (searchEnabled) {
+            navItems = [
+              {
+                title: 'Detailed search',
+                href: this.searchUrl
+              }
+            ];
+          }
+          navItems = [
+              ...navItems,
+              {
+                title: 'Home',
+                href: this.appConfigService.getAppUrl()
+              },
+              {
+                title: 'Your account',
+                href: this.appConfigService.getAccountUrl()
+              },
+              {
+                title: 'Sign out',
+                href: this.appConfigService.getLogoutUrl()
+              }
+            ];
 
-    if (this.searchEnabled) {
-      this.headerNavItems.unshift({
-        title: 'Detailed search',
-        href: this.searchUrl
-      });
-    }
+          if (this.devTools) {
+              navItems.push({
+                title: 'Dev tools',
+                href: '/prosecutor/dev-tools'
+              });
+            }
+          return navItems;
+        })
+      );
   }
 
   get searchUrl() {

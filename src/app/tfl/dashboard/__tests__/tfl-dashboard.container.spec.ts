@@ -30,7 +30,7 @@ describe('TflDashboardContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [TflDashboardContainer, MockTflDashboardComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer }, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

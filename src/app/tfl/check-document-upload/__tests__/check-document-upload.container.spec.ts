@@ -26,7 +26,7 @@ describe('CheckDocumentUploadContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [CheckDocumentUploadContainer, MockDocumentUploadComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, documentUploadDetails: documentUploadReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, documentUploadDetails: documentUploadReducer }, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

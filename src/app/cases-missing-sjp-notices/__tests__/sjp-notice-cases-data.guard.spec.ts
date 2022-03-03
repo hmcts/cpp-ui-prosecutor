@@ -20,7 +20,7 @@ describe('SjpNoticeCasesDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer)],
+      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer, {runtimeChecks: {}})],
       providers: [
         SjpNoticeCasesDataGuard,
         {

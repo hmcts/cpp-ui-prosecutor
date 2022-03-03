@@ -40,7 +40,7 @@ describe('OnlinePleaComponent', () => {
         DateOfBirthModule,
         PleaStatusPipeModule,
         MockModule,
-        StoreModule.forRoot(reducers)
+        StoreModule.forRoot(reducers, {runtimeChecks: {}})
       ]
     });
     store = TestBed.get(Store);

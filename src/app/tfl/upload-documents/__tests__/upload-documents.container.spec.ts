@@ -18,7 +18,7 @@ describe('UploadDocumentsContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [UploadDocumentsContainer, MockUploadDocumentComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, tfl: tflReducer }, { runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

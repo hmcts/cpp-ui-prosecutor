@@ -1,10 +1,10 @@
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { CppHttp, CppHttpConfig } from '@cpp/core';
-import { AppConfig, UserGroup } from './interfaces';
+import { CppHttpConfig } from '@cpp/core';
+import { AppConfig } from './interfaces';
 import { of } from 'rxjs';
-import { catchError, switchMap, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 // AppConfigService can be used as the provider for all configuration
 // dependencies required by submodules, so long as it implements their
@@ -17,9 +17,8 @@ export class AppConfigService implements CppHttpConfig {
   cppHomeUrl: string;
   logoutUrl: string;
   appUrl: string;
-  searchEnabled = false;
 
-  constructor(private http: HttpClient, private injector: Injector) {}
+  constructor(private http: HttpClient) {}
 
   load() {
     return this.http
@@ -32,31 +31,7 @@ export class AppConfigService implements CppHttpConfig {
           this.logoutUrl = config.idamLogoutPage;
           this.appUrl = config.appUrl;
         }),
-        switchMap(() =>
-          this.injector
-            .get(CppHttp)
-            .query<{ groups: UserGroup[] }>({
-              url: '/usersgroups-query-api/query/api/rest/usersgroups/users/logged-in-user/groups',
-              requestType: 'application/vnd.usersgroups.get-logged-in-user-groups+json',
-            })
-            .pipe(
-              tap(
-                (result) => {
-                  this.searchEnabled = result.groups.some((userGroup) =>
-                    [
-                      'Court Administrators',
-                      'Crown Court Admin',
-                      'Court Clerks',
-                      'Legal Advisers',
-                      'Listing Officers',
-                    ].includes(userGroup.groupName)
-                  );
-                },
-                () => console.warn('Failed to determine eligibility for unified search.')
-              ),
-              catchError(() => of(null))
-            )
-        )
+        catchError(() => of(null))
       )
       .toPromise();
   }

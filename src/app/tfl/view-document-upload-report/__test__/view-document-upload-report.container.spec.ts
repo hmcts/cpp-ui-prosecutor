@@ -22,7 +22,7 @@ describe('ViewDocumentUploadReportContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [ViewDocumentUploadReportContainer, MockViewDocumentUploadReportComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, documentUploadReport: documentUploadReportReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, documentUploadReport: documentUploadReportReducer }, { runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

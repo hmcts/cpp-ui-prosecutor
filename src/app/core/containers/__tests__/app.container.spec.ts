@@ -5,15 +5,16 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppConfigService } from '../../../config';
 import { Store, StoreModule } from '@ngrx/store';
 import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, RouteConfigLoadStart, Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { ApiError, PendingApiRequest } from '../../actions/api';
 import { Title } from '@angular/platform-browser';
 import { PdkCoreModule } from '@cpp/pdk';
-import { reducers } from '../../reducers';
 import { global } from '@angular/compiler/src/util';
 import { AppRouterContainer } from '../app.router.container';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { UsersGroupsService } from '@cpp/users-groups';
 import { ApplicationModule } from '@cpp/application';
+import { reducers } from '../../../reducers';
 
 describe('App page component', () => {
   window.scrollTo = jest.fn();
@@ -37,7 +38,16 @@ describe('App page component', () => {
         CommonModule,
         PdkCoreModule,
         ApplicationModule.forRoot({ production: false }),
-        StoreModule.forRoot(reducers),
+        StoreModule.forRoot(reducers, {runtimeChecks: {}, initialState: {
+          usersGroups: {
+            userGroups: [{
+              groupName: 'Court Administrators',
+              groupId: '*',
+              description: 'user group'
+            }],
+            permissionsMap: {}
+          }
+        }}),
         RouterTestingModule,
         TranslateModule.forRoot()
       ],
@@ -54,7 +64,6 @@ describe('App page component', () => {
             getLogoutUrl: () => 'path/to/logout',
             getBaseUrl: () => 'path/to/home',
             getAppUrl: () => 'path/to/home',
-            searchEnabled: false
           }
         },
         {
@@ -69,6 +78,12 @@ describe('App page component', () => {
           useValue: {
             outlet: PRIMARY_OUTLET,
             data: routeData
+          }
+        },
+        {
+          provide: UsersGroupsService,
+          useValue: {
+            getUserSystemAnnouncement: jest.fn().mockReturnValue(of({ announcement: undefined }))
           }
         },
         TranslateService
@@ -89,7 +104,9 @@ describe('App page component', () => {
   it('should display the list of links', () => {
     fixture = TestBed.createComponent(AppContainer);
     const component = fixture.componentInstance;
-    expect(component.headerNavItems.length).toBe(4);
+    component.headerNavItems$.subscribe(headerNavItems => {
+      expect(headerNavItems.length).toBe(4);
+    });
   });
 
   it('should check translate service is being called', () => {
@@ -149,7 +166,6 @@ describe('App page component', () => {
       value: 'https://cpp.nonlive/prosecutor',
       writable: true
     });
-    TestBed.get(AppConfigService).searchEnabled = true;
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();

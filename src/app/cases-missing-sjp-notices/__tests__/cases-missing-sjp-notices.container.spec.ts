@@ -49,7 +49,7 @@ describe('CasesMissingSjpNoticesContainer', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CasesMissingSjpNoticesContainer, MockCasesMissingSjpNoticesComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, casesMissingNotice: casesMissingSjpNoticesReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, casesMissingNotice: casesMissingSjpNoticesReducer }, {runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);

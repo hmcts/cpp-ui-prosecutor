@@ -19,7 +19,7 @@ describe('DatesToAvoidContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DatesToAvoidContainer, MockDatesToAvoidComponent],
-      imports: [StoreModule.forRoot(reducers), StoreModule.forFeature('kase', caseOverviewReducer)],
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('kase', caseOverviewReducer)],
       providers: [
         {
           provide: Router,

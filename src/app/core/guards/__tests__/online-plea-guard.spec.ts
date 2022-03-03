@@ -24,7 +24,7 @@ describe('OnlinePleaGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers)],
+      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
       providers: [
         OnlinePleaGuard,
         {

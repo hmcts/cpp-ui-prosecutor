@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { AppConfigService } from '../config.service';
 import { cold } from 'jasmine-marbles';
-import { Injector } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { of } from 'rxjs';
 

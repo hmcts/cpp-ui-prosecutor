@@ -20,7 +20,7 @@ describe('CheckDocumentUploadGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(documentUploadReducer)],
+      imports: [StoreModule.forRoot(documentUploadReducer, {runtimeChecks: {}})],
       providers: [
         CheckDocumentUploadGuard,
         {

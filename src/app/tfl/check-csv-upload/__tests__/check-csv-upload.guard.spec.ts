@@ -20,7 +20,7 @@ describe('CheckCsvUploadGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(csvFileUploadReducer)],
+      imports: [StoreModule.forRoot(csvFileUploadReducer, {runtimeChecks: {}})],
       providers: [
         CheckCsvUploadGuard,
         {

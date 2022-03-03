@@ -75,13 +75,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              <legend
-                class="govuk-fieldset__legend"
-                ng-reflect-hidden="false"
-                ng-reflect-type="default"
-              >
-                  
-              </legend>
+              
               
               
               
@@ -181,6 +175,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
                     class="govuk-fieldset"
                     pdk-fieldset=""
                   >
+                    
                     <legend
                       class="govuk-fieldset__legend govuk-fieldset__legend--s"
                       ng-reflect-hidden="false"
@@ -342,13 +337,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              <legend
-                class="govuk-fieldset__legend"
-                ng-reflect-hidden="false"
-                ng-reflect-type="default"
-              >
-                  
-              </legend>
+              
               
               
               
@@ -448,6 +437,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
                     class="govuk-fieldset"
                     pdk-fieldset=""
                   >
+                    
                     <legend
                       class="govuk-fieldset__legend govuk-fieldset__legend--s"
                       ng-reflect-hidden="false"
@@ -609,13 +599,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              <legend
-                class="govuk-fieldset__legend"
-                ng-reflect-hidden="false"
-                ng-reflect-type="default"
-              >
-                  
-              </legend>
+              
               
               
               
@@ -715,6 +699,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
                     class="govuk-fieldset"
                     pdk-fieldset=""
                   >
+                    
                     <legend
                       class="govuk-fieldset__legend govuk-fieldset__legend--s"
                       ng-reflect-hidden="false"

@@ -26,7 +26,7 @@ describe('CheckCsvUploadContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [CheckCsvUploadContainer, MockCheckCsvUploadComponent],
-      imports: [CommonModule, StoreModule.forRoot({ ...reducers, csvFileUploadDetails: csvFileUploadReducer })]
+      imports: [CommonModule, StoreModule.forRoot({ ...reducers, csvFileUploadDetails: csvFileUploadReducer }, { runtimeChecks: {}})]
     });
 
     store = TestBed.get(Store);
