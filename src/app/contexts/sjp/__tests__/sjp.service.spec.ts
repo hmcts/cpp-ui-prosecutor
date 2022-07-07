@@ -6,6 +6,7 @@ import { SjpService } from '../sjp.service';
 import { Case, CaseDetails, SearchResult, Region } from '../sjp.interface';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/test-mock-data';
 import { HttpParams } from '@angular/common/http';
+import { ExternalHttp } from '../../../core/services/external-http';
 
 const MOCK_CASE_ID = 'mock-case-id';
 const MOCK_DATES_TO_AVOID = 'dates to avoid content';
@@ -62,10 +63,12 @@ describe('SjpService', () => {
   let service: SjpService;
   let mockQuery: jest.Mock;
   let mockCommandSync: jest.Mock;
+  let get: jest.Mock;
 
   beforeEach(() => {
     mockQuery = jest.fn();
     mockCommandSync = jest.fn();
+    get = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [HttpModule, CommonModule],
@@ -76,6 +79,12 @@ describe('SjpService', () => {
           useValue: {
             query: mockQuery,
             commandSync: mockCommandSync
+          }
+        },
+        {
+          provide: ExternalHttp,
+          useValue: {
+            get
           }
         }
       ]
@@ -353,4 +362,28 @@ describe('SjpService', () => {
       errorEvent: 'public.sjp.case-update-rejected'
     });
   };
+
+
+  describe('getDocument', () => {
+    it('should download document', () => {
+      const caseId = 'case123';
+      const documentId = 'doc123';
+      const response = { url: 'https://external-url' };
+      const blob = new Blob(['*'], { type: 'application/pdf' });
+
+      const getDoc$ = cold(' -a|', { a: response });
+      const download$ = cold('-b|', { b: '*' });
+      const expected$ = cold('--c|', { c: blob });
+
+      mockQuery.mockReturnValue(getDoc$);
+      get.mockReturnValue(download$);
+
+      expect(service.getDocument(caseId, documentId)).toBeObservable(expected$);
+      expect(http.query).toHaveBeenCalledWith({
+        url: `/sjp-query-api/query/api/rest/sjp/cases/${caseId}/documents/${documentId}/content`,
+        requestType: 'application/vnd.sjp.query.case-document-content+json'
+      });
+    });
+  });
+
 });

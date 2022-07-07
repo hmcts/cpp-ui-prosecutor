@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { CaseDocument } from '../../../contexts/sjp';
+import { CaseDocument, SjpService } from '../../../contexts/sjp';
+import { take } from 'rxjs/operators';
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'download-document',
@@ -8,10 +10,10 @@ import { CaseDocument } from '../../../contexts/sjp';
       <pdk-file-download-icon [size]="39"></pdk-file-download-icon>
       <div class="document-item">
         <a
-          href="/api/sjp-query-api/query/api/rest/sjp/cases/{{ caseId }}/documents/{{ document.id }}/content"
+          href="javascript:void(0);"
+          (click)="onDownloadDocument(document.id, document.metadata.fileName)"
           pdk-link
           pdk-typography="body-xsmall"
-          target="_blank"
         >
           {{ document.documentType | docFileName }}
         </a>
@@ -28,6 +30,9 @@ export class DownloadDocumentComponent {
   @Input() document: CaseDocument;
   @Input() caseId: string;
 
+  constructor(private sjpService: SjpService) {}
+
+
   get extension() {
     const fileName = this.document.metadata && this.document.metadata.fileName;
     if (fileName) {
@@ -35,5 +40,14 @@ export class DownloadDocumentComponent {
     }
 
     return 'PDF';
+  }
+
+  onDownloadDocument(documentId: string, fileName: string): void {
+    this.sjpService
+      .getDocument(this.caseId, documentId)
+      .pipe(take(1))
+      .subscribe(blobDoc => {
+        FileSaver.saveAs(blobDoc, fileName);
+      });
   }
 }

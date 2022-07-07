@@ -52,6 +52,7 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "core-js": "^2.5.4",
+    "file-saver": "^2.0.5",
     "moment": "^2.24.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.10.0",
@@ -69,6 +70,7 @@
     "@cpp/ui.test-utils": "2.1.5",
     "@ngrx/store-devtools": "8.0.1",
     "@types/archiver": "^2.1.2",
+    "@types/file-saver": "^2.0.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^22.2.3",
@@ -103,6 +105,7 @@
     "preset": "jest-preset-angular",
     "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/",
+      "<rootDir>/src/app/devtools",
       ".module.ts$",
       ".index.ts$",
       ".routes.ts$",

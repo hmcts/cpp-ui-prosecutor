@@ -11,15 +11,20 @@ const getDefaultUserId = (): string => {
 
 @Injectable()
 export class SessionInterceptor implements HttpInterceptor {
-  constructor(readonly fakeSession: SessionService) {}
+  constructor(readonly fakeSession: SessionService) {
+  }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const params = request.params || new HttpParams();
-    const CJSCPPUID = this.fakeSession.getUserId() || getDefaultUserId();
-    const authenticatedRequest = request.clone({
-      params: params.set('CJSCPPUID', CJSCPPUID),
-      setHeaders: { CJSCPPUID }
-    });
-    return next.handle(authenticatedRequest);
+    if (request.responseType !== 'arraybuffer') {
+      const params = request.params || new HttpParams();
+      const CJSCPPUID = this.fakeSession.getUserId() || getDefaultUserId();
+      const authenticatedRequest = request.clone({
+        params: params.set('CJSCPPUID', CJSCPPUID),
+        setHeaders: { CJSCPPUID }
+      });
+      return next.handle(authenticatedRequest);
+    }
+
+    return next.handle(request);
   }
 }

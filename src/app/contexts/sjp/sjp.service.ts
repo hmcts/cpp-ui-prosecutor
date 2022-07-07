@@ -2,26 +2,27 @@ import { Injectable } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import {
   Case,
+  CaseNotes,
   CasesMissingSjpNoticeResult,
   CaseSummary,
   DefendantDetailsUpdatesResult,
-  PleadedNotGuiltyCaseResult,
-  SearchResult,
   OnlinePlea,
-  CaseNotes,
+  PleadedNotGuiltyCaseResult,
   Region,
+  SearchResult,
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
+import { ExternalHttp } from '../../core/services/external-http';
 
 @Injectable()
 export class SjpService {
   private readonly query = '/sjp-query-api/query/api/rest/sjp';
   private readonly command = '/sjp-command-api/command/api/rest/sjp';
 
-  constructor(private http: CppHttp) {}
+  constructor(private http: CppHttp, private externalHttp: ExternalHttp) {}
 
   getCaseById(caseId: string): Observable<Case> {
     return this.http.query({
@@ -141,6 +142,18 @@ export class SjpService {
             return { value: region.id, label: region.name };
           })
         )
+      );
+  }
+
+  getDocument(caseId: string, documentId: string): Observable<Blob> {
+    return this.http
+      .query<{ url: string }>({
+        url: `/sjp-query-api/query/api/rest/sjp/cases/${caseId}/documents/${documentId}/content`,
+        requestType: 'application/vnd.sjp.query.case-document-content+json'
+      })
+      .pipe(
+        switchMap(({ url }) => this.externalHttp.get<ArrayBuffer>(url, { responseType: 'arraybuffer' })),
+        map((response: ArrayBuffer) => new Blob([response], { type: 'application/pdf' }))
       );
   }
 }

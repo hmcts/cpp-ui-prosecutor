@@ -46,11 +46,10 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
       >
         <a
           class="govuk-link govuk-body-xs"
-          href="/api/sjp-query-api/query/api/rest/sjp/cases//documents/documentId1/content"
+          href="javascript:void(0);"
           ng-reflect-type="body-xsmall"
           pdk-link=""
           pdk-typography="body-xsmall"
-          target="_blank"
         >
            Plea 
         </a>
