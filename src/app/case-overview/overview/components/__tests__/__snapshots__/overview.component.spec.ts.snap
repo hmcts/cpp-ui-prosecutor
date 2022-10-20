@@ -210,7 +210,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -229,7 +229,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -248,7 +248,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -270,7 +270,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -399,7 +399,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -450,6 +450,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -906,7 +907,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -925,7 +926,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -949,6 +950,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -1052,6 +1054,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -1283,7 +1286,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -1302,7 +1305,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -1321,7 +1324,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -1343,7 +1346,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -1472,7 +1475,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -1523,6 +1526,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -1916,7 +1920,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -1935,7 +1939,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -1959,6 +1963,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -2062,6 +2067,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -2293,7 +2299,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -2312,7 +2318,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -2331,7 +2337,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -2353,7 +2359,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -2482,7 +2488,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -2533,6 +2539,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -2926,7 +2933,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -2945,7 +2952,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -2969,6 +2976,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -3072,6 +3080,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -3393,7 +3402,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -3412,7 +3421,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -3431,7 +3440,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -3453,7 +3462,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -3582,7 +3591,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -3633,6 +3642,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -3938,7 +3948,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -3957,7 +3967,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -3981,6 +3991,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -4084,6 +4095,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -4354,7 +4366,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -4373,7 +4385,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -4392,7 +4404,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -4414,7 +4426,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -4543,7 +4555,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -4594,6 +4606,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -5050,7 +5063,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5069,7 +5082,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5093,6 +5106,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -5196,6 +5210,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -5427,7 +5442,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5446,7 +5461,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5465,7 +5480,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5487,7 +5502,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -5616,7 +5631,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -5667,6 +5682,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -5978,7 +5994,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -5997,7 +6013,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6021,6 +6037,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -6124,6 +6141,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -6355,7 +6373,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6374,7 +6392,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6393,7 +6411,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6415,7 +6433,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -6544,7 +6562,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -6595,6 +6613,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -6898,7 +6917,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6917,7 +6936,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -6941,6 +6960,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -7044,6 +7064,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -7314,7 +7335,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -7333,7 +7354,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -7352,7 +7373,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -7374,7 +7395,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -7503,7 +7524,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -7554,6 +7575,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -8010,7 +8032,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -8029,7 +8051,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -8053,6 +8075,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -8156,6 +8179,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     <section
                       aria-hidden="true"
                       class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       
@@ -8426,7 +8450,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -8445,7 +8469,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     role="presentation"
                   >
                     <a
-                      aria-controls="1"
+                      aria-controls="pdk-tab-section-1"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -8464,7 +8488,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     role="presentation"
                   >
                     <a
-                      aria-controls="2"
+                      aria-controls="pdk-tab-section-2"
                       aria-selected="false"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -8486,7 +8510,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   <section
                     aria-hidden="false"
                     class="govuk-tabs__panel"
-                    id="0"
+                    id="pdk-tab-section-0"
                     role="tabpanel"
                   >
                     
@@ -8615,7 +8639,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                    id="1"
+                    id="pdk-tab-section-1"
                     role="tabpanel"
                   >
                     
@@ -8666,6 +8690,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   <section
                     aria-hidden="true"
                     class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
                     
@@ -9122,7 +9147,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     role="presentation"
                   >
                     <a
-                      aria-controls="0"
+                      aria-controls="pdk-tab-section-0"
                       aria-selected="true"
                       class="govuk-tabs__tab"
                       href="javascript:void(0);"
@@ -9149,6 +9174,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     <section
                       aria-hidden="false"
                       class="govuk-tabs__panel"
+                      id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
                       

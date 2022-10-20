@@ -56,7 +56,6 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
       >
         <span
           _ngcontent-a-c0=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-1"
         >
@@ -161,7 +160,6 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
       >
         <span
           _ngcontent-a-c10=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-6"
         >
@@ -265,7 +263,6 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
       >
         <span
           _ngcontent-a-c8=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-5"
         >
@@ -367,7 +364,6 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
       >
         <span
           _ngcontent-a-c2=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-2"
         >
@@ -474,7 +470,6 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
       >
         <span
           _ngcontent-a-c6=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-4"
         >
@@ -576,7 +571,6 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
       >
         <span
           _ngcontent-a-c4=""
-          aria-expanded="false"
           class="pdk-foldable__content"
           id="pdk-foldable-text-3"
         >

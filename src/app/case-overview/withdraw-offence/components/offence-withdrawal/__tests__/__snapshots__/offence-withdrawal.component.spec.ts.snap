@@ -54,7 +54,6 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
           >
             <span
               _ngcontent-a-c1=""
-              aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-1"
             >
@@ -316,7 +315,6 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
           >
             <span
               _ngcontent-a-c10=""
-              aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-10"
             >
@@ -578,7 +576,6 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
           >
             <span
               _ngcontent-a-c19=""
-              aria-expanded="false"
               class="pdk-foldable__content"
               id="pdk-foldable-text-19"
             >

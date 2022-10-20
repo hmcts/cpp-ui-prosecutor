@@ -38,7 +38,6 @@ exports[`Case note component should display case notes 1`] = `
               >
                 <span
                   _ngcontent-a-c1=""
-                  aria-expanded="false"
                   class="pdk-foldable__content"
                   id="pdk-foldable-text-1"
                 >
@@ -81,7 +80,6 @@ exports[`Case note component should display case notes 1`] = `
               >
                 <span
                   _ngcontent-a-c1=""
-                  aria-expanded="false"
                   class="pdk-foldable__content"
                   id="pdk-foldable-text-2"
                 >

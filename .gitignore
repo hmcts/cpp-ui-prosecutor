@@ -78,10 +78,4 @@ Thumbs.db
 tools/fixtures/data/*
 !.gitkeep
 
-
-
-
-
-
-
-
+errors.json

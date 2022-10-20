@@ -34,10 +34,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HttpModule,
     CoreModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot(reducerToken, {metaReducers }),
+    StoreModule.forRoot(reducerToken, { metaReducers }),
     StoreRouterConnectingModule.forRoot({
-    routerState: RouterState.Minimal,
-    serializer: CustomRouterStateSerializer
+      routerState: RouterState.Minimal,
+      serializer: CustomRouterStateSerializer
     }),
     EffectsModule.forRoot([]),
     AppConfigModule,

@@ -17,6 +17,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
     </p>
     <h3 pdk-typography="heading-medium" pdk-margin-bottom="0">Personal details</h3>
     <table pdk-table>
+      <thead pdk-table-head>
+        <span pdk-visually-hidden>Personal details</span>
+      </thead>
       <tbody pdk-table-body class="column-width">
         <tr pdk-table-row>
           <td pdk-table-cell pdk-typography="body-small">Name</td>
@@ -76,6 +79,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
     <ng-container *ngFor="let onlinePleaDetail of onlinePlea.onlinePleaDetails; let index = index">
       <h3 pdk-typography="heading-medium" pdk-margin-bottom="0">Plea for offence {{ index + 1 }}</h3>
       <table pdk-table>
+        <thead pdk-table-head>
+          <span pdk-visually-hidden>Plea details for offence {{ index + 1 }}</span>
+        </thead>
         <tbody pdk-table-body class="column-width">
           <tr pdk-table-row>
             <td pdk-table-cell pdk-typography="body-small">Charge</td>
@@ -104,6 +110,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
     <ng-container *ngIf="onlinePlea.pleaDetails.hasHearing">
       <h3 pdk-typography="heading-medium" pdk-margin-bottom="0">Court hearing</h3>
       <table pdk-table>
+        <thead pdk-table-head>
+          <span pdk-visually-hidden>Court hearing</span>
+        </thead>
         <tbody pdk-table-body class="column-width">
           <tr pdk-table-row>
             <td pdk-table-cell pdk-typography="body-small">Are they bringing their own witness?</td>

@@ -31,7 +31,6 @@ exports[`StatementOfFactsComponent should compile correctly 1`] = `
         >
           <span
             _ngcontent-a-c0=""
-            aria-expanded="false"
             class="pdk-foldable__content"
             id="pdk-foldable-text-1"
           >

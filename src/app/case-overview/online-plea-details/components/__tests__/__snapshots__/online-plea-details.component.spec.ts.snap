@@ -39,6 +39,15 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <table
       pdk-table=""
     >
+      <thead
+        pdk-table-head=""
+      >
+        <span
+          pdk-visually-hidden=""
+        >
+          Personal details
+        </span>
+      </thead>
       <tbody
         class="column-width"
         pdk-table-body=""
@@ -147,7 +156,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
             >
               
               <div>
-                 9 Sep 1960 (61 years old) 
+                 9 Sep 1960 (62 years old) 
               </div>
               
             </date-of-birth>
@@ -167,6 +176,15 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <table
       pdk-table=""
     >
+      <thead
+        pdk-table-head=""
+      >
+        <span
+          pdk-visually-hidden=""
+        >
+          Plea details for offence 1
+        </span>
+      </thead>
       <tbody
         class="column-width"
         pdk-table-body=""
@@ -234,6 +252,15 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <table
       pdk-table=""
     >
+      <thead
+        pdk-table-head=""
+      >
+        <span
+          pdk-visually-hidden=""
+        >
+          Plea details for offence 2
+        </span>
+      </thead>
       <tbody
         class="column-width"
         pdk-table-body=""
@@ -302,6 +329,15 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <table
       pdk-table=""
     >
+      <thead
+        pdk-table-head=""
+      >
+        <span
+          pdk-visually-hidden=""
+        >
+          Court hearing
+        </span>
+      </thead>
       <tbody
         class="column-width"
         pdk-table-body=""

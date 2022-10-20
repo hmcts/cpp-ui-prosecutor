@@ -38,16 +38,21 @@ describe('App page component', () => {
         CommonModule,
         PdkCoreModule,
         ApplicationModule.forRoot({ production: false }),
-        StoreModule.forRoot(reducers, {runtimeChecks: {}, initialState: {
-          usersGroups: {
-            userGroups: [{
-              groupName: 'Court Administrators',
-              groupId: '*',
-              description: 'user group'
-            }],
-            permissionsMap: {}
+        StoreModule.forRoot(reducers, {
+          runtimeChecks: {},
+          initialState: {
+            usersGroups: {
+              userGroups: [
+                {
+                  groupName: 'Court Administrators',
+                  groupId: '*',
+                  description: 'user group'
+                }
+              ],
+              permissionsMap: {}
+            }
           }
-        }}),
+        }),
         RouterTestingModule,
         TranslateModule.forRoot()
       ],
@@ -63,7 +68,7 @@ describe('App page component', () => {
             getAccountUrl: () => 'path/to/account',
             getLogoutUrl: () => 'path/to/logout',
             getBaseUrl: () => 'path/to/home',
-            getAppUrl: () => 'path/to/home',
+            getAppUrl: () => 'path/to/home'
           }
         },
         {
