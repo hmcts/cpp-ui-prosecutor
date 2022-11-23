@@ -59,7 +59,7 @@ import { NgForm } from '@angular/forms';
             {{ defendantDetailsUpdate.region }}
           </td>
           <td pdk-table-cell data-role="date-of-birth">
-            {{ defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy' }}
+          {{ !!defendantDetailsUpdate.dateOfBirth ? (defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy') : '' }}
           </td>
           <td pdk-table-cell>
             <what-changed [defendantDetailsUpdate]="defendantDetailsUpdate"></what-changed>

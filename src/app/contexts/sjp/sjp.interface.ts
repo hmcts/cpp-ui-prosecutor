@@ -64,7 +64,8 @@ export interface Defendant {
   numPreviousConvictions: number;
   speakWelsh?: boolean;
   offences: Offence[];
-  personalDetails: PersonalDetails;
+  personalDetails?: PersonalDetails;
+  legalEntityDetails?: LegalEntityDetails;
 }
 
 export interface Offence {
@@ -126,6 +127,14 @@ export interface CaseDocumentMetaData {
 
 export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER' | 'CITN' | 'APPLICATION';
 
+export interface LegalEntityDetails {
+  address: Address;
+  addressChanged: boolean;
+  contactDetails: ContactDetails;
+  legalEntityName: string;
+  legalEntityNameChanged: boolean;
+}
+
 export interface PersonalDetails {
   address: Address;
   addressChanged: boolean;
@@ -140,6 +149,7 @@ export interface PersonalDetails {
   driverNumber?: string;
   title: string;
   outdated?: boolean; // todo unaccounted for
+  legalEntityName?: string;
 }
 
 export interface ContactDetails {
@@ -178,26 +188,28 @@ export interface CaseDetails {
 interface PleadNotGuiltyCase {
   caseId: string;
   pleaEntry: string;
-  firstName: string;
-  lastName: string;
   address: Address;
   referenceNumber: string;
   region: string;
-  dateOfBirth: string;
+  dateOfBirth?: string;
+  firstName?: string;
+  lastName?: string;
+  legalEntityName?: string;
 }
 
 interface DefendantDetailsUpdate {
-  firstName: string;
-  lastName: string;
-  defendantId: string;
+  addressUpdated: boolean;
   caseId: string;
   caseUrn: string;
-  region: string;
-  dateOfBirth: string;
+  defendantId: string;
   nameUpdated: boolean;
-  dateOfBirthUpdated: boolean;
-  addressUpdated: boolean;
+  region: string;
   updatedOn: string;
+  dateOfBirth?: string;
+  dateOfBirthUpdated?: boolean;
+  firstName?: string;
+  lastName?: string;
+  legalEntityName?: string;
 }
 
 export interface PleadedNotGuiltyCaseResult {
@@ -215,9 +227,10 @@ export interface DefendantSummary {
   title: string;
   firstName: string;
   lastName: string;
-  dateOfBirth: string;
-  nationalInsuranceNumber: string;
-  gender: string;
+  dateOfBirth?: string;
+  nationalInsuranceNumber?: string;
+  gender?: string;
+  legalEntityName?: string;
 }
 
 export interface CaseSummary {

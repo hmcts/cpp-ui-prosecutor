@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 @Component({
   selector: 'search-input',
   template: `
-    <label pdk-label>Enter case reference number or defendant’s last name</label>
+    <label pdk-label>Enter case reference number or defendant’s last name or company name</label>
     <pdk-grid container>
       <form pdk-form #form="ngForm" (submit)="search()">
         <pdk-grid one-third>

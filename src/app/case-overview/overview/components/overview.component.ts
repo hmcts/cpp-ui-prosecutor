@@ -17,31 +17,33 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
     </case-submission-messages>
     <pdk-grid container>
       <pdk-grid two-thirds>
-        <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">
-          {{ defendant.personalDetails | defendantName: false }}
-        </h1>
+        <div *ngIf="!!defendant.personalDetails; else organisation">
+          <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">
+            {{ defendant.personalDetails | defendantName: false }}
+          </h1>
 
-        <p pdk-typography="body-medium">
-          <date-of-birth [dateOfBirth]="defendant.personalDetails.dateOfBirth" [defaultSubstitute]=""></date-of-birth>
-          {{ defendant.personalDetails.address | formatAddress: ', ' }}
-        </p>
+          <p pdk-typography="body-medium">
+            <date-of-birth [dateOfBirth]="defendant.personalDetails.dateOfBirth" [defaultSubstitute]=""></date-of-birth>
+            {{ defendant.personalDetails.address | formatAddress: ', ' }}
+          </p>
 
-        <personal-details-change-alert [personalDetails]="defendant.personalDetails"></personal-details-change-alert>
+          <defendant-details-change-alert [personalDetails]="defendant.personalDetails"></defendant-details-change-alert>
 
-        <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
+          <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 
-        <div pdk-margin-vertical="8">
-          <pdk-tabs>
-            <pdk-tab heading="Case details">
-              <case-details [kase]="kase"></case-details>
-            </pdk-tab>
-            <pdk-tab heading="Defendant details">
-              <defendant-details [defendantDetails]="defendant.personalDetails"></defendant-details>
-            </pdk-tab>
-            <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
-              <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
-            </pdk-tab>
-          </pdk-tabs>
+          <div pdk-margin-vertical="8">
+            <pdk-tabs>
+              <pdk-tab heading="Case details">
+                <case-details [kase]="kase"></case-details>
+              </pdk-tab>
+              <pdk-tab heading="Defendant details">
+                <defendant-details-person [personDetails]="defendant.personalDetails"></defendant-details-person>
+              </pdk-tab>
+              <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
+                <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
+              </pdk-tab>
+            </pdk-tabs>
+          </div>
         </div>
       </pdk-grid>
       <pdk-grid one-third *ngIf="showSideBar">
@@ -106,6 +108,34 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
         </pdk-grid>
       </pdk-grid>
     </div>
+
+    <ng-template #organisation>
+      <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="4">
+        {{ defendant.legalEntityDetails | defendantName: false }}
+      </h1>
+
+      <p pdk-typography="body-medium">
+        {{ defendant.legalEntityDetails.address | formatAddress: ', ' }}
+      </p>
+
+      <defendant-details-change-alert [legalEntityDetails]="defendant.legalEntityDetails"></defendant-details-change-alert>
+
+      <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
+
+      <div pdk-margin-vertical="8">
+        <pdk-tabs>
+          <pdk-tab heading="Case details">
+            <case-details [kase]="kase"></case-details>
+          </pdk-tab>
+          <pdk-tab heading="Defendant details">
+            <defendant-details-legal-entity [legalEntityDetails]="defendant.legalEntityDetails"></defendant-details-legal-entity>
+          </pdk-tab>
+          <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
+            <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
+          </pdk-tab>
+        </pdk-tabs>
+      </div>
+    </ng-template>
   `
 })
 export class OverviewComponent implements OnInit {

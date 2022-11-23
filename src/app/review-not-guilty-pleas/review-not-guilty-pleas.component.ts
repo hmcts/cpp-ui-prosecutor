@@ -67,7 +67,7 @@ import { RegionState } from '../core/reducers/entities.reducer';
               {{ pleadedNotGuiltyCase.region }}
             </td>
             <td pdk-table-cell>
-              {{ pleadedNotGuiltyCase.dateOfBirth | date: 'dd MMM yyyy' }}
+              {{ !!pleadedNotGuiltyCase.dateOfBirth ? (pleadedNotGuiltyCase.dateOfBirth | date: 'dd MMM yyyy') : '' }}
             </td>
             <td pdk-table-cell>
               {{ pleadedNotGuiltyCase.pleaEntry | date: 'dd MMM yyyy' }}

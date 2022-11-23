@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
-import { MOCK_CASE } from '../../../__tests__/test-mock-data';
+import { MOCK_CASE_LEGAL_ENTITY_DEFENDANT } from '../../../__tests__/test-mock-data';
 import {
   AgePipeModule,
   CaseStatusPipeModule,
@@ -10,16 +10,16 @@ import {
   FormatDatePipeModule,
   IfEmptyPipeModule
 } from '../../../../shared/pipes';
-import { DefendantDetailsComponent } from '../defendant-details.component';
 import { CommonModule } from '@angular/common';
-import { PersonalDetails } from '../../../../contexts/sjp';
+import { LegalEntityDetails } from '../../../../contexts/sjp';
+import { DefendantDetailsLegalEntityComponent } from '../defendant-details-legal-entity.component';
 
-describe('DefendantDetailsComponent', () => {
-  let fixture: ComponentFixture<TestDefendantDetailsComponent>;
+describe('DefendantDetailsPersonComponent', () => {
+  let fixture: ComponentFixture<TestDefendantDetailsLegalEntityComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantDetailsComponent, TestDefendantDetailsComponent, MockDateOfBirthComponent],
+      declarations: [DefendantDetailsLegalEntityComponent, TestDefendantDetailsLegalEntityComponent],
       imports: [
         CommonModule,
         PdkCoreModule,
@@ -35,8 +35,8 @@ describe('DefendantDetailsComponent', () => {
     });
 
     Date.now = jest.fn(() => Date.parse('2017-02-14'));
-    fixture = TestBed.createComponent(TestDefendantDetailsComponent);
-    fixture.componentInstance.defendantDetails = MOCK_CASE.defendant.personalDetails;
+    fixture = TestBed.createComponent(TestDefendantDetailsLegalEntityComponent);
+    fixture.componentInstance.legalEntityDetails = MOCK_CASE_LEGAL_ENTITY_DEFENDANT.defendant.legalEntityDetails;
   });
 
   it('should compile correctly', () => {
@@ -47,22 +47,11 @@ describe('DefendantDetailsComponent', () => {
   @Component({
     selector: 'defendant-details-test',
     template: `
-      <defendant-details [defendantDetails]="defendantDetails"> </defendant-details>
+      <defendant-details-legal-entity [legalEntityDetails]="legalEntityDetails"> </defendant-details-legal-entity>
     `
   })
-  class TestDefendantDetailsComponent {
-    defendantDetails: PersonalDetails;
+  class TestDefendantDetailsLegalEntityComponent {
+    @Input() legalEntityDetails: LegalEntityDetails;
   }
 
-  @Component({
-    selector: 'date-of-birth',
-    template: `
-      <div>dateOfBirth: {{ dateOfBirth }}</div>
-      <div>defaultSubstitute: {{ defaultSubstitute }}</div>
-    `
-  })
-  class MockDateOfBirthComponent {
-    @Input() dateOfBirth: string;
-    @Input() defaultSubstitute = '–';
-  }
 });

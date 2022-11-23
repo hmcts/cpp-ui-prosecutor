@@ -15,7 +15,8 @@ import {
 } from '@cpp/pdk';
 import {
   CaseDetailsComponent,
-  DefendantDetailsComponent,
+  DefendantDetailsPersonComponent,
+  DefendantDetailsLegalEntityComponent,
   DefendantOffenceComponent,
   DocumentListComponent,
   OverviewComponent,
@@ -31,10 +32,10 @@ import { CaseWarningsComponent } from './components/case-warnings.component';
 import { OffenceWarningModule } from '../common/offence-warning/offence-warning.module';
 import { DefendantOffenceWarningsComponent } from './components/defendant-offence-warnings.component';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
-import { PersonalDetailsChangeAlertComponent } from './components/personal-details-change-alert.component';
+import { DefendantDetailsChangeAlertComponent } from './components/defendant-details-change-alert.component';
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
 import { CaseDecisionsComponent } from './components/case-decisions.component';
-import { FormatDatePipeModule, SavedDecisionInformationPipeModule } from '../../shared/pipes';
+import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
 import { VerdictTypePipeModule } from '../../shared/pipes/verdict-type/verdict-type.module';
 import { CaseDecisionsDetailsComponent } from './components/case-decisions-details.component';
 import { FinancialImpositionsComponent } from './components/financial-impositions.component';
@@ -51,12 +52,13 @@ const DECLARATIONS = [
   CaseWarningsComponent,
   DefendantOffenceWarningsComponent,
   DocumentListComponent,
-  DefendantDetailsComponent,
+  DefendantDetailsChangeAlertComponent,
+  DefendantDetailsPersonComponent,
+  DefendantDetailsLegalEntityComponent,
   StatementOfFactsComponent,
   DefendantOffenceComponent,
   OverviewContainer,
   PleaMitigationComponent,
-  PersonalDetailsChangeAlertComponent,
   CaseSubmissionMessagesComponent,
   CaseNotesComponent,
   CaseDecisionsComponent,

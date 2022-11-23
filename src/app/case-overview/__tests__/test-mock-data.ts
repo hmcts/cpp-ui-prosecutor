@@ -11,7 +11,8 @@ import {
   FinancialPenaltyOffenceDecision,
   DischargeOffenceDecision,
   OnlinePlea,
-  CaseNotes
+  CaseNotes,
+  LegalEntityDetails
 } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
@@ -96,6 +97,68 @@ export const MOCK_CASE: Case = {
       addressChanged: false,
       nameChanged: false
     }
+  },
+  dateTimeCreated: '2019-02-24T16:35:46.273Z',
+  caseDocuments: [
+    {
+      id: 'documentId1',
+      materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
+      documentType: 'PLEA',
+      documentNumber: 1,
+      addedAt: '2019-02-25T09:30:24.442Z',
+      metadata: {} as CaseDocumentMetaData
+    },
+    {
+      id: 'documentId2',
+      materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
+      documentType: 'SJPN',
+      documentNumber: 1,
+      addedAt: '2019-02-24T16:35:56.558Z',
+      metadata: {} as CaseDocumentMetaData
+    }
+  ],
+  prosecutingAuthority: 'TFL',
+  prosecutingAuthorityName: 'Transport for London',
+  completed: true,
+  assigned: false,
+  costs: 19,
+  postingDate: '2019-01-27',
+  enterpriseId: 'Z8QG1JR7CMTD',
+  onlinePleaReceived: false,
+  status: 'COMPLETED',
+  listedInCriminalCourts: false
+};
+
+export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
+  id: 'case-id-test',
+  datesToAvoid: 'datesToAvoid1',
+  urn: 'TFL26168N21T5',
+  defendant: {
+    id: 'defendantId1',
+    offences: MOCK_OFFENCES,
+    caseId: 'case-id-test',
+    interpreter: {
+      needed: false
+    },
+    speakWelsh: false,
+    numPreviousConvictions: 2,
+    legalEntityDetails: {
+      legalEntityName: 'Legal Entity Name',
+      address: {
+        address1: 'Flat 1, Armageddon House',
+        address2: '13 Old Road',
+        address3: 'Giggleswick',
+        address4: 'Merton',
+        postcode: 'CV8 1AB'
+      },
+      contactDetails: {
+        mobile: '77777777',
+        email: 'a@a.com',
+        home: '333333333'
+      } as ContactDetails,
+      addressChanged: false,
+      legalEntityNameChanged: false
+    } as LegalEntityDetails
   },
   dateTimeCreated: '2019-02-24T16:35:46.273Z',
   caseDocuments: [

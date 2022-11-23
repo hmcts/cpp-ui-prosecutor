@@ -19,7 +19,7 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
         ng-reflect-type=""
         pdk-label=""
       >
-        Enter case reference number or defendant’s last name
+        Enter case reference number or defendant’s last name or company name
       </label>
       <pdk-grid
         class="govuk-grid-row"

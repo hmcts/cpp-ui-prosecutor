@@ -36,6 +36,7 @@ export class SjpService {
     if (regionId && regionId !== 'ALL') {
       params = params.set('regionId', regionId);
     }
+
     return this.http.query({
       url: `${this.query}/cases/pending-dates-to-avoid`,
       params,
@@ -77,6 +78,7 @@ export class SjpService {
     if (regionId && regionId !== 'ALL') {
       params = params.set('regionId', regionId);
     }
+
     return this.http.query({
       url: `${this.query}/defendant-details-updates`,
       params,

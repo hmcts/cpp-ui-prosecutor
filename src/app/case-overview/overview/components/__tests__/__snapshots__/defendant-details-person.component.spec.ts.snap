@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DefendantDetailsComponent should compile correctly 1`] = `
+exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
 <defendant-details-test
-  defendantDetails={[Function Object]}
+  personDetails={[Function Object]}
 >
-  <defendant-details
-    ng-reflect-defendant-details="[object Object]"
+  <defendant-details-person
+    ng-reflect-person-details="[object Object]"
   >
     <h4
       class="govuk-heading-m"
@@ -303,6 +303,6 @@ exports[`DefendantDetailsComponent should compile correctly 1`] = `
         </div>
       </pdk-grid>
     </pdk-grid>
-  </defendant-details>
+  </defendant-details-person>
 </defendant-details-test>
 `;

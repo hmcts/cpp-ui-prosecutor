@@ -24,8 +24,8 @@ export class CaseWarningsComponent {
   @Input() offences: Offence[];
   @Input() defendant: Defendant;
 
-  get isUnderAge() {
-    return isUnderAge(this.offences[0].chargeDate, this.defendant.personalDetails.dateOfBirth);
+  get isUnderAge(): boolean {
+    return !!this.defendant.personalDetails && isUnderAge(this.offences[0].chargeDate, this.defendant.personalDetails.dateOfBirth);
   }
 
   get isOffenceOutOfTime() {

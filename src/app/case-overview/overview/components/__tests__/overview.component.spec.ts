@@ -19,10 +19,19 @@ import {
   FormatDatePipeModule,
   SavedDecisionInformationPipeModule
 } from '../../../../shared/pipes';
-import { Case, CaseDecision, CaseDocument, Defendant, Offence, CaseNotes } from '../../../../contexts/sjp';
+import {
+  Case,
+  CaseDecision,
+  CaseDocument,
+  Defendant,
+  Offence,
+  CaseNotes,
+  LegalEntityDetails,
+  PersonalDetails
+} from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
-import { PersonalDetailsChangeAlertComponent } from '../personal-details-change-alert.component';
+import { DefendantDetailsChangeAlertComponent } from '../defendant-details-change-alert.component';
 import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'src/app/shared/mock-components/mock.module';
@@ -41,7 +50,7 @@ describe('OverviewComponent', () => {
         MockStatementOfFactsComponent,
         MockCaseHeaderBadgeContainer,
         MockSubComponent,
-        PersonalDetailsChangeAlertComponent,
+        DefendantDetailsChangeAlertComponent,
         MockSubmissionMessagesComponent,
         MockCaseDecisionComponent,
         MockDateOfBirthComponent
@@ -130,7 +139,7 @@ describe('OverviewComponent', () => {
     fixture.detectChanges();
 
     const compiled = fixture.debugElement.nativeElement;
-    const alertMessage = compiled.querySelector('personal-details-change-alert');
+    const alertMessage = compiled.querySelector('defendant-details-change-alert');
     expect(alertMessage.textContent).toContain('The following defendant details have been updated:');
     expect(fixture).toMatchSnapshot();
   });
@@ -225,17 +234,19 @@ describe('OverviewComponent', () => {
   class MockCaseHeaderBadgeContainer {}
 
   @Component({
-    selector: 'case-details, defendant-details, document-list',
+    selector: 'case-details, defendant-details-person, defendant-details-legal-entity, document-list',
     template: `
       <div>{{ documents | json }}</div>
-      <div>{{ defendantDetails | json }}</div>
+      <div>{{ personDetails | json }}</div>
+      <div>{{ legalEntityDetails | json }}</div>
       <div>{{ kase | json }}</div>
       <div>{{ caseId }}</div>
     `
   })
   class MockSubComponent {
     @Input() documents: CaseDocument[];
-    @Input() defendantDetails: Defendant;
+    @Input() personDetails: PersonalDetails;
+    @Input() legalEntityDetails: LegalEntityDetails;
     @Input() kase: Case;
     @Input() caseId: string;
   }
