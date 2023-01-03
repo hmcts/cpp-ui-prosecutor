@@ -96,15 +96,6 @@ exports[`DevTools dashboard component compiles 1`] = `
               Prosecutor
             </a>
           </li>
-          <li>
-            <a
-              class="govuk-link"
-              pdk-link=""
-              routerlink="/tfl"
-            >
-              Tfl prosecutor
-            </a>
-          </li>
         </ul>
       </pdk-grid>
     </pdk-grid>
@@ -214,15 +205,6 @@ exports[`DevTools dashboard component shows user details when user is set 1`] = 
               routerlink="/user"
             >
               Prosecutor
-            </a>
-          </li>
-          <li>
-            <a
-              class="govuk-link"
-              pdk-link=""
-              routerlink="/tfl"
-            >
-              Tfl prosecutor
             </a>
           </li>
         </ul>

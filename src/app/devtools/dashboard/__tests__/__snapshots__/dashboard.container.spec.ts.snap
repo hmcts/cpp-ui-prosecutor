@@ -98,15 +98,6 @@ exports[`DevTools - dashboard container compiles 1`] = `
               Prosecutor
             </a>
           </li>
-          <li>
-            <a
-              class="govuk-link"
-              pdk-link=""
-              routerlink="/tfl"
-            >
-              Tfl prosecutor
-            </a>
-          </li>
         </ul>
       </pdk-grid>
     </pdk-grid>
