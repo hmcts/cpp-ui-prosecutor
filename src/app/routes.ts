@@ -27,8 +27,8 @@ export const routes: Routes = [
       },
       {
         path: 'tfl',
-        loadChildren: './tfl/tfl.module#TflModule',
-        canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard]
+        redirectTo: 'user',
+        pathMatch: 'prefix'
       },
       {
         path: ':role/case-overview/:caseId',

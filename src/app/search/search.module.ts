@@ -22,6 +22,11 @@ const DECLARATIONS = [];
     StoreModule.forFeature('search', searchReducer),
     RouterModule.forChild([
       {
+        path: 'tfl',
+        redirectTo: 'user',
+        pathMatch: 'prefix'
+      },
+      {
         path: ':role/search',
         data: {
           title: 'Search for a case | Common platform'
