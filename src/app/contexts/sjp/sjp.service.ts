@@ -6,7 +6,7 @@ import {
   CasesMissingSjpNoticeResult,
   CaseSummary,
   DefendantDetailsUpdatesResult,
-  OnlinePlea,
+  DefendantOnlinePlea,
   PleadedNotGuiltyCaseResult,
   Region,
   SearchResult,
@@ -118,7 +118,7 @@ export class SjpService {
     });
   }
 
-  getDefendantsOnlinePlea(caseId: string, defendantId: string): Observable<OnlinePlea> {
+  getDefendantsOnlinePlea(caseId: string, defendantId: string): Observable<DefendantOnlinePlea> {
     return this.http.query({
       url: `${this.query}/cases/${caseId}/defendants/${defendantId}/defendants-online-plea`,
       requestType: 'application/vnd.sjp.query.defendants-online-plea+json'

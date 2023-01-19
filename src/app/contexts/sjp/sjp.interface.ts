@@ -125,7 +125,13 @@ export interface CaseDocumentMetaData {
   mimeType: string;
 }
 
-export type CaseDocumentType = 'SJPN' | 'PLEA' | 'EMPLOYER_ATTACHMENT_TO_EARNINGS' | 'RESULT_ORDER' | 'CITN' | 'APPLICATION';
+export type CaseDocumentType =
+  'SJPN'
+  | 'PLEA'
+  | 'EMPLOYER_ATTACHMENT_TO_EARNINGS'
+  | 'RESULT_ORDER'
+  | 'CITN'
+  | 'APPLICATION';
 
 export interface LegalEntityDetails {
   address: Address;
@@ -409,6 +415,10 @@ export interface DischargePeriodForm {
 }
 
 export type PeriodUnit = 'DAY' | 'WEEK' | 'MONTH' | 'YEAR';
+
+export interface DefendantOnlinePlea {
+  pleas: OnlinePlea[];
+}
 
 export interface OnlinePlea {
   caseId: string;

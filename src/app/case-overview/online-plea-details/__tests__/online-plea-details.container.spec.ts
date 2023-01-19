@@ -5,7 +5,7 @@ import { OnlinePleaDetailsContainer } from '../online-plea-details.container';
 import { OnlinePleaUi } from '../online-plea-interface';
 import { reducers } from '../../../reducers';
 import { FeatureState } from '../../case-overview.selectors';
-import { Case, OnlinePlea } from '../../../contexts/sjp';
+import { Case, DefendantOnlinePlea } from '../../../contexts/sjp';
 import { MOCK_ONLINE_PLEA_DETAIL } from '../../__tests__/test-mock-data';
 import { LoadOnlinePleaSuccess } from '../../case-overview.action';
 
@@ -16,7 +16,7 @@ describe('OnlinePleaDetailsContainer', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent],
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})]
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })]
     });
 
     store = TestBed.get(Store);
@@ -46,186 +46,211 @@ describe('OnlinePleaDetailsContainer', () => {
 
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(MOCK_ONLINE_PLEA_DETAIL);
     expect(uiModel.pleaDetails.existsUnavailability).toBeDefined();
-    expect(uiModel.pleaDetails.existsUnavailability).toBe(!!MOCK_ONLINE_PLEA_DETAIL.pleaDetails.unavailability);
+    expect(uiModel.pleaDetails.existsUnavailability).toBe(
+      !!MOCK_ONLINE_PLEA_DETAIL.pleas[0].pleaDetails.unavailability
+    );
     expect(uiModel.pleaDetails.doHaveOwnWitness).toBeDefined();
-    expect(uiModel.pleaDetails.doHaveOwnWitness).toBe(!!MOCK_ONLINE_PLEA_DETAIL.pleaDetails.witnessDetails);
+    expect(uiModel.pleaDetails.doHaveOwnWitness).toBe(!!MOCK_ONLINE_PLEA_DETAIL.pleas[0].pleaDetails.witnessDetails);
   });
 
   it('should suppress court hearing section when all guilty pleas', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY',
-          notGuiltyBecause: 'Not guilty plea1',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY',
+              notGuiltyBecause: 'Not guilty plea1',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ]
         }
-      ],
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.hasHearing).toBe(false);
   });
 
   it('should show court hearing section for NOT_GUILTY pleas', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'NOT_GUILTY',
-          notGuiltyBecause: 'Not guilty plea1',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'NOT_GUILTY',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'NOT_GUILTY',
+              notGuiltyBecause: 'Not guilty plea1',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'NOT_GUILTY',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ]
         }
-      ],
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.hasHearing).toBe(true);
   });
 
   it('should show court hearing section for GUILTY_REQUEST_HEARING pleas', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY_REQUEST_HEARING',
-          notGuiltyBecause: 'Not guilty plea1',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY_REQUEST_HEARING',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY_REQUEST_HEARING',
+              notGuiltyBecause: 'Not guilty plea1',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY_REQUEST_HEARING',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ]
         }
-      ],
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.hasHearing).toBe(true);
   });
 
   it('should show come to court if all pleas are GUILTY pleas', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY',
-          mitigation: 'Guilty plea mitigation1',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY',
+              mitigation: 'Guilty plea mitigation1',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ],
+          pleaDetails: {
+            comeToCourt: false
+          }
         }
-      ],
-      pleaDetails: {
-        comeToCourt: false
-      }
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.comeToCourt).toBe(false);
   });
 
   it('should show come to court if all pleas are GUILTY_REQUEST_HEARING pleas', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY_REQUEST_HEARING',
-          mitigation: 'Guilty plea mitigation1',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY_REQUEST_HEARING',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY_REQUEST_HEARING',
+              mitigation: 'Guilty plea mitigation1',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY_REQUEST_HEARING',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ],
+          pleaDetails: {
+            comeToCourt: true
+          }
         }
-      ],
-      pleaDetails: {
-        comeToCourt: true
-      }
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.comeToCourt).toBe(true);
   });
 
   it('should not show come to court if there is at least one NOT_GUILTY_REQUEST plea', () => {
     const mockCase = {
-      ...MOCK_ONLINE_PLEA_DETAIL,
-      onlinePleaDetails: [
+      pleas: [
         {
-          id: 'onlinePleaId1',
-          offenceId: 'offenceId1',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'NOT_GUILTY',
-          notGuiltyBecause: 'I am innocent',
-          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
-        },
-        {
-          id: 'onlinePleaId2',
-          offenceId: 'offenceId2',
-          caseId: 'caseId',
-          defendantId: 'defendantId',
-          plea: 'GUILTY',
-          mitigation: 'Guilty plea mitigation2',
-          offenceTitle: 'Use / install a television set without a licence'
+          ...MOCK_ONLINE_PLEA_DETAIL.pleas[0],
+          onlinePleaDetails: [
+            {
+              id: 'onlinePleaId1',
+              offenceId: 'offenceId1',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'NOT_GUILTY',
+              notGuiltyBecause: 'I am innocent',
+              offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+            },
+            {
+              id: 'onlinePleaId2',
+              offenceId: 'offenceId2',
+              caseId: 'caseId',
+              defendantId: 'defendantId',
+              plea: 'GUILTY',
+              mitigation: 'Guilty plea mitigation2',
+              offenceTitle: 'Use / install a television set without a licence'
+            }
+          ],
+          pleaDetails: {
+            comeToCourt: true
+          }
         }
-      ],
-      pleaDetails: {
-        comeToCourt: true
-      }
-    } as OnlinePlea;
+      ]
+    } as DefendantOnlinePlea;
     const uiModel: OnlinePleaUi = fixture.componentInstance.transformToUiModel(mockCase);
     expect(uiModel.pleaDetails.comeToCourt).toBeUndefined();
   });
-
 });

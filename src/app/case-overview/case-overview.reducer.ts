@@ -1,12 +1,12 @@
 import { CaseOverviewAction, CaseOverviewActionType } from './case-overview.action';
-import { OnlinePlea } from '../contexts/sjp';
+import { DefendantOnlinePlea } from '../contexts/sjp';
 
 export interface CaseOverviewState {
   withdrawOffencesSuccess: boolean;
   withdrawOffencesFailed: boolean;
   datesToAvoidSuccess: boolean;
   datesToAvoidFailed: boolean;
-  onlinePlea: OnlinePlea;
+  onlinePlea: DefendantOnlinePlea;
 }
 
 const initialState: CaseOverviewState = {

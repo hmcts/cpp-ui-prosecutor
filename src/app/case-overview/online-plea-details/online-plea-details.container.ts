@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { OnlinePleaUi } from './online-plea-interface';
 import { getOnlinePlea } from '../case-overview.selectors';
 import { getCase } from '../../core';
-import { Case, OnlinePlea } from '../../contexts/sjp';
+import { Case, DefendantOnlinePlea } from '../../contexts/sjp';
 import { State } from '../../reducers';
 
 @Component({
@@ -23,26 +23,28 @@ export class OnlinePleaDetailsContainer {
     this.case$ = this.store.select(getCase);
   }
 
-  transformToUiModel(onlinePlea: OnlinePlea): OnlinePleaUi {
-    const onlinePleaUi: OnlinePleaUi = onlinePlea as any;
-    if (onlinePlea.onlinePleaDetails) {
+  transformToUiModel(onlinePlea: DefendantOnlinePlea): OnlinePleaUi {
+    const pleaInfo = onlinePlea.pleas[0];
+    const onlinePleaUi: OnlinePleaUi = pleaInfo as any;
+
+    if (pleaInfo.onlinePleaDetails) {
       onlinePleaUi.onlinePleaDetails.forEach(offencePlea => {
         offencePlea.pleasGuilty = offencePlea.plea === 'GUILTY' || offencePlea.plea === 'GUILTY_REQUEST_HEARING';
       });
-      onlinePleaUi.pleaDetails.doHaveOwnWitness = !!onlinePlea.pleaDetails.witnessDetails;
-      onlinePleaUi.pleaDetails.existsUnavailability = !!onlinePlea.pleaDetails.unavailability;
+      onlinePleaUi.pleaDetails.doHaveOwnWitness = !!pleaInfo.pleaDetails.witnessDetails;
+      onlinePleaUi.pleaDetails.existsUnavailability = !!pleaInfo.pleaDetails.unavailability;
     }
-    if (onlinePlea.personalDetails) {
+    if (pleaInfo.personalDetails) {
       onlinePleaUi.personalDetails.hasDriverLicense =
-        !!onlinePlea.personalDetails.driverNumber || !!onlinePlea.personalDetails.driverLicenceDetails;
-      onlinePleaUi.personalDetails.hasUkDriverLicense = !!onlinePlea.personalDetails.driverNumber;
+        !!pleaInfo.personalDetails.driverNumber || !!pleaInfo.personalDetails.driverLicenceDetails;
+      onlinePleaUi.personalDetails.hasUkDriverLicense = !!pleaInfo.personalDetails.driverNumber;
     }
     // Only show court hearing if there's at least one not guilty or guilty request hearing
-    onlinePleaUi.pleaDetails.hasHearing = onlinePlea.onlinePleaDetails.some(
+    onlinePleaUi.pleaDetails.hasHearing = pleaInfo.onlinePleaDetails.some(
       plea => plea.plea === 'NOT_GUILTY' || plea.plea === 'GUILTY_REQUEST_HEARING'
     );
 
-    if (onlinePlea.onlinePleaDetails.some(plea => plea.plea === 'NOT_GUILTY')) {
+    if (pleaInfo.onlinePleaDetails.some(plea => plea.plea === 'NOT_GUILTY')) {
       onlinePleaUi.pleaDetails.comeToCourt = undefined;
     }
     return onlinePleaUi;

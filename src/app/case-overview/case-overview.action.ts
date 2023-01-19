@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { WithdrawOffenceRequestParam, OnlinePlea } from '../contexts/sjp';
+import { WithdrawOffenceRequestParam, DefendantOnlinePlea } from '../contexts/sjp';
 
 export const enum CaseOverviewActionType {
   WITHDRAW_OFFENCES = '[ATCM] Withdraw offences',
@@ -64,7 +64,7 @@ export class SubmitDatesToAvoidFailed implements Action {
 export class LoadOnlinePleaSuccess implements Action {
   readonly type = CaseOverviewActionType.LOAD_ONLINE_PLEA_SUCCESS;
 
-  constructor(public onlinePlea: OnlinePlea) {}
+  constructor(public onlinePlea: DefendantOnlinePlea) {}
 }
 
 export type CaseOverviewAction =

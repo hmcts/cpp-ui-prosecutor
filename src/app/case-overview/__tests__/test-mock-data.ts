@@ -12,7 +12,8 @@ import {
   DischargeOffenceDecision,
   OnlinePlea,
   CaseNotes,
-  LegalEntityDetails
+  LegalEntityDetails,
+  DefendantOnlinePlea
 } from '../../contexts/sjp';
 
 export const MOCK_OFFENCES: Offence[] = [
@@ -471,56 +472,58 @@ export const MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION: CaseDecision = {
   }
 };
 
-export const MOCK_ONLINE_PLEA_DETAIL: OnlinePlea = {
-  caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-  defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
-  submittedOn: '2019-10-18T15:10:28.881Z',
-  onlinePleaDetails: [
-    {
-      id: '6ff1d156-666d-4fe8-b1bc-44ce3d496098',
-      offenceId: '95ce81a7-335a-4233-b2ca-04f8f5bc5b19',
-      caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-      defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
-      plea: 'NOT_GUILTY',
-      notGuiltyBecause: 'Not guilty plea1',
-      offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+export const MOCK_ONLINE_PLEA_DETAIL: DefendantOnlinePlea = {
+  pleas: [{
+    caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
+    defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+    submittedOn: '2019-10-18T15:10:28.881Z',
+    onlinePleaDetails: [
+      {
+        id: '6ff1d156-666d-4fe8-b1bc-44ce3d496098',
+        offenceId: '95ce81a7-335a-4233-b2ca-04f8f5bc5b19',
+        caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
+        defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+        plea: 'NOT_GUILTY',
+        notGuiltyBecause: 'Not guilty plea1',
+        offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+      },
+      {
+        id: 'ad6ace2c-7881-457f-86f4-2cc8e38cdbd1',
+        offenceId: 'e0d5fafb-7e63-4d8a-987a-26a9120bfa52',
+        caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
+        defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+        plea: 'GUILTY',
+        mitigation: 'Guilty plea mitigation2',
+        offenceTitle: 'Use / install a television set without a licence'
+      }
+    ],
+    personalDetails: {
+      firstName: 'Seyit Ahmet Kamil',
+      lastName: 'GUNGOR',
+      address: {
+        address1: 'Line 11',
+        address2: 'Line 22',
+        address3: 'Line 33',
+        address4: 'Line 44',
+        address5: 'Line 55',
+        postcode: 'SE16 5UD'
+      },
+      homeTelephone: '1111111111',
+      mobile: '22222222222',
+      email: 'a@b.co',
+      dateOfBirth: '1960-09-09',
+      nationalInsuranceNumber: 'AA123456D'
     },
-    {
-      id: 'ad6ace2c-7881-457f-86f4-2cc8e38cdbd1',
-      offenceId: 'e0d5fafb-7e63-4d8a-987a-26a9120bfa52',
-      caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-      defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
-      plea: 'GUILTY',
-      mitigation: 'Guilty plea mitigation2',
-      offenceTitle: 'Use / install a television set without a licence'
+    pleaDetails: {
+      comeToCourt: true,
+      interpreterLanguage: 'turkish',
+      witnessDetails: 'ter the name and add',
+      unavailability: 'no days',
+      speakWelsh: true,
+      outstandingFines: true,
+      interpreterRequired: true
     }
-  ],
-  personalDetails: {
-    firstName: 'Seyit Ahmet Kamil',
-    lastName: 'GUNGOR',
-    address: {
-      address1: 'Line 11',
-      address2: 'Line 22',
-      address3: 'Line 33',
-      address4: 'Line 44',
-      address5: 'Line 55',
-      postcode: 'SE16 5UD'
-    },
-    homeTelephone: '1111111111',
-    mobile: '22222222222',
-    email: 'a@b.co',
-    dateOfBirth: '1960-09-09',
-    nationalInsuranceNumber: 'AA123456D'
-  },
-  pleaDetails: {
-    comeToCourt: true,
-    interpreterLanguage: 'turkish',
-    witnessDetails: 'ter the name and add',
-    unavailability: 'no days',
-    speakWelsh: true,
-    outstandingFines: true,
-    interpreterRequired: true
-  }
+  }]
 };
 
 export const MOCK_CASE_NOTES = {
