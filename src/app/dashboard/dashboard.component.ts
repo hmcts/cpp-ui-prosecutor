@@ -35,6 +35,9 @@ import {
         <div pdk-margin-top="6">
           <a href="javascript:void(0)" routerLink="export-case-decisions" pdk-link>Export case results by date</a>
         </div>
+        <div *ngIf="!hasNpp" pdk-margin-top="6">
+          <a href="javascript:void(0)" routerLink="/manual-case/prosecutor" pdk-link>Create an SJP case</a>
+        </div>
       </pdk-grid>
       <pdk-grid one-third>
         <div *ngIf="casesMissingSjpNoticeCount?.count > 0; else noLink"  pdk-margin-top="8">
@@ -58,6 +61,7 @@ import {
 })
 export class DashboardComponent {
   @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
+  @Input() hasNpp: boolean;
   @Input() defendantDetailsUpdates: DefendantDetailsUpdatesResult;
   @Input() casesMissingSjpNoticeCount: CasesMissingSjpNoticeResult;
 }

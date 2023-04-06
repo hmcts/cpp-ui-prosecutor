@@ -1,0 +1,1 @@
+export { MockPipesModule } from './module';

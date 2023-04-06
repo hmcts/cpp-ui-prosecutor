@@ -1,0 +1,955 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual Case Type Component should render the component correctly in addnew mode 1`] = `
+<ng-component>
+  <manual-case-type
+    ng-reflect-has-npp="true"
+    ng-reflect-manual-case-detail="[object Object]"
+    ng-reflect-summons-codes="[object Object],[object Object"
+  >
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-full"
+        full=""
+        ng-reflect-full=""
+      >
+        <h1
+          class="govuk-heading-xl"
+          ng-reflect-type="heading-xlarge"
+          pdk-typography="heading-xlarge"
+        >
+            
+        </h1>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-invalid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            labeltype="none"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label=""
+            ng-reflect-label-type="none"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                
+                
+                
+                <pdk-radio-group
+                  class="ng-untouched ng-pristine ng-invalid"
+                  data-role="enter-case-type"
+                  name="initiationCode"
+                  ng-reflect-name="initiationCode"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="govuk-radios"
+                  >
+                    
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="Application"
+                      value="Application"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-28"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="Application"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-28"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="S"
+                      value="S"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-25"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="S"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-25"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="Q"
+                      value="Q"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-26"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="Q"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-26"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="J"
+                      value="J"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-27"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="J"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-27"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="C"
+                      value="C"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-29"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="C"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-29"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="T"
+                      value="T"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-30"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="T"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-30"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="CO"
+                      value="CO"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-31"
+                          name="pdk-radio-group-24"
+                          type="radio"
+                          value="CO"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-31"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                  </div>
+                </pdk-radio-group>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <button
+              data-role="save-applicant-details-button"
+              ng-reflect-type=""
+              pdk-button=""
+              type="submit"
+            >
+                
+            </button>
+          </pdk-form-group>
+          <p
+            class="govuk-!-margin-top-3"
+            ng-reflect-top="3"
+            pdk-margin-top="3"
+          >
+            <a
+              class="govuk-link govuk-link--no-visited-state"
+              href="mock-base-url"
+              ng-reflect-unvisited=""
+              pdk-link=""
+              unvisited=""
+            >
+                
+            </a>
+          </p>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </manual-case-type>
+</ng-component>
+`;
+
+exports[`Manual Case Type Component should render the component correctly in edit mode 1`] = `
+<ng-component>
+  <manual-case-type
+    ng-reflect-has-npp="true"
+    ng-reflect-manual-case-detail="[object Object]"
+    ng-reflect-summons-codes="[object Object],[object Object"
+  >
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-full"
+        full=""
+        ng-reflect-full=""
+      >
+        <h1
+          class="govuk-heading-xl"
+          ng-reflect-type="heading-xlarge"
+          pdk-typography="heading-xlarge"
+        >
+            
+        </h1>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            labeltype="none"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label=""
+            ng-reflect-label-type="none"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                
+                
+                
+                <pdk-radio-group
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="enter-case-type"
+                  name="initiationCode"
+                  ng-reflect-model="S"
+                  ng-reflect-name="initiationCode"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="govuk-radios"
+                  >
+                    
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="Application"
+                      value="Application"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-6"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="Application"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-6"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="S"
+                      value="S"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-3"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="S"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-3"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    
+                    <pdk-inset-text
+                      compound="true"
+                      ng-reflect-compound="true"
+                    >
+                      <div
+                        class="govuk-inset-text"
+                        style="padding-right: 0px;"
+                      >
+                        <pdk-form-field
+                          ng-reflect-error-messages="[object Object]"
+                          ng-reflect-label=""
+                          ng-reflect-label-type="normal"
+                        >
+                          
+                          <pdk-form-group
+                            class="pdk-form-group"
+                            ng-reflect-has-error="false"
+                          >
+                            
+                            <fieldset
+                              class="govuk-fieldset"
+                              pdk-fieldset=""
+                            >
+                              
+                              
+                              
+                              
+                              <pdk-radio-group
+                                class="ng-untouched ng-pristine ng-valid"
+                                name="summonsCode"
+                                ng-reflect-model="E"
+                                ng-reflect-name="summonsCode"
+                                ng-reflect-options="[object Object],[object Object"
+                                ng-reflect-required=""
+                                required=""
+                              >
+                                <div
+                                  class="govuk-radios"
+                                >
+                                  
+                                  <pdk-radio-button>
+                                    <div
+                                      class="govuk-radios__item"
+                                    >
+                                      <input
+                                        class="govuk-radios__input"
+                                        id="pdk-radio-12"
+                                        name="pdk-radio-group-8"
+                                        type="radio"
+                                        value="undefined"
+                                      />
+                                      <label
+                                        class="govuk-radios__label govuk-label"
+                                        for="pdk-radio-12"
+                                        ng-reflect-type=""
+                                        pdk-label=""
+                                      >
+                                          
+                                      </label>
+                                    </div>
+                                  </pdk-radio-button>
+                                  <pdk-radio-button>
+                                    <div
+                                      class="govuk-radios__item"
+                                    >
+                                      <input
+                                        class="govuk-radios__input"
+                                        id="pdk-radio-13"
+                                        name="pdk-radio-group-8"
+                                        type="radio"
+                                        value="undefined"
+                                      />
+                                      <label
+                                        class="govuk-radios__label govuk-label"
+                                        for="pdk-radio-13"
+                                        ng-reflect-type=""
+                                        pdk-label=""
+                                      >
+                                          
+                                      </label>
+                                    </div>
+                                  </pdk-radio-button>
+                                </div>
+                              </pdk-radio-group>
+                              
+                            </fieldset>
+                            
+                          </pdk-form-group>
+                        </pdk-form-field>
+                      </div>
+                    </pdk-inset-text>
+                    <pdk-radio-button
+                      ng-reflect-value="Q"
+                      value="Q"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-4"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="Q"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-4"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="J"
+                      value="J"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-5"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="J"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-5"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="C"
+                      value="C"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-9"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="C"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-9"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="T"
+                      value="T"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-10"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="T"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-10"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="CO"
+                      value="CO"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-11"
+                          name="pdk-radio-group-2"
+                          type="radio"
+                          value="CO"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-11"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                  </div>
+                </pdk-radio-group>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <button
+              data-role="save-applicant-details-button"
+              ng-reflect-type=""
+              pdk-button=""
+              type="submit"
+            >
+                
+            </button>
+          </pdk-form-group>
+          <p
+            class="govuk-!-margin-top-3"
+            ng-reflect-top="3"
+            pdk-margin-top="3"
+          >
+            <a
+              class="govuk-link govuk-link--no-visited-state"
+              href="mock-base-url"
+              ng-reflect-unvisited=""
+              pdk-link=""
+              unvisited=""
+            >
+                
+            </a>
+          </p>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </manual-case-type>
+</ng-component>
+`;
+
+exports[`Manual Case Type Component should render the component for npp 1`] = `
+<ng-component>
+  <manual-case-type
+    ng-reflect-has-npp="false"
+    ng-reflect-manual-case-detail="[object Object]"
+    ng-reflect-summons-codes="[object Object],[object Object"
+  >
+    
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-full"
+        full=""
+        ng-reflect-full=""
+      >
+        <h1
+          class="govuk-heading-xl"
+          ng-reflect-type="heading-xlarge"
+          pdk-typography="heading-xlarge"
+        >
+            
+        </h1>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+      ng-reflect-container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        ng-reflect-two-thirds=""
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            labeltype="none"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label=""
+            ng-reflect-label-type="none"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                
+                
+                
+                <pdk-radio-group
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="enter-case-type"
+                  name="initiationCode"
+                  ng-reflect-model="S"
+                  ng-reflect-name="initiationCode"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="govuk-radios"
+                  >
+                    
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="S"
+                      value="S"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-16"
+                          name="pdk-radio-group-15"
+                          type="radio"
+                          value="S"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-16"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    
+                    <pdk-inset-text
+                      compound="true"
+                      ng-reflect-compound="true"
+                    >
+                      <div
+                        class="govuk-inset-text"
+                        style="padding-right: 0px;"
+                      >
+                        <pdk-form-field
+                          ng-reflect-error-messages="[object Object]"
+                          ng-reflect-label=""
+                          ng-reflect-label-type="normal"
+                        >
+                          
+                          <pdk-form-group
+                            class="pdk-form-group"
+                            ng-reflect-has-error="false"
+                          >
+                            
+                            <fieldset
+                              class="govuk-fieldset"
+                              pdk-fieldset=""
+                            >
+                              
+                              
+                              
+                              
+                              <pdk-radio-group
+                                class="ng-untouched ng-pristine ng-valid"
+                                name="summonsCode"
+                                ng-reflect-model="E"
+                                ng-reflect-name="summonsCode"
+                                ng-reflect-options="[object Object],[object Object"
+                                ng-reflect-required=""
+                                required=""
+                              >
+                                <div
+                                  class="govuk-radios"
+                                >
+                                  
+                                  <pdk-radio-button>
+                                    <div
+                                      class="govuk-radios__item"
+                                    >
+                                      <input
+                                        class="govuk-radios__input"
+                                        id="pdk-radio-21"
+                                        name="pdk-radio-group-20"
+                                        type="radio"
+                                        value="undefined"
+                                      />
+                                      <label
+                                        class="govuk-radios__label govuk-label"
+                                        for="pdk-radio-21"
+                                        ng-reflect-type=""
+                                        pdk-label=""
+                                      >
+                                          
+                                      </label>
+                                    </div>
+                                  </pdk-radio-button>
+                                  <pdk-radio-button>
+                                    <div
+                                      class="govuk-radios__item"
+                                    >
+                                      <input
+                                        class="govuk-radios__input"
+                                        id="pdk-radio-22"
+                                        name="pdk-radio-group-20"
+                                        type="radio"
+                                        value="undefined"
+                                      />
+                                      <label
+                                        class="govuk-radios__label govuk-label"
+                                        for="pdk-radio-22"
+                                        ng-reflect-type=""
+                                        pdk-label=""
+                                      >
+                                          
+                                      </label>
+                                    </div>
+                                  </pdk-radio-button>
+                                </div>
+                              </pdk-radio-group>
+                              
+                            </fieldset>
+                            
+                          </pdk-form-group>
+                        </pdk-form-field>
+                      </div>
+                    </pdk-inset-text>
+                    <pdk-radio-button
+                      ng-reflect-value="Q"
+                      value="Q"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-17"
+                          name="pdk-radio-group-15"
+                          type="radio"
+                          value="Q"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-17"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="J"
+                      value="J"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-18"
+                          name="pdk-radio-group-15"
+                          type="radio"
+                          value="J"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-18"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                            
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    
+                    
+                    
+                  </div>
+                </pdk-radio-group>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <button
+              data-role="save-applicant-details-button"
+              ng-reflect-type=""
+              pdk-button=""
+              type="submit"
+            >
+                
+            </button>
+          </pdk-form-group>
+          <p
+            class="govuk-!-margin-top-3"
+            ng-reflect-top="3"
+            pdk-margin-top="3"
+          >
+            <a
+              class="govuk-link govuk-link--no-visited-state"
+              href="mock-base-url"
+              ng-reflect-unvisited=""
+              pdk-link=""
+              unvisited=""
+            >
+                
+            </a>
+          </p>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </manual-case-type>
+</ng-component>
+`;

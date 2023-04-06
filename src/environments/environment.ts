@@ -7,7 +7,10 @@ import { DevToolsModule } from '../app/devtools';
 export const environment = {
   production: false,
   devTools: true,
-  modules: [StoreDevtoolsModule.instrument(), DevToolsModule],
+  modules: [
+    StoreDevtoolsModule.instrument(),
+    DevToolsModule
+  ],
   providers: []
 };
 

@@ -77,6 +77,18 @@ exports[`DashboardComponent should compile correctly 1`] = `
           Export case results by date
         </a>
       </div>
+      
+      <div
+        pdk-margin-top="6"
+      >
+        <a
+          href="javascript:void(0)"
+          pdk-link=""
+          routerlink="/manual-case/prosecutor"
+        >
+          Create an SJP case
+        </a>
+      </div>
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-column-one-third"

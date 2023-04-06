@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EthnicityCodeAutoSuggestComponent should be able to change value 1`] = `
+Array [
+  Array [
+    Object {
+      "ethnicityCode": Object {
+        "ethnicityCode": "asian",
+        "ethnicityDescription": "Asian",
+        "id": "id",
+      },
+    },
+  ],
+]
+`;
+
+exports[`EthnicityCodeAutoSuggestComponent should render correctly 1`] = `
+<ethnicity-code-auto-suggest-test
+  getEthnicityCodeOnMount="false"
+  mapSelectionToKey={[Function Boolean]}
+  submitForm={[Function Function]}
+>
+  <form
+    autocomplete="off"
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+    pdk-form=""
+  >
+    <pdk-form-field
+      label="EthnicityCode"
+      ng-reflect-label="EthnicityCode"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+        ng-reflect-has-error="false"
+      >
+        
+        
+        
+        
+        <label
+          class="govuk-label"
+          for="ethnicityCodeId"
+          ng-reflect-hidden="false"
+          ng-reflect-type="default"
+        >
+           EthnicityCode 
+        </label>
+        
+        
+        
+        <ethnicity-code-auto-suggest
+          class="ng-untouched ng-pristine ng-valid"
+          id="ethnicityCodeId"
+          name="ethnicityCode"
+          ng-reflect-get-ethnicity-code-on-mount="false"
+          ng-reflect-id="ethnicityCodeId"
+          ng-reflect-map-selection-to-key="true"
+          ng-reflect-name="ethnicityCode"
+        >
+          <pdk-autosuggest-lite
+            ng-reflect-has-error="false"
+            ng-reflect-highlight-matched-text="true"
+            ng-reflect-id="ethnicityCodeId"
+            ng-reflect-suggestion-key="ethnicityCode"
+            ng-reflect-suggestion-title="ethnicityDescription"
+            ng-reflect-suggestions=""
+          >
+            <pdk-autosuggest
+              highlightcolor="blue"
+              ng-reflect-disabled="false"
+              ng-reflect-has-error="false"
+              ng-reflect-highlight-color="blue"
+              ng-reflect-id="ethnicityCodeId"
+              ng-reflect-input-type="text"
+              ng-reflect-map-suggestion-to-key="function (suggestion) {
+        "
+              ng-reflect-map-suggestion-to-label="function (suggestion) {
+        "
+              ng-reflect-suggestion-template-ref="[object Object]"
+              ng-reflect-suggestions=""
+            >
+              <pdk-interaction-container>
+                <div>
+                  <div
+                    class="pdk-autosuggest"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded="false"
+                      aria-owns="pdk-autosuggest__suggestions-container-3-listbox"
+                      autocomplete="off"
+                      class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                      id="ethnicityCodeId"
+                      ng-reflect-has-error="false"
+                      ng-reflect-is-disabled="false"
+                      ng-reflect-model=""
+                      ng-reflect-options="[object Object]"
+                      role="combobox"
+                      type="text"
+                    />
+                    <div
+                      class="pdk-autosuggest__suggestions-container"
+                      id="pdk-autosuggest__suggestions-container-3"
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </pdk-interaction-container>
+            </pdk-autosuggest>
+            
+          </pdk-autosuggest-lite>
+        </ethnicity-code-auto-suggest>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</ethnicity-code-auto-suggest-test>
+`;
+
+exports[`EthnicityCodeAutoSuggestComponent should set ethnicity object when \`mapToKey\` is not set 1`] = `
+Array [
+  Array [
+    Object {
+      "ethnicityCode": Object {
+        "ethnicityCode": "ir",
+        "ethnicityDescription": "Irish",
+        "id": "id1",
+      },
+    },
+  ],
+]
+`;
+
+exports[`EthnicityCodeAutoSuggestComponent should set the default value and submit 1`] = `
+Array [
+  Array [
+    Object {
+      "ethnicityCode": "ir",
+    },
+  ],
+]
+`;

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EffectsModule } from '@ngrx/effects';
 import { RouterModule } from '@angular/router';
 import { AppContainer } from './containers/app.container';
 import { PdkCoreModule } from '@cpp/pdk';
+import { ManualCaseDetailsEffects } from './effects/manual-case-details.effects';
 import { ContextsModule } from '../contexts/contexts.module';
 import { PleadedNotGuiltyDataGuard } from './guards/pleaded-not-guilty-data.guard';
 import { DefendantDetailsUpdatesLinkDataGuard } from './guards/defendant-details-updates-data.guard';
@@ -18,7 +20,14 @@ import { environment } from 'src/environments/environment';
 const DECLARATIONS = [AppContainer, AppRouterContainer];
 
 @NgModule({
-  imports: [CommonModule, ApplicationModule.forRoot(environment), PdkCoreModule, RouterModule, ContextsModule],
+  imports: [
+    CommonModule,
+    ApplicationModule.forRoot(environment),
+    EffectsModule.forFeature([
+      ManualCaseDetailsEffects,
+    ]),
+    PdkCoreModule, RouterModule, ContextsModule
+  ],
   declarations: [...DECLARATIONS],
   exports: [AppContainer],
   providers: [

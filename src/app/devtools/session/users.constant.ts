@@ -8,15 +8,16 @@ export const mockUsers: User[] = [
   {
     id: '85435116-0f4b-4616-ae9a-9954ed1c3ee1',
     displayName: 'Trevor Lawson (Tvl)',
-    default: true
+
   },
   {
     id: 'b07c8200-5d04-4266-9521-c2312734a9d3',
     displayName: 'David Brown (Tfl)'
   },
   {
-    id: '8dcc4c93-2fe4-44aa-896e-511a28da0a70',
-    displayName: 'Frank Michaels (DVLA)'
+    id: '919d2dd0-5f6e-4f7b-89d5-31be30840770',
+    displayName: 'Frank Michaels (DVLA)',
+    default: true
   },
   {
     id: 'c2a3f402-7b77-4b0a-b284-454ff0c58e06',

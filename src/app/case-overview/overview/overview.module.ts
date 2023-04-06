@@ -45,6 +45,7 @@ import { ReferredToOpenCourtOffenceDecisionComponent } from './components/referr
 import { CaseNotesComponent } from './components/case-notes.component';
 import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
 import { ApplicationDecisionDetailsComponent } from './components/application-decision-details.component';
+import { CaseStatusPipeModule } from '../../shared/pipes';
 
 const DECLARATIONS = [
   OverviewComponent,
@@ -91,6 +92,7 @@ const DECLARATIONS = [
     OffenceWarningModule,
     DownloadDocumentModule,
     CaseHeaderBadgeModule,
+    CaseStatusPipeModule,
     SavedDecisionInformationPipeModule,
     VerdictTypePipeModule,
     BreadcrumbLinksModule

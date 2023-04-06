@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManualCaseSummaryComponent should render the component 1`] = `
+<manual-case-summary
+  add={[Function EventEmitter]}
+  caseDetails={[Function Object]}
+  defendantNames={[Function Array]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter]}
+  hasNpp={[Function Boolean]}
+  location={[Function SpyLocation]}
+  offenceStateService={[Function ManualCaseOffenceStateService]}
+  remove={[Function EventEmitter]}
+  submit={[Function EventEmitter]}
+>
+  <pdk-grid
+    container=""
+  >
+    <pdk-grid
+      full=""
+    >
+      <h1
+        pdk-typography="heading-xlarge"
+      >
+         
+      </h1>
+    </pdk-grid>
+  </pdk-grid><prosecution-case-details /><manual-defendant-details /><manual-case-offence-details /><button
+    pdk-button=""
+    type="submit"
+  >
+     
+  </button><p
+    pdk-margin-top="3"
+  >
+    <a
+      href="javascript:void(0)"
+      pdk-link=""
+      unvisited=""
+    >
+       
+    </a>
+  </p>
+</manual-case-summary>
+`;

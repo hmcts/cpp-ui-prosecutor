@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsComponent should render the component 1`] = `
+<manual-defendant-details
+  add={[Function EventEmitter]}
+  createUUID={[Function Function]}
+  defendantStateService={[Function ManualCaseDefendantStateService]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter]}
+  ethnicities={[Function Array]}
+  nationalities={[Function Array]}
+  observedEthnicities={[Function Array]}
+  remandStatuses={[Function Array]}
+  remove={[Function EventEmitter]}
+>
+  <div
+    class="defendant-details"
+  >
+    
+    
+    <pdk-divider
+      pdk-margin-top="2"
+    />
+  </div>
+</manual-defendant-details>
+`;
+
+exports[`DefendantDetailsComponent should render the component when case is SJP and legal entity defendant 1`] = `
+<manual-defendant-details
+  add={[Function EventEmitter]}
+  caseInitiationCode={[Function String]}
+  createUUID={[Function Function]}
+  defendantStateService={[Function ManualCaseDefendantStateService]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter]}
+  ethnicities={[Function Array]}
+  nationalities={[Function Array]}
+  observedEthnicities={[Function Array]}
+  remandStatuses={[Function Array]}
+  remove={[Function EventEmitter]}
+>
+  <div
+    class="defendant-details"
+  >
+    
+    
+    <pdk-divider
+      pdk-margin-top="2"
+    />
+  </div>
+</manual-defendant-details>
+`;

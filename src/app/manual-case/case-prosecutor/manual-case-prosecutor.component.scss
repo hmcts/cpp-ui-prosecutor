@@ -1,0 +1,13 @@
+.back-button {
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: underline;
+  border-width: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.back-button:focus {
+  text-decoration: none;
+}

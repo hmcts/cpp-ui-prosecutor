@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProsecutorSearchComponent should match snapshot 1`] = `
+<prosecutor-search
+  canCreate={[Function Boolean]}
+  disabled="false"
+  filterByNonStandardOrganisation={[Function Function]}
+  hasNpp={[Function Boolean]}
+  includeNonStandardOrganisations="false"
+  prosecutorSelected={[Function EventEmitter]}
+  searchLabel={[Function String]}
+>
+  <pdk-form-field
+    class="govuk-!-margin-bottom-2"
+    labeltype="small"
+    ng-reflect-bottom="2"
+    pdk-margin-bottom="2"
+  >
+    <pdk-checkbox
+      checkboxtype="small"
+      name="includeNonStandardOrganisations"
+    >
+       Include non-standard organisations 
+    </pdk-checkbox>
+  </pdk-form-field><div
+    class="govuk-!-margin-bottom-3"
+    ng-reflect-bottom="3"
+    pdk-margin-bottom="3"
+  >
+    <a
+      class="govuk-link govuk-link--no-visited-state"
+      ng-reflect-unvisited=""
+      pdk-link=""
+      unvisited=""
+    >
+       Add new prosecutor 
+    </a>
+  </div><pdk-form-field
+    data-test-id="prosecutorSearch"
+    label="Search prosecutors"
+    labeltype="none"
+  >
+    <cpp-prosecutor-autosuggest
+      data-role="prosecutionAuthority-input"
+      id="prosecutionAuthority"
+      name="prosecutionAuthority"
+      required=""
+    />
+  </pdk-form-field>
+</prosecutor-search>
+`;
+
+exports[`ProsecutorSearchComponent should render for npp 1`] = `
+<prosecutor-search
+  canCreate={[Function Boolean]}
+  disabled="false"
+  filterByNonStandardOrganisation={[Function Function]}
+  hasNpp="false"
+  includeNonStandardOrganisations="false"
+  prosecutorSelected={[Function EventEmitter]}
+  searchLabel={[Function String]}
+>
+  
+</prosecutor-search>
+`;

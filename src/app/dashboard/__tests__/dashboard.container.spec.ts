@@ -53,5 +53,6 @@ describe('DashboardContainer', () => {
     @Input() pleadedNotGuiltyCasesDetail;
     @Input() defendantDetailsUpdates;
     @Input() casesMissingSjpNoticeCount;
+    @Input() hasNpp;
   }
 });

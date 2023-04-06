@@ -1,0 +1,435 @@
+<pdk-grid container>
+  <pdk-grid full>
+    <pdk-error-summary *ngIf="formErrors" [errors]="formErrors" focusOnChange> </pdk-error-summary>
+    <h1 pdk-typography="heading-xlarge">
+      {{ 'MANUAL_CASE_OFFENCE.TITLE' | translate }}
+    </h1>
+  </pdk-grid>
+</pdk-grid>
+
+<pdk-grid container>
+  <pdk-grid full>
+    <h2 pdk-typography="heading-medium" pdk-margin-vertical="3">
+      {{ 'MANUAL_CASE_OFFENCE.OFFENCE_NO' | translate }} {{ counter }}
+    </h2>
+  </pdk-grid>
+</pdk-grid>
+
+<pdk-grid container *ngIf="editOffence">
+  <pdk-grid full>
+    <form
+      #form="ngForm"
+      pdk-form
+      novalidate
+      (validSubmit)="submitData(form.value)"
+      (errors)="formErrors = $event"
+    >
+      <pdk-form-field
+        [style.width.%]="50"
+        label="{{ 'CASE_DETAILS.OFFENCE.HISTORICAL_OFFENCES_ONLY' | translate }}"
+        hintText="{{ 'CASE_DETAILS.OFFENCE.HISTORICAL_DATE_HINT' | translate }}"
+        labelType="small"
+      >
+        <pdk-date-input [(ngModel)]="offenceSearchDate" name="offenceSearchDate"> </pdk-date-input>
+      </pdk-form-field>
+
+      <pdk-form-field
+        label="{{ 'CASE_DETAILS.OFFENCE.ENTER_OFFENCE_CODE' | translate }}"
+        labelType="small"
+        [errorMessages]="[
+          {
+            rule: 'required',
+            message: 'MANUAL_CASE_OFFENCE.OFFENCE_REQUIRED' | translate
+          }
+        ]"
+      >
+        <offence-search
+          [selectedOffenceCode]="editOffence.offenceCode"
+          [offenceDate]="offenceSearchDate"
+          (ngModelChange)="update($event)"
+          ngModel
+          name="offenceCode"
+          [required]="isOffenceCodeRequired(editOffence?.offenceCode)"
+        >
+        </offence-search>
+      </pdk-form-field>
+
+      <ng-container *ngIf="editOffence.offenceCode">
+        <pdk-inset-text>
+          <p>
+            <span pdk-typography="body" pdk-text-colour="dark-grey">{{
+              editOffence?.offenceCode
+            }}</span>
+          </p>
+          <p>
+            <span pdk-typography="body-medium" class="bold">{{ editOffence?.offenceTitle }}</span>
+          </p>
+          <p>
+            <span pdk-typography="body" pdk-text-colour="dark-grey">
+              {{ editOffence?.offenceLegislation }}
+            </span>
+          </p>
+        </pdk-inset-text>
+
+        <dynamic-particular-form
+          name="dynamicParticularFormData"
+          [offenceDateTypes]="offenceDateCodesOptions"
+          [ngModel]="editOffence.dynamicParticularFormData"
+          (ngModelChange)="dynamicFormChange($event)"
+          [offenceWording]="editOffence.offenceWording"
+          [arrestDateValue]="arrestDateValue"
+          (onError)="dynamicFormErrors = $event"
+        >
+        </dynamic-particular-form>
+
+        <pdk-form-field
+          *ngIf="editOffence.aocpEligible"
+          pdk-margin-top="2"
+          label="Can the defendant be offered an online conviction and plenalty?"
+          labelType="small"
+        >
+          <pdk-radio-group
+            name="prosecutorOfferAOCP"
+            [(ngModel)]="!!editOffence.prosecutorOfferAOCP"
+            data-role="prosecutorOfferAOCP"
+            required
+          >
+            <pdk-radio-button [value]="true">
+              {{ 'COMMON.YES' | translate }}
+            </pdk-radio-button>
+            <pdk-radio-button [value]="false">
+              {{ 'COMMON.NO' | translate }}
+            </pdk-radio-button>
+          </pdk-radio-group>
+        </pdk-form-field>
+
+        <ng-container *ngIf="editOffence.defendantOptions.length">
+          <pdk-form-field
+            label="{{ 'MANUAL_CASE_OFFENCE.SELECT_DEFENDANTS' | translate }}"
+            labelType="small"
+            [errorMessages]="[
+              {
+                rule: 'required',
+                message: 'MANUAL_CASE_OFFENCE.DEFENDANTS_REQUIRED' | translate
+              }
+            ]"
+          >
+            <pdk-checkbox-group
+              name="defendantIds"
+              [ngModel]="selectedDefendantIds"
+              (ngModelChange)="updateSelectedDefendants($event)"
+              required
+            >
+              <pdk-checkbox
+                class="checkbox-all"
+                name="selectAll"
+                [ngModel]="selectAll"
+                (ngModelChange)="toggleSelectAll($event)"
+              >
+                {{ 'MANUAL_CASE_OFFENCE.SELECT_ALL' | translate }}
+              </pdk-checkbox>
+
+              <ng-container *ngFor="let option of editOffence.defendantOptions; let i = index">
+                <pdk-checkbox [value]="option.value">
+                  <div>{{ option.label }}</div>
+                </pdk-checkbox>
+
+                <ng-container *ngIf="selectedDefendantIds.indexOf(option.value) > -1">
+                  <div data-test-id="defendant" ngModelGroup="defendantOptions" class="indent">
+                    <pdk-inset-text compound="true">
+                      <ng-container *ngIf="showArrestDate">
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.ARREST_DATE' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'minDate',
+                              message: 'MANUAL_CASE_OFFENCE.CHARGE_DATE_ERROR' | translate
+                            },
+                            {
+                              rule: 'maxDate',
+                              message: 'MANUAL_CASE_OFFENCE.BEFORE_CHARGE_DATE_ERROR' | translate
+                            },
+                            {
+                              rule: 'required',
+                              message: 'MANUAL_CASE_OFFENCE.ARREST_DATE_REQUIRED' | translate
+                            }
+                          ]"
+                        >
+                          <pdk-date-input
+                            [name]="'arrestDate_' + i"
+                            [ngModel]="option.offence.arrestDate"
+                            (ngModelChange)="
+                              arrestDateValue = $event; option.offence.arrestDate = $event
+                            "
+                            allowEqual="true"
+                            pastDate
+                            required
+                            [minDate]="getStartDateValue"
+                            [maxDate]="option.offence.chargeDate"
+                            data-role="arrestDate-input"
+                          >
+                          </pdk-date-input>
+                        </pdk-form-field>
+                      </ng-container>
+
+                      <ng-container *ngIf="showChargeDate">
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.CHARGE_DATE' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'minDate',
+                              message: 'MANUAL_CASE_OFFENCE.AFTER_ARREST_DATE_ERROR' | translate
+                            },
+                            {
+                              rule: 'required',
+                              message: 'MANUAL_CASE_OFFENCE.CHARGE_DATE_REQUIRED' | translate
+                            }
+                          ]"
+                        >
+                          <pdk-date-input
+                            [name]="'chargeDate_' + i"
+                            [(ngModel)]="option.offence.chargeDate"
+                            allowEqual="true"
+                            pastDate
+                            required
+                            [minDate]="option.offence.arrestDate"
+                            data-role="chargeDate-input"
+                          >
+                          </pdk-date-input>
+                        </pdk-form-field>
+                      </ng-container>
+
+                      <ng-container *ngIf="showLaidDate">
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.LAID_DATE' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'minDate',
+                              message: 'MANUAL_CASE_OFFENCE.CHARGE_DATE_ERROR' | translate
+                            },
+                            {
+                              rule: 'required',
+                              message: 'MANUAL_CASE_OFFENCE.LAID_DATE_REQUIRED' | translate
+                            }
+                          ]"
+                        >
+                          <pdk-date-input
+                            [name]="'laidDate_' + i"
+                            [(ngModel)]="option.offence.laidDate"
+                            [minDate]="getStartDateValue"
+                            allowEqual="true"
+                            pastDate
+                            required
+                            data-role="laidDate-input"
+                          >
+                          </pdk-date-input>
+                        </pdk-form-field>
+                      </ng-container>
+
+                      <div class="smallWidth" pdk-margin-bottom="3" *ngIf="manualCaseType === 'J'">
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.COMPENSATION_CLAIMED' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'invalidCurrency',
+                              message: 'Enter numerals only, for example £100.00'
+                            },
+                            {
+                              rule: 'required',
+                              message: 'Enter cost claimed by prosecution'
+                            },
+                            {
+                              rule: 'maxValue',
+                              message: 'Cost must be less than £1,000,000,000'
+                            }
+                          ]"
+                        >
+                          <pdk-currency-input
+                            name="offence.appliedCompensation_{{ i }}"
+                            [required]="false"
+                            [(ngModel)]="option.offence.appliedCompensation"
+                          ></pdk-currency-input>
+                        </pdk-form-field>
+                      </div>
+
+                      <ng-container *ngIf="editOffence.drugsOrAlcoholRelated === 'Y'">
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_METHOD' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'required',
+                              message:
+                                'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_METHOD_REQUIRED' | translate
+                            }
+                          ]"
+                        >
+                          <pdk-radio-group
+                            name="offence.alcoholRelatedOffence.alcoholLevelMethod_{{ i }}"
+                            [(ngModel)]="option.offence.alcoholRelatedOffence.alcoholLevelMethod"
+                            required
+                            data-role="alcoholLevel-input"
+                          >
+                            <div *ngFor="let method of alcoholLevelMethodOptions">
+                              <div class="alcohol-level-radio">
+                                <pdk-radio-button [value]="method.value">{{
+                                  method.label
+                                }}</pdk-radio-button>
+                              </div>
+                              <br />
+                              <div
+                                class="smallWidth indent"
+                                *ngIf="
+                                  option.offence.alcoholRelatedOffence.alcoholLevelMethod ===
+                                  method.value
+                                "
+                              >
+                                <span *ngTemplateOutlet="alcoholLevelAmount"></span>
+                              </div>
+                            </div>
+                          </pdk-radio-group>
+                        </pdk-form-field>
+
+                        <ng-template #alcoholLevelAmount>
+                          <pdk-inset-text compound="true">
+                            <pdk-form-field
+                              label="{{ 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT' | translate }}"
+                              labelType="small"
+                              hintText="{{
+                                'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_HINT' | translate
+                              }}"
+                              [errorMessages]="[
+                                {
+                                  rule: 'required',
+                                  message:
+                                    'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_REQUIRED' | translate
+                                },
+                                {
+                                  rule: 'pattern',
+                                  message:
+                                    'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_PATTERN' | translate
+                                }
+                              ]"
+                            >
+                              <input
+                                pdk-text-input="number"
+                                pdk-input
+                                type="number"
+                                name="offence.alcoholRelatedOffence.alcoholLevelAmount_{{ i }}"
+                                [(ngModel)]="
+                                  option.offence.alcoholRelatedOffence.alcoholLevelAmount
+                                "
+                                pattern="^(\d{1,3}\.\d{1,2}|\d{1,3})$"
+                                required
+                                data-role="alcoholAmount-input"
+                              />
+                            </pdk-form-field>
+                          </pdk-inset-text>
+                        </ng-template>
+                      </ng-container>
+
+                      <ng-container *ngIf="editOffence.backDutyAllowed">
+                        <div
+                          class="smallWidth"
+                          pdk-margin-bottom="3"
+                          data-test-id="offence-back-duty"
+                        >
+                          <pdk-form-field
+                            label="{{ 'MANUAL_CASE_OFFENCE.BACK_DUTY' | translate }}"
+                            labelType="small"
+                            [errorMessages]="[
+                              {
+                                rule: 'invalidCurrency',
+                                message: 'Enter numerals only, for example £100.00'
+                              },
+                              {
+                                rule: 'required',
+                                message: 'Enter cost claimed by prosecution'
+                              },
+                              {
+                                rule: 'maxValue',
+                                message: 'Cost must be less than £1,000,000,000'
+                              }
+                            ]"
+                          >
+                            <pdk-currency-input
+                              name="offence.backDuty_{{ i }}"
+                              [required]="false"
+                              [(ngModel)]="option.offence.backDuty"
+                            >
+                            </pdk-currency-input>
+                          </pdk-form-field>
+                        </div>
+
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.BACK_DUTY_DATE_FROM' | translate }}"
+                          labelType="small"
+                        >
+                          <pdk-date-input
+                            name="offence.backDutyDateFrom_{{ i }}"
+                            [(ngModel)]="option.offence.backDutyDateFrom"
+                            pastDate
+                            data-role="backDutyFrom-input"
+                          >
+                          </pdk-date-input>
+                        </pdk-form-field>
+
+                        <pdk-form-field
+                          label="{{ 'MANUAL_CASE_OFFENCE.BACK_DUTY_DATE_TO' | translate }}"
+                          labelType="small"
+                          [errorMessages]="[
+                            {
+                              rule: 'minDate',
+                              message: 'MANUAL_CASE_OFFENCE.BACK_DUTY_DATE_ERROR' | translate
+                            }
+                          ]"
+                        >
+                          <pdk-date-input
+                            name="offence.backDutyDateTo_{{ i }}"
+                            [(ngModel)]="option.offence.backDutyDateTo"
+                            [minDate]="option.offence.backDutyDateFrom"
+                            pastDate
+                            data-role="backDutyTo-input"
+                          >
+                          </pdk-date-input>
+                        </pdk-form-field>
+                      </ng-container>
+                    </pdk-inset-text>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </pdk-checkbox-group>
+          </pdk-form-field>
+        </ng-container>
+      </ng-container>
+
+      <button
+        *ngIf="iterateOffence"
+        pdk-button="secondary"
+        type="submit"
+        pdk-margin-top="3"
+        pdk-margin-bottom="3"
+        data-role="add"
+        (click)="beforeSubmit('add')"
+      >
+        {{ 'MANUAL_CASE_OFFENCE.ADD_OFFENCE' | translate }}
+      </button>
+
+      <pdk-form-group>
+        <button pdk-button type="submit" data-role="continue" (click)="beforeSubmit('continue')">
+          {{ 'MANUAL_CASE_OFFENCE.CONTINUE' | translate }}
+        </button>
+      </pdk-form-group>
+
+      <p pdk-margin-top="3">
+        <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+          {{ 'MANUAL_CASE_OFFENCE.BACK' | translate }}
+        </a>
+      </p>
+    </form>
+  </pdk-grid>
+</pdk-grid>

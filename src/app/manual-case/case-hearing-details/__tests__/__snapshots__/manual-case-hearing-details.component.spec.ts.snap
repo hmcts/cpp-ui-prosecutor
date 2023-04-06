@@ -1,0 +1,1422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual case initial hearing should render the component 1`] = `
+<manual-case-hearing-details
+  _hearingDurationFocused="false"
+  cdr={[Function ViewRef_]}
+  courtCentreSuggestions={[Function Array]}
+  courtCentres={[Function Array]}
+  courtRoomSugestions={[Function Array]}
+  editManualCase={[Function Object]}
+  form={[Function NgForm]}
+  hasCourtRoom={[Function Boolean]}
+  hearingTypeSuggestions={[Function Array]}
+  jurisdictionTypeCode={[Function Object]}
+  location={[Function SpyLocation]}
+  manualCaseDetail={[Function Object]}
+  submitFormData={[Function EventEmitter]}
+>
+  <h1
+    class="govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    pdk-typography="heading-xlarge"
+  >
+    MANUAL_CASE_HEARING_DETAILS.TITLE
+  </h1><pdk-grid
+    class="govuk-grid-row"
+    container=""
+    ng-reflect-container=""
+  >
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-half"
+        ng-reflect-one-half=""
+        one-half=""
+      >
+        <pdk-grid
+          data-role="create-new-hearing-form"
+        >
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-hint-text="MEDIA_REGISTER.COURT.HINT"
+            ng-reflect-label="COMMON.COURT"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              
+              
+              
+              <label
+                class="govuk-label govuk-label--s"
+                for="courtHearingLocation"
+                ng-reflect-hidden="false"
+                ng-reflect-type="small"
+              >
+                 COMMON.COURT 
+              </label>
+              
+              
+              <pdk-hint
+                class="govuk-hint"
+              >
+                
+                
+                
+                 MEDIA_REGISTER.COURT.HINT 
+                
+              </pdk-hint>
+              
+              <pdk-autosuggest-lite
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="hearing-court-centre-input"
+                id="courtHearingLocation"
+                name="courtCentre"
+                ng-reflect-aria-described-by="aria-describedby-courtcentre-a"
+                ng-reflect-id="courtHearingLocation"
+                ng-reflect-model="[object Object]"
+                ng-reflect-name="courtCentre"
+                ng-reflect-required=""
+                ng-reflect-suggestion-key="oucode"
+                ng-reflect-suggestion-title="name"
+                ng-reflect-suggestions=""
+                required=""
+              >
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                  ng-reflect-aria-described-by="aria-describedby-courtcentre-a"
+                  ng-reflect-disabled="false"
+                  ng-reflect-has-error="false"
+                  ng-reflect-highlight-color="blue"
+                  ng-reflect-id="courtHearingLocation"
+                  ng-reflect-input-type="text"
+                  ng-reflect-map-suggestion-to-key="function (suggestion) {
+        "
+                  ng-reflect-map-suggestion-to-label="function (suggestion) {
+        "
+                  ng-reflect-suggestion-template-ref="[object Object]"
+                  ng-reflect-suggestions=""
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-expanded="false"
+                          aria-owns="pdk-autosuggest__suggestions-container-13-listbox"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="courtHearingLocation"
+                          ng-reflect-has-error="false"
+                          ng-reflect-is-disabled="false"
+                          ng-reflect-model=""
+                          ng-reflect-options="[object Object]"
+                          role="combobox"
+                          type="text"
+                        />
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-13"
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+                
+              </pdk-autosuggest-lite>
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          
+          
+          
+          <div>
+            <pdk-form-field
+              class="filterSelect"
+              hint=""
+              id="dateOfHearing"
+              labeltype="small"
+              ng-reflect-error-messages="[object Object],[object Object"
+              ng-reflect-hint=""
+              ng-reflect-label="COMMON.HEARING.DATE"
+              ng-reflect-label-type="small"
+            >
+              
+              <pdk-form-group
+                class="pdk-form-group"
+                ng-reflect-has-error="false"
+              >
+                
+                <fieldset
+                  class="govuk-fieldset"
+                  pdk-fieldset=""
+                >
+                  
+                  <legend
+                    class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                    ng-reflect-hidden="false"
+                    ng-reflect-type="small"
+                  >
+                     COMMON.HEARING.DATE 
+                  </legend>
+                  
+                  
+                  <pdk-hint
+                    class="govuk-hint"
+                    ng-reflect-hint="date"
+                  >
+                    
+                    
+                    For example, 23 10 2017
+                    
+                  </pdk-hint>
+                  
+                  <pdk-date-input
+                    _nghost-a-c4=""
+                    class="ng-untouched ng-pristine ng-valid"
+                    data-role="hearing-date-filter-input"
+                    name="dateOfHearing"
+                    ng-reflect-aria-described-by="date"
+                    ng-reflect-future-date="true"
+                    ng-reflect-id="dateOfHearing"
+                    ng-reflect-name="dateOfHearing"
+                    ng-reflect-picker=""
+                    ng-reflect-required=""
+                    picker=""
+                    required=""
+                  >
+                    <div
+                      _ngcontent-a-c4=""
+                      class="pdk-date-input"
+                    >
+                      <div
+                        _ngcontent-a-c4=""
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                        ng-reflect-form="[object Object]"
+                      >
+                        <div
+                          _ngcontent-a-c4=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c4=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-day"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            _ngcontent-a-c4=""
+                            aria-describedby="date"
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="dateOfHearing-day"
+                            name="dateDay"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="day"
+                            ng-reflect-required=""
+                            ng-reflect-width="2"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          _ngcontent-a-c4=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c4=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-month"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            _ngcontent-a-c4=""
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="dateOfHearing-month"
+                            name="dateMonth"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="month"
+                            ng-reflect-required=""
+                            ng-reflect-width="2"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          _ngcontent-a-c4=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c4=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-year"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            _ngcontent-a-c4=""
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="dateOfHearing-year"
+                            name="dateYear"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="year"
+                            ng-reflect-required=""
+                            ng-reflect-width="4"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div
+                        _ngcontent-a-c4=""
+                        class="pdk-!-negative-margin-left-2"
+                        ng-reflect-left="-2"
+                        pdk-margin-left="-2"
+                      >
+                        <pdk-date-picker-toggle
+                          _ngcontent-a-c4=""
+                          ng-reflect-disabled="false"
+                          ng-reflect-future-date="true"
+                          ng-reflect-past-date="false"
+                        >
+                          <pdk-interaction-container>
+                            <div>
+                              <div
+                                aria-expanded="false"
+                                aria-label="Toggle date picker"
+                                class="pdk-date-picker__toggle"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <pdk-date-picker-icon
+                                  style="margin-top: -4px; display: inline-block; vertical-align: middle;"
+                                >
+                                  <div
+                                    style="display: flex; align-items: center; justify-content: center;"
+                                  >
+                                    <i
+                                      style="height: 28px; width: 28px; fill: #333;"
+                                    >
+                                      <svg
+                                        viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
+                                        />
+                                      </svg>
+                                    </i>
+                                  </div>
+                                </pdk-date-picker-icon>
+                              </div>
+                              
+                            </div>
+                          </pdk-interaction-container>
+                        </pdk-date-picker-toggle>
+                      </div>
+                    </div>
+                  </pdk-date-input>
+                  
+                </fieldset>
+                
+              </pdk-form-group>
+            </pdk-form-field>
+          </div>
+          <pdk-form-field
+            hint=""
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-hint=""
+            ng-reflect-label="COMMON.HEARING.START_TIME"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.START_TIME 
+                </legend>
+                
+                
+                <pdk-hint
+                  class="govuk-hint"
+                  ng-reflect-hint="time"
+                >
+                  
+                  
+                  For example, 10 30
+                  
+                </pdk-hint>
+                
+                <pdk-time-input
+                  autoshift=""
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="hearing-earliest-start-input"
+                  labelhidden="false"
+                  name="timeOfHearing"
+                  ng-reflect-auto-shift=""
+                  ng-reflect-label-hidden="false"
+                  ng-reflect-name="timeOfHearing"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="pdk-time-input ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                  >
+                    <div
+                      class="pdk-time-input__item pdk-time-input__item--hour"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-5-hours"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Hours 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="hours"
+                        id="pdk-time-input-5-hours"
+                        maxlength="2"
+                        name="timeHours"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-name="hours"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="pdk-time-input__item"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-5-minutes"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Minutes 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="minutes"
+                        id="pdk-time-input-5-minutes"
+                        maxlength="2"
+                        minlength="2"
+                        name="timeMinutes"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-minlength="2"
+                        ng-reflect-name="minutes"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </pdk-time-input>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label="COMMON.HEARING.DURATION"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.DURATION 
+                </legend>
+                
+                
+                
+                <pdk-time-input
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="hearing-estimated-minutes-input"
+                  labelhidden="false"
+                  name="hearingDuration"
+                  ng-reflect-auto-shift="false"
+                  ng-reflect-label-hidden="false"
+                  ng-reflect-name="hearingDuration"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="pdk-time-input ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                  >
+                    <div
+                      class="pdk-time-input__item pdk-time-input__item--hour"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-7-hours"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Hours 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="hours"
+                        id="pdk-time-input-7-hours"
+                        maxlength="2"
+                        name="timeHours"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-name="hours"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="pdk-time-input__item"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-7-minutes"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Minutes 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="minutes"
+                        id="pdk-time-input-7-minutes"
+                        maxlength="2"
+                        minlength="2"
+                        name="timeMinutes"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-minlength="2"
+                        ng-reflect-name="minutes"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </pdk-time-input>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-label="COMMON.HEARING.LANGUAGES"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.LANGUAGES 
+                </legend>
+                
+                
+                
+                <pdk-radio-group
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="hearingLanguage"
+                  ng-reflect-inline="true"
+                  ng-reflect-name="hearingLanguage"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="govuk-radios govuk-radios--inline"
+                  >
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="E"
+                      value="E"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-10"
+                          name="pdk-radio-group-9"
+                          type="radio"
+                          value="E"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-10"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                          COMMON.ENGLISH
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="W"
+                      value="W"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-11"
+                          name="pdk-radio-group-9"
+                          type="radio"
+                          value="W"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-11"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                          COMMON.WELSH
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                  </div>
+                </pdk-radio-group>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+        </pdk-grid>
+        <button
+          class="govuk-button"
+          data-role="send-for-listing"
+          name="continue"
+          ng-reflect-type=""
+          pdk-button=""
+          type="submit"
+        >
+           COMMON.CONTINUE 
+        </button>
+        <br />
+        <p
+          class="govuk-!-margin-top-3"
+          ng-reflect-top="3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="javascript:void(0)"
+            ng-reflect-unvisited=""
+            pdk-link=""
+            unvisited=""
+          >
+             COMMON.BACK 
+          </a>
+        </p>
+      </pdk-grid>
+    </form>
+  </pdk-grid>
+</manual-case-hearing-details>
+`;
+
+exports[`Manual case initial hearing should render the component 2 1`] = `
+<manual-case-hearing-details
+  _hearingDurationFocused="false"
+  cdr={[Function ViewRef_]}
+  courtCentreSuggestions={[Function Array]}
+  courtCentres={[Function Array]}
+  courtRoomSugestions={[Function Array]}
+  editManualCase={[Function Object]}
+  form={[Function NgForm]}
+  hasCourtRoom="false"
+  hearingTypeSuggestions={[Function Array]}
+  jurisdictionTypeCode={[Function Object]}
+  location={[Function SpyLocation]}
+  manualCaseDetail={[Function Object]}
+  submitFormData={[Function EventEmitter]}
+>
+  <h1
+    class="govuk-heading-xl"
+    ng-reflect-type="heading-xlarge"
+    pdk-typography="heading-xlarge"
+  >
+    MANUAL_CASE_HEARING_DETAILS.TITLE
+  </h1><pdk-grid
+    class="govuk-grid-row"
+    container=""
+    ng-reflect-container=""
+  >
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-half"
+        ng-reflect-one-half=""
+        one-half=""
+      >
+        <pdk-grid
+          data-role="create-new-hearing-form"
+        >
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-hint-text="MEDIA_REGISTER.COURT.HINT"
+            ng-reflect-label="COMMON.COURT"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              
+              
+              
+              <label
+                class="govuk-label govuk-label--s"
+                for="courtHearingLocation"
+                ng-reflect-hidden="false"
+                ng-reflect-type="small"
+              >
+                 COMMON.COURT 
+              </label>
+              
+              
+              <pdk-hint
+                class="govuk-hint"
+              >
+                
+                
+                
+                 MEDIA_REGISTER.COURT.HINT 
+                
+              </pdk-hint>
+              
+              <pdk-autosuggest-lite
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="hearing-court-centre-input"
+                id="courtHearingLocation"
+                name="courtCentre"
+                ng-reflect-aria-described-by="aria-describedby-courtcentre-a"
+                ng-reflect-id="courtHearingLocation"
+                ng-reflect-name="courtCentre"
+                ng-reflect-required=""
+                ng-reflect-suggestion-key="oucode"
+                ng-reflect-suggestion-title="name"
+                ng-reflect-suggestions=""
+                required=""
+              >
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                  ng-reflect-aria-described-by="aria-describedby-courtcentre-a"
+                  ng-reflect-disabled="false"
+                  ng-reflect-has-error="false"
+                  ng-reflect-highlight-color="blue"
+                  ng-reflect-id="courtHearingLocation"
+                  ng-reflect-input-type="text"
+                  ng-reflect-map-suggestion-to-key="function (suggestion) {
+        "
+                  ng-reflect-map-suggestion-to-label="function (suggestion) {
+        "
+                  ng-reflect-suggestion-template-ref="[object Object]"
+                  ng-reflect-suggestions=""
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-expanded="false"
+                          aria-owns="pdk-autosuggest__suggestions-container-26-listbox"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="courtHearingLocation"
+                          ng-reflect-has-error="false"
+                          ng-reflect-is-disabled="false"
+                          ng-reflect-model=""
+                          ng-reflect-options="[object Object]"
+                          role="combobox"
+                          type="text"
+                        />
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-26"
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+                
+              </pdk-autosuggest-lite>
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          
+          
+          
+          <div>
+            <pdk-form-field
+              class="filterSelect"
+              hint=""
+              id="dateOfHearing"
+              labeltype="small"
+              ng-reflect-error-messages="[object Object],[object Object"
+              ng-reflect-hint=""
+              ng-reflect-label="COMMON.HEARING.DATE"
+              ng-reflect-label-type="small"
+            >
+              
+              <pdk-form-group
+                class="pdk-form-group"
+                ng-reflect-has-error="false"
+              >
+                
+                <fieldset
+                  class="govuk-fieldset"
+                  pdk-fieldset=""
+                >
+                  
+                  <legend
+                    class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                    ng-reflect-hidden="false"
+                    ng-reflect-type="small"
+                  >
+                     COMMON.HEARING.DATE 
+                  </legend>
+                  
+                  
+                  <pdk-hint
+                    class="govuk-hint"
+                    ng-reflect-hint="date"
+                  >
+                    
+                    
+                    For example, 23 10 2017
+                    
+                  </pdk-hint>
+                  
+                  <pdk-date-input
+                    _nghost-a-c19=""
+                    class="ng-untouched ng-pristine ng-valid"
+                    data-role="hearing-date-filter-input"
+                    name="dateOfHearing"
+                    ng-reflect-aria-described-by="date"
+                    ng-reflect-future-date="true"
+                    ng-reflect-id="dateOfHearing"
+                    ng-reflect-name="dateOfHearing"
+                    ng-reflect-picker=""
+                    ng-reflect-required=""
+                    picker=""
+                    required=""
+                  >
+                    <div
+                      _ngcontent-a-c19=""
+                      class="pdk-date-input"
+                    >
+                      <div
+                        _ngcontent-a-c19=""
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                        ng-reflect-form="[object Object]"
+                      >
+                        <div
+                          _ngcontent-a-c19=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c19=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-day"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            _ngcontent-a-c19=""
+                            aria-describedby="date"
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="dateOfHearing-day"
+                            name="dateDay"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="day"
+                            ng-reflect-required=""
+                            ng-reflect-width="2"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          _ngcontent-a-c19=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c19=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-month"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            _ngcontent-a-c19=""
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="dateOfHearing-month"
+                            name="dateMonth"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="month"
+                            ng-reflect-required=""
+                            ng-reflect-width="2"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          _ngcontent-a-c19=""
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            _ngcontent-a-c19=""
+                            class="govuk-date-input__label govuk-label"
+                            for="dateOfHearing-year"
+                            ng-reflect-type=""
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            _ngcontent-a-c19=""
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="dateOfHearing-year"
+                            name="dateYear"
+                            ng-reflect-has-error="false"
+                            ng-reflect-name="year"
+                            ng-reflect-required=""
+                            ng-reflect-width="4"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div
+                        _ngcontent-a-c19=""
+                        class="pdk-!-negative-margin-left-2"
+                        ng-reflect-left="-2"
+                        pdk-margin-left="-2"
+                      >
+                        <pdk-date-picker-toggle
+                          _ngcontent-a-c19=""
+                          ng-reflect-disabled="false"
+                          ng-reflect-future-date="true"
+                          ng-reflect-past-date="false"
+                        >
+                          <pdk-interaction-container>
+                            <div>
+                              <div
+                                aria-expanded="false"
+                                aria-label="Toggle date picker"
+                                class="pdk-date-picker__toggle"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <pdk-date-picker-icon
+                                  style="margin-top: -4px; display: inline-block; vertical-align: middle;"
+                                >
+                                  <div
+                                    style="display: flex; align-items: center; justify-content: center;"
+                                  >
+                                    <i
+                                      style="height: 28px; width: 28px; fill: #333;"
+                                    >
+                                      <svg
+                                        viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
+                                        />
+                                      </svg>
+                                    </i>
+                                  </div>
+                                </pdk-date-picker-icon>
+                              </div>
+                              
+                            </div>
+                          </pdk-interaction-container>
+                        </pdk-date-picker-toggle>
+                      </div>
+                    </div>
+                  </pdk-date-input>
+                  
+                </fieldset>
+                
+              </pdk-form-group>
+            </pdk-form-field>
+          </div>
+          <pdk-form-field
+            hint=""
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-hint=""
+            ng-reflect-label="COMMON.HEARING.START_TIME"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.START_TIME 
+                </legend>
+                
+                
+                <pdk-hint
+                  class="govuk-hint"
+                  ng-reflect-hint="time"
+                >
+                  
+                  
+                  For example, 10 30
+                  
+                </pdk-hint>
+                
+                <pdk-time-input
+                  autoshift=""
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="hearing-earliest-start-input"
+                  labelhidden="false"
+                  name="timeOfHearing"
+                  ng-reflect-auto-shift=""
+                  ng-reflect-label-hidden="false"
+                  ng-reflect-name="timeOfHearing"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="pdk-time-input ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                  >
+                    <div
+                      class="pdk-time-input__item pdk-time-input__item--hour"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-18-hours"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Hours 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="hours"
+                        id="pdk-time-input-18-hours"
+                        maxlength="2"
+                        name="timeHours"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-name="hours"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="pdk-time-input__item"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-18-minutes"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Minutes 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="minutes"
+                        id="pdk-time-input-18-minutes"
+                        maxlength="2"
+                        minlength="2"
+                        name="timeMinutes"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-minlength="2"
+                        ng-reflect-name="minutes"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </pdk-time-input>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-error-messages="[object Object]"
+            ng-reflect-label="COMMON.HEARING.DURATION"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.DURATION 
+                </legend>
+                
+                
+                
+                <pdk-time-input
+                  class="ng-untouched ng-pristine ng-valid"
+                  data-role="hearing-estimated-minutes-input"
+                  labelhidden="false"
+                  name="hearingDuration"
+                  ng-reflect-auto-shift="false"
+                  ng-reflect-label-hidden="false"
+                  ng-reflect-model="0:20"
+                  ng-reflect-name="hearingDuration"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="pdk-time-input ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                  >
+                    <div
+                      class="pdk-time-input__item pdk-time-input__item--hour"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-20-hours"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Hours 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="hours"
+                        id="pdk-time-input-20-hours"
+                        maxlength="2"
+                        name="timeHours"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-name="hours"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="pdk-time-input__item"
+                    >
+                      <label
+                        class="govuk-label"
+                        for="pdk-time-input-20-minutes"
+                        ng-reflect-hidden="false"
+                        ng-reflect-type=""
+                        pdk-label=""
+                      >
+                         Minutes 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="minutes"
+                        id="pdk-time-input-20-minutes"
+                        maxlength="2"
+                        minlength="2"
+                        name="timeMinutes"
+                        ng-reflect-has-error="false"
+                        ng-reflect-maxlength="2"
+                        ng-reflect-minlength="2"
+                        ng-reflect-name="minutes"
+                        ng-reflect-pattern="[0-9]*"
+                        ng-reflect-required=""
+                        ng-reflect-width="2"
+                        pattern="[0-9]*"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </pdk-time-input>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <pdk-form-field
+            labeltype="small"
+            ng-reflect-label="COMMON.HEARING.LANGUAGES"
+            ng-reflect-label-type="small"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+              ng-reflect-has-error="false"
+            >
+              
+              <fieldset
+                class="govuk-fieldset"
+                pdk-fieldset=""
+              >
+                
+                <legend
+                  class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                  ng-reflect-hidden="false"
+                  ng-reflect-type="small"
+                >
+                   COMMON.HEARING.LANGUAGES 
+                </legend>
+                
+                
+                
+                <pdk-radio-group
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="hearingLanguage"
+                  ng-reflect-inline="true"
+                  ng-reflect-model="E"
+                  ng-reflect-name="hearingLanguage"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <div
+                    class="govuk-radios govuk-radios--inline"
+                  >
+                    
+                    <pdk-radio-button
+                      ng-reflect-value="E"
+                      value="E"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-23"
+                          name="pdk-radio-group-22"
+                          type="radio"
+                          value="E"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-23"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                          COMMON.ENGLISH
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <pdk-radio-button
+                      ng-reflect-value="W"
+                      value="W"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-24"
+                          name="pdk-radio-group-22"
+                          type="radio"
+                          value="W"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-24"
+                          ng-reflect-type=""
+                          pdk-label=""
+                        >
+                          COMMON.WELSH
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                  </div>
+                </pdk-radio-group>
+                
+              </fieldset>
+              
+            </pdk-form-group>
+          </pdk-form-field>
+        </pdk-grid>
+        <button
+          class="govuk-button"
+          data-role="send-for-listing"
+          name="continue"
+          ng-reflect-type=""
+          pdk-button=""
+          type="submit"
+        >
+           COMMON.CONTINUE 
+        </button>
+        <br />
+        <p
+          class="govuk-!-margin-top-3"
+          ng-reflect-top="3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="javascript:void(0)"
+            ng-reflect-unvisited=""
+            pdk-link=""
+            unvisited=""
+          >
+             COMMON.BACK 
+          </a>
+        </p>
+      </pdk-grid>
+    </form>
+  </pdk-grid>
+</manual-case-hearing-details>
+`;
