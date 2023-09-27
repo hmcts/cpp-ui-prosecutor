@@ -27,4 +27,9 @@ describe('FormatAddressPipe', () => {
     );
     expect(result).toEqual('a,b,c,d,e');
   });
+
+  it('should return null if address is null', () => {
+    const result = pipe.transform(null, ',');
+    expect(result).toBe(null);
+  });
 });

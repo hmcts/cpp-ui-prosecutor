@@ -1,29 +1,41 @@
 export interface Case {
   id: string;
+  aocpEligible?: boolean;
+  aocpTotalCost?: number;
+  aocpVictimSurcharge?: number;
+  defendantAcceptedAocp?: boolean;
+  resultedThroughAocp?: boolean;
   urn: string;
-  enterpriseId: string;
-  assigned: boolean;
-  adjournedTo?: string;
-  completed: boolean;
-  costs: number;
   dateTimeCreated: string;
-  listedInCriminalCourts: boolean;
-  hearingCourtName?: string;
-  hearingTime?: string;
-  onlinePleaReceived: boolean;
-  postingDate: string;
-  reopenedInLibraReason?: string;
-  reopenedDate?: string;
+  caseDocuments: CaseDocument[];
   prosecutingAuthority: string;
   prosecutingAuthorityName: string;
-  status: string;
-  caseDocuments: CaseDocument[];
-  defendant: Defendant;
-  datesToAvoid?: string;
-  libraCaseNumber?: string; // todo check
+  completed: boolean;
+  assigned: boolean;
+  costs: number;
+  postingDate: string;
+  enterpriseId: string;
+  onlinePleaReceived: boolean;
+  status: CaseStatus;
+  managedByATCM: boolean;
+  listedInCriminalCourts: boolean;
+  policeFlag: boolean;
+  postConviction: boolean;
+  setAside: boolean;
   caseDecisions?: CaseDecision[];
+  datesToAvoid?: string;
+  defendant?: Defendant;
+  hearingCourtName?: string;
+  hearingTime?: string;
+  libraCaseNumber?: string;
+  reopenedDate?: string;
+  reopenedInLibraReason?: string;
   caseApplication?: Application;
   ccApplicationStatus?: ApplicationStatus;
+  hasPotentialCase?: boolean;
+  reservedAt?: string;
+  reservedBy?: string;
+  reservedByName?: string;
 }
 
 export interface Application {
@@ -40,7 +52,7 @@ export interface Application {
 }
 
 export type ApplicationStatus =
-  'STATUTORY_DECLARATION_PENDING'
+  | 'STATUTORY_DECLARATION_PENDING'
   | 'STATUTORY_DECLARATION_GRANTED'
   | 'STATUTORY_DECLARATION_REFUSED'
   | 'STATUTORY_DECLARATION_WITHDRAWN'
@@ -57,17 +69,43 @@ export type ApplicationStatus =
   | 'APPLICATION_STATUS_NOT_KNOWN'
   | 'APPLICATION_DISMISSED_SENTENCE_VARIED';
 
-export interface Defendant {
-  id: string;
-  interpreter: Interpreter;
-  caseId: string;
-  numPreviousConvictions: number;
-  speakWelsh?: boolean;
-  offences: Offence[];
-  personalDetails?: PersonalDetails;
-  legalEntityDetails?: LegalEntityDetails;
+export type CaseStatus =
+  | 'ACTIVE'
+  | 'APPEALED'
+  | 'CLOSED'
+  | 'COMPLETED'
+  | 'COMPLETED_APPLICATION_PENDING'
+  | 'EJECTED'
+  | 'INACTIVE'
+  | 'INCOMPLETE'
+  | 'NO_PLEA_RECEIVED'
+  | 'NO_PLEA_RECEIVED_READY_FOR_DECISION'
+  | 'PLEA_RECEIVED_NOT_READY_FOR_DECISION'
+  | 'PLEA_RECEIVED_READY_FOR_DECISION'
+  | 'READY_FOR_REVIEW'
+  | 'REFERRED_FOR_COURT_HEARING'
+  | 'RELISTED'
+  | 'REOPENED_IN_LIBRA'
+  | 'SET_ASIDE_READY_FOR_DECISION'
+  | 'SJP_REFERRAL'
+  | 'WITHDRAWAL_REQUEST_READY_FOR_DECISION';
+
+export interface Employment {
+  status: EmploymentStatusType;
+  details: string;
 }
 
+export interface Defendant {
+  id: string;
+  caseId: string;
+  speakWelsh?: boolean;
+  offences?: Offence[];
+  interpreter?: Interpreter;
+  disabilityNeeds?: DisabilityNeeds;
+  personalDetails?: PersonalDetails;
+  legalEntityDetails?: LegalEntityDetails;
+  numPreviousConvictions: number;
+}
 export interface Offence {
   id: string;
   chargeDate: string;
@@ -126,12 +164,15 @@ export interface CaseDocumentMetaData {
 }
 
 export type CaseDocumentType =
-  'SJPN'
+  | 'SJPN'
   | 'PLEA'
   | 'EMPLOYER_ATTACHMENT_TO_EARNINGS'
   | 'RESULT_ORDER'
+  | 'DISQUALIFICATION_REPLY_SLIP'
   | 'CITN'
-  | 'APPLICATION';
+  | string;
+
+export type EmploymentStatusType = 'EMPLOYED' | 'SELF_EMPLOYED' | 'UNEMPLOYED' | 'OTHER' | 'UNKNOWN';
 
 export interface LegalEntityDetails {
   address: Address;
@@ -424,10 +465,12 @@ export interface OnlinePlea {
   caseId: string;
   defendantId: string;
   submittedOn: string;
-  pleaDetails: PleaDetails;
+  pleaDetails?: PleaDetails;
   onlinePleaDetails: OnlinePleaDetail[];
-  personalDetails: OnlinePleaPersonalDetails;
+  personalDetails?: OnlinePleaPersonalDetails;
+  employment?: OnlinePleaEmployment;
   employer?: OnlinePleaEmployer;
+  outgoings?: Outgoings;
 }
 
 export interface PleaDetails {
@@ -457,12 +500,34 @@ export interface OnlinePleaDetail {
   offenceTitle: string;
 }
 
+export interface Outgoings {
+  accommodationAmount?: number;
+  councilTaxAmount?: number;
+  householdBillsAmount?: number;
+  travelExpensesAmount?: number;
+  childMaintenanceAmount?: number;
+  otherDescription?: string;
+  otherAmount?: number;
+  monthlyAmount?: number;
+}
+
 export interface OnlinePleaEmployer {
   employeeReference: string;
   name: string;
   phone: string;
   address: Address;
 }
+
+export interface OnlinePleaEmployment {
+  incomePaymentFrequency?: string;
+  incomePaymentAmount?: number;
+  employmentStatus?: EmploymentStatusType;
+  employmentStatusDetails?: string;
+  benefitsClaimed?: boolean;
+  benefitsType?: string;
+  benefitsDeductPenaltyPreference?: boolean;
+}
+
 export interface OnlinePleaPersonalDetails {
   firstName: string;
   lastName: string;
@@ -519,3 +584,40 @@ export interface ApplicationDecision {
 }
 
 export type ApplicationType = 'STAT_DEC' | 'REOPENING';
+
+export type PenaltyType = 'Excise penalty' | '';
+export type PleaStatus =
+  | 'GUILTY'
+  | 'GUILTY_CASE_COMPLETED'
+  | 'GUILTY_REQUEST_HEARING'
+  | 'NOT_GUILTY'
+  | 'NO_PLEA'
+  | 'AOCP_PENDING';
+export type PleaType =
+  | 'GUILTY'
+  | 'GUILTY_CASE_COMPLETED'
+  | 'GUILTY_REQUEST_HEARING'
+  | 'NOT_GUILTY'
+  | 'NO_PLEA'
+  | 'AOCP_PENDING';
+
+export type IncomeFrequency = 'WEEKLY' | 'FORTNIGHTLY' | 'MONTHLY' | 'YEARLY';
+
+export const FrequencyOptions: { value: IncomeFrequency; label: string }[] = [
+  {
+    value: 'WEEKLY',
+    label: 'Weekly'
+  },
+  {
+    value: 'FORTNIGHTLY',
+    label: 'Fortnightly'
+  },
+  {
+    value: 'MONTHLY',
+    label: 'Monthly'
+  },
+  {
+    value: 'YEARLY',
+    label: 'Yearly'
+  }
+];

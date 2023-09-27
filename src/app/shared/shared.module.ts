@@ -68,6 +68,7 @@ import { NationalityAutoSuggestComponent } from './components/auto-suggest/natio
 import { EthnicityAutoSuggestComponent } from './components/auto-suggest/Ethnicity/ethnicity-auto-suggest.component';
 import { EthnicityCodeAutoSuggestComponent } from './components/auto-suggest/EthnicityCode/ethnicity-code-auto-suggest.component';
 import { DynamicParticularFormComponent } from '../manual-case/case-defendant-offence/dynamic-particular-form.component';
+import { EmploymentStatusModule } from './pipes/employment-status/employment-status.module';
 
 const MODULE_EXPORT = [
   ApplicationStatusPipeModule,
@@ -75,6 +76,7 @@ const MODULE_EXPORT = [
   AddressPipeModule,
   CapitalizePipeModule,
   DashPipeModule,
+  EmploymentStatusModule,
   FullNamePipeModule,
   DefendantNamePipeModule,
   FormatAddressPipeModule,

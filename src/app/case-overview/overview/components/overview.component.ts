@@ -63,7 +63,7 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
                 </a>
               </div>
             </ng-container>
-            <ng-container *ngIf="kase.onlinePleaReceived">
+            <ng-container *ngIf="kase.onlinePleaReceived || kase.defendantAcceptedAocp">
               <h1 pdk-typography="heading-medium" pdk-margin-top="3" pdk-margin-bottom="1">Online plea</h1>
               <a
                 href="javascript: void(0)"
@@ -163,6 +163,7 @@ export class OverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.showSideBar = (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived;
+    this.showSideBar = (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived || this.kase.defendantAcceptedAocp;
   }
+
 }

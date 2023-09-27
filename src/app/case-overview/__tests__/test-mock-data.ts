@@ -10,7 +10,6 @@ import {
   DismissOffenceDecision,
   FinancialPenaltyOffenceDecision,
   DischargeOffenceDecision,
-  OnlinePlea,
   CaseNotes,
   LegalEntityDetails,
   DefendantOnlinePlea
@@ -65,7 +64,6 @@ export const MOCK_OFFENCES: Offence[] = [
 
 export const MOCK_CASE: Case = {
   id: 'case-id-test',
-  datesToAvoid: 'datesToAvoid1',
   urn: 'TFL26168N21T5',
   defendant: {
     id: 'defendantId1',
@@ -92,6 +90,7 @@ export const MOCK_CASE: Case = {
       contactDetails: {
         mobile: '77777777',
         email: 'a@a.com',
+        niNumber: 'WWWWWWW',
         home: '333333333'
       } as ContactDetails,
       dobChanged: false,
@@ -107,7 +106,9 @@ export const MOCK_CASE: Case = {
       documentType: 'PLEA',
       documentNumber: 1,
       addedAt: '2019-02-25T09:30:24.442Z',
-      metadata: {} as CaseDocumentMetaData
+      metadata: {
+        fileName: 'fileName.pdf'
+      } as CaseDocumentMetaData
     },
     {
       id: 'documentId2',
@@ -115,7 +116,19 @@ export const MOCK_CASE: Case = {
       documentType: 'SJPN',
       documentNumber: 1,
       addedAt: '2019-02-24T16:35:56.558Z',
-      metadata: {} as CaseDocumentMetaData
+      metadata: {
+        fileName: 'fileName1.pdf'
+      } as CaseDocumentMetaData
+    },
+    {
+      id: 'documentId3',
+      materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
+      documentType: 'CITN',
+      documentNumber: 1,
+      addedAt: '2019-02-24T16:35:56.558Z',
+      metadata: {
+        fileName: 'fileName1.pdf'
+      } as CaseDocumentMetaData
     }
   ],
   prosecutingAuthority: 'TFL',
@@ -127,12 +140,15 @@ export const MOCK_CASE: Case = {
   enterpriseId: 'Z8QG1JR7CMTD',
   onlinePleaReceived: false,
   status: 'COMPLETED',
-  listedInCriminalCourts: false
+  listedInCriminalCourts: false,
+  policeFlag: false,
+  postConviction: false,
+  setAside: false,
+  managedByATCM: false
 };
 
 export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
   id: 'case-id-test',
-  datesToAvoid: 'datesToAvoid1',
   urn: 'TFL26168N21T5',
   defendant: {
     id: 'defendantId1',
@@ -169,7 +185,9 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
       documentType: 'PLEA',
       documentNumber: 1,
       addedAt: '2019-02-25T09:30:24.442Z',
-      metadata: {} as CaseDocumentMetaData
+      metadata: {
+        fileName: 'fileName.pdf'
+      } as CaseDocumentMetaData
     },
     {
       id: 'documentId2',
@@ -177,7 +195,19 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
       documentType: 'SJPN',
       documentNumber: 1,
       addedAt: '2019-02-24T16:35:56.558Z',
-      metadata: {} as CaseDocumentMetaData
+      metadata: {
+        fileName: 'fileName1.pdf'
+      } as CaseDocumentMetaData
+    },
+    {
+      id: 'documentId3',
+      materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
+      documentType: 'CITN',
+      documentNumber: 1,
+      addedAt: '2019-02-24T16:35:56.558Z',
+      metadata: {
+        fileName: 'fileName1.pdf'
+      } as CaseDocumentMetaData
     }
   ],
   prosecutingAuthority: 'TFL',
@@ -189,7 +219,11 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
   enterpriseId: 'Z8QG1JR7CMTD',
   onlinePleaReceived: false,
   status: 'COMPLETED',
-  listedInCriminalCourts: false
+  listedInCriminalCourts: false,
+  policeFlag: false,
+  postConviction: false,
+  setAside: false,
+  managedByATCM: false
 };
 
 export const MOCK_CASE_DECISION: CaseDecision = {
@@ -474,24 +508,24 @@ export const MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION: CaseDecision = {
 
 export const MOCK_ONLINE_PLEA_DETAIL: DefendantOnlinePlea = {
   pleas: [{
-    caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-    defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+    caseId: 'caseId',
+    defendantId: 'defendantId',
     submittedOn: '2019-10-18T15:10:28.881Z',
     onlinePleaDetails: [
       {
-        id: '6ff1d156-666d-4fe8-b1bc-44ce3d496098',
-        offenceId: '95ce81a7-335a-4233-b2ca-04f8f5bc5b19',
-        caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-        defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+        id: 'onlinePleaId1',
+        offenceId: 'offenceId1',
+        caseId: 'caseId',
+        defendantId: 'defendantId',
         plea: 'NOT_GUILTY',
         notGuiltyBecause: 'Not guilty plea1',
         offenceTitle: 'Obstruct person executing search warrant for TV receiver'
       },
       {
-        id: 'ad6ace2c-7881-457f-86f4-2cc8e38cdbd1',
-        offenceId: 'e0d5fafb-7e63-4d8a-987a-26a9120bfa52',
-        caseId: 'c273a505-ea67-4a3d-857e-80e7477e0204',
-        defendantId: '606dc963-90af-4633-9b6e-eaff01ebf53a',
+        id: 'onlinePleaId2',
+        offenceId: 'offenceId2',
+        caseId: 'caseId',
+        defendantId: 'defendantId',
         plea: 'GUILTY',
         mitigation: 'Guilty plea mitigation2',
         offenceTitle: 'Use / install a television set without a licence'
@@ -522,6 +556,24 @@ export const MOCK_ONLINE_PLEA_DETAIL: DefendantOnlinePlea = {
       speakWelsh: true,
       outstandingFines: true,
       interpreterRequired: true
+    },
+    employment: {
+      incomePaymentFrequency: 'WEEKLY',
+      incomePaymentAmount: 0.0,
+      employmentStatus: 'UNEMPLOYED',
+      benefitsClaimed: true,
+      benefitsType: 'childcare',
+      benefitsDeductPenaltyPreference: false
+    },
+    outgoings: {
+      accommodationAmount: 1.0,
+      councilTaxAmount: 2.0,
+      householdBillsAmount: 3.0,
+      travelExpensesAmount: 4.0,
+      childMaintenanceAmount: 5.0,
+      otherDescription: 'TV licence',
+      otherAmount: 23.0,
+      monthlyAmount: 38.0
     }
   }]
 };

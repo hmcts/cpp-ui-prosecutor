@@ -11,7 +11,6 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
     <div>
       {
     "id": "case-id-test",
-    "datesToAvoid": "datesToAvoid1",
     "urn": "TFL26168N21T5",
     "defendant": {
       "id": "defendantId1",
@@ -73,6 +72,7 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
         "contactDetails": {
           "mobile": "77777777",
           "email": "a@a.com",
+          "niNumber": "WWWWWWW",
           "home": "333333333"
         },
         "dobChanged": false,
@@ -88,7 +88,9 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
         "documentType": "PLEA",
         "documentNumber": 1,
         "addedAt": "2019-02-25T09:30:24.442Z",
-        "metadata": {}
+        "metadata": {
+          "fileName": "fileName.pdf"
+        }
       },
       {
         "id": "documentId2",
@@ -96,7 +98,19 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
         "documentType": "SJPN",
         "documentNumber": 1,
         "addedAt": "2019-02-24T16:35:56.558Z",
-        "metadata": {}
+        "metadata": {
+          "fileName": "fileName1.pdf"
+        }
+      },
+      {
+        "id": "documentId3",
+        "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+        "documentType": "CITN",
+        "documentNumber": 1,
+        "addedAt": "2019-02-24T16:35:56.558Z",
+        "metadata": {
+          "fileName": "fileName1.pdf"
+        }
       }
     ],
     "prosecutingAuthority": "TFL",
@@ -108,7 +122,11 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
     "enterpriseId": "Z8QG1JR7CMTD",
     "onlinePleaReceived": false,
     "status": "COMPLETED",
-    "listedInCriminalCourts": false
+    "listedInCriminalCourts": false,
+    "policeFlag": false,
+    "postConviction": false,
+    "setAside": false,
+    "managedByATCM": false
   }
     </div>
   </case-header-badge>

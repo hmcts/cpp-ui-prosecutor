@@ -155,7 +155,7 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>
@@ -323,7 +323,7 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>
@@ -493,7 +493,7 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>
@@ -726,7 +726,7 @@ exports[`CaseDetailsComponent should display application if application is prese
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>
@@ -898,7 +898,7 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>
@@ -1061,7 +1061,7 @@ exports[`CaseDetailsComponent should not display application details if no appli
           ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-           datesToAvoid1 
+           – 
         </div>
       </pdk-grid>
     </pdk-grid>

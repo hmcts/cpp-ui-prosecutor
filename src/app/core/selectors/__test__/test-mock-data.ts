@@ -107,6 +107,7 @@ export const MOCK_CASE: Case = {
       contactDetails: {
         mobile: '77777777',
         email: 'a@a.com',
+        niNumber: 'WWWWWWW',
         home: '333333333'
       } as ContactDetails,
       dobChanged: false,
@@ -118,7 +119,7 @@ export const MOCK_CASE: Case = {
   caseDocuments: [
     {
       id: 'documentId1',
-      materialId: 'materialId',
+      materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
       documentType: 'PLEA',
       documentNumber: 1,
       addedAt: '2019-02-25T09:30:24.442Z',
@@ -128,12 +129,22 @@ export const MOCK_CASE: Case = {
     },
     {
       id: 'documentId2',
-      materialId: 'materialId',
+      materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'SJPN',
       documentNumber: 1,
       addedAt: '2019-02-24T16:35:56.558Z',
       metadata: {
-        fileName: 'fileName.pdf'
+        fileName: 'fileName1.pdf'
+      } as CaseDocumentMetaData
+    },
+    {
+      id: 'documentId3',
+      materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
+      documentType: 'CITN',
+      documentNumber: 1,
+      addedAt: '2019-02-24T16:35:56.558Z',
+      metadata: {
+        fileName: 'fileName1.pdf'
       } as CaseDocumentMetaData
     }
   ],
@@ -146,7 +157,11 @@ export const MOCK_CASE: Case = {
   enterpriseId: 'Z8QG1JR7CMTD',
   onlinePleaReceived: false,
   status: 'COMPLETED',
-  listedInCriminalCourts: false
+  listedInCriminalCourts: false,
+  policeFlag: false,
+  postConviction: false,
+  setAside: false,
+  managedByATCM: false
 };
 
 export const MOCK_OFFENCE_WITHDRAWAL_REASON: OffenceWithdrawalReason[] = [
