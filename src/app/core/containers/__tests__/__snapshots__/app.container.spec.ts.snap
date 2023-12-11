@@ -408,6 +408,11 @@ exports[`App page component should compile correctly 1`] = `
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c1=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c1=""
                     >
@@ -424,16 +429,11 @@ exports[`App page component should compile correctly 1`] = `
                       <dd
                         _ngcontent-a-c1=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c1=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c1=""
                     >
@@ -442,25 +442,7 @@ exports[`App page component should compile correctly 1`] = `
                       <dt
                         _ngcontent-a-c1=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c1=""
-                      >
-                        <a
-                          _ngcontent-a-c1=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c1=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c1=""
@@ -963,6 +945,11 @@ exports[`App page component should compile correctly when search is available 1`
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c117=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c117=""
                     >
@@ -979,16 +966,11 @@ exports[`App page component should compile correctly when search is available 1`
                       <dd
                         _ngcontent-a-c117=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c117=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c117=""
                     >
@@ -997,25 +979,7 @@ exports[`App page component should compile correctly when search is available 1`
                       <dt
                         _ngcontent-a-c117=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c117=""
-                      >
-                        <a
-                          _ngcontent-a-c117=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c117=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c117=""
@@ -1547,6 +1511,11 @@ exports[`App page component should detect when the app is busy 1`] = `
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c42=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c42=""
                     >
@@ -1563,16 +1532,11 @@ exports[`App page component should detect when the app is busy 1`] = `
                       <dd
                         _ngcontent-a-c42=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c42=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c42=""
                     >
@@ -1581,25 +1545,7 @@ exports[`App page component should detect when the app is busy 1`] = `
                       <dt
                         _ngcontent-a-c42=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c42=""
-                      >
-                        <a
-                          _ngcontent-a-c42=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c42=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c42=""
@@ -2129,6 +2075,11 @@ exports[`App page component should track any api errors 1`] = `
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c102=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c102=""
                     >
@@ -2145,16 +2096,11 @@ exports[`App page component should track any api errors 1`] = `
                       <dd
                         _ngcontent-a-c102=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c102=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c102=""
                     >
@@ -2163,25 +2109,7 @@ exports[`App page component should track any api errors 1`] = `
                       <dt
                         _ngcontent-a-c102=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c102=""
-                      >
-                        <a
-                          _ngcontent-a-c102=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c102=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c102=""
@@ -2711,6 +2639,11 @@ exports[`App page component should track the offline status of the container 1`]
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c72=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c72=""
                     >
@@ -2727,16 +2660,11 @@ exports[`App page component should track the offline status of the container 1`]
                       <dd
                         _ngcontent-a-c72=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c72=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c72=""
                     >
@@ -2745,25 +2673,7 @@ exports[`App page component should track the offline status of the container 1`]
                       <dt
                         _ngcontent-a-c72=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c72=""
-                      >
-                        <a
-                          _ngcontent-a-c72=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c72=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c72=""
@@ -3266,6 +3176,11 @@ exports[`App page component should track the online status of the container 1`] 
                     >
                       Help desk
                     </h2>
+                    <div
+                      _ngcontent-a-c87=""
+                    >
+                      HMCTS DTS IT Service Desk
+                    </div>
                     <dl
                       _ngcontent-a-c87=""
                     >
@@ -3282,16 +3197,11 @@ exports[`App page component should track the online status of the container 1`] 
                       <dd
                         _ngcontent-a-c87=""
                       >
-                        Monday to Friday, 8am to 6pm (excluding public holidays)
+                        Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
                     
                     
-                    <h3
-                      _ngcontent-a-c87=""
-                    >
-                      Help by email
-                    </h3>
                     <dl
                       _ngcontent-a-c87=""
                     >
@@ -3300,25 +3210,7 @@ exports[`App page component should track the online status of the container 1`] 
                       <dt
                         _ngcontent-a-c87=""
                       >
-                        CPS (Crown Prosecution Service) users only
-                      </dt>
-                      <dd
-                        _ngcontent-a-c87=""
-                      >
-                        <a
-                          _ngcontent-a-c87=""
-                          class="govuk-footer__link"
-                          href="mailto:CJSCP-ServiceDesk@hmcts.gsi.gov.uk?Subject=General%20enquiry"
-                          pdk-footer-link=""
-                        >
-                           CJSCP-ServiceDesk@hmcts.gsi.gov.uk 
-                        </a>
-                      </dd>
-                      
-                      <dt
-                        _ngcontent-a-c87=""
-                      >
-                        All other users
+                        Email
                       </dt>
                       <dd
                         _ngcontent-a-c87=""
