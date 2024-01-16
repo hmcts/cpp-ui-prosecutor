@@ -5,7 +5,7 @@ import {
   PdkDateInputModule,
   PdkRadioInputModule,
   PdkSelectModule,
-  PdkTextInputModule,
+  PdkTextInputModule
 } from '@cpp/pdk';
 
 import { CommonModule } from '@angular/common';
@@ -20,29 +20,29 @@ import { By } from '@angular/platform-browser';
 
 const offenceTypes = [
   { value: 3, label: 'after' },
-  { value: 4, label: 'between' },
+  { value: 4, label: 'between' }
 ];
 
 const sections = [
   {
     type: ElementType.Dropdown,
     label: 'Offence date type',
-    value: 4,
+    value: 4
   },
   {
     type: ElementType.Date,
     label: 'Specify Date',
     value: '2018-10-15',
-    valueTwo: '2018-12-20',
+    valueTwo: '2018-12-20'
   },
   {
     type: ElementType.Label,
-    label: 'occurring at',
+    label: 'occurring at'
   },
   {
     type: ElementType.Text,
     label: 'Specify township',
-    value: 'Liverpool street',
+    value: 'Liverpool street'
   },
   {
     type: ElementType.List,
@@ -56,22 +56,22 @@ const sections = [
           {
             type: ElementType.Text,
             label: 'Specify person',
-            value: 'Mr. Dora DIMSUM',
+            value: 'Mr. Dora DIMSUM'
           },
           {
             type: ElementType.Label,
-            label: 'to have possession of an official document, namely',
+            label: 'to have possession of an official document, namely'
           },
           {
             type: ElementType.Text,
             label: 'Specify document',
-            value: 'The secret code',
+            value: 'The secret code'
           },
           {
             type: ElementType.Label,
-            label: 'issued for your use alone',
-          },
-        ],
+            label: 'issued for your use alone'
+          }
+        ]
       },
       {
         type: ElementType.Radio,
@@ -80,16 +80,16 @@ const sections = [
         children: [
           {
             type: ElementType.Text,
-            label: 'Specify to whom word was communicated',
+            label: 'Specify to whom word was communicated'
           },
           {
             type: ElementType.Label,
-            label: 'a secret official code word issued for use alone',
-          },
-        ],
-      },
-    ],
-  },
+            label: 'a secret official code word issued for use alone'
+          }
+        ]
+      }
+    ]
+  }
 ] as Element[];
 
 describe('Organisation Defendant Form Component', () => {
@@ -109,7 +109,7 @@ describe('Organisation Defendant Form Component', () => {
   };
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       imports: [
         CommonModule,
         FormsModule,
@@ -119,10 +119,10 @@ describe('Organisation Defendant Form Component', () => {
         PdkFormModule,
         PdkDateInputModule,
         PdkTextInputModule,
-        TranslateModule.forRoot(),
+        TranslateModule.forRoot()
       ],
       providers: [OffenceWordingService],
-      declarations: [TestHostDynamicFormComponent, DynamicParticularFormComponent],
+      declarations: [TestHostDynamicFormComponent, DynamicParticularFormComponent]
     });
 
     fixture = TestBed.createComponent(TestHostDynamicFormComponent);
@@ -137,8 +137,7 @@ describe('Organisation Defendant Form Component', () => {
 
   it('should update offence wording when particulars form is updated', async () => {
     await asyncSetUpData({ sections, title: '' });
-    const dynamicForm = fixture.debugElement.query(By.directive(DynamicParticularFormComponent))
-      .componentInstance;
+    const dynamicForm = fixture.debugElement.query(By.directive(DynamicParticularFormComponent)).componentInstance;
     fixture.debugElement.query(By.css('button[type="submit"]')).nativeElement.click();
     fixture.detectChanges();
 
@@ -154,16 +153,16 @@ describe('Organisation Defendant Form Component', () => {
     const blankSections = [
       {
         type: ElementType.Dropdown,
-        label: 'Offence date type',
+        label: 'Offence date type'
       },
       {
         type: ElementType.Date,
-        label: 'Specify Date',
+        label: 'Specify Date'
       },
       {
         type: ElementType.List,
-        list: [],
-      },
+        list: []
+      }
     ] as Element[];
     await asyncSetUpData({ sections: blankSections, title: '' });
     fixture.debugElement.query(By.css('button[type="submit"]')).nativeElement.click();
@@ -173,15 +172,17 @@ describe('Organisation Defendant Form Component', () => {
 
 @Component({
   selector: 'host-dynamic-form',
-  template: `<dynamic-particular-form
-    name="dynamicParticularFormData"
-    [offenceDateTypes]="offenceTypes"
-    [ngModel]="data"
-    (ngModelChange)="dynamicFormChange($event)"
-    [offenceWording]="offenceWording"
-    (onError)="onError($event)"
-  >
-  </dynamic-particular-form>`,
+  template: `
+    <dynamic-particular-form
+      name="dynamicParticularFormData"
+      [offenceDateTypes]="offenceTypes"
+      [ngModel]="data"
+      (ngModelChange)="dynamicFormChange($event)"
+      [offenceWording]="offenceWording"
+      (formError)="onError($event)"
+    >
+    </dynamic-particular-form>
+  `
 })
 class TestHostDynamicFormComponent {
   constructor(private wordingService: OffenceWordingService) {}
@@ -189,11 +190,7 @@ class TestHostDynamicFormComponent {
   offenceWording: string;
   offenceTypes: FormListOption[];
   dynamicFormChange = jest.fn((data: OffenceWordingMessage) => {
-    this.offenceWording = this.wordingService.buildParticularWording(
-      data.sections,
-      this.offenceTypes,
-      {} as Offence
-    );
+    this.offenceWording = this.wordingService.buildParticularWording(data.sections, this.offenceTypes, {} as Offence);
   });
   onError = jest.fn();
 }

@@ -7,14 +7,9 @@
       }}</span>
     </pdk-grid>
     <pdk-grid one-third class="change-link">
-      <a
-        pdk-link
-        unvisited
-        href="javascript:void(0)"
-        (click)="onEdit()"
-        data-role="case-detail-change-link"
-        >{{ 'MANUAL_CASE_SUMMARY.CHANGE' | translate }}</a
-      >
+      <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit()" data-role="case-detail-change-link">{{
+        'MANUAL_CASE_SUMMARY.CHANGE' | translate
+      }}</a>
     </pdk-grid>
   </pdk-grid>
   <table pdk-table>
@@ -40,8 +35,7 @@
           {{ 'MANUAL_CASE_DETAIL.RECEIPT_TYPE' | translate }}
         </th>
         <td pdk-table-cell class="data" data-role="receipt-type">
-          {{ manualCase.trialReceiptType
-          }}<span *ngIf="hasEitherWayType()"> - {{ manualCase.eitherWayType }}</span>
+          {{ manualCase.trialReceiptType }}<span *ngIf="hasEitherWayType()"> - {{ manualCase.eitherWayType }}</span>
         </td>
       </tr>
       <tr pdk-table-row class="table-row">

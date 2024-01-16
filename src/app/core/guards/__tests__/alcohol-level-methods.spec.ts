@@ -19,13 +19,13 @@ describe('Alcohol Level Methods Guard', () => {
     {
       id: 'f833257e-e355-4c72-838b-d236db530226',
       methodCode: 'B01',
-      methodDescription: 'Breath',
+      methodDescription: 'Breath'
     },
     {
       id: 'd15a29d0-68b4-4a4f-8c46-c1316d7238eb',
       methodCode: 'B02',
-      methodDescription: 'Blood',
-    },
+      methodDescription: 'Blood'
+    }
   ];
 
   beforeEach(() => {
@@ -41,16 +41,16 @@ describe('Alcohol Level Methods Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getAlcoholLevelMethod,
-          },
+            getAlcoholLevelMethod
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(AlcoholLevelMethodsGuard);
@@ -72,9 +72,7 @@ describe('Alcohol Level Methods Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getAlcoholLevelMethod).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadAlcoholLevelMethodsSuccessAction(alcoholLevelMethods)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadAlcoholLevelMethodsSuccessAction(alcoholLevelMethods));
       });
     });
 

@@ -3,7 +3,7 @@
 exports[`DevTools - Select User component compiles 1`] = `
 <dev-tools-select-user
   form={[Function NgForm]}
-  selectUser={[Function EventEmitter]}
+  selectUser={[Function EventEmitter_]}
   users={[Function Array]}
 >
   <div
@@ -13,8 +13,6 @@ exports[`DevTools - Select User component compiles 1`] = `
   >
     <h1
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
       pdk-margin-vertical="8"
       pdk-typography="heading-xlarge"
     >
@@ -22,7 +20,6 @@ exports[`DevTools - Select User component compiles 1`] = `
     </h1>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Select a user
@@ -33,27 +30,13 @@ exports[`DevTools - Select User component compiles 1`] = `
       pdk-form=""
     >
       <pdk-form-field>
-        
         <pdk-form-group
           class="pdk-form-group"
-          ng-reflect-has-error="false"
         >
-          
-          
-          
-          
-          
-          
-          
           <pdk-select
             class="ng-untouched ng-pristine ng-valid"
             id="selectUser"
             name="userId"
-            ng-reflect-id="selectUser"
-            ng-reflect-name="userId"
-            ng-reflect-options="[object Object]"
-            ng-reflect-placeholder="---Please select---"
-            ng-reflect-required=""
             placeholder="---Please select---"
             required=""
           >
@@ -63,26 +46,18 @@ exports[`DevTools - Select User component compiles 1`] = `
               name="userId"
               required=""
             >
-              
-              
               <option
-                ng-reflect-value=""
                 value=""
               >
                 ---Please select---
               </option>
-              
-              
               <option
-                ng-reflect-value="userId"
                 value="userId"
               >
                  Mock User 
               </option>
             </select>
           </pdk-select>
-          
-          
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group
@@ -104,7 +79,7 @@ exports[`DevTools - Select User component compiles 1`] = `
 exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
 <dev-tools-select-user
   form={[Function NgForm]}
-  selectUser={[Function EventEmitter]}
+  selectUser={[Function EventEmitter_]}
   userId={[Function String]}
   users={[Function Array]}
 >
@@ -115,8 +90,6 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
   >
     <h1
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
       pdk-margin-vertical="8"
       pdk-typography="heading-xlarge"
     >
@@ -124,7 +97,6 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
     </h1>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Select a user
@@ -135,28 +107,13 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
       pdk-form=""
     >
       <pdk-form-field>
-        
         <pdk-form-group
           class="pdk-form-group"
-          ng-reflect-has-error="false"
         >
-          
-          
-          
-          
-          
-          
-          
           <pdk-select
             class="ng-untouched ng-valid ng-dirty"
             id="selectUser"
             name="userId"
-            ng-reflect-id="selectUser"
-            ng-reflect-model="userId"
-            ng-reflect-name="userId"
-            ng-reflect-options="[object Object]"
-            ng-reflect-placeholder="---Please select---"
-            ng-reflect-required=""
             placeholder="---Please select---"
             required=""
           >
@@ -166,26 +123,18 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
               name="userId"
               required=""
             >
-              
-              
               <option
-                ng-reflect-value=""
                 value=""
               >
                 ---Please select---
               </option>
-              
-              
               <option
-                ng-reflect-value="userId"
                 value="userId"
               >
                  Mock User 
               </option>
             </select>
           </pdk-select>
-          
-          
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group
@@ -206,7 +155,7 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
 exports[`DevTools - Select User component it shows error messages when form is submitted with no input 1`] = `
 <dev-tools-select-user
   form={[Function NgForm]}
-  selectUser={[Function EventEmitter]}
+  selectUser={[Function EventEmitter_]}
   users={[Function Array]}
 >
   <div
@@ -216,8 +165,6 @@ exports[`DevTools - Select User component it shows error messages when form is s
   >
     <h1
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="8"
       pdk-margin-vertical="8"
       pdk-typography="heading-xlarge"
     >
@@ -225,7 +172,6 @@ exports[`DevTools - Select User component it shows error messages when form is s
     </h1>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Select a user
@@ -236,27 +182,13 @@ exports[`DevTools - Select User component it shows error messages when form is s
       pdk-form=""
     >
       <pdk-form-field>
-        
         <pdk-form-group
           class="pdk-form-group"
-          ng-reflect-has-error="false"
         >
-          
-          
-          
-          
-          
-          
-          
           <pdk-select
             class="ng-untouched ng-pristine ng-invalid"
             id="selectUser"
             name="userId"
-            ng-reflect-id="selectUser"
-            ng-reflect-name="userId"
-            ng-reflect-options="[object Object]"
-            ng-reflect-placeholder="---Please select---"
-            ng-reflect-required=""
             placeholder="---Please select---"
             required=""
           >
@@ -266,26 +198,18 @@ exports[`DevTools - Select User component it shows error messages when form is s
               name="userId"
               required=""
             >
-              
-              
               <option
-                ng-reflect-value=""
                 value=""
               >
                 ---Please select---
               </option>
-              
-              
               <option
-                ng-reflect-value="userId"
                 value="userId"
               >
                  Mock User 
               </option>
             </select>
           </pdk-select>
-          
-          
         </pdk-form-group>
       </pdk-form-field>
       <pdk-form-group

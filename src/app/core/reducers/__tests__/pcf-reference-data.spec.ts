@@ -7,12 +7,9 @@ import {
   LoadPoliceForcesSuccessAction,
   LoadRemandStatusesSuccess,
   LoadSummonsCodesSuccessAction,
-  ReferenceDataAction,
+  ReferenceDataAction
 } from '../../actions';
-import {
-  LoadMotReasonsSuccess,
-  LoadVerdictTypesSuccess,
-} from '../../actions/pcf-reference-data.actions';
+import { LoadMotReasonsSuccess, LoadVerdictTypesSuccess } from '../../actions/pcf-reference-data.actions';
 import {
   AlcoholLevelMethod,
   BailStatus,
@@ -21,7 +18,7 @@ import {
   Nationality,
   OffenceDateCode,
   PoliceForce,
-  SummonsCode,
+  SummonsCode
 } from '../../model';
 import { pcfReferencedataReducer, PcfReferenceDataState } from '../pcf-reference-data';
 
@@ -47,8 +44,8 @@ describe('pcfReferencedataReducer', () => {
         {
           id: 'Id-loaded-ethnicitiy',
           code: '09',
-          description: 'Afrikaan',
-        },
+          description: 'Afrikaan'
+        }
       ] as Ethnicity[]);
 
       state = {
@@ -56,9 +53,9 @@ describe('pcfReferencedataReducer', () => {
           {
             id: 'Id-default-ethnicitiy',
             code: '08',
-            description: 'British',
-          },
-        ] as Ethnicity[],
+            description: 'British'
+          }
+        ] as Ethnicity[]
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -74,17 +71,17 @@ describe('pcfReferencedataReducer', () => {
       action = new LoadNationalitieSuccessAction([
         {
           isoCode: 'FR',
-          countryName: 'France',
-        },
+          countryName: 'France'
+        }
       ] as Nationality[]);
 
       state = {
         nationalities: [
           {
             isoCode: 'GBR',
-            countryName: 'United Kingdom',
-          },
-        ] as Nationality[],
+            countryName: 'United Kingdom'
+          }
+        ] as Nationality[]
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -95,7 +92,6 @@ describe('pcfReferencedataReducer', () => {
     });
   });
 
-
   describe('when LOAD_SUMMONS_CODES_SUCCESS', () => {
     beforeEach(() => {
       action = new LoadSummonsCodesSuccessAction([
@@ -104,12 +100,12 @@ describe('pcfReferencedataReducer', () => {
           seqNo: 20,
           summonsCode: 'B',
           summonsCodeDescription: 'Breach offences',
-          validFrom: '2019-03-01',
-        },
+          validFrom: '2019-03-01'
+        }
       ] as SummonsCode[]);
 
       state = {
-        summonsCodes: [],
+        summonsCodes: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -127,12 +123,12 @@ describe('pcfReferencedataReducer', () => {
           id: 'dd4073b6-22be-3875-9d63-5da286bb3ece',
           seqNo: 10,
           statusCode: 'B',
-          statusDescription: 'Conditional Bail',
-        },
+          statusDescription: 'Conditional Bail'
+        }
       ] as BailStatus[]);
 
       state = {
-        remandStatuses: [],
+        remandStatuses: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -150,12 +146,12 @@ describe('pcfReferencedataReducer', () => {
           id: 'dd4073b6-22be-3875-9d63-5da286bb3ece',
           code: '123',
           jurisdiction: 'CROWN',
-          description: 'description',
-        },
+          description: 'description'
+        }
       ]);
 
       state = {
-        verdictTypes: [],
+        verdictTypes: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -173,12 +169,12 @@ describe('pcfReferencedataReducer', () => {
           id: 'dd4073b6-22be-3875-9d63-5da286bb3ece',
           code: '123',
           description: 'description',
-          seqNum: 10,
-        },
+          seqNum: 10
+        }
       ]);
 
       state = {
-        motReasons: [],
+        motReasons: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -195,17 +191,17 @@ describe('pcfReferencedataReducer', () => {
         {
           id: '4aaecac5-222b-402d-9047-84803679edac',
           dateCode: '1',
-          dateCodeDescription: 'before',
+          dateCodeDescription: 'before'
         },
         {
           id: '5aaecac5-222b-402d-9047-84803679edac',
           dateCode: '2',
-          dateCodeDescription: 'after',
-        },
+          dateCodeDescription: 'after'
+        }
       ] as OffenceDateCode[]);
 
       state = {
-        offenceDateCodes: [],
+        offenceDateCodes: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -222,17 +218,17 @@ describe('pcfReferencedataReducer', () => {
         {
           id: 'f833257e-e355-4c72-838b-d236db530226',
           methodCode: 'B01',
-          methodDescription: 'Breath',
+          methodDescription: 'Breath'
         },
         {
           id: 'd15a29d0-68b4-4a4f-8c46-c1316d7238eb',
           methodCode: 'B02',
-          methodDescription: 'Blood',
-        },
+          methodDescription: 'Blood'
+        }
       ] as AlcoholLevelMethod[]);
 
       state = {
-        alcoholLevelMethods: [],
+        alcoholLevelMethods: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -251,7 +247,7 @@ describe('pcfReferencedataReducer', () => {
           sequence: 3,
           policeForceCode: '2',
           policeForceName: 'London',
-          validForSpiOut: true,
+          validForSpiOut: true
         },
         {
           id: '97c89e9d-57dc-3936-a88f-9160a4572e3a',
@@ -259,12 +255,12 @@ describe('pcfReferencedataReducer', () => {
           policeForceCode: '3',
           policeForceName: 'Cumbria',
           validForSpiOut: true,
-          oucodeL2Code: '03',
-        },
+          oucodeL2Code: '03'
+        }
       ] as PoliceForce[]);
 
       state = {
-        policeForces: [],
+        policeForces: []
       };
 
       resultState = pcfReferencedataReducer(state, action);
@@ -281,17 +277,17 @@ describe('pcfReferencedataReducer', () => {
         {
           id: 'c4ca4238-a0b9-3382-8dcc-509a6f75849b',
           ethnicityCode: '1',
-          ethnicityDescription: 'White - North European',
+          ethnicityDescription: 'White - North European'
         },
         {
           id: 'c81e728d-9d4c-3f63-af06-7f89cc14862c',
           ethnicityCode: '2',
-          ethnicityDescription: 'White - South European',
-        },
+          ethnicityDescription: 'White - South European'
+        }
       ] as EthnicityCode[]);
 
       state = {
-        observedEthnicities: [],
+        observedEthnicities: []
       };
 
       resultState = pcfReferencedataReducer(state, action);

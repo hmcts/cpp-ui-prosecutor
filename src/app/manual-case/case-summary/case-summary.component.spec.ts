@@ -22,10 +22,10 @@ describe('ManualCaseSummaryComponent', () => {
       prosecutingAuthority: 'TFL',
       hasProsecutionReferenceNo: true,
       appliedProsecutorCosts: 249.99,
-      chargePostingDate: '2018-10-25',
+      chargePostingDate: '2018-10-25'
     },
     prosecutorCaseReference: 'TFL12345',
-    originatingOrganisation: 'TFL12345',
+    originatingOrganisation: 'TFL12345'
   };
 
   const manualCaseDefendants = [
@@ -33,40 +33,40 @@ describe('ManualCaseSummaryComponent', () => {
       individual: {
         personalInformation: {
           firstName: 'Defendant',
-          lastName: 'One',
-        },
-      },
+          lastName: 'One'
+        }
+      }
     },
     {
       individual: {
         personalInformation: {
           firstName: 'Defendant',
-          lastName: 'Two',
-        },
+          lastName: 'Two'
+        }
       },
       offences: [
         {
           offenceCode: 'RT88584B',
-          offenceWording: 'Caught Driving On Phone',
-        },
-      ],
+          offenceWording: 'Caught Driving On Phone'
+        }
+      ]
     },
     {
       individual: {
         personalInformation: {
           firstName: 'Defendant',
-          lastName: 'Three',
-        },
-      },
-    },
+          lastName: 'Three'
+        }
+      }
+    }
   ] as ManualCaseDefendant[];
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseSummaryComponent],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService],
+      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService]
     });
 
     fixture = TestBed.createComponent(ManualCaseSummaryComponent);
@@ -128,17 +128,17 @@ describe('ManualCaseSummaryComponent', () => {
         individual: {
           personalInformation: {
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             aocpEligible: true,
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
-      },
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     expect(component.hasAllOffencesAocpEligible()).toEqual(true);
@@ -151,18 +151,18 @@ describe('ManualCaseSummaryComponent', () => {
         individual: {
           personalInformation: {
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             aocpStandardPenalty: '100',
             offenceCode: 'RT88584B',
             aocpEligible: true,
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
-      },
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     expect(component.getVictimSurcharge(200)).toEqual(34);

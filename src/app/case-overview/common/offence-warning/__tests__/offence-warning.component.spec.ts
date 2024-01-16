@@ -8,7 +8,8 @@ describe('OffenceWarning', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TestOffenceWarningComponent, OffenceWarningComponent],
-      imports: [PdkCoreModule, PdkFormModule, PdkWarningTextModule]
+      imports: [PdkCoreModule, PdkFormModule, PdkWarningTextModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestOffenceWarningComponent);

@@ -1,9 +1,9 @@
 import { Component, OnInit, EventEmitter, Output, ViewChild, Input } from '@angular/core';
-import * as moment from 'moment';
+import moment from 'moment';
 import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { ManualCase, ManualCaseProsecutor } from '../../core/model/manual-case';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { cloneDeep } from 'lodash';
 import { ValidationError } from '@cpp/pdk';
 import { Prosecutor } from '@cpp/reference-data';
@@ -11,7 +11,7 @@ import { ProsecutorType, filterByCpsFlag } from '../../core';
 @Component({
   selector: 'manual-case-prosecutor',
   templateUrl: './manual-case-prosecutor.component.html',
-  styleUrls: ['./manual-case-prosecutor.component.scss'],
+  styleUrls: ['./manual-case-prosecutor.component.scss']
 })
 export class ManualCaseProsecutorComponent implements OnInit {
   @Input() manualCaseDetail: ManualCase;
@@ -56,19 +56,19 @@ export class ManualCaseProsecutorComponent implements OnInit {
         id: this.editManualCase.prosecutor.prosecutionAuthorityId,
         fullName: this.editManualCase.prosecutor.name,
         standard: this.editManualCase.prosecutor.standard,
-        address: this.editManualCase.prosecutor.address,
+        address: this.editManualCase.prosecutor.address
       } as Prosecutor;
 
       this.selectedCpsProsecutor = {
         id: this.editManualCase.cpsOrganisationId,
-        fullName: this.editManualCase.cpsOrganisationName,
+        fullName: this.editManualCase.cpsOrganisationName
       } as Prosecutor;
     }
 
     if (this.editManualCase.cpsOrganisation) {
       this.selectedCpsProsecutor = {
         id: this.editManualCase.cpsOrganisationId,
-        fullName: this.editManualCase.cpsOrganisationName,
+        fullName: this.editManualCase.cpsOrganisationName
       } as Prosecutor;
     }
   }
@@ -90,9 +90,7 @@ export class ManualCaseProsecutorComponent implements OnInit {
   }
 
   _isTrialOrSentence(): boolean {
-    return (
-      this.manualCaseDetail.initiationCode === 'T' || this.manualCaseDetail.initiationCode === 'CO'
-    );
+    return this.manualCaseDetail.initiationCode === 'T' || this.manualCaseDetail.initiationCode === 'CO';
   }
 
   updateProsecutionReferenceNo(event: boolean) {

@@ -50,69 +50,68 @@ export function pcfReferencedataReducer(
     case ReferenceDataActions.LOAD_ETHNICITIES_SUCCESS:
       return {
         ...state,
-        enthnicities: [...action.payload],
+        enthnicities: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_PROSECUTOR_BY_USERGROUP_SUCCESS:
       return {
         ...state,
-        prosecutorByUserGroup: { ...action.payload },
+        prosecutorByUserGroup: { ...action.payload }
       };
 
     case ReferenceDataActions.LOAD_OBSERVED_ETHNICITIES_SUCCESS:
       return {
         ...state,
-        observedEthnicities: [...action.payload],
+        observedEthnicities: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_NATIONALITIES_SUCCESS:
       return {
         ...state,
-        nationalities: [...action.payload],
+        nationalities: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_SUMMONS_CODES_SUCCESS:
       return {
         ...state,
-        summonsCodes: [...action.payload],
+        summonsCodes: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_REMAND_STATUSES_SUCCESS:
       return {
         ...state,
-        remandStatuses: [...action.payload],
+        remandStatuses: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_VERDICT_TYPES_SUCCESS:
       return {
         ...state,
-        verdictTypes: [...action.payload],
+        verdictTypes: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_MOT_REASONS_SUCCESS:
       return {
         ...state,
-        motReasons: [...action.payload],
+        motReasons: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_OFFENCE_DATE_CODES_SUCCESS:
       return {
         ...state,
-        offenceDateCodes: [...action.payload],
+        offenceDateCodes: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_ALCOHOL_LEVEL_METHODS_SUCCESS:
       return {
         ...state,
-        alcoholLevelMethods: [...action.payload],
+        alcoholLevelMethods: [...action.payload]
       };
 
     case ReferenceDataActions.LOAD_POLICE_FORCES_SUCCESS:
       return {
         ...state,
-        policeForces: [...action.payload],
+        policeForces: [...action.payload]
       };
-
 
     default:
       return state;

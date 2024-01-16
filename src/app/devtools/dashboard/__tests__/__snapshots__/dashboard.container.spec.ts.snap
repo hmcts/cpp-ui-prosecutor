@@ -8,17 +8,13 @@ exports[`DevTools - dashboard container compiles 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-half"
-        ng-reflect-one-half=""
         one-half=""
       >
         <h1
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-          ng-reflect-type="heading-xlarge"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
           pdk-typography="heading-xlarge"
         >
@@ -29,40 +25,30 @@ exports[`DevTools - dashboard container compiles 1`] = `
     <pdk-grid
       class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-grid-row"
       container=""
-      ng-reflect-container=""
-      ng-reflect-vertical="8"
       pdk-margin-vertical="8"
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <span
           class="govuk-body-m"
-          ng-reflect-type="body-medium"
           pdk-typography="body-medium"
         >
           You are not currently logged in as a user.
         </span>
-        
       </pdk-grid>
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-quarter"
-        ng-reflect-one-quarter=""
         one-quarter=""
       >
         <ul
           class="govuk-!-margin-top-6 govuk-list"
-          ng-reflect-top="6"
-          ng-reflect-type=""
           pdk-list=""
           pdk-margin-top="6"
         >
@@ -79,13 +65,10 @@ exports[`DevTools - dashboard container compiles 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-one-quarter"
-        ng-reflect-one-quarter=""
         one-quarter=""
       >
         <ul
           class="govuk-!-margin-top-6 govuk-list"
-          ng-reflect-top="6"
-          ng-reflect-type=""
           pdk-list=""
           pdk-margin-top="6"
         >

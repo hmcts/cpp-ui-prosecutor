@@ -2,15 +2,15 @@
 
 exports[`OffenceDetailsComponent should render the component 1`] = `
 <manual-case-offence-details
-  add={[Function EventEmitter]}
+  add={[Function EventEmitter_]}
   alcoholLevelMethods={[Function Array]}
   createUUID={[Function Function]}
   defendants={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   hasNpp={[Function Boolean]}
   offenceStateService={[Function ManualCaseOffenceStateService]}
-  remove={[Function EventEmitter]}
-  todayDate={[Function Moment]}
+  remove={[Function EventEmitter_]}
+  todayDate={[Function String]}
 >
   <div
     class="defendant-details"
@@ -26,7 +26,6 @@ exports[`OffenceDetailsComponent should render the component 1`] = `
           class="table-header bold"
           pdk-typography="body-medium"
         >
-          
         </span>
       </pdk-grid>
       <pdk-grid
@@ -38,11 +37,9 @@ exports[`OffenceDetailsComponent should render the component 1`] = `
           pdk-link=""
           unvisted=""
         >
-          
         </a>
       </pdk-grid>
     </pdk-grid>
-    
   </div>
 </manual-case-offence-details>
 `;

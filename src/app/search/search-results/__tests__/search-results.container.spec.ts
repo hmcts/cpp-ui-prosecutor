@@ -28,7 +28,11 @@ describe('SearchResultsContainer', () => {
 
     TestBed.configureTestingModule({
       declarations: [SearchResultsContainer, MockSearchResultsComponent],
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('search', searchReducer), RouterTestingModule],
+      imports: [
+        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
+        StoreModule.forFeature('search', searchReducer),
+        RouterTestingModule
+      ],
       providers: [
         {
           provide: Router,
@@ -42,7 +46,8 @@ describe('SearchResultsContainer', () => {
             snapshot
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);

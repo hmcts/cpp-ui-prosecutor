@@ -7,18 +7,19 @@ import {
   PdkDateInputModule,
   PdkGridModule,
   PdkRadioInputModule,
-  PdkInsetTextModule,
+  PdkInsetTextModule
 } from '@cpp/pdk';
 import { ManualCaseTypeComponent } from '../manual-case-type.component';
 import { ManualCaseModule } from '../../manual-case.module';
 import { ManualCase } from '../../../core/model/manual-case';
-// import { InlineSVGComponent } from 'ng-inline-svg/lib_commonjs/inline-svg.component';
 import { AppConfigService } from '../../../config';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
 
 const manualCaseDetail = {
   caseId: 'ba73207f-3ced-488a-82a0-3fba79c2ce85',
   initiationCode: 'S',
-  summonsCode: 'E',
+  summonsCode: 'E'
 } as ManualCase;
 
 const summonsCodes = [
@@ -27,18 +28,20 @@ const summonsCodes = [
     seqNo: 10,
     summonsCode: 'A',
     summonsCodeDescription: 'Application / Complaint',
-    validFrom: '2019-03-01',
+    validFrom: '2019-03-01'
   },
   {
     id: '5aaecac5-222b-402d-9047-84803679edac',
     seqNo: 20,
     summonsCode: 'B',
     summonsCodeDescription: 'Breach offences',
-    validFrom: '2019-03-01',
-  },
+    validFrom: '2019-03-01'
+  }
 ];
 
 describe('Manual Case Type Component', () => {
+  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
+
   let component: Shallow<ManualCaseTypeComponent>;
 
   beforeEach(() => {
@@ -72,8 +75,8 @@ describe('Manual Case Type Component', () => {
           hasNpp,
           manualCaseDetail: defendant,
           summonsCodes: codes,
-          handleSubmitForm: () => jest.fn(),
-        },
+          handleSubmitForm: () => jest.fn()
+        }
       }
     );
   }
@@ -102,7 +105,7 @@ describe('Manual Case Type Component', () => {
   it('should submit individual type applicant data', async () => {
     const mockData = {
       initiationCode: 'S',
-      summonsCode: 'E',
+      summonsCode: 'E'
     } as ManualCase;
 
     const { instance } = await renderComponent({}, summonsCodes);

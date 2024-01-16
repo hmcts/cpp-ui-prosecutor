@@ -2,17 +2,10 @@
   <pdk-divider class="margin-top-0" [dark]="true"></pdk-divider>
   <pdk-grid container>
     <pdk-grid two-thirds>
-      <span pdk-typography="heading-medium" class="table-header"
-        >{{ 'COMMON.HEARING.DETAILS' | translate }}</span
-      >
+      <span pdk-typography="heading-medium" class="table-header">{{ 'COMMON.HEARING.DETAILS' | translate }}</span>
     </pdk-grid>
     <pdk-grid one-third class="change-link">
-      <a
-        pdk-link
-        unvisited
-        href="javascript:void(0)"
-        (click)="onEdit()"
-        data-role="hearing-change-link"
+      <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit()" data-role="hearing-change-link"
         >{{ 'COMMON.CHANGE' | translate }}</a
       >
     </pdk-grid>
@@ -52,8 +45,7 @@
       <tr pdk-table-row class="table-row">
         <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.START_TIME' | translate }}</th>
         <td id="hearing-time" pdk-table-cell class="data" data-role="start-time">
-          {{ initialHearing?.dateOfHearing + 'T' + initialHearing.timeOfHearing + ':00' | date :
-          'h:mm a' | lowercase }}
+          {{ initialHearing?.dateOfHearing + 'T' + initialHearing.timeOfHearing + ':00' | date : 'h:mm a' | lowercase }}
         </td>
       </tr>
       <tr pdk-table-row class="table-row">

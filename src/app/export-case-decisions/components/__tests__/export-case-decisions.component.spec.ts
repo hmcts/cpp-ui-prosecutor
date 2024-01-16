@@ -21,7 +21,8 @@ describe('ExportCaseDecisionsComponent', () => {
         MockDownloadCaseDecisionsFormComponent,
         TestExportCaseDecisionsComponent
       ],
-      imports: [RouterTestingModule, PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule]
+      imports: [RouterTestingModule, PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestExportCaseDecisionsComponent);
     form = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent));

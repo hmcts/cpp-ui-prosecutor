@@ -7,9 +7,9 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@an
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => ProsecutorValidator),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class ProsecutorValidator implements Validator {
   @Input() oldValue: string;
@@ -17,7 +17,7 @@ export class ProsecutorValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {
     if (c.value === this.oldValue) {
       return {
-        duplicatedProsecutor: true,
+        duplicatedProsecutor: true
       };
     }
     return null;

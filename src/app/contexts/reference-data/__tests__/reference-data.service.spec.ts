@@ -21,9 +21,9 @@ describe('ReferenceDataService', () => {
         ReferenceDataService,
         {
           provide: CppHttp,
-          useValue: { query, commandSync },
-        },
-      ],
+          useValue: { query, commandSync }
+        }
+      ]
     });
     referenceData = TestBed.get(ReferenceDataService);
   });
@@ -42,7 +42,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/offence-withdraw-request-reasons',
-        requestType: 'application/vnd.referencedata.offence-withdraw-request-reasons+json',
+        requestType: 'application/vnd.referencedata.offence-withdraw-request-reasons+json'
       });
     });
   });
@@ -61,7 +61,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/police-forces',
-        requestType: 'application/vnd.referencedata.police-forces+json',
+        requestType: 'application/vnd.referencedata.police-forces+json'
       });
     });
   });
@@ -80,7 +80,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/bail-statuses',
-        requestType: 'application/vnd.referencedata.bail-statuses+json',
+        requestType: 'application/vnd.referencedata.bail-statuses+json'
       });
     });
   });
@@ -99,7 +99,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/initiation-types',
-        requestType: 'application/vnd.reference-data.initiation-types+json',
+        requestType: 'application/vnd.reference-data.initiation-types+json'
       });
     });
   });
@@ -107,7 +107,7 @@ describe('ReferenceDataService', () => {
   describe('getSummonsCode', () => {
     it('Should fetch reference data with all the summon codes', () => {
       const response = {
-        summonsCodes: [{ id: 1, summonsCode: 'O', summonsCodeDescription: 'Other' }],
+        summonsCodes: [{ id: 1, summonsCode: 'O', summonsCodeDescription: 'Other' }]
       };
       const expected = [{ id: 1, summonsCode: 'O', summonsCodeDescription: 'Other' }];
       const response$ = cold('-a|', { a: response });
@@ -120,7 +120,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/summons-codes',
-        requestType: 'application/vnd.referencedata.summons-codes+json',
+        requestType: 'application/vnd.referencedata.summons-codes+json'
       });
     });
   });
@@ -128,7 +128,7 @@ describe('ReferenceDataService', () => {
   describe('getOffenderCode', () => {
     it('Should fetch reference data with all the offender codes', () => {
       const response = {
-        offenderCodes: [{ id: 1, code: 'PO', description: 'Persistent offender' }],
+        offenderCodes: [{ id: 1, code: 'PO', description: 'Persistent offender' }]
       };
       const expected = [{ id: 1, code: 'PO', description: 'Persistent offender' }];
       const response$ = cold('-a|', { a: response });
@@ -141,7 +141,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/offender-codes',
-        requestType: 'application/vnd.referencedata.offender-codes+json',
+        requestType: 'application/vnd.referencedata.offender-codes+json'
       });
     });
   });
@@ -160,7 +160,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/observed-ethnicities',
-        requestType: 'application/vnd.referencedata.observed-ethnicities+json',
+        requestType: 'application/vnd.referencedata.observed-ethnicities+json'
       });
     });
   });
@@ -179,7 +179,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/ethnicities',
-        requestType: 'application/vnd.reference-data.ethnicities+json',
+        requestType: 'application/vnd.reference-data.ethnicities+json'
       });
     });
   });
@@ -198,7 +198,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/custody-statuses',
-        requestType: 'application/vnd.referencedata.custody-statuses+json',
+        requestType: 'application/vnd.referencedata.custody-statuses+json'
       });
     });
   });
@@ -217,7 +217,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/vehicle-codes',
-        requestType: 'application/vnd.referencedata.vehicle-codes+json',
+        requestType: 'application/vnd.referencedata.vehicle-codes+json'
       });
     });
   });
@@ -236,7 +236,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/offence-date-codes',
-        requestType: 'application/vnd.referencedata.offence-date-codes+json',
+        requestType: 'application/vnd.referencedata.offence-date-codes+json'
       });
     });
   });
@@ -244,7 +244,7 @@ describe('ReferenceDataService', () => {
   describe('getAlcoholLevelMethod', () => {
     it('Should fetch reference data with all the alcohol level methods', () => {
       const response = {
-        alcoholLevelMethods: [{ id: 1, methodCode: 'Blood', methodDescription: 'Blood' }],
+        alcoholLevelMethods: [{ id: 1, methodCode: 'Blood', methodDescription: 'Blood' }]
       };
       const expected = [{ id: 1, methodCode: 'Blood', methodDescription: 'Blood' }];
       const response$ = cold('-a|', { a: response });
@@ -257,7 +257,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/alcohol-level-methods',
-        requestType: 'application/vnd.referencedata.alcohol-level-methods+json',
+        requestType: 'application/vnd.referencedata.alcohol-level-methods+json'
       });
     });
   });
@@ -276,7 +276,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/country-nationality',
-        requestType: 'application/vnd.referencedata.query.country-nationality+json',
+        requestType: 'application/vnd.referencedata.query.country-nationality+json'
       });
     });
   });
@@ -284,7 +284,7 @@ describe('ReferenceDataService', () => {
   describe('getVerdictTypes', () => {
     it('Should fetch reference data with all the verdict types', () => {
       const response = {
-        verdictTypes: [{ id: 1, verdictCode: 'NOT_GUILY', description: 'Found not guilty' }],
+        verdictTypes: [{ id: 1, verdictCode: 'NOT_GUILY', description: 'Found not guilty' }]
       };
       const expected = [{ id: 1, verdictCode: 'NOT_GUILY', description: 'Found not guilty' }];
       const response$ = cold('-a|', { a: response });
@@ -297,7 +297,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/verdict-types',
-        requestType: 'application/vnd.reference-data.verdict-types+json',
+        requestType: 'application/vnd.reference-data.verdict-types+json'
       });
     });
   });
@@ -310,29 +310,29 @@ describe('ReferenceDataService', () => {
             id: 'fba9d881-64f3-32d9-909e-e770223212a0',
             seqNum: 10,
             code: '02',
-            description: 'Indictable only (previous convictions / relevant firearms offence)',
+            description: 'Indictable only (previous convictions / relevant firearms offence)'
           },
           {
             id: 'd47268e9-db2e-3aa3-827b-ba3afb7ff94a',
             seqNum: 20,
             code: '05',
-            description: 'Court directs trial by jury',
-          },
-        ],
+            description: 'Court directs trial by jury'
+          }
+        ]
       };
       const expected = [
         {
           id: 'fba9d881-64f3-32d9-909e-e770223212a0',
           seqNum: 10,
           code: '02',
-          description: 'Indictable only (previous convictions / relevant firearms offence)',
+          description: 'Indictable only (previous convictions / relevant firearms offence)'
         },
         {
           id: 'd47268e9-db2e-3aa3-827b-ba3afb7ff94a',
           seqNum: 20,
           code: '05',
-          description: 'Court directs trial by jury',
-        },
+          description: 'Court directs trial by jury'
+        }
       ];
       const response$ = cold('-a|', { a: response });
       const expected$ = cold('-b|', { b: expected });
@@ -344,7 +344,7 @@ describe('ReferenceDataService', () => {
       expect(query$).toBeObservable(expected$);
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/mode-of-trial-reasons',
-        requestType: 'application/vnd.referencedata.mode-of-trial-reasons+json',
+        requestType: 'application/vnd.referencedata.mode-of-trial-reasons+json'
       });
     });
   });
@@ -359,12 +359,12 @@ describe('ReferenceDataService', () => {
           address3: 'address3',
           address4: 'address4',
           address5: 'address5',
-          postcode: 'NW4 1SDD',
+          postcode: 'NW4 1SDD'
         },
         sequenceNumber: 1,
         contactEmailAddress: 'a@a.com',
         fullName: 'D Limited',
-        prosecutorCategory: ProsecutionOrganisationType.LOCAL_AUTHORITIES,
+        prosecutorCategory: ProsecutionOrganisationType.LOCAL_AUTHORITIES
       };
 
       const response = { body: prosecutor };
@@ -380,7 +380,7 @@ describe('ReferenceDataService', () => {
         requestType: 'application/vnd.referencedata.add-non-standard-prosecutor+json',
         successEvent: 'public.referencedata.event.non-standard-prosecutor-added',
         errorEvent: 'public.referencedata.event.non-standard-prosecutor-rejected',
-        body,
+        body
       });
     });
   });
@@ -400,7 +400,7 @@ describe('ReferenceDataService', () => {
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/organisation',
         requestType: 'application/vnd.referencedata.query.organisation.byOrgType+json',
-        params,
+        params
       });
     });
   });
@@ -420,7 +420,7 @@ describe('ReferenceDataService', () => {
       expect(query).toHaveBeenCalledWith({
         url: '/referencedata-query-api/query/api/rest/referencedata/prosecutors',
         requestType: 'application/vnd.referencedata.query.prosecutors+json',
-        params,
+        params
       });
     });
   });

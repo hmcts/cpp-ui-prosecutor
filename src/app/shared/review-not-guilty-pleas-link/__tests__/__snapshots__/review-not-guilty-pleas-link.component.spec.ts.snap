@@ -5,45 +5,32 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
   numberOfCases={[Function Number]}
 >
   <p>
-    
-    <pdk-warning-text
-      _nghost-a-c3=""
-    >
+    <pdk-warning-text>
       <div
-        _ngcontent-a-c3=""
         class="govuk-warning-text"
       >
         <span
-          _ngcontent-a-c3=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c3=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c3=""
             class="govuk-warning-text__assistive"
           >
             Warning
           </span>
           <a
             href="/review-not-guilty-pleas"
-            ng-reflect-router-link="review-not-guilty-pleas"
             pdk-link=""
             pdk-section="small"
             routerlink="review-not-guilty-pleas"
           >
              Review not guilty pleas (2 
-            
-            <span
-              ng-reflect-ng-plural="2"
-            >
-              
-              
+            <span>
               cases
             </span>
             ) 
@@ -51,8 +38,6 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
         </strong>
       </div>
     </pdk-warning-text>
-    
-    
   </p>
 </review-not-guilty-pleas-link>
 `;
@@ -62,54 +47,39 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with si
   numberOfCases={[Function Number]}
 >
   <p>
-    
-    <pdk-warning-text
-      _nghost-a-c2=""
-    >
+    <pdk-warning-text>
       <div
-        _ngcontent-a-c2=""
         class="govuk-warning-text"
       >
         <span
-          _ngcontent-a-c2=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c2=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c2=""
             class="govuk-warning-text__assistive"
           >
             Warning
           </span>
           <a
             href="/review-not-guilty-pleas"
-            ng-reflect-router-link="review-not-guilty-pleas"
             pdk-link=""
             pdk-section="small"
             routerlink="review-not-guilty-pleas"
           >
              Review not guilty pleas (1 
-            
-            <span
-              ng-reflect-ng-plural="1"
-            >
-              
+            <span>
               case
-              
             </span>
             ) 
           </a>
         </strong>
       </div>
     </pdk-warning-text>
-    
-    
   </p>
 </review-not-guilty-pleas-link>
 `;
@@ -119,10 +89,7 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with ze
   numberOfCases="0"
 >
   <p>
-    
      Review not guilty pleas (0) 
-    
-    
   </p>
 </review-not-guilty-pleas-link>
 `;

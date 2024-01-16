@@ -18,7 +18,6 @@ exports[`Manual case create success should render the component 1`] = `
         <div
           role="alert"
         >
-          
           <div
             class="pdk-context-panel__message"
           >
@@ -26,18 +25,14 @@ exports[`Manual case create success should render the component 1`] = `
               <h3
                 class="govuk-heading-m"
               >
-                
               </h3>
               <p
                 class="govuk-body-l"
               >
-                
-                
                 <p
                   pdk-margin-bottom="4"
                   pdk-typography="body-lead"
                 >
-                   
                 </p>
                 <p
                   class="bold"
@@ -45,10 +40,7 @@ exports[`Manual case create success should render the component 1`] = `
                   pdk-margin-bottom="5"
                   pdk-typography="heading-xlarge"
                 >
-                   
                 </p>
-                
-                
               </p>
             </div>
           </div>

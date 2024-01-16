@@ -13,7 +13,8 @@ describe('DatesToAvoidGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
-      providers: [DatesToAvoidGuard, provideMockStore({ initialState })]
+      providers: [DatesToAvoidGuard, provideMockStore({ initialState })],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(DatesToAvoidGuard);

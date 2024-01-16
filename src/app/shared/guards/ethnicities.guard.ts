@@ -7,7 +7,7 @@ import { State, ApiError, getEthnicities, LoadEthnicitiesSuccessAction } from '.
 import { ReferenceDataService } from '../../contexts/reference-data';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class EthnicitiesGuard implements CanActivate {
   constructor(private store: Store<State>, private pcfReferenceData: ReferenceDataService) {}
@@ -15,28 +15,26 @@ export class EthnicitiesGuard implements CanActivate {
   hasEthnicitiesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getEthnicities),
-      map((ethnicities) => !!ethnicities && ethnicities.length > 0),
+      map(ethnicities => !!ethnicities && ethnicities.length > 0),
       take(1)
     );
   }
 
   hasEthnicitiesInApi(): Observable<boolean> {
     return this.pcfReferenceData.getEthnicities().pipe(
-      tap((ethnicities) => {
+      tap(ethnicities => {
         this.store.dispatch(new LoadEthnicitiesSuccessAction(ethnicities));
       }),
-      map((ethnicities) => !!ethnicities),
+      map(ethnicities => !!ethnicities),
       take(1)
     );
   }
 
   canActivate(): Observable<boolean> {
     return this.hasEthnicitiesInStore().pipe(
-      switchMap((hasEthnicities) =>
-        hasEthnicities ? of(hasEthnicities) : this.hasEthnicitiesInApi()
-      ),
+      switchMap(hasEthnicities => (hasEthnicities ? of(hasEthnicities) : this.hasEthnicitiesInApi())),
       tap({
-        error: (error) => this.store.dispatch(new ApiError(error)),
+        error: error => this.store.dispatch(new ApiError(error))
       }),
       catchError(() => of(true))
     );

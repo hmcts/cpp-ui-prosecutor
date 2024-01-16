@@ -7,7 +7,7 @@ import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
   selector: 'individual-defendant-guardian',
   templateUrl: 'individual-defendant-guardian.component.html',
   viewProviders: [{ provide: ControlContainer, useExisting: NgForm }],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IndividualDefendantGuardianComponent implements OnChanges {
   @Input() manualCaseType: string;
@@ -53,12 +53,12 @@ export class IndividualDefendantGuardianComponent implements OnChanges {
           address3: '',
           address4: '',
           address5: '',
-          postcode: '',
+          postcode: ''
         },
         contactDetails: {
           primaryEmail: '',
-          work: '',
-        },
+          work: ''
+        }
       },
       organisationName: '',
       companyTelephoneNumber: '',
@@ -68,13 +68,11 @@ export class IndividualDefendantGuardianComponent implements OnChanges {
         address3: '',
         address4: '',
         address5: '',
-        postcode: '',
-      },
+        postcode: ''
+      }
     };
 
-    this.manualCaseDefendant.individual.parentGuardianInformation = cloneDeep(
-      blankParentGuardianData
-    );
+    this.manualCaseDefendant.individual.parentGuardianInformation = cloneDeep(blankParentGuardianData);
 
     this.showGuardian = false;
   }

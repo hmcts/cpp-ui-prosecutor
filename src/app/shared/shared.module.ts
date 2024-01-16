@@ -13,7 +13,7 @@ import {
   PhoneValidator,
   DocumentNameValidator,
   ProsecutorValidator,
-  DigitsOnlyValidator,
+  DigitsOnlyValidator
 } from './validators';
 
 import {
@@ -38,7 +38,7 @@ import {
   PdkTextareaModule,
   PdkSelectModule,
   PdkServiceNavigationModule,
-  PdkErrorMessageModule,
+  PdkErrorMessageModule
 } from '@cpp/pdk';
 
 import {
@@ -55,11 +55,7 @@ import {
   PleaStatusPipeModule,
   YesNoPipeModule
 } from './pipes';
-import {
-  BackButtonComponent,
-  AddressInputComponent,
-  OffenceSearchComponent,
-} from './components';
+import { BackButtonComponent, AddressInputComponent, OffenceSearchComponent } from './components';
 
 import { PaymentTypePipeModule } from './pipes/payment-type/payment-type-pipe.module';
 import { SjpCurrencyPipeModule } from './pipes/sjp-currency/sjp-currency.module';
@@ -106,7 +102,7 @@ const MODULE_EXPORT = [
     OffenceSearchComponent,
     NationalityAutoSuggestComponent,
     EthnicityAutoSuggestComponent,
-    EthnicityCodeAutoSuggestComponent,
+    EthnicityCodeAutoSuggestComponent
   ],
   imports: [
     FormsModule,

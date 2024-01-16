@@ -41,5 +41,5 @@ export interface OffenceCode {
 
 export enum OffenceModeOfTrialType {
   EitherWay = 'either way',
-  Trial = 'Trial',
+  Trial = 'Trial'
 }

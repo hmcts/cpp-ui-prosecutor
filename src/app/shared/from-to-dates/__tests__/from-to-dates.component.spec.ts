@@ -13,7 +13,8 @@ describe('FromToDatesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [CommonModule, FormsModule, PdkDateInputModule, PdkFormModule],
-      declarations: [FromToDatesComponent, MaxDaysDirective, TestFromToDatesComponent]
+      declarations: [FromToDatesComponent, MaxDaysDirective, TestFromToDatesComponent],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestFromToDatesComponent);
     fixture.componentInstance.maxDaysForToDate = 31;

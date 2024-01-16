@@ -4,31 +4,21 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
 <list-search-results-test
   searchResults={[Function Array]}
 >
-  <list-search-results
-    ng-reflect-search-results="[object Object],[object Object"
-  >
-    
+  <list-search-results>
     <pdk-inset-text
       class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
       pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
       >
          4 
-        <span
-          ng-reflect-ng-plural="4"
-        >
-          
-          
+        <span>
           results
         </span>
          available 
-        
       </div>
     </pdk-inset-text>
-    
     <table
       pdk-table=""
     >
@@ -73,19 +63,15 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
       <tbody
         pdk-table-body=""
       >
-        
         <tr
           pdk-table-row=""
         >
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId2"
-              ng-reflect-router-link="../../case-overview,caseId2"
               pdk-link=""
             >
               <b>
@@ -103,7 +89,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              Completed 
-            
           </td>
           <td
             pdk-table-cell=""
@@ -129,12 +114,9 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId3"
-              ng-reflect-router-link="../../case-overview,caseId3"
               pdk-link=""
             >
               <b>
@@ -152,7 +134,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              No plea received 
-            
           </td>
           <td
             pdk-table-cell=""
@@ -178,12 +159,9 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId4"
-              ng-reflect-router-link="../../case-overview,caseId4"
               pdk-link=""
             >
               <b>
@@ -201,7 +179,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              No plea received - ready for decision 
-            
           </td>
           <td
             pdk-table-cell=""
@@ -227,12 +204,9 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId5"
-              ng-reflect-router-link="../../case-overview,caseId5"
               pdk-link=""
             >
               <b>
@@ -250,7 +224,6 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             pdk-table-cell=""
           >
              Completed 
-            
           </td>
           <td
             pdk-table-cell=""
@@ -280,31 +253,21 @@ exports[`ListSearchResultsComponent should compile correctly with no results 1`]
 <list-search-results-test
   searchResults={[Function Array]}
 >
-  <list-search-results
-    ng-reflect-search-results=""
-  >
-    
+  <list-search-results>
     <pdk-inset-text
       class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
       pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
       >
          0 
-        <span
-          ng-reflect-ng-plural="0"
-        >
-          
-          
+        <span>
           results
         </span>
          available 
-        
       </div>
     </pdk-inset-text>
-    
   </list-search-results>
 </list-search-results-test>
 `;
@@ -313,51 +276,36 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
 <list-search-results-test
   searchResults={[Function Array]}
 >
-  <list-search-results
-    ng-reflect-search-results="[object Object]"
-  >
-    
+  <list-search-results>
     <pdk-inset-text
       class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
       pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
       >
          1 
-        <span
-          ng-reflect-ng-plural="1"
-        >
-          
+        <span>
           result
-          
         </span>
          available 
-        
         <pdk-warning-text
-          _nghost-a-c3=""
           class="govuk-!-margin-top-2"
-          ng-reflect-top="2"
           pdk-margin-top="2"
         >
           <div
-            _ngcontent-a-c3=""
             class="govuk-warning-text"
           >
             <span
-              _ngcontent-a-c3=""
               aria-hidden="true"
               class="govuk-warning-text__icon"
             >
               !
             </span>
             <strong
-              _ngcontent-a-c3=""
               class="govuk-warning-text__text"
             >
               <span
-                _ngcontent-a-c3=""
                 class="govuk-warning-text__assistive"
               >
                 Warning
@@ -368,7 +316,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
         </pdk-warning-text>
       </div>
     </pdk-inset-text>
-    
     <table
       pdk-table=""
     >
@@ -413,37 +360,29 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
       <tbody
         pdk-table-body=""
       >
-        
         <tr
           pdk-table-row=""
         >
           <td
             pdk-table-cell=""
           >
-            
             <pdk-warning-text
-              _nghost-a-c3=""
               class="govuk-!-margin-top-5"
-              ng-reflect-top="5"
               pdk-margin-top="5"
             >
               <div
-                _ngcontent-a-c3=""
                 class="govuk-warning-text"
               >
                 <span
-                  _ngcontent-a-c3=""
                   aria-hidden="true"
                   class="govuk-warning-text__icon"
                 >
                   !
                 </span>
                 <strong
-                  _ngcontent-a-c3=""
                   class="govuk-warning-text__text"
                 >
                   <span
-                    _ngcontent-a-c3=""
                     class="govuk-warning-text__assistive"
                   >
                     Warning
@@ -451,7 +390,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
                   <a
                     class="govuk-link"
                     href="/case-overview/caseId1"
-                    ng-reflect-router-link="../../case-overview,caseId1"
                     pdk-link=""
                   >
                     <b>
@@ -461,7 +399,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
                 </strong>
               </div>
             </pdk-warning-text>
-            
           </td>
           <td
             data-role="urn"
@@ -473,7 +410,6 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             pdk-table-cell=""
           >
              Completed 
-            
           </td>
           <td
             pdk-table-cell=""
@@ -503,31 +439,21 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
 <list-search-results-test
   searchResults={[Function Array]}
 >
-  <list-search-results
-    ng-reflect-search-results="[object Object]"
-  >
-    
+  <list-search-results>
     <pdk-inset-text
       class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
       pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
       >
          1 
-        <span
-          ng-reflect-ng-plural="1"
-        >
-          
+        <span>
           result
-          
         </span>
          available 
-        
       </div>
     </pdk-inset-text>
-    
     <table
       pdk-table=""
     >
@@ -572,19 +498,15 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
       <tbody
         pdk-table-body=""
       >
-        
         <tr
           pdk-table-row=""
         >
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId2"
-              ng-reflect-router-link="../../case-overview,caseId2"
               pdk-link=""
             >
               <b>
@@ -602,10 +524,8 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
             pdk-table-cell=""
           >
              Referred for court hearing 
-            
             <div
               class="govuk-body-s"
-              ng-reflect-type="body-small"
               pdk-typography="body-small"
             >
                Awaiting Listing 
@@ -639,31 +559,21 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
 <list-search-results-test
   searchResults={[Function Array]}
 >
-  <list-search-results
-    ng-reflect-search-results="[object Object]"
-  >
-    
+  <list-search-results>
     <pdk-inset-text
       class="govuk-!-margin-top-6"
-      ng-reflect-top="6"
       pdk-margin-top="6"
     >
       <div
         class="govuk-inset-text"
       >
          1 
-        <span
-          ng-reflect-ng-plural="1"
-        >
-          
+        <span>
           result
-          
         </span>
          available 
-        
       </div>
     </pdk-inset-text>
-    
     <table
       pdk-table=""
     >
@@ -708,19 +618,15 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
       <tbody
         pdk-table-body=""
       >
-        
         <tr
           pdk-table-row=""
         >
           <td
             pdk-table-cell=""
           >
-            
-            
             <a
               class="govuk-link"
               href="/case-overview/caseId2"
-              ng-reflect-router-link="../../case-overview,caseId2"
               pdk-link=""
             >
               <b>
@@ -738,7 +644,6 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
             pdk-table-cell=""
           >
              No plea received - ready for decision 
-            
           </td>
           <td
             pdk-table-cell=""

@@ -1,14 +1,5 @@
-import {
-  Directive,
-  forwardRef
-} from '@angular/core';
-import {
-  AbstractControl,
-  NG_VALIDATORS,
-  Validator,
-  ValidationErrors
-} from '@angular/forms';
-
+import { Directive, forwardRef } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@angular/forms';
 
 @Directive({
   selector: '[validateDocumentName]',
@@ -21,7 +12,6 @@ import {
   ]
 })
 export class DocumentNameValidator implements Validator {
-
   validate(c: AbstractControl): ValidationErrors | null {
     if (c.value) {
       // Check if document name contains only white spaces;

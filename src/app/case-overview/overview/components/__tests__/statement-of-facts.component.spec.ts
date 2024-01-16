@@ -10,7 +10,8 @@ describe('StatementOfFactsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [StatementOfFactsComponent, TestStatementOfFactsComponent],
-      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule]
+      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestStatementOfFactsComponent);

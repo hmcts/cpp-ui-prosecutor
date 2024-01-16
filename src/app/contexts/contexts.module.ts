@@ -6,12 +6,6 @@ import { ProsecutionCaseFileModule } from './prosecution-case-file';
 import { ReferenceDataModule } from './reference-data/reference-data.module';
 
 @NgModule({
-  exports: [
-    MiReportModule,
-    ProsecutionCaseFileModule,
-    ReferenceDataModule,
-    SjpModule,
-    StagingTflModule
-  ]
+  exports: [MiReportModule, ProsecutionCaseFileModule, ReferenceDataModule, SjpModule, StagingTflModule]
 })
 export class ContextsModule {}

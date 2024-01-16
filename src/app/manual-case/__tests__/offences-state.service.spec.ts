@@ -9,7 +9,7 @@ describe('Manual Case Offence State Service', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ManualCaseOffenceStateService],
+      providers: [ManualCaseOffenceStateService]
     });
 
     offenceStateService = TestBed.get(ManualCaseOffenceStateService);
@@ -38,17 +38,17 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -56,24 +56,22 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             offenceCode: 'ZT88589B',
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-            offenceWording: 'Drunk Driving',
-          },
-        ],
-      },
+            offenceWording: 'Drunk Driving'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     offenceStateService.initialise(defendants);
-    const defendantOptions = offenceStateService.getDefendantOptions(
-      '12af2be8-b257-4227-9cf0-3d77975ed7aa'
-    );
+    const defendantOptions = offenceStateService.getDefendantOptions('12af2be8-b257-4227-9cf0-3d77975ed7aa');
 
     expect(defendantOptions[0].label).toEqual('Defendant One');
     expect(defendantOptions[1].label).toEqual('Defendant Two');
@@ -87,17 +85,17 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -105,17 +103,17 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             offenceCode: 'ZT88589B',
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-            offenceWording: 'Drunk Driving',
-          },
-        ],
+            offenceWording: 'Drunk Driving'
+          }
+        ]
       },
       {
         id: '12613fbc-e0c2-429e-836a-bedcfc0bcb47',
@@ -123,28 +121,24 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Three',
-          },
+            lastName: 'Three'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
-      },
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     offenceStateService.initialise(defendants);
-    const defendantOptions = offenceStateService.getSelectedDefendantIds(
-      '12af2be8-b257-4227-9cf0-3d77975ed7aa'
-    );
+    const defendantOptions = offenceStateService.getSelectedDefendantIds('12af2be8-b257-4227-9cf0-3d77975ed7aa');
 
-    const expectedIds = defendants
-      .filter((d) => d.id !== 'a87508c8-9180-488a-8ddc-9086df35a4a2')
-      .map((d) => d.id);
+    const expectedIds = defendants.filter(d => d.id !== 'a87508c8-9180-488a-8ddc-9086df35a4a2').map(d => d.id);
 
     expect(defendantOptions).toEqual(expectedIds);
   });
@@ -160,25 +154,25 @@ describe('Manual Case Offence State Service', () => {
           value: '46e1c5f5-5e91-4655-9eda-43368640f218',
           offence: {
             chargeDate: '2019-02-04',
-            arrestDate: '2019-02-04',
-          },
+            arrestDate: '2019-02-04'
+          }
         },
         {
           value: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
           offence: {
             chargeDate: '2017-02-04',
-            arrestDate: '2017-02-04',
-          },
+            arrestDate: '2017-02-04'
+          }
         },
         {
           value: '12613fbc-e0c2-429e-836a-bedcfc0bcb47',
-          offence: {},
+          offence: {}
         },
         {
           value: '175d106a-4a20-493e-8e61-abdb2575772d',
-          offence: {},
-        },
-      ],
+          offence: {}
+        }
+      ]
     } as ManualCaseOffence;
 
     const defendants = [
@@ -188,9 +182,9 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
-        },
+            lastName: 'One'
+          }
+        }
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -198,17 +192,17 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             offenceCode: 'ZT88589B',
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-            offenceWording: 'offence wording before update',
-          },
-        ],
+            offenceWording: 'offence wording before update'
+          }
+        ]
       },
       {
         id: '12613fbc-e0c2-429e-836a-bedcfc0bcb47',
@@ -216,9 +210,9 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Three',
-          },
-        },
+            lastName: 'Three'
+          }
+        }
       },
       {
         id: '175d106a-4a20-493e-8e61-abdb2575772d',
@@ -226,51 +220,47 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Four',
-          },
+            lastName: 'Four'
+          }
         },
         offences: [
           {
             offenceCode: 'ZT88589B',
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-            offenceWording: 'should be deleted',
-          },
-        ],
-      },
+            offenceWording: 'should be deleted'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     offenceStateService.initialise(defendants);
 
     const selectedDefendantIds = [defendants[0].id, defendants[1].id];
-    const updatedDefendants = offenceStateService.mapOffenceToDefendants(
-      offence,
-      defendants,
-      selectedDefendantIds
-    );
+    const updatedDefendants = offenceStateService.mapOffenceToDefendants(offence, defendants, selectedDefendantIds);
 
     const expectedOffence = {
       offenceCode: offence.offenceCode,
       offenceSequenceNumber: offence.offenceSequenceNumber,
       offenceId: offence.offenceId,
-      offenceWording: offence.offenceWording,
+      offenceWording: offence.offenceWording
     };
 
     expect(updatedDefendants[0].offences[0]).toEqual({
       ...expectedOffence,
       ...{
         chargeDate: '2019-02-04',
-        arrestDate: '2019-02-04',
-      },
+        arrestDate: '2019-02-04'
+      }
     });
 
     expect(updatedDefendants[1].offences[0]).toEqual({
       ...expectedOffence,
       ...{
         chargeDate: '2017-02-04',
-        arrestDate: '2017-02-04',
+        arrestDate: '2017-02-04'
       },
-      offenceId: 'uuid',
+      offenceId: 'uuid'
     });
     expect(updatedDefendants[2].offences).toEqual([]);
     expect(updatedDefendants[3].offences).toEqual([]);
@@ -284,17 +274,17 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -302,18 +292,18 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
             offenceCode: 'ZT88589B',
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-            offenceWording: 'Drunk Driving',
-          },
-        ],
-      },
+            offenceWording: 'Drunk Driving'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     offenceStateService.initialise(defendants);
@@ -347,18 +337,18 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
             offenceCode: 'RT88584B',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
-            offenceWording: 'Caught Driving On Phone',
-          },
-        ],
-      },
+            offenceWording: 'Caught Driving On Phone'
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     offenceStateService.initialise(defendants);
@@ -385,8 +375,8 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
@@ -394,23 +384,23 @@ describe('Manual Case Offence State Service', () => {
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
             offenceWording: 'Caught Driving On Phone',
-            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
+            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
           },
           {
             offenceCode: 'MR73002',
             offenceSequenceNumber: 2,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
             offenceWording: 'Assault of a person',
-            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
+            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
           },
           {
             offenceCode: 'AT01020',
             offenceSequenceNumber: 3,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
             offenceWording: 'Controlled substance',
-            modeOfTrialDerived: OffenceModeOfTrialType.Trial,
-          },
-        ],
+            modeOfTrialDerived: OffenceModeOfTrialType.Trial
+          }
+        ]
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -418,8 +408,8 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'Two',
-          },
+            lastName: 'Two'
+          }
         },
         offences: [
           {
@@ -427,16 +417,13 @@ describe('Manual Case Offence State Service', () => {
             offenceSequenceNumber: 2,
             offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
             offenceWording: 'Drunk Driving',
-            modeOfTrialDerived: OffenceModeOfTrialType.Trial,
-          },
-        ],
-      },
+            modeOfTrialDerived: OffenceModeOfTrialType.Trial
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
-    const defendantsByOffenceCode = offenceStateService.getDefendantsGroupedByOffenceId(
-      defendants,
-      'CO'
-    );
+    const defendantsByOffenceCode = offenceStateService.getDefendantsGroupedByOffenceId(defendants, 'CO');
 
     expect(defendantsByOffenceCode).toMatchSnapshot();
   });
@@ -449,8 +436,8 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
@@ -458,17 +445,17 @@ describe('Manual Case Offence State Service', () => {
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
             offenceWording: 'Caught Driving On Phone',
-            modeOfTrialDerived: OffenceModeOfTrialType.Trial,
+            modeOfTrialDerived: OffenceModeOfTrialType.Trial
           },
           {
             offenceCode: 'RT88584C',
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7ca',
             offenceWording: 'Caught Driving On Phone',
-            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
-          },
-        ],
-      },
+            modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     expect(offenceStateService.hasEitherWayOffence(defendants)).toEqual(true);
@@ -482,8 +469,8 @@ describe('Manual Case Offence State Service', () => {
           personalInformation: {
             title: 'Mr',
             firstName: 'Defendant',
-            lastName: 'One',
-          },
+            lastName: 'One'
+          }
         },
         offences: [
           {
@@ -491,10 +478,10 @@ describe('Manual Case Offence State Service', () => {
             offenceSequenceNumber: 1,
             offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
             offenceWording: 'Caught Driving On Phone',
-            modeOfTrialDerived: OffenceModeOfTrialType.Trial,
-          },
-        ],
-      },
+            modeOfTrialDerived: OffenceModeOfTrialType.Trial
+          }
+        ]
+      }
     ] as ManualCaseDefendant[];
 
     expect(offenceStateService.hasEitherWayOffence(defendants)).toEqual(false);

@@ -6,7 +6,7 @@ import {
   EventEmitter,
   ViewChild,
   ChangeDetectorRef,
-  AfterContentChecked,
+  AfterContentChecked
 } from '@angular/core';
 import { ManualCase, InitialHearing } from '../../core/model/manual-case';
 import { NgForm } from '@angular/forms';
@@ -18,7 +18,7 @@ import { JurisdictionCode } from 'src/app/core/model/global/courts-definitions';
 
 @Component({
   selector: 'manual-case-hearing-details',
-  templateUrl: './manual-case-hearing-details.html',
+  templateUrl: './manual-case-hearing-details.html'
 })
 export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentChecked {
   @Input() manualCaseDetail: ManualCase;
@@ -45,7 +45,7 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
     if (!this.editManualCase.initialHearing) {
       this.editManualCase.initialHearing = {
         hearingDuration: '0:20',
-        hearingLanguage: 'E',
+        hearingLanguage: 'E'
       } as InitialHearing;
     } else {
       if (this.editManualCase.initialHearing.roomId) {
@@ -63,9 +63,7 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
   }
 
   get selectedCourtCentre(): CourtCentreWithRooms {
-    return this.courtCentres.find(
-      (cc) => cc.oucode === this.editManualCase.initialHearing.courtHearingLocation
-    );
+    return this.courtCentres.find(cc => cc.oucode === this.editManualCase.initialHearing.courtHearingLocation);
   }
 
   set selectedCourtCentre(courtCentreWithRooms: CourtCentreWithRooms) {
@@ -75,9 +73,7 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
 
   get selectedCourtRoom(): CourtRoom {
     return this.selectedCourtCentre
-      ? this.selectedCourtCentre.courtrooms.find(
-          (cr) => cr.id === this.editManualCase.initialHearing.roomId
-        )
+      ? this.selectedCourtCentre.courtrooms.find(cr => cr.id === this.editManualCase.initialHearing.roomId)
       : undefined;
   }
 
@@ -86,14 +82,11 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
   }
 
   get selectedHearingType(): HearingType {
-    return this.hearingTypes.find(
-      (ht) => ht.code === this.editManualCase.initialHearing.hearingTypeCode
-    );
+    return this.hearingTypes.find(ht => ht.code === this.editManualCase.initialHearing.hearingTypeCode);
   }
 
   set selectedHearingType(hearingType: HearingType) {
-    this.editManualCase.initialHearing.hearingTypeCode =
-      (hearingType && hearingType.code) || undefined;
+    this.editManualCase.initialHearing.hearingTypeCode = (hearingType && hearingType.code) || undefined;
   }
 
   get hearingDurationFocused(): boolean {
@@ -105,33 +98,25 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
   }
 
   isTrialOrSentence() {
-    return (
-      this.editManualCase.initiationCode === 'T' || this.editManualCase.initiationCode === 'CO'
-    );
+    return this.editManualCase.initiationCode === 'T' || this.editManualCase.initiationCode === 'CO';
   }
 
   setCourtCentresSuggestions(q: string) {
     this.courtCentreSuggestions =
-      q.length > 0
-        ? this.courtCentres.filter(({ name }) => name.toLowerCase().includes(q.toLowerCase()))
-        : [];
+      q.length > 0 ? this.courtCentres.filter(({ name }) => name.toLowerCase().includes(q.toLowerCase())) : [];
   }
 
   setCourtRoomSuggestions(q: string) {
     this.courtRoomSugestions =
       q.length > 0
-        ? this.selectedCourtCentre.courtrooms.filter(({ name }) =>
-            name.toLowerCase().includes(q.toLowerCase())
-          )
+        ? this.selectedCourtCentre.courtrooms.filter(({ name }) => name.toLowerCase().includes(q.toLowerCase()))
         : [];
   }
 
   setHearingTypeSuggestion(q: string) {
     this.hearingTypeSuggestions =
       q.length > 0
-        ? this.hearingTypes.filter(({ description }) =>
-            description.toLowerCase().includes(q.toLowerCase())
-          )
+        ? this.hearingTypes.filter(({ description }) => description.toLowerCase().includes(q.toLowerCase()))
         : [];
   }
 
@@ -139,8 +124,8 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
     if (this.hasCourtRoom && this.editManualCase.initialHearing.hearingListingDirection) {
       delete this.editManualCase.initialHearing.hearingListingDirection;
     } else {
-      this.editManualCase.initialHearing.hearingListingDirection = this.editManualCase
-        .initialHearing.hearingListingDirection
+      this.editManualCase.initialHearing.hearingListingDirection = this.editManualCase.initialHearing
+        .hearingListingDirection
         ? this.editManualCase.initialHearing.hearingListingDirection.slice(0, 1000)
         : undefined;
     }

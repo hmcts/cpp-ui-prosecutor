@@ -3,10 +3,7 @@ import { Store, StoreModule } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { reducers } from '../../reducers';
-import {
-  State,
-  LoadObservedEthnicitiesSuccessAction,
-} from '../../core';
+import { State, LoadObservedEthnicitiesSuccessAction } from '../../core';
 import { TestColdObservable } from 'jasmine-marbles/src/test-observables';
 import { EthnicityCodesGuard } from './ethnicity-codes.guard';
 import { ReferenceDataService } from '../../contexts/reference-data';
@@ -28,7 +25,7 @@ describe('Ethnicities Guard', () => {
       id: '5aaecac5-222b-402d-9047-84803679edac',
       ethnicityCode: '02',
       ethnicityDescription: 'desc 2'
-    },
+    }
   ];
 
   beforeEach(() => {
@@ -44,16 +41,16 @@ describe('Ethnicities Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getObservedEthnicities,
-          },
+            getObservedEthnicities
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(EthnicityCodesGuard);
@@ -75,9 +72,7 @@ describe('Ethnicities Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getObservedEthnicities).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadObservedEthnicitiesSuccessAction(ethnicities)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadObservedEthnicitiesSuccessAction(ethnicities));
       });
     });
 
@@ -112,9 +107,7 @@ describe('Ethnicities Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getObservedEthnicities).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadObservedEthnicitiesSuccessAction(ethnicities)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadObservedEthnicitiesSuccessAction(ethnicities));
         });
       });
     });

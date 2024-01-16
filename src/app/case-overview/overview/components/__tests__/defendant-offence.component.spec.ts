@@ -23,7 +23,8 @@ describe('DefendantOffenceComponent', () => {
         PdkBadgeModule,
         FormatDatePipeModule,
         PleaStatusPipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestDefendantOffenceComponent);

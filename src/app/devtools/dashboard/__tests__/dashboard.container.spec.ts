@@ -27,7 +27,7 @@ describe('DevTools - dashboard container', () => {
   beforeEach(() => {
     TestBed.overrideProvider(SessionService, { useValue: mockSessionService });
 
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [DevToolsDashboardPageComponent, DevToolsDashboardComponent, DevToolsBackButtonComponent],
       imports: [PdkCoreModule, PdkGridModule],
       providers: [
@@ -38,7 +38,8 @@ describe('DevTools - dashboard container', () => {
             back: jest.fn()
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     spyOnGetUserId = spyOn(mockSessionService, 'getUserId');

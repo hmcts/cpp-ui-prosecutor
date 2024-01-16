@@ -19,7 +19,7 @@ describe('PleadedNotGuiltyDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         PleadedNotGuiltyDataGuard,
         {
@@ -34,7 +34,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     pleadedNotGuiltyCasesDataGuard = TestBed.get(PleadedNotGuiltyDataGuard);

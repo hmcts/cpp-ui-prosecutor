@@ -10,7 +10,8 @@ describe('CaseHeaderBadgeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CaseHeaderBadgeComponent],
-      imports: [DefendantNamePipeModule, PdkPageHeaderModule]
+      imports: [DefendantNamePipeModule, PdkPageHeaderModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(CaseHeaderBadgeComponent);

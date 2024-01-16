@@ -20,7 +20,7 @@ import { InputValues } from '../../shared/from-to-dates/from-to-dates.component'
 })
 export class ExportCaseDecisionsFormComponent {
   currentDate = '';
-  @ViewChild(NgForm) form: NgForm;
+  @ViewChild(NgForm, { static: true }) form: NgForm;
 
   @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
   @Output() errors: EventEmitter<ValidationError[]> = new EventEmitter();

@@ -1,7 +1,6 @@
 import { DashPipe } from './dash.pipe';
 
 describe('DashPipe', () => {
-
   it('should return input value if input is not empty, null or undefined', () => {
     const pipe = new DashPipe();
     const output = pipe.transform('Hello world');

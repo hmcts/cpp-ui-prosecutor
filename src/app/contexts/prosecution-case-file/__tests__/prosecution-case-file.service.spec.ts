@@ -20,14 +20,13 @@ describe('ProsecutionCaseFileService', () => {
           provide: CppHttp,
           useValue: {
             commandSync,
-            query,
-          },
-        },
-      ],
+            query
+          }
+        }
+      ]
     });
     prosecution = TestBed.get(ProsecutionCaseFileService);
   });
-
 
   describe('createManualCaseSJP', () => {
     it('Should createManualCaseSJP with payload', () => {
@@ -39,19 +38,18 @@ describe('ProsecutionCaseFileService', () => {
 
       const payload = {
         caseDetails: {
-          initiationCode: 'J',
-        },
+          initiationCode: 'J'
+        }
       } as ManualCaseDetailsState;
 
       const command$ = prosecution.createManualCaseSJP(payload);
 
       expect(command$).toBeObservable(expected$);
       expect(commandSync).toHaveBeenCalledWith({
-        url:
-          '/prosecutioncasefile-service/command/api/rest/prosecutioncasefile/initiate-sjp-prosecution',
+        url: '/prosecutioncasefile-service/command/api/rest/prosecutioncasefile/initiate-sjp-prosecution',
         requestType: 'application/vnd.prosecutioncasefile.command.initiate-sjp-prosecution+json',
         body: payload,
-        successEvent: 'public.prosecutioncasefile.manual-case-received',
+        successEvent: 'public.prosecutioncasefile.manual-case-received'
       });
     });
   });

@@ -15,15 +15,15 @@ export class OffenceDateCodesGuard implements CanActivate {
   hasOffenceDateCodesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getOffenceDateCodes),
-      map((codes) => codes && codes.length > 0),
+      map(codes => codes && codes.length > 0),
       take(1)
     );
   }
 
   hasOffenceDateCodesInApi(): Observable<boolean> {
     return this.referenceData.getOffenceDateCode().pipe(
-      map((codes) => new LoadOffenceDateCodesSuccessAction(codes)),
-      tap((action) => this.store.dispatch(action)),
+      map(codes => new LoadOffenceDateCodesSuccessAction(codes)),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -33,7 +33,7 @@ export class OffenceDateCodesGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasOffenceDateCodesInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

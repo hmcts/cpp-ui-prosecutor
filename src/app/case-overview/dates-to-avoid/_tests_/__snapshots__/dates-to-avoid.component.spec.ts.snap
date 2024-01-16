@@ -4,18 +4,13 @@ exports[`DatesToAvoidComponent should compile correctly 1`] = `
 <dates-to-avoid-page
   breadcrumb={[Function Object]}
   breadcrumbs={[Function Array]}
-  formSubmit={[Function EventEmitter]}
+  formSubmit={[Function EventEmitter_]}
   kase={[Function Object]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-case-id="case-id"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><case-header-badge-container /><h1
     class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-    ng-reflect-type="heading-xlarge"
-    ng-reflect-vertical="5"
     pdk-margin-vertical="5"
     pdk-typography="heading-xlarge"
   >
@@ -29,25 +24,19 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
   breadcrumb={[Function Object]}
   breadcrumbs={[Function Array]}
   displayDatesToAvoidBanner={[Function Boolean]}
-  formSubmit={[Function EventEmitter]}
+  formSubmit={[Function EventEmitter_]}
   kase={[Function Object]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-case-id="case-id-test"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><case-header-badge-container /><h1
     class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-    ng-reflect-type="heading-xlarge"
-    ng-reflect-vertical="5"
     pdk-margin-vertical="5"
     pdk-typography="heading-xlarge"
   >
     Dates to avoid
   </h1><div
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    ng-reflect-vertical="1"
     pdk-margin-vertical="1"
   >
     <pdk-alert>
@@ -56,7 +45,6 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
     <div>
       <button
         class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
-        ng-reflect-vertical="5"
         pdk-button=""
         pdk-margin-vertical="5"
         routerlink="../../../../../../review-not-guilty-pleas"
@@ -74,18 +62,13 @@ exports[`DatesToAvoidComponent should display the dates to avoid component 1`] =
   breadcrumb={[Function Object]}
   breadcrumbs={[Function Array]}
   displayDatesToAvoidBanner="false"
-  formSubmit={[Function EventEmitter]}
+  formSubmit={[Function EventEmitter_]}
   kase={[Function Object]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-case-id="case-id-test"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><case-header-badge-container /><h1
     class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
-    ng-reflect-type="heading-xlarge"
-    ng-reflect-vertical="5"
     pdk-margin-vertical="5"
     pdk-typography="heading-xlarge"
   >

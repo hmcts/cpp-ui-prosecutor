@@ -28,37 +28,26 @@
         <div ngModelGroup="parentGuardianInformation">
           <div ngModelGroup="personalInformation">
             <!-- Title -->
-            <pdk-form-field
-              label="{{ 'MANUAL_CASE_DEFENDANT.TITLE' | translate }}"
-              labelType="small"
-            >
+            <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.TITLE' | translate }}" labelType="small">
               <input
                 pdk-text-input
                 pdk-input
                 name="title"
                 type="text"
-                [(ngModel)]="
-                  manualCaseDefendant.individual.parentGuardianInformation.personalInformation.title
-                "
+                [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.title"
                 [maxLength]="35"
                 required
               />
             </pdk-form-field>
 
             <!-- Forenames -->
-            <pdk-form-field
-              label="{{ 'MANUAL_CASE_DEFENDANT.FORENAME' | translate }}"
-              labelType="small"
-            >
+            <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.FORENAME' | translate }}" labelType="small">
               <input
                 pdk-text-input
                 pdk-input
                 name="firstName"
                 type="text"
-                [(ngModel)]="
-                  manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                    .firstName
-                "
+                [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.firstName"
                 [maxLength]="35"
                 required
                 data-role="forename-input"
@@ -66,38 +55,26 @@
             </pdk-form-field>
 
             <!-- Middlename -->
-            <pdk-form-field
-              label="{{ 'MANUAL_CASE_DEFENDANT.MIDDLENAME' | translate: param }}"
-              labelType="small"
-            >
+            <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.MIDDLENAME' | translate: param }}" labelType="small">
               <input
                 pdk-text-input
                 pdk-input
                 name="givenName2"
                 type="text"
-                [(ngModel)]="
-                  manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                    .givenName2
-                "
+                [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.givenName2"
                 [maxLength]="35"
                 data-role="middlename-input"
               />
             </pdk-form-field>
 
             <!-- Surname -->
-            <pdk-form-field
-              label="{{ 'MANUAL_CASE_DEFENDANT.SURNAME' | translate }}"
-              labelType="small"
-            >
+            <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.SURNAME' | translate }}" labelType="small">
               <input
                 pdk-text-input
                 pdk-input
                 name="lastName"
                 type="text"
-                [(ngModel)]="
-                  manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                    .lastName
-                "
+                [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.lastName"
                 [maxLength]="35"
                 required
                 data-role="surname-input"
@@ -125,10 +102,7 @@
             >
               <input-address
                 name="address"
-                [(ngModel)]="
-                  manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                    .address
-                "
+                [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.address"
                 [maxLength]="35"
                 [isRequired]="true"
                 [validWhenEmpty]="false"
@@ -157,8 +131,8 @@
                   name="primaryEmail"
                   type="email"
                   [(ngModel)]="
-                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                      .contactDetails.primaryEmail
+                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation.contactDetails
+                      .primaryEmail
                   "
                   validateEmail
                   [maxLength]="255"
@@ -182,8 +156,7 @@
                   type="tel"
                   maxlength="20"
                   [(ngModel)]="
-                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation
-                      .contactDetails.work
+                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation.contactDetails.work
                   "
                   validatePhone
                   [maxLength]="35"
@@ -199,18 +172,13 @@
       <div ngModelGroup="individual">
         <div ngModelGroup="parentGuardianInformation">
           <!-- Organisation Name -->
-          <pdk-form-field
-            label="{{ 'MANUAL_CASE_DEFENDANT.ORGANISATION_NAME' | translate }}"
-            labelType="small"
-          >
+          <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.ORGANISATION_NAME' | translate }}" labelType="small">
             <input
               pdk-text-input
               pdk-input
               name="organisationName"
               type="text"
-              [(ngModel)]="
-                manualCaseDefendant.individual.parentGuardianInformation.organisationName
-              "
+              [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.organisationName"
               [maxLength]="35"
               required
             />
@@ -267,9 +235,7 @@
               name="companyTelephoneNumber"
               type="tel"
               maxlength="20"
-              [(ngModel)]="
-                manualCaseDefendant.individual.parentGuardianInformation.companyTelephoneNumber
-              "
+              [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.companyTelephoneNumber"
               validatePhone
               [maxLength]="35"
             />
@@ -279,13 +245,9 @@
     </ng-container>
 
     <p *ngIf="manualCaseDefendant.individual.guardianType">
-      <a
-        pdk-link
-        href="javascript:void(0);"
-        data-role="remove-guardian-link"
-        (click)="removeGuardian()"
-        >{{ 'MANUAL_CASE_DEFENDANT.GUARDIAN_REMOVE_LINK' | translate }}</a
-      >
+      <a pdk-link href="javascript:void(0);" data-role="remove-guardian-link" (click)="removeGuardian()">{{
+        'MANUAL_CASE_DEFENDANT.GUARDIAN_REMOVE_LINK' | translate
+      }}</a>
     </p>
   </pdk-grid>
 </pdk-inset-text>

@@ -25,7 +25,8 @@ describe('DownloadDocumentComponent', () => {
             getDocument
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestDownloadDocumentComponent);

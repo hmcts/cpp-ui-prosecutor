@@ -27,7 +27,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
             {{ defendant.personalDetails.address | formatAddress: ', ' }}
           </p>
 
-          <defendant-details-change-alert [personalDetails]="defendant.personalDetails"></defendant-details-change-alert>
+          <defendant-details-change-alert
+            [personalDetails]="defendant.personalDetails"
+          ></defendant-details-change-alert>
 
           <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 
@@ -118,7 +120,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
         {{ defendant.legalEntityDetails.address | formatAddress: ', ' }}
       </p>
 
-      <defendant-details-change-alert [legalEntityDetails]="defendant.legalEntityDetails"></defendant-details-change-alert>
+      <defendant-details-change-alert
+        [legalEntityDetails]="defendant.legalEntityDetails"
+      ></defendant-details-change-alert>
 
       <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 
@@ -128,7 +132,9 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
             <case-details [kase]="kase"></case-details>
           </pdk-tab>
           <pdk-tab heading="Defendant details">
-            <defendant-details-legal-entity [legalEntityDetails]="defendant.legalEntityDetails"></defendant-details-legal-entity>
+            <defendant-details-legal-entity
+              [legalEntityDetails]="defendant.legalEntityDetails"
+            ></defendant-details-legal-entity>
           </pdk-tab>
           <pdk-tab heading="Documents" *ngIf="kase.caseDocuments?.length">
             <document-list [caseId]="kase.id" [documents]="kase.caseDocuments"></document-list>
@@ -163,7 +169,7 @@ export class OverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.showSideBar = (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived || this.kase.defendantAcceptedAocp;
+    this.showSideBar =
+      (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived || this.kase.defendantAcceptedAocp;
   }
-
 }

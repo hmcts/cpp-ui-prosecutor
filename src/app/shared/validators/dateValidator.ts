@@ -1,13 +1,5 @@
-import {
-  Directive,
-  forwardRef
-} from '@angular/core';
-import {
-  AbstractControl,
-  NG_VALIDATORS,
-  Validator,
-  ValidationErrors
-} from '@angular/forms';
+import { Directive, forwardRef } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@angular/forms';
 
 // This is a quick fix as there seems to be an inconsisten agreement with
 // dates between BE and FE:
@@ -27,7 +19,6 @@ const DATE_REGEX = /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/;
   ]
 })
 export class DateValidator implements Validator {
-
   validate(c: AbstractControl): ValidationErrors | null {
     if (c.value) {
       const invalid = !DATE_REGEX.test((c.value as string).toLowerCase());

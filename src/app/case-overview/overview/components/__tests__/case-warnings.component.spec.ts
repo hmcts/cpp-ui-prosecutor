@@ -14,7 +14,8 @@ describe('CaseWarnings', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TestCaseWarningsComponent, CaseWarningsComponent],
-      imports: [PdkCoreModule, PdkWarningTextModule]
+      imports: [PdkCoreModule, PdkWarningTextModule],
+      teardown: { destroyAfterEach: false }
     });
 
     Date.now = jest.fn(() => Date.parse('2017-02-14'));

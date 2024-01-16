@@ -5,33 +5,23 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
   defendant={[Function Object]}
   offences={[Function Array]}
 >
-  <case-warnings
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-offences="[object Object]"
-  >
-    
+  <case-warnings>
     <pdk-warning-text
-      _nghost-a-c0=""
       error=""
-      ng-reflect-error=""
     >
       <div
-        _ngcontent-a-c0=""
         class="govuk-warning-text pdk-warning-text--error"
       >
         <span
-          _ngcontent-a-c0=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c0=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c0=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -40,29 +30,22 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    
     <pdk-warning-text
-      _nghost-a-c0=""
       error=""
-      ng-reflect-error=""
     >
       <div
-        _ngcontent-a-c0=""
         class="govuk-warning-text pdk-warning-text--error"
       >
         <span
-          _ngcontent-a-c0=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c0=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c0=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -71,29 +54,22 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    
     <pdk-warning-text
-      _nghost-a-c0=""
       error=""
-      ng-reflect-error=""
     >
       <div
-        _ngcontent-a-c0=""
         class="govuk-warning-text pdk-warning-text--error"
       >
         <span
-          _ngcontent-a-c0=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c0=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c0=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -102,29 +78,22 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    
     <pdk-warning-text
-      _nghost-a-c0=""
       error=""
-      ng-reflect-error=""
     >
       <div
-        _ngcontent-a-c0=""
         class="govuk-warning-text pdk-warning-text--error"
       >
         <span
-          _ngcontent-a-c0=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c0=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c0=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -142,33 +111,23 @@ exports[`CaseWarnings should compile correctly without any warnings 1`] = `
   defendant={[Function Object]}
   offences={[Function Array]}
 >
-  <case-warnings
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-offences="[object Object]"
-  >
-    
+  <case-warnings>
     <pdk-warning-text
-      _nghost-a-c1=""
       error=""
-      ng-reflect-error=""
     >
       <div
-        _ngcontent-a-c1=""
         class="govuk-warning-text pdk-warning-text--error"
       >
         <span
-          _ngcontent-a-c1=""
           aria-hidden="true"
           class="govuk-warning-text__icon"
         >
           !
         </span>
         <strong
-          _ngcontent-a-c1=""
           class="govuk-warning-text__text"
         >
           <span
-            _ngcontent-a-c1=""
             class="govuk-warning-text__assistive"
           >
             Warning
@@ -177,9 +136,6 @@ exports[`CaseWarnings should compile correctly without any warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    
-    
-    
   </case-warnings>
 </case-warnings-test>
 `;

@@ -29,7 +29,8 @@ describe('CaseDecisionsComponent', () => {
         FirstLastNamePipeModule,
         SavedDecisionInformationPipeModule,
         VerdictTypePipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(CaseDecisionsComponent);
   });

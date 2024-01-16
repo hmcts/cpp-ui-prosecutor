@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import {DefendantDetailsUpdatesLinkDataGuard} from '../defendant-details-updates-data.guard';
+import { DefendantDetailsUpdatesLinkDataGuard } from '../defendant-details-updates-data.guard';
 import { Store, StoreModule } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { DefendantDetailsUpdatesResult, SjpService } from '../../../contexts/sjp';
@@ -19,7 +19,7 @@ describe('PleadedNotGuiltyDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         DefendantDetailsUpdatesLinkDataGuard,
         {
@@ -34,7 +34,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     defendantDetailsUpdatesDataGuard = TestBed.get(DefendantDetailsUpdatesLinkDataGuard);

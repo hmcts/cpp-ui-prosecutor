@@ -7,7 +7,6 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
   <pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <div
       pdk-margin-bottom="3"
@@ -19,11 +18,8 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
         Court decision
       </b>
     </div>
-    
     <div>
-      <case-decisions-details
-        ng-reflect-case-decision-with-offence-decisions="[object Object]"
-      >
+      <case-decisions-details>
         <div>
           caseDecisionWithOffenceDecisions: {
     "id": "mock-case-decision-1",
@@ -107,14 +103,11 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
         </div>
       </case-decisions-details>
     </div>
-    
-    
     <pdk-divider>
       <hr
         class="pdk-divider"
       />
     </pdk-divider>
-    
     <div>
       <div
         pdk-margin-bottom="3"
@@ -127,9 +120,7 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
           Previous court decisions
         </b>
       </div>
-      <case-decisions-details
-        ng-reflect-case-decision-with-offence-decisions="[object Object]"
-      >
+      <case-decisions-details>
         <div>
           caseDecisionWithOffenceDecisions: {
     "id": "mock-case-decision-2",
@@ -184,9 +175,7 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
   }
         </div>
       </case-decisions-details>
-      
     </div>
-    
   </pdk-grid>
 </case-decisions>
 `;

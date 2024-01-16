@@ -3,9 +3,14 @@ import { ManualCaseHearingDetailsComponent } from '../manual-case-hearing-detail
 import { CommonModule } from '@angular/common';
 import { FormsModule, ControlContainer, NgForm } from '@angular/forms';
 import {
-  PdkCoreModule, PdkFormModule, PdkDateInputModule, PdkAutosuggestModule,
-  PdkGridModule, PdkRadioInputModule,
-  PdkTextareaModule, PdkInputModule
+  PdkCoreModule,
+  PdkFormModule,
+  PdkDateInputModule,
+  PdkAutosuggestModule,
+  PdkGridModule,
+  PdkRadioInputModule,
+  PdkTextareaModule,
+  PdkInputModule
 } from '@cpp/pdk';
 import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -30,7 +35,7 @@ describe('Manual case initial hearing', () => {
   } as ManualCase;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseHearingDetailsComponent],
       imports: [
         CommonModule,
@@ -46,10 +51,10 @@ describe('Manual case initial hearing', () => {
         PdkCoreModule,
         PdkGridModule,
         MockPipesModule,
-        RouterTestingModule,
+        RouterTestingModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm],
+      providers: [ControlContainer, NgForm]
     });
 
     fixture = TestBed.createComponent(ManualCaseHearingDetailsComponent);
@@ -95,5 +100,4 @@ describe('Manual case initial hearing', () => {
     component.submitData();
     expect(component.editManualCase.initialHearing.hearingListingDirection).toBe('direction');
   });
-
 });

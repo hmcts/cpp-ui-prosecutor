@@ -9,7 +9,7 @@ import {
   PdkTextInputModule,
   PdkInputModule,
   PdkCurrencyInputModule,
-  PdkAutosuggestModule,
+  PdkAutosuggestModule
 } from '@cpp/pdk';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -25,11 +25,11 @@ describe('Manual case prosecutor', () => {
   const manualCaseDetailMock = {
     initiationCode: 'J', // SJP Case
     prosecutor: {},
-    originatingPoliceForce: {},
+    originatingPoliceForce: {}
   } as ManualCase;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseProsecutorComponent, ProsecutorAutosuggestComponent],
       imports: [
         CommonModule,
@@ -42,10 +42,10 @@ describe('Manual case prosecutor', () => {
         PdkTextInputModule,
         PdkInputModule,
         PdkCurrencyInputModule,
-        PdkAutosuggestModule,
+        PdkAutosuggestModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, provideMockStore()],
+      providers: [ControlContainer, NgForm, provideMockStore()]
     });
 
     fixture = TestBed.createComponent(ManualCaseProsecutorComponent);
@@ -70,8 +70,8 @@ describe('Manual case prosecutor', () => {
       address: {
         address1: ':address1',
         address2: ':address2',
-        postcode: ':postcode',
-      },
+        postcode: ':postcode'
+      }
     } as Prosecutor;
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
@@ -89,7 +89,7 @@ describe('Manual case prosecutor', () => {
 
   it('should emit an event on submit', () => {
     component.editManualCase = { caseId: '1-2-3-4' };
-    component.submitFormData.subscribe((data) => {
+    component.submitFormData.subscribe(data => {
       component.submitData();
       expect(data).toEqual({ caseId: '1-2-3-4' });
     });
@@ -100,7 +100,7 @@ describe('Manual case prosecutor', () => {
     const prosecutor = {
       id: '1',
       oucode: 'a',
-      shortName: 'a',
+      shortName: 'a'
     };
     component.onSelectedProsecutionAuthority(prosecutor as Prosecutor);
     expect(component.editManualCase.prosecutor.prosecutionAuthorityId).toBe('1');
@@ -112,7 +112,7 @@ describe('Manual case prosecutor', () => {
       id: 'cpsOrganisationIdMock',
       oucode: 'cpsProsecutorOuCodeMock',
       fullName: 'cpsProsecutorMock',
-      cpsFlag: true,
+      cpsFlag: true
     } as Prosecutor;
     component.editManualCase.prosecutor.prosecutingAuthority = 'prosecutorOuCode';
     component.onSelectedCpsProsecutor(cpsProsecutor);
@@ -131,7 +131,6 @@ describe('Manual case prosecutor', () => {
     expect(component.editManualCase.prosecutorCaseReference).toBe(undefined);
     component.updateProsecutionReferenceNo(false);
     expect(component.editManualCase.prosecutorCaseReference).toBe(undefined);
-
   });
 
   it('should render if no manual case details', () => {

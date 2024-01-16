@@ -32,7 +32,7 @@ export class MessageProcessor {
   formObject = {};
   tempObject: OffenceWordingMessage = {
     sections: [],
-    title: '',
+    title: ''
   };
 
   // Preparsing correction
@@ -46,7 +46,7 @@ export class MessageProcessor {
     /(\)\_(?=[^([{}]))|(\)_)$/g, // )_ the most tricky one
     /\.\.\}/g,
     /\_\(/g,
-    /_{/g,
+    /_{/g
   ];
 
   constructor() {
@@ -75,32 +75,28 @@ export class MessageProcessor {
     }
 
     function replacer(toReplace) {
-      toReplace = toReplace.replace('**(..', '').replace('..)', '').replace(/\s+/g, ' ');
+      toReplace = toReplace
+        .replace('**(..', '')
+        .replace('..)', '')
+        .replace(/\s+/g, ' ');
 
       return `{TEXT|${capitalize(toReplace)}}`;
     }
 
-    this.sections = this.sections.map((section) =>
-      section.replace(/(\*\*\(\.\..*?\.\.\))/g, replacer)
-    );
+    this.sections = this.sections.map(section => section.replace(/(\*\*\(\.\..*?\.\.\))/g, replacer));
 
     return this;
   }
 
   matchDateEntryPoints(): MessageProcessor {
-    this.sections = this.sections.map((section) =>
-      section.replace(/(\*\*\(\.\..*DATE?\.\.\))/g, '{DATE|Specify date}')
-    );
+    this.sections = this.sections.map(section => section.replace(/(\*\*\(\.\..*DATE?\.\.\))/g, '{DATE|Specify date}'));
 
     return this;
   }
 
   matchOnDateEntryPoints(): MessageProcessor {
-    this.sections = this.sections.map((section) =>
-      section.replace(
-        /(On.?\*\*\(\.\..*DATE?\.\.\))/gim,
-        '{DROPDOWN|Offence date type} {DATE|Specify date}'
-      )
+    this.sections = this.sections.map(section =>
+      section.replace(/(On.?\*\*\(\.\..*DATE?\.\.\))/gim, '{DROPDOWN|Offence date type} {DATE|Specify date}')
     );
 
     return this;
@@ -120,7 +116,7 @@ export class MessageProcessor {
       return `{RADIO|${capitalize(toReplace)}/}`;
     }
 
-    this.sections = this.sections.map((section) => {
+    this.sections = this.sections.map(section => {
       if (section.match(/(\_\[(.*?)\]\_)/g)) {
         section = `{LIST|${section}`; // /}
       }
@@ -142,13 +138,11 @@ export class MessageProcessor {
     this.formObject['sections'] = [];
 
     // Main sections
-    this.sections.forEach((section) => {
+    this.sections.forEach(section => {
       if (this.sectionHasList(section)) {
         this.formObject['sections'].push(section);
       } else {
-        this.formObject['sections'].push(
-          section.split(/({.*?})/gim).filter((x) => x.trim() !== '')
-        );
+        this.formObject['sections'].push(section.split(/({.*?})/gim).filter(x => x.trim() !== ''));
       }
     });
 
@@ -160,10 +154,10 @@ export class MessageProcessor {
     this.formObject['title'] = 'Offence title';
 
     // 1st level sections
-    this.formObject['sections'].map((s) => {
+    this.formObject['sections'].map(s => {
       // Section has more elements
       if (Array.isArray(s)) {
-        s.forEach((el) => {
+        s.forEach(el => {
           this.tempObject['sections'].push(this.createElement(el));
         });
 
@@ -181,7 +175,7 @@ export class MessageProcessor {
 
   private sectionHasList(section: Array<string> | string): boolean {
     if (Array.isArray(section)) {
-      section.forEach((s) => {
+      section.forEach(s => {
         return s.includes('{LIST');
       });
     } else {
@@ -222,18 +216,22 @@ export class MessageProcessor {
       tempList = this.lookUpRadioElements(tempList);
 
       let i = 0;
-      tempList.map((radio) => {
+      tempList.map(radio => {
         tempChildren = this.lookUpEntryElements(radio);
 
         if (tempChildren) {
-          tempChildren.map((elm) => {
+          tempChildren.map(elm => {
             children.push(this.createElement(elm));
 
             list.push({
               type: ElementType.Radio,
-              label: this.removeCommas(this.stripTagsRadio(radio).replace('/}', '').split('|')[1]),
+              label: this.removeCommas(
+                this.stripTagsRadio(radio)
+                  .replace('/}', '')
+                  .split('|')[1]
+              ),
               value: i++,
-              children,
+              children
             });
           });
 
@@ -242,14 +240,14 @@ export class MessageProcessor {
           list.push({
             type: ElementType.Radio,
             label: this.removeCommas(radio.replace('/}', '').split('|')[1]),
-            value: i++,
+            value: i++
           });
         }
       });
 
       return {
         type: ElementType.List,
-        ...(list.length > 0 && { list }),
+        ...(list.length > 0 && { list })
       };
     }
 
@@ -264,7 +262,7 @@ export class MessageProcessor {
 
     return {
       label,
-      type,
+      type
     };
   }
 

@@ -7,10 +7,7 @@ exports[`DefendantDetailsUpdatesContainer should create container 1`] = `
   router={[Function Object]}
   store={[Function Store]}
 >
-  <defendant-details-updates
-    ng-reflect-defendant-details-updates="[object Object]"
-    ng-reflect-region="[object Object]"
-  >
+  <defendant-details-updates>
     <span>
       {
     "total": 2,

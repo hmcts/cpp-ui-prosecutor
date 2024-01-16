@@ -17,7 +17,7 @@ describe('RegionsGuard', () => {
     getRegions = jest.fn();
     navigate = jest.fn();
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         RegionsGuard,
         {
@@ -32,7 +32,8 @@ describe('RegionsGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(RegionsGuard);
@@ -51,6 +52,17 @@ describe('RegionsGuard', () => {
         value: 'NORTH'
       }
     ] as Region[];
+    const newRegions = [
+      {
+        label: 'All',
+        value: 'ALL'
+      },
+      {
+        label: 'Blank',
+        value: 'UNKNOWN'
+      },
+      ...regions
+    ];
 
     const kase$ = cold('-a|', { a: regions });
     const expected$ = cold('-(b|)', { b: true });
@@ -59,14 +71,6 @@ describe('RegionsGuard', () => {
     const activate$ = guard.canActivate();
 
     expect(activate$).toBeObservable(expected$);
-    regions.unshift({
-      label: 'All',
-      value: 'ALL'
-    },
-    {
-      label: 'Blank',
-      value: 'BLANK'
-    });
-    expect(store.dispatch).toHaveBeenCalledWith(new LoadRegionsSuccess(regions));
+    expect(store.dispatch).toHaveBeenCalledWith(new LoadRegionsSuccess(newRegions));
   });
 });

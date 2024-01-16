@@ -35,7 +35,8 @@ describe('CasesMissingSjpNoticeGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     casesMissingSjpNoticeGuard = TestBed.get(CasesMissingSjpNoticesGuard);

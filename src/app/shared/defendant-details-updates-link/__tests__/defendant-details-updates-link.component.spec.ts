@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DefendantDetailsUpdatesLinkComponent } from '../defendant-details-updates-link.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -7,12 +7,15 @@ describe('DefendantDetailsUpdatesLinkComponent', () => {
   let component: DefendantDetailsUpdatesLinkComponent;
   let fixture: ComponentFixture<DefendantDetailsUpdatesLinkComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [DefendantDetailsUpdatesLinkComponent],
-      imports: [RouterTestingModule]
-    });
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DefendantDetailsUpdatesLinkComponent],
+        imports: [RouterTestingModule],
+        teardown: { destroyAfterEach: false }
+      });
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DefendantDetailsUpdatesLinkComponent);

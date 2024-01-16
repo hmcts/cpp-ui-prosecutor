@@ -8,10 +8,7 @@ exports[`DashboardContainer should compile correctly 1`] = `
   pleadedNotGuiltyCasesDetail$={[Function Store]}
   store={[Function Store]}
 >
-  <prosecutor-dashboard
-    ng-reflect-defendant-details-updates="[object Object]"
-    ng-reflect-pleaded-not-guilty-cases-detail="[object Object]"
-  >
+  <prosecutor-dashboard>
     <span>
       {
     "cases": [
@@ -87,7 +84,6 @@ exports[`DashboardContainer should compile correctly 1`] = `
   }
     </span>
     <span>
-      
     </span>
   </prosecutor-dashboard>
 </prosecutor-dashboard-container>

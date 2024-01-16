@@ -27,7 +27,7 @@ import { CaseDecision, OffenceDecision } from '../../../contexts/sjp';
             <div *ngIf="caseDecisionWithOffenceDecisions.session.magistrate">
               Magistrate: {{ caseDecisionWithOffenceDecisions.session.magistrate }}
             </div>
-            <div *ngIf="caseDecisionWithOffenceDecisions.session.courtHouseName" pdk-text-colour="grey-1">
+            <div *ngIf="caseDecisionWithOffenceDecisions.session.courtHouseName" pdk-text-colour="dark-grey">
               {{ caseDecisionWithOffenceDecisions.session.courtHouseName }}
             </div>
           </div>

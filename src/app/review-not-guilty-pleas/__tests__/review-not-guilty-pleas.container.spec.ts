@@ -17,7 +17,7 @@ describe('ReviewNotGuiltyPleasContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [ReviewNotGuiltyPleasContainer, MockReviewNotGuiltyPleasComponent],
-      imports: [CommonModule, StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [CommonModule, StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         {
           provide: Router,
@@ -25,7 +25,8 @@ describe('ReviewNotGuiltyPleasContainer', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);

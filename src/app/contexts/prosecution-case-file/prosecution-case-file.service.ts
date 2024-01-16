@@ -12,7 +12,7 @@ export class ProsecutionCaseFileService {
       url: `/prosecutioncasefile-service/command/api/rest/prosecutioncasefile/initiate-sjp-prosecution`,
       requestType: 'application/vnd.prosecutioncasefile.command.initiate-sjp-prosecution+json',
       successEvent: 'public.prosecutioncasefile.manual-case-received',
-      body: payload,
+      body: payload
     });
   }
 }

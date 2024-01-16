@@ -10,7 +10,8 @@ describe('DownloadCaseDecisionsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DownloadCaseDecisionsComponent, TestDownloadCaseDecisionsComponent],
-      imports: [PdkCoreModule, PdkInsetTextModule]
+      imports: [PdkCoreModule, PdkInsetTextModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestDownloadCaseDecisionsComponent);
   });

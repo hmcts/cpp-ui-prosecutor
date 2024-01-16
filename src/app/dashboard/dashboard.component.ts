@@ -40,7 +40,7 @@ import {
         </div>
       </pdk-grid>
       <pdk-grid one-third>
-        <div *ngIf="casesMissingSjpNoticeCount?.count > 0; else noLink"  pdk-margin-top="8">
+        <div *ngIf="casesMissingSjpNoticeCount?.count > 0; else noLink" pdk-margin-top="8">
           <a href="javascript: void(0);" routerLink="cases-missing-sjp-notices" title="Cases missing SJP notices">
             <pdk-summary-item
               pdk-text-colour="blue"

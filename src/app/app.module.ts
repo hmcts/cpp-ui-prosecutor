@@ -10,7 +10,7 @@ import { routes } from './routes';
 import { getReducers, metaReducers, reducerToken } from './reducers';
 import { loadHttpFactory } from './core/services/http';
 // temporary, pending ui.core fix
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 
 import { AppConfigModule } from './config';
 import { AppContainer } from './core/containers/app.container';
@@ -33,8 +33,14 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserModule,
     HttpModule,
     CoreModule,
-    RouterModule.forRoot(routes),
-    StoreModule.forRoot(reducerToken, { metaReducers }),
+    RouterModule.forRoot(routes, {}),
+    StoreModule.forRoot(reducerToken, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: false, // The entire application mutate state outside reducer
+        strictActionImmutability: false // This needs to be revisited and require more time to fix
+      }
+    }),
     StoreRouterConnectingModule.forRoot({
       routerState: RouterState.Minimal,
       serializer: CustomRouterStateSerializer

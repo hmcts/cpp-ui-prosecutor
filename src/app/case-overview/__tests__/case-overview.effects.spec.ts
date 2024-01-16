@@ -23,7 +23,7 @@ import { caseOverviewReducer } from '../case-overview.reducer';
 
 export class TestActions extends Actions {
   set stream(source: Observable<any>) {
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     this.source = source;
   }
 }
@@ -62,17 +62,20 @@ describe('Case Overview Effects', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        StoreModule.forRoot({
-          ...reducers,
-          router: (state, routerAction) => ({
-            state: {
-              params: { role: 'user' }
-            }
-          }),
-          caseOverview: caseOverviewReducer
-        }, {
-          runtimeChecks: {}
-        })
+        StoreModule.forRoot(
+          {
+            ...reducers,
+            router: (state, routerAction) => ({
+              state: {
+                params: { role: 'user' }
+              }
+            }),
+            caseOverview: caseOverviewReducer
+          },
+          {
+            runtimeChecks: {}
+          }
+        )
       ],
       providers: [
         CaseOverviewEffects,
@@ -95,7 +98,8 @@ describe('Case Overview Effects', () => {
           useFactory: getActions
         },
         RouterTestingModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     effects = TestBed.get(CaseOverviewEffects);

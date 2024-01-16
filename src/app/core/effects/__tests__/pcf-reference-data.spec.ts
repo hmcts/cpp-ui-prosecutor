@@ -12,11 +12,10 @@ import {
   LoadNationalitiesAction,
   LoadNationalitieSuccessAction,
   LoadObservedEthnicitiesAction,
-  LoadObservedEthnicitiesSuccessAction,
+  LoadObservedEthnicitiesSuccessAction
 } from '../../actions';
 
-import { Ethnicity, Nationality, CustodyEstablishment, EthnicityCode } from '../../model';
-import * as FileSaver from 'file-saver';
+import { Ethnicity, EthnicityCode, Nationality } from '../../model';
 import { ReferenceDataService } from '../../../contexts/reference-data';
 import { provideMockActions } from '@ngrx/effects/testing';
 
@@ -33,32 +32,24 @@ describe('Reference Data Effects', () => {
   const ethnicities = [
     {
       code: '09',
-      description: 'Afrikaan',
-    },
+      description: 'Afrikaan'
+    }
   ] as Ethnicity[];
 
   const observedEthnicities: EthnicityCode[] = [
     {
       id: 'c4ca4238-a0b9-3382-8dcc-509a6f75849b',
       ethnicityCode: '2',
-      ethnicityDescription: 'White - North European',
-    },
+      ethnicityDescription: 'White - North European'
+    }
   ];
 
   const nationalities = [
     {
       isoCode: 'GBR',
-      countryName: 'United Kingdom',
-    },
+      countryName: 'United Kingdom'
+    }
   ] as Nationality[];
-
-  const custodyEstablishment = [
-    {
-      id: 'b09bbfa0-5dd5-11e8-9c2d-fa7ae01bbebd',
-      name: 'hammersmith station',
-      custody: 'police',
-    },
-  ] as CustodyEstablishment[];
 
   beforeEach(() => {
     getEthnicities = jest.fn();
@@ -79,10 +70,10 @@ describe('Reference Data Effects', () => {
             getObservedEthnicities,
             getNationalities,
             getCustodyEstablishment,
-            downloadCriminalMediaReport,
-          },
-        },
-      ],
+            downloadCriminalMediaReport
+          }
+        }
+      ]
     });
 
     effects = TestBed.get(PCFReferenceDataEffects);
@@ -120,9 +111,7 @@ describe('Reference Data Effects', () => {
     const actionE = new LoadObservedEthnicitiesAction();
 
     it('should get the ObservedEthnicities from service ', () => {
-      const loadObservedEthnicitySuccess = new LoadObservedEthnicitiesSuccessAction(
-        observedEthnicities
-      );
+      const loadObservedEthnicitySuccess = new LoadObservedEthnicitiesSuccessAction(observedEthnicities);
 
       actions$ = hot('-a----', { a: actionE });
       const observedEthnicities$ = cold('-(b|)', { b: observedEthnicities });

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CaseDocument, SjpService } from '../../../contexts/sjp';
 import { take } from 'rxjs/operators';
-import * as FileSaver from 'file-saver';
+import FileSaver from 'file-saver';
 
 @Component({
   selector: 'download-document',
@@ -21,7 +21,7 @@ import * as FileSaver from 'file-saver';
         <span pdk-typography="body-xsmall">{{ extension | uppercase }}</span>
       </div>
       <div class="clear"></div>
-      <p>Added at {{ document.addedAt | formatDate: 'd MMMM yyyy \\'at\\' h:mm a' }}</p>
+      <p>Added at {{ document.addedAt | formatDate: "d MMMM yyyy 'at' h:mm a" }}</p>
     </div>
   `,
   styleUrls: ['./download-document.component.scss']
@@ -31,7 +31,6 @@ export class DownloadDocumentComponent {
   @Input() caseId: string;
 
   constructor(private sjpService: SjpService) {}
-
 
   get extension() {
     const fileName = this.document.metadata && this.document.metadata.fileName;

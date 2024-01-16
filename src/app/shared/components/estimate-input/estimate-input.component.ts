@@ -10,7 +10,7 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  ViewEncapsulation,
+  ViewEncapsulation
 } from '@angular/core';
 import {
   ControlValueAccessor,
@@ -20,7 +20,7 @@ import {
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
   Validator,
-  ValidationErrors,
+  ValidationErrors
 } from '@angular/forms';
 import { FormFieldControl } from '@cpp/pdk';
 
@@ -31,44 +31,43 @@ const minutesPerHour = 60;
 const DEFAULT_ERROR_MESSAGES = [
   {
     rule: 'estimateFormat',
-    message: `Time not recognised, use this format, for example 1 5 15`,
+    message: `Time not recognised, use this format, for example 1 5 15`
   },
   {
     rule: 'minMinutesEstimate',
-    message: `Estimate is too low - you must enter at least {{expected}} {{suffix}}`,
-  },
+    message: `Estimate is too low - you must enter at least {{expected}} {{suffix}}`
+  }
 ];
 
 @Component({
   selector: 'estimate-input',
-  templateUrl: './estimate-input.html',
-  styleUrls: ['./estimate-input.scss'],
+  templateUrl: './estimate-input.component.html',
+  styleUrls: ['./estimate-input.component.scss'],
   providers: [
     {
       provide: FormFieldControl,
-      useExisting: EstimateInput,
+      useExisting: EstimateInputComponent
     },
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => EstimateInput),
-      multi: true,
+      useExisting: forwardRef(() => EstimateInputComponent),
+      multi: true
     },
     {
       provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => EstimateInput),
-      multi: true,
-    },
+      useExisting: forwardRef(() => EstimateInputComponent),
+      multi: true
+    }
   ],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
-export class EstimateInput
-  implements ControlValueAccessor, FormFieldControl, Validator, OnInit, OnChanges {
+export class EstimateInputComponent implements ControlValueAccessor, FormFieldControl, Validator, OnInit, OnChanges {
   // tslint:disable-next-line: no-input-rename
   @Input('aria-describedby') ariaDescribedBy: string;
 
   // simulate blur and focus events as if this were a single input
-  @Output() blur = new EventEmitter();
-  @Output() focus = new EventEmitter();
+  @Output() fieldBlur = new EventEmitter();
+  @Output() fieldFocus = new EventEmitter();
 
   // hour / week configuration
   @Input() hoursPerDay: number;
@@ -104,7 +103,7 @@ export class EstimateInput
 
     this.id = `estimate-input-${i}`;
     this.estimateInputs = new FormGroup({
-      minutes: new FormControl(''),
+      minutes: new FormControl('')
     });
 
     if (this.weeksEnabled) {
@@ -134,7 +133,7 @@ export class EstimateInput
           return undefined;
         })
       )
-      .subscribe((val) => this.propagateChange(val));
+      .subscribe(val => this.propagateChange(val));
   }
 
   get ngControl(): NgControl {
@@ -147,16 +146,10 @@ export class EstimateInput
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (
-      changes.minutesPerDay &&
-      changes.minutesPerDay.currentValue !== changes.minutesPerDay.previousValue
-    ) {
+    if (changes.minutesPerDay && changes.minutesPerDay.currentValue !== changes.minutesPerDay.previousValue) {
       this.minutesPerDay = minutesPerHour * (changes.minutesPerDay.currentValue || 24);
     }
-    if (
-      changes.daysPerWeek &&
-      changes.daysPerWeek.currentValue !== changes.daysPerWeek.previousValue
-    ) {
+    if (changes.daysPerWeek && changes.daysPerWeek.currentValue !== changes.daysPerWeek.previousValue) {
       this.minutesPerWeek = this.minutesPerDay * (changes.daysPerWeek.currentValue || 7);
     }
   }
@@ -172,12 +165,7 @@ export class EstimateInput
       return this.ariaDescribedBy;
     }
     // tslint:disable-next-line
-    if (
-      controlName === 'minutes' &&
-      !this.weeksEnabled &&
-      !this.daysEnabled &&
-      !this.hoursEnabled
-    ) {
+    if (controlName === 'minutes' && !this.weeksEnabled && !this.daysEnabled && !this.hoursEnabled) {
       return this.ariaDescribedBy;
     }
     return null;
@@ -185,9 +173,9 @@ export class EstimateInput
 
   getErrors(control: string) {
     if (this.estimateInputs.controls[control] && this.estimateInputs.controls[control].errors) {
-      return Object.keys(this.estimateInputs.controls[control].errors).map((key) => ({
+      return Object.keys(this.estimateInputs.controls[control].errors).map(key => ({
         rule: key,
-        message: '',
+        message: ''
       }));
     }
     return null;
@@ -197,7 +185,7 @@ export class EstimateInput
     this.canBlur = true;
     setTimeout(() => {
       if (this.canBlur) {
-        this.blur.emit($event);
+        this.fieldBlur.emit($event);
         this.hasFocus = false;
       }
     });
@@ -205,7 +193,7 @@ export class EstimateInput
 
   handleFocusInput($event) {
     if (!this.hasFocus) {
-      this.focus.emit($event);
+      this.fieldFocus.emit($event);
       this.hasFocus = true;
     }
     this.canBlur = false;
@@ -240,8 +228,8 @@ export class EstimateInput
         minMinutesEstimate: {
           expected: this.minMinutesValue,
           actual: c.value,
-          suffix: this.minMinutesValue === 1 ? 'minute' : 'minutes',
-        },
+          suffix: this.minMinutesValue === 1 ? 'minute' : 'minutes'
+        }
       };
     }
     return null;
@@ -257,7 +245,7 @@ export class EstimateInput
         if (control && !control.valid) {
           return {
             ...(errors || {}),
-            [controlName]: control.errors,
+            [controlName]: control.errors
           };
         }
         return errors;
@@ -272,7 +260,7 @@ export class EstimateInput
         weeks: undefined,
         days: undefined,
         hours: undefined,
-        minutes: undefined,
+        minutes: undefined
       });
 
       return;

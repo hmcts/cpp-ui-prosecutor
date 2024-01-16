@@ -7,21 +7,11 @@ import { CaseCountResult, MiReportService } from '../../contexts/mi-report';
 import { LoadResultedCaseCount, LoadResultedCaseCountSuccess } from '../export-case-decisions.actions';
 import { cold, hot } from 'jasmine-marbles';
 import { ApiError } from '../../core/actions';
-
-export class MockActions extends Actions {
-  constructor() {
-    super();
-  }
-
-  set stream(source: Observable<any>) {
-    // tslint:disable-next-line
-    this.source = source;
-  }
-}
+import { provideMockActions } from '@ngrx/effects/testing';
 
 describe('Export case results by date/effects', () => {
   let effects: ExportCaseDecisionsEffects;
-  let actions$: MockActions;
+  let actions$: Observable<any>;
 
   let getResultedCaseCount: jest.Mock;
 
@@ -38,14 +28,12 @@ describe('Export case results by date/effects', () => {
             getResultedCaseCount
           }
         },
-        {
-          provide: Actions,
-          useClass: MockActions
-        }
-      ]
+        provideMockActions(() => actions$)
+      ],
+      teardown: { destroyAfterEach: false }
     });
-    effects = TestBed.get(ExportCaseDecisionsEffects);
-    actions$ = TestBed.get(Actions);
+    effects = TestBed.inject(ExportCaseDecisionsEffects);
+    actions$ = TestBed.inject(Actions);
   });
 
   describe('loadCaseCount$', () => {
@@ -55,7 +43,7 @@ describe('Export case results by date/effects', () => {
         toDate: '2018-10-25'
       });
 
-      actions$.stream = hot('-a|', { a: action });
+      actions$ = hot('-a|', { a: action });
       const caseCountResult = {
         casesResultedCount: 10
       } as CaseCountResult;
@@ -76,7 +64,7 @@ describe('Export case results by date/effects', () => {
         toDate: '2018-10-25'
       });
 
-      actions$.stream = hot('-a|', { a: action });
+      actions$ = hot('-a|', { a: action });
 
       getResultedCaseCount.mockReturnValue(cold('-#', {}, error));
       const expected$ = cold('--(b|)', {

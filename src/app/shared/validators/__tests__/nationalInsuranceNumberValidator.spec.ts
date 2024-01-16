@@ -6,17 +6,17 @@ import { By } from '@angular/platform-browser';
 import { NationalInsuranceNumberValidator } from '../index';
 
 describe('NationalInsuranceNumber Validator', () => {
-  let fixture: ComponentFixture<TestNationalInsuranceNumberValidator>;
+  let fixture: ComponentFixture<TestNationalInsuranceNumberValidatorComponent>;
   let form: NgForm;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestNationalInsuranceNumberValidator, NationalInsuranceNumberValidator],
-      imports: [FormsModule],
+      declarations: [TestNationalInsuranceNumberValidatorComponent, NationalInsuranceNumberValidator],
+      imports: [FormsModule]
     });
 
-    fixture = TestBed.createComponent(TestNationalInsuranceNumberValidator);
+    fixture = TestBed.createComponent(TestNationalInsuranceNumberValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     ctrlElement = fixture.debugElement.query(By.css('[name=niNumber]'));
     fixture.detectChanges();
@@ -28,7 +28,7 @@ describe('NationalInsuranceNumber Validator', () => {
   };
 
   const invalidError = {
-    inValidNI: { niNumber: true },
+    inValidNI: { niNumber: true }
   };
 
   it('should validate the supplied national insurance number', () => {
@@ -68,8 +68,8 @@ describe('NationalInsuranceNumber Validator', () => {
     <form>
       <input name="niNumber" [ngModel]="model" validateNI />
     </form>
-  `,
+  `
 })
-class TestNationalInsuranceNumberValidator {
+class TestNationalInsuranceNumberValidatorComponent {
   model: string;
 }

@@ -7,7 +7,7 @@ import { ManualCasePath } from '../../manual-case.interface';
   selector: 'prosecution-case-details',
   templateUrl: './prosecution-case-details.component.html',
   styleUrls: ['./prosecution-case-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProsecutionCaseDetailsComponent {
   title: string;
@@ -17,9 +17,7 @@ export class ProsecutionCaseDetailsComponent {
   @Output() edit = new EventEmitter<ManualCasePath>();
 
   getProsecutorCode(): string {
-    const prosecutor = this.prosecutors.find(
-      (p) => p.id === this.prosecutionCase.cpsOrganisationId
-    );
+    const prosecutor = this.prosecutors.find(p => p.id === this.prosecutionCase.cpsOrganisationId);
     return prosecutor ? prosecutor.fullName : '';
   }
 
@@ -28,8 +26,6 @@ export class ProsecutionCaseDetailsComponent {
   }
 
   isSJPOrRequisition() {
-    return (
-      this.prosecutionCase.initiationCode === 'J' || this.prosecutionCase.initiationCode === 'Q'
-    );
+    return this.prosecutionCase.initiationCode === 'J' || this.prosecutionCase.initiationCode === 'Q';
   }
 }

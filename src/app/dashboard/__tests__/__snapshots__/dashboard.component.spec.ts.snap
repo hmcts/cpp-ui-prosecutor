@@ -29,11 +29,9 @@ exports[`DashboardComponent should compile correctly 1`] = `
   </pdk-grid><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-two-thirds"
-      ng-reflect-two-thirds=""
       two-thirds=""
     >
       <h2
@@ -42,16 +40,12 @@ exports[`DashboardComponent should compile correctly 1`] = `
       >
         Other tasks
       </h2>
-      <review-not-guilty-pleas-link
-        ng-reflect-number-of-cases="2"
-      >
+      <review-not-guilty-pleas-link>
         <span>
           2
         </span>
       </review-not-guilty-pleas-link>
-      <defendant-details-updates-link
-        ng-reflect-number-of-updates="2"
-      >
+      <defendant-details-updates-link>
         <span>
           2
         </span>
@@ -77,7 +71,6 @@ exports[`DashboardComponent should compile correctly 1`] = `
           Export case results by date
         </a>
       </div>
-      
       <div
         pdk-margin-top="6"
       >
@@ -92,15 +85,11 @@ exports[`DashboardComponent should compile correctly 1`] = `
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-column-one-third"
-      ng-reflect-one-third=""
       one-third=""
     >
-      
       <pdk-summary-item
         hero=""
         label="cases missing SJP notices"
-        ng-reflect-hero=""
-        ng-reflect-label="cases missing SJP notices"
       >
         <div
           class="pdk-summary-item"
@@ -108,7 +97,6 @@ exports[`DashboardComponent should compile correctly 1`] = `
           <span
             class="pdk-summary-item__number pdk-summary-item__number--hero"
           >
-              
           </span>
           <span
             class="pdk-summary-item__label"
@@ -117,7 +105,6 @@ exports[`DashboardComponent should compile correctly 1`] = `
           </span>
         </div>
       </pdk-summary-item>
-      
     </pdk-grid>
   </pdk-grid>
 </prosecutor-dashboard>

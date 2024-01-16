@@ -35,14 +35,9 @@
             }}</span>
           </pdk-grid>
           <pdk-grid one-third class="change-link">
-            <a
-              pdk-link
-              unvisited
-              href="javascript:void(0)"
-              (click)="onEdit(offence)"
-              data-role="offence-change-link"
-              >{{ 'MANUAL_CASE_SUMMARY.CHANGE' | translate }}</a
-            >
+            <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit(offence)" data-role="offence-change-link">{{
+              'MANUAL_CASE_SUMMARY.CHANGE' | translate
+            }}</a>
           </pdk-grid>
         </pdk-grid>
         <table pdk-table class="" pdk-margin-bottom="4" pdk-margin-top="2">
@@ -121,11 +116,7 @@
               </td>
               <td></td>
             </tr>
-            <tr
-              *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelMethod"
-              pdk-table-row
-              class="table-row"
-            >
+            <tr *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelMethod" pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_METHOD' | translate }}
               </th>
@@ -134,11 +125,7 @@
               </td>
               <td></td>
             </tr>
-            <tr
-              *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelAmount"
-              pdk-table-row
-              class="table-row"
-            >
+            <tr *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelAmount" pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_AMOUNT' | translate }}
               </th>
@@ -188,11 +175,7 @@
               <td></td>
             </tr>
 
-            <tr
-              *ngIf="!hasNpp && prosecutionCase.initiationCode === 'S'"
-              pdk-table-row
-              class="table-row"
-            >
+            <tr *ngIf="!hasNpp && prosecutionCase.initiationCode === 'S'" pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.LAID_DATE' | translate }}
               </th>

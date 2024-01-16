@@ -26,21 +26,21 @@ describe('ProsecutorByCodeGuard', () => {
         ProsecutorByCodeGuard,
         MockStore,
         provideMockStore({
-          initialState: {},
+          initialState: {}
         }),
         {
           provide: ReferenceDataService,
           useValue: {
-            getProsecutorByCode,
-          },
+            getProsecutorByCode
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
     store = TestBed.get(Store);
     guard = TestBed.get(ProsecutorByCodeGuard);
@@ -50,14 +50,14 @@ describe('ProsecutorByCodeGuard', () => {
     beforeEach(() => {
       store.setState({
         pcfReferenceData: {
-          prosecutorByUserGroup: {cpsFlag: true}
+          prosecutorByUserGroup: { cpsFlag: true }
         },
         usersGroups: {
           userGroups: []
-        },
+        }
       } as State);
 
-      store.dispatch(new LoadProsecutorByUserGroupSuccess({cpsFlag: true} as Prosecutor));
+      store.dispatch(new LoadProsecutorByUserGroupSuccess({ cpsFlag: true } as Prosecutor));
     });
 
     it('should not call if already exists in store', () => {
@@ -75,13 +75,15 @@ describe('ProsecutorByCodeGuard', () => {
           prosecutorByUserGroup: {}
         },
         usersGroups: {
-          userGroups: [{
-            prosecutingAuthority: 'DVLA'
-          }]
-        },
+          userGroups: [
+            {
+              prosecutingAuthority: 'DVLA'
+            }
+          ]
+        }
       } as State);
 
-      store.dispatch(new LoadProsecutorByUserGroupSuccess({cpsFlag: true} as Prosecutor));
+      store.dispatch(new LoadProsecutorByUserGroupSuccess({ cpsFlag: true } as Prosecutor));
       apiSuccessCaseDetails$ = cold('-(a|)', { a: [] });
     });
 
@@ -102,13 +104,15 @@ describe('ProsecutorByCodeGuard', () => {
           prosecutorByUserGroup: {}
         },
         usersGroups: {
-          userGroups: [{
-            prosecutingAuthority: 'ALL'
-          }]
-        },
+          userGroups: [
+            {
+              prosecutingAuthority: 'ALL'
+            }
+          ]
+        }
       } as State);
 
-      store.dispatch(new LoadProsecutorByUserGroupSuccess({cpsFlag: true} as Prosecutor));
+      store.dispatch(new LoadProsecutorByUserGroupSuccess({ cpsFlag: true } as Prosecutor));
       apiSuccessCaseDetails$ = cold('-(a|)', { a: [] });
     });
 
@@ -130,13 +134,15 @@ describe('ProsecutorByCodeGuard', () => {
           prosecutorByUserGroup: {}
         },
         usersGroups: {
-          userGroups: [{
-            prosecutingAuthority: 'ALL'
-          }]
-        },
+          userGroups: [
+            {
+              prosecutingAuthority: 'ALL'
+            }
+          ]
+        }
       } as State);
 
-      store.dispatch(new LoadProsecutorByUserGroupSuccess({cpsFlag: true} as Prosecutor));
+      store.dispatch(new LoadProsecutorByUserGroupSuccess({ cpsFlag: true } as Prosecutor));
       apiErrors$ = cold('-(#)');
     });
 

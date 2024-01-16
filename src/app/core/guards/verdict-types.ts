@@ -16,15 +16,15 @@ export class VerdictTypesGuard implements CanActivate {
   hasVerdictTypesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getVerdictTypes),
-      map((verdictTypes) => verdictTypes && verdictTypes.length > 0),
+      map(verdictTypes => verdictTypes && verdictTypes.length > 0),
       take(1)
     );
   }
 
   hasVerdictTypesInApi(): Observable<boolean> {
     return this.referenceData.getVerdictTypes().pipe(
-      map((verdictTypes) => new LoadVerdictTypesSuccess(verdictTypes || [])),
-      tap((action) => this.store.dispatch(action)),
+      map(verdictTypes => new LoadVerdictTypesSuccess(verdictTypes || [])),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -34,7 +34,7 @@ export class VerdictTypesGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasVerdictTypesInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

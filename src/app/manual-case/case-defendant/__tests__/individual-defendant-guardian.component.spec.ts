@@ -1,12 +1,22 @@
 import { Shallow } from 'shallow-render';
 import { FormsModule, ReactiveFormsModule, ControlContainer, NgForm } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule,    PdkRadioInputModule,
-  PdkInsetTextModule, PdkTextareaModule, PdkInputModule, PdkDateInputModule, PdkGridModule } from '@cpp/pdk';
+import {
+  PdkCoreModule,
+  PdkFormModule,
+  PdkRadioInputModule,
+  PdkInsetTextModule,
+  PdkTextareaModule,
+  PdkInputModule,
+  PdkDateInputModule,
+  PdkGridModule
+} from '@cpp/pdk';
 import { ManualCaseModule } from '../../manual-case.module';
 import { ManualCaseDefendant } from '../../../core/model';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../../shared';
 import { IndividualDefendantGuardianComponent } from '../individual-defendant-guardian.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
 
 const individualCaseDefendant = {
   individual: {
@@ -18,16 +28,16 @@ const individualCaseDefendant = {
         address3: 'Peterborough',
         address4: '',
         address5: '',
-        postcode: 'PE1 5ZZ',
-      },
+        postcode: 'PE1 5ZZ'
+      }
     },
     parentGuardianInformation: {
       personalInformation: {
         lastName: 'Guardian One',
-        contactDetails: {},
-      },
-    },
-  },
+        contactDetails: {}
+      }
+    }
+  }
 } as ManualCaseDefendant;
 
 const defendantWithCompanyAstGuardian = {
@@ -40,20 +50,21 @@ const defendantWithCompanyAstGuardian = {
         address3: 'Peterborough',
         address4: '',
         address5: '',
-        postcode: 'PE1 5ZZ',
-      },
+        postcode: 'PE1 5ZZ'
+      }
     },
     parentGuardianInformation: {
       personalInformation: { lastName: '' },
       organisationName: 'ZZZ Company',
       address: {
-        address1: 'No fixed adobe',
-      },
-    },
-  },
+        address1: 'No fixed adobe'
+      }
+    }
+  }
 } as ManualCaseDefendant;
 
 describe('Individual Defendant Guardian Component', () => {
+  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
   let component: Shallow<IndividualDefendantGuardianComponent>;
 
   const generateUUID = jest.fn();
@@ -90,8 +101,8 @@ describe('Individual Defendant Guardian Component', () => {
       {
         bind: {
           manualCaseDefendant,
-          manualCaseType,
-        },
+          manualCaseType
+        }
       }
     );
   }

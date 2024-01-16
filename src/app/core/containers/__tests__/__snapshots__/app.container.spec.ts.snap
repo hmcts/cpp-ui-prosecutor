@@ -16,26 +16,12 @@ exports[`App page component should compile correctly 1`] = `
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c1=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="false"
-        ng-reflect-api-error="false"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="false"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        
         <pdk-skip-link
-          _ngcontent-a-c1=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -45,37 +31,29 @@ exports[`App page component should compile correctly 1`] = `
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c1=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -86,20 +64,24 @@ exports[`App page component should compile correctly 1`] = `
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -113,7 +95,6 @@ exports[`App page component should compile correctly 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -121,14 +102,13 @@ exports[`App page component should compile correctly 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
                     </button>
                     <a
                       class="govuk-link"
-                      href="/cookies?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                      href="/cookies?referrer=http%3A%2F%2Flocalhost%2F"
                       pdk-link=""
                     >
                       View cookies
@@ -138,12 +118,8 @@ exports[`App page component should compile correctly 1`] = `
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c1=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -154,33 +130,23 @@ exports[`App page component should compile correctly 1`] = `
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c1=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c1=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c1=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c1=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -189,9 +155,7 @@ exports[`App page component should compile correctly 1`] = `
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-1"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -202,7 +166,6 @@ exports[`App page component should compile correctly 1`] = `
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -221,7 +184,6 @@ exports[`App page component should compile correctly 1`] = `
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -230,48 +192,42 @@ exports[`App page component should compile correctly 1`] = `
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c1=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c1=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c1=""
                             class="govuk-header__link"
-                            href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                            href="https://cpp.home.nonlive/search?referrer=http%3A%2F%2Flocalhost%2F"
                             pdk-header-link=""
                           >
                              Detailed search 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c1=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c1=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -280,12 +236,10 @@ exports[`App page component should compile correctly 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c1=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c1=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -294,12 +248,10 @@ exports[`App page component should compile correctly 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c1=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c1=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -308,12 +260,10 @@ exports[`App page component should compile correctly 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c1=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c1=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -330,14 +280,10 @@ exports[`App page component should compile correctly 1`] = `
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c1=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c1=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -353,25 +299,15 @@ exports[`App page component should compile correctly 1`] = `
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c1=""
-          _nghost-a-c8=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c8=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -382,18 +318,14 @@ exports[`App page component should compile correctly 1`] = `
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c1=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c1=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -401,54 +333,31 @@ exports[`App page component should compile correctly 1`] = `
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c1=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c1=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c1=""
-                    >
-                      <dt
-                        _ngcontent-a-c1=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c1=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c1=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c1=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c1=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c1=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c1=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -460,9 +369,7 @@ exports[`App page component should compile correctly 1`] = `
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c1=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -470,16 +377,13 @@ exports[`App page component should compile correctly 1`] = `
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c1=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c1=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -489,16 +393,13 @@ exports[`App page component should compile correctly 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c1=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c1=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -507,16 +408,13 @@ exports[`App page component should compile correctly 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c1=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c1=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""
@@ -553,26 +451,12 @@ exports[`App page component should compile correctly when search is available 1`
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c117=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="false"
-        ng-reflect-api-error="false"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="false"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        
         <pdk-skip-link
-          _ngcontent-a-c117=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -582,37 +466,29 @@ exports[`App page component should compile correctly when search is available 1`
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c117=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -623,20 +499,24 @@ exports[`App page component should compile correctly when search is available 1`
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -650,7 +530,6 @@ exports[`App page component should compile correctly when search is available 1`
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -658,7 +537,6 @@ exports[`App page component should compile correctly when search is available 1`
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
@@ -675,12 +553,8 @@ exports[`App page component should compile correctly when search is available 1`
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c117=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -691,33 +565,23 @@ exports[`App page component should compile correctly when search is available 1`
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c117=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c117=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c117=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c117=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -726,9 +590,7 @@ exports[`App page component should compile correctly when search is available 1`
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-7"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -739,7 +601,6 @@ exports[`App page component should compile correctly when search is available 1`
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -758,7 +619,6 @@ exports[`App page component should compile correctly when search is available 1`
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -767,34 +627,30 @@ exports[`App page component should compile correctly when search is available 1`
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c117=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c117=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c117=""
                             class="govuk-header__link"
                             href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fcpp.nonlive%2Fprosecutor"
                             pdk-header-link=""
@@ -803,12 +659,10 @@ exports[`App page component should compile correctly when search is available 1`
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c117=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c117=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -817,12 +671,10 @@ exports[`App page component should compile correctly when search is available 1`
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c117=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c117=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -831,12 +683,10 @@ exports[`App page component should compile correctly when search is available 1`
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c117=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c117=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -845,12 +695,10 @@ exports[`App page component should compile correctly when search is available 1`
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c117=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c117=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -867,14 +715,10 @@ exports[`App page component should compile correctly when search is available 1`
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c117=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c117=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -890,25 +734,15 @@ exports[`App page component should compile correctly when search is available 1`
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c117=""
-          _nghost-a-c124=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c124=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -919,18 +753,14 @@ exports[`App page component should compile correctly when search is available 1`
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c117=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c117=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -938,54 +768,31 @@ exports[`App page component should compile correctly when search is available 1`
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c117=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c117=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c117=""
-                    >
-                      <dt
-                        _ngcontent-a-c117=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c117=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c117=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c117=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c117=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c117=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c117=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -997,9 +804,7 @@ exports[`App page component should compile correctly when search is available 1`
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c117=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -1007,16 +812,13 @@ exports[`App page component should compile correctly when search is available 1`
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c117=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c117=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -1026,16 +828,13 @@ exports[`App page component should compile correctly when search is available 1`
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c117=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c117=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -1044,16 +843,13 @@ exports[`App page component should compile correctly when search is available 1`
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c117=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c117=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""
@@ -1090,25 +886,12 @@ exports[`App page component should detect when the app is busy 1`] = `
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c42=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="true"
-        ng-reflect-api-error="false"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="false"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        <pdk-activity-indicator
-          _ngcontent-a-c42=""
-        >
+        <pdk-activity-indicator>
           <div
             class="pdk-activity-indicator"
           >
@@ -1125,7 +908,7 @@ exports[`App page component should detect when the app is busy 1`] = `
                 Page loading
               </b>
               <p
-                style="margin-top: 4px"
+                style="margin-top: 4px;"
               >
                 This may take a moment, please wait.
               </p>
@@ -1135,10 +918,7 @@ exports[`App page component should detect when the app is busy 1`] = `
             class="pdk-activity-indicator__backdrop"
           />
         </pdk-activity-indicator>
-        
         <pdk-skip-link
-          _ngcontent-a-c42=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -1148,37 +928,29 @@ exports[`App page component should detect when the app is busy 1`] = `
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c42=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -1189,20 +961,24 @@ exports[`App page component should detect when the app is busy 1`] = `
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -1216,7 +992,6 @@ exports[`App page component should detect when the app is busy 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -1224,14 +999,13 @@ exports[`App page component should detect when the app is busy 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
                     </button>
                     <a
                       class="govuk-link"
-                      href="/cookies?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                      href="/cookies?referrer=http%3A%2F%2Flocalhost%2F"
                       pdk-link=""
                     >
                       View cookies
@@ -1241,12 +1015,8 @@ exports[`App page component should detect when the app is busy 1`] = `
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c42=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -1257,33 +1027,23 @@ exports[`App page component should detect when the app is busy 1`] = `
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c42=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c42=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c42=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c42=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -1292,9 +1052,7 @@ exports[`App page component should detect when the app is busy 1`] = `
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-2"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -1305,7 +1063,6 @@ exports[`App page component should detect when the app is busy 1`] = `
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -1324,7 +1081,6 @@ exports[`App page component should detect when the app is busy 1`] = `
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -1333,48 +1089,42 @@ exports[`App page component should detect when the app is busy 1`] = `
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c42=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c42=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c42=""
                             class="govuk-header__link"
-                            href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                            href="https://cpp.home.nonlive/search?referrer=http%3A%2F%2Flocalhost%2F"
                             pdk-header-link=""
                           >
                              Detailed search 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c42=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c42=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -1383,12 +1133,10 @@ exports[`App page component should detect when the app is busy 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c42=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c42=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -1397,12 +1145,10 @@ exports[`App page component should detect when the app is busy 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c42=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c42=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -1411,12 +1157,10 @@ exports[`App page component should detect when the app is busy 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c42=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c42=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -1433,14 +1177,10 @@ exports[`App page component should detect when the app is busy 1`] = `
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c42=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c42=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -1456,25 +1196,15 @@ exports[`App page component should detect when the app is busy 1`] = `
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c42=""
-          _nghost-a-c49=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c49=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -1485,18 +1215,14 @@ exports[`App page component should detect when the app is busy 1`] = `
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c42=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c42=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -1504,54 +1230,31 @@ exports[`App page component should detect when the app is busy 1`] = `
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c42=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c42=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c42=""
-                    >
-                      <dt
-                        _ngcontent-a-c42=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c42=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c42=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c42=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c42=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c42=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c42=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -1563,9 +1266,7 @@ exports[`App page component should detect when the app is busy 1`] = `
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c42=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -1573,16 +1274,13 @@ exports[`App page component should detect when the app is busy 1`] = `
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c42=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c42=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -1592,16 +1290,13 @@ exports[`App page component should detect when the app is busy 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c42=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c42=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -1610,16 +1305,13 @@ exports[`App page component should detect when the app is busy 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c42=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c42=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""
@@ -1656,26 +1348,12 @@ exports[`App page component should track any api errors 1`] = `
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c102=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="false"
-        ng-reflect-api-error="true"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="false"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        
-        <pdk-alert
-          _ngcontent-a-c102=""
-        >
+        <pdk-alert>
           <div
             class="pdk-alert pdk-alert--warning"
             role="alert"
@@ -1683,26 +1361,19 @@ exports[`App page component should track any api errors 1`] = `
             <div
               class="pdk-alert__container"
             >
-              
               <div
                 class="pdk-alert__message"
               >
                 <div>
-                  
-                  <span
-                    _ngcontent-a-c102=""
-                  >
+                  <span>
                      There’s a technical problem. You can’t save anything new – try again later. 
                   </span>
-                  
                 </div>
               </div>
             </div>
           </div>
         </pdk-alert>
         <pdk-skip-link
-          _ngcontent-a-c102=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -1712,37 +1383,29 @@ exports[`App page component should track any api errors 1`] = `
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c102=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -1753,20 +1416,24 @@ exports[`App page component should track any api errors 1`] = `
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -1780,7 +1447,6 @@ exports[`App page component should track any api errors 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -1788,14 +1454,13 @@ exports[`App page component should track any api errors 1`] = `
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
                     </button>
                     <a
                       class="govuk-link"
-                      href="/cookies?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                      href="/cookies?referrer=http%3A%2F%2Flocalhost%2F"
                       pdk-link=""
                     >
                       View cookies
@@ -1805,12 +1470,8 @@ exports[`App page component should track any api errors 1`] = `
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c102=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -1821,33 +1482,23 @@ exports[`App page component should track any api errors 1`] = `
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c102=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c102=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c102=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c102=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -1856,9 +1507,7 @@ exports[`App page component should track any api errors 1`] = `
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-6"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -1869,7 +1518,6 @@ exports[`App page component should track any api errors 1`] = `
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -1888,7 +1536,6 @@ exports[`App page component should track any api errors 1`] = `
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -1897,48 +1544,42 @@ exports[`App page component should track any api errors 1`] = `
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c102=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c102=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c102=""
                             class="govuk-header__link"
-                            href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                            href="https://cpp.home.nonlive/search?referrer=http%3A%2F%2Flocalhost%2F"
                             pdk-header-link=""
                           >
                              Detailed search 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c102=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c102=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -1947,12 +1588,10 @@ exports[`App page component should track any api errors 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c102=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c102=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -1961,12 +1600,10 @@ exports[`App page component should track any api errors 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c102=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c102=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -1975,12 +1612,10 @@ exports[`App page component should track any api errors 1`] = `
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c102=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c102=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -1997,14 +1632,10 @@ exports[`App page component should track any api errors 1`] = `
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c102=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c102=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -2020,25 +1651,15 @@ exports[`App page component should track any api errors 1`] = `
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c102=""
-          _nghost-a-c109=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c109=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -2049,18 +1670,14 @@ exports[`App page component should track any api errors 1`] = `
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c102=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c102=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -2068,54 +1685,31 @@ exports[`App page component should track any api errors 1`] = `
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c102=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c102=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c102=""
-                    >
-                      <dt
-                        _ngcontent-a-c102=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c102=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c102=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c102=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c102=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c102=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c102=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -2127,9 +1721,7 @@ exports[`App page component should track any api errors 1`] = `
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c102=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -2137,16 +1729,13 @@ exports[`App page component should track any api errors 1`] = `
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c102=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c102=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -2156,16 +1745,13 @@ exports[`App page component should track any api errors 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c102=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c102=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -2174,16 +1760,13 @@ exports[`App page component should track any api errors 1`] = `
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c102=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c102=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""
@@ -2220,26 +1803,12 @@ exports[`App page component should track the offline status of the container 1`]
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c72=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="false"
-        ng-reflect-api-error="false"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="true"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        
-        <pdk-alert
-          _ngcontent-a-c72=""
-        >
+        <pdk-alert>
           <div
             class="pdk-alert pdk-alert--warning"
             role="alert"
@@ -2247,16 +1816,11 @@ exports[`App page component should track the offline status of the container 1`]
             <div
               class="pdk-alert__container"
             >
-              
               <div
                 class="pdk-alert__message"
               >
                 <div>
-                  
-                  
-                  <span
-                    _ngcontent-a-c72=""
-                  >
+                  <span>
                      You are offline. You cannot save anything new - check your connection and try again. 
                   </span>
                 </div>
@@ -2265,8 +1829,6 @@ exports[`App page component should track the offline status of the container 1`]
           </div>
         </pdk-alert>
         <pdk-skip-link
-          _ngcontent-a-c72=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -2276,37 +1838,29 @@ exports[`App page component should track the offline status of the container 1`]
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c72=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -2317,20 +1871,24 @@ exports[`App page component should track the offline status of the container 1`]
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -2344,7 +1902,6 @@ exports[`App page component should track the offline status of the container 1`]
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -2352,14 +1909,13 @@ exports[`App page component should track the offline status of the container 1`]
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
                     </button>
                     <a
                       class="govuk-link"
-                      href="/cookies?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                      href="/cookies?referrer=http%3A%2F%2Flocalhost%2F"
                       pdk-link=""
                     >
                       View cookies
@@ -2369,12 +1925,8 @@ exports[`App page component should track the offline status of the container 1`]
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c72=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -2385,33 +1937,23 @@ exports[`App page component should track the offline status of the container 1`]
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c72=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c72=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c72=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c72=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -2420,9 +1962,7 @@ exports[`App page component should track the offline status of the container 1`]
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-4"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -2433,7 +1973,6 @@ exports[`App page component should track the offline status of the container 1`]
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -2452,7 +1991,6 @@ exports[`App page component should track the offline status of the container 1`]
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -2461,48 +1999,42 @@ exports[`App page component should track the offline status of the container 1`]
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c72=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c72=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c72=""
                             class="govuk-header__link"
-                            href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                            href="https://cpp.home.nonlive/search?referrer=http%3A%2F%2Flocalhost%2F"
                             pdk-header-link=""
                           >
                              Detailed search 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c72=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c72=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -2511,12 +2043,10 @@ exports[`App page component should track the offline status of the container 1`]
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c72=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c72=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -2525,12 +2055,10 @@ exports[`App page component should track the offline status of the container 1`]
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c72=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c72=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -2539,12 +2067,10 @@ exports[`App page component should track the offline status of the container 1`]
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c72=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c72=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -2561,14 +2087,10 @@ exports[`App page component should track the offline status of the container 1`]
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c72=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c72=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -2584,25 +2106,15 @@ exports[`App page component should track the offline status of the container 1`]
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c72=""
-          _nghost-a-c79=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c79=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -2613,18 +2125,14 @@ exports[`App page component should track the offline status of the container 1`]
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c72=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c72=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -2632,54 +2140,31 @@ exports[`App page component should track the offline status of the container 1`]
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c72=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c72=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c72=""
-                    >
-                      <dt
-                        _ngcontent-a-c72=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c72=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c72=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c72=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c72=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c72=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c72=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -2691,9 +2176,7 @@ exports[`App page component should track the offline status of the container 1`]
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c72=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -2701,16 +2184,13 @@ exports[`App page component should track the offline status of the container 1`]
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c72=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c72=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -2720,16 +2200,13 @@ exports[`App page component should track the offline status of the container 1`]
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c72=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c72=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -2738,16 +2215,13 @@ exports[`App page component should track the offline status of the container 1`]
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c72=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c72=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""
@@ -2784,26 +2258,12 @@ exports[`App page component should track the online status of the container 1`] 
       class="js-enabled"
     >
       <cpp-application-layout
-        _nghost-a-c87=""
         accessibilitylink="accessibility"
-        ng-reflect-accessibility-link="accessibility"
-        ng-reflect-activity="false"
-        ng-reflect-api-error="false"
-        ng-reflect-header-nav-items="[object Object],[object Object"
-        ng-reflect-offline="false"
-        ng-reflect-search-enabled="true"
-        ng-reflect-search-label="Search by case or application "
-        ng-reflect-search-placeholder="Search by reference"
-        ng-reflect-service-name="CJS Common Platform"
         searchlabel="Search by case or application reference"
         searchplaceholder="Search by reference"
         servicename="CJS Common Platform"
       >
-        
-        
         <pdk-skip-link
-          _ngcontent-a-c87=""
-          ng-reflect-target="main-content"
           target="main-content"
         >
           <a
@@ -2813,37 +2273,29 @@ exports[`App page component should track the online status of the container 1`] 
              Skip to main content 
           </a>
         </pdk-skip-link>
-        <cpp-application-cookies-banner
-          _ngcontent-a-c87=""
-          ng-reflect-cookies-link="/cookies?referrer=https%3A%2F%"
-        >
-          
+        <cpp-application-cookies-banner>
           <pdk-cookie-banner
             heading="Cookies on Common Platform"
-            ng-reflect-heading="Cookies on Common Platform"
           >
             <div
               aria-label="Cookies on Common Platform"
               class="govuk-cookie-banner"
+              data-nosnippet=""
               role="region"
             >
               <div
                 class="govuk-width-container"
               >
-                
                 <pdk-grid
                   class="govuk-grid-row"
                   container=""
-                  ng-reflect-container=""
                 >
                   <pdk-grid
                     class="govuk-grid-column-two-thirds"
-                    ng-reflect-two-thirds=""
                     two-thirds=""
                   >
                     <h2
                       class="govuk-cookie-banner__heading govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                        Cookies on Common Platform 
@@ -2854,20 +2306,24 @@ exports[`App page component should track the online status of the container 1`] 
                   <pdk-grid
                     class="govuk-grid-row"
                     container=""
-                    ng-reflect-container=""
                   >
                     <pdk-grid
                       class="govuk-grid-column-two-thirds"
-                      ng-reflect-two-thirds=""
                       two-thirds=""
                     >
                       <div
                         class="pdk-cookie-banner__content"
                       >
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                           We use some essential cookies to make the application work.
                         </p>
-                        <p>
+                        <p
+                          class="govuk-body-m"
+                          pdk-typography="body"
+                        >
                            We’d like to set additional cookies to understand how you use Common Platform, remember your settings and improve your experience. 
                         </p>
                       </div>
@@ -2881,7 +2337,6 @@ exports[`App page component should track the online status of the container 1`] 
                     <button
                       class="govuk-button"
                       data-test-id="acceptCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Accept additional cookies 
@@ -2889,14 +2344,13 @@ exports[`App page component should track the online status of the container 1`] 
                     <button
                       class="govuk-button"
                       data-test-id="rejectCookies"
-                      ng-reflect-type=""
                       pdk-button=""
                     >
                        Reject additional cookies 
                     </button>
                     <a
                       class="govuk-link"
-                      href="/cookies?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                      href="/cookies?referrer=http%3A%2F%2Flocalhost%2F"
                       pdk-link=""
                     >
                       View cookies
@@ -2906,12 +2360,8 @@ exports[`App page component should track the online status of the container 1`] 
               </div>
             </div>
           </pdk-cookie-banner>
-          
-          
         </cpp-application-cookies-banner>
-        <pdk-header
-          _ngcontent-a-c87=""
-        >
+        <pdk-header>
           <header
             class="govuk-header js-enabled"
           >
@@ -2922,33 +2372,23 @@ exports[`App page component should track the online status of the container 1`] 
                 class="pdk-header__content"
               >
                 <a
-                  _ngcontent-a-c87=""
-                  class="govuk-header__link govuk-header__link--service-name"
+                  class="govuk-header__link govuk-header__service-name"
                   href="#"
                   pdk-header-title=""
                 >
                   CJS Common Platform
                 </a>
                 <div
-                  _ngcontent-a-c87=""
                   class="cpp-layout__header-content"
                 >
-                  
                   <form
-                    _ngcontent-a-c87=""
                     class="cpp-layout__search ng-untouched ng-pristine ng-valid"
                     novalidate=""
                   >
                     <pdk-searchbar
-                      _ngcontent-a-c87=""
                       borderless=""
                       class="ng-untouched ng-pristine ng-valid"
                       name="q"
-                      ng-reflect-aria-label="Search by case or application "
-                      ng-reflect-borderless=""
-                      ng-reflect-model=""
-                      ng-reflect-name="q"
-                      ng-reflect-placeholder="Search by reference"
                       ngmodel=""
                     >
                       <div
@@ -2957,9 +2397,7 @@ exports[`App page component should track the online status of the container 1`] 
                         <input
                           aria-label="Search by case or application reference"
                           class="pdk-searchbar__input pdk-searchbar__input--borderless govuk-input"
-                          id="searchbar_pdk-search-5"
-                          ng-reflect-has-error="false"
-                          ng-reflect-width=""
+                          id="searchbar_pdk-search-GENERATED_ID"
                           pdk-input=""
                           placeholder="Search by reference"
                           type="text"
@@ -2970,7 +2408,6 @@ exports[`App page component should track the online status of the container 1`] 
                         >
                           <pdk-search-icon
                             color="#fff"
-                            ng-reflect-color="#fff"
                             style="display: flex; align-items: center; justify-content: center;"
                           >
                             <i
@@ -2989,7 +2426,6 @@ exports[`App page component should track the online status of the container 1`] 
                           </pdk-search-icon>
                           <span
                             class="pdk-searchbar__label govuk-visually-hidden"
-                            ng-reflect-hidden=""
                             pdk-visually-hidden=""
                           >
                              Search by case or application reference 
@@ -2998,48 +2434,42 @@ exports[`App page component should track the online status of the container 1`] 
                       </div>
                     </pdk-searchbar>
                   </form>
-                  
-                  
-                  <pdk-header-nav
-                    _ngcontent-a-c87=""
-                  >
-                    <button
-                      aria-controls="navigation"
-                      aria-expanded="false"
-                      aria-label="Show or hide Top Level Navigation"
-                      class="govuk-header__menu-button"
-                      type="button"
+                  <pdk-header-nav>
+                    <nav
+                      aria-label="Top Level Navigation"
+                      class="govuk-header__navigation"
                     >
-                       Menu 
-                    </button>
-                    <nav>
+                      <button
+                        aria-controls="navigation"
+                        aria-expanded="false"
+                        aria-label="Show or hide Top Level Navigation"
+                        class="govuk-header__menu-button"
+                        type="button"
+                      >
+                         Menu 
+                      </button>
                       <div
-                        aria-label="Top Level Navigation"
-                        class="govuk-header__navigation"
+                        class="govuk-header__navigation-list"
+                        hidden=""
                         role="list"
                       >
-                        
                         <pdk-header-nav-item
-                          _ngcontent-a-c87=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c87=""
                             class="govuk-header__link"
-                            href="https://cpp.home.nonlive/search?referrer=https%3A%2F%2Fgithub.com%2F%40angular-cli-builders"
+                            href="https://cpp.home.nonlive/search?referrer=http%3A%2F%2Flocalhost%2F"
                             pdk-header-link=""
                           >
                              Detailed search 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c87=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c87=""
                             class="govuk-header__link"
                             href="path/to/home"
                             pdk-header-link=""
@@ -3048,12 +2478,10 @@ exports[`App page component should track the online status of the container 1`] 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c87=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c87=""
                             class="govuk-header__link"
                             href="path/to/account"
                             pdk-header-link=""
@@ -3062,12 +2490,10 @@ exports[`App page component should track the online status of the container 1`] 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c87=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c87=""
                             class="govuk-header__link"
                             href="path/to/logout"
                             pdk-header-link=""
@@ -3076,12 +2502,10 @@ exports[`App page component should track the online status of the container 1`] 
                           </a>
                         </pdk-header-nav-item>
                         <pdk-header-nav-item
-                          _ngcontent-a-c87=""
                           class="govuk-header__navigation-item"
                           role="listitem"
                         >
                           <a
-                            _ngcontent-a-c87=""
                             class="govuk-header__link"
                             href="/prosecutor/dev-tools"
                             pdk-header-link=""
@@ -3098,14 +2522,10 @@ exports[`App page component should track the online status of the container 1`] 
           </header>
         </pdk-header>
         <pdk-container
-          _ngcontent-a-c87=""
           class="govuk-width-container"
           style="display: block;"
         >
-          <pdk-phase-banner
-            _ngcontent-a-c87=""
-            ng-reflect-type="beta"
-          >
+          <pdk-phase-banner>
             <p
               class="govuk-phase-banner__content"
             >
@@ -3121,25 +2541,15 @@ exports[`App page component should track the online status of the container 1`] 
               </span>
             </p>
           </pdk-phase-banner>
-          
-          
-          
-          
         </pdk-container>
         <pdk-main
-          _ngcontent-a-c87=""
-          _nghost-a-c94=""
           class="govuk-body-m"
           contentid="main-content"
-          ng-reflect-content-id="main-content"
-          ng-reflect-type="body"
           pdk-typography="body"
         >
           <main
-            _ngcontent-a-c94=""
             class="govuk-main-wrapper govuk-!-margin-bottom-9 govuk-width-container"
             id="main-content"
-            ng-reflect-bottom="9"
             pdk-container=""
             pdk-margin-bottom="9"
             style="display: block;"
@@ -3150,18 +2560,14 @@ exports[`App page component should track the online status of the container 1`] 
             </router-container>
           </main>
         </pdk-main>
-        <pdk-footer
-          _ngcontent-a-c87=""
-        >
+        <pdk-footer>
           <footer
             class="govuk-footer"
           >
             <div
               class="govuk-width-container"
             >
-              <pdk-footer-meta
-                _ngcontent-a-c87=""
-              >
+              <pdk-footer-meta>
                 <div
                   class="govuk-footer__meta"
                 >
@@ -3169,54 +2575,31 @@ exports[`App page component should track the online status of the container 1`] 
                     class="pdk-footer__meta-item govuk-footer__meta-item govuk-footer__meta-item--grow"
                   >
                     <h2
-                      _ngcontent-a-c87=""
                       class="govuk-heading-m"
-                      ng-reflect-type="heading-medium"
                       pdk-typography="heading-medium"
                     >
                       Help desk
                     </h2>
-                    <div
-                      _ngcontent-a-c87=""
-                    >
+                    <div>
                       HMCTS DTS IT Service Desk
                     </div>
-                    <dl
-                      _ngcontent-a-c87=""
-                    >
-                      <dt
-                        _ngcontent-a-c87=""
-                      >
+                    <dl>
+                      <dt>
                         Telephone
                       </dt>
-                      <dd
-                        _ngcontent-a-c87=""
-                      >
+                      <dd>
                         0203 989 6060
                       </dd>
-                      <dd
-                        _ngcontent-a-c87=""
-                      >
+                      <dd>
                         Monday to Friday, 8am to 8pm and Saturday, 8am to 2pm (excluding public holidays)
                       </dd>
                     </dl>
-                    
-                    
-                    <dl
-                      _ngcontent-a-c87=""
-                    >
-                      
-                      
-                      <dt
-                        _ngcontent-a-c87=""
-                      >
+                    <dl>
+                      <dt>
                         Email
                       </dt>
-                      <dd
-                        _ngcontent-a-c87=""
-                      >
+                      <dd>
                         <a
-                          _ngcontent-a-c87=""
                           class="govuk-footer__link"
                           href="mailto:CJSCP-ServiceDesk@hmcts.net?Subject=General%20enquiry"
                           pdk-footer-link=""
@@ -3228,9 +2611,7 @@ exports[`App page component should track the online status of the container 1`] 
                   </div>
                 </div>
               </pdk-footer-meta>
-              <pdk-footer-list
-                _ngcontent-a-c87=""
-              >
+              <pdk-footer-list>
                 <hr
                   class="govuk-footer__section-break"
                 />
@@ -3238,16 +2619,13 @@ exports[`App page component should track the online status of the container 1`] 
                   class="govuk-footer__inline-list"
                   role="list"
                 >
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c87=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c87=""
                         class="govuk-footer__link"
                         href="/terms-and-conditions"
                         pdk-footer-link=""
@@ -3257,16 +2635,13 @@ exports[`App page component should track the online status of the container 1`] 
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c87=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c87=""
                         class="govuk-footer__link"
                         href="/cookies"
                         pdk-footer-link=""
@@ -3275,16 +2650,13 @@ exports[`App page component should track the online status of the container 1`] 
                       </a>
                     </div>
                   </pdk-footer-list-item>
-                  
                   <pdk-footer-list-item
-                    _ngcontent-a-c87=""
                     role="listitem"
                   >
                     <div
                       class="govuk-footer__inline-list-item"
                     >
                       <a
-                        _ngcontent-a-c87=""
                         class="govuk-footer__link"
                         href="accessibility"
                         pdk-footer-link=""

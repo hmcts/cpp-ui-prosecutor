@@ -1,30 +1,23 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {
-  FormArray,
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { SplitCaseValidators } from '../splitCaseValidators';
 
 const caseReference = 'case-reference';
 describe('Email Validator', () => {
-  let fixture: ComponentFixture<TestSplitCaseValidator>;
+  let fixture: ComponentFixture<TestSplitCaseValidatorComponent>;
   let form: FormGroup;
   let formArray: FormArray;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestSplitCaseValidator],
-      imports: [FormsModule, ReactiveFormsModule],
+      declarations: [TestSplitCaseValidatorComponent],
+      imports: [FormsModule, ReactiveFormsModule]
     });
 
-    fixture = TestBed.createComponent(TestSplitCaseValidator);
+    fixture = TestBed.createComponent(TestSplitCaseValidatorComponent);
     form = fixture.componentInstance.formGroup;
     formArray = form.controls['splitCases'] as FormArray;
     fixture.detectChanges();
@@ -39,7 +32,7 @@ describe('Email Validator', () => {
     required: { required: true },
     noMatch: { noMatch: true },
     invalid: { invalidSplit: true },
-    duplicate: { duplicate: true },
+    duplicate: { duplicate: true }
   };
 
   it('should validate the required input and set error', () => {
@@ -94,7 +87,7 @@ describe('Email Validator', () => {
 
   it(`should validate input if case reference value is duplicate of sibling input value`, () => {
     const ctrlElements = fixture.debugElement.queryAll(By.css('[name^=splitCase_]'));
-    ctrlElements.forEach((ctrl) => setValue(ctrl, `${caseReference}/0`));
+    ctrlElements.forEach(ctrl => setValue(ctrl, `${caseReference}/0`));
     ctrlElement = fixture.debugElement.query(By.css('[name=splitCase_1]'));
     expect(form.valid).toEqual(false);
     expect(formArray.controls[1].errors).toEqual(errors.duplicate);
@@ -106,20 +99,14 @@ describe('Email Validator', () => {
   template: `
     <form [formGroup]="formGroup">
       <ng-container formArrayName="splitCases">
-        <ng-container
-          *ngFor="
-            let item of formGroup.controls['splitCases'].controls;
-            let i = index;
-            let first = first
-          "
-        >
+        <ng-container *ngFor="let item of formGroup.controls['splitCases'].controls; let i = index; let first = first">
           <input name="splitCase_{{ i }}" [formControl]="item" />
         </ng-container>
       </ng-container>
     </form>
-  `,
+  `
 })
-class TestSplitCaseValidator {
+class TestSplitCaseValidatorComponent {
   formGroup = new FormGroup({
     splitCases: new FormArray([
       new FormControl(
@@ -128,7 +115,7 @@ class TestSplitCaseValidator {
           SplitCaseValidators.caseURNNoMatch(caseReference),
           SplitCaseValidators.invalidSplitFormat,
           SplitCaseValidators.hasDuplicateUrns(),
-          Validators.required,
+          Validators.required
         ])
       ),
       new FormControl(
@@ -136,9 +123,9 @@ class TestSplitCaseValidator {
         Validators.compose([
           SplitCaseValidators.caseURNNoMatch(caseReference),
           SplitCaseValidators.invalidSplitFormat,
-          SplitCaseValidators.hasDuplicateUrns(),
+          SplitCaseValidators.hasDuplicateUrns()
         ])
-      ),
-    ]),
+      )
+    ])
   });
 }

@@ -39,16 +39,16 @@ describe('Nationalities Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getNationalities,
-          },
+            getNationalities
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(NationalitiesGuard);
@@ -70,9 +70,7 @@ describe('Nationalities Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getNationalities).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadNationalitieSuccessAction(nationalties)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadNationalitieSuccessAction(nationalties));
       });
     });
 
@@ -107,9 +105,7 @@ describe('Nationalities Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getNationalities).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadNationalitieSuccessAction(nationalties)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadNationalitieSuccessAction(nationalties));
         });
       });
     });

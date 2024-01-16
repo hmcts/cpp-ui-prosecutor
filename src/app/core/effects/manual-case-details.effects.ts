@@ -1,58 +1,54 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Effect, Actions, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
 import * as manualCaseDetailsActions from '../actions/manual-case-details.actions';
-import { ApiError, CreateManualCaseSuccess, CreateManualCaseError } from '../actions';
+import { ApiError, CreateManualCaseError, CreateManualCaseSuccess } from '../actions';
 import { ProsecutionCaseFileService } from '../../contexts/prosecution-case-file';
 import { cloneDeep } from 'lodash';
-import * as moment from 'moment';
+import moment from 'moment';
 import { ManualCaseAndDocuments } from '../model';
-import * as cleanDeep from 'clean-deep';
+import cleanDeep from 'clean-deep';
 
 @Injectable()
 export class ManualCaseDetailsEffects {
-  @Effect()
-  createManualCase$: Observable<Action> = this.actions$.pipe(
-    ofType<manualCaseDetailsActions.CreateManualCase>(manualCaseDetailsActions.CREATE_MANUAL_CASE),
-    switchMap((action) => {
-      // clone the payload to prevent modifying the store
-      let payload = cloneDeep(action.payload);
-      payload = this.cleanUp(payload);
+  createManualCase$: Observable<Action> = createEffect(() =>
+    this.actions$.pipe(
+      ofType<manualCaseDetailsActions.CreateManualCase>(manualCaseDetailsActions.CREATE_MANUAL_CASE),
+      switchMap(action => {
+        // clone the payload to prevent modifying the store
+        let payload = cloneDeep(action.payload);
+        payload = this.cleanUp(payload);
 
-      const command$ = this.prosecutionCaseFileService.createManualCaseSJP(payload);
+        const command$ = this.prosecutionCaseFileService.createManualCaseSJP(payload);
 
-      return command$.pipe(
-        switchMap((caseData) => {
-          let actionToReturn: Action;
+        return command$.pipe(
+          switchMap(caseData => {
+            let actionToReturn: Action;
 
-          if (caseData.errors) {
-            actionToReturn = new CreateManualCaseError();
+            if (caseData.errors) {
+              actionToReturn = new CreateManualCaseError();
 
-            if (caseData.errors.some((e) => e.code === 'DUPLICATED_PROSECUTION')) {
-              this.router.navigate(['manual-case', 'duplicated-prosecutor']);
+              if (caseData.errors.some(e => e.code === 'DUPLICATED_PROSECUTION')) {
+                this.router.navigate(['manual-case', 'duplicated-prosecutor']);
+              }
             }
-          }
 
-          if (caseData.prosecutorCaseReference && !caseData.errors) {
-            this.router.navigate([
-              'manual-case',
-              'case-created',
-              caseData.prosecutorCaseReference,
-              caseData.caseId,
-            ]);
-            actionToReturn = new CreateManualCaseSuccess();
-          }
+            if (caseData.prosecutorCaseReference && !caseData.errors) {
+              this.router.navigate(['manual-case', 'case-created', caseData.prosecutorCaseReference, caseData.caseId]);
+              actionToReturn = new CreateManualCaseSuccess();
+            }
 
-          if (actionToReturn) {
-            return of(actionToReturn);
-          }
-        }),
-        catchError((error) => of(new ApiError(error)))
-      );
-    })
+            if (actionToReturn) {
+              return of(actionToReturn);
+            }
+          }),
+          catchError(error => of(new ApiError(error)))
+        );
+      })
+    )
   );
 
   private cleanUp({ defendants, caseDetails, ...rest }: ManualCaseAndDocuments) {
@@ -69,7 +65,7 @@ export class ManualCaseDetailsEffects {
     }
 
     if (caseDetails.prosecutor) {
-      defendants.forEach((defendant) => {
+      defendants.forEach(defendant => {
         defendant.appliedProsecutorCosts = caseDetails.prosecutor.appliedProsecutorCosts;
         defendant.postingDate = caseDetails.prosecutor.chargePostingDate;
       });
@@ -80,7 +76,7 @@ export class ManualCaseDetailsEffects {
       caseDetails.initialHearing.hearingDuration = moment
         .duration(caseDetails.initialHearing.hearingDuration)
         .asMinutes();
-      defendants.forEach((defendant) => (defendant.initialHearing = caseDetails.initialHearing));
+      defendants.forEach(defendant => (defendant.initialHearing = caseDetails.initialHearing));
       delete caseDetails.initialHearing;
     }
 
@@ -88,19 +84,17 @@ export class ManualCaseDetailsEffects {
       ...caseDetails,
       prosecutor: {
         prosecutionAuthorityId: caseDetails.prosecutor.prosecutionAuthorityId,
-        prosecutingAuthority: caseDetails.prosecutor.prosecutingAuthority,
-      },
+        prosecutingAuthority: caseDetails.prosecutor.prosecutingAuthority
+      }
     };
 
     if (caseDetails.initiationCode === 'S') {
       cleanCaseDetails.dateReceived = caseDetails.prosecutor.summonsRequestReceivedDate;
     }
 
-    defendants.forEach((defendant) => {
+    defendants.forEach(defendant => {
       if (defendant.aliasForCorporate) {
-        const aliasForCorporate = defendant.aliasForCorporate.map(
-          (alias) => alias.aliasForCorporate
-        );
+        const aliasForCorporate = defendant.aliasForCorporate.map(alias => alias.aliasForCorporate);
         defendant.aliasForCorporate = aliasForCorporate;
       }
 
@@ -108,7 +102,7 @@ export class ManualCaseDetailsEffects {
         defendant.custodyStatus = defendant.individual.custodyStatus;
         defendant.individual.bailStatus = defendant.individual.custodyStatus;
       }
-      defendant.offences.forEach((offence) => {
+      defendant.offences.forEach(offence => {
         this.deleteOffenceProperties(offence);
       });
     });
@@ -116,7 +110,7 @@ export class ManualCaseDetailsEffects {
     const newPayload = {
       caseDetails: cleanCaseDetails,
       defendants,
-      ...rest,
+      ...rest
     };
 
     return cleanDeep(newPayload) as ManualCaseAndDocuments;
@@ -132,11 +126,11 @@ export class ManualCaseDetailsEffects {
       'locationRequired',
       'standardOffenceWording',
       'defendantOptions',
-      'dynamicParticularFormData',
+      'dynamicParticularFormData'
     ];
 
     for (const prop in offence) {
-      if (offencePropertiesToRemove.find((p) => p === prop)) {
+      if (offencePropertiesToRemove.find(p => p === prop)) {
         delete offence[prop];
       }
     }

@@ -3,15 +3,13 @@
 exports[`WithdrawOffenceComponent should compile correctly 1`] = `
 <withdraw-offence-list
   breadcrumbs={[Function Array]}
-  formSubmit={[Function EventEmitter]}
+  formSubmit={[Function EventEmitter_]}
   kase={[Function Object]}
 >
   <breadcrumb-links /><case-header-badge-container /><div>
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       data-test="withdraw-offence-heading"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="5"
       pdk-margin-vertical="5"
       pdk-typography="heading-xlarge"
     >
@@ -19,8 +17,6 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
     </h1>
   </div><div
     class="govuk-!-margin-bottom-5 govuk-body-m"
-    ng-reflect-bottom="5"
-    ng-reflect-type="body"
     pdk-margin-bottom="5"
     pdk-typography="body"
   >
@@ -28,12 +24,9 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
   </div><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-!-margin-top-5 govuk-grid-column-three-quarters"
-      ng-reflect-three-quarters=""
-      ng-reflect-top="5"
       pdk-margin-top="5"
       three-quarters=""
     >
@@ -46,7 +39,7 @@ exports[`WithdrawOffenceComponent should compile correctly 1`] = `
 exports[`WithdrawOffenceComponent should display the offence component 1`] = `
 <withdraw-offence-list
   breadcrumbs={[Function Array]}
-  formSubmit={[Function EventEmitter]}
+  formSubmit={[Function EventEmitter_]}
   kase={[Function Object]}
   offences={[Function Array]}
 >
@@ -54,8 +47,6 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
     <h1
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
       data-test="withdraw-offence-heading"
-      ng-reflect-type="heading-xlarge"
-      ng-reflect-vertical="5"
       pdk-margin-vertical="5"
       pdk-typography="heading-xlarge"
     >
@@ -63,8 +54,6 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
     </h1>
   </div><div
     class="govuk-!-margin-bottom-5 govuk-body-m"
-    ng-reflect-bottom="5"
-    ng-reflect-type="body"
     pdk-margin-bottom="5"
     pdk-typography="body"
   >
@@ -72,12 +61,9 @@ exports[`WithdrawOffenceComponent should display the offence component 1`] = `
   </div><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-!-margin-top-5 govuk-grid-column-three-quarters"
-      ng-reflect-three-quarters=""
-      ng-reflect-top="5"
       pdk-margin-top="5"
       three-quarters=""
     >

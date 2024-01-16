@@ -15,15 +15,15 @@ export class AlcoholLevelMethodsGuard implements CanActivate {
   hasAlcoholLevelMethodsInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getAlcoholLevelMethods),
-      map((codes) => codes && codes.length > 0),
+      map(codes => codes && codes.length > 0),
       take(1)
     );
   }
 
   hasAlcoholLevelMethodsInApi(): Observable<boolean> {
     return this.referenceData.getAlcoholLevelMethod().pipe(
-      map((codes) => new LoadAlcoholLevelMethodsSuccessAction(codes)),
-      tap((action) => this.store.dispatch(action)),
+      map(codes => new LoadAlcoholLevelMethodsSuccessAction(codes)),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -33,7 +33,7 @@ export class AlcoholLevelMethodsGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasAlcoholLevelMethodsInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

@@ -13,8 +13,13 @@ describe('DefendantOffenceWarnings', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestDefendantOffenceWarningsComponent, DefendantOffenceWarningsComponent, MockOffenceWarnings],
-      imports: [PdkCoreModule, PdkWarningTextModule]
+      declarations: [
+        TestDefendantOffenceWarningsComponent,
+        DefendantOffenceWarningsComponent,
+        MockOffenceWarningsComponent
+      ],
+      imports: [PdkCoreModule, PdkWarningTextModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestDefendantOffenceWarningsComponent);
@@ -60,5 +65,5 @@ describe('DefendantOffenceWarnings', () => {
       <ng-content></ng-content>
     `
   })
-  class MockOffenceWarnings {}
+  class MockOffenceWarningsComponent {}
 });

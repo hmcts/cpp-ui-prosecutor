@@ -13,7 +13,7 @@ describe('ProsecutorSearchComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ProsecutorSearchComponent],
       imports: [CommonModule, PdkCoreModule],
-      schemas: [NO_ERRORS_SCHEMA],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -35,7 +35,7 @@ describe('ProsecutorSearchComponent', () => {
 
   it('Should not include non standard prosecutor', () => {
     const prosecutorToFilter = {
-      standard: false,
+      standard: false
     } as Prosecutor;
 
     component.includeNonStandardOrganisations = false;
@@ -45,7 +45,7 @@ describe('ProsecutorSearchComponent', () => {
   });
   it('Should include standard prosecutor when include non-standard flag is true', () => {
     const prosecutorToFilter = {
-      standard: true,
+      standard: true
     } as Prosecutor;
 
     component.includeNonStandardOrganisations = true;
@@ -57,7 +57,7 @@ describe('ProsecutorSearchComponent', () => {
 
   it('Should include non-standard prosecutor when include non-standard flag is true', () => {
     const prosecutorToFilter = {
-      standard: false,
+      standard: false
     } as Prosecutor;
 
     component.includeNonStandardOrganisations = true;

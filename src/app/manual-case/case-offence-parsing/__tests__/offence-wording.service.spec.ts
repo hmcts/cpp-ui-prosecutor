@@ -4,7 +4,7 @@ import { ManualCaseOffence } from '../../../core/model/manual-case-offence';
 
 const offenceTypes = [
   { value: 3, label: 'after' },
-  { value: 4, label: 'between' },
+  { value: 4, label: 'between' }
 ];
 
 describe('Preparsing - preparse()', () => {
@@ -15,43 +15,37 @@ describe('Preparsing - preparse()', () => {
       {
         type: ElementType.Dropdown,
         label: 'Offence date type',
-        value: 4,
+        value: 4
       },
       {
         type: ElementType.Date,
         label: 'Specify Date',
         value: '2018-10-15',
-        valueTwo: '2018-12-20',
+        valueTwo: '2018-12-20'
       },
       {
         type: ElementType.Label,
-        label: 'occurring at',
+        label: 'occurring at'
       },
       {
         type: ElementType.Text,
         label: 'Specify township',
-        value: 'Liverpool street',
-      },
+        value: 'Liverpool street'
+      }
     ] as Element[];
 
     const editOffence = {
       offenceCommittedDate: undefined,
-      offenceCommittedEndDate: undefined,
+      offenceCommittedEndDate: undefined
     } as ManualCaseOffence;
 
-    const wording = wordingService.buildParticularWording(
-      particularFormSections,
-      offenceTypes,
-      editOffence
-    );
+    const wording = wordingService.buildParticularWording(particularFormSections, offenceTypes, editOffence);
 
-    expect(wording).toEqual(
-      'Between 15 October 2018 to 20 December 2018 occurring at Liverpool street'
-    );
+    expect(wording).toEqual('Between 15 October 2018 to 20 December 2018 occurring at Liverpool street');
     expect(editOffence).toEqual({
       offenceDateCode: 4,
       offenceCommittedDate: '2018-10-15',
-      offenceCommittedEndDate: '2018-12-20',
+      offenceCommittedEndDate: '2018-12-20'
     });
   });
 
@@ -69,22 +63,22 @@ describe('Preparsing - preparse()', () => {
               {
                 type: ElementType.Text,
                 label: 'Specify person',
-                value: 'Mr. Dora DIMSUM',
+                value: 'Mr. Dora DIMSUM'
               },
               {
                 type: ElementType.Label,
-                label: 'to have possession of an official document, namely',
+                label: 'to have possession of an official document, namely'
               },
               {
                 type: ElementType.Text,
                 label: 'Specify document',
-                value: 'The secret code',
+                value: 'The secret code'
               },
               {
                 type: ElementType.Label,
-                label: 'issued for your use alone',
-              },
-            ],
+                label: 'issued for your use alone'
+              }
+            ]
           },
           {
             type: ElementType.Radio,
@@ -93,25 +87,21 @@ describe('Preparsing - preparse()', () => {
             children: [
               {
                 type: ElementType.Text,
-                label: 'Specify to whom word was communicated',
+                label: 'Specify to whom word was communicated'
               },
               {
                 type: ElementType.Label,
-                label: 'a secret official code word issued for use alone',
-              },
-            ],
-          },
-        ],
-      },
+                label: 'a secret official code word issued for use alone'
+              }
+            ]
+          }
+        ]
+      }
     ] as Element[];
 
     const editOffence = {} as ManualCaseOffence;
 
-    const wording = wordingService.buildParticularWording(
-      particularFormSections,
-      offenceTypes,
-      editOffence
-    );
+    const wording = wordingService.buildParticularWording(particularFormSections, offenceTypes, editOffence);
 
     expect(wording).toEqual(
       ' allowed another, namely Mr. Dora DIMSUM to have possession of an official document, ' +

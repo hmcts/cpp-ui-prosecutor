@@ -7,10 +7,7 @@ export * from './reference-data';
 export const getRouteParams = (state: State) =>
   (state.router && state.router.state && (state.router.state.params as { [key: string]: string })) || {};
 
-export const getRole = createSelector(
-  getRouteParams,
-  ({ role }) => role
-);
+export const getRole = createSelector(getRouteParams, ({ role }) => role);
 
 export const getHasApiActivity = (state: State) => state.api.requests.length > 0;
 export const getHasApiError = (state: State) => state.api.errors.length > 0;
@@ -20,10 +17,7 @@ export const getCase = (state: State) => {
 };
 export const getDefendant = (state: State) => state.case && state.case.defendant;
 
-export const getOffences = createSelector(
-  getDefendant,
-  defendant => defendant.offences || []
-);
+export const getOffences = createSelector(getDefendant, defendant => defendant.offences || []);
 
 export const getWithdrawCaseStatus = createSelector(
   getCase,

@@ -10,11 +10,14 @@ describe('DashboardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DashboardComponent, MockSearchContainer, ReviewNotGuiltyPleasLink, DefendantDetailsUpdateLink],
-      imports: [
-        PdkGridModule,
-        PdkSummaryItemModule
-      ]
+      declarations: [
+        DashboardComponent,
+        MockSearchContainer,
+        ReviewNotGuiltyPleasLinkComponent,
+        DefendantDetailsUpdateLinkComponent
+      ],
+      imports: [PdkGridModule, PdkSummaryItemModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
@@ -33,7 +36,7 @@ describe('DashboardComponent', () => {
       <span>{{ numberOfCases }}</span>
     `
   })
-  class ReviewNotGuiltyPleasLink {
+  class ReviewNotGuiltyPleasLinkComponent {
     @Input() numberOfCases;
   }
 
@@ -43,15 +46,9 @@ describe('DashboardComponent', () => {
       <span>{{ numberOfUpdates }}</span>
     `
   })
-  class DefendantDetailsUpdateLink {
+  class DefendantDetailsUpdateLinkComponent {
     @Input() numberOfUpdates;
   }
-
-  @Component({
-    selector: 'export-case-decisions-link',
-    template: ``
-  })
-  class ExportCaseDecisionsLink {}
 
   @Component({
     selector: 'search-input-container',

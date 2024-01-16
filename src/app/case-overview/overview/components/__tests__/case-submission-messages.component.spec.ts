@@ -11,7 +11,8 @@ describe('CaseSubmissionMessagesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CaseSubmissionMessagesComponent],
-      imports: [PdkCoreModule, PdkWarningTextModule, PdkAlertModule]
+      imports: [PdkCoreModule, PdkWarningTextModule, PdkAlertModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(CaseSubmissionMessagesComponent);

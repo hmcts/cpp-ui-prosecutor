@@ -5,17 +5,12 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
   loadCaseCount={[Function Function]}
 >
   <export-case-decisions>
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-      ng-reflect-show-title="true"
-    >
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
-    
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>
-    
   </export-case-decisions>
 </export-case-decisions-test>
 `;
@@ -25,23 +20,14 @@ exports[`ExportCaseDecisionsComponent should compile correctly with case count r
   caseCountResult={[Function Object]}
   loadCaseCount={[Function Function]}
 >
-  <export-case-decisions
-    ng-reflect-case-count-result="[object Object]"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-      ng-reflect-show-title="true"
-    >
+  <export-case-decisions>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
-    
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>
-    
-    <download-case-decisions
-      ng-reflect-case-count-result="[object Object]"
-    >
+    <download-case-decisions>
        {
     "casesResultedCount": 0,
     "fromDate": "2019-10-01",
@@ -57,54 +43,48 @@ exports[`ExportCaseDecisionsComponent should compile correctly with errors 1`] =
   loadCaseCount={[Function Function]}
 >
   <export-case-decisions>
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-      ng-reflect-show-title="true"
-    >
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
-    
     <pdk-error-summary
       focusonchange=""
-      ng-reflect-errors="[object Object]"
-      ng-reflect-focus-on-change=""
-      ng-reflect-title="Fix the following"
       title="Fix the following"
     >
       <div
-        aria-labelledby="pdk-error-sumamry-1"
         class="govuk-error-summary"
-        role="alert"
         tabindex="-1"
       >
-        <h2
-          class="govuk-error-summary__title"
-          id="pdk-error-sumamry-1"
-        >
-          Fix the following
-        </h2>
         <div
-          class="govuk-error-summary__body"
+          aria-labelledby="pdk-error-sumamry-GENERATED_ID"
+          role="alert"
         >
-          <ul
-            class="govuk-list govuk-error-summary__list"
+          <h2
+            class="govuk-error-summary__title"
+            id="pdk-error-sumamry-GENERATED_ID"
           >
-            
-            <li>
-              <a
-                href="javascript:void(0)"
-              >
-                 Invalid input 
-              </a>
-            </li>
-          </ul>
+            Fix the following
+          </h2>
+          <div
+            class="govuk-error-summary__body"
+          >
+            <ul
+              class="govuk-list govuk-error-summary__list"
+            >
+              <li>
+                <a
+                  href="javascript:void(0)"
+                >
+                   Invalid input 
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </pdk-error-summary>
     <export-case-decisions-form>
       <form />
     </export-case-decisions-form>
-    
   </export-case-decisions>
 </export-case-decisions-test>
 `;

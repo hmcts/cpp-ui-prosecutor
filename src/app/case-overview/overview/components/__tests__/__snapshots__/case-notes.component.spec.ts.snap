@@ -7,11 +7,9 @@ exports[`Case note component should display case notes 1`] = `
   <pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid>
       <div>
-        
         <div>
           <div
             pdk-margin-left="2"
@@ -22,32 +20,27 @@ exports[`Case note component should display case notes 1`] = `
                General note 
               <br />
               <span
-                pdk-text-colour="grey-1"
+                pdk-text-colour="dark-grey"
                 pdk-typography="body-medium"
               >
                  4 July 2019 at 10:53am by Erica Wilson 
               </span>
             </div>
             <pdk-foldable-text
-              _nghost-a-c1=""
               pdk-typography="body-medium"
             >
               <div
-                _ngcontent-a-c1=""
                 class="pdk-foldable"
               >
                 <span
-                  _ngcontent-a-c1=""
                   class="pdk-foldable__content"
-                  id="pdk-foldable-text-1"
+                  id="pdk-foldable-text-GENERATED_ID"
                 >
                    Not enough documents 
                 </span>
-                
               </div>
             </pdk-foldable-text>
           </div>
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -64,32 +57,27 @@ exports[`Case note component should display case notes 1`] = `
                General note 
               <br />
               <span
-                pdk-text-colour="grey-1"
+                pdk-text-colour="dark-grey"
                 pdk-typography="body-medium"
               >
                  2 July 2019 at 9:26pm by Erica Wilson 
               </span>
             </div>
             <pdk-foldable-text
-              _nghost-a-c1=""
               pdk-typography="body-medium"
             >
               <div
-                _ngcontent-a-c1=""
                 class="pdk-foldable"
               >
                 <span
-                  _ngcontent-a-c1=""
                   class="pdk-foldable__content"
-                  id="pdk-foldable-text-2"
+                  id="pdk-foldable-text-GENERATED_ID"
                 >
                    Not enough documents 
                 </span>
-                
               </div>
             </pdk-foldable-text>
           </div>
-          
         </div>
       </div>
     </pdk-grid>

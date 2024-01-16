@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DateOfBirthComponent } from '../date-of-birth.component';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Directive, Pipe, PipeTransform } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Pipe, PipeTransform } from '@angular/core';
 import { AgePipeModule, FormatDatePipeModule } from '../../pipes';
 
 describe('DateOfBirthComponent', () => {
@@ -11,7 +11,8 @@ describe('DateOfBirthComponent', () => {
     TestBed.configureTestingModule({
       imports: [CommonModule, AgePipeModule, FormatDatePipeModule],
       providers: [AgePipeMock],
-      declarations: [TestDateOfBirthComponent, DateOfBirthComponent, AgePipeMock]
+      declarations: [TestDateOfBirthComponent, DateOfBirthComponent, AgePipeMock],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestDateOfBirthComponent);
     fixture.componentInstance.dateOfBirth = '1998-01-31';

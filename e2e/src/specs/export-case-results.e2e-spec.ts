@@ -2,7 +2,7 @@ import { isStable, navigate } from '../util';
 import { TVL_USER } from '../../../tools/utils';
 import { ExportCaseDecisionsPage } from '../pages/export-case-decisions/export-case-decisions.page';
 import { exportCaseDecisions } from '../../../tools/contexts/caseExport';
-import * as moment from 'moment';
+import moment from 'moment';
 import { browser, protractor } from 'protractor';
 
 async function submitForm(exportCaseResultsByDatePage: ExportCaseDecisionsPage, fromDate: string, toDate: string) {

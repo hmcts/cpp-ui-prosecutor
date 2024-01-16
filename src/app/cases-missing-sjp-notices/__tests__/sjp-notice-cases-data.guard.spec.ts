@@ -20,7 +20,7 @@ describe('SjpNoticeCasesDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer, { runtimeChecks: {} })],
       providers: [
         SjpNoticeCasesDataGuard,
         {
@@ -35,7 +35,8 @@ describe('SjpNoticeCasesDataGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     pleadedNotGuiltyCasesDataGuard = TestBed.get(SjpNoticeCasesDataGuard);

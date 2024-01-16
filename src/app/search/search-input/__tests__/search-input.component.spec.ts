@@ -4,7 +4,6 @@ import { SearchInputComponent } from '../search-input.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PdkCoreModule, PdkFormModule, PdkGridModule, PdkSearchbarModule } from '@cpp/pdk';
-import { By } from '@angular/platform-browser';
 
 describe('SearchInputComponent', () => {
   let fixture: ComponentFixture<TestSearchInputComponent>;
@@ -12,7 +11,8 @@ describe('SearchInputComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SearchInputComponent, TestSearchInputComponent],
-      imports: [CommonModule, FormsModule, PdkCoreModule, PdkFormModule, PdkSearchbarModule, PdkGridModule]
+      imports: [CommonModule, FormsModule, PdkCoreModule, PdkFormModule, PdkSearchbarModule, PdkGridModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestSearchInputComponent);
   });

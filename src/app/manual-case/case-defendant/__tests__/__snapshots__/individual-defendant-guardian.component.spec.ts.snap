@@ -2,14 +2,9 @@
 
 exports[`Individual Defendant Guardian Component should clear guardian form when remove button is clicked 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="J"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -18,10 +13,8 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
     <pdk-inset-text
       class="pl-m"
       size="narrow"
@@ -32,46 +25,29 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
         <pdk-grid
           class="govuk-!-margin-bottom-3 govuk-!-padding-left-3 govuk-grid-row ng-untouched ng-dirty ng-invalid"
           container=""
-          ng-reflect-bottom="3"
-          ng-reflect-container=""
-          ng-reflect-left="3"
-          ng-reflect-name="individual"
           ngmodelgroup="individual"
           pdk-margin-bottom="3"
           pdk-padding-left="3"
         >
           <pdk-form-field
             labeltype="small"
-            ng-reflect-label-type="small"
           >
-            
             <pdk-form-group
               class="pdk-form-group"
-              ng-reflect-has-error="false"
             >
-              
               <fieldset
                 class="govuk-fieldset"
                 pdk-fieldset=""
               >
-                
-                
-                
-                
                 <pdk-radio-group
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="other-type-input"
                   name="guardianType"
-                  ng-reflect-inline="true"
-                  ng-reflect-model="INDIVIDUAL"
-                  ng-reflect-name="guardianType"
                 >
                   <div
                     class="govuk-radios govuk-radios--inline"
                   >
-                    
                     <pdk-radio-button
-                      ng-reflect-value="INDIVIDUAL"
                       value="INDIVIDUAL"
                     >
                       <div
@@ -79,23 +55,20 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-41"
-                          name="pdk-radio-group-40"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="INDIVIDUAL"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-41"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      ng-reflect-value="ORGANISATION"
                       value="ORGANISATION"
                     >
                       <div
@@ -103,195 +76,115 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-42"
-                          name="pdk-radio-group-40"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="ORGANISATION"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-42"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                   </div>
                 </pdk-radio-group>
-                
               </fieldset>
-              
             </pdk-form-group>
           </pdk-form-field>
-          
-          
           <div
             class="ng-untouched ng-dirty ng-invalid"
-            ng-reflect-name="individual"
             ngmodelgroup="individual"
           >
             <div
               class="ng-untouched ng-dirty ng-invalid"
-              ng-reflect-name="parentGuardianInformation"
               ngmodelgroup="parentGuardianInformation"
             >
               <div
                 class="ng-untouched ng-dirty ng-invalid"
-                ng-reflect-name="personalInformation"
                 ngmodelgroup="personalInformation"
               >
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
-                      id="pdk-form-control-43"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="title"
-                      ng-reflect-format=""
-                      ng-reflect-name="title"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
                       data-role="forename-input"
-                      id="pdk-form-control-44"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="firstName"
-                      ng-reflect-format=""
-                      ng-reflect-name="firstName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="middlename-input"
-                      id="pdk-form-control-45"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="givenName2"
-                      ng-reflect-format=""
-                      ng-reflect-name="givenName2"
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="surname-input"
-                      id="pdk-form-control-46"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="lastName"
-                      ng-reflect-format=""
-                      ng-reflect-model="Guardian One"
-                      ng-reflect-name="lastName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <p>
                   <a
@@ -300,65 +193,33 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
                     href="javascript:void(0);"
                     pdk-link=""
                   >
-                    
                   </a>
                 </p>
                 <pdk-form-field
                   class="govuk-!-margin-bottom-3"
                   labeltype="small"
-                  ng-reflect-bottom="3"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                   pdk-margin-bottom="3"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
                     <fieldset
                       class="govuk-fieldset"
                       pdk-fieldset=""
                     >
-                      
-                      
-                      
-                      
                       <input-address
                         class="ng-untouched ng-valid ng-dirty"
                         data-role="address-input"
                         name="address"
-                        ng-reflect-is-required="true"
-                        ng-reflect-max-length="35"
-                        ng-reflect-model="[object Object]"
-                        ng-reflect-name="address"
-                        ng-reflect-show-fixed-abode="true"
-                        ng-reflect-valid-when-empty="false"
                       >
-                        
-                        
                         <pdk-form-field>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             <pdk-checkbox
                               class="govuk-!-margin-bottom-2 govuk-checkboxes ng-untouched ng-pristine ng-valid"
                               data-role="no-fixed-abode"
                               name="noFixedAbode"
-                              ng-reflect-bottom="2"
-                              ng-reflect-model="false"
-                              ng-reflect-name="noFixedAbode"
-                              ng-reflect-value="true"
                               pdk-margin-bottom="2"
                             >
                               <div
@@ -366,217 +227,151 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
                               >
                                 <input
                                   class="govuk-checkboxes__input"
-                                  id="pdk-checkbox-52"
+                                  id="pdk-checkbox-GENERATED_ID"
                                   name="noFixedAbode"
                                   type="checkbox"
                                   value="true"
                                 />
                                 <label
                                   class="govuk-label govuk-checkboxes__label"
-                                  for="pdk-checkbox-52"
+                                  for="pdk-checkbox-GENERATED_ID"
                                 >
                                    No fixed abode 
                                 </label>
-                                
                               </div>
                             </pdk-checkbox>
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
                         <div
                           class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
-                          ng-reflect-bottom="6"
-                          ng-reflect-form="[object Object]"
                           pdk-margin-bottom="6"
                         >
-                          
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-address1"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address1"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 1 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                              id="address-control-48-address1"
+                              id="address-control-undefined-GENERATED_ID-address1"
                               maxlength="35"
                               name="address1"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-address1"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address1"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-address2"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address2"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 2 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                              id="address-control-48-address2"
+                              id="address-control-undefined-GENERATED_ID-address2"
                               maxlength="35"
                               name="address2"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-address2"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address2"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-address3"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address3"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 3 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                              id="address-control-48-address3"
+                              id="address-control-undefined-GENERATED_ID-address3"
                               maxlength="35"
                               name="address3"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-address3"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address3"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-address4"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address4"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 4 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-48-address4"
+                              id="address-control-undefined-GENERATED_ID-address4"
                               maxlength="35"
                               name="address4"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-address4"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address4"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-address5"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address5"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 5 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-48-address5"
+                              id="address-control-undefined-GENERATED_ID-address5"
                               maxlength="35"
                               name="address5"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-address5"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address5"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-48-postcode"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-postcode"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Postcode 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                              id="address-control-48-postcode"
+                              id="address-control-undefined-GENERATED_ID-postcode"
                               maxlength="8"
                               name="postcode"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-48-postcode"
-                              ng-reflect-maxlength="8"
-                              ng-reflect-name="postcode"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
@@ -585,98 +380,55 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
                           </pdk-form-group>
                         </div>
                       </input-address>
-                      
                     </fieldset>
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <div
                   class="ng-untouched ng-pristine ng-valid"
-                  ng-reflect-name="contactDetails"
                   ngmodelgroup="contactDetails"
                 >
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-49"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="255"
                         name="primaryEmail"
-                        ng-reflect-format=""
-                        ng-reflect-name="primaryEmail"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="email"
                         validateemail=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-50"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="20"
                         name="work"
-                        ng-reflect-format=""
-                        ng-reflect-maxlength="20"
-                        ng-reflect-name="work"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="tel"
                         validatephone=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
                 </div>
               </div>
             </div>
           </div>
-          
-          
           <p>
             <a
               class="govuk-link"
@@ -684,7 +436,6 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
               href="javascript:void(0);"
               pdk-link=""
             >
-              
             </a>
           </p>
         </pdk-grid>
@@ -696,14 +447,9 @@ exports[`Individual Defendant Guardian Component should clear guardian form when
 
 exports[`Individual Defendant Guardian Component should copy defendant address to individual-guardian-address 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="J"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -712,10 +458,8 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
     <pdk-inset-text
       class="pl-m"
       size="narrow"
@@ -726,46 +470,29 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
         <pdk-grid
           class="govuk-!-margin-bottom-3 govuk-!-padding-left-3 govuk-grid-row ng-untouched ng-pristine ng-invalid"
           container=""
-          ng-reflect-bottom="3"
-          ng-reflect-container=""
-          ng-reflect-left="3"
-          ng-reflect-name="individual"
           ngmodelgroup="individual"
           pdk-margin-bottom="3"
           pdk-padding-left="3"
         >
           <pdk-form-field
             labeltype="small"
-            ng-reflect-label-type="small"
           >
-            
             <pdk-form-group
               class="pdk-form-group"
-              ng-reflect-has-error="false"
             >
-              
               <fieldset
                 class="govuk-fieldset"
                 pdk-fieldset=""
               >
-                
-                
-                
-                
                 <pdk-radio-group
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="other-type-input"
                   name="guardianType"
-                  ng-reflect-inline="true"
-                  ng-reflect-model="INDIVIDUAL"
-                  ng-reflect-name="guardianType"
                 >
                   <div
                     class="govuk-radios govuk-radios--inline"
                   >
-                    
                     <pdk-radio-button
-                      ng-reflect-value="INDIVIDUAL"
                       value="INDIVIDUAL"
                     >
                       <div
@@ -773,23 +500,20 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-17"
-                          name="pdk-radio-group-16"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="INDIVIDUAL"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-17"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      ng-reflect-value="ORGANISATION"
                       value="ORGANISATION"
                     >
                       <div
@@ -797,195 +521,115 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-18"
-                          name="pdk-radio-group-16"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="ORGANISATION"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-18"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                   </div>
                 </pdk-radio-group>
-                
               </fieldset>
-              
             </pdk-form-group>
           </pdk-form-field>
-          
-          
           <div
             class="ng-untouched ng-pristine ng-invalid"
-            ng-reflect-name="individual"
             ngmodelgroup="individual"
           >
             <div
               class="ng-untouched ng-pristine ng-invalid"
-              ng-reflect-name="parentGuardianInformation"
               ngmodelgroup="parentGuardianInformation"
             >
               <div
                 class="ng-untouched ng-pristine ng-invalid"
-                ng-reflect-name="personalInformation"
                 ngmodelgroup="personalInformation"
               >
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
-                      id="pdk-form-control-19"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="title"
-                      ng-reflect-format=""
-                      ng-reflect-name="title"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
                       data-role="forename-input"
-                      id="pdk-form-control-20"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="firstName"
-                      ng-reflect-format=""
-                      ng-reflect-name="firstName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="middlename-input"
-                      id="pdk-form-control-21"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="givenName2"
-                      ng-reflect-format=""
-                      ng-reflect-name="givenName2"
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="surname-input"
-                      id="pdk-form-control-22"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="lastName"
-                      ng-reflect-format=""
-                      ng-reflect-model="Guardian One"
-                      ng-reflect-name="lastName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <p>
                   <a
@@ -994,64 +638,33 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                     href="javascript:void(0);"
                     pdk-link=""
                   >
-                    
                   </a>
                 </p>
                 <pdk-form-field
                   class="govuk-!-margin-bottom-3"
                   labeltype="small"
-                  ng-reflect-bottom="3"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                   pdk-margin-bottom="3"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
                     <fieldset
                       class="govuk-fieldset"
                       pdk-fieldset=""
                     >
-                      
-                      
-                      
-                      
                       <input-address
                         class="ng-untouched ng-pristine ng-invalid"
                         data-role="address-input"
                         name="address"
-                        ng-reflect-is-required="true"
-                        ng-reflect-max-length="35"
-                        ng-reflect-name="address"
-                        ng-reflect-show-fixed-abode="true"
-                        ng-reflect-valid-when-empty="false"
                       >
-                        
-                        
                         <pdk-form-field>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             <pdk-checkbox
                               class="govuk-!-margin-bottom-2 govuk-checkboxes ng-untouched ng-pristine ng-valid"
                               data-role="no-fixed-abode"
                               name="noFixedAbode"
-                              ng-reflect-bottom="2"
-                              ng-reflect-model="false"
-                              ng-reflect-name="noFixedAbode"
-                              ng-reflect-value="true"
                               pdk-margin-bottom="2"
                             >
                               <div
@@ -1059,217 +672,151 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                               >
                                 <input
                                   class="govuk-checkboxes__input"
-                                  id="pdk-checkbox-28"
+                                  id="pdk-checkbox-GENERATED_ID"
                                   name="noFixedAbode"
                                   type="checkbox"
                                   value="true"
                                 />
                                 <label
                                   class="govuk-label govuk-checkboxes__label"
-                                  for="pdk-checkbox-28"
+                                  for="pdk-checkbox-GENERATED_ID"
                                 >
                                    No fixed abode 
                                 </label>
-                                
                               </div>
                             </pdk-checkbox>
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
                         <div
                           class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
-                          ng-reflect-bottom="6"
-                          ng-reflect-form="[object Object]"
                           pdk-margin-bottom="6"
                         >
-                          
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-address1"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address1"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 1 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-address1"
+                              id="address-control-undefined-GENERATED_ID-address1"
                               maxlength="35"
                               name="address1"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-address1"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address1"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-address2"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address2"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 2 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-address2"
+                              id="address-control-undefined-GENERATED_ID-address2"
                               maxlength="35"
                               name="address2"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-address2"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address2"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-address3"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address3"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 3 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-address3"
+                              id="address-control-undefined-GENERATED_ID-address3"
                               maxlength="35"
                               name="address3"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-address3"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address3"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-address4"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address4"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 4 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-address4"
+                              id="address-control-undefined-GENERATED_ID-address4"
                               maxlength="35"
                               name="address4"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-address4"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address4"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-address5"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address5"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 5 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-address5"
+                              id="address-control-undefined-GENERATED_ID-address5"
                               maxlength="35"
                               name="address5"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-address5"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address5"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-24-postcode"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-postcode"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Postcode 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-24-postcode"
+                              id="address-control-undefined-GENERATED_ID-postcode"
                               maxlength="8"
                               name="postcode"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-24-postcode"
-                              ng-reflect-maxlength="8"
-                              ng-reflect-name="postcode"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
@@ -1278,98 +825,55 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                           </pdk-form-group>
                         </div>
                       </input-address>
-                      
                     </fieldset>
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <div
                   class="ng-untouched ng-pristine ng-valid"
-                  ng-reflect-name="contactDetails"
                   ngmodelgroup="contactDetails"
                 >
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-25"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="255"
                         name="primaryEmail"
-                        ng-reflect-format=""
-                        ng-reflect-name="primaryEmail"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="email"
                         validateemail=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-26"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="20"
                         name="work"
-                        ng-reflect-format=""
-                        ng-reflect-maxlength="20"
-                        ng-reflect-name="work"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="tel"
                         validatephone=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
                 </div>
               </div>
             </div>
           </div>
-          
-          
           <p>
             <a
               class="govuk-link"
@@ -1377,7 +881,6 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
               href="javascript:void(0);"
               pdk-link=""
             >
-              
             </a>
           </p>
         </pdk-grid>
@@ -1389,14 +892,9 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
 
 exports[`Individual Defendant Guardian Component should copy defendant address to organisation-guardian-address 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="J"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -1405,10 +903,8 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
     <pdk-inset-text
       class="pl-m"
       size="narrow"
@@ -1419,46 +915,29 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
         <pdk-grid
           class="govuk-!-margin-bottom-3 govuk-!-padding-left-3 govuk-grid-row ng-untouched ng-dirty ng-invalid"
           container=""
-          ng-reflect-bottom="3"
-          ng-reflect-container=""
-          ng-reflect-left="3"
-          ng-reflect-name="individual"
           ngmodelgroup="individual"
           pdk-margin-bottom="3"
           pdk-padding-left="3"
         >
           <pdk-form-field
             labeltype="small"
-            ng-reflect-label-type="small"
           >
-            
             <pdk-form-group
               class="pdk-form-group"
-              ng-reflect-has-error="false"
             >
-              
               <fieldset
                 class="govuk-fieldset"
                 pdk-fieldset=""
               >
-                
-                
-                
-                
                 <pdk-radio-group
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="other-type-input"
                   name="guardianType"
-                  ng-reflect-inline="true"
-                  ng-reflect-model="ORGANISATION"
-                  ng-reflect-name="guardianType"
                 >
                   <div
                     class="govuk-radios govuk-radios--inline"
                   >
-                    
                     <pdk-radio-button
-                      ng-reflect-value="INDIVIDUAL"
                       value="INDIVIDUAL"
                     >
                       <div
@@ -1466,23 +945,20 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-31"
-                          name="pdk-radio-group-30"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="INDIVIDUAL"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-31"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      ng-reflect-value="ORGANISATION"
                       value="ORGANISATION"
                     >
                       <div
@@ -1490,85 +966,55 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-32"
-                          name="pdk-radio-group-30"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="ORGANISATION"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-32"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                   </div>
                 </pdk-radio-group>
-                
               </fieldset>
-              
             </pdk-form-group>
           </pdk-form-field>
-          
-          
-          
           <div
             class="ng-untouched ng-dirty ng-invalid"
-            ng-reflect-name="individual"
             ngmodelgroup="individual"
           >
             <div
               class="ng-untouched ng-dirty ng-invalid"
-              ng-reflect-name="parentGuardianInformation"
               ngmodelgroup="parentGuardianInformation"
             >
               <pdk-form-field
                 labeltype="small"
-                ng-reflect-label=""
-                ng-reflect-label-type="small"
               >
-                
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   <input
                     class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-33"
+                    id="pdk-form-control-undefined-GENERATED_ID"
                     maxlength="35"
                     name="organisationName"
-                    ng-reflect-format=""
-                    ng-reflect-model="ZZZ Company"
-                    ng-reflect-name="organisationName"
-                    ng-reflect-required=""
-                    ng-reflect-width=""
                     pdk-input=""
                     pdk-text-input=""
                     required=""
                     type="text"
                   />
-                  
-                  
                 </pdk-form-group>
               </pdk-form-field>
               <h2
                 class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                ng-reflect-bottom="3"
-                ng-reflect-type="body-medium"
                 pdk-margin-bottom="3"
                 pdk-typography="body-medium"
               >
-                  
               </h2>
               <p>
                 <a
@@ -1577,65 +1023,33 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                   href="javascript:void(0);"
                   pdk-link=""
                 >
-                  
                 </a>
               </p>
               <pdk-form-field
                 class="govuk-!-margin-bottom-3"
                 labeltype="small"
-                ng-reflect-bottom="3"
-                ng-reflect-label=""
-                ng-reflect-label-type="small"
                 pdk-margin-bottom="3"
               >
-                
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
                   <fieldset
                     class="govuk-fieldset"
                     pdk-fieldset=""
                   >
-                    
-                    
-                    
-                    
                     <input-address
                       class="ng-untouched ng-dirty ng-invalid"
                       data-role="address-input"
                       name="address"
-                      ng-reflect-is-required="true"
-                      ng-reflect-max-length="35"
-                      ng-reflect-model="[object Object]"
-                      ng-reflect-name="address"
-                      ng-reflect-show-fixed-abode="true"
-                      ng-reflect-valid-when-empty="false"
                     >
-                      
-                      
                       <pdk-form-field>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
-                          ng-reflect-has-error="false"
                         >
-                          
-                          
-                          
-                          
-                          
-                          
-                          
                           <pdk-checkbox
                             class="govuk-!-margin-bottom-2 govuk-checkboxes ng-untouched ng-pristine ng-valid"
                             data-role="no-fixed-abode"
                             name="noFixedAbode"
-                            ng-reflect-bottom="2"
-                            ng-reflect-model="false"
-                            ng-reflect-name="noFixedAbode"
-                            ng-reflect-value="true"
                             pdk-margin-bottom="2"
                           >
                             <div
@@ -1643,217 +1057,151 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                             >
                               <input
                                 class="govuk-checkboxes__input"
-                                id="pdk-checkbox-38"
+                                id="pdk-checkbox-GENERATED_ID"
                                 name="noFixedAbode"
                                 type="checkbox"
                                 value="true"
                               />
                               <label
                                 class="govuk-label govuk-checkboxes__label"
-                                for="pdk-checkbox-38"
+                                for="pdk-checkbox-GENERATED_ID"
                               >
                                  No fixed abode 
                               </label>
-                              
                             </div>
                           </pdk-checkbox>
-                          
-                          
                         </pdk-form-group>
                       </pdk-form-field>
                       <div
                         class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
-                        ng-reflect-bottom="6"
-                        ng-reflect-form="[object Object]"
                         pdk-margin-bottom="6"
                       >
-                        
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-address1"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address1"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 1 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                            id="address-control-35-address1"
+                            id="address-control-undefined-GENERATED_ID-address1"
                             maxlength="35"
                             name="address1"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-address1"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address1"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-address2"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address2"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 2 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-35-address2"
+                            id="address-control-undefined-GENERATED_ID-address2"
                             maxlength="35"
                             name="address2"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-address2"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address2"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-address3"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address3"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 3 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-35-address3"
+                            id="address-control-undefined-GENERATED_ID-address3"
                             maxlength="35"
                             name="address3"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-address3"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address3"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-address4"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address4"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 4 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-35-address4"
+                            id="address-control-undefined-GENERATED_ID-address4"
                             maxlength="35"
                             name="address4"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-address4"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address4"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-address5"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address5"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 5 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-35-address5"
+                            id="address-control-undefined-GENERATED_ID-address5"
                             maxlength="35"
                             name="address5"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-address5"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address5"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-35-postcode"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-postcode"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Postcode 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-35-postcode"
+                            id="address-control-undefined-GENERATED_ID-postcode"
                             maxlength="8"
                             name="postcode"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-35-postcode"
-                            ng-reflect-maxlength="8"
-                            ng-reflect-name="postcode"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
@@ -1862,57 +1210,33 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
                         </pdk-form-group>
                       </div>
                     </input-address>
-                    
                   </fieldset>
-                  
                 </pdk-form-group>
               </pdk-form-field>
               <h2
                 class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                ng-reflect-bottom="3"
-                ng-reflect-type="body-medium"
                 pdk-margin-bottom="3"
                 pdk-typography="body-medium"
               >
-                  
               </h2>
-              <pdk-form-field
-                ng-reflect-error-messages="[object Object]"
-                ng-reflect-label=""
-              >
-                
+              <pdk-form-field>
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   <input
                     class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-36"
+                    id="pdk-form-control-undefined-GENERATED_ID"
                     maxlength="20"
                     name="companyTelephoneNumber"
-                    ng-reflect-format=""
-                    ng-reflect-maxlength="20"
-                    ng-reflect-name="companyTelephoneNumber"
-                    ng-reflect-width=""
                     pdk-input=""
                     pdk-text-input=""
                     type="tel"
                     validatephone=""
                   />
-                  
-                  
                 </pdk-form-group>
               </pdk-form-field>
             </div>
           </div>
-          
           <p>
             <a
               class="govuk-link"
@@ -1920,7 +1244,6 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
               href="javascript:void(0);"
               pdk-link=""
             >
-              
             </a>
           </p>
         </pdk-grid>
@@ -1932,14 +1255,9 @@ exports[`Individual Defendant Guardian Component should copy defendant address t
 
 exports[`Individual Defendant Guardian Component should not render noFixedAbode checkbox when case type is Summons and company is a guardian 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="S"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -1948,10 +1266,8 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
     <pdk-inset-text
       class="pl-m"
       size="narrow"
@@ -1962,46 +1278,29 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
         <pdk-grid
           class="govuk-!-margin-bottom-3 govuk-!-padding-left-3 govuk-grid-row ng-untouched ng-dirty ng-valid"
           container=""
-          ng-reflect-bottom="3"
-          ng-reflect-container=""
-          ng-reflect-left="3"
-          ng-reflect-name="individual"
           ngmodelgroup="individual"
           pdk-margin-bottom="3"
           pdk-padding-left="3"
         >
           <pdk-form-field
             labeltype="small"
-            ng-reflect-label-type="small"
           >
-            
             <pdk-form-group
               class="pdk-form-group"
-              ng-reflect-has-error="false"
             >
-              
               <fieldset
                 class="govuk-fieldset"
                 pdk-fieldset=""
               >
-                
-                
-                
-                
                 <pdk-radio-group
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="other-type-input"
                   name="guardianType"
-                  ng-reflect-inline="true"
-                  ng-reflect-model="ORGANISATION"
-                  ng-reflect-name="guardianType"
                 >
                   <div
                     class="govuk-radios govuk-radios--inline"
                   >
-                    
                     <pdk-radio-button
-                      ng-reflect-value="INDIVIDUAL"
                       value="INDIVIDUAL"
                     >
                       <div
@@ -2009,23 +1308,20 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-55"
-                          name="pdk-radio-group-54"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="INDIVIDUAL"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-55"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      ng-reflect-value="ORGANISATION"
                       value="ORGANISATION"
                     >
                       <div
@@ -2033,85 +1329,55 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-56"
-                          name="pdk-radio-group-54"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="ORGANISATION"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-56"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                   </div>
                 </pdk-radio-group>
-                
               </fieldset>
-              
             </pdk-form-group>
           </pdk-form-field>
-          
-          
-          
           <div
             class="ng-untouched ng-dirty ng-valid"
-            ng-reflect-name="individual"
             ngmodelgroup="individual"
           >
             <div
               class="ng-untouched ng-dirty ng-valid"
-              ng-reflect-name="parentGuardianInformation"
               ngmodelgroup="parentGuardianInformation"
             >
               <pdk-form-field
                 labeltype="small"
-                ng-reflect-label=""
-                ng-reflect-label-type="small"
               >
-                
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   <input
                     class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-57"
+                    id="pdk-form-control-undefined-GENERATED_ID"
                     maxlength="35"
                     name="organisationName"
-                    ng-reflect-format=""
-                    ng-reflect-model="ZZZ Company"
-                    ng-reflect-name="organisationName"
-                    ng-reflect-required=""
-                    ng-reflect-width=""
                     pdk-input=""
                     pdk-text-input=""
                     required=""
                     type="text"
                   />
-                  
-                  
                 </pdk-form-group>
               </pdk-form-field>
               <h2
                 class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                ng-reflect-bottom="3"
-                ng-reflect-type="body-medium"
                 pdk-margin-bottom="3"
                 pdk-typography="body-medium"
               >
-                  
               </h2>
               <p>
                 <a
@@ -2120,236 +1386,155 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
                   href="javascript:void(0);"
                   pdk-link=""
                 >
-                  
                 </a>
               </p>
               <pdk-form-field
                 class="govuk-!-margin-bottom-3"
                 labeltype="small"
-                ng-reflect-bottom="3"
-                ng-reflect-label=""
-                ng-reflect-label-type="small"
                 pdk-margin-bottom="3"
               >
-                
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
                   <fieldset
                     class="govuk-fieldset"
                     pdk-fieldset=""
                   >
-                    
-                    
-                    
-                    
                     <input-address
                       class="ng-untouched ng-valid ng-dirty"
                       data-role="address-input"
                       name="address"
-                      ng-reflect-is-required="true"
-                      ng-reflect-max-length="35"
-                      ng-reflect-model="[object Object]"
-                      ng-reflect-name="address"
-                      ng-reflect-show-fixed-abode="false"
-                      ng-reflect-valid-when-empty="false"
                     >
-                      
                       <div
                         class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
-                        ng-reflect-bottom="6"
-                        ng-reflect-form="[object Object]"
                         pdk-margin-bottom="6"
                       >
-                        
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-address1"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address1"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 1 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                            id="address-control-59-address1"
+                            id="address-control-undefined-GENERATED_ID-address1"
                             maxlength="35"
                             name="address1"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-address1"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address1"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-address2"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address2"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 2 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                            id="address-control-59-address2"
+                            id="address-control-undefined-GENERATED_ID-address2"
                             maxlength="35"
                             name="address2"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-address2"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address2"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-address3"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address3"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 3 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                            id="address-control-59-address3"
+                            id="address-control-undefined-GENERATED_ID-address3"
                             maxlength="35"
                             name="address3"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-address3"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address3"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-address4"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address4"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 4 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-59-address4"
+                            id="address-control-undefined-GENERATED_ID-address4"
                             maxlength="35"
                             name="address4"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-address4"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address4"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-address5"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-address5"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Address line 5 (optional) 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                            id="address-control-59-address5"
+                            id="address-control-undefined-GENERATED_ID-address5"
                             maxlength="35"
                             name="address5"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-address5"
-                            ng-reflect-maxlength="35"
-                            ng-reflect-name="address5"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
                             type="text"
                           />
                         </pdk-form-group>
-                        
                         <pdk-form-group
                           class="pdk-form-group"
                         >
                           <label
                             class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                            for="address-control-59-postcode"
-                            ng-reflect-top="6"
-                            ng-reflect-type="small"
+                            for="address-control-undefined-GENERATED_ID-postcode"
                             pdk-label="small"
                             pdk-margin-top="6"
                           >
                              Postcode 
                           </label>
-                          
                           <input
                             class="form-control ng-untouched ng-pristine govuk-input ng-valid"
-                            id="address-control-59-postcode"
+                            id="address-control-undefined-GENERATED_ID-postcode"
                             maxlength="8"
                             name="postcode"
-                            ng-reflect-format=""
-                            ng-reflect-id="address-control-59-postcode"
-                            ng-reflect-maxlength="8"
-                            ng-reflect-name="postcode"
-                            ng-reflect-required="true"
-                            ng-reflect-width=""
                             pdk-input=""
                             pdk-text-input=""
                             required=""
@@ -2358,57 +1543,33 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
                         </pdk-form-group>
                       </div>
                     </input-address>
-                    
                   </fieldset>
-                  
                 </pdk-form-group>
               </pdk-form-field>
               <h2
                 class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                ng-reflect-bottom="3"
-                ng-reflect-type="body-medium"
                 pdk-margin-bottom="3"
                 pdk-typography="body-medium"
               >
-                  
               </h2>
-              <pdk-form-field
-                ng-reflect-error-messages="[object Object]"
-                ng-reflect-label=""
-              >
-                
+              <pdk-form-field>
                 <pdk-form-group
                   class="pdk-form-group"
-                  ng-reflect-has-error="false"
                 >
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   <input
                     class="ng-untouched ng-pristine ng-valid govuk-input"
-                    id="pdk-form-control-60"
+                    id="pdk-form-control-undefined-GENERATED_ID"
                     maxlength="20"
                     name="companyTelephoneNumber"
-                    ng-reflect-format=""
-                    ng-reflect-maxlength="20"
-                    ng-reflect-name="companyTelephoneNumber"
-                    ng-reflect-width=""
                     pdk-input=""
                     pdk-text-input=""
                     type="tel"
                     validatephone=""
                   />
-                  
-                  
                 </pdk-form-group>
               </pdk-form-field>
             </div>
           </div>
-          
           <p>
             <a
               class="govuk-link"
@@ -2416,7 +1577,6 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
               href="javascript:void(0);"
               pdk-link=""
             >
-              
             </a>
           </p>
         </pdk-grid>
@@ -2428,14 +1588,9 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
 
 exports[`Individual Defendant Guardian Component should not render noFixedAbode checkbox when case type is Summons and individual is a guardian 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="S"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -2444,24 +1599,17 @@ exports[`Individual Defendant Guardian Component should not render noFixedAbode 
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
   </individual-defendant-guardian>
 </ng-component>
 `;
 
 exports[`Individual Defendant Guardian Component should render the defendant form correctly when individual is a guardian 1`] = `
 <ng-component>
-  <individual-defendant-guardian
-    ng-reflect-manual-case-defendant="[object Object]"
-    ng-reflect-manual-case-type="J"
-  >
+  <individual-defendant-guardian>
     <div
       class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
-      ng-reflect-bottom="3"
-      ng-reflect-top="3"
       pdk-margin-bottom="3"
       pdk-margin-top="3"
     >
@@ -2470,10 +1618,8 @@ exports[`Individual Defendant Guardian Component should render the defendant for
         href="javascript:void(0);"
         pdk-link=""
       >
-        
       </a>
     </div>
-    
     <pdk-inset-text
       class="pl-m"
       size="narrow"
@@ -2484,46 +1630,29 @@ exports[`Individual Defendant Guardian Component should render the defendant for
         <pdk-grid
           class="govuk-!-margin-bottom-3 govuk-!-padding-left-3 govuk-grid-row ng-untouched ng-pristine ng-invalid"
           container=""
-          ng-reflect-bottom="3"
-          ng-reflect-container=""
-          ng-reflect-left="3"
-          ng-reflect-name="individual"
           ngmodelgroup="individual"
           pdk-margin-bottom="3"
           pdk-padding-left="3"
         >
           <pdk-form-field
             labeltype="small"
-            ng-reflect-label-type="small"
           >
-            
             <pdk-form-group
               class="pdk-form-group"
-              ng-reflect-has-error="false"
             >
-              
               <fieldset
                 class="govuk-fieldset"
                 pdk-fieldset=""
               >
-                
-                
-                
-                
                 <pdk-radio-group
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="other-type-input"
                   name="guardianType"
-                  ng-reflect-inline="true"
-                  ng-reflect-model="INDIVIDUAL"
-                  ng-reflect-name="guardianType"
                 >
                   <div
                     class="govuk-radios govuk-radios--inline"
                   >
-                    
                     <pdk-radio-button
-                      ng-reflect-value="INDIVIDUAL"
                       value="INDIVIDUAL"
                     >
                       <div
@@ -2531,23 +1660,20 @@ exports[`Individual Defendant Guardian Component should render the defendant for
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-3"
-                          name="pdk-radio-group-2"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="INDIVIDUAL"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-3"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      ng-reflect-value="ORGANISATION"
                       value="ORGANISATION"
                     >
                       <div
@@ -2555,195 +1681,115 @@ exports[`Individual Defendant Guardian Component should render the defendant for
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-4"
-                          name="pdk-radio-group-2"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="ORGANISATION"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-4"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
-                            
                         </label>
                       </div>
                     </pdk-radio-button>
                   </div>
                 </pdk-radio-group>
-                
               </fieldset>
-              
             </pdk-form-group>
           </pdk-form-field>
-          
-          
           <div
             class="ng-untouched ng-pristine ng-invalid"
-            ng-reflect-name="individual"
             ngmodelgroup="individual"
           >
             <div
               class="ng-untouched ng-pristine ng-invalid"
-              ng-reflect-name="parentGuardianInformation"
               ngmodelgroup="parentGuardianInformation"
             >
               <div
                 class="ng-untouched ng-pristine ng-invalid"
-                ng-reflect-name="personalInformation"
                 ngmodelgroup="personalInformation"
               >
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
-                      id="pdk-form-control-5"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="title"
-                      ng-reflect-format=""
-                      ng-reflect-name="title"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine govuk-input ng-invalid"
                       data-role="forename-input"
-                      id="pdk-form-control-6"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="firstName"
-                      ng-reflect-format=""
-                      ng-reflect-name="firstName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="middlename-input"
-                      id="pdk-form-control-7"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="givenName2"
-                      ng-reflect-format=""
-                      ng-reflect-name="givenName2"
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <pdk-form-field
                   labeltype="small"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <input
                       class="ng-untouched ng-pristine ng-valid govuk-input"
                       data-role="surname-input"
-                      id="pdk-form-control-8"
+                      id="pdk-form-control-undefined-GENERATED_ID"
                       maxlength="35"
                       name="lastName"
-                      ng-reflect-format=""
-                      ng-reflect-model="Guardian One"
-                      ng-reflect-name="lastName"
-                      ng-reflect-required=""
-                      ng-reflect-width=""
                       pdk-input=""
                       pdk-text-input=""
                       required=""
                       type="text"
                     />
-                    
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <p>
                   <a
@@ -2752,64 +1798,33 @@ exports[`Individual Defendant Guardian Component should render the defendant for
                     href="javascript:void(0);"
                     pdk-link=""
                   >
-                    
                   </a>
                 </p>
                 <pdk-form-field
                   class="govuk-!-margin-bottom-3"
                   labeltype="small"
-                  ng-reflect-bottom="3"
-                  ng-reflect-label=""
-                  ng-reflect-label-type="small"
                   pdk-margin-bottom="3"
                 >
-                  
                   <pdk-form-group
                     class="pdk-form-group"
-                    ng-reflect-has-error="false"
                   >
-                    
                     <fieldset
                       class="govuk-fieldset"
                       pdk-fieldset=""
                     >
-                      
-                      
-                      
-                      
                       <input-address
                         class="ng-untouched ng-pristine ng-invalid"
                         data-role="address-input"
                         name="address"
-                        ng-reflect-is-required="true"
-                        ng-reflect-max-length="35"
-                        ng-reflect-name="address"
-                        ng-reflect-show-fixed-abode="true"
-                        ng-reflect-valid-when-empty="false"
                       >
-                        
-                        
                         <pdk-form-field>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             <pdk-checkbox
                               class="govuk-!-margin-bottom-2 govuk-checkboxes ng-untouched ng-pristine ng-valid"
                               data-role="no-fixed-abode"
                               name="noFixedAbode"
-                              ng-reflect-bottom="2"
-                              ng-reflect-model="false"
-                              ng-reflect-name="noFixedAbode"
-                              ng-reflect-value="true"
                               pdk-margin-bottom="2"
                             >
                               <div
@@ -2817,217 +1832,151 @@ exports[`Individual Defendant Guardian Component should render the defendant for
                               >
                                 <input
                                   class="govuk-checkboxes__input"
-                                  id="pdk-checkbox-14"
+                                  id="pdk-checkbox-GENERATED_ID"
                                   name="noFixedAbode"
                                   type="checkbox"
                                   value="true"
                                 />
                                 <label
                                   class="govuk-label govuk-checkboxes__label"
-                                  for="pdk-checkbox-14"
+                                  for="pdk-checkbox-GENERATED_ID"
                                 >
                                    No fixed abode 
                                 </label>
-                                
                               </div>
                             </pdk-checkbox>
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
                         <div
                           class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
-                          ng-reflect-bottom="6"
-                          ng-reflect-form="[object Object]"
                           pdk-margin-bottom="6"
                         >
-                          
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-address1"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address1"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 1 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-address1"
+                              id="address-control-undefined-GENERATED_ID-address1"
                               maxlength="35"
                               name="address1"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-address1"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address1"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-address2"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address2"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 2 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-address2"
+                              id="address-control-undefined-GENERATED_ID-address2"
                               maxlength="35"
                               name="address2"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-address2"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address2"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-address3"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address3"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 3 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-address3"
+                              id="address-control-undefined-GENERATED_ID-address3"
                               maxlength="35"
                               name="address3"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-address3"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address3"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-address4"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address4"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 4 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-address4"
+                              id="address-control-undefined-GENERATED_ID-address4"
                               maxlength="35"
                               name="address4"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-address4"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address4"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-address5"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-address5"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Address line 5 (optional) 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-address5"
+                              id="address-control-undefined-GENERATED_ID-address5"
                               maxlength="35"
                               name="address5"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-address5"
-                              ng-reflect-maxlength="35"
-                              ng-reflect-name="address5"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
                           </pdk-form-group>
-                          
                           <pdk-form-group
                             class="pdk-form-group"
                           >
                             <label
                               class="govuk-!-margin-top-6 govuk-label govuk-label--s"
-                              for="address-control-10-postcode"
-                              ng-reflect-top="6"
-                              ng-reflect-type="small"
+                              for="address-control-undefined-GENERATED_ID-postcode"
                               pdk-label="small"
                               pdk-margin-top="6"
                             >
                                Postcode 
                             </label>
-                            
                             <input
                               class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
-                              id="address-control-10-postcode"
+                              id="address-control-undefined-GENERATED_ID-postcode"
                               maxlength="8"
                               name="postcode"
-                              ng-reflect-format=""
-                              ng-reflect-id="address-control-10-postcode"
-                              ng-reflect-maxlength="8"
-                              ng-reflect-name="postcode"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
                               pdk-input=""
                               pdk-text-input=""
                               required=""
@@ -3036,98 +1985,55 @@ exports[`Individual Defendant Guardian Component should render the defendant for
                           </pdk-form-group>
                         </div>
                       </input-address>
-                      
                     </fieldset>
-                    
                   </pdk-form-group>
                 </pdk-form-field>
                 <h2
                   class="bold govuk-!-margin-bottom-3 govuk-body-m"
-                  ng-reflect-bottom="3"
-                  ng-reflect-type="body-medium"
                   pdk-margin-bottom="3"
                   pdk-typography="body-medium"
                 >
-                    
                 </h2>
                 <div
                   class="ng-untouched ng-pristine ng-valid"
-                  ng-reflect-name="contactDetails"
                   ngmodelgroup="contactDetails"
                 >
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-11"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="255"
                         name="primaryEmail"
-                        ng-reflect-format=""
-                        ng-reflect-name="primaryEmail"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="email"
                         validateemail=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
-                  <pdk-form-field
-                    ng-reflect-error-messages="[object Object]"
-                    ng-reflect-label=""
-                  >
-                    
+                  <pdk-form-field>
                     <pdk-form-group
                       class="pdk-form-group"
-                      ng-reflect-has-error="false"
                     >
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       <input
                         class="ng-untouched ng-pristine ng-valid govuk-input"
-                        id="pdk-form-control-12"
+                        id="pdk-form-control-undefined-GENERATED_ID"
                         maxlength="20"
                         name="work"
-                        ng-reflect-format=""
-                        ng-reflect-maxlength="20"
-                        ng-reflect-name="work"
-                        ng-reflect-width=""
                         pdk-input=""
                         pdk-text-input=""
                         type="tel"
                         validatephone=""
                       />
-                      
-                      
                     </pdk-form-group>
                   </pdk-form-field>
                 </div>
               </div>
             </div>
           </div>
-          
-          
           <p>
             <a
               class="govuk-link"
@@ -3135,7 +2041,6 @@ exports[`Individual Defendant Guardian Component should render the defendant for
               href="javascript:void(0);"
               pdk-link=""
             >
-              
             </a>
           </p>
         </pdk-grid>

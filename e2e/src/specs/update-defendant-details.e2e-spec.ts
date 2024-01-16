@@ -4,7 +4,7 @@ import { DefendantDetailsUpdatesPage } from '../pages/defendant-details-updates/
 import { createTvlDefendantDetailsUpdatesCase } from '../../../tools/factory/tvl-case-defendant-details-updates';
 import { getDefendantDetailsUpdates } from '../../../tools/contexts/sjp';
 import { info } from '@cpp/ui.priming';
-import moment = require('moment');
+import moment from 'moment';
 
 describe('Prosecutor', () => {
   describe('Update defendant details', () => {

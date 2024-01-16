@@ -8,7 +8,7 @@ import {
   Nationality,
   OffenceDateCode,
   PoliceForce,
-  SummonsCode,
+  SummonsCode
 } from '../model';
 import { MotReason } from '../model/reference-data-interfaces/mot-reason';
 import { VerdictType } from '../model/reference-data-interfaces/verdicts';
@@ -22,7 +22,6 @@ export const LOAD_OBSERVED_ETHNICITIES_SUCCESS = 'LOAD_OBSERVED_ETHNICITIES_SUCC
 export const LOAD_NATIONALITIES = 'LOAD_NATIONALITIES';
 export const LOAD_NATIONALITIES_SUCCESS = 'LOAD_NATIONALITIES_SUCCESS';
 
-
 export const LOAD_SUMMONS_CODES_SUCCESS = 'LOAD_SUMMONS_CODES_SUCCESS';
 
 export const LOAD_REMAND_STATUSES_SUCCESS = 'LOAD_REMAND_STATUSES_SUCCESS';
@@ -32,7 +31,6 @@ export const LOAD_OFFENCE_DATE_CODES_SUCCESS = 'LOAD_OFFENCE_DATE_CODES_SUCCESS'
 export const LOAD_ALCOHOL_LEVEL_METHODS_SUCCESS = 'LOAD_ALCOHOL_LEVEL_METHODS_SUCCESS';
 export const LOAD_CASE_MARKERS_SUCCESS = 'LOAD_CASE_MARKERS_SUCCESS';
 export const LOAD_POLICE_FORCES_SUCCESS = 'LOAD_POLICE_FORCES_SUCCESS';
-
 
 export const LOAD_PROSECUTOR_BY_USERGROUP_SUCCESS = 'LOAD_PROSECUTOR_BY_USERGROUP_SUCCESS';
 export class LoadEthnicitiesAction implements Action {

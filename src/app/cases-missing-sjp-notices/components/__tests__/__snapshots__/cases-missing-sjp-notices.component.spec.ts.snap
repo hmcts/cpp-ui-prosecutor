@@ -5,29 +5,19 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with multiple 
   breadcrumbs={[Function Array]}
   casesMissingNotices={[Function Array]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-show-title="true"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><p
     class="govuk-heading-m"
-    ng-reflect-type="heading-medium"
     pdk-typography="heading-medium"
   >
     <span
       data-test="cases-number"
-      ng-reflect-ng-plural="2"
     >
-      
-      
-      
       2 cases
     </span>
      missing notices 
-  </p><list-cases-missing-sjp-notices
-    ng-reflect-cases-missing-notices="[object Object],[object Object"
-  >
+  </p><list-cases-missing-sjp-notices>
     <div>
       [
     {
@@ -71,29 +61,19 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with no data 1
   breadcrumbs={[Function Array]}
   casesMissingNotices={[Function Array]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-show-title="true"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><p
     class="govuk-heading-m"
-    ng-reflect-type="heading-medium"
     pdk-typography="heading-medium"
   >
     <span
       data-test="cases-number"
-      ng-reflect-ng-plural="0"
     >
-      
       No cases
-      
-      
     </span>
      missing notices 
-  </p><list-cases-missing-sjp-notices
-    ng-reflect-cases-missing-notices=""
-  >
+  </p><list-cases-missing-sjp-notices>
     <div>
       []
     </div>
@@ -106,29 +86,19 @@ exports[`CasesMissingSjpNoticesComponent should compile correctly with single ro
   breadcrumbs={[Function Array]}
   casesMissingNotices={[Function Array]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-show-title="true"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><p
     class="govuk-heading-m"
-    ng-reflect-type="heading-medium"
     pdk-typography="heading-medium"
   >
     <span
       data-test="cases-number"
-      ng-reflect-ng-plural="1"
     >
-      
-      
-      
       1 cases
     </span>
      missing notices 
-  </p><list-cases-missing-sjp-notices
-    ng-reflect-cases-missing-notices="[object Object]"
-  >
+  </p><list-cases-missing-sjp-notices>
     <div>
       [
     {

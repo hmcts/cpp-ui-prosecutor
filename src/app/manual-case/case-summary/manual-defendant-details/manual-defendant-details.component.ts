@@ -2,13 +2,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ManualCaseDefendant } from '../../../core/model/manual-case-defendant';
 import { ManualCasePath } from '../../manual-case.interface';
 import { ManualCaseDefendantStateService } from '../../defendants-state.service';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { Nationality, BailStatus, Ethnicity, EthnicityCode } from '../../../core/model';
 
 @Component({
   selector: 'manual-defendant-details',
   templateUrl: './manual-defendant-details.component.html',
-  styleUrls: ['./manual-defendant-details.component.scss'],
+  styleUrls: ['./manual-defendant-details.component.scss']
 })
 export class DefendantDetailsComponent {
   title: string;
@@ -27,7 +27,7 @@ export class DefendantDetailsComponent {
   getIndividualAliases(index) {
     const defendant = this.defendants[index];
     if (defendant.individualAliases && defendant.individualAliases.length > 0) {
-      return defendant.individualAliases.map((a) => this.getPersonFullName(a));
+      return defendant.individualAliases.map(a => this.getPersonFullName(a));
     } else {
       return ['-'];
     }
@@ -36,7 +36,7 @@ export class DefendantDetailsComponent {
   getOrganisationAliases(index) {
     const defendant = this.defendants[index];
     if (defendant.aliasForCorporate && defendant.aliasForCorporate.length > 0) {
-      return defendant.aliasForCorporate.map((a) => a.aliasForCorporate);
+      return defendant.aliasForCorporate.map(a => a.aliasForCorporate);
     } else {
       return ['-'];
     }
@@ -55,7 +55,7 @@ export class DefendantDetailsComponent {
 
   getNationalityName(iso) {
     if (this.nationalities && iso) {
-      return this.nationalities.find((n) => n.isoCode === iso).nationality;
+      return this.nationalities.find(n => n.isoCode === iso).nationality;
     } else {
       return '-';
     }
@@ -69,13 +69,13 @@ export class DefendantDetailsComponent {
 
   getRemandStatus(statusCode) {
     if (statusCode) {
-      return this.remandStatuses.find((s) => s.statusCode === statusCode).statusDescription;
+      return this.remandStatuses.find(s => s.statusCode === statusCode).statusDescription;
     }
   }
 
   getEthnicityName(code) {
     if (this.ethnicities && code) {
-      return this.ethnicities.find((n) => n.code === code).description;
+      return this.ethnicities.find(n => n.code === code).description;
     } else {
       return '-';
     }
@@ -83,8 +83,7 @@ export class DefendantDetailsComponent {
 
   getObservedEthnicityName(code?: number) {
     if (this.observedEthnicities && code !== undefined) {
-      return this.observedEthnicities.find((n) => n.ethnicityCode === String(code))
-        .ethnicityDescription;
+      return this.observedEthnicities.find(n => n.ethnicityCode === String(code)).ethnicityDescription;
     } else {
       return '-';
     }
@@ -92,13 +91,13 @@ export class DefendantDetailsComponent {
 
   getAllOffenceAocpEligible(defendant) {
     if (defendant) {
-      return defendant.offences.some((offence) => offence.aocpEligible);
+      return defendant.offences.some(offence => offence.aocpEligible);
     }
   }
 
   getOnlineConvictionForCase(defendant) {
     if (defendant) {
-      return defendant.offences.every((offence) => offence.prosecutorOfferAOCP) ? 'Yes' : 'No';
+      return defendant.offences.every(offence => offence.prosecutorOfferAOCP) ? 'Yes' : 'No';
     }
   }
 
@@ -129,11 +128,7 @@ export class DefendantDetailsComponent {
   }
 
   isChargeTrialOrSentence() {
-    return (
-      this.caseInitiationCode === 'C' ||
-      this.caseInitiationCode === 'T' ||
-      this.caseInitiationCode === 'CO'
-    );
+    return this.caseInitiationCode === 'C' || this.caseInitiationCode === 'T' || this.caseInitiationCode === 'CO';
   }
 
   createUUID() {

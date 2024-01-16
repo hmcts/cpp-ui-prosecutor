@@ -1,7 +1,6 @@
 import { OnlinePlea, FrequencyOptions } from 'src/app/contexts/sjp';
 import { OnlinePleaUi } from './online-plea-interface';
 
-
 export const transformOnlinePleaToUiModel = (onlinePleas: OnlinePlea[]): OnlinePleaUi[] => {
   const onlinePleasUi: OnlinePleaUi[] = [];
 

@@ -1,9 +1,7 @@
+import { getRouterSelectors } from '@ngrx/router-store';
 import { State } from '../../reducers';
-import { createSelector } from '@ngrx/store';
-import { getSelectors } from '@ngrx/router-store';
 
 export const getRouter = (state: State) => state.router;
-const { selectRouteParams, selectQueryParams } = getSelectors(getRouter);
+const { selectRouteParams, selectQueryParams } = getRouterSelectors(getRouter);
 export const getRouteParam = selectRouteParams;
 export const getQueryParams = selectQueryParams;
-

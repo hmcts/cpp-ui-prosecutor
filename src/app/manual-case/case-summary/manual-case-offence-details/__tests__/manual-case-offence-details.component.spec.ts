@@ -19,7 +19,7 @@ const mockDefendants = [
       {
         alcoholRelatedOffence: {
           alcoholLevelMethod: 'B',
-          alcoholLevelAmount: '25',
+          alcoholLevelAmount: '25'
         },
         offenceCode: 'RT88584B',
         offenceSequenceNumber: 1,
@@ -36,9 +36,9 @@ const mockDefendants = [
         backDutyDateTo: '2018-09-09',
         arrestDate: '2019-03-02',
         chargeDate: '2019-05-02',
-        backDuty: 250,
-      },
-    ],
+        backDuty: 250
+      }
+    ]
   },
   {
     offences: [
@@ -51,9 +51,9 @@ const mockDefendants = [
         offenceTitle:
           'Aid abet the driving of a motor vehicle with a proportion of a specified controlled drug above the specified limit',
         offenceId: '8ecd315e-c3d3-4e5e-ace7-0c0e7ee951b1',
-        offenceWording: 'Caught Driving On Phone',
-      },
-    ],
+        offenceWording: 'Caught Driving On Phone'
+      }
+    ]
   },
   {
     id: '46e1c5f5-5e91-4655-9eda-43368640f218',
@@ -67,10 +67,10 @@ const mockDefendants = [
         offenceTitle:
           'Aid abet the driving of a motor vehicle with a proportion of a specified controlled drug above the specified limit',
         offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
-        offenceWording: 'Drunk Driving',
-      },
-    ],
-  },
+        offenceWording: 'Drunk Driving'
+      }
+    ]
+  }
 ] as ManualCaseDefendant[];
 
 const mockAlcoholBloodLevelMethods = [
@@ -78,14 +78,14 @@ const mockAlcoholBloodLevelMethods = [
     id: 'id-1',
     seqNo: 1,
     methodCode: 'A',
-    methodDescription: 'Blood',
+    methodDescription: 'Blood'
   },
   {
     id: 'id-2',
     seqNo: 2,
     methodCode: 'B',
-    methodDescription: 'Breath',
-  },
+    methodDescription: 'Breath'
+  }
 ];
 
 describe('OffenceDetailsComponent', () => {
@@ -93,11 +93,11 @@ describe('OffenceDetailsComponent', () => {
   let fixture: ComponentFixture<OffenceDetailsComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [OffenceDetailsComponent, DashPipe, FullNamePipe],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService],
+      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService]
     });
 
     fixture = TestBed.createComponent(OffenceDetailsComponent);
@@ -113,21 +113,21 @@ describe('OffenceDetailsComponent', () => {
 
   it('should getPleaDescription', () => {
     expect(component.getPleaDescription('abc')).toBe(undefined);
-    component.pleaTypes = [{pleaValue: 'abc', pleaTypeDescription: 'descriptioin'}] as PleaType[];
+    component.pleaTypes = [{ pleaValue: 'abc', pleaTypeDescription: 'descriptioin' }] as PleaType[];
     fixture.detectChanges();
     expect(component.getPleaDescription('abc')).toBe('descriptioin');
   });
 
   it('should getVerdictDescription', () => {
     expect(component.getVerdictDescription('abc')).toBe(undefined);
-    component.verdictsTypes = [{id: 'abc', description: 'description'}] as VerdictType[];
+    component.verdictsTypes = [{ id: 'abc', description: 'description' }] as VerdictType[];
     fixture.detectChanges();
     expect(component.getVerdictDescription('abc')).toBe('description');
   });
 
   it('should getAllocationDecisionDescription', () => {
     expect(component.getAllocationDecisionDescription('abc')).toBe(undefined);
-    component.allocationDecisionTypes = [{id: 'abc', description: 'description'}] as MotReason[];
+    component.allocationDecisionTypes = [{ id: 'abc', description: 'description' }] as MotReason[];
     fixture.detectChanges();
     expect(component.getAllocationDecisionDescription('abc')).toBe('description');
   });
@@ -154,7 +154,7 @@ describe('OffenceDetailsComponent', () => {
     component.onRemove(2, 0);
     expect(component.remove.emit).toHaveBeenCalledWith({
       defendantId: '46e1c5f5-5e91-4655-9eda-43368640f218',
-      offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79',
+      offenceId: 'c9cb0f24-ac3b-4a76-9c67-1320196daf79'
     });
   });
 });

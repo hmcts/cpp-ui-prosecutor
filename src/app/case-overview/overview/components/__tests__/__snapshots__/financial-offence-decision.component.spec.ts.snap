@@ -4,27 +4,17 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with dischar
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
       No compensation ordered because some reason
     </div>
-    
-    
-    
-    
     <div
       data-role="guilty-plea-taken-into-account"
     >
@@ -38,27 +28,17 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with dischar
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged conditionally for 10 week
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
       No compensation ordered because some reason
     </div>
-    
-    
-    
-    
     <div
       data-role="guilty-plea-taken-into-account"
     >
@@ -72,32 +52,21 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
-      
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 3 days. Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -106,32 +75,21 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
-      
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 3 years. Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -140,32 +98,21 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
-      
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 3 months. Disqualification obligatory due to repeat offending. Driving record endorsed. Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -174,32 +121,21 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
-      
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 3 months. Disqualification obligatory due to repeat offending. Driving record endorsed. Section 35(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -208,32 +144,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 1 day. Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -242,32 +168,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 1 year. Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -276,32 +192,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 1 month. Disqualification obligatory due to repeat offending. Driving record endorsed. Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -310,32 +216,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with disqual
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
-    
-    
     <div
       data-role="disqualification"
     >
        Disqualified from holding or obtaining a driving licence for 1 month. Disqualification obligatory due to repeat offending. Driving record endorsed. Section 35(1) Road Traffic Offenders Act 1988. 
     </div>
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -344,32 +240,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
       No compensation ordered because some reason
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver licence record endorsed (no points) 
     </div>
-    
-    
-    
     <div
       data-role="guilty-plea-taken-into-account"
     >
@@ -383,32 +269,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
       No compensation ordered because some reason
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver record endorsed with 3 points 
     </div>
-    
-    
-    
     <div
       data-role="guilty-plea-taken-into-account"
     >
@@ -422,37 +298,27 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
+  <financial-offence-decision>
     <div
       data-role="discharge-type"
     >
       Discharged Absolutely
     </div>
-    
-    
-    
     <div
       data-role="compensation"
     >
       No compensation ordered because some reason
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver record endorsed with 3 points 
     </div>
-    
     <div
       data-role="additional-points-reason"
     >
        Reason for penalty points being imposed on more than one offence: Bald tyres 
     </div>
-    
-    
     <div
       data-role="guilty-plea-taken-into-account"
     >
@@ -466,32 +332,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver licence record endorsed (no points) 
     </div>
-    
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -500,32 +356,22 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver record endorsed with 3 points 
     </div>
-    
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -534,37 +380,27 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with endorse
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20
     </div>
-    
     <div
       data-role="licence-endorsement"
     >
        Driver record endorsed with 3 points 
     </div>
-    
     <div
       data-role="additional-points-reason"
     >
        Reason for penalty points being imposed on more than one offence: Bald tyres 
     </div>
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -573,27 +409,17 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with financi
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10.23
     </div>
-    
-    
     <div
       data-role="compensation"
     >
       To pay compensation of £20.01
     </div>
-    
-    
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -602,22 +428,12 @@ exports[`FinancialOffenceDecisionComponent should compile correctly with financi
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
-    
-    
+  <financial-offence-decision>
     <div
       data-role="compensation"
     >
       To pay compensation of £20.01
     </div>
-    
-    
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;
@@ -626,27 +442,16 @@ exports[`FinancialOffenceDecisionComponent should not display reason if no reaso
 <financial-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <financial-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
-    
-    
+  <financial-offence-decision>
     <div
       data-role="fine"
     >
       Fine £10
     </div>
-    
-    
     <div
       data-role="compensation"
     >
-      
     </div>
-    
-    
-    
-    
   </financial-offence-decision>
 </financial-offence-decision-test>
 `;

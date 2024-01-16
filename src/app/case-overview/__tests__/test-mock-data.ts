@@ -507,75 +507,77 @@ export const MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION: CaseDecision = {
 };
 
 export const MOCK_ONLINE_PLEA_DETAIL: DefendantOnlinePlea = {
-  pleas: [{
-    caseId: 'caseId',
-    defendantId: 'defendantId',
-    submittedOn: '2019-10-18T15:10:28.881Z',
-    onlinePleaDetails: [
-      {
-        id: 'onlinePleaId1',
-        offenceId: 'offenceId1',
-        caseId: 'caseId',
-        defendantId: 'defendantId',
-        plea: 'NOT_GUILTY',
-        notGuiltyBecause: 'Not guilty plea1',
-        offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+  pleas: [
+    {
+      caseId: 'caseId',
+      defendantId: 'defendantId',
+      submittedOn: '2019-10-18T15:10:28.881Z',
+      onlinePleaDetails: [
+        {
+          id: 'onlinePleaId1',
+          offenceId: 'offenceId1',
+          caseId: 'caseId',
+          defendantId: 'defendantId',
+          plea: 'NOT_GUILTY',
+          notGuiltyBecause: 'Not guilty plea1',
+          offenceTitle: 'Obstruct person executing search warrant for TV receiver'
+        },
+        {
+          id: 'onlinePleaId2',
+          offenceId: 'offenceId2',
+          caseId: 'caseId',
+          defendantId: 'defendantId',
+          plea: 'GUILTY',
+          mitigation: 'Guilty plea mitigation2',
+          offenceTitle: 'Use / install a television set without a licence'
+        }
+      ],
+      personalDetails: {
+        firstName: 'Seyit Ahmet Kamil',
+        lastName: 'GUNGOR',
+        address: {
+          address1: 'Line 11',
+          address2: 'Line 22',
+          address3: 'Line 33',
+          address4: 'Line 44',
+          address5: 'Line 55',
+          postcode: 'SE16 5UD'
+        },
+        homeTelephone: '1111111111',
+        mobile: '22222222222',
+        email: 'a@b.co',
+        dateOfBirth: '1960-09-09',
+        nationalInsuranceNumber: 'AA123456D'
       },
-      {
-        id: 'onlinePleaId2',
-        offenceId: 'offenceId2',
-        caseId: 'caseId',
-        defendantId: 'defendantId',
-        plea: 'GUILTY',
-        mitigation: 'Guilty plea mitigation2',
-        offenceTitle: 'Use / install a television set without a licence'
+      pleaDetails: {
+        comeToCourt: true,
+        interpreterLanguage: 'turkish',
+        witnessDetails: 'ter the name and add',
+        unavailability: 'no days',
+        speakWelsh: true,
+        outstandingFines: true,
+        interpreterRequired: true
+      },
+      employment: {
+        incomePaymentFrequency: 'WEEKLY',
+        incomePaymentAmount: 0.0,
+        employmentStatus: 'UNEMPLOYED',
+        benefitsClaimed: true,
+        benefitsType: 'childcare',
+        benefitsDeductPenaltyPreference: false
+      },
+      outgoings: {
+        accommodationAmount: 1.0,
+        councilTaxAmount: 2.0,
+        householdBillsAmount: 3.0,
+        travelExpensesAmount: 4.0,
+        childMaintenanceAmount: 5.0,
+        otherDescription: 'TV licence',
+        otherAmount: 23.0,
+        monthlyAmount: 38.0
       }
-    ],
-    personalDetails: {
-      firstName: 'Seyit Ahmet Kamil',
-      lastName: 'GUNGOR',
-      address: {
-        address1: 'Line 11',
-        address2: 'Line 22',
-        address3: 'Line 33',
-        address4: 'Line 44',
-        address5: 'Line 55',
-        postcode: 'SE16 5UD'
-      },
-      homeTelephone: '1111111111',
-      mobile: '22222222222',
-      email: 'a@b.co',
-      dateOfBirth: '1960-09-09',
-      nationalInsuranceNumber: 'AA123456D'
-    },
-    pleaDetails: {
-      comeToCourt: true,
-      interpreterLanguage: 'turkish',
-      witnessDetails: 'ter the name and add',
-      unavailability: 'no days',
-      speakWelsh: true,
-      outstandingFines: true,
-      interpreterRequired: true
-    },
-    employment: {
-      incomePaymentFrequency: 'WEEKLY',
-      incomePaymentAmount: 0.0,
-      employmentStatus: 'UNEMPLOYED',
-      benefitsClaimed: true,
-      benefitsType: 'childcare',
-      benefitsDeductPenaltyPreference: false
-    },
-    outgoings: {
-      accommodationAmount: 1.0,
-      councilTaxAmount: 2.0,
-      householdBillsAmount: 3.0,
-      travelExpensesAmount: 4.0,
-      childMaintenanceAmount: 5.0,
-      otherDescription: 'TV licence',
-      otherAmount: 23.0,
-      monthlyAmount: 38.0
     }
-  }]
+  ]
 };
 
 export const MOCK_CASE_NOTES = {

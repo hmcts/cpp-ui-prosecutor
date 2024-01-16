@@ -6,25 +6,17 @@ import { By } from '@angular/platform-browser';
 import { DocumentNameValidator } from '../index';
 
 describe('Document Name Validator', () => {
-
-  let fixture: ComponentFixture<TestDocumentNameValidator>;
+  let fixture: ComponentFixture<TestDocumentNameValidatorComponent>;
   let form: NgForm;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
-    TestBed.configureTestingModule(
-      {
-        declarations: [
-          TestDocumentNameValidator,
-          DocumentNameValidator
-        ],
-        imports: [
-          FormsModule
-        ]
-      }
-    );
+    TestBed.configureTestingModule({
+      declarations: [TestDocumentNameValidatorComponent, DocumentNameValidator],
+      imports: [FormsModule]
+    });
 
-    fixture = TestBed.createComponent(TestDocumentNameValidator);
+    fixture = TestBed.createComponent(TestDocumentNameValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     ctrlElement = fixture.debugElement.query(By.css('[name=someDocumentName]'));
     fixture.detectChanges();
@@ -64,13 +56,10 @@ describe('Document Name Validator', () => {
   selector: 'test-document-validation',
   template: `
     <form>
-      <input
-        name="someDocumentName"
-        [ngModel]="model"
-        validateDocumentName
-      >
+      <input name="someDocumentName" [ngModel]="model" validateDocumentName />
+    </form>
   `
 })
-class TestDocumentNameValidator {
+class TestDocumentNameValidatorComponent {
   model: string;
 }

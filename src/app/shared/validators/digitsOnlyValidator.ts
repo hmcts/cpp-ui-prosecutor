@@ -19,9 +19,9 @@ const NUMBER_REGEX = /^\d+$/;
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => DigitsOnlyValidator),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class DigitsOnlyValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {
@@ -38,7 +38,7 @@ export class DigitsOnlyValidator implements Validator {
 
   getControlName(c: AbstractControl): string | null {
     const formGroup = c.parent.controls;
-    return Object.keys(formGroup).find((name) => c === formGroup[name]) || null;
+    return Object.keys(formGroup).find(name => c === formGroup[name]) || null;
   }
 
   @HostListener('keydown', ['$event']) onKeyDown(e: KeyboardEvent) {

@@ -2,19 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
-import {
-  pcfReferencedataReducer,
-  PcfReferenceDataState,
-} from '../../../../../core/reducers/pcf-reference-data';
+import { pcfReferencedataReducer, PcfReferenceDataState } from '../../../../../core/reducers/pcf-reference-data';
 import { NationalityAutoSuggestComponent } from '../nationality-auto-suggest.component';
 import { PdkAutosuggestModule, PdkCoreModule, PdkFormModule, PdkTextInputModule } from '@cpp/pdk';
 import { FormsModule } from '@angular/forms';
 import { Nationality } from '../../../../../core/model/reference-data-interfaces';
 import { By } from '@angular/platform-browser';
-import {
-  LoadNationalitiesAction,
-  LoadNationalitieSuccessAction,
-} from '../../../../../core/actions';
+import { LoadNationalitiesAction, LoadNationalitieSuccessAction } from '../../../../../core/actions';
 
 describe('NationalityAutoSuggestComponent', () => {
   const nationalities = [
@@ -24,7 +18,7 @@ describe('NationalityAutoSuggestComponent', () => {
       isoCode: 'GBR',
       govCode: 'GBR',
       countryName: 'GBR',
-      nationality: 'British',
+      nationality: 'British'
     },
     {
       id: 'id1',
@@ -32,8 +26,8 @@ describe('NationalityAutoSuggestComponent', () => {
       isoCode: 'GBR',
       govCode: 'GBR',
       countryName: 'GBR',
-      nationality: 'Irish',
-    },
+      nationality: 'Irish'
+    }
   ];
 
   let fixture: ComponentFixture<NationalityAutoSuggestTestComponent>;
@@ -49,11 +43,11 @@ describe('NationalityAutoSuggestComponent', () => {
         PdkCoreModule,
         PdkTextInputModule,
         StoreModule.forRoot(() => null, {
-          runtimeChecks: {},
+          runtimeChecks: {}
         }),
-        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer),
+        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer)
       ],
-      declarations: [NationalityAutoSuggestComponent, NationalityAutoSuggestTestComponent],
+      declarations: [NationalityAutoSuggestComponent, NationalityAutoSuggestTestComponent]
     });
 
     fixture = TestBed.createComponent(NationalityAutoSuggestTestComponent);
@@ -130,13 +124,7 @@ describe('NationalityAutoSuggestComponent', () => {
 @Component({
   selector: 'nationality-auto-suggest-test',
   template: `
-    <form
-      autocomplete="off"
-      pdk-form
-      novalidate
-      (validSubmit)="submitForm(form.value)"
-      #form="ngForm"
-    >
+    <form autocomplete="off" pdk-form novalidate (validSubmit)="submitForm(form.value)" #form="ngForm">
       <pdk-form-field label="Nationality">
         <nationality-auto-suggest
           id="nationalityId"
@@ -149,7 +137,7 @@ describe('NationalityAutoSuggestComponent', () => {
       </pdk-form-field>
       <button type="submit">Submit</button>
     </form>
-  `,
+  `
 })
 class NationalityAutoSuggestTestComponent {
   selectedValue;

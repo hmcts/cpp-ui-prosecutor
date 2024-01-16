@@ -18,7 +18,7 @@ describe('OffenceSearchComponent', () => {
   beforeEach(() => {
     searchOffenceTypes = jest.fn();
 
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       imports: [
         CommonModule,
         ReactiveFormsModule,
@@ -26,7 +26,7 @@ describe('OffenceSearchComponent', () => {
         PdkCoreModule,
         PdkFormModule,
         RouterTestingModule,
-        PdkAutosuggestModule,
+        PdkAutosuggestModule
       ],
       schemas: [NO_ERRORS_SCHEMA],
       declarations: [OffenceSearchComponent, TestOffenceSearchComponent],
@@ -34,10 +34,10 @@ describe('OffenceSearchComponent', () => {
         {
           provide: PCFReferenceDataOffenceService,
           useValue: {
-            searchOffenceTypes,
-          },
-        },
-      ],
+            searchOffenceTypes
+          }
+        }
+      ]
     });
 
     fixture = TestBed.createComponent(TestOffenceSearchComponent);
@@ -50,8 +50,8 @@ describe('OffenceSearchComponent', () => {
       offenceId: '*',
       title: 'Making waves',
       cjsOffenceCode: 'CTO101',
-      legislation: 'Bondi Beach',
-    },
+      legislation: 'Bondi Beach'
+    }
   ];
 
   it('should select a charge', () => {
@@ -65,8 +65,8 @@ describe('OffenceSearchComponent', () => {
         cjsOffenceCode: 'CTO101',
         legislation: 'Bondi Beach',
         offenceId: '*',
-        title: 'Making waves',
-      },
+        title: 'Making waves'
+      }
     });
   });
 
@@ -89,8 +89,8 @@ describe('OffenceSearchComponent', () => {
         {
           id: offences[0].offenceId,
           label: '',
-          offence: offences[0],
-        },
+          offence: offences[0]
+        }
       ]);
     });
 
@@ -108,7 +108,7 @@ describe('OffenceSearchComponent', () => {
           <offence-search name="offence" [selectedOffenceCode]="'HAHA'" ngModel> </offence-search>
         </pdk-form-field>
       </form>
-    `,
+    `
   })
   class TestOffenceSearchComponent {
     noResult = false;

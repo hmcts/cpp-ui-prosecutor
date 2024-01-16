@@ -9,7 +9,6 @@ import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
 
 describe('ListSearchResultsComponent', () => {
   let fixture: ComponentFixture<TestListSearchResultsComponent>;
-  let component: TestListSearchResultsComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -22,10 +21,10 @@ describe('ListSearchResultsComponent', () => {
         PdkWarningTextModule,
         DefendantNamePipeModule,
         CaseStatusPipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestListSearchResultsComponent);
-    component = fixture.componentInstance;
   });
 
   it('should compile correctly with no results', () => {

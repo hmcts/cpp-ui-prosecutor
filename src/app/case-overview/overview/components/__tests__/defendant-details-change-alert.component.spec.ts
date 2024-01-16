@@ -13,7 +13,8 @@ describe('DefendantDetailsChangeAlertComponent -> person defendant', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DefendantDetailsChangeAlertComponent, MockPersonDetailsChangeAlertComponent],
-      imports: [PdkAlertModule, PdkCoreModule]
+      imports: [PdkAlertModule, PdkCoreModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(MockPersonDetailsChangeAlertComponent);
@@ -70,7 +71,8 @@ describe('DefendantDetailsChangeAlertComponent -> Legal entity defendant', () =>
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DefendantDetailsChangeAlertComponent, MockLegalEntityDetailsChangeAlertComponent],
-      imports: [PdkAlertModule, PdkCoreModule]
+      imports: [PdkAlertModule, PdkCoreModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(MockLegalEntityDetailsChangeAlertComponent);

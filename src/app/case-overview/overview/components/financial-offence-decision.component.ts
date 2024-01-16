@@ -9,11 +9,14 @@ import { DISQUALIFICATION_DECISION_TEXT } from './disqualification/disqualificat
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div *ngIf="offenceDecision.decisionType === 'DISCHARGE'" data-role="discharge-type">{{ dischargeType }}</div>
-    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && fine" data-role="fine">Fine {{ fine }}</div>
-    <div *ngIf="offenceDecision.decisionType == 'FINANCIAL_PENALTY' && excisePenalty" data-role="excise-penalty">
+    <div *ngIf="offenceDecision.decisionType === 'FINANCIAL_PENALTY' && fine" data-role="fine">Fine {{ fine }}</div>
+    <div *ngIf="offenceDecision.decisionType === 'FINANCIAL_PENALTY' && excisePenalty" data-role="excise-penalty">
       Excise penalty {{ excisePenalty }}
     </div>
-    <div *ngIf="(offenceDecision.decisionType == 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty" data-role="back-duty">
+    <div
+      *ngIf="(offenceDecision.decisionType === 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty"
+      data-role="back-duty"
+    >
       Back duty {{ backDuty }}
     </div>
     <div data-role="compensation">{{ compensation }}</div>

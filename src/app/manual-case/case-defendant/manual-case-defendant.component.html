@@ -1,7 +1,5 @@
 <h1 pdk-typography="heading-xlarge">{{ 'MANUAL_CASE_DEFENDANT.PAGE_TITLE' | translate }}</h1>
-<h2 pdk-typography="heading-medium">
-  {{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_NO' | translate }} {{ counter }}
-</h2>
+<h2 pdk-typography="heading-medium">{{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_NO' | translate }} {{ counter }}</h2>
 
 <pdk-grid container>
   <pdk-grid two-thirds *ngIf="editDefendant">
@@ -36,9 +34,9 @@
         [remandStatuses]="remandStatuses"
         [showAddButton]="iterateDefendant"
         [isPoliceProsecutor]="isPoliceProsecutor()"
-        (onSubmit)="submitData($event)"
-        (onError)="displayErrors($event)"
-        (onBack)="back()"
+        (formSubmit)="submitData($event)"
+        (formError)="displayErrors($event)"
+        (goBack)="back()"
       >
       </individual-defendant-form>
     </ng-container>
@@ -50,9 +48,9 @@
         [manualCaseDefendant]="editDefendant"
         [manualCaseType]="manualCaseType"
         [showAddButton]="iterateDefendant"
-        (onSubmit)="submitData($event)"
-        (onError)="displayErrors($event)"
-        (onBack)="back()"
+        (formSubmit)="submitData($event)"
+        (formError)="displayErrors($event)"
+        (goBack)="back()"
       >
       </organisation-defendant-form>
     </ng-container>

@@ -4,12 +4,9 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -17,16 +14,13 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -34,41 +28,29 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
           </b>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="case-status"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Completed 
-          
-          
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -78,13 +60,11 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -94,16 +74,13 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -113,12 +90,10 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -128,16 +103,13 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -147,12 +119,10 @@ exports[`CaseDetailsComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -167,12 +137,9 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -180,16 +147,13 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -197,17 +161,12 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           </b>
         </div>
       </pdk-grid>
-      
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-body-m"
-          ng-reflect-type="body-medium"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
           pdk-typography="body-medium"
         >
@@ -219,24 +178,17 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
           <br />
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -246,13 +198,11 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -262,16 +212,13 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -281,12 +228,10 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -296,16 +241,13 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -315,12 +257,10 @@ exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] =
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -335,12 +275,9 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -348,16 +285,13 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -365,48 +299,35 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
           </b>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="case-status"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Referred for court hearing 
-          
-          
           <div
             class="govuk-body-xs"
-            ng-reflect-type="body-xsmall"
             pdk-typography="body-xsmall"
           >
              Awaiting Listing 
           </div>
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -416,13 +337,11 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -432,16 +351,13 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -451,12 +367,10 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -466,16 +380,13 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -485,12 +396,10 @@ exports[`CaseDetailsComponent should display Awaiting listing for refer to court
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -505,12 +414,9 @@ exports[`CaseDetailsComponent should display application if application is prese
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -518,16 +424,13 @@ exports[`CaseDetailsComponent should display application if application is prese
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -535,40 +438,29 @@ exports[`CaseDetailsComponent should display application if application is prese
           </b>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="case-status"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Completed 
-          
-          
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -578,33 +470,27 @@ exports[`CaseDetailsComponent should display application if application is prese
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            1 Jan 2020 
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -614,13 +500,11 @@ exports[`CaseDetailsComponent should display application if application is prese
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Appeal abandoned 
@@ -630,16 +514,13 @@ exports[`CaseDetailsComponent should display application if application is prese
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -649,13 +530,11 @@ exports[`CaseDetailsComponent should display application if application is prese
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -665,16 +544,13 @@ exports[`CaseDetailsComponent should display application if application is prese
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -684,12 +560,10 @@ exports[`CaseDetailsComponent should display application if application is prese
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -699,16 +573,13 @@ exports[`CaseDetailsComponent should display application if application is prese
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -718,12 +589,10 @@ exports[`CaseDetailsComponent should display application if application is prese
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -738,12 +607,9 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -751,16 +617,13 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -768,50 +631,37 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
           </b>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="case-status"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Referred for court hearing 
-          
           <div
             class="govuk-body-xs"
-            ng-reflect-type="body-xsmall"
             pdk-typography="body-xsmall"
           >
              Hearing court  12 Dec 2018 at 12:00 AM
             <br />
              Summons issued 
           </div>
-          
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -821,13 +671,11 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -837,16 +685,13 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -856,12 +701,10 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -871,16 +714,13 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -890,12 +730,10 @@ exports[`CaseDetailsComponent should display the court details for listed in cri
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -910,12 +748,9 @@ exports[`CaseDetailsComponent should not display application details if no appli
 <case-details-test
   kase={[Function Object]}
 >
-  <case-details
-    ng-reflect-kase="[object Object]"
-  >
+  <case-details>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Case Details
@@ -923,16 +758,13 @@ exports[`CaseDetailsComponent should not display application details if no appli
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -940,41 +772,29 @@ exports[`CaseDetailsComponent should not display application details if no appli
           </b>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="case-status"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Completed 
-          
-          
         </div>
       </pdk-grid>
-      
     </pdk-grid>
-    
-    
-    
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -984,13 +804,11 @@ exports[`CaseDetailsComponent should not display application details if no appli
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="prosecutor"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Transport for London 
@@ -1000,16 +818,13 @@ exports[`CaseDetailsComponent should not display application details if no appli
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -1019,12 +834,10 @@ exports[`CaseDetailsComponent should not display application details if no appli
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            27 Jan 2019 
@@ -1034,16 +847,13 @@ exports[`CaseDetailsComponent should not display application details if no appli
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -1053,12 +863,10 @@ exports[`CaseDetailsComponent should not display application details if no appli
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 

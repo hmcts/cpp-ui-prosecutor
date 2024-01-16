@@ -7,9 +7,9 @@ import {
   OnChanges,
   ViewChild,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ChangeDetectorRef
 } from '@angular/core';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { cloneDeep } from 'lodash';
 import { Location } from '@angular/common';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
@@ -18,12 +18,7 @@ import { ManualCaseOffenceStateService } from '../offences-state.service';
 import { take } from 'rxjs/operators';
 import { ValidationError } from '@cpp/pdk';
 import { OffenceParsingService } from '../case-offence-parsing/offence-parsing.service';
-import {
-  OffenceTypeDetails,
-  OffenceDateCode,
-  AlcoholLevelMethod,
-  FormListOption,
-} from '../../core';
+import { OffenceTypeDetails, OffenceDateCode, AlcoholLevelMethod, FormListOption } from '../../core';
 import { PCFReferenceDataOffenceService } from '../../contexts/reference-data/pcf-reference-data-offence';
 import { OffenceModeOfTrialType } from '../../core/model/reference-data-interfaces/offence-type';
 import { DynamicParticularFormComponent } from './dynamic-particular-form.component';
@@ -34,7 +29,7 @@ import { OffenceWordingMessage } from 'src/app/core/model/manual-case';
   selector: 'manual-case-offence',
   templateUrl: './manual-case-offence.component.html',
   styleUrls: ['./manual-case-offence.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ManualCaseOffenceComponent implements OnInit, OnChanges {
   get formErrors(): ValidationError[] | null {
@@ -86,17 +81,13 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
   ) {}
 
   get getStartDateValue() {
-    const dateSection = this.editOffence.dynamicParticularFormData.sections.find(
-      (section) => section.type === 'DATE'
-    );
+    const dateSection = this.editOffence.dynamicParticularFormData.sections.find(section => section.type === 'DATE');
 
     return dateSection && dateSection.value ? dateSection.value : '';
   }
 
   get showChargeDate(): boolean {
-    return (
-      this.manualCaseType === 'Q' || this.manualCaseType === 'C' || this.manualCaseType === 'J'
-    );
+    return this.manualCaseType === 'Q' || this.manualCaseType === 'C' || this.manualCaseType === 'J';
   }
 
   get showArrestDate(): boolean {
@@ -118,16 +109,16 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
     this.refreshDefendants(this.editOffence.offenceId);
 
     if (this.offenceDateCodes) {
-      this.offenceDateCodesOptions = this.offenceDateCodes.map((code) => ({
+      this.offenceDateCodesOptions = this.offenceDateCodes.map(code => ({
         value: code.dateCode,
-        label: code.dateCodeDescription,
+        label: code.dateCodeDescription
       }));
     }
 
     if (this.alcoholLevelMethods) {
-      this.alcoholLevelMethodOptions = this.alcoholLevelMethods.map((code) => ({
+      this.alcoholLevelMethodOptions = this.alcoholLevelMethods.map(code => ({
         value: code.methodCode,
-        label: code.methodDescription,
+        label: code.methodDescription
       }));
     }
   }
@@ -148,9 +139,7 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
 
         if (this.editOffence.offenceCode !== event.cjsOffenceCode) {
           this.editOffence.offenceWording = event.pnldOffenceWording;
-          this.editOffence.dynamicParticularFormData = this.offenceParsingService.parse(
-            event.pnldOffenceWording
-          );
+          this.editOffence.dynamicParticularFormData = this.offenceParsingService.parse(event.pnldOffenceWording);
 
           this.editOffence.offenceCode = event.cjsOffenceCode;
           this.editOffence.offenceLegislation = event.legislation;
@@ -168,7 +157,7 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
 
   toggleSelectAll(checked: boolean) {
     this.selectAll = checked;
-    this.selectedDefendantIds = this.selectAll ? this.manualCaseDefendants.map((d) => d.id) : [];
+    this.selectedDefendantIds = this.selectAll ? this.manualCaseDefendants.map(d => d.id) : [];
   }
 
   updateSelectedDefendants(defendantIds: string[]) {
@@ -178,7 +167,7 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
 
   refreshDefendants(offenceId: string) {
     this.editOffence.defendantOptions = this.offenceStateService.getDefendantOptions(offenceId);
-    this.selectAll = this.editOffence.defendantOptions.every((d) => d.checked);
+    this.selectAll = this.editOffence.defendantOptions.every(d => d.checked);
 
     this.selectedDefendantIds = this.offenceStateService.getSelectedDefendantIds(offenceId);
     this.counter = this.offenceStateService.counter;
@@ -235,7 +224,7 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
     this.submitFormData.emit({
       navigateToNextPage,
       defendantsWithOffences,
-      isEitherWayOffence: isEditingEitherWayOffence,
+      isEitherWayOffence: isEditingEitherWayOffence
     });
   }
 

@@ -16,15 +16,15 @@ export class RemandStatusesGuard implements CanActivate {
   hasRemandStatusesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getRemandStatuses),
-      map((remandStatuses) => remandStatuses && remandStatuses.length > 0),
+      map(remandStatuses => remandStatuses && remandStatuses.length > 0),
       take(1)
     );
   }
 
   hasRemandStatusesInApi(): Observable<boolean> {
     return this.referenceData.getRemandStatuses().pipe(
-      map((remandStatuses) => new LoadRemandStatusesSuccess(remandStatuses || [])),
-      tap((action) => this.store.dispatch(action)),
+      map(remandStatuses => new LoadRemandStatusesSuccess(remandStatuses || [])),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -34,7 +34,7 @@ export class RemandStatusesGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasRemandStatusesInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

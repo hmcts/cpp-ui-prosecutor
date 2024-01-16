@@ -4,6 +4,6 @@ import { TranslateMockPipe } from './translate-mock.pipe';
 
 @NgModule({
   declarations: [AgeMockPipe, TranslateMockPipe],
-  exports: [AgeMockPipe, TranslateMockPipe],
+  exports: [AgeMockPipe, TranslateMockPipe]
 })
 export class MockPipesModule {}

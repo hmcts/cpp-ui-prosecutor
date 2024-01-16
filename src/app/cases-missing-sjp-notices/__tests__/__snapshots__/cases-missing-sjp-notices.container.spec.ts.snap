@@ -5,9 +5,7 @@ exports[`CasesMissingSjpNoticesContainer should compile correctly 1`] = `
   casesMissingNotices$={[Function Store]}
   store={[Function Store]}
 >
-  <cases-missing-sjp-notices
-    ng-reflect-cases-missing-notices=""
-  >
+  <cases-missing-sjp-notices>
     <div>
       []
     </div>

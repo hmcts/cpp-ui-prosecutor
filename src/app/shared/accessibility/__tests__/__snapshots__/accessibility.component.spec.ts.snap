@@ -5,16 +5,14 @@ exports[`AccessibilityComponent should render correctly 1`] = `
   <pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-one-third"
-      ng-reflect-one-third=""
       one-third=""
     >
       <h1
         class="heading-medium"
-        style="margin-top: 60px"
+        style="margin-top: 60px;"
       >
          Contents 
       </h1>
@@ -26,8 +24,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
             class="govuk-link"
             fragment="a11y-statement"
             href="/#a11y-statement"
-            ng-reflect-fragment="a11y-statement"
-            ng-reflect-router-link="./"
             pdk-link=""
           >
              Accessibility statement for ATCM 
@@ -38,8 +34,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
             class="govuk-link"
             fragment="a11y-what-to-do"
             href="/#a11y-what-to-do"
-            ng-reflect-fragment="a11y-what-to-do"
-            ng-reflect-router-link="./"
             pdk-link=""
           >
              What to do if you can't access parts of this website 
@@ -50,8 +44,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
             class="govuk-link"
             fragment="a11y-enforcement-procedure"
             href="/#a11y-enforcement-procedure"
-            ng-reflect-fragment="a11y-enforcement-procedure"
-            ng-reflect-router-link="./"
             pdk-link=""
           >
              Enforcement procedure 
@@ -62,8 +54,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
             class="govuk-link"
             fragment="a11y-technical-information"
             href="/#a11y-technical-information"
-            ng-reflect-fragment="a11y-technical-information"
-            ng-reflect-router-link="./"
             pdk-link=""
           >
              Technical information about this website's accessibility 
@@ -74,8 +64,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
             class="govuk-link"
             fragment="a11y-what-we-re-doing"
             href="/#a11y-what-we-re-doing"
-            ng-reflect-fragment="a11y-what-we-re-doing"
-            ng-reflect-router-link="./"
             pdk-link=""
           >
              What we're doing to improve accessibility 
@@ -85,7 +73,6 @@ exports[`AccessibilityComponent should render correctly 1`] = `
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-column-two-thirds"
-      ng-reflect-two-thirds=""
       two-thirds=""
     >
       <h1

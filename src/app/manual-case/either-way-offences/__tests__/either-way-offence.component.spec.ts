@@ -23,7 +23,7 @@ import {
   PdkRadioInputModule,
   PdkTextareaModule,
   PdkCheckboxInputModule,
-  PdkDateInputModule,
+  PdkDateInputModule
 } from '@cpp/pdk';
 
 const mockDefendants = ([
@@ -33,8 +33,8 @@ const mockDefendants = ([
       personalInformation: {
         title: 'Mr',
         firstName: 'Joe',
-        lastName: 'Bloggs',
-      },
+        lastName: 'Bloggs'
+      }
     },
     offences: [
       {
@@ -49,15 +49,15 @@ const mockDefendants = ([
         offenceWording: 'some offence wording',
         plea: {
           pleaValue: 'INDICATED_GUILTY',
-          pleaDate: '2020-10-10',
+          pleaDate: '2020-10-10'
         },
         verdict: {
           verdictType: 'GUILTY',
-          verdictDate: '2020-10-10',
+          verdictDate: '2020-10-10'
         },
-        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
-      },
-    ],
+        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
+      }
+    ]
   },
   {
     id: '6c7f97ab-ed75-4414-8e2e-dbeadd9b282d',
@@ -65,8 +65,8 @@ const mockDefendants = ([
       personalInformation: {
         title: 'Mrs',
         firstName: 'Jane',
-        lastName: 'Smith',
-      },
+        lastName: 'Smith'
+      }
     },
     offences: [
       {
@@ -81,15 +81,15 @@ const mockDefendants = ([
         offenceWording: 'Caught Driving On Phone',
         plea: {
           pleaValue: 'GUILTY',
-          pleaDate: '2020-10-10',
+          pleaDate: '2020-10-10'
         },
         verdict: {
           verdictType: 'GUILTY',
-          verdictDate: '2020-10-10',
+          verdictDate: '2020-10-10'
         },
-        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
-      },
-    ],
+        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
+      }
+    ]
   },
   {
     id: '46e1c5f5-5e91-4655-9eda-43368640f218',
@@ -97,8 +97,8 @@ const mockDefendants = ([
       personalInformation: {
         title: 'Mr',
         firstName: 'Fred',
-        lastName: 'Davies',
-      },
+        lastName: 'Davies'
+      }
     },
     offences: [
       {
@@ -113,15 +113,15 @@ const mockDefendants = ([
         offenceWording: 'Drunk Driving',
         plea: {
           pleaValue: 'NOT_GUILTY',
-          pleaDate: '2020-10-10',
+          pleaDate: '2020-10-10'
         },
         verdict: {
           verdictType: 'GUILTY',
-          verdictDate: '2020-10-10',
+          verdictDate: '2020-10-10'
         },
-        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
-      },
-    ],
+        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
+      }
+    ]
   },
   {
     id: '46e1c5f5-5e91-4655-9eda-43368640f218',
@@ -134,7 +134,7 @@ const mockDefendants = ([
       address3: 'Acacia Town',
       address4: '',
       address5: '',
-      postcode: 'SW11 1JU',
+      postcode: 'SW11 1JU'
     },
     offences: [
       {
@@ -149,16 +149,16 @@ const mockDefendants = ([
         offenceWording: 'Drunk Driving',
         plea: {
           pleaValue: 'NOT_GUILTY',
-          pleaDate: '2020-10-10',
+          pleaDate: '2020-10-10'
         },
         verdict: {
           verdictType: 'GUILTY',
-          verdictDate: '2020-10-10',
+          verdictDate: '2020-10-10'
         },
-        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay,
-      },
-    ],
-  },
+        modeOfTrialDerived: OffenceModeOfTrialType.EitherWay
+      }
+    ]
+  }
 ] as unknown) as ManualCaseDefendant[];
 
 describe('EitherWayOffenceComponent', () => {
@@ -166,7 +166,7 @@ describe('EitherWayOffenceComponent', () => {
   let fixture: ComponentFixture<EitherWayOffenceComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [EitherWayOffenceComponent, FullNamePipe],
       imports: [
         MockPipesModule,
@@ -186,10 +186,10 @@ describe('EitherWayOffenceComponent', () => {
         PdkGridModule,
         PdkCheckboxInputModule,
         PdkDateInputModule,
-        RouterTestingModule,
+        RouterTestingModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService],
+      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService]
     });
 
     fixture = TestBed.createComponent(EitherWayOffenceComponent);
@@ -202,10 +202,10 @@ describe('EitherWayOffenceComponent', () => {
   it('should trigger submitFormData when the CONTINUE button is pressed and navigate to next page', () => {
     fixture.debugElement.query(By.css(`button[data-role='continue']`)).nativeElement.click();
 
-    component.submitFormData.subscribe((data) => {
+    component.submitFormData.subscribe(data => {
       expect(data).toEqual({
         navigateToNextPage: true,
-        defendantsWithOffences: mockDefendants,
+        defendantsWithOffences: mockDefendants
       });
     });
   });

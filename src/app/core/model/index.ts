@@ -11,6 +11,3 @@ export * from './notification';
 export * from './prosecution-case';
 export * from './prosecutor';
 export * from './reference-data-interfaces';
-
-
-

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CaseDetails, CaseSummary, DefendantSummary } from '../../../contexts/sjp';
 import { CasesMissingSjpNoticesComponent } from '../cases-missing-sjp-notices.component';
 import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
@@ -42,14 +42,17 @@ describe('CasesMissingSjpNoticesComponent', () => {
     } as CaseSummary
   ];
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [CasesMissingSjpNoticesComponent, MockListCasesMissingSjpNoticesComponent],
-      imports: [PdkCoreModule, PdkGridModule, MockModule]
-    });
-    fixture = TestBed.createComponent(CasesMissingSjpNoticesComponent);
-    component = fixture.componentInstance;
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [CasesMissingSjpNoticesComponent, MockListCasesMissingSjpNoticesComponent],
+        imports: [PdkCoreModule, PdkGridModule, MockModule],
+        teardown: { destroyAfterEach: false }
+      });
+      fixture = TestBed.createComponent(CasesMissingSjpNoticesComponent);
+      component = fixture.componentInstance;
+    })
+  );
 
   it('should compile correctly with no data', () => {
     component.casesMissingNotices = [];

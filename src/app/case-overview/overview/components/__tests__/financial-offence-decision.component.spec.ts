@@ -24,7 +24,8 @@ describe('FinancialOffenceDecisionComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [FinancialOffenceDecisionComponent, TestFinancialOffenceDecisionComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule]
+      imports: [CommonModule, PdkDividerModule, PdkGridModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestFinancialOffenceDecisionComponent);
   });
@@ -145,8 +146,9 @@ describe('FinancialOffenceDecisionComponent', () => {
         } as FinancialPenaltyOffenceDecision;
         fixture.detectChanges();
         expect(fixture.debugElement.nativeElement.innerHTML).toContain('Driver record endorsed with 3 points');
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Reason for penalty points being imposed on more than one offence: Bald tyres');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Reason for penalty points being imposed on more than one offence: Bald tyres'
+        );
         expect(fixture).toMatchSnapshot();
       });
     });
@@ -194,11 +196,11 @@ describe('FinancialOffenceDecisionComponent', () => {
         } as DischargeOffenceDecision;
         fixture.detectChanges();
         expect(fixture.debugElement.nativeElement.innerHTML).toContain('Driver record endorsed with 3 points');
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Reason for penalty points being imposed on more than one offence: Bald tyres');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Reason for penalty points being imposed on more than one offence: Bald tyres'
+        );
         expect(fixture).toMatchSnapshot();
       });
-
     });
   });
 
@@ -218,9 +220,10 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as FinancialPenaltyOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 1 day. ' +
-                'Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 1 day. ' +
+            'Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -239,10 +242,11 @@ describe('FinancialOffenceDecisionComponent', () => {
           notionalPenaltyPoints: 3
         } as FinancialPenaltyOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 1 month. ' +
-                'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
-                'Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 1 month. ' +
+            'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
+            'Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -260,10 +264,11 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as FinancialPenaltyOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 1 month. ' +
-                'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
-                'Section 35(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 1 month. ' +
+            'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
+            'Section 35(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -281,9 +286,10 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as FinancialPenaltyOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 1 year. ' +
-                'Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 1 year. ' +
+            'Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
     });
@@ -302,9 +308,10 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as DischargeOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 3 days. ' +
-                'Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 3 days. ' +
+            'Discretionary disqualification. Driving record endorsed. Section 34(2) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -323,10 +330,11 @@ describe('FinancialOffenceDecisionComponent', () => {
           notionalPenaltyPoints: 3
         } as DischargeOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 3 months. ' +
-                'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
-                'Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 3 months. ' +
+            'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
+            'Notional penalty points determined 3 penalty points. Section 35(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -344,10 +352,11 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as DischargeOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 3 months. ' +
-                'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
-                'Section 35(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 3 months. ' +
+            'Disqualification obligatory due to repeat offending. Driving record endorsed. ' +
+            'Section 35(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
 
@@ -365,15 +374,14 @@ describe('FinancialOffenceDecisionComponent', () => {
           } as DisqualificationPeriod
         } as DischargeOffenceDecision;
         fixture.detectChanges();
-        expect(fixture.debugElement.nativeElement.innerHTML)
-            .toContain('Disqualified from holding or obtaining a driving licence for 3 years. ' +
-                'Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988.');
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain(
+          'Disqualified from holding or obtaining a driving licence for 3 years. ' +
+            'Disqualification obligatory for the offence. Driving record endorsed. Section 34(1) Road Traffic Offenders Act 1988.'
+        );
         expect(fixture).toMatchSnapshot();
       });
-
     });
   });
-
 
   @Component({
     selector: 'financial-offence-decision-test',

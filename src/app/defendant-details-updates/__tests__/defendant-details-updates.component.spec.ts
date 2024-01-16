@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DefendantDetailsUpdatesComponent } from '../defendant-details-updates.component';
 import { DefendantNamePipeModule } from '../../shared/pipes';
@@ -6,12 +6,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
 import {
   PdkButtonModule,
-  PdkInsetTextModule,
-  PdkGridModule,
-  PdkSelectModule,
+  PdkDividerModule,
   PdkFormModule,
-  PdkWarningTextModule,
-  PdkDividerModule
+  PdkGridModule,
+  PdkInsetTextModule,
+  PdkSelectModule,
+  PdkWarningTextModule
 } from '@cpp/pdk';
 import { Component, Input } from '@angular/core';
 import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
@@ -21,34 +21,36 @@ let component: DefendantDetailsUpdatesComponent;
 let fixture: ComponentFixture<DefendantDetailsUpdatesComponent>;
 
 describe('DefendantDetailsUpdatesComponent', () => {
-  let navigate: jest.Mock;
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DefendantDetailsUpdatesComponent, MockWhatChangedComponent],
+        imports: [
+          RouterTestingModule,
+          PdkButtonModule,
+          PdkGridModule,
+          PdkSelectModule,
+          PdkFormModule,
+          PdkInsetTextModule,
+          DefendantNamePipeModule,
+          MockModule,
+          PdkWarningTextModule,
+          PdkDividerModule
+        ],
+        teardown: { destroyAfterEach: false }
+      });
 
-  beforeEach(async(() => {
-    navigate = jest.fn();
-    TestBed.configureTestingModule({
-      declarations: [DefendantDetailsUpdatesComponent, MockWhatChangedComponent],
-      imports: [
-        RouterTestingModule,
-        PdkButtonModule,
-        PdkGridModule,
-        PdkSelectModule,
-        PdkFormModule,
-        PdkInsetTextModule,
-        DefendantNamePipeModule,
-        MockModule,
-        PdkWarningTextModule,
-        PdkDividerModule
-      ]
-    });
-
-    fixture = TestBed.createComponent(DefendantDetailsUpdatesComponent);
-    component = fixture.componentInstance;
-  }));
+      fixture = TestBed.createComponent(DefendantDetailsUpdatesComponent);
+      component = fixture.componentInstance;
+    })
+  );
 
   describe('when the component is loaded with less than 50 updates', () => {
-    beforeEach(async(() => {
-      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
-    }));
+    beforeEach(
+      waitForAsync(() => {
+        component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      })
+    );
 
     it('should display defendant details updates with no limit message', () => {
       fixture.detectChanges();
@@ -57,12 +59,14 @@ describe('DefendantDetailsUpdatesComponent', () => {
   });
 
   describe('when the component is loaded with more than 50 updates', () => {
-    beforeEach(async(() => {
-      component.defendantDetailsUpdates = {
-        total: 51,
-        defendantDetailsUpdates: MOCK_DEFENDANT_DETAILS_UPDATES.defendantDetailsUpdates
-      };
-    }));
+    beforeEach(
+      waitForAsync(() => {
+        component.defendantDetailsUpdates = {
+          total: 51,
+          defendantDetailsUpdates: MOCK_DEFENDANT_DETAILS_UPDATES.defendantDetailsUpdates
+        };
+      })
+    );
 
     it('should display defendant details updates with limit message', () => {
       fixture.detectChanges();

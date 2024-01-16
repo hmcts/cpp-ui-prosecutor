@@ -9,9 +9,7 @@
 <pdk-grid container>
   <pdk-grid full>
     <form pdk-form novalidate (validSubmit)="submitData(form.value)" (errors)="onErrors($event)">
-      <ng-container
-        *ngFor="let item of offencesWithDefendants | keyvalue; let offenceIndex = index"
-      >
+      <ng-container *ngFor="let item of offencesWithDefendants | keyvalue; let offenceIndex = index">
         <pdk-grid container>
           <pdk-grid full>
             <div>
@@ -30,13 +28,9 @@
                 </p>
               </div>
             </div>
-            <ng-container
-              *ngFor="let defendant of item.value.defendants; let defendantIndex = index"
-            >
+            <ng-container *ngFor="let defendant of item.value.defendants; let defendantIndex = index">
               <p pdk-padding-top="4" *ngIf="defendant.individual">
-                <span class="bold">{{
-                  defendant?.individual?.personalInformation | fullName
-                }}</span>
+                <span class="bold">{{ defendant?.individual?.personalInformation | fullName }}</span>
               </p>
               <p pdk-padding-top="4" *ngIf="defendant.organisationName">
                 <span class="bold">{{ defendant.organisationName }}</span>
@@ -53,13 +47,9 @@
                   ]"
                 >
                   <pdk-select
-                    name="{{
-                      'allocation-decision-' + item.value.offence.offenceId + '-' + defendant.id
-                    }}"
+                    name="{{ 'allocation-decision-' + item.value.offence.offenceId + '-' + defendant.id }}"
                     placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
-                    [(ngModel)]="
-                      getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId
-                    "
+                    [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId"
                     [options]="allocationDecisionOptions"
                     data-role="allocationDecision-input"
                   >
@@ -81,9 +71,7 @@
                     <pdk-select
                       name="{{ 'plea-' + item.value.offence.offenceId + '-' + defendant.id }}"
                       placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
-                      [(ngModel)]="
-                        getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaValue
-                      "
+                      [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaValue"
                       [options]="pleaOptions"
                       [required]="true"
                       (change)="resetFormforOffenceId(item.value.offence.offenceId)"
@@ -92,11 +80,7 @@
                     </pdk-select>
                   </pdk-form-field>
                 </ng-container>
-                <ng-container
-                  *ngIf="
-                    getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue
-                  "
-                >
+                <ng-container *ngIf="getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue">
                   <pdk-inset-text>
                     <pdk-form-field
                       label="{{ 'MANUAL_CASE_EITHER_WAY.PLEA_DATE' | translate }}"
@@ -114,12 +98,8 @@
                       ]"
                     >
                       <pdk-date-input
-                        name="{{
-                          'plea-date-' + item.value.offence.offenceId + '-' + defendant.id
-                        }}"
-                        [(ngModel)]="
-                          getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaDate
-                        "
+                        name="{{ 'plea-date-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                        [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaDate"
                         validateDate
                         pastDate
                         required
@@ -129,10 +109,8 @@
                     </pdk-form-field>
                     <ng-container
                       *ngIf="
-                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea
-                          .pleaValue === 'GUILTY' ||
-                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea
-                          .pleaValue === 'NOT_GUILTY'
+                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'GUILTY' ||
+                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'NOT_GUILTY'
                       "
                     >
                       <pdk-form-field
@@ -141,22 +119,14 @@
                         [errorMessages]="[
                           {
                             rule: 'required',
-                            message:
-                              'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION_REQUIRED' | translate
+                            message: 'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION_REQUIRED' | translate
                           }
                         ]"
                       >
                         <pdk-select
-                          name="{{
-                            'allocation-decision-' +
-                              item.value.offence.offenceId +
-                              '-' +
-                              defendant.id
-                          }}"
+                          name="{{ 'allocation-decision-' + item.value.offence.offenceId + '-' + defendant.id }}"
                           placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
-                          [(ngModel)]="
-                            getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId
-                          "
+                          [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId"
                           [options]="allocationDecisionOptions"
                           [required]="true"
                           data-role="allocationDecision-input"
@@ -166,8 +136,7 @@
                     </ng-container>
                     <ng-container
                       *ngIf="
-                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea
-                          .pleaValue === 'NOT_GUILTY'
+                        getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'NOT_GUILTY'
                       "
                     >
                       <pdk-form-field
@@ -181,22 +150,14 @@
                         ]"
                       >
                         <pdk-radio-group
-                          name="{{
-                            'verdict-' + item.value.offence.offenceId + '-' + defendant.id
-                          }}"
+                          name="{{ 'verdict-' + item.value.offence.offenceId + '-' + defendant.id }}"
                           [inline]="false"
                           [required]="true"
                           [options]="verdictsOptions"
                           [(ngModel)]="
-                            getDefedantOffence(defendant, item.value.offence.offenceId).verdict
-                              .verdictType.id
+                            getDefedantOffence(defendant, item.value.offence.offenceId).verdict.verdictType.id
                           "
-                          (change)="
-                            verdictChanged(
-                              $event,
-                              getDefedantOffence(defendant, item.value.offence.offenceId)
-                            )
-                          "
+                          (change)="verdictChanged($event, getDefedantOffence(defendant, item.value.offence.offenceId))"
                           data-role="verdict-input"
                         >
                         </pdk-radio-group>
@@ -217,13 +178,8 @@
                         ]"
                       >
                         <pdk-date-input
-                          name="{{
-                            'verdict-date-' + item.value.offence.offenceId + '-' + defendant.id
-                          }}"
-                          [(ngModel)]="
-                            getDefedantOffence(defendant, item.value.offence.offenceId).verdict
-                              .verdictDate
-                          "
+                          name="{{ 'verdict-date-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                          [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).verdict.verdictDate"
                           validateDate
                           pastDate
                           required

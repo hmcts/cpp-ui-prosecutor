@@ -10,8 +10,9 @@ describe('ResetGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
-      providers: [ResetGuard]
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
+      providers: [ResetGuard],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(ResetGuard);

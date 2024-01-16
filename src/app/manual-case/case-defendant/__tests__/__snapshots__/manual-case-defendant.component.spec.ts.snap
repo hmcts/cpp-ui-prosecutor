@@ -2,69 +2,46 @@
 
 exports[`Manual Case Defendant Component should render the component for SJP case and legal entity defendant 1`] = `
 <ng-component>
-  <manual-case-defendant
-    ng-reflect-manual-case-defendants="[object Object]"
-    ng-reflect-manual-case-detail="[object Object]"
-    ng-reflect-manual-case-type="J"
-    ng-reflect-prosecutors="[object Object],[object Object"
-  >
+  <manual-case-defendant>
     <h1
       class="govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
       pdk-typography="heading-xlarge"
     >
-      
     </h1>
     <h2
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-        
-  
     </h2>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <fieldset
           class="govuk-!-margin-top-3 govuk-fieldset"
-          ng-reflect-top="3"
           pdk-fieldset=""
           pdk-margin-top="3"
         >
           <legend
             class="govuk-!-margin-bottom-3 govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-bottom="3"
-            ng-reflect-type="small"
             pdk-legend="small"
             pdk-margin-bottom="3"
           >
-              
           </legend>
           <pdk-radio-group
             class="govuk-!-margin-bottom-3 ng-untouched ng-pristine ng-valid"
             data-role="other-type-input"
             name="type"
-            ng-reflect-bottom="3"
-            ng-reflect-inline="true"
-            ng-reflect-model="ORGANISATION"
-            ng-reflect-name="type"
             pdk-margin-bottom="3"
           >
             <div
               class="govuk-radios govuk-radios--inline"
             >
-              
               <pdk-radio-button
-                ng-reflect-value="INDIVIDUAL"
                 value="INDIVIDUAL"
               >
                 <div
@@ -72,23 +49,20 @@ exports[`Manual Case Defendant Component should render the component for SJP cas
                 >
                   <input
                     class="govuk-radios__input"
-                    id="pdk-radio-14"
-                    name="pdk-radio-group-13"
+                    id="pdk-radio-GENERATED_ID"
+                    name="pdk-radio-group-GENERATED_ID"
                     type="radio"
                     value="INDIVIDUAL"
                   />
                   <label
                     class="govuk-radios__label govuk-label"
-                    for="pdk-radio-14"
-                    ng-reflect-type=""
+                    for="pdk-radio-GENERATED_ID"
                     pdk-label=""
                   >
-                      
                   </label>
                 </div>
               </pdk-radio-button>
               <pdk-radio-button
-                ng-reflect-value="ORGANISATION"
                 value="ORGANISATION"
               >
                 <div
@@ -96,33 +70,23 @@ exports[`Manual Case Defendant Component should render the component for SJP cas
                 >
                   <input
                     class="govuk-radios__input"
-                    id="pdk-radio-15"
-                    name="pdk-radio-group-13"
+                    id="pdk-radio-GENERATED_ID"
+                    name="pdk-radio-group-GENERATED_ID"
                     type="radio"
                     value="ORGANISATION"
                   />
                   <label
                     class="govuk-radios__label govuk-label"
-                    for="pdk-radio-15"
-                    ng-reflect-type=""
+                    for="pdk-radio-GENERATED_ID"
                     pdk-label=""
                   >
-                      
                   </label>
                 </div>
               </pdk-radio-button>
             </div>
           </pdk-radio-group>
         </fieldset>
-        
-        
-        
-        <organisation-defendant-form
-          ng-reflect-aliases-reset="false"
-          ng-reflect-is-police-prosecutor="true"
-          ng-reflect-manual-case-defendant="[object Object]"
-          ng-reflect-manual-case-type="J"
-        />
+        <organisation-defendant-form />
       </pdk-grid>
     </pdk-grid>
   </manual-case-defendant>
@@ -131,69 +95,46 @@ exports[`Manual Case Defendant Component should render the component for SJP cas
 
 exports[`Manual Case Defendant Component should render the component for the Ist defendant from the list 1`] = `
 <ng-component>
-  <manual-case-defendant
-    ng-reflect-manual-case-defendants="[object Object]"
-    ng-reflect-manual-case-detail="[object Object]"
-    ng-reflect-manual-case-type="Q"
-    ng-reflect-prosecutors="[object Object],[object Object"
-  >
+  <manual-case-defendant>
     <h1
       class="govuk-heading-xl"
-      ng-reflect-type="heading-xlarge"
       pdk-typography="heading-xlarge"
     >
-      
     </h1>
     <h2
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
-        
-  
     </h2>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
-      
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <fieldset
           class="govuk-!-margin-top-3 govuk-fieldset"
-          ng-reflect-top="3"
           pdk-fieldset=""
           pdk-margin-top="3"
         >
           <legend
             class="govuk-!-margin-bottom-3 govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-bottom="3"
-            ng-reflect-type="small"
             pdk-legend="small"
             pdk-margin-bottom="3"
           >
-              
           </legend>
           <pdk-radio-group
             class="govuk-!-margin-bottom-3 ng-untouched ng-pristine ng-valid"
             data-role="other-type-input"
             name="type"
-            ng-reflect-bottom="3"
-            ng-reflect-inline="true"
-            ng-reflect-model="ORGANISATION"
-            ng-reflect-name="type"
             pdk-margin-bottom="3"
           >
             <div
               class="govuk-radios govuk-radios--inline"
             >
-              
               <pdk-radio-button
-                ng-reflect-value="INDIVIDUAL"
                 value="INDIVIDUAL"
               >
                 <div
@@ -201,23 +142,20 @@ exports[`Manual Case Defendant Component should render the component for the Ist
                 >
                   <input
                     class="govuk-radios__input"
-                    id="pdk-radio-2"
-                    name="pdk-radio-group-1"
+                    id="pdk-radio-GENERATED_ID"
+                    name="pdk-radio-group-GENERATED_ID"
                     type="radio"
                     value="INDIVIDUAL"
                   />
                   <label
                     class="govuk-radios__label govuk-label"
-                    for="pdk-radio-2"
-                    ng-reflect-type=""
+                    for="pdk-radio-GENERATED_ID"
                     pdk-label=""
                   >
-                      
                   </label>
                 </div>
               </pdk-radio-button>
               <pdk-radio-button
-                ng-reflect-value="ORGANISATION"
                 value="ORGANISATION"
               >
                 <div
@@ -225,33 +163,23 @@ exports[`Manual Case Defendant Component should render the component for the Ist
                 >
                   <input
                     class="govuk-radios__input"
-                    id="pdk-radio-3"
-                    name="pdk-radio-group-1"
+                    id="pdk-radio-GENERATED_ID"
+                    name="pdk-radio-group-GENERATED_ID"
                     type="radio"
                     value="ORGANISATION"
                   />
                   <label
                     class="govuk-radios__label govuk-label"
-                    for="pdk-radio-3"
-                    ng-reflect-type=""
+                    for="pdk-radio-GENERATED_ID"
                     pdk-label=""
                   >
-                      
                   </label>
                 </div>
               </pdk-radio-button>
             </div>
           </pdk-radio-group>
         </fieldset>
-        
-        
-        
-        <organisation-defendant-form
-          ng-reflect-aliases-reset="false"
-          ng-reflect-is-police-prosecutor="true"
-          ng-reflect-manual-case-defendant="[object Object]"
-          ng-reflect-manual-case-type="Q"
-        />
+        <organisation-defendant-form />
       </pdk-grid>
     </pdk-grid>
   </manual-case-defendant>

@@ -5,8 +5,8 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { select, Store } from '@ngrx/store';
 import { of } from 'rxjs';
 import { catchError, switchMap, tap, withLatestFrom } from 'rxjs/operators';
-import * as uuid from 'uuid/v4';
-import * as cleanDeep from 'clean-deep';
+import uuid from 'uuid/v4';
+import cleanDeep from 'clean-deep';
 import { ReferenceDataService as PCFReferenceDataService } from '../../contexts/reference-data';
 import { ApiError, createProsecutor, createProsecutorSuccess } from '../actions';
 import { ApplicationCreationRoutes, ProsecutorType } from '../model';
@@ -33,11 +33,11 @@ export class ProsecutorEffects {
             cleanDeep({
               id: uuid(),
               shortName: `${prosecutor.fullName} ${prosecutor.address.postcode}`,
-              ...prosecutor,
+              ...prosecutor
             })
           )
           .pipe(
-            switchMap((newProsecutor) =>
+            switchMap(newProsecutor =>
               this.referenceDataService.fetchProsecutors().pipe(
                 tap(() => {
                   if (
@@ -45,13 +45,11 @@ export class ProsecutorEffects {
                     prosecutorType === ProsecutorType.EDIT_MANUAL_CASE
                   ) {
                     const manualCasePath =
-                      prosecutorType === ProsecutorType.MANUAL_CASE
-                        ? 'prosecutor'
-                        : 'edit-prosecutor';
+                      prosecutorType === ProsecutorType.MANUAL_CASE ? 'prosecutor' : 'edit-prosecutor';
 
                     this.router.navigate(['manual-case', manualCasePath], {
                       queryParams,
-                      replaceUrl: true,
+                      replaceUrl: true
                     });
                   } else {
                     const route =
@@ -61,23 +59,23 @@ export class ProsecutorEffects {
 
                     this.router.navigate(['application', route], {
                       queryParams,
-                      replaceUrl: true,
+                      replaceUrl: true
                     });
                   }
                 }),
-                switchMap((prosecutors) => [
+                switchMap(prosecutors => [
                   ReferenceDataActions.loadProsecutorsSuccess({ prosecutors }),
                   createProsecutorSuccess({
                     prosecutor: {
                       ...newProsecutor,
-                      standard: false, // Again BE incompetent
+                      standard: false // Again BE incompetent
                     },
-                    prosecutorType,
-                  }),
+                    prosecutorType
+                  })
                 ])
               )
             ),
-            catchError((error) => of(new ApiError(error)))
+            catchError(error => of(new ApiError(error)))
           )
       )
     )

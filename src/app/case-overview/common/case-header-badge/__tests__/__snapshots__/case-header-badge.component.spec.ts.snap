@@ -11,14 +11,10 @@ exports[`CaseHeaderBadgeComponent should compile correctly 1`] = `
       <div
         class="pdk-page-header"
       >
-        <pdk-page-header-content
-          ng-reflect-reference="TFL26168N21T5"
-        >
+        <pdk-page-header-content>
           <div
             class="pdk-page-header__content"
           >
-            
-            
             <div
               class="pdk-page-header__reference"
             >

@@ -4,22 +4,21 @@ import { RouterModule } from '@angular/router';
 import { DefendantDetailsUpdatesContainer } from './defendant-details-updates.container';
 import { CommonModule } from '@angular/common';
 import {
-  PdkBreadcrumbsModule,
   PdkButtonModule,
   PdkCoreModule,
   PdkDividerModule,
-  PdkInsetTextModule,
-  PdkTableModule,
-  PdkSelectModule,
   PdkFormModule,
   PdkGridModule,
+  PdkInsetTextModule,
+  PdkSelectModule,
+  PdkTableModule,
   PdkWarningTextModule
 } from '@cpp/pdk';
 import { DefendantNamePipeModule } from '../shared/pipes';
 import { DefendantDetailsUpdatesPageDataGuard } from '../defendant-details-updates/defendant-details-updates.guard';
-import {WhatChangedComponent} from './what-changed/what-changed.component';
-import {EffectsModule} from '@ngrx/effects';
-import {DefendantDetailsUpdatesEffects} from './defendant-details-updates.effects';
+import { WhatChangedComponent } from './what-changed/what-changed.component';
+import { EffectsModule } from '@ngrx/effects';
+import { DefendantDetailsUpdatesEffects } from './defendant-details-updates.effects';
 import { BreadcrumbLinksModule } from '../shared/breadcrumb-links/breadcrumb-links.module';
 
 const DECLARATIONS = [DefendantDetailsUpdatesComponent, DefendantDetailsUpdatesContainer, WhatChangedComponent];

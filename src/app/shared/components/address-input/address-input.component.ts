@@ -11,7 +11,7 @@ import {
   OnDestroy,
   Optional,
   OnChanges,
-  SimpleChanges,
+  SimpleChanges
 } from '@angular/core';
 import {
   FormBuilder,
@@ -24,7 +24,7 @@ import {
   FormGroup,
   Validator,
   ValidationErrors,
-  Validators,
+  Validators
 } from '@angular/forms';
 
 import { FormComponent, FormFieldControl, generateId } from '@cpp/pdk';
@@ -48,7 +48,7 @@ const EMPTY_ADDRESS_OBJ = {
   address3: '',
   address4: '',
   address5: '',
-  postcode: '',
+  postcode: ''
 } as Address;
 const DEFAULT_REQUIRED_FIELDS = ['address1', 'postcode'];
 const DEFAULT_OPTIONAL_FIELDS = ['address2', 'address3', 'address4', 'address5'];
@@ -57,27 +57,27 @@ const ALL_FIELDS_ARRAY = ['address1', 'address2', 'address3', 'address4', 'addre
 const defaultErrorMessages = (validatedFormElements: string[], customErrorMessage?: string) => {
   const elements = (validatedFormElements && [...validatedFormElements]) || ['address1'];
   const message = !customErrorMessage
-    ? elements.filter((element) => element !== 'postcode').length === 1
+    ? elements.filter(element => element !== 'postcode').length === 1
       ? 'Enter at least one line of address'
       : 'Provide this information'
     : customErrorMessage;
   return [
     {
       rule: 'addressRequired',
-      message,
+      message
     },
     {
       rule: 'address1SpecialChar',
-      message: 'Address line 1 can only start with letters or numbers',
+      message: 'Address line 1 can only start with letters or numbers'
     },
     {
       rule: 'postcodeRequired',
-      message: 'Postcode must be in the right format with a space, for example AB1 2CD',
+      message: 'Postcode must be in the right format with a space, for example AB1 2CD'
     },
     {
       rule: 'postcodeFormat',
-      message: 'Postcode must be in the right format with a space, for example AB1 2CD',
-    },
+      message: 'Postcode must be in the right format with a space, for example AB1 2CD'
+    }
   ];
 };
 
@@ -103,11 +103,7 @@ const defaultErrorMessages = (validatedFormElements: string[], customErrorMessag
     <div [formGroup]="address" pdk-margin-bottom="6">
       <ng-container *ngFor="let formItem of formElements; trackBy: trackByFn; index as i">
         <pdk-form-group [hasError]="getHasError(formItem.name)">
-          <label
-            [for]="'address-control-' + identifier + '-' + formItem.name"
-            pdk-label="small"
-            pdk-margin-top="6"
-          >
+          <label [for]="'address-control-' + identifier + '-' + formItem.name" pdk-label="small" pdk-margin-top="6">
             {{ formItem.label }}
           </label>
           <pdk-error-message
@@ -137,19 +133,19 @@ const defaultErrorMessages = (validatedFormElements: string[], customErrorMessag
   providers: [
     {
       provide: FormFieldControl,
-      useExisting: AddressInputComponent,
+      useExisting: AddressInputComponent
     },
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => AddressInputComponent),
-      multi: true,
+      multi: true
     },
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => AddressInputComponent),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class AddressInputComponent
   implements OnInit, ControlValueAccessor, FormFieldControl, Validator, OnDestroy, OnChanges {
@@ -217,14 +213,11 @@ export class AddressInputComponent
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (
-      changes.isRequired &&
-      changes.isRequired.previousValue !== changes.isRequired.currentValue
-    ) {
+    if (changes.isRequired && changes.isRequired.previousValue !== changes.isRequired.currentValue) {
       this.isOriginallyRequired = this.isRequired.valueOf();
       this.setUpdateFormElements();
     } else {
-      (this.formElements || []).forEach((e) => {
+      (this.formElements || []).forEach(e => {
         this.address.get(e.name).setValidators([Validators.required]);
         this.address.get(e.name).updateValueAndValidity();
       });
@@ -234,7 +227,7 @@ export class AddressInputComponent
   private onChanges(): void {
     this.address.valueChanges
       .pipe(debounceTime(600), distinctUntilChanged(), takeUntil(this.subscription$))
-      .subscribe((value) => {
+      .subscribe(value => {
         const isAddressEmpty = this.isAddressEmpty(value);
         if (!this.isOriginallyRequired) {
           if (!isAddressEmpty && !this.isRequired) {
@@ -260,14 +253,14 @@ export class AddressInputComponent
 
   private setOptionalLabel(): void {
     if (this.isRequired) {
-      (this.labelWithOptionalText || []).forEach((optional) => {
-        const i = this.formElements.findIndex((e) => e.name === optional);
+      (this.labelWithOptionalText || []).forEach(optional => {
+        const i = this.formElements.findIndex(e => e.name === optional);
         if (i > -1) {
           this.formElements[i].label = this.formElements[i].label + ' (optional)';
         }
       });
     } else {
-      (this.formElements || []).forEach((elem) => (elem.label = elem.label + ' (optional)'));
+      (this.formElements || []).forEach(elem => (elem.label = elem.label + ' (optional)'));
     }
   }
 
@@ -277,49 +270,49 @@ export class AddressInputComponent
         name: 'address1',
         required: this.isRequired,
         label: 'Address line 1',
-        length: this.maxLength || 50,
+        length: this.maxLength || 50
       },
       {
         name: 'address2',
         required: this.isRequired,
         label: 'Address line 2',
-        length: this.maxLength || 50,
+        length: this.maxLength || 50
       },
       {
         name: 'address3',
         required: this.isRequired,
         label: 'Address line 3',
-        length: this.maxLength || 50,
+        length: this.maxLength || 50
       },
       {
         name: 'address4',
         required: this.isRequired,
         label: 'Address line 4',
-        length: this.maxLength || 50,
+        length: this.maxLength || 50
       },
       {
         name: 'address5',
         required: this.isRequired,
         label: 'Address line 5',
-        length: this.maxLength || 50,
+        length: this.maxLength || 50
       },
       {
         name: 'postcode',
         required: this.isRequired,
         label: 'Postcode',
-        length: 8,
-      },
+        length: 8
+      }
     ];
     this.setOptionalLabel();
     if (this.errors) {
-      (Object.keys(this.errors) || []).forEach((error) => {
+      (Object.keys(this.errors) || []).forEach(error => {
         if (this.errors[error]) {
           delete this.errors[error];
         }
       });
     }
 
-    (this.formElements || []).forEach((e) => {
+    (this.formElements || []).forEach(e => {
       this.address.get(e.name).setValidators([Validators.required]);
       this.address.get(e.name).updateValueAndValidity();
     });
@@ -336,14 +329,14 @@ export class AddressInputComponent
       blankAddress.address1 = 'No fixed abode';
       this.address.patchValue(blankAddress);
 
-      this.validatedFormElements.forEach((e) => {
+      this.validatedFormElements.forEach(e => {
         this.address.get(e).setValidators([]);
         this.address.get(e).updateValueAndValidity();
       });
     } else {
       this.address.patchValue(blankAddress);
 
-      this.validatedFormElements.forEach((e) => {
+      this.validatedFormElements.forEach(e => {
         this.address.get(e).setValidators([Validators.required]);
         this.address.get(e).updateValueAndValidity();
       });
@@ -389,15 +382,15 @@ export class AddressInputComponent
     const addressLinesToValidate = this.validatedFormElements || ['address1'];
     const addressRequired = this.reduceErrors(
       addressLinesToValidate,
-      (addressField) => addressField !== 'postcode',
-      (controlName) => this.address.controls[controlName].valid
+      addressField => addressField !== 'postcode',
+      controlName => this.address.controls[controlName].valid
     );
 
     // First character of address line 1 must be alphanumeric
     const address1SpecialChar = this.reduceErrors(
       ['address1'],
-      (addressField) => addressField === 'address1',
-      (controlName) => {
+      addressField => addressField === 'address1',
+      controlName => {
         const value = this.address.controls[controlName].value;
         return !value || ALPHANUMERIC_REGEX.test(value);
       }
@@ -407,14 +400,14 @@ export class AddressInputComponent
     const postcodeToValidate = this.validatedFormElements || [];
     const postcodeRequired = this.reduceErrors(
       postcodeToValidate,
-      (addressField) => addressField === 'postcode',
-      (controlName) => this.address.controls[controlName].valid
+      addressField => addressField === 'postcode',
+      controlName => this.address.controls[controlName].valid
     );
 
     const postcodeFormat = this.reduceErrors(
       ['postcode'],
-      (addressField) => addressField === 'postcode',
-      (controlName) => {
+      addressField => addressField === 'postcode',
+      controlName => {
         const value = this.address.controls[controlName].value;
         return !value || POSTCODE_REGEX.test(value);
       }
@@ -433,12 +426,12 @@ export class AddressInputComponent
         this.readonly = this.noFixedAbode;
 
         if (this.noFixedAbode) {
-          this.validatedFormElements.forEach((e) => {
+          this.validatedFormElements.forEach(e => {
             this.address.get(e).setValidators([]);
             this.address.get(e).updateValueAndValidity();
           });
         } else {
-          this.validatedFormElements.forEach((e) => {
+          this.validatedFormElements.forEach(e => {
             this.address.get(e).setValidators([Validators.required]);
             this.address.get(e).updateValueAndValidity();
           });
@@ -451,18 +444,18 @@ export class AddressInputComponent
   private addPdkErrors(): void {
     // todo - this needs to be revisited
     Object.keys(this.pdkForm['externalErrors'])
-      .filter((key) => key.startsWith(`address-control`))
-      .forEach((key) => this.pdkForm.removeError(key));
+      .filter(key => key.startsWith(`address-control`))
+      .forEach(key => this.pdkForm.removeError(key));
 
-    Object.keys(this.errors).forEach((error) => {
+    Object.keys(this.errors).forEach(error => {
       if (this.errors[error]) {
         const errorControlName = Object.keys(this.address.controls).find(
-          (controlName) => this.errors[error][controlName]
+          controlName => this.errors[error][controlName]
         );
         if (errorControlName) {
           this.pdkForm.addExternalError(`address-control-${this.identifier}-${errorControlName}`, {
             id: `address-error-${this.identifier}-${errorControlName}`,
-            message: this.getErrorMessage(error),
+            message: this.getErrorMessage(error)
           });
         }
       }
@@ -475,12 +468,12 @@ export class AddressInputComponent
     test: (controlName: string) => boolean
   ): boolean | ValidationErrors {
     return fieldsToValidate
-      .filter((fieldToValidate) => filter.call(this, fieldToValidate))
+      .filter(fieldToValidate => filter.call(this, fieldToValidate))
       .reduce((errors: { [k: string]: ValidationErrors | null }, controlName) => {
         if (!test.call(this, controlName)) {
           return {
             ...(errors || {}),
-            [controlName]: true,
+            [controlName]: true
           };
         }
         return errors;
@@ -488,13 +481,13 @@ export class AddressInputComponent
   }
 
   private removePdkErrors(): void {
-    this.formElements.forEach((element) => {
+    this.formElements.forEach(element => {
       this.pdkForm.removeError(`address-control-${this.identifier}-${element.name}`);
     });
   }
 
   private getErrorMessage(error): string {
-    return this.errorMessages.find((message) => message.rule === error).message;
+    return this.errorMessages.find(message => message.rule === error).message;
   }
 
   ngOnDestroy(): void {

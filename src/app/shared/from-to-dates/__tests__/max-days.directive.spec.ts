@@ -17,7 +17,8 @@ describe('`maxDays` directive', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       declarations: [MaxDaysDirective, TestMaxDateValidationComponent],
-      imports: [FormsModule]
+      imports: [FormsModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestMaxDateValidationComponent);

@@ -9,7 +9,6 @@ import { BehaviorSubject, of } from 'rxjs';
 import { ApiError, PendingApiRequest } from '../../actions/api';
 import { Title } from '@angular/platform-browser';
 import { PdkCoreModule } from '@cpp/pdk';
-import { global } from '@angular/compiler/src/util';
 import { AppRouterContainer } from '../app.router.container';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { UsersGroupsService } from '@cpp/users-groups';
@@ -25,12 +24,10 @@ describe('App page component', () => {
   let store: Store<any>;
   let mockRouterEvent: BehaviorSubject<any>;
   let routeData: BehaviorSubject<{}>;
-  let mockTranslateUse: jest.Mock;
 
   beforeEach(() => {
     mockRouterEvent = new BehaviorSubject<any>({});
     routeData = new BehaviorSubject<{}>({});
-    mockTranslateUse = jest.fn();
 
     TestBed.configureTestingModule({
       declarations: [AppContainer, AppRouterContainer],
@@ -93,7 +90,8 @@ describe('App page component', () => {
         },
         TranslateService
       ],
-      schemas: []
+      schemas: [],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);
@@ -136,7 +134,7 @@ describe('App page component', () => {
     mockRouterEvent.next(new NavigationEnd(0, 'test/url', 'test/redirect/url'));
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
-    tick();
+    tick(1);
 
     expect(setTitle).toHaveBeenCalledWith('Page title');
   }));
@@ -144,7 +142,7 @@ describe('App page component', () => {
   it('should track the offline status of the container', () => {
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
-    global.dispatchEvent(new Event('offline'));
+    window.dispatchEvent(new Event('offline'));
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -152,8 +150,8 @@ describe('App page component', () => {
   it('should track the online status of the container', () => {
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
-    global.dispatchEvent(new Event('offline'));
-    global.dispatchEvent(new Event('online'));
+    window.dispatchEvent(new Event('offline'));
+    window.dispatchEvent(new Event('online'));
     fixture.detectChanges();
 
     expect(fixture).toMatchSnapshot();

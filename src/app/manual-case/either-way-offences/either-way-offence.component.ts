@@ -12,7 +12,7 @@ import { ManualCaseOffenceStateService, OffenceIdsWithDefendants } from '../offe
 @Component({
   selector: 'either-way-offence',
   templateUrl: './either-way-offence.component.html',
-  styleUrls: ['./either-way-offence.component.scss'],
+  styleUrls: ['./either-way-offence.component.scss']
 })
 export class EitherWayOffenceComponent implements OnInit {
   @Input() manualCaseDefendants: ManualCaseDefendant[];
@@ -31,10 +31,7 @@ export class EitherWayOffenceComponent implements OnInit {
   pleaOption: [];
   editManualCaseDefendants: ManualCaseDefendant[];
 
-  constructor(
-    private location: Location,
-    private offenceStateService: ManualCaseOffenceStateService
-  ) {}
+  constructor(private location: Location, private offenceStateService: ManualCaseOffenceStateService) {}
 
   ngOnInit(): void {
     this.editManualCaseDefendants = cloneDeep(this.manualCaseDefendants);
@@ -54,13 +51,11 @@ export class EitherWayOffenceComponent implements OnInit {
   }
 
   getDefedantOffence(defendant: ManualCaseDefendant, offenceId: string): ManualCaseOffence {
-    return defendant.offences.find((offence) => offence.offenceId === offenceId);
+    return defendant.offences.find(offence => offence.offenceId === offenceId);
   }
 
   verdictChanged(event, offence: ManualCaseOffence) {
-    const selectedVerdict = this.verdictsTypes.find(
-      (verdictType) => verdictType.id === event.value
-    );
+    const selectedVerdict = this.verdictsTypes.find(verdictType => verdictType.id === event.value);
     offence.verdict.verdictType.category = selectedVerdict.category;
     offence.verdict.verdictType.categoryType = selectedVerdict.categoryType;
   }
@@ -68,7 +63,7 @@ export class EitherWayOffenceComponent implements OnInit {
   submitData(formData: any): void {
     this.submitFormData.emit({
       caseData: this.editManualCaseDefendants,
-      navigateToNextPage: true,
+      navigateToNextPage: true
     });
   }
 
@@ -81,9 +76,9 @@ export class EitherWayOffenceComponent implements OnInit {
       verdictType: {
         id: undefined,
         category: undefined,
-        categoryType: undefined,
+        categoryType: undefined
       },
-      verdictDate: undefined,
+      verdictDate: undefined
     };
 
     this.offencesWithDefendants[offenceId].offence.motReasonId = undefined;

@@ -3,7 +3,7 @@
 exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
 <manual-case-detail-summary
   courtCentres={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   manualCase={[Function Object]}
   policeForces={[Function Array]}
 >
@@ -23,7 +23,6 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
           class="table-header"
           pdk-typography="heading-medium"
         >
-          
         </span>
       </pdk-grid>
       <pdk-grid
@@ -36,7 +35,6 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
           pdk-link=""
           unvisited=""
         >
-          
         </a>
       </pdk-grid>
     </pdk-grid>
@@ -54,18 +52,14 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-             
           </th>
           <td
             class="data"
             data-role="date-received"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
-        
-        
         <tr
           class="table-row"
           pdk-table-row=""
@@ -74,14 +68,12 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-             
           </th>
           <td
             class="data"
             data-role="court-received-to-name"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
         <tr
@@ -92,17 +84,14 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-             
           </th>
           <td
             class="data"
             data-role="court-received-from-name"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
-        
         <tr
           class="table-row"
           pdk-table-row=""
@@ -111,14 +100,12 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-             
           </th>
           <td
             class="data"
             data-role="police-force-name"
             pdk-table-cell=""
           >
-            
           </td>
         </tr>
       </tbody>

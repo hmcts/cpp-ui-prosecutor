@@ -10,7 +10,8 @@ describe('PleaMitigationComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PleaMitigationComponent, TestPleaMitigationComponent],
-      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule]
+      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestPleaMitigationComponent);

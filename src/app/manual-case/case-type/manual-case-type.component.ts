@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  EventEmitter,
-  Output,
-  ViewChild,
-  Input,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { cloneDeep, merge } from 'lodash';
@@ -17,7 +9,7 @@ import { AppConfigService } from '../../config';
 @Component({
   selector: 'manual-case-type',
   templateUrl: './manual-case-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ManualCaseTypeComponent implements OnInit {
   get homepageUrl() {

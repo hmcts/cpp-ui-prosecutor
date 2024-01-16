@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
 import { ReferredToOpenCourtOffenceDecisionComponent } from '../referred-open-court-offence-decision.component';
 import { SharedModule } from '../../../../shared';
-import {ExpectedConditions} from 'protractor';
 
 describe('ReferredOpenCourtOffeneDecision', () => {
   let fixture: ComponentFixture<TestReferreredOpenourtOffenceDecisionComponent>;
@@ -15,8 +14,8 @@ describe('ReferredOpenCourtOffeneDecision', () => {
     decisionType: 'REFERRED_TO_OPEN_COURT',
     offenceTitle: 'Use / install a television set without a licence',
     reason: 'Equivocal plea (For Trial)',
-    magistratesCourt: 'Lavender Hill Magistrates\' Court',
-    referredToCourt: 'south West London Magistrates\' Court',
+    magistratesCourt: "Lavender Hill Magistrates' Court",
+    referredToCourt: "south West London Magistrates' Court",
     referredToRoom: 5,
     referredToDateTime: '2019-06-04T14:34:54.164Z',
     offenceSequenceNumber: 1,
@@ -25,8 +24,13 @@ describe('ReferredOpenCourtOffeneDecision', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestReferreredOpenourtOffenceDecisionComponent, ReferredToOpenCourtOffenceDecisionComponent, MockFormatDatePipe],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule]
+      declarations: [
+        TestReferreredOpenourtOffenceDecisionComponent,
+        ReferredToOpenCourtOffenceDecisionComponent,
+        MockFormatDatePipe
+      ],
+      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestReferreredOpenourtOffenceDecisionComponent);
   });
@@ -36,7 +40,8 @@ describe('ReferredOpenCourtOffeneDecision', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
     expect(fixture.nativeElement.querySelector('p').textContent).toContain(
-        'Summons issued for hearing before south West London Magistrates\' Court');
+      "Summons issued for hearing before south West London Magistrates' Court"
+    );
   });
 
   @Component({

@@ -6,7 +6,6 @@ import { PdkCoreModule, PdkFormModule } from '@cpp/pdk';
 import { SessionService } from '../../index';
 import { DevtoolsSelectUserPageComponent } from '../select-user.container';
 import { RouterTestingModule } from '@angular/router/testing';
-import { By } from '@angular/platform-browser';
 
 describe('devTools - select user container', () => {
   let fixture: ComponentFixture<DevtoolsSelectUserPageComponent>;
@@ -15,14 +14,13 @@ describe('devTools - select user container', () => {
   let setUserId: jest.Mock;
   let navigate: jest.Mock;
   let selectUserPageComponent: DevtoolsSelectUserPageComponent;
-  let selectUserComponent: any;
 
   beforeEach(() => {
     getUserId = jest.fn(() => 'mockUser');
     setUserId = jest.fn();
     navigate = jest.fn();
 
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [DevtoolsSelectUserPageComponent],
       imports: [FormsModule, PdkCoreModule, PdkFormModule, RouterTestingModule],
       providers: [
@@ -40,12 +38,12 @@ describe('devTools - select user container', () => {
           }
         }
       ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
+      teardown: { destroyAfterEach: false }
     });
     router = TestBed.get(Router);
     fixture = TestBed.createComponent(DevtoolsSelectUserPageComponent);
     selectUserPageComponent = fixture.componentInstance;
-    selectUserComponent = fixture.debugElement.query(By.css('dev-tools-select-user'));
     jest.spyOn(router, 'navigate');
     jest.spyOn(selectUserPageComponent, 'selectUser');
     fixture.detectChanges();

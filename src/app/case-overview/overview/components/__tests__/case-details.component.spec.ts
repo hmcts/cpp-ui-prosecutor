@@ -31,7 +31,8 @@ describe('CaseDetailsComponent', () => {
         FormatDatePipeModule,
         FormatAddressPipeModule,
         ApplicationStatusPipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestCaseDetailsComponent);

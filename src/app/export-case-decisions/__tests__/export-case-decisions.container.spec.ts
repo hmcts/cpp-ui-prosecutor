@@ -22,9 +22,10 @@ describe('ExportCaseDecisionsContainer', () => {
       imports: [
         RouterTestingModule,
         CommonModule,
-        StoreModule.forRoot(reducers, {runtimeChecks: {}}),
+        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
         StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);

@@ -22,7 +22,7 @@ describe('SearchGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         SearchGuard,
         {
@@ -37,7 +37,8 @@ describe('SearchGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(SearchGuard);
@@ -93,7 +94,6 @@ describe('SearchGuard', () => {
 
   it('should reject the activation and redirect when an error occurs during resolution', () => {
     const error$ = cold('---#');
-    const expected$ = cold('---(a|)', { a: false });
 
     getCasesDetails.mockReturnValue(error$);
     navigate.mockReturnValue(Promise.resolve(true));

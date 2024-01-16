@@ -8,14 +8,9 @@
         }}</span>
       </pdk-grid>
       <pdk-grid one-third class="change-link">
-        <a
-          pdk-link
-          unvisited
-          href="javascript:void(0)"
-          (click)="onAdd()"
-          data-role="add-defendant"
-          >{{ 'MANUAL_CASE_SUMMARY.ADD_DEFENDANT' | translate }}</a
-        >
+        <a pdk-link unvisited href="javascript:void(0)" (click)="onAdd()" data-role="add-defendant">{{
+          'MANUAL_CASE_SUMMARY.ADD_DEFENDANT' | translate
+        }}</a>
       </pdk-grid>
     </pdk-grid>
   </div>
@@ -32,14 +27,9 @@
           }}</span>
         </pdk-grid>
         <pdk-grid one-third class="change-link">
-          <a
-            pdk-link
-            unvisited
-            href="javascript:void(0)"
-            (click)="onEdit(i)"
-            data-role="defendant-change-link"
-            >{{ 'MANUAL_CASE_SUMMARY.CHANGE' | translate }}</a
-          >
+          <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit(i)" data-role="defendant-change-link">{{
+            'MANUAL_CASE_SUMMARY.CHANGE' | translate
+          }}</a>
         </pdk-grid>
       </pdk-grid>
 
@@ -61,12 +51,7 @@
                   : defendant?.organisationName
               }}
             </td>
-            <td
-              pdk-table-cell
-              *ngIf="defendants.length > 1"
-              class="remove-link"
-              (click)="onRemove(i)"
-            >
+            <td pdk-table-cell *ngIf="defendants.length > 1" class="remove-link" (click)="onRemove(i)">
               <a pdk-link href="javascript:void(0)">Remove</a>
             </td>
           </tr>
@@ -102,11 +87,7 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DOB' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="defendant-date-of-birth">
-              {{
-                defendant.individual?.selfDefinedInformation?.dateOfBirth
-                  | date: 'd MMMM yyyy'
-                  | dash
-              }}
+              {{ defendant.individual?.selfDefinedInformation?.dateOfBirth | date: 'd MMMM yyyy' | dash }}
             </td>
             <td></td>
           </tr>
@@ -129,10 +110,7 @@
             <td></td>
           </tr>
           <tr
-            *ngIf="
-              isChargeTrialOrSentence() &&
-              defendant?.individual?.selfDefinedInformation?.additionalNationality
-            "
+            *ngIf="isChargeTrialOrSentence() && defendant?.individual?.selfDefinedInformation?.additionalNationality"
             pdk-table-row
             class="table-row"
           >
@@ -140,11 +118,7 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.SECOND_NATIONALITY' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="additional-nationality">
-              {{
-                getNationalityName(
-                  defendant?.individual?.selfDefinedInformation.additionalNationality
-                )
-              }}
+              {{ getNationalityName(defendant?.individual?.selfDefinedInformation.additionalNationality) }}
             </td>
             <td></td>
           </tr>
@@ -162,11 +136,7 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.OBSERVEDETHNICITY' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="observed-ethnicity">
-              {{
-                getObservedEthnicityName(
-                  defendant?.individual?.personalInformation.observedEthnicity
-                )
-              }}
+              {{ getObservedEthnicityName(defendant?.individual?.personalInformation.observedEthnicity) }}
             </td>
             <td></td>
           </tr>
@@ -188,9 +158,7 @@
           </tr>
           <tr *ngIf="!isTrialOrSentence()" pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
-              {{
-                'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate
-              }}
+              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="previous-convictions">
               {{ defendant?.numPreviousConvictions | dash }}
@@ -202,9 +170,7 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="personal-address">
-              <div
-                [innerHTML]="defendant.individual?.personalInformation?.address | address: true"
-              ></div>
+              <div [innerHTML]="defendant.individual?.personalInformation?.address | address: true"></div>
             </td>
             <td></td>
           </tr>
@@ -212,13 +178,7 @@
       </table>
 
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-        <thead
-          pdk-table-head
-          pdk-typography="body-small"
-          class="bold"
-          pdk-margin-bottom="4"
-          pdk-margin-top="4"
-        >
+        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
             'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_CONTACT_DETAILS' | translate
           }}
@@ -244,13 +204,7 @@
       </table>
 
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-        <thead
-          pdk-table-head
-          pdk-typography="body-small"
-          class="bold"
-          pdk-margin-bottom="4"
-          pdk-margin-top="4"
-        >
+        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
             'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_NEEDS' | translate
           }}
@@ -291,13 +245,7 @@
           pdk-margin-bottom="4"
           pdk-margin-top="2"
         >
-          <thead
-            pdk-table-head
-            pdk-typography="body-small"
-            class="bold"
-            pdk-margin-bottom="4"
-            pdk-margin-top="4"
-          >
+          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_DETAILS' | translate
             }}
@@ -307,17 +255,8 @@
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.FULL_NAME' | translate }}
               </th>
-              <td
-                pdk-table-cell
-                class="data"
-                data-role="defendant-full-name"
-                data-role="guardian-full-name"
-              >
-                {{
-                  getPersonFullName(
-                    defendant?.individual?.parentGuardianInformation?.personalInformation
-                  )
-                }}
+              <td pdk-table-cell class="data" data-role="defendant-full-name" data-role="guardian-full-name">
+                {{ getPersonFullName(defendant?.individual?.parentGuardianInformation?.personalInformation) }}
               </td>
             </tr>
             <tr pdk-table-row class="table-row">
@@ -327,8 +266,7 @@
               <td pdk-table-cell class="data" data-role="guardian-address">
                 <div
                   [innerHTML]="
-                    defendant?.individual?.parentGuardianInformation?.personalInformation.address
-                      | address: true
+                    defendant?.individual?.parentGuardianInformation?.personalInformation.address | address: true
                   "
                 ></div>
               </td>
@@ -342,13 +280,7 @@
           pdk-margin-bottom="4"
           pdk-margin-top="2"
         >
-          <thead
-            pdk-table-head
-            pdk-typography="body-small"
-            class="bold"
-            pdk-margin-bottom="4"
-            pdk-margin-top="4"
-          >
+          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_CONTACT_DETAILS' | translate
             }}
@@ -360,8 +292,7 @@
               </th>
               <td pdk-table-cell class="data" data-role="guardian-primary-email">
                 {{
-                  defendant?.individual?.parentGuardianInformation?.personalInformation
-                    ?.contactDetails?.primaryEmail
+                  defendant?.individual?.parentGuardianInformation?.personalInformation?.contactDetails?.primaryEmail
                 }}
               </td>
             </tr>
@@ -370,10 +301,7 @@
                 {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PHONE_NUMBER' | translate }}
               </th>
               <td pdk-table-cell class="data" data-role="guardian-work-number">
-                {{
-                  defendant?.individual?.parentGuardianInformation?.personalInformation
-                    ?.contactDetails?.work | dash
-                }}
+                {{ defendant?.individual?.parentGuardianInformation?.personalInformation?.contactDetails?.work | dash }}
               </td>
             </tr>
           </tbody>
@@ -387,13 +315,7 @@
           pdk-margin-bottom="4"
           pdk-margin-top="2"
         >
-          <thead
-            pdk-table-head
-            pdk-typography="body-small"
-            class="bold"
-            pdk-margin-bottom="4"
-            pdk-margin-top="4"
-          >
+          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_DETAILS' | translate
             }}
@@ -412,11 +334,7 @@
                 {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
               </th>
               <td pdk-table-cell class="data" data-role="guardian-address">
-                <div
-                  [innerHTML]="
-                    defendant?.individual?.parentGuardianInformation?.address | address: true
-                  "
-                ></div>
+                <div [innerHTML]="defendant?.individual?.parentGuardianInformation?.address | address: true"></div>
               </td>
             </tr>
           </tbody>
@@ -427,13 +345,7 @@
           pdk-margin-bottom="4"
           pdk-margin-top="2"
         >
-          <thead
-            pdk-table-head
-            pdk-typography="body-small"
-            class="bold"
-            pdk-margin-bottom="4"
-            pdk-margin-top="4"
-          >
+          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_CONTACT_DETAILS' | translate
             }}
@@ -444,9 +356,7 @@
                 {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PHONE_NUMBER' | translate }}
               </th>
               <td pdk-table-cell class="data" data-role="guardian-organisation-number">
-                {{
-                  defendant?.individual?.parentGuardianInformation?.companyTelephoneNumber | dash
-                }}
+                {{ defendant?.individual?.parentGuardianInformation?.companyTelephoneNumber | dash }}
               </td>
             </tr>
           </tbody>
@@ -458,19 +368,13 @@
       <pdk-grid container>
         <pdk-grid two-thirds>
           <span pdk-typography="heading-medium" class="table-header">{{
-            defendant?.organisationName +
-              ' - ' +
-              ('MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate)
+            defendant?.organisationName + ' - ' + ('MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate)
           }}</span>
         </pdk-grid>
         <pdk-grid one-third class="change-link">
-          <a
-            pdk-link
-            href="javascript:void(0)"
-            (click)="onEdit(i)"
-            data-role="defendant-change-link"
-            >{{ 'MANUAL_CASE_SUMMARY.CHANGE' | translate }}</a
-          >
+          <a pdk-link href="javascript:void(0)" (click)="onEdit(i)" data-role="defendant-change-link">{{
+            'MANUAL_CASE_SUMMARY.CHANGE' | translate
+          }}</a>
         </pdk-grid>
       </pdk-grid>
 
@@ -503,9 +407,7 @@
           </tr>
           <tr *ngIf="isSJP()" pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
-              {{
-                'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate
-              }}
+              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="previous-convictions">
               {{ defendant?.numPreviousConvictions | dash }}
@@ -525,13 +427,7 @@
       </table>
 
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-        <thead
-          pdk-table-head
-          pdk-typography="body-small"
-          class="bold"
-          pdk-margin-bottom="4"
-          pdk-margin-top="4"
-        >
+        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
             'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_CONTACT_DETAILS' | translate
           }}
@@ -557,13 +453,7 @@
       </table>
 
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-        <thead
-          pdk-table-head
-          pdk-typography="body-small"
-          class="bold"
-          pdk-margin-bottom="4"
-          pdk-margin-top="4"
-        >
+        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
             'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_NEEDS' | translate
           }}

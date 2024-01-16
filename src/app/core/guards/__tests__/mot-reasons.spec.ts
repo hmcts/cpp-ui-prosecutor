@@ -21,20 +21,20 @@ describe('Mode of trail reasons Guard', () => {
       id: 'fba9d881-64f3-32d9-909e-e770223212a0',
       seqNum: 10,
       code: '02',
-      description: 'Indictable only (previous convictions / relevant firearms offence)',
+      description: 'Indictable only (previous convictions / relevant firearms offence)'
     },
     {
       id: 'd47268e9-db2e-3aa3-827b-ba3afb7ff94a',
       seqNum: 20,
       code: '05',
-      description: 'Court directs trial by jury',
+      description: 'Court directs trial by jury'
     },
     {
       id: 'f8eb278a-8bce-373e-b365-b45e939da38a',
       seqNum: 30,
       code: '04',
-      description: 'Defendant elects trial by jury',
-    },
+      description: 'Defendant elects trial by jury'
+    }
   ];
 
   beforeEach(() => {
@@ -50,16 +50,16 @@ describe('Mode of trail reasons Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getMotReasons,
-          },
+            getMotReasons
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(MotReasonsGuard);

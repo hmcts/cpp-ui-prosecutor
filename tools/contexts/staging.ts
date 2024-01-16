@@ -1,6 +1,6 @@
 import { request, User } from '@cpp/ui.priming';
 import { CaseData, StagingParam } from '../interfaces';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { FileUploadStatResult } from '../../src/app/contexts/staging-tfl';
 
 const COMMAND_TFL = `/stagingtfl-command-api/command/api/rest`;

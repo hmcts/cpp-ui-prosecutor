@@ -5,9 +5,7 @@ exports[`CaseHeaderBadgeContainer should compile correctly 1`] = `
   $kase={[Function Store]}
   store={[Function Store]}
 >
-  <case-header-badge
-    ng-reflect-kase="[object Object]"
-  >
+  <case-header-badge>
     <div>
       {
     "id": "case-id-test",

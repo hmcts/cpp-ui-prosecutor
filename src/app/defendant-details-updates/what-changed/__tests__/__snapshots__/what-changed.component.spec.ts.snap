@@ -8,14 +8,11 @@ exports[`WhatChangedComponent should show address changed 1`] = `
     class="govuk-list"
     pdk-margin-vertical="2"
   >
-    
-    
     <li
       data-role="address-updated"
     >
        Address details 
     </li>
-    
   </ul>
 </what-changed>
 `;
@@ -28,19 +25,16 @@ exports[`WhatChangedComponent should show all change 1`] = `
     class="govuk-list"
     pdk-margin-vertical="2"
   >
-    
     <li
       data-role="date-of-birth-updated"
     >
        Date of birth 
     </li>
-    
     <li
       data-role="address-updated"
     >
        Address details 
     </li>
-    
     <li
       data-role="name-updated"
     >
@@ -58,14 +52,11 @@ exports[`WhatChangedComponent should show date of birth changed 1`] = `
     class="govuk-list"
     pdk-margin-vertical="2"
   >
-    
     <li
       data-role="date-of-birth-updated"
     >
        Date of birth 
     </li>
-    
-    
   </ul>
 </what-changed>
 `;
@@ -78,9 +69,6 @@ exports[`WhatChangedComponent should show name changed 1`] = `
     class="govuk-list"
     pdk-margin-vertical="2"
   >
-    
-    
-    
     <li
       data-role="name-updated"
     >

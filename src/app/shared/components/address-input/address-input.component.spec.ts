@@ -1,11 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import {
-  ComponentFixture,
-  TestBed,
-  fakeAsync,
-  tick,
-  discardPeriodicTasks,
-} from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick, discardPeriodicTasks } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import {
@@ -16,17 +10,17 @@ import {
   PdkFormModule,
   PdkGridModule,
   PdkInputModule,
-  PdkTextInputModule,
+  PdkTextInputModule
 } from '@cpp/pdk';
 import { AddressInputComponent } from './address-input.component';
 import * as pdkModule from '@cpp/pdk';
 
 describe('Address Input component all fields optional', () => {
-  let fixture: ComponentFixture<TestAddressComponentNoRequiredField>;
+  let fixture: ComponentFixture<TestAddressComponentNoRequiredFieldComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
-      declarations: [TestAddressComponentNoRequiredField, AddressInputComponent],
+    TestBed.configureTestingModule({
+      declarations: [TestAddressComponentNoRequiredFieldComponent, AddressInputComponent],
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -36,10 +30,10 @@ describe('Address Input component all fields optional', () => {
         PdkInputModule,
         PdkCheckboxInputModule,
         PdkGridModule,
-        PdkErrorMessageModule,
-      ],
+        PdkErrorMessageModule
+      ]
     });
-    fixture = TestBed.createComponent(TestAddressComponentNoRequiredField);
+    fixture = TestBed.createComponent(TestAddressComponentNoRequiredFieldComponent);
     fixture.detectChanges();
   });
 
@@ -52,23 +46,18 @@ describe('Address Input component all fields optional', () => {
   selector: 'test-input-address',
   template: `
     <form pdk-form>
-      <input-address
-        name="address"
-        [ngModel]="model"
-        aria-describedby="identifier"
-        [isRequired]="required"
-      >
+      <input-address name="address" [ngModel]="model" aria-describedby="identifier" [isRequired]="required">
       </input-address>
     </form>
-  `,
+  `
 })
-class TestAddressComponentNoRequiredField {
+class TestAddressComponentNoRequiredFieldComponent {
   model: {};
   required = false;
 }
 
 describe('Address Input component with required field(s)', () => {
-  let fixture: ComponentFixture<TestAddressComponentWithRequiredField>;
+  let fixture: ComponentFixture<TestAddressComponentWithRequiredFieldComponent>;
   let form: NgForm;
   let pdkForm: FormComponent;
   let address1Input: DebugElement;
@@ -76,8 +65,8 @@ describe('Address Input component with required field(s)', () => {
   let postcodeInput: DebugElement;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
-      declarations: [TestAddressComponentWithRequiredField, AddressInputComponent],
+    TestBed.configureTestingModule({
+      declarations: [TestAddressComponentWithRequiredFieldComponent, AddressInputComponent],
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -85,11 +74,11 @@ describe('Address Input component with required field(s)', () => {
         PdkFormModule,
         PdkCheckboxInputModule,
         PdkErrorMessageModule,
-        PdkTextInputModule,
-      ],
+        PdkTextInputModule
+      ]
     });
 
-    fixture = TestBed.createComponent(TestAddressComponentWithRequiredField);
+    fixture = TestBed.createComponent(TestAddressComponentWithRequiredFieldComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     pdkForm = fixture.debugElement.children[0].injector.get(FormComponent);
     jest.spyOn(pdkForm, 'addExternalError');
@@ -115,13 +104,13 @@ describe('Address Input component with required field(s)', () => {
 
   const error = {
     addressRequired: {
-      address1: true,
+      address1: true
     },
     postcodeRequired: {
-      postcode: true,
+      postcode: true
     },
     address1SpecialChar: { address1: true },
-    postcodeFormat: { postcode: true },
+    postcodeFormat: { postcode: true }
   };
 
   it('should compile correctly when the control has an external error', () => {
@@ -135,7 +124,7 @@ describe('Address Input component with required field(s)', () => {
     fixture.componentInstance.model = {
       address1: '22DF',
       address2: 'DFAcacia Avenue',
-      postcode: 'DF12 0AA',
+      postcode: 'DF12 0AA'
     };
     fixture.detectChanges();
     tick();
@@ -161,9 +150,7 @@ describe('Address Input component with required field(s)', () => {
     fixture.debugElement.query(By.css('button')).nativeElement.click();
     fixture.detectChanges();
     expect(form.valid).toBe(false);
-    expect(form.control.controls['address'].errors.postcodeRequired).toEqual(
-      error.postcodeRequired
-    );
+    expect(form.control.controls['address'].errors.postcodeRequired).toEqual(error.postcodeRequired);
     expect(form.control.hasError('postcodeRequired', ['address'])).toBe(true);
     expect((pdkForm.addExternalError as jest.Mock).mock.calls[0]).toMatchSnapshot();
   });
@@ -193,9 +180,7 @@ describe('Address Input component with required field(s)', () => {
     fixture.debugElement.query(By.css('button')).nativeElement.click();
     fixture.detectChanges();
     expect(form.valid).toBe(false);
-    expect(form.control.controls['address'].errors.address1SpecialChar).toEqual(
-      error.address1SpecialChar
-    );
+    expect(form.control.controls['address'].errors.address1SpecialChar).toEqual(error.address1SpecialChar);
     expect(form.control.hasError('address1SpecialChar', ['address'])).toBe(true);
     expect((pdkForm.addExternalError as jest.Mock).mock.calls[0]).toMatchSnapshot();
   });
@@ -205,18 +190,12 @@ describe('Address Input component with required field(s)', () => {
   selector: 'test-input-address',
   template: `
     <form pdk-form>
-      <input-address
-        name="address"
-        [ngModel]="model"
-        [validWhenEmpty]="false"
-        [isRequired]="required"
-      >
-      </input-address>
+      <input-address name="address" [ngModel]="model" [validWhenEmpty]="false" [isRequired]="required"> </input-address>
       <button type="submit">Submit</button>
     </form>
-  `,
+  `
 })
-class TestAddressComponentWithRequiredField {
+class TestAddressComponentWithRequiredFieldComponent {
   model: {};
   required = true;
 }

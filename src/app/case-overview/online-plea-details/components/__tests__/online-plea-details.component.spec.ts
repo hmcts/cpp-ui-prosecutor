@@ -1,27 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OnlinePleaDetailsComponent } from '../online-plea-details.component';
 import {
-  FormatAddressPipeModule,
+  AgePipeModule,
   DefendantNamePipeModule,
-  YesNoPipeModule,
+  EmploymentStatusModule,
+  FormatAddressPipeModule,
   IfEmptyPipeModule,
   PleaStatusPipeModule,
-  AgePipeModule,
-  EmploymentStatusModule,
-  SjpCurrencyPipeModule
+  SjpCurrencyPipeModule,
+  YesNoPipeModule
 } from '../../../../shared/pipes';
 import { PdkGridModule } from '@cpp/pdk';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
-import { reducers } from '../../../../reducers';
 import { By } from '@angular/platform-browser';
 import { Component, Pipe, PipeTransform } from '@angular/core';
 import { DateOfBirthComponent } from './../../../../shared/date-of-birth/date-of-birth.component';
 import { transformOnlinePleaToUiModel } from '../../online-plea-utils';
-import { MOCK_CASE, MOCK_CASE_LEGAL_ENTITY_DEFENDANT, MOCK_OFFENCES, MOCK_ONLINE_PLEA_DETAIL } from './../../../__tests__/test-mock-data';
+import {
+  MOCK_CASE,
+  MOCK_CASE_LEGAL_ENTITY_DEFENDANT,
+  MOCK_OFFENCES,
+  MOCK_ONLINE_PLEA_DETAIL
+} from './../../../__tests__/test-mock-data';
 import { MockBreadcrumbLinksComponent } from './../../../../shared/mock-components/mock-breadcrumb-links.component';
 import { Case } from './../../../../contexts/sjp';
-
 
 describe('OnlinePleaComponent', () => {
   let fixture: ComponentFixture<OnlinePleaDetailsComponent>;
@@ -46,7 +48,8 @@ describe('OnlinePleaComponent', () => {
         EmploymentStatusModule,
         PleaStatusPipeModule,
         AgePipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(OnlinePleaDetailsComponent);
   });
@@ -55,7 +58,7 @@ describe('OnlinePleaComponent', () => {
     fixture.componentInstance.onlinePleas = mockOnlinePleas;
     fixture.componentInstance.kase = {
       ...MOCK_CASE,
-      offences: MOCK_OFFENCES[0],
+      offences: MOCK_OFFENCES[0]
     } as Case;
 
     fixture.detectChanges();
@@ -110,4 +113,3 @@ describe('OnlinePleaComponent', () => {
   })
   class MockCaseHeaderBadgeContainer {}
 });
-

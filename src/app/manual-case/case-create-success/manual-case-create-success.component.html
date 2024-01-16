@@ -10,21 +10,14 @@
       <p pdk-typography="body-lead" pdk-margin-bottom="4">
         {{ 'MANUAL_CASE_CREATE.REFERENCE_IS' | translate }}
       </p>
-      <p
-        pdk-typography="heading-xlarge"
-        class="bold"
-        data-role="prosecutor-case-reference"
-        pdk-margin-bottom="5"
-      >
+      <p pdk-typography="heading-xlarge" class="bold" data-role="prosecutor-case-reference" pdk-margin-bottom="5">
         {{ reference.prosecutorCaseReference }}
       </p>
       <ng-container *ngIf="isTypeSjp">
         <p pdk-typography="body" pdk-text-colour="white" pdk-margin-bottom="4">
-          <a
-            href="/sjp/hmcts/case-overview/{{ reference.caseId }}/documents"
-            pdk-typography="body-medium"
-            >{{ 'MANUAL_CASE_CREATE.UPLOAD_DOCUMENTS' | translate }}</a
-          >
+          <a href="/sjp/hmcts/case-overview/{{ reference.caseId }}/documents" pdk-typography="body-medium">{{
+            'MANUAL_CASE_CREATE.UPLOAD_DOCUMENTS' | translate
+          }}</a>
         </p>
         <p pdk-typography="body" pdk-text-colour="white">
           <a href="/sjp/hmcts/case-overview/{{ reference.caseId }}" pdk-typography="body-medium">{{

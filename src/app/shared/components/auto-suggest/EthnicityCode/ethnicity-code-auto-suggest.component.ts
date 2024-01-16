@@ -1,16 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
-import {
-  State,
-  EthnicityCode,
-  getObservedEthnicities,
-  LoadObservedEthnicitiesAction,
-} from '../../../../core';
-import {
-  AutosuggestLiteComponent,
-  coerceBooleanProperty,
-  FormFieldControl,
-  InputWidth,
-} from '@cpp/pdk';
+import { State, EthnicityCode, getObservedEthnicities, LoadObservedEthnicitiesAction } from '../../../../core';
+import { AutosuggestLiteComponent, coerceBooleanProperty, FormFieldControl, InputWidth } from '@cpp/pdk';
 import { Observable, of, Subject } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
@@ -24,16 +14,15 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: EthnicityCodeAutoSuggestComponent,
-      multi: true,
+      multi: true
     },
     {
       provide: FormFieldControl,
-      useExisting: EthnicityCodeAutoSuggestComponent,
-    },
-  ],
+      useExisting: EthnicityCodeAutoSuggestComponent
+    }
+  ]
 })
-export class EthnicityCodeAutoSuggestComponent
-  implements ControlValueAccessor, FormFieldControl, OnInit {
+export class EthnicityCodeAutoSuggestComponent implements ControlValueAccessor, FormFieldControl, OnInit {
   multi = false;
   searchEthnicityCode$ = new Subject<string>();
   suggestions$: Observable<EthnicityCode[]>;
@@ -84,19 +73,19 @@ export class EthnicityCodeAutoSuggestComponent
   constructor(private store: Store<State>) {
     this.fetchEthnicity$ = this.store.pipe(
       select(getObservedEthnicities),
-      filter((ethnicityCodes) => !!ethnicityCodes)
+      filter(ethnicityCodes => !!ethnicityCodes)
     );
 
     this.suggestions$ = this.searchEthnicityCode$.pipe(
-      map((q) => (q || '').toLocaleLowerCase().trim()),
-      switchMap((q) => {
+      map(q => (q || '').toLocaleLowerCase().trim()),
+      switchMap(q => {
         if (q) {
           return this.fetchEthnicity$.pipe(
             take(1),
-            map((ethnicityCodes) =>
+            map(ethnicityCodes =>
               ethnicityCodes
                 .filter(
-                  (ethnicityCode) =>
+                  ethnicityCode =>
                     this.additonalFilterBy(ethnicityCode) &&
                     ethnicityCode.ethnicityDescription.toLowerCase().includes(q)
                 )
@@ -121,12 +110,10 @@ export class EthnicityCodeAutoSuggestComponent
       this.fetchEthnicity$
         .pipe(
           take(1),
-          filter((ethnicityCodes) => ethnicityCodes.length > 0)
+          filter(ethnicityCodes => ethnicityCodes.length > 0)
         )
-        .subscribe((ethnicityCodes) => {
-          const ethnicityCode = ethnicityCodes.find(
-            (ethnicity) => ethnicity[this.suggestionKey] === value
-          );
+        .subscribe(ethnicityCodes => {
+          const ethnicityCode = ethnicityCodes.find(ethnicity => ethnicity[this.suggestionKey] === value);
           this.propagateChange(ethnicityCode);
           this.autoSuggestLiteRef.writeValue(ethnicityCode);
         });

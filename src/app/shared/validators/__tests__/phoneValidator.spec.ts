@@ -6,25 +6,17 @@ import { By } from '@angular/platform-browser';
 import { PhoneValidator } from '../index';
 
 describe('PhoneNumber Validator', () => {
-
-  let fixture: ComponentFixture<TestPhoneValidator>;
+  let fixture: ComponentFixture<TestPhoneValidatorComponent>;
   let form: NgForm;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
-    TestBed.configureTestingModule(
-      {
-        declarations: [
-          TestPhoneValidator,
-          PhoneValidator
-        ],
-        imports: [
-          FormsModule
-        ]
-      }
-    );
+    TestBed.configureTestingModule({
+      declarations: [TestPhoneValidatorComponent, PhoneValidator],
+      imports: [FormsModule]
+    });
 
-    fixture = TestBed.createComponent(TestPhoneValidator);
+    fixture = TestBed.createComponent(TestPhoneValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     ctrlElement = fixture.debugElement.query(By.css('[name=phoneNumber]'));
     fixture.detectChanges();
@@ -69,13 +61,10 @@ describe('PhoneNumber Validator', () => {
   selector: 'test-phone-validation',
   template: `
     <form>
-      <input
-        name="phoneNumber"
-        [ngModel]="model"
-        validatePhone
-      >
+      <input name="phoneNumber" [ngModel]="model" validatePhone />
+    </form>
   `
 })
-class TestPhoneValidator {
+class TestPhoneValidatorComponent {
   model: string;
 }

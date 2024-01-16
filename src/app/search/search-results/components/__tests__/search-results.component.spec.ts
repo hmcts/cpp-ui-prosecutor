@@ -14,7 +14,8 @@ describe('SearchResultsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SearchResultsComponent, TestSearchResultsComponent, MockListSearchComponent],
-      imports: [RouterTestingModule, PdkCoreModule, PdkGridModule, PdkInsetTextModule, SearchInputModule, MockModule]
+      imports: [RouterTestingModule, PdkCoreModule, PdkGridModule, PdkInsetTextModule, SearchInputModule, MockModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestSearchResultsComponent);

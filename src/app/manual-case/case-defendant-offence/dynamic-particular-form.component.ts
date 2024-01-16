@@ -8,7 +8,7 @@ import {
   Output,
   EventEmitter,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ChangeDetectorRef
 } from '@angular/core';
 import { flatten } from 'lodash';
 import { ControlValueAccessor, NgForm, NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -31,22 +31,22 @@ import { FormListOption } from '../../core/model/court-document';
         margin-top: -10px;
         margin-bottom: 15px;
       }
-    `,
+    `
   ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => DynamicParticularFormComponent),
-      multi: true,
-    },
+      multi: true
+    }
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DynamicParticularFormComponent implements ControlValueAccessor, OnChanges {
   @Input() arrestDateValue: string;
   @Input() offenceDateTypes: FormListOption[];
   @Input() offenceWording: string;
-  @Output() onError = new EventEmitter<ValidationError[]>();
+  @Output() formError = new EventEmitter<ValidationError[]>();
   @ViewChild(NgForm) form: NgForm;
   errors: ValidationError[] = [];
   data: OffenceWordingMessage;
@@ -67,7 +67,7 @@ export class DynamicParticularFormComponent implements ControlValueAccessor, OnC
   }
 
   optionSelect(list: Element[]) {
-    const optionControls = flatten(list.map((d) => d.children));
+    const optionControls = flatten(list.map(d => d.children));
 
     optionControls
       .filter((el: Element) => el && el.type === ElementType.Text && el.value)
@@ -77,9 +77,7 @@ export class DynamicParticularFormComponent implements ControlValueAccessor, OnC
   }
 
   onOffenceDateTypeChange(event, index: number) {
-    const dateSection = this.data.sections.find(
-      (section, i) => section.type === 'DATE' && i > index
-    );
+    const dateSection = this.data.sections.find((section, i) => section.type === 'DATE' && i > index);
     if (+event.value !== 4) {
       dateSection.showValueTwoElement = false;
       delete dateSection.valueTwo;
@@ -105,7 +103,7 @@ export class DynamicParticularFormComponent implements ControlValueAccessor, OnC
   registerOnTouched(_: unknown) {}
 
   async triggerFormSubmit() {
-    return new Promise<boolean>((resolve) => {
+    return new Promise<boolean>(resolve => {
       this.form.ngSubmit.emit();
       resolve(this.form.valid);
     });

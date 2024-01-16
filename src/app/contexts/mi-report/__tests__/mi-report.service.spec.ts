@@ -21,7 +21,8 @@ describe('MiReportService', () => {
             query: mockQuery
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     miReportService = TestBed.get(MiReportService);
   });

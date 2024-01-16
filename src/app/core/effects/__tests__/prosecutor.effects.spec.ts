@@ -33,22 +33,22 @@ describe('ProsecutorEffects', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            fetchProsecutors,
-          },
+            fetchProsecutors
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
+            navigate
+          }
         },
         {
           provide: PCFReferenceDataService,
           useValue: {
-            createProsecutor: mockCreateProsecutor,
-          },
-        },
-      ],
+            createProsecutor: mockCreateProsecutor
+          }
+        }
+      ]
     });
     effects = TestBed.get(ProsecutorEffects);
     actions$ = TestBed.get(Actions);
@@ -61,8 +61,8 @@ describe('ProsecutorEffects', () => {
         fullName: 'D limited',
         address: {
           address1: 'address1',
-          postcode: 'postcode',
-        },
+          postcode: 'postcode'
+        }
       } as Prosecutor;
       const prosecutorType = ProsecutorType.APPLICANT;
       const action = createProsecutor({ prosecutor, prosecutorType });
@@ -74,8 +74,8 @@ describe('ProsecutorEffects', () => {
         d: ReferenceDataActions.loadProsecutorsSuccess({ prosecutors: [prosecutor] }),
         e: createProsecutorSuccess({
           prosecutor: { ...prosecutor, standard: false },
-          prosecutorType,
-        }),
+          prosecutorType
+        })
       });
 
       mockCreateProsecutor.mockReturnValue(createResponse$);
@@ -94,8 +94,8 @@ describe('ProsecutorEffects', () => {
         fullName: 'D limited',
         address: {
           address1: 'address1',
-          postcode: 'postcode',
-        },
+          postcode: 'postcode'
+        }
       } as Prosecutor;
       const prosecutorType = ProsecutorType.APPLICANT;
       const action = createProsecutor({ prosecutor, prosecutorType });

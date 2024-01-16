@@ -9,7 +9,7 @@ import { Prosecutor } from '@cpp/reference-data';
 
 @Component({
   selector: 'manual-case-defendant',
-  templateUrl: './manual-case-defendant.component.html',
+  templateUrl: './manual-case-defendant.component.html'
 })
 export class ManualCaseDefendantComponent implements OnInit, OnChanges {
   @Input() manualCaseDetail: ManualCase;
@@ -26,10 +26,7 @@ export class ManualCaseDefendantComponent implements OnInit, OnChanges {
   aliasesReset = false;
   iterateDefendant: boolean;
 
-  constructor(
-    private location: Location,
-    private defendantStateService: ManualCaseDefendantStateService
-  ) {}
+  constructor(private location: Location, private defendantStateService: ManualCaseDefendantStateService) {}
 
   ngOnChanges(): void {
     const defendants = cloneDeep(this.manualCaseDefendants);
@@ -54,9 +51,7 @@ export class ManualCaseDefendantComponent implements OnInit, OnChanges {
   isPoliceProsecutor() {
     const caseProsecutorId =
       this.manualCaseDetail.prosecutor && this.manualCaseDetail.prosecutor.prosecutionAuthorityId;
-    const caseProsecutor = this.prosecutors.find(
-      (prosecutor) => prosecutor.id === caseProsecutorId
-    );
+    const caseProsecutor = this.prosecutors.find(prosecutor => prosecutor.id === caseProsecutorId);
     return caseProsecutor ? caseProsecutor.policeFlag : false;
   }
 
@@ -84,7 +79,7 @@ export class ManualCaseDefendantComponent implements OnInit, OnChanges {
 
     this.submitFormData.emit({
       navigateToNextPage,
-      defendantToStore: formData.defendantToStore,
+      defendantToStore: formData.defendantToStore
     });
   }
 

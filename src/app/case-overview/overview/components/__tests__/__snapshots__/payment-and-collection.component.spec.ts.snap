@@ -4,22 +4,17 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
 <payment-and-collection-test
   caseDecision={[Function Object]}
 >
-  <payment-and-collection
-    ng-reflect-case-decision="[object Object]"
-  >
+  <payment-and-collection>
     <div
       class="govuk-!-margin-left-2"
-      ng-reflect-left="2"
       pdk-margin-left="2"
     >
       <div
         class="govuk-!-margin-bottom-3"
-        ng-reflect-bottom="3"
         pdk-margin-bottom="3"
       >
         <b
           class="govuk-heading-m"
-          ng-reflect-type="heading-medium"
           pdk-typography="heading-medium"
         >
           Payment and collection
@@ -29,24 +24,18 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <b>
               Collection order made
             </b>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Deduct from benefits. 
@@ -55,27 +44,20 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
-            
             <div>
               <b>
                 Application made for benefit deductions 
               </b>
             </div>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Sum to be recovered £100.23. Reason: Compensation ordered 
@@ -84,13 +66,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -99,7 +78,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Outstanding balance to be paid as a Lump sum within 10 days 
@@ -108,13 +86,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -123,7 +98,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 
@@ -139,22 +113,17 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
 <payment-and-collection-test
   caseDecision={[Function Object]}
 >
-  <payment-and-collection
-    ng-reflect-case-decision="[object Object]"
-  >
+  <payment-and-collection>
     <div
       class="govuk-!-margin-left-2"
-      ng-reflect-left="2"
       pdk-margin-left="2"
     >
       <div
         class="govuk-!-margin-bottom-3"
-        ng-reflect-bottom="3"
         pdk-margin-bottom="3"
       >
         <b
           class="govuk-heading-m"
-          ng-reflect-type="heading-medium"
           pdk-typography="heading-medium"
         >
           Payment and collection
@@ -164,24 +133,18 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <b>
               No collection order made
             </b>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Deduct from benefits. 
@@ -190,27 +153,20 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
-            
             <div>
               <b>
                 Application made for benefit deductions 
               </b>
             </div>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Sum to be recovered £100.23. Reason: Compensation ordered 
@@ -219,13 +175,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -234,7 +187,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Instalments of £100.23 to be paid fortnightly starting 10/10/2020 
@@ -243,13 +195,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -258,7 +207,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 
@@ -274,22 +222,17 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
 <payment-and-collection-test
   caseDecision={[Function Object]}
 >
-  <payment-and-collection
-    ng-reflect-case-decision="[object Object]"
-  >
+  <payment-and-collection>
     <div
       class="govuk-!-margin-left-2"
-      ng-reflect-left="2"
       pdk-margin-left="2"
     >
       <div
         class="govuk-!-margin-bottom-3"
-        ng-reflect-bottom="3"
         pdk-margin-bottom="3"
       >
         <b
           class="govuk-heading-m"
-          ng-reflect-type="heading-medium"
           pdk-typography="heading-medium"
         >
           Payment and collection
@@ -299,24 +242,18 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <b>
               Collection order made
             </b>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Deduct from benefits. 
@@ -325,27 +262,20 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
-            
             <div>
               <b>
                 Application made for benefit deductions 
               </b>
             </div>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Sum to be recovered £100.23. Reason: Compensation ordered 
@@ -354,13 +284,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -369,7 +296,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              A lump sum of £100.23 to be paid, followed by instalments of £100.23 paid fortnightly starting on 20 Oct 2010 
@@ -378,13 +304,10 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -393,7 +316,6 @@ exports[`PaymentAndCollectionComponent should compile correctly for payment term
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 
@@ -409,22 +331,17 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
 <payment-and-collection-test
   caseDecision={[Function Object]}
 >
-  <payment-and-collection
-    ng-reflect-case-decision="[object Object]"
-  >
+  <payment-and-collection>
     <div
       class="govuk-!-margin-left-2"
-      ng-reflect-left="2"
       pdk-margin-left="2"
     >
       <div
         class="govuk-!-margin-bottom-3"
-        ng-reflect-bottom="3"
         pdk-margin-bottom="3"
       >
         <b
           class="govuk-heading-m"
-          ng-reflect-type="heading-medium"
           pdk-typography="heading-medium"
         >
           Payment and collection
@@ -434,24 +351,18 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <b>
               Collection order made
             </b>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Attach to earnings. 
@@ -460,18 +371,12 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
-            
-            
             <div>
               <b>
                 Attachment of Earnings Order made for the collection of 
@@ -480,7 +385,6 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23. Reason: Compensation ordered 
@@ -489,13 +393,10 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -504,7 +405,6 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Outstanding balance to be paid as a Lump sum within 10 days 
@@ -513,13 +413,10 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -528,7 +425,6 @@ exports[`PaymentAndCollectionComponent should compile correctly with attach to e
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 
@@ -544,22 +440,17 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
 <payment-and-collection-test
   caseDecision={[Function Object]}
 >
-  <payment-and-collection
-    ng-reflect-case-decision="[object Object]"
-  >
+  <payment-and-collection>
     <div
       class="govuk-!-margin-left-2"
-      ng-reflect-left="2"
       pdk-margin-left="2"
     >
       <div
         class="govuk-!-margin-bottom-3"
-        ng-reflect-bottom="3"
         pdk-margin-bottom="3"
       >
         <b
           class="govuk-heading-m"
-          ng-reflect-type="heading-medium"
           pdk-typography="heading-medium"
         >
           Payment and collection
@@ -569,24 +460,18 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <b>
               Collection order made
             </b>
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              Pay to court. 
@@ -595,27 +480,20 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
-            
             <div>
               <b>
                 Reason no deduction or attachment made
               </b>
             </div>
-            
-            
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              some reason 
@@ -624,13 +502,10 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -639,7 +514,6 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 To be paid as a lump sum within 10 days 
@@ -648,13 +522,10 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
         <pdk-grid
           class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
-          ng-reflect-container=""
-          ng-reflect-vertical="1"
           pdk-padding-vertical="1"
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <b>
@@ -663,7 +534,6 @@ exports[`PaymentAndCollectionComponent should compile correctly with pay to cour
           </pdk-grid>
           <pdk-grid
             class="govuk-grid-column-two-thirds"
-            ng-reflect-two-thirds=""
             two-thirds=""
           >
              £100.23 

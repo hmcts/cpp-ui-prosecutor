@@ -18,7 +18,8 @@ describe('Case note component', () => {
         PdkGridModule,
         FormatDatePipeModule,
         FirstLastNamePipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(CaseNotesComponent);
   });

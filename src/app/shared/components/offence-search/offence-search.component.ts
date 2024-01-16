@@ -1,12 +1,4 @@
-import {
-  Component,
-  forwardRef,
-  Injector,
-  Input,
-  ViewChild,
-  ChangeDetectorRef,
-  OnInit,
-} from '@angular/core';
+import { Component, forwardRef, Injector, Input, ViewChild, ChangeDetectorRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, NgForm } from '@angular/forms';
 import { filter, map, switchMap, throttleTime, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -37,14 +29,14 @@ interface OffenceTypeAutoSuggestion {
   providers: [
     {
       provide: FormFieldControl,
-      useExisting: forwardRef(() => OffenceSearchComponent),
+      useExisting: forwardRef(() => OffenceSearchComponent)
     },
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => OffenceSearchComponent),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class OffenceSearchComponent implements ControlValueAccessor, FormFieldControl, OnInit {
   @Input() id = generateId();
@@ -94,13 +86,11 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
   ) {
     this.input$
       .pipe(
-        tap((text) => (this.inputValue = text)),
-        filter((text) => text.length > 2),
+        tap(text => (this.inputValue = text)),
+        filter(text => text.length > 2),
         throttleTime(250),
-        switchMap((text) =>
-          referenceDataOffenceService.searchOffenceTypes(text, 10, this.offenceDate)
-        ),
-        tap((offences) => {
+        switchMap(text => referenceDataOffenceService.searchOffenceTypes(text, 10, this.offenceDate)),
+        tap(offences => {
           if (!offences || offences.length === 0) {
             this.noResult = true;
             return;
@@ -112,11 +102,11 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
         // case of this component, where the selected offence is profiled in a separate
         // component, so we instead make an empty label available to the TypeaheadMatch
         // so as to clear the input upon selection
-        map((offences) =>
-          offences.map((offence) => ({
+        map(offences =>
+          offences.map(offence => ({
             label: '',
             id: offence.offenceId,
-            offence,
+            offence
           }))
         )
       )
@@ -131,12 +121,10 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
   ngOnInit() {
     setTimeout(() => {
       if (this.selectedOffenceCode) {
-        this.referenceDataOffenceService
-          .searchOffenceTypes(this.selectedOffenceCode, 10, '')
-          .subscribe((x) => {
-            this.selected = x[0];
-            this.propagateChange(this.selected);
-          });
+        this.referenceDataOffenceService.searchOffenceTypes(this.selectedOffenceCode, 10, '').subscribe(x => {
+          this.selected = x[0];
+          this.propagateChange(this.selected);
+        });
       }
     });
   }

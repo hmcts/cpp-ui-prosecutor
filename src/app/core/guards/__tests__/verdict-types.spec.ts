@@ -26,7 +26,7 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'CROWN',
       verdictCode: 'N',
       jurySplitAvailable: 'No',
-      cjsVerdictCode: 'N',
+      cjsVerdictCode: 'N'
     },
     {
       id: 'dfd71ee7-039d-3d93-ae37-98ef38aec6e4',
@@ -37,7 +37,7 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'CROWN',
       verdictCode: 'G',
       jurySplitAvailable: 'Yes',
-      cjsVerdictCode: 'G',
+      cjsVerdictCode: 'G'
     },
     {
       id: '898382ec-9f37-3b87-ba16-9aeb49b8c075',
@@ -48,7 +48,7 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'MAGISTRATES',
       verdictCode: 'NGNE',
       jurySplitAvailable: 'No',
-      cjsVerdictCode: 'N',
+      cjsVerdictCode: 'N'
     },
     {
       id: '8f14e45f-ceea-367a-9a36-dedd4bea2543',
@@ -59,7 +59,7 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'CROWN',
       verdictCode: 'NGLOC',
       jurySplitAvailable: 'Yes',
-      cjsVerdictCode: 'A',
+      cjsVerdictCode: 'A'
     },
     {
       id: 'c4ca4238-a0b9-3382-8dcc-509a6f75849b',
@@ -70,7 +70,7 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'MAGISTRATES',
       verdictCode: 'G',
       jurySplitAvailable: 'No',
-      cjsVerdictCode: 'G',
+      cjsVerdictCode: 'G'
     },
     {
       id: 'c81e728d-9d4c-3f63-af06-7f89cc14862c',
@@ -81,8 +81,8 @@ describe('Verdict types Guard', () => {
       jurisdiction: 'MAGISTRATES',
       verdictCode: 'N',
       jurySplitAvailable: 'No',
-      cjsVerdictCode: 'N',
-    },
+      cjsVerdictCode: 'N'
+    }
   ];
 
   beforeEach(() => {
@@ -98,16 +98,16 @@ describe('Verdict types Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getVerdictTypes,
-          },
+            getVerdictTypes
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(VerdictTypesGuard);
@@ -164,9 +164,7 @@ describe('Verdict types Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getVerdictTypes).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadVerdictTypesSuccess(verdictTypes)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadVerdictTypesSuccess(verdictTypes));
         });
       });
     });

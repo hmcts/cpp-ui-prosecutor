@@ -7,11 +7,8 @@ exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
   store={[Function MockStore]}
   userGroups$={[Function Store]}
 >
-  <online-plea-details
-    ng-reflect-online-pleas="[object Object]"
-  >
+  <online-plea-details>
     <div>
-      
     </div>
     <div>
       [

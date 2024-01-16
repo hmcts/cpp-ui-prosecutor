@@ -2,17 +2,14 @@
 
 exports[`DefendantDetailsUpdatesComponent when the component is loaded with less than 50 updates should display defendant details updates with no limit message 1`] = `
 <defendant-details-updates
-  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter]}
+  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter_]}
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
   form={[Function NgForm]}
-  setRegion={[Function EventEmitter]}
-  viewCase={[Function EventEmitter]}
+  setRegion={[Function EventEmitter_]}
+  viewCase={[Function EventEmitter_]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-show-title="true"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><pdk-inset-text>
     <div
@@ -23,25 +20,17 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
       >
         2
       </span>
-        
-      <span
-        ng-reflect-ng-plural="2"
-      >
-        
-        
+      <span>
         cases have
       </span>
        updates 
-      
     </div>
   </pdk-inset-text><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-one-half"
-      ng-reflect-one-half=""
       one-half=""
     >
       <form
@@ -51,29 +40,24 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
       >
         <label
           class="govuk-label"
-          ng-reflect-type=""
           pdk-label=""
         >
           Filter by region
         </label>
         <div
-          style="display: inline-flex"
+          style="display: inline-flex;"
         >
           <pdk-select
             class="ng-untouched ng-pristine ng-valid"
             name="selectedRegion"
-            ng-reflect-name="selectedRegion"
-            ng-reflect-required=""
             required=""
           >
             <select
               class="govuk-select"
-              id="pdk-select-1"
+              id="pdk-select-GENERATED_ID"
               name="selectedRegion"
               required=""
             >
-              
-              
             </select>
           </pdk-select>
           <pdk-form-group
@@ -81,7 +65,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           >
             <button
               class="govuk-button"
-              ng-reflect-type=""
               pdk-button=""
               pdk-margin-left="2"
               type="submit"
@@ -142,7 +125,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
     <tbody
       pdk-table-body=""
     >
-      
       <tr
         pdk-table-row=""
       >
@@ -180,9 +162,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         <td
           pdk-table-cell=""
         >
-          <what-changed
-            ng-reflect-defendant-details-update="[object Object]"
-          >
+          <what-changed>
             <span>
               {
     "firstName": "John",
@@ -199,7 +179,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
   }
             </span>
             <span>
-              
             </span>
           </what-changed>
         </td>
@@ -258,9 +237,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         <td
           pdk-table-cell=""
         >
-          <what-changed
-            ng-reflect-defendant-details-update="[object Object]"
-          >
+          <what-changed>
             <span>
               {
     "firstName": "Bob",
@@ -277,7 +254,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
   }
             </span>
             <span>
-              
             </span>
           </what-changed>
         </td>
@@ -303,8 +279,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
   </table><button
     class="govuk-button"
     id="back-button"
-    ng-reflect-router-link="/"
-    ng-reflect-type=""
     pdk-button=""
     routerlink="/"
     tabindex="0"
@@ -316,17 +290,14 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
 
 exports[`DefendantDetailsUpdatesComponent when the component is loaded with more than 50 updates should display defendant details updates with limit message 1`] = `
 <defendant-details-updates
-  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter]}
+  acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter_]}
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
   form={[Function NgForm]}
-  setRegion={[Function EventEmitter]}
-  viewCase={[Function EventEmitter]}
+  setRegion={[Function EventEmitter_]}
+  viewCase={[Function EventEmitter_]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-show-title="true"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><pdk-inset-text>
     <div
@@ -337,16 +308,10 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
       >
         51
       </span>
-        
-      <span
-        ng-reflect-ng-plural="51"
-      >
-        
-        
+      <span>
         cases have
       </span>
        updates 
-      
       <span>
         (first 50 shown below)
       </span>
@@ -354,11 +319,9 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   </pdk-inset-text><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-one-half"
-      ng-reflect-one-half=""
       one-half=""
     >
       <form
@@ -368,29 +331,24 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
       >
         <label
           class="govuk-label"
-          ng-reflect-type=""
           pdk-label=""
         >
           Filter by region
         </label>
         <div
-          style="display: inline-flex"
+          style="display: inline-flex;"
         >
           <pdk-select
             class="ng-untouched ng-pristine ng-valid"
             name="selectedRegion"
-            ng-reflect-name="selectedRegion"
-            ng-reflect-required=""
             required=""
           >
             <select
               class="govuk-select"
-              id="pdk-select-2"
+              id="pdk-select-GENERATED_ID"
               name="selectedRegion"
               required=""
             >
-              
-              
             </select>
           </pdk-select>
           <pdk-form-group
@@ -398,7 +356,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           >
             <button
               class="govuk-button"
-              ng-reflect-type=""
               pdk-button=""
               pdk-margin-left="2"
               type="submit"
@@ -459,7 +416,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
     <tbody
       pdk-table-body=""
     >
-      
       <tr
         pdk-table-row=""
       >
@@ -497,9 +453,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         <td
           pdk-table-cell=""
         >
-          <what-changed
-            ng-reflect-defendant-details-update="[object Object]"
-          >
+          <what-changed>
             <span>
               {
     "firstName": "John",
@@ -516,7 +470,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   }
             </span>
             <span>
-              
             </span>
           </what-changed>
         </td>
@@ -575,9 +528,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         <td
           pdk-table-cell=""
         >
-          <what-changed
-            ng-reflect-defendant-details-update="[object Object]"
-          >
+          <what-changed>
             <span>
               {
     "firstName": "Bob",
@@ -594,7 +545,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   }
             </span>
             <span>
-              
             </span>
           </what-changed>
         </td>
@@ -620,8 +570,6 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   </table><button
     class="govuk-button"
     id="back-button"
-    ng-reflect-router-link="/"
-    ng-reflect-type=""
     pdk-button=""
     routerlink="/"
     tabindex="0"

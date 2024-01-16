@@ -4,12 +4,9 @@ exports[`DocumentListComponent should compile correctly 1`] = `
 <document-list-test
   documents={[Function Array]}
 >
-  <document-list
-    ng-reflect-documents="[object Object],[object Object"
-  >
+  <document-list>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Documents
@@ -17,16 +14,13 @@ exports[`DocumentListComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -36,14 +30,9 @@ exports[`DocumentListComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
-        
-        <download-document
-          ng-reflect-document="[object Object]"
-        >
+        <download-document>
            {
     "id": "documentId1",
     "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
@@ -55,10 +44,7 @@ exports[`DocumentListComponent should compile correctly 1`] = `
     }
   }  
         </download-document>
-        
-        <download-document
-          ng-reflect-document="[object Object]"
-        >
+        <download-document>
            {
     "id": "documentId2",
     "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
@@ -70,10 +56,7 @@ exports[`DocumentListComponent should compile correctly 1`] = `
     }
   }  
         </download-document>
-        
-        <download-document
-          ng-reflect-document="[object Object]"
-        >
+        <download-document>
            {
     "id": "documentId3",
     "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",

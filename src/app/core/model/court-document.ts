@@ -74,7 +74,7 @@ export enum DocumentLevelType {
   applications = 'applications',
   case = 'caselevel',
   defendant = 'defendantlevel',
-  nows = 'nowdocuments',
+  nows = 'nowdocuments'
 }
 
 export interface DocumentFormValues {

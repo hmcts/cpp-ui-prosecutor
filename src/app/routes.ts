@@ -10,7 +10,7 @@ import { ProsecutorByCodeGuard } from './shared/guards/prosecutorByCode.guard';
 export const routes: Routes = [
   {
     path: '',
-     canActivate: [UserPermissionsGuard],
+    canActivate: [UserPermissionsGuard],
     data: {
       serviceUnavailableRedirectTo: `/${ERROR_ROUTE_PATHS.serviceUnavailable}`
     },
@@ -19,11 +19,16 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         redirectTo: 'user'
-       },
+      },
       {
         path: 'user',
-        loadChildren: './dashboard/dashboard.module#DashboardModule',
-        canActivate: [PleadedNotGuiltyDataGuard, DefendantDetailsUpdatesLinkDataGuard, SjpNoticeCasesDataGuard, ProsecutorByCodeGuard]
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+        canActivate: [
+          PleadedNotGuiltyDataGuard,
+          DefendantDetailsUpdatesLinkDataGuard,
+          SjpNoticeCasesDataGuard,
+          ProsecutorByCodeGuard
+        ]
       },
       {
         path: 'tfl',
@@ -32,42 +37,57 @@ export const routes: Routes = [
       },
       {
         path: ':role/case-overview/:caseId',
-        loadChildren: './case-overview/case-overview.module#CaseOverviewModule',
+        loadChildren: () => import('./case-overview/case-overview.module').then(m => m.CaseOverviewModule),
         canActivate: [CaseDataGuard, CaseNotesGuard]
       },
       {
         path: ':role/review-not-guilty-pleas',
-        loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
+        loadChildren: () =>
+          import('./review-not-guilty-pleas/review-not-guilty-pleas.module').then(m => m.ReviewNotGuiltyPleasModule),
         canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard]
       },
       {
         path: ':role/review-not-guilty-pleas/:regionFilter',
-        loadChildren: './review-not-guilty-pleas/review-not-guilty-pleas.module#ReviewNotGuiltyPleasModule',
-       canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard]
+        loadChildren: () =>
+          import('./review-not-guilty-pleas/review-not-guilty-pleas.module').then(m => m.ReviewNotGuiltyPleasModule),
+        canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard]
       },
       {
         path: 'user/cases-missing-sjp-notices',
-        loadChildren: './cases-missing-sjp-notices/cases-missing-sjp-notices.module#CasesMissingSjpNoticesModule'
+        loadChildren: () =>
+          import('./cases-missing-sjp-notices/cases-missing-sjp-notices.module').then(
+            m => m.CasesMissingSjpNoticesModule
+          )
       },
       {
         path: ':role/export-case-decisions',
-        loadChildren: './export-case-decisions/export-case-decisions.module#ExportCaseDecisionsModule'
+        loadChildren: () =>
+          import('./export-case-decisions/export-case-decisions.module').then(m => m.ExportCaseDecisionsModule)
       },
       {
         path: ':role/defendant-details-updates',
-        loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
+        loadChildren: () =>
+          import('./defendant-details-updates/defendant-details-updates.module').then(
+            m => m.DefendantDetailsUpdatesModule
+          ),
         canActivate: [RegionsGuard]
       },
       {
         path: ':role/defendant-details-updates/:regionFilter',
-        loadChildren: './defendant-details-updates/defendant-details-updates.module#DefendantDetailsUpdatesModule',
+        loadChildren: () =>
+          import('./defendant-details-updates/defendant-details-updates.module').then(
+            m => m.DefendantDetailsUpdatesModule
+          ),
         canActivate: [RegionsGuard]
       },
-      { path: 'accessibility', loadChildren: './shared/accessibility/accessibility.module#AccessibilityModule' },
+      {
+        path: 'accessibility',
+        loadChildren: () => import('./shared/accessibility/accessibility.module').then(m => m.AccessibilityModule)
+      },
       {
         path: 'manual-case',
-        loadChildren: './manual-case/manual-case.module#ManualCaseModule'
-      },
+        loadChildren: () => import('./manual-case/manual-case.module').then(m => m.ManualCaseModule)
+      }
     ]
   },
   ...ERROR_PAGES_ROUTES

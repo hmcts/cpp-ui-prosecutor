@@ -1,7 +1,7 @@
 import { error, info } from '@cpp/ui.priming';
 import { createReadStream, createWriteStream, ReadStream, unlink } from 'fs';
 import { join } from 'path';
-import * as archiver from 'archiver';
+import archiver from 'archiver';
 
 export const getFixture = (filename: string): ReadStream => {
   return createReadStream(join(__dirname, '../fixtures', filename));

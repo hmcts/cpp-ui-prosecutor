@@ -75,5 +75,5 @@ export enum ElementType {
   List = 'LIST',
   Date = 'DATE',
   Radio = 'RADIO',
-  Dropdown = 'DROPDOWN',
+  Dropdown = 'DROPDOWN'
 }

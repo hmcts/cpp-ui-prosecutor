@@ -1,5 +1,5 @@
 import { join } from 'path';
-import * as moment from 'moment';
+import moment from 'moment';
 import { stringFormat } from '../utils';
 import { writeFileSync } from 'fs';
 import { StagingParam } from '../interfaces';

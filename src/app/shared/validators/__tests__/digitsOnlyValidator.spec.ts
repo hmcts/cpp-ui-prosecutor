@@ -18,7 +18,7 @@ describe('DigitsOnlyValidator', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [DigitsOnlyValidator, TestDigitsOnlyComponent],
-      imports: [FormsModule],
+      imports: [FormsModule]
     });
     fixture = TestBed.createComponent(TestDigitsOnlyComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
@@ -97,9 +97,11 @@ describe('DigitsOnlyValidator', () => {
 
 @Component({
   selector: 'test-digits-only-validation',
-  template: ` <form>
-    <input name="digitsOnly" type="text" [ngModel]="model" validateDigitsOnly />
-  </form>`,
+  template: `
+    <form>
+      <input name="digitsOnly" type="text" [ngModel]="model" validateDigitsOnly />
+    </form>
+  `
 })
 class TestDigitsOnlyComponent {
   model: string;

@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 
 export const subtractDays = (days: number) => {
   return moment(moment().subtract(days, 'days')).format('YYYY-MM-DD');

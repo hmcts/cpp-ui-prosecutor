@@ -4,39 +4,30 @@ exports[`StatementOfFactsComponent should compile correctly 1`] = `
 <statement-of-facts-test
   statement={[Function String]}
 >
-  <statement-of-facts
-    ng-reflect-statement-of-facts="statement of facts"
-  >
+  <statement-of-facts>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Statement of facts
     </h4>
     <div
       class="govuk-!-margin-bottom-8"
-      ng-reflect-bottom="8"
       pdk-margin-bottom="8"
     >
       <pdk-foldable-text
-        _nghost-a-c0=""
         class="govuk-body-m"
-        ng-reflect-type="body-medium"
         pdk-typography="body-medium"
       >
         <div
-          _ngcontent-a-c0=""
           class="pdk-foldable"
         >
           <span
-            _ngcontent-a-c0=""
             class="pdk-foldable__content"
-            id="pdk-foldable-text-1"
+            id="pdk-foldable-text-GENERATED_ID"
           >
              statement of facts 
           </span>
-          
         </div>
       </pdk-foldable-text>
     </div>

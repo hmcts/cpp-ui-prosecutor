@@ -24,17 +24,18 @@ import { OverviewContainer } from './overview/overview.container';
       },
       {
         path: 'withdraw-offence',
-        loadChildren: './withdraw-offence/withdraw-offence.module#WithdrawOffenceModule',
-        data: { title: 'Manage offence withdrawals | Common platform'}
+        loadChildren: () => import('./withdraw-offence/withdraw-offence.module').then(m => m.WithdrawOffenceModule),
+        data: { title: 'Manage offence withdrawals | Common platform' }
       },
       {
         path: 'dates-to-avoid',
-        loadChildren: './dates-to-avoid/dates-to-avoid.module#DatesToAvoidModule',
-        data: {title: 'Dates to avoid | Common platform'}
+        loadChildren: () => import('./dates-to-avoid/dates-to-avoid.module').then(m => m.DatesToAvoidModule),
+        data: { title: 'Dates to avoid | Common platform' }
       },
       {
         path: 'online-plea-details',
-        loadChildren: './online-plea-details/online-plea-details.module#OnlinePleaDetailsModule',
+        loadChildren: () =>
+          import('./online-plea-details/online-plea-details.module').then(m => m.OnlinePleaDetailsModule),
         data: { title: 'Online plea | Common platform' }
       }
     ])

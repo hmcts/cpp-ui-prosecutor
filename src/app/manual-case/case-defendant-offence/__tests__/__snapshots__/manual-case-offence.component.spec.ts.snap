@@ -4,7 +4,7 @@ exports[`Manual Case Offence Component should compile correctly and render the p
 <manual-case-offence
   alcoholLevelMethodOptions={[Function Array]}
   alcoholLevelMethods={[Function Array]}
-  changeDetector={[Function ViewRef_]}
+  changeDetector={[Function ViewRef$1]}
   counter="undefined"
   defendantOptions={[Function Array]}
   dynamicForm={[Function DynamicParticularFormComponent]}
@@ -22,22 +22,18 @@ exports[`Manual Case Offence Component should compile correctly and render the p
   selectAll={[Function Boolean]}
   selectedDefendantIds={[Function Array]}
   submitAction=""
-  submitFormData={[Function EventEmitter]}
+  submitFormData={[Function EventEmitter_]}
 >
   <pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
-      
       <h1
         class="govuk-heading-xl"
-        ng-reflect-type="heading-xlarge"
         pdk-typography="heading-xlarge"
       >
          MANUAL_CASE_OFFENCE.TITLE 
@@ -46,17 +42,13 @@ exports[`Manual Case Offence Component should compile correctly and render the p
   </pdk-grid><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
       <h2
         class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-heading-m"
-        ng-reflect-type="heading-medium"
-        ng-reflect-vertical="3"
         pdk-margin-vertical="3"
         pdk-typography="heading-medium"
       >
@@ -66,12 +58,10 @@ exports[`Manual Case Offence Component should compile correctly and render the p
   </pdk-grid><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
       <form
         class="ng-untouched ng-pristine ng-valid"
@@ -80,189 +70,122 @@ exports[`Manual Case Offence Component should compile correctly and render the p
       >
         <pdk-form-field
           labeltype="small"
-          ng-reflect-hint-text="CASE_DETAILS.OFFENCE.HISTORICA"
-          ng-reflect-label="CASE_DETAILS.OFFENCE.HISTORICA"
-          ng-reflect-label-type="small"
           style="width: 50%;"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend govuk-fieldset__legend--s"
-                ng-reflect-hidden="false"
-                ng-reflect-type="small"
               >
                  CASE_DETAILS.OFFENCE.HISTORICAL_OFFENCES_ONLY 
               </legend>
-              
-              
               <pdk-hint
                 class="govuk-hint"
               >
-                
-                
-                
-                 CASE_DETAILS.OFFENCE.HISTORICAL_DATE_HINT 
-                
+                <div>
+                   CASE_DETAILS.OFFENCE.HISTORICAL_DATE_HINT 
+                </div>
               </pdk-hint>
-              
               <pdk-date-input
-                _nghost-a-c1=""
                 class="ng-untouched ng-pristine ng-valid"
                 name="offenceSearchDate"
-                ng-reflect-name="offenceSearchDate"
               >
                 <div
-                  _ngcontent-a-c1=""
                   class="pdk-date-input"
                 >
                   <div
-                    _ngcontent-a-c1=""
                     class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
                   >
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-day"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-day"
                         pdk-label=""
                       >
                          Day 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-date-input-2-day"
+                        id="pdk-date-input-GENERATED_ID-day"
                         name="dateDay"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="day"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-month"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-month"
                         pdk-label=""
                       >
                          Month 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-date-input-2-month"
+                        id="pdk-date-input-GENERATED_ID-month"
                         name="dateMonth"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="month"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-year"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-year"
                         pdk-label=""
                       >
                          Year 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-date-input-2-year"
+                        id="pdk-date-input-GENERATED_ID-year"
                         name="dateYear"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="year"
-                        ng-reflect-required=""
-                        ng-reflect-width="4"
                         required=""
                         type="number"
                       />
                     </div>
                   </div>
-                  
                 </div>
               </pdk-date-input>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object]"
-          ng-reflect-label="CASE_DETAILS.OFFENCE.ENTER_OFF"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
-            
-            
-            
             <label
               class="govuk-label govuk-label--s"
-              for="pdk-form-control-3"
-              ng-reflect-hidden="false"
-              ng-reflect-type="small"
+              for="pdk-form-control-undefined-GENERATED_ID"
             >
                CASE_DETAILS.OFFENCE.ENTER_OFFENCE_CODE 
             </label>
-            
-            
-            
             <offence-search
               class="ng-untouched ng-pristine ng-valid"
               name="offenceCode"
-              ng-reflect-model=""
-              ng-reflect-name="offenceCode"
-              ng-reflect-required="false"
               ngmodel=""
             />
-            
-            
           </pdk-form-group>
         </pdk-form-field>
-        
-        
         <pdk-inset-text>
           <div
             class="govuk-inset-text"
@@ -270,7 +193,6 @@ exports[`Manual Case Offence Component should compile correctly and render the p
             <p>
               <span
                 class="pdk-!-text-color-dark-grey govuk-body-m"
-                ng-reflect-type="body"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body"
               >
@@ -280,20 +202,16 @@ exports[`Manual Case Offence Component should compile correctly and render the p
             <p>
               <span
                 class="bold govuk-body-m"
-                ng-reflect-type="body-medium"
                 pdk-typography="body-medium"
               >
-                
               </span>
             </p>
             <p>
               <span
                 class="pdk-!-text-color-dark-grey govuk-body-m"
-                ng-reflect-type="body"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body"
               >
-                  
               </span>
             </p>
           </div>
@@ -301,22 +219,11 @@ exports[`Manual Case Offence Component should compile correctly and render the p
         <dynamic-particular-form
           class="ng-untouched ng-pristine ng-valid"
           name="dynamicParticularFormData"
-          ng-reflect-name="dynamicParticularFormData"
-          ng-reflect-offence-date-types="[object Object],[object Object"
-          ng-reflect-offence-wording="Caught Driving On Phone"
         >
-          
-          
         </dynamic-particular-form>
-        
-        
-        
-        
         <button
           class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
           data-role="add"
-          ng-reflect-bottom="3"
-          ng-reflect-top="3"
           pdk-button="secondary"
           pdk-margin-bottom="3"
           pdk-margin-top="3"
@@ -337,13 +244,11 @@ exports[`Manual Case Offence Component should compile correctly and render the p
         </pdk-form-group>
         <p
           class="govuk-!-margin-top-3"
-          ng-reflect-top="3"
           pdk-margin-top="3"
         >
           <a
             class="govuk-link govuk-link--no-visited-state"
             href="javascript:void(0)"
-            ng-reflect-unvisited=""
             pdk-link=""
             unvisited=""
           >
@@ -360,7 +265,7 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
 <manual-case-offence
   alcoholLevelMethodOptions={[Function Array]}
   alcoholLevelMethods={[Function Array]}
-  changeDetector={[Function ViewRef_]}
+  changeDetector={[Function ViewRef$1]}
   counter="undefined"
   defendantOptions={[Function Array]}
   dynamicForm={[Function DynamicParticularFormComponent]}
@@ -378,22 +283,18 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
   selectAll={[Function Boolean]}
   selectedDefendantIds={[Function Array]}
   submitAction=""
-  submitFormData={[Function EventEmitter]}
+  submitFormData={[Function EventEmitter_]}
 >
   <pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
-      
       <h1
         class="govuk-heading-xl"
-        ng-reflect-type="heading-xlarge"
         pdk-typography="heading-xlarge"
       >
          MANUAL_CASE_OFFENCE.TITLE 
@@ -402,17 +303,13 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
   </pdk-grid><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
       <h2
         class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-heading-m"
-        ng-reflect-type="heading-medium"
-        ng-reflect-vertical="3"
         pdk-margin-vertical="3"
         pdk-typography="heading-medium"
       >
@@ -422,12 +319,10 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
   </pdk-grid><pdk-grid
     class="govuk-grid-row"
     container=""
-    ng-reflect-container=""
   >
     <pdk-grid
       class="govuk-grid-column-full"
       full=""
-      ng-reflect-full=""
     >
       <form
         class="ng-untouched ng-valid ng-dirty"
@@ -436,190 +331,122 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
       >
         <pdk-form-field
           labeltype="small"
-          ng-reflect-hint-text="CASE_DETAILS.OFFENCE.HISTORICA"
-          ng-reflect-label="CASE_DETAILS.OFFENCE.HISTORICA"
-          ng-reflect-label-type="small"
           style="width: 50%;"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend govuk-fieldset__legend--s"
-                ng-reflect-hidden="false"
-                ng-reflect-type="small"
               >
                  CASE_DETAILS.OFFENCE.HISTORICAL_OFFENCES_ONLY 
               </legend>
-              
-              
               <pdk-hint
                 class="govuk-hint"
               >
-                
-                
-                
-                 CASE_DETAILS.OFFENCE.HISTORICAL_DATE_HINT 
-                
+                <div>
+                   CASE_DETAILS.OFFENCE.HISTORICAL_DATE_HINT 
+                </div>
               </pdk-hint>
-              
               <pdk-date-input
-                _nghost-a-c15=""
-                class="ng-untouched ng-valid ng-dirty"
+                class="ng-untouched ng-pristine ng-valid"
                 name="offenceSearchDate"
-                ng-reflect-model=""
-                ng-reflect-name="offenceSearchDate"
               >
                 <div
-                  _ngcontent-a-c15=""
                   class="pdk-date-input"
                 >
                   <div
-                    _ngcontent-a-c15=""
                     class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
                   >
                     <div
-                      _ngcontent-a-c15=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c15=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-5-day"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-day"
                         pdk-label=""
                       >
                          Day 
                       </label>
                       <input
-                        _ngcontent-a-c15=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-date-input-5-day"
+                        id="pdk-date-input-GENERATED_ID-day"
                         name="dateDay"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="day"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c15=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c15=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-5-month"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-month"
                         pdk-label=""
                       >
                          Month 
                       </label>
                       <input
-                        _ngcontent-a-c15=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-date-input-5-month"
+                        id="pdk-date-input-GENERATED_ID-month"
                         name="dateMonth"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="month"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c15=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c15=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-5-year"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-year"
                         pdk-label=""
                       >
                          Year 
                       </label>
                       <input
-                        _ngcontent-a-c15=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-date-input-5-year"
+                        id="pdk-date-input-GENERATED_ID-year"
                         name="dateYear"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="year"
-                        ng-reflect-required=""
-                        ng-reflect-width="4"
                         required=""
                         type="number"
                       />
                     </div>
                   </div>
-                  
                 </div>
               </pdk-date-input>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object]"
-          ng-reflect-label="CASE_DETAILS.OFFENCE.ENTER_OFF"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
-            
-            
-            
             <label
               class="govuk-label govuk-label--s"
-              for="pdk-form-control-6"
-              ng-reflect-hidden="false"
-              ng-reflect-type="small"
+              for="pdk-form-control-undefined-GENERATED_ID"
             >
                CASE_DETAILS.OFFENCE.ENTER_OFFENCE_CODE 
             </label>
-            
-            
-            
             <offence-search
               class="ng-untouched ng-valid ng-dirty"
               name="offenceCode"
-              ng-reflect-model=""
-              ng-reflect-name="offenceCode"
-              ng-reflect-required="false"
               ngmodel=""
             />
-            
-            
           </pdk-form-group>
         </pdk-form-field>
-        
-        
         <pdk-inset-text>
           <div
             class="govuk-inset-text"
@@ -627,7 +454,6 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
             <p>
               <span
                 class="pdk-!-text-color-dark-grey govuk-body-m"
-                ng-reflect-type="body"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body"
               >
@@ -637,20 +463,16 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
             <p>
               <span
                 class="bold govuk-body-m"
-                ng-reflect-type="body-medium"
                 pdk-typography="body-medium"
               >
-                
               </span>
             </p>
             <p>
               <span
                 class="pdk-!-text-color-dark-grey govuk-body-m"
-                ng-reflect-type="body"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body"
               >
-                  
               </span>
             </p>
           </div>
@@ -658,97 +480,69 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
         <dynamic-particular-form
           class="ng-untouched ng-pristine ng-valid"
           name="dynamicParticularFormData"
-          ng-reflect-name="dynamicParticularFormData"
-          ng-reflect-offence-date-types="[object Object],[object Object"
-          ng-reflect-offence-wording="Caught Driving On Phone"
         >
-          
-          
         </dynamic-particular-form>
-        
         <pdk-form-field
           class="govuk-!-margin-top-2"
           label="Can the defendant be offered an online conviction and plenalty?"
           labeltype="small"
-          ng-reflect-label="Can the defendant be offered a"
-          ng-reflect-label-type="small"
-          ng-reflect-top="2"
           pdk-margin-top="2"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend govuk-fieldset__legend--s"
-                ng-reflect-hidden="false"
-                ng-reflect-type="small"
               >
                  Can the defendant be offered an online conviction and plenalty? 
               </legend>
-              
-              
-              
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
                 data-role="prosecutorOfferAOCP"
                 name="prosecutorOfferAOCP"
-                ng-reflect-model="false"
-                ng-reflect-name="prosecutorOfferAOCP"
-                ng-reflect-required=""
                 required=""
               >
                 <div
                   class="govuk-radios"
                 >
-                  
-                  <pdk-radio-button
-                    ng-reflect-value="true"
-                  >
+                  <pdk-radio-button>
                     <div
                       class="govuk-radios__item"
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-9"
-                        name="pdk-radio-group-8"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
                         type="radio"
                         value="true"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-9"
-                        ng-reflect-type=""
+                        for="pdk-radio-GENERATED_ID"
                         pdk-label=""
                       >
                          COMMON.YES 
                       </label>
                     </div>
                   </pdk-radio-button>
-                  <pdk-radio-button
-                    ng-reflect-value="false"
-                  >
+                  <pdk-radio-button>
                     <div
                       class="govuk-radios__item"
                     >
                       <input
                         class="govuk-radios__input"
-                        id="pdk-radio-10"
-                        name="pdk-radio-group-8"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
                         type="radio"
                         value="false"
                       />
                       <label
                         class="govuk-radios__label govuk-label"
-                        for="pdk-radio-10"
-                        ng-reflect-type=""
+                        for="pdk-radio-GENERATED_ID"
                         pdk-label=""
                       >
                          COMMON.NO 
@@ -757,19 +551,12 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
                   </pdk-radio-button>
                 </div>
               </pdk-radio-group>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
-        
-        
-        
         <button
           class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
           data-role="add"
-          ng-reflect-bottom="3"
-          ng-reflect-top="3"
           pdk-button="secondary"
           pdk-margin-bottom="3"
           pdk-margin-top="3"
@@ -790,13 +577,11 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
         </pdk-form-group>
         <p
           class="govuk-!-margin-top-3"
-          ng-reflect-top="3"
           pdk-margin-top="3"
         >
           <a
             class="govuk-link govuk-link--no-visited-state"
             href="javascript:void(0)"
-            ng-reflect-unvisited=""
             pdk-link=""
             unvisited=""
           >
@@ -810,7 +595,7 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
 `;
 
 exports[`Manual Case Offence Component should trigger submitFormData when the ADD button is pressed and stay on the current page 1`] = `
-Object {
-  "defendantOptions": Array [],
+{
+  "defendantOptions": [],
 }
 `;

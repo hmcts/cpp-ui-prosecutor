@@ -27,7 +27,7 @@ describe('Ethnicities Guard', () => {
       sequence: 2,
       code: 'code2',
       description: 'descrp2'
-    },
+    }
   ];
 
   beforeEach(() => {
@@ -43,16 +43,16 @@ describe('Ethnicities Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getEthnicities,
-          },
+            getEthnicities
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(EthnicitiesGuard);
@@ -74,9 +74,7 @@ describe('Ethnicities Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getEthnicities).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadEthnicitiesSuccessAction(ethnicities)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadEthnicitiesSuccessAction(ethnicities));
       });
     });
 
@@ -111,9 +109,7 @@ describe('Ethnicities Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getEthnicities).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadEthnicitiesSuccessAction(ethnicities)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadEthnicitiesSuccessAction(ethnicities));
         });
       });
     });

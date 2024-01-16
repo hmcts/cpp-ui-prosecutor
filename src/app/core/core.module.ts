@@ -23,10 +23,10 @@ const DECLARATIONS = [AppContainer, AppRouterContainer];
   imports: [
     CommonModule,
     ApplicationModule.forRoot(environment),
-    EffectsModule.forFeature([
-      ManualCaseDetailsEffects,
-    ]),
-    PdkCoreModule, RouterModule, ContextsModule
+    EffectsModule.forFeature([ManualCaseDetailsEffects]),
+    PdkCoreModule,
+    RouterModule,
+    ContextsModule
   ],
   declarations: [...DECLARATIONS],
   exports: [AppContainer],

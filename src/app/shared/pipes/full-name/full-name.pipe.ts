@@ -24,7 +24,5 @@ export function fullName<T extends PersonLike>(person: T, capitalize = false): s
 
 function firstLetterUpperCase(value: string): string {
   const names = value.split(' ');
-  return names
-    .map((name) => name.substr(0, 1).toUpperCase() + name.substr(1, name.length - 1))
-    .join(' ');
+  return names.map(name => name.substr(0, 1).toUpperCase() + name.substr(1, name.length - 1)).join(' ');
 }

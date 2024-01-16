@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`case overview/selectors getCase should select and sort multiple case decisions from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "mock-case-decision-2",
-    "offenceDecisions": Array [
-      Object {
+    "offenceDecisions": [
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId3",
@@ -15,7 +15,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId4",
@@ -25,7 +25,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId5",
@@ -37,11 +37,11 @@ Array [
       },
     ],
     "savedAt": "2019-12-01T16:10:28.259Z",
-    "session": Object {
+    "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
       "endedAt": "2019-12-01T16:10:28.259Z",
-      "legalAdviser": Object {
+      "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
         "userId": "legal-adviser-2",
@@ -53,10 +53,10 @@ Array [
       "startedAt": "2019-12-01T16:10:28.259Z",
     },
   },
-  Object {
+  {
     "id": "mock-case-decision-1",
-    "offenceDecisions": Array [
-      Object {
+    "offenceDecisions": [
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
@@ -66,7 +66,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
@@ -76,7 +76,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-3",
@@ -84,7 +84,7 @@ Array [
         "offenceSequenceNumber": 3,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-07-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-4",
@@ -92,7 +92,7 @@ Array [
         "offenceSequenceNumber": 4,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-21",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-5",
@@ -100,7 +100,7 @@ Array [
         "offenceSequenceNumber": 5,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "REFER_FOR_COURT_HEARING",
         "id": "mock-case-offence-decision-6",
         "offenceId": "offenceId6",
@@ -108,7 +108,7 @@ Array [
         "referralReason": "Not suitable for SJP",
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "DISMISS",
         "id": "mock-case-offence-decision-7",
         "offenceId": "offenceId7",
@@ -117,11 +117,11 @@ Array [
       },
     ],
     "savedAt": "2018-12-01T16:10:28.259Z",
-    "session": Object {
+    "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
       "endedAt": "2018-12-01T16:10:28.259Z",
-      "legalAdviser": Object {
+      "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
         "userId": "legal-adviser-1",
@@ -138,11 +138,11 @@ Array [
 `;
 
 exports[`case overview/selectors getCase should select and sort offence decisions from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "mock-case-decision-1",
-    "offenceDecisions": Array [
-      Object {
+    "offenceDecisions": [
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
@@ -152,7 +152,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-21",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-2",
@@ -161,7 +161,7 @@ Array [
         "offenceTitle": "Use / install a television set without a licence",
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "DISMISS",
         "id": "mock-case-offence-decision-3",
         "offenceId": "offenceId7",
@@ -169,7 +169,7 @@ Array [
         "offenceTitle": "Use / install a television set without a licence",
         "verdict": "PROVED_SJP",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-4",
@@ -178,7 +178,7 @@ Array [
         "offenceTitle": "Use / install a television set without a licence",
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "REFER_FOR_COURT_HEARING",
         "id": "mock-case-offence-decision-5",
         "offenceId": "offenceId6",
@@ -189,11 +189,11 @@ Array [
       },
     ],
     "savedAt": "2018-12-01T16:10:28.259Z",
-    "session": Object {
+    "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
       "endedAt": "2018-12-01T16:10:28.259Z",
-      "legalAdviser": Object {
+      "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
         "userId": "legal-adviser-1",
@@ -209,11 +209,11 @@ Array [
 `;
 
 exports[`case overview/selectors getCase should select case decisions from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "mock-case-decision-1",
-    "offenceDecisions": Array [
-      Object {
+    "offenceDecisions": [
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
@@ -223,7 +223,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
@@ -233,7 +233,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-3",
@@ -241,7 +241,7 @@ Array [
         "offenceSequenceNumber": 3,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-07-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-4",
@@ -249,7 +249,7 @@ Array [
         "offenceSequenceNumber": 4,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-21",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-5",
@@ -257,7 +257,7 @@ Array [
         "offenceSequenceNumber": 5,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "REFER_FOR_COURT_HEARING",
         "id": "mock-case-offence-decision-6",
         "offenceId": "offenceId6",
@@ -265,7 +265,7 @@ Array [
         "referralReason": "Not suitable for SJP",
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "DISMISS",
         "id": "mock-case-offence-decision-7",
         "offenceId": "offenceId7",
@@ -274,11 +274,11 @@ Array [
       },
     ],
     "savedAt": "2018-12-01T16:10:28.259Z",
-    "session": Object {
+    "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
       "endedAt": "2018-12-01T16:10:28.259Z",
-      "legalAdviser": Object {
+      "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
         "userId": "legal-adviser-1",

@@ -19,7 +19,7 @@ describe('DefendantDetailsUpdatesContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DefendantDetailsUpdatesContainer, MockDefendantDetailsUpdatesComponent],
-      imports: [CommonModule, StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [CommonModule, StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         {
           provide: Router,
@@ -27,7 +27,8 @@ describe('DefendantDetailsUpdatesContainer', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);

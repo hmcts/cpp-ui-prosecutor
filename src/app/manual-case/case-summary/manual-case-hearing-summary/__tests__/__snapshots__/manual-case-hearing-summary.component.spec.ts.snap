@@ -4,7 +4,7 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
 <manual-case-hearing-summary
   courtCentre={[Function Object]}
   courtCentres={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   hearingTypes={[Function Array]}
   initialHearing={[Function Object]}
 >
@@ -25,7 +25,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
           class="table-header"
           pdk-typography="heading-medium"
         >
-          
         </span>
       </pdk-grid>
       <pdk-grid
@@ -38,7 +37,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
           pdk-link=""
           unvisited=""
         >
-          
         </a>
       </pdk-grid>
     </pdk-grid>
@@ -56,7 +54,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-            
           </th>
           <td
             class="data"
@@ -64,7 +61,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-court-name"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
         <tr
@@ -76,7 +72,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             pdk-table-header="row"
             scope="row"
           >
-             
           </th>
           <td
             class="data"
@@ -84,11 +79,8 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-room-name"
             pdk-table-cell=""
           >
-             
-            
           </td>
         </tr>
-        
         <tr
           class="table-row"
           pdk-table-row=""
@@ -97,7 +89,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-            
           </th>
           <td
             class="data"
@@ -105,7 +96,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-date"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
         <tr
@@ -116,7 +106,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-            
           </th>
           <td
             class="data"
@@ -124,7 +113,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-time"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
         <tr
@@ -135,7 +123,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-            
           </th>
           <td
             class="data"
@@ -143,7 +130,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-duration"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
         <tr
@@ -154,7 +140,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             class="header"
             pdk-table-header="row"
           >
-            
           </th>
           <td
             class="data"
@@ -162,7 +147,6 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
             id="hearing-language"
             pdk-table-cell=""
           >
-             
           </td>
         </tr>
       </tbody>

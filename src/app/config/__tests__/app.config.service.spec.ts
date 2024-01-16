@@ -29,10 +29,11 @@ describe('AppConfigService', () => {
           }
         },
         AppConfigService
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
-    query.mockReturnValue({pipe});
+    query.mockReturnValue({ pipe });
     pipe.mockReturnValue(of(true));
 
     service = TestBed.get(AppConfigService);

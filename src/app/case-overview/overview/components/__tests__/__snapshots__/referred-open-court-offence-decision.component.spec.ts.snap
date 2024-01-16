@@ -4,14 +4,10 @@ exports[`ReferredOpenCourtOffeneDecision should compile correctly 1`] = `
 <referred-open-court-offence-decision-test
   offenceDecision={[Function Object]}
 >
-  <refer-to-open-court-offence-decision
-    ng-reflect-offence-decision="[object Object]"
-  >
+  <refer-to-open-court-offence-decision>
     <div>
       <p>
          Summons issued for hearing before south West London Magistrates' Court 
-        
-        
          (Room 5) 
          on 2019-06-04T14:34:54.164Z at Lavender Hill Magistrates' Court at 2019-06-04T14:34:54.164Z 
       </p>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PdkBreadcrumbsModule, PdkButtonModule, PdkCoreModule, PdkTableModule } from '@cpp/pdk';
+import { PdkButtonModule, PdkCoreModule, PdkTableModule } from '@cpp/pdk';
 import { RouterModule } from '@angular/router';
 import { CasesMissingSjpNoticesContainer } from './cases-missing-sjp-notices.container';
 import { CasesMissingSjpNoticesComponent } from './components/cases-missing-sjp-notices.component';

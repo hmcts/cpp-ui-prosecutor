@@ -6,54 +6,56 @@ import { IndividualDefendantFormComponent } from '../individual-defendant-form.c
 import { ManualCaseDefendant } from '../../../core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../../shared';
-import * as cleanDeep from 'clean-deep';
+import cleanDeep from 'clean-deep';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 const remandStatuses = [
   {
     id: 'dd4073b6-22be-3875-9d63-5da286bb3ece',
     seqNo: 10,
     statusCode: 'B',
-    statusDescription: 'Conditional Bail',
+    statusDescription: 'Conditional Bail'
   },
   {
     id: 'eaf18bf8-9569-3656-a4ab-64299f9bd513',
     seqNo: 20,
     statusCode: 'U',
     statusDescription: 'Unconditional Bail',
-    hasConditions: true,
+    hasConditions: true
   },
   {
     id: '12e69486-4d01-3403-a50a-7419ca040635',
     seqNo: 30,
     statusCode: 'C',
-    statusDescription: 'Remanded into Custody',
+    statusDescription: 'Remanded into Custody'
   },
   {
     id: '86009c70-759d-3308-8de4-194886ff9a77',
     seqNo: 40,
     statusCode: 'A',
-    statusDescription: 'Not applicable',
+    statusDescription: 'Not applicable'
   },
   {
     id: '4dc146db-9d89-30bf-93b3-b22bc072d666',
     seqNo: 50,
     statusCode: 'L',
-    statusDescription: 'Remanded into care of Local Authority',
+    statusDescription: 'Remanded into care of Local Authority'
   },
   {
     id: '34443c87-fa6f-34c0-897f-0cce45773df5',
     seqNo: 60,
     statusCode: 'P',
-    statusDescription: 'Conditional Bail with Pre-Release conditions',
+    statusDescription: 'Conditional Bail with Pre-Release conditions'
   },
   {
     id: '549336f9-2a07-3767-960f-107da761a698',
     seqNo: 70,
     statusCode: 'S',
-    statusDescription: 'Remanded into Secure Accommodation',
-  },
+    statusDescription: 'Remanded into Secure Accommodation'
+  }
 ];
 
 const manualCaseDefendant = {
@@ -62,7 +64,7 @@ const manualCaseDefendant = {
       contactDetails: {
         primaryEmail: 'one@abc.com',
         home: '07968111111',
-        work: undefined,
+        work: undefined
       },
       address: {
         address1: '11 Wilton Road',
@@ -70,15 +72,15 @@ const manualCaseDefendant = {
         address3: 'Peterborough',
         address4: '',
         address5: '',
-        postcode: 'PE1 5ZZ',
+        postcode: 'PE1 5ZZ'
       },
       title: 'Mr',
       firstName: 'Defendant',
-      lastName: 'One',
+      lastName: 'One'
     },
     parentGuardianInformation: {
       personalInformation: {
-        lastName: 'Guardian One',
+        lastName: 'Guardian One'
       },
       gender: 'NOT_SPECIFIED',
       organisationName: 'Guardian Organisation ABC',
@@ -88,27 +90,28 @@ const manualCaseDefendant = {
         address3: '',
         address4: '',
         address5: '',
-        postcode: 'SL9 5ZZ',
+        postcode: 'SL9 5ZZ'
       },
       emailAddress1: 'ben@abc.com',
-      telephoneNumberBusiness: '07966666666',
+      telephoneNumberBusiness: '07966666666'
     },
     selfDefinedInformation: {
       dateOfBirth: '1975-01-01',
-      nationality: '',
+      nationality: ''
     },
     bailConditions: 'Conditional Bail Description',
-    custodyStatus: 'B',
+    custodyStatus: 'B'
   },
   numPreviousConvictions: 1,
   documentationLanguage: 'ENGLISH',
-  hearingLanguage: 'WELSH',
+  hearingLanguage: 'WELSH'
 } as ManualCaseDefendant;
 
 describe('Individual Defendant Form Component', () => {
   let component: Shallow<IndividualDefendantFormComponent>;
   const generateUUID = jest.fn();
   generateUUID.mockReturnValue('uuid-001');
+  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
 
   beforeEach(() => {
     component = new Shallow(IndividualDefendantFormComponent, ManualCaseModule)
@@ -135,9 +138,9 @@ describe('Individual Defendant Form Component', () => {
             [remandStatuses]="remandStatuses"
             [aliasesReset]="true"
             [showAddButton]="true"
-            (onSubmit)="handleFormSubmit($event)"
-            (onError)="handleFormError($event)"
-            (onBack)="handleFormBack($event)">
+            (formSubmit)="handleFormSubmit($event)"
+            (formError)="handleFormError($event)"
+            (goBack)="handleFormBack($event)">
        </individual-defendant-form>`,
       {
         bind: {
@@ -146,8 +149,8 @@ describe('Individual Defendant Form Component', () => {
           remandStatuses,
           handleFormSubmit: () => jest.fn(),
           handleFormError: () => jest.fn(),
-          handleFormBack: () => jest.fn(),
-        },
+          handleFormBack: () => jest.fn()
+        }
       }
     );
   }
@@ -159,8 +162,6 @@ describe('Individual Defendant Form Component', () => {
     expect(instance).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
-
-
 
   it('should submit valid defendant form with individual as guardian', async () => {
     manualCaseDefendant.individual.guardianType = 'INDIVIDUAL';
@@ -181,7 +182,7 @@ describe('Individual Defendant Form Component', () => {
 
     expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: cleanDeep(manualCaseDefendant),
+      defendantToStore: cleanDeep(manualCaseDefendant)
     });
   });
 
@@ -203,7 +204,7 @@ describe('Individual Defendant Form Component', () => {
 
     expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: cleanDeep(manualCaseDefendant),
+      defendantToStore: cleanDeep(manualCaseDefendant)
     });
   });
 
@@ -214,10 +215,10 @@ describe('Individual Defendant Form Component', () => {
       individual: {
         personalInformation: {
           contactDetails: {},
-          address: {},
+          address: {}
         },
-        selfDefinedInformation: {},
-      },
+        selfDefinedInformation: {}
+      }
     };
 
     const { find, bindings, fixture } = await renderComponent(emptyModel, 'J');
@@ -231,7 +232,7 @@ describe('Individual Defendant Form Component', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    Promise.resolve(true).then((result) => {
+    Promise.resolve(true).then(result => {
       expect(bindings.handleFormError).toHaveBeenCalled();
     });
   });

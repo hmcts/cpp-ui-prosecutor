@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {
   PdkAlertModule,
-  PdkBreadcrumbsModule,
   PdkButtonModule,
   PdkCheckboxInputModule,
   PdkCoreModule,

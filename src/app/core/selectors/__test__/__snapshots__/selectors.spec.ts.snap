@@ -1,36 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`selectors getCase should select the case from the store 1`] = `
-Object {
+{
   "assigned": false,
-  "caseDocuments": Array [
-    Object {
+  "caseDocuments": [
+    {
       "addedAt": "2019-02-25T09:30:24.442Z",
       "documentNumber": 1,
       "documentType": "PLEA",
       "id": "documentId1",
       "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
-      "metadata": Object {
+      "metadata": {
         "fileName": "fileName.pdf",
       },
     },
-    Object {
+    {
       "addedAt": "2019-02-24T16:35:56.558Z",
       "documentNumber": 1,
       "documentType": "SJPN",
       "id": "documentId2",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
-      "metadata": Object {
+      "metadata": {
         "fileName": "fileName1.pdf",
       },
     },
-    Object {
+    {
       "addedAt": "2019-02-24T16:35:56.558Z",
       "documentNumber": 1,
       "documentType": "CITN",
       "id": "documentId3",
       "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
-      "metadata": Object {
+      "metadata": {
         "fileName": "fileName1.pdf",
       },
     },
@@ -38,15 +38,15 @@ Object {
   "completed": true,
   "costs": 19,
   "dateTimeCreated": "2019-02-24T16:35:46.273Z",
-  "defendant": Object {
+  "defendant": {
     "caseId": "case-id-test",
     "id": "defendantId1",
-    "interpreter": Object {
+    "interpreter": {
       "needed": false,
     },
     "numPreviousConvictions": 2,
-    "offences": Array [
-      Object {
+    "offences": [
+      {
         "chargeDate": "2019-01-24",
         "cjsCode": "CA03013",
         "compensation": 30,
@@ -60,7 +60,7 @@ Object {
         "title": "offence title 1",
         "wording": "wording",
       },
-      Object {
+      {
         "chargeDate": "2019-01-27",
         "cjsCode": "CA03013",
         "compensation": 23,
@@ -79,8 +79,8 @@ Object {
         "wording": "wording",
       },
     ],
-    "personalDetails": Object {
-      "address": Object {
+    "personalDetails": {
+      "address": {
         "address1": "Flat 1, Armageddon House",
         "address2": "13 Old Road",
         "address3": "Giggleswick",
@@ -88,7 +88,7 @@ Object {
         "postcode": "CV8 1AB",
       },
       "addressChanged": false,
-      "contactDetails": Object {
+      "contactDetails": {
         "email": "a@a.com",
         "home": "333333333",
         "mobile": "77777777",
@@ -121,11 +121,11 @@ Object {
 `;
 
 exports[`selectors getCaseDecisions should select the case decisions from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "mock-case-decision-1",
-    "offenceDecisions": Array [
-      Object {
+    "offenceDecisions": [
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-1",
         "offenceId": "offenceId1",
@@ -134,7 +134,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "decisionType": "WITHDRAW",
         "id": "mock-case-offence-decision-2",
         "offenceId": "offenceId2",
@@ -143,7 +143,7 @@ Array [
         "withdrawalReason": "Insufficient evidence",
         "withdrawalReasonId": "1",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-3",
@@ -151,7 +151,7 @@ Array [
         "offenceSequenceNumber": 3,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-07-11",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-4",
@@ -159,7 +159,7 @@ Array [
         "offenceSequenceNumber": 4,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "adjournedTo": "2019-06-21",
         "decisionType": "ADJOURN",
         "id": "mock-case-offence-decision-5",
@@ -167,7 +167,7 @@ Array [
         "offenceSequenceNumber": 5,
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "REFER_FOR_COURT_HEARING",
         "id": "mock-case-offence-decision-6",
         "offenceId": "offenceId6",
@@ -175,7 +175,7 @@ Array [
         "referralReason": "Not suitable for SJP",
         "verdict": "NO_VERDICT",
       },
-      Object {
+      {
         "decisionType": "DISMISS",
         "id": "mock-case-offence-decision-7",
         "offenceId": "offenceId7",
@@ -184,11 +184,11 @@ Array [
       },
     ],
     "savedAt": "2018-12-01T16:10:28.259Z",
-    "session": Object {
+    "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
       "endedAt": "2018-12-01T16:10:28.259Z",
-      "legalAdviser": Object {
+      "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
         "userId": "legal-adviser-1",
@@ -205,10 +205,10 @@ Array [
 `;
 
 exports[`selectors getCaseNotes should select and sort the case notes in desc 1`] = `
-Object {
+{
   "caseId": "0f03e10f-d9a5-47f9-92ba-a8e220448451",
-  "notes": Array [
-    Object {
+  "notes": [
+    {
       "addedAt": "2019-07-04T10:53:15.149",
       "authorFirstName": "Erica",
       "authorLastName": "Wilson",
@@ -217,7 +217,7 @@ Object {
       "noteText": "Not enough documents",
       "noteType": "ADJOURNMENT",
     },
-    Object {
+    {
       "addedAt": "2019-07-02T21:26:21.784",
       "authorFirstName": "Erica",
       "authorLastName": "Wilson",
@@ -231,15 +231,15 @@ Object {
 `;
 
 exports[`selectors getDefendant should select  defendant from the store 1`] = `
-Object {
+{
   "caseId": "case-id-test",
   "id": "defendantId1",
-  "interpreter": Object {
+  "interpreter": {
     "needed": false,
   },
   "numPreviousConvictions": 2,
-  "offences": Array [
-    Object {
+  "offences": [
+    {
       "chargeDate": "2019-01-24",
       "cjsCode": "CA03013",
       "compensation": 30,
@@ -253,7 +253,7 @@ Object {
       "title": "offence title 1",
       "wording": "wording",
     },
-    Object {
+    {
       "chargeDate": "2019-01-27",
       "cjsCode": "CA03013",
       "compensation": 23,
@@ -272,8 +272,8 @@ Object {
       "wording": "wording",
     },
   ],
-  "personalDetails": Object {
-    "address": Object {
+  "personalDetails": {
+    "address": {
       "address1": "Flat 1, Armageddon House",
       "address2": "13 Old Road",
       "address3": "Giggleswick",
@@ -281,7 +281,7 @@ Object {
       "postcode": "CV8 1AB",
     },
     "addressChanged": false,
-    "contactDetails": Object {
+    "contactDetails": {
       "email": "a@a.com",
       "home": "333333333",
       "mobile": "77777777",
@@ -300,12 +300,12 @@ Object {
 `;
 
 exports[`selectors getOffenceWithdrawalRequestReasons should select offences withdrawal request reasons from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "label": "First",
     "value": "1",
   },
-  Object {
+  {
     "label": "Third",
     "value": "3",
   },
@@ -313,8 +313,8 @@ Array [
 `;
 
 exports[`selectors getOffences should select offences from the store 1`] = `
-Array [
-  Object {
+[
+  {
     "chargeDate": "2019-01-24",
     "cjsCode": "CA03013",
     "compensation": 30,
@@ -328,7 +328,7 @@ Array [
     "title": "offence title 1",
     "wording": "wording",
   },
-  Object {
+  {
     "chargeDate": "2019-01-27",
     "cjsCode": "CA03013",
     "compensation": 23,
@@ -350,10 +350,10 @@ Array [
 `;
 
 exports[`selectors getPleadedNotGuiltyCasesDetail should select the right data from the store 1`] = `
-Object {
-  "cases": Array [
-    Object {
-      "address": Object {
+{
+  "cases": [
+    {
+      "address": {
         "address1": "Flat 1, Armageddon House",
         "address2": "13 Old Road",
         "address3": "Giggleswick",
@@ -369,8 +369,8 @@ Object {
       "referenceNumber": "TVL640029AGBG",
       "region": "London",
     },
-    Object {
-      "address": Object {
+    {
+      "address": {
         "address1": "Flat 1, Armageddon House",
         "address2": "13 Old Road",
         "address3": "Giggleswick",

@@ -7,7 +7,7 @@ describe('Manual Case NavigationParam Service', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ManualCaseNavigationService],
+      providers: [ManualCaseNavigationService]
     });
 
     caseNavService = TestBed.get(ManualCaseNavigationService);

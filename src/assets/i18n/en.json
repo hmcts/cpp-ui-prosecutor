@@ -36,15 +36,15 @@
       },
       "technical": {
         "title": "Technical information about this website's accessibility",
-        "paragraph1" : "The Ministry of Justice Crime Reform Programme is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.",
-        "paragraph2" : "We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any accessibility issues. We plan to fix any accessibility issues it identifies up to the WCAG 2.1 AA standards apart from any which would be a disproportionate burden."
+        "paragraph1": "The Ministry of Justice Crime Reform Programme is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.",
+        "paragraph2": "We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any accessibility issues. We plan to fix any accessibility issues it identifies up to the WCAG 2.1 AA standards apart from any which would be a disproportionate burden."
       },
       "what-were-doing": {
         "title": "What we're doing to improve accessibility",
-        "paragraph1" : "We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any other accessibility issues.",
-        "paragraph2" : "After this audit is complete we plan to review and update our internal platform development kit if necessary. This contains templates of common patterns and components which are then used consistently across the system. Ensuring these patterns and components are WCAG 2.1 AA compliant will make all instances of them across our systems compliant.",
-        "paragraph3" : "We will release front end development resources to fix other identified accessibility issues. We plan to do all this before our screens are released to their full user base.",
-        "paragraph4" : "We will also consider conducting external accessibility audits by the Digital Accessibility Centre (DAC) following subsequent major new code releases where this is appropriate."
+        "paragraph1": "We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any other accessibility issues.",
+        "paragraph2": "After this audit is complete we plan to review and update our internal platform development kit if necessary. This contains templates of common patterns and components which are then used consistently across the system. Ensuring these patterns and components are WCAG 2.1 AA compliant will make all instances of them across our systems compliant.",
+        "paragraph3": "We will release front end development resources to fix other identified accessibility issues. We plan to do all this before our screens are released to their full user base.",
+        "paragraph4": "We will also consider conducting external accessibility audits by the Digital Accessibility Centre (DAC) following subsequent major new code releases where this is appropriate."
       }
     }
   },

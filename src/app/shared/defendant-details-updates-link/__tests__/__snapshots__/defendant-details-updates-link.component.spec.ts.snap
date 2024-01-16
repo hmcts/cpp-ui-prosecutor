@@ -5,9 +5,7 @@ exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updat
   numberOfUpdates="0"
 >
   <p>
-    
      Defendant details updates (0) 
-    
   </p>
 </defendant-details-updates-link>
 `;
@@ -17,18 +15,15 @@ exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updat
   numberOfUpdates={[Function Number]}
 >
   <p>
-    
     <a
       href="/defendant-details-updates"
       id="defendant-details-updates-link"
-      ng-reflect-router-link="defendant-details-updates"
       pdk-link=""
       pdk-section="small"
       routerlink="defendant-details-updates"
     >
        Defendant details updates (1) 
     </a>
-    
   </p>
 </defendant-details-updates-link>
 `;

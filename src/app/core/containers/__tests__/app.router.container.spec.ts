@@ -27,7 +27,8 @@ describe('App router component', () => {
           }
         }
       ],
-      schemas: []
+      schemas: [],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(AppRouterContainer);

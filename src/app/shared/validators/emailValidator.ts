@@ -8,9 +8,9 @@ const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => EmailValidator),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class EmailValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {
@@ -28,6 +28,6 @@ export class EmailValidator implements Validator {
 
   getControlName(c: AbstractControl): string | null {
     const formGroup = c.parent.controls;
-    return Object.keys(formGroup).find((name) => c === formGroup[name]) || null;
+    return Object.keys(formGroup).find(name => c === formGroup[name]) || null;
   }
 }

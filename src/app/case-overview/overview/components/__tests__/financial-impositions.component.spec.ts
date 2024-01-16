@@ -1,10 +1,10 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {Component, Input} from '@angular/core';
-import {CaseDecision, DischargeOffenceDecision, FinancialPenaltyOffenceDecision} from '../../../../contexts/sjp';
-import {CommonModule} from '@angular/common';
-import {PdkDividerModule, PdkGridModule} from '@cpp/pdk';
-import {FinancialImpositionsComponent} from '../financial-impositions.component';
-import {MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION} from '../../../../case-overview/__tests__/test-mock-data';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input } from '@angular/core';
+import { CaseDecision, DischargeOffenceDecision, FinancialPenaltyOffenceDecision } from '../../../../contexts/sjp';
+import { CommonModule } from '@angular/common';
+import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
+import { FinancialImpositionsComponent } from '../financial-impositions.component';
+import { MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION } from '../../../../case-overview/__tests__/test-mock-data';
 import { By } from '@angular/platform-browser';
 
 describe('FinancialImpositionsComponent', () => {
@@ -13,10 +13,11 @@ describe('FinancialImpositionsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [FinancialImpositionsComponent, TestFinancialImpositionsComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule]
+      imports: [CommonModule, PdkDividerModule, PdkGridModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestFinancialImpositionsComponent);
-    fixture.componentInstance.caseDecision = {...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION};
+    fixture.componentInstance.caseDecision = { ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION };
   });
 
   it('should compile correctly', () => {
@@ -54,13 +55,12 @@ describe('FinancialImpositionsComponent', () => {
     };
     fixture.componentInstance.caseDecision.financialImposition.costsAndSurcharge.victimSurcharge = 0;
     fixture.componentInstance.caseDecision.financialImposition.costsAndSurcharge.reasonForNoVictimSurcharge =
-        'reasonForNoVictimSurcharge';
+      'reasonForNoVictimSurcharge';
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   it('should display excisePenalty and not display calculated fine, if case decision is FINANCIAL_PENALTY and excisePenalty > 0', () => {
-
     fixture.componentInstance.caseDecision = {
       ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
       offenceDecisions: [
@@ -82,15 +82,12 @@ describe('FinancialImpositionsComponent', () => {
     const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`));
     expect(fineField).toBe(null);
 
-    const excisePenaltyField = fixture.debugElement.query(
-      By.css(`[data-role="imposition-excise-penalty-amount"]`)).nativeElement.innerHTML;
+    const excisePenaltyField = fixture.debugElement.query(By.css(`[data-role="imposition-excise-penalty-amount"]`))
+      .nativeElement.innerHTML;
     expect(excisePenaltyField).toBe(' £50 ');
-
-
   });
 
   it('should display backDuty and calculated fine, if case decision is FINANCIAL_PENALTY and backDuty > 0', () => {
-
     fixture.componentInstance.caseDecision = {
       ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
       offenceDecisions: [
@@ -109,19 +106,16 @@ describe('FinancialImpositionsComponent', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
 
-    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`)).nativeElement.innerHTML;
+    const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`)).nativeElement
+      .innerHTML;
     expect(fineField).toBe(' £70 ');
 
-
-    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement.innerHTML;
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement
+      .innerHTML;
     expect(backdutyField).toBe(' £50 ');
-
-
-
   });
 
   it('should display backDuty, if case decision is FINANCIAL_PENALTY or DISCHARGE and backDuty > 0', () => {
-
     fixture.componentInstance.caseDecision = {
       ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION,
       offenceDecisions: [
@@ -131,7 +125,7 @@ describe('FinancialImpositionsComponent', () => {
         } as DischargeOffenceDecision,
         {
           decisionType: 'DISCHARGE',
-          backDuty: 30.0,
+          backDuty: 30.0
         } as DischargeOffenceDecision
       ]
     };
@@ -141,16 +135,15 @@ describe('FinancialImpositionsComponent', () => {
     const fineField = fixture.debugElement.query(By.css(`[data-role="imposition-fine-amount"]`));
     expect(fineField).toBe(null);
 
-    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement.innerHTML;
+    const backdutyField = fixture.debugElement.query(By.css(`[data-role="imposition-backduty-amount"]`)).nativeElement
+      .innerHTML;
     expect(backdutyField).toBe(' £50 ');
-
   });
-
 
   @Component({
     selector: 'financial-impositions-test',
     template: `
-      <financial-impositions [caseDecision]='caseDecision'></financial-impositions>
+      <financial-impositions [caseDecision]="caseDecision"></financial-impositions>
     `
   })
   class TestFinancialImpositionsComponent {

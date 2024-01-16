@@ -11,7 +11,7 @@ export class ManualCaseNavigationService {
     { path: ManualCasePath.NewProsecutor, valid: false },
     { path: ManualCasePath.NewHearing, valid: false },
     { path: ManualCasePath.NewDefendant, valid: false },
-    { path: ManualCasePath.NewOffence, valid: false },
+    { path: ManualCasePath.NewOffence, valid: false }
   ];
 
   updatePrevRouteParams(prevRouteParams) {
@@ -19,7 +19,7 @@ export class ManualCaseNavigationService {
   }
 
   validateStep(path: ManualCasePath): void {
-    const position = this.workFlow.findIndex((pathObj) => pathObj.path === path);
+    const position = this.workFlow.findIndex(pathObj => pathObj.path === path);
     if (position >= 0) {
       this.workFlow[position].valid = true;
     }
@@ -56,7 +56,7 @@ export class ManualCaseNavigationService {
       isEitherWayOffencePage: false,
       isCaseSummary: false,
       isCaseCreated: false,
-      isDuplicatedProsecutor: false,
+      isDuplicatedProsecutor: false
     };
 
     if (path === ManualCasePath.NewCaseType || path === ManualCasePath.EditCaseType) {

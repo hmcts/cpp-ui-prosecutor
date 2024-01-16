@@ -21,7 +21,7 @@ describe('Police Forces Guard', () => {
       sequence: 3,
       policeForceCode: '2',
       policeForceName: 'London',
-      validForSpiOut: true,
+      validForSpiOut: true
     },
     {
       id: '97c89e9d-57dc-3936-a88f-9160a4572e3a',
@@ -29,8 +29,8 @@ describe('Police Forces Guard', () => {
       policeForceCode: '3',
       policeForceName: 'Cumbria',
       validForSpiOut: true,
-      oucodeL2Code: '03',
-    },
+      oucodeL2Code: '03'
+    }
   ];
 
   beforeEach(() => {
@@ -46,16 +46,16 @@ describe('Police Forces Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getPoliceForces,
-          },
+            getPoliceForces
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(PoliceForcesGuard);
@@ -77,9 +77,7 @@ describe('Police Forces Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getPoliceForces).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadPoliceForcesSuccessAction(policeForces)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadPoliceForcesSuccessAction(policeForces));
       });
     });
 
@@ -114,9 +112,7 @@ describe('Police Forces Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getPoliceForces).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadPoliceForcesSuccessAction(policeForces)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadPoliceForcesSuccessAction(policeForces));
         });
       });
     });

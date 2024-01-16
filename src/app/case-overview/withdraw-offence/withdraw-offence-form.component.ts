@@ -95,7 +95,7 @@ export class WithdrawOffenceFormComponent implements OnInit {
   caseReason = '';
   caseWithdrawn = false;
 
-  @ViewChild(NgForm) form: NgForm;
+  @ViewChild(NgForm, { static: true }) form: NgForm;
 
   @Input() caseWithdrawnStatus: boolean;
   @Input() offences: Offence[];

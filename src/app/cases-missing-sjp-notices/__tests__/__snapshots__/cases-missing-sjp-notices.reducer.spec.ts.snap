@@ -3,9 +3,9 @@
 exports[`Check Cases Missing SJP Notice reducer default should set the state 1`] = `undefined`;
 
 exports[`Check Cases Missing SJP Notice reducer default should update the state with cases missing sjp notice 1`] = `
-Array [
-  Object {
-    "defendant": Object {
+[
+  {
+    "defendant": {
       "dateOfBirth": "1972-01-01",
       "firstName": "Abel",
       "gender": "Male",
@@ -19,8 +19,8 @@ Array [
     "prosecutingAuthority": "TFL",
     "urn": "22C22222222",
   },
-  Object {
-    "defendant": Object {
+  {
+    "defendant": {
       "dateOfBirth": "1980-07-12",
       "firstName": "Linda",
       "gender": "Female",

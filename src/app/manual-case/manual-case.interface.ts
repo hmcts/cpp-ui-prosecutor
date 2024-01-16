@@ -16,5 +16,5 @@ export enum ManualCasePath {
   EditOffence = 'edit-offence',
   CaseSummary = 'summary',
   CaseCreated = 'case-created/:reference/:caseId',
-  DuplicatedProsecutor = 'duplicated-prosecutor',
+  DuplicatedProsecutor = 'duplicated-prosecutor'
 }

@@ -1,13 +1,12 @@
 import { OnlinePleaDetailsContainer } from '../online-plea-details.container';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { FeatureState } from '../../case-overview.selectors';
-import { Input, Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MOCK_CASE, MOCK_ONLINE_PLEA_DETAIL } from '../../__tests__/test-mock-data';
 import { MockModule } from '../../../shared/mock-components/mock.module';
-import { Case } from '../../../contexts/sjp';
-import { reducers, LoadCaseSuccess, LoadProsecutorByUserGroupSuccess } from '../../../core';
-import { FrequencyOptions, OnlinePlea } from '../../../contexts/sjp';
+import { Case, FrequencyOptions, OnlinePlea } from '../../../contexts/sjp';
+import { LoadCaseSuccess, LoadProsecutorByUserGroupSuccess } from '../../../core';
 import { LoadOnlinePleaSuccess } from '../../case-overview.action';
 import { OnlinePleaUi } from '../online-plea-interface';
 import { transformOnlinePleaToUiModel } from '../online-plea-utils';
@@ -23,16 +22,21 @@ describe('OnlinePleaDetailsContainer', () => {
     TestBed.configureTestingModule({
       declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent],
       imports: [MockModule],
-      providers: provideMockStore({initialState: {caseOverview: {
-        onlinePlea: MOCK_ONLINE_PLEA_DETAIL
-      }}})
+      teardown: { destroyAfterEach: false },
+      providers: provideMockStore({
+        initialState: {
+          caseOverview: {
+            onlinePlea: MOCK_ONLINE_PLEA_DETAIL
+          }
+        }
+      })
     });
 
     store = TestBed.get(Store);
     fixture = TestBed.createComponent(OnlinePleaDetailsContainer);
     store.dispatch(new LoadCaseSuccess(MOCK_CASE));
     store.dispatch(new LoadOnlinePleaSuccess(MOCK_ONLINE_PLEA_DETAIL));
-    store.dispatch(new LoadProsecutorByUserGroupSuccess({cpsFlag: true} as Prosecutor));
+    store.dispatch(new LoadProsecutorByUserGroupSuccess({ cpsFlag: true } as Prosecutor));
     fixture.detectChanges();
   });
 
@@ -57,7 +61,8 @@ describe('OnlinePleaDetailsContainer', () => {
   it('should compute additional fields for the UI model', () => {
     const uiModel: OnlinePleaUi[] = transformOnlinePleaToUiModel(mockOnlinePleas);
     expect(uiModel[0].employment.incomeAfterTaxType).toBe(
-      FrequencyOptions.find(freq => freq.value === MOCK_ONLINE_PLEA_DETAIL.pleas[0].employment.incomePaymentFrequency).label
+      FrequencyOptions.find(freq => freq.value === MOCK_ONLINE_PLEA_DETAIL.pleas[0].employment.incomePaymentFrequency)
+        .label
     );
     expect(uiModel[0].outgoings.showDetailsOfMonthlyBillings).toBe(
       !!MOCK_ONLINE_PLEA_DETAIL.pleas[0].outgoings.monthlyAmount

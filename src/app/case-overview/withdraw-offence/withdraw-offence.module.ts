@@ -4,7 +4,6 @@ import { WithdrawOffenceContainer } from './withdraw-offence.container';
 import { RouterModule } from '@angular/router';
 import {
   PdkBadgeModule,
-  PdkBreadcrumbsModule,
   PdkButtonModule,
   PdkCheckboxInputModule,
   PdkCoreModule,
@@ -20,6 +19,7 @@ import { OffenceWithdrawalModule } from './components/offence-withdrawal/offence
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
 import { OffenceWithdrawalReasonsGuard } from './withdraw-offence.guard';
 import { BreadcrumbLinksModule } from '../../shared/breadcrumb-links/breadcrumb-links.module';
+
 const DECLARATIONS = [WithdrawOffenceContainer, WithdrawOffenceComponent, WithdrawOffenceFormComponent];
 
 @NgModule({

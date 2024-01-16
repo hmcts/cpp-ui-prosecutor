@@ -13,7 +13,8 @@ describe('ExportCaseDecisionsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ExportCaseDecisionsFormComponent, TestExportCaseDecisionsFormComponent],
-      imports: [FormsModule, PdkFormModule, FromToDatesModule]
+      imports: [FormsModule, PdkFormModule, FromToDatesModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestExportCaseDecisionsFormComponent);

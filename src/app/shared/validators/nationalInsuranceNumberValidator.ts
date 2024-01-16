@@ -7,9 +7,9 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@an
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => NationalInsuranceNumberValidator),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
 export class NationalInsuranceNumberValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {
@@ -17,8 +17,7 @@ export class NationalInsuranceNumberValidator implements Validator {
       const nationalInsuranceNumberRegex = this.getNiPattern();
       const nationalInsuranceSpaceInvalid = /\s/g.test(c.value.trim());
       const invalid =
-        nationalInsuranceSpaceInvalid ||
-        !nationalInsuranceNumberRegex.test(c.value.replace(/\s/g, '').toUpperCase());
+        nationalInsuranceSpaceInvalid || !nationalInsuranceNumberRegex.test(c.value.replace(/\s/g, '').toUpperCase());
       if (invalid) {
         const controlName = this.getControlName(c);
         const inValidNI = { [controlName]: invalid };
@@ -39,6 +38,6 @@ export class NationalInsuranceNumberValidator implements Validator {
 
   getControlName(c: AbstractControl): string | null {
     const formGroup = c.parent.controls;
-    return Object.keys(formGroup).find((name) => c === formGroup[name]) || null;
+    return Object.keys(formGroup).find(name => c === formGroup[name]) || null;
   }
 }

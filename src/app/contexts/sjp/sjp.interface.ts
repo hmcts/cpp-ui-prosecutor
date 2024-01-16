@@ -325,7 +325,7 @@ export interface CourtReferralOffenceDecision extends OffenceDecision {
   referralReason: string;
 }
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 export interface DismissOffenceDecision extends OffenceDecision {}
 
 export interface DischargeOffenceDecision extends FinancialImpositionOffenceDecision {

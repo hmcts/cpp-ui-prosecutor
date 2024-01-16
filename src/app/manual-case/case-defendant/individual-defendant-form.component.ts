@@ -1,25 +1,16 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  ViewChild,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import * as cleanDeep from 'clean-deep';
+import cleanDeep from 'clean-deep';
 import { merge } from 'lodash';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { ValidationError } from '@cpp/pdk';
 import { Observable } from 'rxjs';
 import { ManualCaseDefendant, BailStatus } from '../../core/model';
 
-
-
 @Component({
   selector: 'individual-defendant-form',
   templateUrl: './individual-defendant-form.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IndividualDefendantFormComponent {
   @Input() manualCaseDefendant: ManualCaseDefendant;
@@ -28,9 +19,9 @@ export class IndividualDefendantFormComponent {
   @Input() aliasesReset: boolean;
   @Input() showAddButton: boolean;
   @Input() isPoliceProsecutor: boolean;
-  @Output() onSubmit = new EventEmitter<any>();
-  @Output() onError = new EventEmitter<ValidationError[]>();
-  @Output() onBack = new EventEmitter();
+  @Output() formSubmit = new EventEmitter<any>();
+  @Output() formError = new EventEmitter<ValidationError[]>();
+  @Output() goBack = new EventEmitter();
   @ViewChild(NgForm) form: NgForm;
 
   param: { value: string } = { value: 'optional' };
@@ -60,14 +51,12 @@ export class IndividualDefendantFormComponent {
   }
 
   isChargeTrialOrSentence() {
-    return (
-      this.manualCaseType === 'C' || this.manualCaseType === 'T' || this.manualCaseType === 'CO'
-    );
+    return this.manualCaseType === 'C' || this.manualCaseType === 'T' || this.manualCaseType === 'CO';
   }
 
   onErrors(error: ValidationError[]) {
     if (error) {
-      this.onError.emit(error);
+      this.formError.emit(error);
     }
   }
 
@@ -141,12 +130,12 @@ export class IndividualDefendantFormComponent {
     }
 
     delete defendantToStore.individual.guardianType;
-    defendantToStore = cleanDeep(defendantToStore);
+    defendantToStore = cleanDeep(defendantToStore) as ManualCaseDefendant;
 
-    this.onSubmit.emit({ action: this.submitAction, defendantToStore });
+    this.formSubmit.emit({ action: this.submitAction, defendantToStore });
   }
 
   back() {
-    this.onBack.emit();
+    this.goBack.emit();
   }
 }

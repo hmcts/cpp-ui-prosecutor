@@ -23,7 +23,7 @@ describe('CaseNotesGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         CaseNotesGuard,
         {
@@ -38,7 +38,8 @@ describe('CaseNotesGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(CaseNotesGuard);

@@ -13,7 +13,8 @@ describe('PaymentAndCollectionComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PaymentAndCollectionComponent, TestPaymentAndCollectionComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule]
+      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestPaymentAndCollectionComponent);
     fixture.componentInstance.caseDecision = { ...MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION };

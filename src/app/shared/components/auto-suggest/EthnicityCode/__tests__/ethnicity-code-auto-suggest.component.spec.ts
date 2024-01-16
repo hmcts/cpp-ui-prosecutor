@@ -2,18 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
-import {
-  pcfReferencedataReducer,
-  PcfReferenceDataState,
-} from '../../../../../core/reducers/pcf-reference-data';
+import { pcfReferencedataReducer, PcfReferenceDataState } from '../../../../../core/reducers/pcf-reference-data';
 import { PdkAutosuggestModule, PdkCoreModule, PdkFormModule, PdkTextInputModule } from '@cpp/pdk';
 import { FormsModule } from '@angular/forms';
 import { EthnicityCode } from '../../../../../core/model/reference-data-interfaces';
 import { By } from '@angular/platform-browser';
-import {
-  LoadObservedEthnicitiesAction,
-  LoadObservedEthnicitiesSuccessAction,
-} from '../../../../../core/actions';
+import { LoadObservedEthnicitiesAction, LoadObservedEthnicitiesSuccessAction } from '../../../../../core/actions';
 import { EthnicityCodeAutoSuggestComponent } from '../ethnicity-code-auto-suggest.component';
 
 describe('EthnicityCodeAutoSuggestComponent', () => {
@@ -21,13 +15,13 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
     {
       id: 'id',
       ethnicityCode: 'asian',
-      ethnicityDescription: 'Asian',
+      ethnicityDescription: 'Asian'
     },
     {
       id: 'id1',
       ethnicityCode: 'ir',
-      ethnicityDescription: 'Irish',
-    },
+      ethnicityDescription: 'Irish'
+    }
   ];
 
   let fixture: ComponentFixture<EthnicityCodeAutoSuggestTestComponent>;
@@ -43,11 +37,11 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
         PdkCoreModule,
         PdkTextInputModule,
         StoreModule.forRoot(() => null, {
-          runtimeChecks: {},
+          runtimeChecks: {}
         }),
-        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer),
+        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer)
       ],
-      declarations: [EthnicityCodeAutoSuggestComponent, EthnicityCodeAutoSuggestTestComponent],
+      declarations: [EthnicityCodeAutoSuggestComponent, EthnicityCodeAutoSuggestTestComponent]
     });
 
     fixture = TestBed.createComponent(EthnicityCodeAutoSuggestTestComponent);
@@ -124,13 +118,7 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
 @Component({
   selector: 'ethnicity-code-auto-suggest-test',
   template: `
-    <form
-      autocomplete="off"
-      pdk-form
-      novalidate
-      (validSubmit)="submitForm(form.value)"
-      #form="ngForm"
-    >
+    <form autocomplete="off" pdk-form novalidate (validSubmit)="submitForm(form.value)" #form="ngForm">
       <pdk-form-field label="EthnicityCode">
         <ethnicity-code-auto-suggest
           id="ethnicityCodeId"
@@ -143,7 +131,7 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
       </pdk-form-field>
       <button type="submit">Submit</button>
     </form>
-  `,
+  `
 })
 class EthnicityCodeAutoSuggestTestComponent {
   selectedValue;

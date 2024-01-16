@@ -2,7 +2,7 @@ export interface AppNotification {
   type: string;
   message: string;
   translationParameters?: {
-    [key: string]: string
+    [key: string]: string;
   };
   action?: string;
 }

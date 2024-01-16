@@ -19,7 +19,7 @@ describe('DashboardContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DashboardContainer, MockDashboardComponent],
-      imports: [CommonModule, StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [CommonModule, StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         {
           provide: Router,
@@ -27,7 +27,8 @@ describe('DashboardContainer', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     store = TestBed.get(Store);

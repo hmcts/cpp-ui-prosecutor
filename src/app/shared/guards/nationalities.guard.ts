@@ -7,7 +7,7 @@ import { State, getNationalities, LoadNationalitieSuccessAction, ApiError } from
 import { ReferenceDataService } from '../../contexts/reference-data';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class NationalitiesGuard implements CanActivate {
   constructor(private store: Store<State>, private pcfReferenceData: ReferenceDataService) {}
@@ -15,28 +15,26 @@ export class NationalitiesGuard implements CanActivate {
   hasNationalitiesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getNationalities),
-      map((nationalities) => !!nationalities && nationalities.length > 0),
+      map(nationalities => !!nationalities && nationalities.length > 0),
       take(1)
     );
   }
 
   hasNationalitiesInApi(): Observable<boolean> {
     return this.pcfReferenceData.getNationalities().pipe(
-      tap((nationalities) => {
+      tap(nationalities => {
         this.store.dispatch(new LoadNationalitieSuccessAction(nationalities));
       }),
-      map((nationalities) => !!nationalities),
+      map(nationalities => !!nationalities),
       take(1)
     );
   }
 
   canActivate(): Observable<boolean> {
     return this.hasNationalitiesInStore().pipe(
-      switchMap((hasNationalities) =>
-        hasNationalities ? of(hasNationalities) : this.hasNationalitiesInApi()
-      ),
+      switchMap(hasNationalities => (hasNationalities ? of(hasNationalities) : this.hasNationalitiesInApi())),
       tap({
-        error: (error) => this.store.dispatch(new ApiError(error)),
+        error: error => this.store.dispatch(new ApiError(error))
       }),
       catchError(() => of(true))
     );

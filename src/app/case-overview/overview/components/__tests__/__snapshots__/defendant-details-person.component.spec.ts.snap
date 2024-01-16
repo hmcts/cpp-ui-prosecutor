@@ -4,12 +4,9 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
 <defendant-details-test
   personDetails={[Function Object]}
 >
-  <defendant-details-person
-    ng-reflect-person-details="[object Object]"
-  >
+  <defendant-details-person>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Defendant details
@@ -17,16 +14,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -36,13 +30,11 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="defendant-name"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Guy SMITH 
@@ -52,16 +44,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -72,17 +61,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       <pdk-grid
         class="govuk-grid-column-two-thirds"
         data-role="date-of-birth"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
-          <date-of-birth
-            ng-reflect-date-of-birth="1957-03-11"
-          >
+          <date-of-birth>
             <div>
               dateOfBirth: 1957-03-11
             </div>
@@ -96,16 +81,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -115,12 +97,10 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="pre-line govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            Flat 1, Armageddon House
@@ -134,16 +114,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -153,13 +130,11 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="defendant-email"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            a@a.com 
@@ -169,16 +144,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -188,12 +160,10 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            333333333 
@@ -203,16 +173,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -222,12 +189,10 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            77777777 
@@ -237,16 +202,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -256,12 +218,10 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 
@@ -271,16 +231,13 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
           <b>
@@ -290,13 +247,11 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
       </pdk-grid>
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
         <div
           class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
           data-role="defendant-driver-number"
-          ng-reflect-vertical="2"
           pdk-padding-vertical="2"
         >
            – 

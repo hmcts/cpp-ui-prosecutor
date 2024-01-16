@@ -11,309 +11,207 @@ exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
       novalidate=""
       pdk-form=""
     >
-      <from-to-dates
-        ng-reflect-from-date="2015-10-10"
-        ng-reflect-max-days-for-to-date="31"
-        ng-reflect-to-date="2015-10-10"
-      >
+      <from-to-dates>
         <pdk-form-field
           hinttext="For example, 13 6 2016"
           label="From"
-          ng-reflect-hint-text="For example, 13 6 2016"
-          ng-reflect-label="From"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend"
-                ng-reflect-hidden="false"
-                ng-reflect-type="default"
               >
                  From 
               </legend>
-              
-              
               <pdk-hint
                 class="govuk-hint"
               >
-                
-                
-                
-                 For example, 13 6 2016 
-                
+                <div>
+                   For example, 13 6 2016 
+                </div>
               </pdk-hint>
-              
               <pdk-date-input
-                _nghost-a-c0=""
                 class="ng-untouched ng-pristine ng-valid"
                 name="fromDate"
-                ng-reflect-model="2015-10-10"
-                ng-reflect-name="fromDate"
-                ng-reflect-past-date=""
-                ng-reflect-required=""
                 pastdate=""
                 required=""
               >
                 <div
-                  _ngcontent-a-c0=""
                   class="pdk-date-input"
                 >
                   <div
-                    _ngcontent-a-c0=""
                     class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
                   >
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-day"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-day"
                         pdk-label=""
                       >
                          Day 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-date-input-2-day"
+                        id="pdk-date-input-GENERATED_ID-day"
                         name="dateDay"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="day"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-month"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-month"
                         pdk-label=""
                       >
                          Month 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-date-input-2-month"
+                        id="pdk-date-input-GENERATED_ID-month"
                         name="dateMonth"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="month"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-2-year"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-year"
                         pdk-label=""
                       >
                          Year 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-date-input-2-year"
+                        id="pdk-date-input-GENERATED_ID-year"
                         name="dateYear"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="year"
-                        ng-reflect-required=""
-                        ng-reflect-width="4"
                         required=""
                         type="number"
                       />
                     </div>
                   </div>
-                  
                 </div>
               </pdk-date-input>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
         <pdk-form-field
           hinttext="For example, 13 7 2016"
           label="To"
-          ng-reflect-error-messages="[object Object],[object Object"
-          ng-reflect-hint-text="For example, 13 7 2016"
-          ng-reflect-label="To"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend"
-                ng-reflect-hidden="false"
-                ng-reflect-type="default"
               >
                  To 
               </legend>
-              
-              
               <pdk-hint
                 class="govuk-hint"
               >
-                
-                
-                
-                 For example, 13 7 2016 
-                
+                <div>
+                   For example, 13 7 2016 
+                </div>
               </pdk-hint>
-              
               <pdk-date-input
-                _nghost-a-c0=""
                 class="ng-untouched ng-pristine ng-valid"
                 name="toDate"
-                ng-reflect-max-days-value="31"
-                ng-reflect-model="2015-10-10"
-                ng-reflect-name="toDate"
-                ng-reflect-past-date=""
-                ng-reflect-required=""
                 pastdate=""
                 required=""
               >
                 <div
-                  _ngcontent-a-c0=""
                   class="pdk-date-input"
                 >
                   <div
-                    _ngcontent-a-c0=""
                     class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
                   >
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-day"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-day"
                         pdk-label=""
                       >
                          Day 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="day"
-                        id="pdk-date-input-4-day"
+                        id="pdk-date-input-GENERATED_ID-day"
                         name="dateDay"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="day"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-month"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-month"
                         pdk-label=""
                       >
                          Month 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                         formcontrolname="month"
-                        id="pdk-date-input-4-month"
+                        id="pdk-date-input-GENERATED_ID-month"
                         name="dateMonth"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="month"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c0=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c0=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-year"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-year"
                         pdk-label=""
                       >
                          Year 
                       </label>
                       <input
-                        _ngcontent-a-c0=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                         formcontrolname="year"
-                        id="pdk-date-input-4-year"
+                        id="pdk-date-input-GENERATED_ID-year"
                         name="dateYear"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="year"
-                        ng-reflect-required=""
-                        ng-reflect-width="4"
                         required=""
                         type="number"
                       />
                     </div>
                   </div>
-                  
                 </div>
               </pdk-date-input>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
       </from-to-dates>

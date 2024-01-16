@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -10,8 +10,8 @@ import {
 import { Title } from '@angular/platform-browser';
 import { select, Store } from '@ngrx/store';
 
-import { combineLatest, fromEvent, merge, Observable, Subscription } from 'rxjs';
-import { distinctUntilChanged, filter, map, mapTo, mergeMap, startWith, tap } from 'rxjs/operators';
+import { combineLatest, fromEvent, merge, Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map, mapTo, mergeMap, startWith } from 'rxjs/operators';
 
 import { HeaderNavItem } from '@cpp/application';
 
@@ -66,7 +66,7 @@ export class AppContainer {
     this.translate.use(browserLang.match(/en|cy/) ? browserLang : 'en');
 
     this.isBusy$ = combineLatest(
-      store.pipe(select(getHasApiActivity), startWith(false)),
+      store.pipe(select(getHasApiActivity), debounceTime(1), startWith(false)),
       router.events.pipe(
         filter(event => event instanceof RouteConfigLoadStart || event instanceof RouteConfigLoadEnd),
         map(event => event instanceof RouteConfigLoadStart),
@@ -78,14 +78,13 @@ export class AppContainer {
 
     this.searchEnabled$ = store.pipe(
       select(getUserGroups),
-      map(userGroups => (userGroups || []).some(group => [
-                      'Court Administrators',
-                      'Crown Court Admin',
-                      'Court Clerks',
-                      'Legal Advisers',
-                      'Listing Officers',
-                    ].includes(group.groupName))
-                    )
+      map(userGroups =>
+        (userGroups || []).some(group =>
+          ['Court Administrators', 'Crown Court Admin', 'Court Clerks', 'Legal Advisers', 'Listing Officers'].includes(
+            group.groupName
+          )
+        )
+      )
     );
 
     this.offline$ = merge(
@@ -113,42 +112,42 @@ export class AppContainer {
       .subscribe(data => titleService.setTitle(data.title || 'Criminal Justice Service Online'));
 
     this.headerNavItems$ = this.searchEnabled$.pipe(
-        map((searchEnabled) => {
-          let navItems: HeaderNavItem[] = [];
+      map(searchEnabled => {
+        let navItems: HeaderNavItem[] = [];
 
-          if (searchEnabled) {
-            navItems = [
-              {
-                title: 'Detailed search',
-                href: this.searchUrl
-              }
-            ];
-          }
+        if (searchEnabled) {
           navItems = [
-              ...navItems,
-              {
-                title: 'Home',
-                href: this.appConfigService.getAppUrl()
-              },
-              {
-                title: 'Your account',
-                href: this.appConfigService.getAccountUrl()
-              },
-              {
-                title: 'Sign out',
-                href: this.appConfigService.getLogoutUrl()
-              }
-            ];
-
-          if (this.devTools) {
-              navItems.push({
-                title: 'Dev tools',
-                href: '/prosecutor/dev-tools'
-              });
+            {
+              title: 'Detailed search',
+              href: this.searchUrl
             }
-          return navItems;
-        })
-      );
+          ];
+        }
+        navItems = [
+          ...navItems,
+          {
+            title: 'Home',
+            href: this.appConfigService.getAppUrl()
+          },
+          {
+            title: 'Your account',
+            href: this.appConfigService.getAccountUrl()
+          },
+          {
+            title: 'Sign out',
+            href: this.appConfigService.getLogoutUrl()
+          }
+        ];
+
+        if (this.devTools) {
+          navItems.push({
+            title: 'Dev tools',
+            href: '/prosecutor/dev-tools'
+          });
+        }
+        return navItems;
+      })
+    );
   }
 
   get searchUrl() {

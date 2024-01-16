@@ -50,10 +50,7 @@
 
         <ng-container *ngIf="manualCaseType !== 'J'">
           <!-- Middlename -->
-          <pdk-form-field
-            label="{{ 'MANUAL_CASE_DEFENDANT.MIDDLENAME' | translate: param }}"
-            labelType="small"
-          >
+          <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.MIDDLENAME' | translate: param }}" labelType="small">
             <input
               pdk-text-input
               pdk-input
@@ -131,12 +128,8 @@
               [required]="true"
               data-role="gender-input"
             >
-              <pdk-radio-button value="MALE">{{
-                'EDIT_PERSONAL_DETAILS.MALE' | translate
-              }}</pdk-radio-button>
-              <pdk-radio-button value="FEMALE">{{
-                'EDIT_PERSONAL_DETAILS.FEMALE' | translate
-              }}</pdk-radio-button>
+              <pdk-radio-button value="MALE">{{ 'EDIT_PERSONAL_DETAILS.MALE' | translate }}</pdk-radio-button>
+              <pdk-radio-button value="FEMALE">{{ 'EDIT_PERSONAL_DETAILS.FEMALE' | translate }}</pdk-radio-button>
               <pdk-radio-button value="NOT_SPECIFIED">{{
                 'EDIT_PERSONAL_DETAILS.NOT_SPECIFIED' | translate
               }}</pdk-radio-button>
@@ -148,10 +141,7 @@
         </ng-container>
 
         <ng-container *ngIf="isChargeTrialOrSentence()">
-          <pdk-form-field
-            label="{{ 'EDIT_PERSONAL_DETAILS.NATIONALITY' | translate }}"
-            labelType="small"
-          >
+          <pdk-form-field label="{{ 'EDIT_PERSONAL_DETAILS.NATIONALITY' | translate }}" labelType="small">
             <nationality-auto-suggest
               id="nationalityId"
               name="nationality"
@@ -163,19 +153,14 @@
             </nationality-auto-suggest>
           </pdk-form-field>
 
-          <pdk-form-field
-            label="{{ 'EDIT_PERSONAL_DETAILS.ADDITIONAL_NATIONALITY' | translate }}"
-            labelType="none"
-          >
+          <pdk-form-field label="{{ 'EDIT_PERSONAL_DETAILS.ADDITIONAL_NATIONALITY' | translate }}" labelType="none">
             <details pdk-details>
               <summary>{{ 'EDIT_PERSONAL_DETAILS.ADD_SECOND_NATIONALITY' | translate }}</summary>
               <pdk-details-text>
                 <nationality-auto-suggest
                   id="additionalNationalityId"
                   name="additionalNationality"
-                  [ngModel]="
-                    manualCaseDefendant.individual.selfDefinedInformation.additionalNationality
-                  "
+                  [ngModel]="manualCaseDefendant.individual.selfDefinedInformation.additionalNationality"
                   [suggestionKey]="'isoCode'"
                   data-role="second-nationality-input"
                   mapSelectionToKey
@@ -187,10 +172,7 @@
         </ng-container>
 
         <ng-container *ngIf="isTrialOrSentence()">
-          <pdk-form-field
-            label="{{ 'EDIT_PERSONAL_DETAILS.SELFETHNICITY' | translate: param }}"
-            labelType="small"
-          >
+          <pdk-form-field label="{{ 'EDIT_PERSONAL_DETAILS.SELFETHNICITY' | translate: param }}" labelType="small">
             <ethnicity-auto-suggest
               id="ethnicity"
               name="ethnicity"
@@ -205,10 +187,7 @@
 
       <div ngModelGroup="personalInformation">
         <ng-container *ngIf="isTrialOrSentence()">
-          <pdk-form-field
-            label="{{ 'MANUAL_CASE_DEFENDANT.OBSERVEDETHNICITY' | translate: param }}"
-            labelType="small"
-          >
+          <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.OBSERVEDETHNICITY' | translate: param }}" labelType="small">
             <ethnicity-code-auto-suggest
               id="observedEthnicity"
               name="observedEthnicity"
@@ -246,18 +225,12 @@
               <!-- bailConditions -->
               <pdk-inset-text
                 size="narrow"
-                *ngIf="
-                  manualCaseDefendant.individual.custodyStatus === 'B' &&
-                  bailStatus.statusCode === 'B'
-                "
+                *ngIf="manualCaseDefendant.individual.custodyStatus === 'B' && bailStatus.statusCode === 'B'"
               >
                 <pdk-form-field
                   label="{{ 'MANUAL_CASE_DEFENDANT.BAIL_CONDITIONS' | translate }}"
                   labelType="small"
-                  *ngIf="
-                    manualCaseDefendant.individual.custodyStatus === 'B' &&
-                    bailStatus.statusCode === 'B'
-                  "
+                  *ngIf="manualCaseDefendant.individual.custodyStatus === 'B' && bailStatus.statusCode === 'B'"
                 >
                   <textarea
                     name="bailConditions"
@@ -274,18 +247,12 @@
               </pdk-inset-text>
               <pdk-inset-text
                 size="narrow"
-                *ngIf="
-                  manualCaseDefendant.individual.custodyStatus === 'P' &&
-                  bailStatus.statusCode === 'P'
-                "
+                *ngIf="manualCaseDefendant.individual.custodyStatus === 'P' && bailStatus.statusCode === 'P'"
               >
                 <pdk-form-field
                   label="{{ 'MANUAL_CASE_DEFENDANT.PRE_RELEASE_CONDITIONS' | translate }}"
                   labelType="small"
-                  *ngIf="
-                    manualCaseDefendant.individual.custodyStatus === 'P' &&
-                    bailStatus.statusCode === 'P'
-                  "
+                  *ngIf="manualCaseDefendant.individual.custodyStatus === 'P' && bailStatus.statusCode === 'P'"
                 >
                   <textarea
                     name="bailConditions"
@@ -307,10 +274,7 @@
     </div>
 
     <ng-container *ngIf="!isTrialOrSentence()">
-      <pdk-form-field
-        label="{{ 'MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS' | translate: param }}"
-        labelType="small"
-      >
+      <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS' | translate: param }}" labelType="small">
         <input
           pdk-text-input="number"
           pdk-input
@@ -393,9 +357,7 @@
               pdk-input
               name="primaryEmail"
               type="email"
-              [(ngModel)]="
-                manualCaseDefendant.individual.personalInformation.contactDetails.primaryEmail
-              "
+              [(ngModel)]="manualCaseDefendant.individual.personalInformation.contactDetails.primaryEmail"
               validateEmail
               [maxLength]="255"
             />
@@ -447,12 +409,8 @@
         required
         [(ngModel)]="manualCaseDefendant.documentationLanguage"
       >
-        <pdk-radio-button value="E">{{
-          'MANUAL_CASE_DEFENDANT.ENGLISH' | translate
-        }}</pdk-radio-button>
-        <pdk-radio-button value="W">{{
-          'MANUAL_CASE_DEFENDANT.WELSH' | translate
-        }}</pdk-radio-button>
+        <pdk-radio-button value="E">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
+        <pdk-radio-button value="W">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
       </pdk-radio-group>
     </pdk-form-field>
 
@@ -473,12 +431,8 @@
         required
         [(ngModel)]="manualCaseDefendant.hearingLanguage"
       >
-        <pdk-radio-button value="E">{{
-          'MANUAL_CASE_DEFENDANT.ENGLISH' | translate
-        }}</pdk-radio-button>
-        <pdk-radio-button value="W">{{
-          'MANUAL_CASE_DEFENDANT.WELSH' | translate
-        }}</pdk-radio-button>
+        <pdk-radio-button value="E">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
+        <pdk-radio-button value="W">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
       </pdk-radio-group>
     </pdk-form-field>
   </div>

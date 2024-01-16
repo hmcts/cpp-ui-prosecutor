@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`apiReducer API_ERROR should remove the completed request from the pending requests 1`] = `
-Object {
-  "errors": Array [
-    Object {
+{
+  "errors": [
+    {
       "error": "*",
     },
   ],
-  "requests": Array [],
+  "requests": [],
 }
 `;
 
 exports[`apiReducer API_REQUEST should add the incoming request to the pending requests 1`] = `
-Object {
-  "errors": Array [],
-  "requests": Array [
-    Object {
+{
+  "errors": [],
+  "requests": [
+    {
       "url": "/",
     },
   ],
@@ -23,22 +23,22 @@ Object {
 `;
 
 exports[`apiReducer API_RESPONSE should remove the completed request from the pending requests 1`] = `
-Object {
-  "errors": Array [],
-  "requests": Array [],
+{
+  "errors": [],
+  "requests": [],
 }
 `;
 
 exports[`apiReducer ROUTER_NAVIGATION should reset the state 1`] = `
-Object {
-  "errors": Array [],
-  "requests": Array [],
+{
+  "errors": [],
+  "requests": [],
 }
 `;
 
 exports[`apiReducer undefined action should initialize the default state 1`] = `
-Object {
-  "errors": Array [],
-  "requests": Array [],
+{
+  "errors": [],
+  "requests": [],
 }
 `;

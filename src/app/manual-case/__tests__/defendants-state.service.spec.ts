@@ -7,7 +7,7 @@ describe('Manual Case Defendant State Service', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ManualCaseDefendantStateService],
+      providers: [ManualCaseDefendantStateService]
     });
 
     defendantStateService = TestBed.get(ManualCaseDefendantStateService);
@@ -35,7 +35,7 @@ describe('Manual Case Defendant State Service', () => {
           personalInformation: {
             contactDetails: {
               primaryEmail: 'ben@abc.com',
-              home: '07968222222',
+              home: '07968222222'
             },
             address: {
               address1: '22 Gervaise Close',
@@ -43,19 +43,19 @@ describe('Manual Case Defendant State Service', () => {
               address3: 'Slough',
               address4: '',
               address5: '',
-              postcode: 'SL1 5ZZ',
+              postcode: 'SL1 5ZZ'
             },
             title: 'Mr',
             firstName: 'Ben',
-            lastName: 'Joyce',
+            lastName: 'Joyce'
           },
           selfDefinedInformation: {
-            dateOfBirth: '1970-02-02',
-          },
+            dateOfBirth: '1970-02-02'
+          }
         },
         numPreviousConvictions: 2,
         documentationLanguage: 'ENGLISH',
-        hearingLanguage: 'WELSH',
+        hearingLanguage: 'WELSH'
       },
       {
         id: 'a87508c8-9180-488a-8ddc-9086df35a4a2',
@@ -63,7 +63,7 @@ describe('Manual Case Defendant State Service', () => {
           personalInformation: {
             contactDetails: {
               primaryEmail: 'darren@abc.com',
-              home: '07968333333',
+              home: '07968333333'
             },
             address: {
               address1: '33 Talford Drive',
@@ -71,20 +71,20 @@ describe('Manual Case Defendant State Service', () => {
               address3: 'Basingstoke',
               address4: '',
               address5: '',
-              postcode: 'RG21 6ZZ',
+              postcode: 'RG21 6ZZ'
             },
             title: 'Mr',
             firstName: 'Darren',
-            lastName: 'Smith',
+            lastName: 'Smith'
           },
           selfDefinedInformation: {
-            dateOfBirth: '1980-03-03',
-          },
+            dateOfBirth: '1980-03-03'
+          }
         },
         numPreviousConvictions: 3,
         documentationLanguage: 'WELSH',
-        hearingLanguage: 'ENGLISH',
-      },
+        hearingLanguage: 'ENGLISH'
+      }
     ] as ManualCaseDefendant[];
 
     defendantStateService.initialise(defendants);
@@ -121,7 +121,7 @@ describe('Manual Case Defendant State Service', () => {
           personalInformation: {
             contactDetails: {
               primaryEmail: 'ben@abc.com',
-              home: '07968222222',
+              home: '07968222222'
             },
             address: {
               address1: '22 Gervaise Close',
@@ -129,20 +129,20 @@ describe('Manual Case Defendant State Service', () => {
               address3: 'Slough',
               address4: '',
               address5: '',
-              postcode: 'SL1 5ZZ',
+              postcode: 'SL1 5ZZ'
             },
             title: 'Mr',
             firstName: 'Ben',
-            lastName: 'Joyce',
+            lastName: 'Joyce'
           },
           selfDefinedInformation: {
-            dateOfBirth: '1970-02-02',
-          },
+            dateOfBirth: '1970-02-02'
+          }
         },
         numPreviousConvictions: 2,
         documentationLanguage: 'ENGLISH',
-        hearingLanguage: 'WELSH',
-      },
+        hearingLanguage: 'WELSH'
+      }
     ] as ManualCaseDefendant[];
 
     defendantStateService.initialise(defendants);

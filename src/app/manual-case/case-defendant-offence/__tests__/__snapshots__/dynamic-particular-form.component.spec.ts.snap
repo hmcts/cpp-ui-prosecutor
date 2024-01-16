@@ -12,242 +12,145 @@ exports[`Organisation Defendant Form Component should render component correctly
   <dynamic-particular-form
     class="ng-untouched ng-pristine ng-valid"
     name="dynamicParticularFormData"
-    ng-reflect-model="[object Object]"
-    ng-reflect-name="dynamicParticularFormData"
-    ng-reflect-offence-date-types="[object Object],[object Object"
-    ng-reflect-offence-wording="**"
   >
-    
-    
     <form
       class="ng-untouched ng-valid ng-dirty"
       novalidate=""
       pdk-form=""
     >
-      
       <div>
-        
-        
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object]"
-          ng-reflect-label="Offence date type"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
-            
-            
-            
             <label
               class="govuk-label govuk-label--s"
-              for="pdk-select-2"
-              ng-reflect-hidden="false"
-              ng-reflect-type="small"
+              for="pdk-select-GENERATED_ID"
             >
                Offence date type 
             </label>
-            
-            
-            
             <pdk-select
               class="ng-untouched ng-pristine ng-valid"
               justified=""
-              ng-reflect-justified=""
-              ng-reflect-model="4"
-              ng-reflect-name="value_0"
-              ng-reflect-options="[object Object],[object Object"
-              ng-reflect-required="true"
               required=""
             >
               <select
                 class="govuk-select pdk-select--justified"
-                id="pdk-select-2"
+                id="pdk-select-GENERATED_ID"
                 name="value_0"
                 required=""
               >
-                
-                
-                
                 <option
-                  ng-reflect-value="3"
                   value="3"
                 >
                    after 
                 </option>
-                
                 <option
-                  ng-reflect-value="4"
                   value="4"
                 >
                    between 
                 </option>
               </select>
             </pdk-select>
-            
-            
           </pdk-form-group>
         </pdk-form-field>
-        
-        
-        
-        
       </div>
       <div>
-        
-        
-        
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object],[object Object"
-          ng-reflect-label="MANUAL_CASE_OFFENCE.DATE"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend govuk-fieldset__legend--s"
-                ng-reflect-hidden="false"
-                ng-reflect-type="small"
               >
                  MANUAL_CASE_OFFENCE.DATE 
               </legend>
-              
-              
-              
               <pdk-date-input
-                _nghost-a-c1=""
                 class="ng-untouched ng-valid ng-dirty"
-                ng-reflect-model="2018-10-15"
-                ng-reflect-name="date_1"
-                ng-reflect-past-date=""
-                ng-reflect-picker=""
-                ng-reflect-required=""
                 pastdate=""
                 picker=""
                 required=""
               >
                 <div
-                  _ngcontent-a-c1=""
                   class="pdk-date-input"
                 >
                   <div
-                    _ngcontent-a-c1=""
                     class="govuk-date-input ng-untouched ng-pristine ng-valid"
-                    ng-reflect-form="[object Object]"
                   >
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-day"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-day"
                         pdk-label=""
                       >
                          Day 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
                         formcontrolname="day"
-                        id="pdk-date-input-4-day"
+                        id="pdk-date-input-GENERATED_ID-day"
                         name="dateDay"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="day"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-month"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-month"
                         pdk-label=""
                       >
                          Month 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
                         formcontrolname="month"
-                        id="pdk-date-input-4-month"
+                        id="pdk-date-input-GENERATED_ID-month"
                         name="dateMonth"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="month"
-                        ng-reflect-required=""
-                        ng-reflect-width="2"
                         required=""
                         type="number"
                       />
                     </div>
                     <div
-                      _ngcontent-a-c1=""
                       class="govuk-date-input__item"
                     >
                       <label
-                        _ngcontent-a-c1=""
                         class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-4-year"
-                        ng-reflect-type=""
+                        for="pdk-date-input-GENERATED_ID-year"
                         pdk-label=""
                       >
                          Year 
                       </label>
                       <input
-                        _ngcontent-a-c1=""
                         autocomplete="off"
                         class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-4 ng-valid"
                         formcontrolname="year"
-                        id="pdk-date-input-4-year"
+                        id="pdk-date-input-GENERATED_ID-year"
                         name="dateYear"
-                        ng-reflect-has-error="false"
-                        ng-reflect-name="year"
-                        ng-reflect-required=""
-                        ng-reflect-width="4"
                         required=""
                         type="number"
                       />
                     </div>
                   </div>
-                  
                   <div
-                    _ngcontent-a-c1=""
                     class="pdk-!-negative-margin-left-2"
-                    ng-reflect-left="-2"
                     pdk-margin-left="-2"
                   >
-                    <pdk-date-picker-toggle
-                      _ngcontent-a-c1=""
-                      ng-reflect-disabled="false"
-                      ng-reflect-future-date="false"
-                      ng-reflect-past-date="true"
-                      ng-reflect-value="Mon Oct 15 2018 00:00:00 GMT+0"
-                    >
+                    <pdk-date-picker-toggle>
                       <pdk-interaction-container>
                         <div>
                           <div
@@ -278,141 +181,75 @@ exports[`Organisation Defendant Form Component should render component correctly
                               </div>
                             </pdk-date-picker-icon>
                           </div>
-                          
                         </div>
                       </pdk-interaction-container>
                     </pdk-date-picker-toggle>
                   </div>
                 </div>
               </pdk-date-input>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
-        
-        
-        
-        
-        
       </div>
       <div>
-        
-        
-        
-        
         <div
           class="dynamic-label"
         >
           occurring at
         </div>
-        
-        
       </div>
       <div>
-        
-        
-        
-        
-        
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object]"
-          ng-reflect-label="Specify township"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
-            
-            
-            
             <label
               class="govuk-label govuk-label--s"
-              for="pdk-form-control-5"
-              ng-reflect-hidden="false"
-              ng-reflect-type="small"
+              for="pdk-form-control-undefined-GENERATED_ID"
             >
                Specify township 
             </label>
-            
-            
-            
             <input
               class="ng-untouched ng-pristine ng-valid govuk-input"
               data-role="Specify township"
-              id="pdk-form-control-5"
-              ng-reflect-format=""
-              ng-reflect-model="Liverpool street"
-              ng-reflect-name="value_3"
-              ng-reflect-required=""
-              ng-reflect-width=""
+              id="pdk-form-control-undefined-GENERATED_ID"
               pdk-input=""
               pdk-text-input=""
               required=""
               type="text"
             />
-            
-            
           </pdk-form-group>
         </pdk-form-field>
-        
       </div>
       <div>
-        
-        
-        
-        
-        
-        
         <pdk-form-field
           labeltype="small"
-          ng-reflect-error-messages="[object Object]"
-          ng-reflect-label="MANUAL_CASE_OFFENCE.SELECT_AN_"
-          ng-reflect-label-type="small"
         >
-          
           <pdk-form-group
             class="pdk-form-group"
-            ng-reflect-has-error="false"
           >
-            
             <fieldset
               class="govuk-fieldset"
               pdk-fieldset=""
             >
-              
               <legend
                 class="govuk-fieldset__legend govuk-fieldset__legend--s"
-                ng-reflect-hidden="false"
-                ng-reflect-type="small"
               >
                  MANUAL_CASE_OFFENCE.SELECT_AN_OPTION 
               </legend>
-              
-              
-              
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
                 data-role="value_4"
-                ng-reflect-model="Allowed another, namely"
-                ng-reflect-name="value_4"
-                ng-reflect-required=""
                 required=""
               >
                 <div
                   class="govuk-radios"
                 >
-                  
-                  
                   <div>
                     <pdk-radio-button
                       class="govuk-!-margin-bottom-2"
-                      ng-reflect-bottom="2"
-                      ng-reflect-value="Allowed another, namely"
                       pdk-margin-bottom="2"
                     >
                       <div
@@ -420,151 +257,84 @@ exports[`Organisation Defendant Form Component should render component correctly
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-8"
-                          name="pdk-radio-group-7"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="Allowed another, namely"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-8"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
                           Allowed another, namely
                         </label>
                       </div>
                     </pdk-radio-button>
-                    
                     <fieldset>
                       <div
                         class="radio-container"
                       >
-                        
-                        
-                        
-                        
                         <pdk-form-field
                           labeltype="small"
-                          ng-reflect-error-messages="[object Object]"
-                          ng-reflect-label="Specify person"
-                          ng-reflect-label-type="small"
                         >
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
                             <label
                               class="govuk-label govuk-label--s"
-                              for="pdk-form-control-10"
-                              ng-reflect-hidden="false"
-                              ng-reflect-type="small"
+                              for="pdk-form-control-undefined-GENERATED_ID"
                             >
                                Specify person 
                             </label>
-                            
-                            
-                            
                             <input
                               class="ng-untouched ng-pristine ng-valid govuk-input"
-                              id="pdk-form-control-10"
-                              ng-reflect-format=""
-                              ng-reflect-model="Mr. Dora DIMSUM"
-                              ng-reflect-name="value_4_0_0"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
+                              id="pdk-form-control-undefined-GENERATED_ID"
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
-                        
-                        
-                        
-                        
-                        
-                        
                         <div
                           class="dynamic-label"
                         >
                           to have possession of an official document, namely
                         </div>
-                        
-                        
-                        
-                        
                         <pdk-form-field
                           labeltype="small"
-                          ng-reflect-error-messages="[object Object]"
-                          ng-reflect-label="Specify document"
-                          ng-reflect-label-type="small"
                         >
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
                             <label
                               class="govuk-label govuk-label--s"
-                              for="pdk-form-control-11"
-                              ng-reflect-hidden="false"
-                              ng-reflect-type="small"
+                              for="pdk-form-control-undefined-GENERATED_ID"
                             >
                                Specify document 
                             </label>
-                            
-                            
-                            
                             <input
                               class="ng-untouched ng-pristine ng-valid govuk-input"
-                              id="pdk-form-control-11"
-                              ng-reflect-format=""
-                              ng-reflect-model="The secret code"
-                              ng-reflect-name="value_4_0_2"
-                              ng-reflect-required="true"
-                              ng-reflect-width=""
+                              id="pdk-form-control-undefined-GENERATED_ID"
                               pdk-input=""
                               pdk-text-input=""
                               required=""
                               type="text"
                             />
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
-                        
-                        
-                        
-                        
-                        
-                        
                         <div
                           class="dynamic-label"
                         >
                           issued for your use alone
                         </div>
-                        
                       </div>
                     </fieldset>
                   </div>
                   <div>
                     <pdk-radio-button
                       class="govuk-!-margin-bottom-2"
-                      ng-reflect-bottom="2"
-                      ng-reflect-value="Communicated to"
                       pdk-margin-bottom="2"
                     >
                       <div
@@ -572,93 +342,58 @@ exports[`Organisation Defendant Form Component should render component correctly
                       >
                         <input
                           class="govuk-radios__input"
-                          id="pdk-radio-9"
-                          name="pdk-radio-group-7"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
                           type="radio"
                           value="Communicated to"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
-                          for="pdk-radio-9"
-                          ng-reflect-type=""
+                          for="pdk-radio-GENERATED_ID"
                           pdk-label=""
                         >
                           Communicated to
                         </label>
                       </div>
                     </pdk-radio-button>
-                    
                     <fieldset
                       disabled=""
                     >
                       <div
                         class="radio-container"
                       >
-                        
-                        
-                        
-                        
                         <pdk-form-field
                           labeltype="small"
-                          ng-reflect-error-messages="[object Object]"
-                          ng-reflect-label="Specify to whom word was commu"
-                          ng-reflect-label-type="small"
                         >
-                          
                           <pdk-form-group
                             class="pdk-form-group"
-                            ng-reflect-has-error="false"
                           >
-                            
-                            
-                            
-                            
                             <label
                               class="govuk-label govuk-label--s"
-                              for="pdk-form-control-12"
-                              ng-reflect-hidden="false"
-                              ng-reflect-type="small"
+                              for="pdk-form-control-undefined-GENERATED_ID"
                             >
                                Specify to whom word was communicated 
                             </label>
-                            
-                            
-                            
                             <input
                               class="ng-untouched ng-pristine ng-valid govuk-input"
-                              id="pdk-form-control-12"
-                              ng-reflect-format=""
-                              ng-reflect-name="value_4_1_0"
-                              ng-reflect-required="false"
-                              ng-reflect-width=""
+                              id="pdk-form-control-undefined-GENERATED_ID"
                               pdk-input=""
                               pdk-text-input=""
                               type="text"
                             />
-                            
-                            
                           </pdk-form-group>
                         </pdk-form-field>
-                        
-                        
-                        
-                        
-                        
-                        
                         <div
                           class="dynamic-label"
                         >
                           a secret official code word issued for use alone
                         </div>
-                        
                       </div>
                     </fieldset>
                   </div>
                 </div>
               </pdk-radio-group>
-              
             </fieldset>
-            
           </pdk-form-group>
         </pdk-form-field>
       </div>
@@ -666,8 +401,6 @@ exports[`Organisation Defendant Form Component should render component correctly
         <button
           class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
           data-role="apply"
-          ng-reflect-bottom="3"
-          ng-reflect-top="3"
           pdk-button="secondary"
           pdk-margin-bottom="3"
           pdk-margin-top="3"
@@ -677,25 +410,24 @@ exports[`Organisation Defendant Form Component should render component correctly
         </button>
       </div>
     </form>
-    
   </dynamic-particular-form>
 </host-dynamic-form>
 `;
 
 exports[`Organisation Defendant Form Component should throw error build wording from a blank form 1`] = `
-Array [
-  Object {
-    "id": "pdk-form-error-26",
+[
+  {
+    "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.OFFENCE_DATE_TYPE_REQUIRED",
     "shouldFocus": true,
   },
-  Object {
-    "id": "pdk-form-error-28",
+  {
+    "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.DATE_REQUIRED",
     "shouldFocus": true,
   },
-  Object {
-    "id": "pdk-form-error-30",
+  {
+    "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.SELECT_AN_OPTION",
     "shouldFocus": true,
   },

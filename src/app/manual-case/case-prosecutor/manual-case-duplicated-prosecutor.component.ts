@@ -7,7 +7,7 @@ import { ValidationError } from '@cpp/pdk';
 
 @Component({
   selector: 'manual-case-duplicated-prosecutor',
-  templateUrl: './manual-case-duplicated-prosecutor.component.html',
+  templateUrl: './manual-case-duplicated-prosecutor.component.html'
 })
 export class ManualCaseDuplicatedProsecutorComponent implements OnInit {
   @Input() manualCaseDetail: ManualCase;

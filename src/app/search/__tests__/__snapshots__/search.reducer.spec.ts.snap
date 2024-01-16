@@ -5,11 +5,11 @@ exports[` Search reducer default should set the state 1`] = `null`;
 exports[` Search reducer when reset search should set the state 1`] = `null`;
 
 exports[` Search reducer when search success should set the state 1`] = `
-Object {
+{
   "foundCasesWithOutdatedDefendantsName": true,
   "keyword": "search",
-  "results": Array [
-    Object {
+  "results": [
+    {
       "caseId": "caseId",
     },
   ],

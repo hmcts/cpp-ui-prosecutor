@@ -39,7 +39,7 @@ import { formatDate } from '../../../../../tools/utils/date';
 
         <pdk-grid container pdk-padding-vertical="1">
           <pdk-grid one-third>
-            <b>{{ payment.paymentType == 'PAY_TO_COURT' ? 'Payment terms' : 'Reserve terms(if deductions fail)' }}</b>
+            <b>{{ payment.paymentType === 'PAY_TO_COURT' ? 'Payment terms' : 'Reserve terms(if deductions fail)' }}</b>
           </pdk-grid>
           <pdk-grid two-thirds>
             {{ this.buildPaymentTerms() }}

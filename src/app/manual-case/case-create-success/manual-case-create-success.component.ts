@@ -3,7 +3,7 @@ import { ManualCase } from '../../core/model/manual-case';
 
 @Component({
   selector: 'manual-case-create-success',
-  templateUrl: './manual-case-create-success.component.html',
+  templateUrl: './manual-case-create-success.component.html'
 })
 export class CaseCreateSuccessComponent {
   @Input() reference: { prosecutorCaseReference: string; caseId: string };

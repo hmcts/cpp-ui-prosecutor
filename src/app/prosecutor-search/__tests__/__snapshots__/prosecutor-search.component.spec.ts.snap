@@ -7,13 +7,12 @@ exports[`ProsecutorSearchComponent should match snapshot 1`] = `
   filterByNonStandardOrganisation={[Function Function]}
   hasNpp={[Function Boolean]}
   includeNonStandardOrganisations="false"
-  prosecutorSelected={[Function EventEmitter]}
+  prosecutorSelected={[Function EventEmitter_]}
   searchLabel={[Function String]}
 >
   <pdk-form-field
     class="govuk-!-margin-bottom-2"
     labeltype="small"
-    ng-reflect-bottom="2"
     pdk-margin-bottom="2"
   >
     <pdk-checkbox
@@ -24,12 +23,10 @@ exports[`ProsecutorSearchComponent should match snapshot 1`] = `
     </pdk-checkbox>
   </pdk-form-field><div
     class="govuk-!-margin-bottom-3"
-    ng-reflect-bottom="3"
     pdk-margin-bottom="3"
   >
     <a
       class="govuk-link govuk-link--no-visited-state"
-      ng-reflect-unvisited=""
       pdk-link=""
       unvisited=""
     >
@@ -57,9 +54,8 @@ exports[`ProsecutorSearchComponent should render for npp 1`] = `
   filterByNonStandardOrganisation={[Function Function]}
   hasNpp="false"
   includeNonStandardOrganisations="false"
-  prosecutorSelected={[Function EventEmitter]}
+  prosecutorSelected={[Function EventEmitter_]}
   searchLabel={[Function String]}
 >
-  
 </prosecutor-search>
 `;

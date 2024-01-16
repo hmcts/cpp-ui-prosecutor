@@ -1,31 +1,20 @@
-import { Component, DebugElement, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, NgForm } from '@angular/forms';
-import { By } from '@angular/platform-browser';
 import { ProsecutorValidator } from '../index';
 
 describe('Prosecutor Validator', () => {
-
-  let fixture: ComponentFixture<TestProsecutorValidator>;
+  let fixture: ComponentFixture<TestProsecutorValidatorComponent>;
   let form: NgForm;
-  let ctrlElement: DebugElement;
 
   beforeEach(() => {
-    TestBed.configureTestingModule(
-      {
-        declarations: [
-          TestProsecutorValidator,
-          ProsecutorValidator
-        ],
-        imports: [
-          FormsModule
-        ]
-      }
-    );
+    TestBed.configureTestingModule({
+      declarations: [TestProsecutorValidatorComponent, ProsecutorValidator],
+      imports: [FormsModule]
+    });
 
-    fixture = TestBed.createComponent(TestProsecutorValidator);
+    fixture = TestBed.createComponent(TestProsecutorValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
-    ctrlElement = fixture.debugElement.query(By.css('[name=prosecutorCaseReference]'));
     fixture.detectChanges();
   });
 
@@ -43,22 +32,17 @@ describe('Prosecutor Validator', () => {
     form.controls['prosecutorCaseReference'].updateValueAndValidity();
     expect(form.valid).toEqual(true);
   });
-
 });
 
 @Component({
   selector: 'test-prosecutor-validation',
   template: `
     <form>
-      <input
-        name="prosecutorCaseReference"
-        [ngModel]="model"
-        prosecutorValidator
-        [oldValue]="oldValue"
-      >
+      <input name="prosecutorCaseReference" [ngModel]="model" prosecutorValidator [oldValue]="oldValue" />
+    </form>
   `
 })
-class TestProsecutorValidator {
+class TestProsecutorValidatorComponent {
   model: string;
   oldValue: string;
 }

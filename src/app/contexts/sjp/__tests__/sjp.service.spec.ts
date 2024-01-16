@@ -87,7 +87,8 @@ describe('SjpService', () => {
             get
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     http = TestBed.get(CppHttp);
     service = TestBed.get(SjpService);
@@ -363,7 +364,6 @@ describe('SjpService', () => {
     });
   };
 
-
   describe('getDocument', () => {
     it('should download document', () => {
       const caseId = 'case123';
@@ -385,5 +385,4 @@ describe('SjpService', () => {
       });
     });
   });
-
 });

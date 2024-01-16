@@ -11,9 +11,10 @@ describe('DevTools dashboard component', () => {
   let dashboardComponent: any;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [TestComponent, DevToolsDashboardComponent],
-      imports: [PdkCoreModule, PdkGridModule]
+      imports: [PdkCoreModule, PdkGridModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestComponent);

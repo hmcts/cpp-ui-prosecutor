@@ -34,14 +34,14 @@ describe('Reference Data Effects', () => {
           provide: ProsecutionCaseFileService,
           useValue: {
             createManualCaseSJP,
-            createManualCaseCC,
-          },
+            createManualCaseCC
+          }
         },
         {
           provide: Router,
-          useValue: { navigate },
-        },
-      ],
+          useValue: { navigate }
+        }
+      ]
     });
 
     effects = TestBed.get(ManualCaseDetailsEffects);
@@ -54,19 +54,19 @@ describe('Reference Data Effects', () => {
         caseId: 'case-id',
         initiationCode: 'J',
         prosecutor: {
-          prosecutingAuthority: 'DVLA',
-        },
+          prosecutingAuthority: 'DVLA'
+        }
       },
       defendants: [
         {
           id: 'defendant-id',
           offences: [
             {
-              offenceId: 'offence-id',
-            },
-          ],
-        },
-      ],
+              offenceId: 'offence-id'
+            }
+          ]
+        }
+      ]
     } as ManualCaseDetailsState;
 
     const createManualCaseAction = new CreateManualCase(mockCase);
@@ -77,9 +77,7 @@ describe('Reference Data Effects', () => {
       actions$ = hot('-a', { a: createManualCaseAction });
       const expected$ = cold('-b', { b: createManualCaseSuccess });
 
-      createManualCaseSJP.mockReturnValue(
-        of({ prosecutorCaseReference: 'abcd', caseId: 'a-b-c-d' })
-      );
+      createManualCaseSJP.mockReturnValue(of({ prosecutorCaseReference: 'abcd', caseId: 'a-b-c-d' }));
       expect(effects.createManualCase$).toBeObservable(expected$);
       expect(navigate).toHaveBeenCalledWith(['manual-case', 'case-created', 'abcd', 'a-b-c-d']);
     });

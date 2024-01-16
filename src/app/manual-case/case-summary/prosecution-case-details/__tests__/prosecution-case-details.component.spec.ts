@@ -13,11 +13,11 @@ describe('ProsecutionCaseDetailsComponent', () => {
   let fixture: ComponentFixture<ProsecutionCaseDetailsComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ProsecutionCaseDetailsComponent, DashPipe],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm],
+      providers: [ControlContainer, NgForm]
     });
 
     fixture = TestBed.createComponent(ProsecutionCaseDetailsComponent);
@@ -31,16 +31,16 @@ describe('ProsecutionCaseDetailsComponent', () => {
         chargePostingDate: '2018-11-11',
         prosecutingAuthority: 'A10AHXX',
         name: 'Transport for London',
-        appliedProsecutorCosts: 22.5,
+        appliedProsecutorCosts: 22.5
       },
       originatingPoliceForce: {
         prosecutionAuthorityId: '41af405e-7b60-4dd8-a244-d4356yh6754h5',
         prosecutingAuthority: 'C21AHRR',
         name: 'Warwick Police',
-        appliedProsecutorCosts: 22.5,
+        appliedProsecutorCosts: 22.5
       },
       originatingOrganisation: 'A10AHXX',
-      prosecutorCaseReference: 'TFL123456789',
+      prosecutorCaseReference: 'TFL123456789'
     };
     component.prosecutors = [
       {
@@ -53,14 +53,14 @@ describe('ProsecutionCaseDetailsComponent', () => {
           address1: 'Southern House',
           postcode: 'GU15 1TL',
           address2: 'Bond Street',
-          address3: 'Guildford',
+          address3: 'Guildford'
         },
         oucode: '0450000',
         nameWelsh: 'Heddlu Surrey',
         spiOutFlag: true,
         contactEmailAddress: 'test@surreypolice.com',
-        policeFlag: true,
-      },
+        policeFlag: true
+      }
     ];
     fixture.detectChanges();
   });

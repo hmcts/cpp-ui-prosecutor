@@ -17,7 +17,7 @@ export enum ApplicationCreationRoutes {
   COURT_LISTING = 'court-listing',
   OVERVIEW = 'overview',
   ALLOCATE_COURT = 'allocate-court',
-  FIND_HEARING_DATE = 'find-hearing-date',
+  FIND_HEARING_DATE = 'find-hearing-date'
 }
 
 export interface FixedDateWeekCommencingInfo {
@@ -28,4 +28,3 @@ export interface FixedDateWeekCommencingInfo {
   courtRoom?: FilterOption;
   courtCentre?: OrganisationUnit;
 }
-

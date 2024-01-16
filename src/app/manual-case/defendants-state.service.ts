@@ -11,7 +11,7 @@ export class ManualCaseDefendantStateService {
   public iterateDefendant = true;
 
   get currentIndex() {
-    return this.defendantsInMemory.findIndex((d) => d.id === this.currentDefendantId);
+    return this.defendantsInMemory.findIndex(d => d.id === this.currentDefendantId);
   }
 
   editDefendant(defendantId: string) {
@@ -21,9 +21,7 @@ export class ManualCaseDefendantStateService {
 
   initialise(defendants: ManualCaseDefendant[]) {
     if (this.defendantsInMemory.length) {
-      const newDefendants = defendants.filter(
-        (z) => this.defendantsInMemory.findIndex((d) => d.id === z.id) === -1
-      );
+      const newDefendants = defendants.filter(z => this.defendantsInMemory.findIndex(d => d.id === z.id) === -1);
       if (newDefendants.length && this.iterateDefendant) {
         this.currentDefendantId = newDefendants[0].id;
       }
@@ -65,9 +63,7 @@ export class ManualCaseDefendantStateService {
     if (this.iterateDefendant) {
       this.total = 0;
       const idx = this.currentIndex;
-      const defendant = this.isNew
-        ? this.defendantsInMemory[idx]
-        : this.defendantsInMemory[idx - 1];
+      const defendant = this.isNew ? this.defendantsInMemory[idx] : this.defendantsInMemory[idx - 1];
       this.isNew = false;
       if (defendant) {
         this.currentDefendantId = defendant.id;
@@ -108,8 +104,8 @@ export class ManualCaseDefendantStateService {
             address3: '',
             address4: '',
             address5: '',
-            postcode: '',
-          },
+            postcode: ''
+          }
         },
         parentGuardianInformation: {
           personalInformation: {
@@ -120,16 +116,16 @@ export class ManualCaseDefendantStateService {
               address3: '',
               address4: '',
               address5: '',
-              postcode: '',
-            },
-          },
+              postcode: ''
+            }
+          }
         },
         selfDefinedInformation: {
           nationality: '',
           additionalNationality: '',
-          ethnicity: '',
-        },
-      },
+          ethnicity: ''
+        }
+      }
     } as ManualCaseDefendant;
   }
 }

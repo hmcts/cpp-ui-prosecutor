@@ -19,7 +19,7 @@ describe('DefendantDetailsUpdatesPageDataGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         DefendantDetailsUpdatesPageDataGuard,
         {
@@ -34,7 +34,8 @@ describe('DefendantDetailsUpdatesPageDataGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(DefendantDetailsUpdatesPageDataGuard);
@@ -56,7 +57,6 @@ describe('DefendantDetailsUpdatesPageDataGuard', () => {
 
   it('should reject the activation and redirect when an error occurs during resolution', () => {
     const error$ = cold('---#');
-    const expected$ = cold('---(a|)', { a: false });
 
     getDefendantDetailsUpdates.mockReturnValue(error$);
     navigate.mockReturnValue(Promise.resolve(true));

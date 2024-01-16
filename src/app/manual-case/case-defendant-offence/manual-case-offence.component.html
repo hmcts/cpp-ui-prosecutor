@@ -17,13 +17,7 @@
 
 <pdk-grid container *ngIf="editOffence">
   <pdk-grid full>
-    <form
-      #form="ngForm"
-      pdk-form
-      novalidate
-      (validSubmit)="submitData(form.value)"
-      (errors)="formErrors = $event"
-    >
+    <form #form="ngForm" pdk-form novalidate (validSubmit)="submitData(form.value)" (errors)="formErrors = $event">
       <pdk-form-field
         [style.width.%]="50"
         label="{{ 'CASE_DETAILS.OFFENCE.HISTORICAL_OFFENCES_ONLY' | translate }}"
@@ -57,9 +51,7 @@
       <ng-container *ngIf="editOffence.offenceCode">
         <pdk-inset-text>
           <p>
-            <span pdk-typography="body" pdk-text-colour="dark-grey">{{
-              editOffence?.offenceCode
-            }}</span>
+            <span pdk-typography="body" pdk-text-colour="dark-grey">{{ editOffence?.offenceCode }}</span>
           </p>
           <p>
             <span pdk-typography="body-medium" class="bold">{{ editOffence?.offenceTitle }}</span>
@@ -78,7 +70,7 @@
           (ngModelChange)="dynamicFormChange($event)"
           [offenceWording]="editOffence.offenceWording"
           [arrestDateValue]="arrestDateValue"
-          (onError)="dynamicFormErrors = $event"
+          (formError)="dynamicFormErrors = $event"
         >
         </dynamic-particular-form>
 
@@ -159,9 +151,7 @@
                           <pdk-date-input
                             [name]="'arrestDate_' + i"
                             [ngModel]="option.offence.arrestDate"
-                            (ngModelChange)="
-                              arrestDateValue = $event; option.offence.arrestDate = $event
-                            "
+                            (ngModelChange)="arrestDateValue = $event; option.offence.arrestDate = $event"
                             allowEqual="true"
                             pastDate
                             required
@@ -263,8 +253,7 @@
                           [errorMessages]="[
                             {
                               rule: 'required',
-                              message:
-                                'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_METHOD_REQUIRED' | translate
+                              message: 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_METHOD_REQUIRED' | translate
                             }
                           ]"
                         >
@@ -276,17 +265,12 @@
                           >
                             <div *ngFor="let method of alcoholLevelMethodOptions">
                               <div class="alcohol-level-radio">
-                                <pdk-radio-button [value]="method.value">{{
-                                  method.label
-                                }}</pdk-radio-button>
+                                <pdk-radio-button [value]="method.value">{{ method.label }}</pdk-radio-button>
                               </div>
                               <br />
                               <div
                                 class="smallWidth indent"
-                                *ngIf="
-                                  option.offence.alcoholRelatedOffence.alcoholLevelMethod ===
-                                  method.value
-                                "
+                                *ngIf="option.offence.alcoholRelatedOffence.alcoholLevelMethod === method.value"
                               >
                                 <span *ngTemplateOutlet="alcoholLevelAmount"></span>
                               </div>
@@ -299,19 +283,15 @@
                             <pdk-form-field
                               label="{{ 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT' | translate }}"
                               labelType="small"
-                              hintText="{{
-                                'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_HINT' | translate
-                              }}"
+                              hintText="{{ 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_HINT' | translate }}"
                               [errorMessages]="[
                                 {
                                   rule: 'required',
-                                  message:
-                                    'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_REQUIRED' | translate
+                                  message: 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_REQUIRED' | translate
                                 },
                                 {
                                   rule: 'pattern',
-                                  message:
-                                    'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_PATTERN' | translate
+                                  message: 'MANUAL_CASE_OFFENCE.ALCOHOL_LEVEL_AMOUNT_PATTERN' | translate
                                 }
                               ]"
                             >
@@ -320,9 +300,7 @@
                                 pdk-input
                                 type="number"
                                 name="offence.alcoholRelatedOffence.alcoholLevelAmount_{{ i }}"
-                                [(ngModel)]="
-                                  option.offence.alcoholRelatedOffence.alcoholLevelAmount
-                                "
+                                [(ngModel)]="option.offence.alcoholRelatedOffence.alcoholLevelAmount"
                                 pattern="^(\d{1,3}\.\d{1,2}|\d{1,3})$"
                                 required
                                 data-role="alcoholAmount-input"
@@ -333,11 +311,7 @@
                       </ng-container>
 
                       <ng-container *ngIf="editOffence.backDutyAllowed">
-                        <div
-                          class="smallWidth"
-                          pdk-margin-bottom="3"
-                          data-test-id="offence-back-duty"
-                        >
+                        <div class="smallWidth" pdk-margin-bottom="3" data-test-id="offence-back-duty">
                           <pdk-form-field
                             label="{{ 'MANUAL_CASE_OFFENCE.BACK_DUTY' | translate }}"
                             labelType="small"

@@ -11,8 +11,9 @@ describe('DocumentListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DocumentListComponent, MockDownloadDocument, TestDocumentListComponent],
-      imports: [CommonModule, PdkCoreModule, PdkGridModule]
+      declarations: [DocumentListComponent, MockDownloadDocumentComponent, TestDocumentListComponent],
+      imports: [CommonModule, PdkCoreModule, PdkGridModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(TestDocumentListComponent);
@@ -41,7 +42,7 @@ describe('DocumentListComponent', () => {
       {{ caseId }}
     `
   })
-  class MockDownloadDocument {
+  class MockDownloadDocumentComponent {
     @Input() document: CaseDocument;
     @Input() caseId: string;
   }

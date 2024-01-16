@@ -10,7 +10,8 @@ describe('ApplicationDecisionDetailsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ApplicationDecisionDetailsComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, PdkTabsModule, SharedModule]
+      imports: [CommonModule, PdkDividerModule, PdkGridModule, PdkTabsModule, SharedModule],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(ApplicationDecisionDetailsComponent);
     fixture.componentInstance.applicationDecision = {
@@ -92,7 +93,7 @@ describe('ApplicationDecisionDetailsComponent', () => {
       fixture.componentInstance.applicationDecision = {
         granted: true,
         applicationType: 'REOPENING',
-        previousFinalDecision: '2020-12-01T16:10:28.259Z',
+        previousFinalDecision: '2020-12-01T16:10:28.259Z'
       };
       fixture.detectChanges();
 

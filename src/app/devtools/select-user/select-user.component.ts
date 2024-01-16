@@ -33,7 +33,7 @@ import { NgForm } from '@angular/forms';
   `
 })
 export class DevtoolsSelectUserComponent {
-  @ViewChild(NgForm) form: NgForm;
+  @ViewChild(NgForm, { static: true }) form: NgForm;
 
   @Input() users: any[];
   @Input() userId: string;

@@ -32,7 +32,7 @@ export const routes: Routes = [
       EthnicityCodesGuard,
       EthnicitiesGuard,
       ProsecutorByCodeGuard,
-      OrganisationUnitsGuard,
+      OrganisationUnitsGuard
     ],
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'type' },
@@ -40,121 +40,121 @@ export const routes: Routes = [
         path: 'type',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Create a case or application | Common Platform',
-        },
+          title: 'Create a case or application | Common Platform'
+        }
       },
       {
         path: 'edit-type',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Create a case or application | Common Platform',
-        },
+          title: 'Create a case or application | Common Platform'
+        }
       },
       {
         path: 'case-detail',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Case details | Common Platform',
-        },
+          title: 'Case details | Common Platform'
+        }
       },
       {
         path: 'edit-case-detail',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Case details | Common Platform',
-        },
+          title: 'Case details | Common Platform'
+        }
       },
       {
         path: 'prosecutor',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Prosecutor details | Common Platform',
-        },
+          title: 'Prosecutor details | Common Platform'
+        }
       },
       {
         path: 'edit-prosecutor',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Prosecutor details | Common Platform',
-        },
+          title: 'Prosecutor details | Common Platform'
+        }
       },
       {
         path: 'hearing',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Hearing details | Common Platform',
-        },
+          title: 'Hearing details | Common Platform'
+        }
       },
       {
         path: 'edit-hearing',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Hearing details | Common Platform',
-        },
+          title: 'Hearing details | Common Platform'
+        }
       },
       {
         path: 'defendant',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Defendant details | Common Platform',
-        },
+          title: 'Defendant details | Common Platform'
+        }
       },
       {
         path: 'edit-defendant',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Defendant details | Common Platform',
-        },
+          title: 'Defendant details | Common Platform'
+        }
       },
       {
         path: 'offence',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Add offences | Common Platform',
-        },
+          title: 'Add offences | Common Platform'
+        }
       },
       {
         path: 'edit-offence',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Add offences | Common Platform',
-        },
+          title: 'Add offences | Common Platform'
+        }
       },
       {
         path: 'either-way-offence',
-        component: ManualCaseCreateContainer,
+        component: ManualCaseCreateContainer
       },
       {
         path: 'edit-either-way-offence',
-        component: ManualCaseCreateContainer,
+        component: ManualCaseCreateContainer
       },
       {
         path: 'summary',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Check case details | Common Platform',
-        },
+          title: 'Check case details | Common Platform'
+        }
       },
       {
         path: 'case-created/:reference/:caseId',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Case created successfully | Common Platform',
-        },
+          title: 'Case created successfully | Common Platform'
+        }
       },
       {
         path: 'duplicated-prosecutor',
         component: ManualCaseCreateContainer,
         data: {
-          title: 'Prosecutor details | Common Platform',
-        },
-      },
-    ],
-  },
+          title: 'Prosecutor details | Common Platform'
+        }
+      }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class ManualCaseRoutingModule {}

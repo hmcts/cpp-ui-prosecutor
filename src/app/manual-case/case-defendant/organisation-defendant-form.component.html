@@ -25,10 +25,7 @@
   </pdk-form-field>
 
   <ng-container *ngIf="manualCaseType === 'J'">
-    <pdk-form-field
-      label="{{ 'MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS' | translate: param }}"
-      labelType="small"
-    >
+    <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS' | translate: param }}" labelType="small">
       <input
         pdk-text-input="number"
         pdk-input
@@ -72,11 +69,7 @@
   </h2>
 
   <!-- Address -->
-  <pdk-form-field
-    label="{{ 'MANUAL_CASE_DEFENDANT.ADDRESS' | translate }}"
-    labelType="small"
-    pdk-margin-bottom="3"
-  >
+  <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.ADDRESS' | translate }}" labelType="small" pdk-margin-bottom="3">
     <input-address
       name="address"
       [(ngModel)]="manualCaseDefendant.address"
@@ -154,9 +147,7 @@
       required
       [(ngModel)]="manualCaseDefendant.documentationLanguage"
     >
-      <pdk-radio-button value="E">{{
-        'MANUAL_CASE_DEFENDANT.ENGLISH' | translate
-      }}</pdk-radio-button>
+      <pdk-radio-button value="E">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
       <pdk-radio-button value="W">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
     </pdk-radio-group>
   </pdk-form-field>
@@ -171,15 +162,8 @@
       }
     ]"
   >
-    <pdk-radio-group
-      name="hearingLanguage"
-      [inline]="true"
-      required
-      [(ngModel)]="manualCaseDefendant.hearingLanguage"
-    >
-      <pdk-radio-button value="E">{{
-        'MANUAL_CASE_DEFENDANT.ENGLISH' | translate
-      }}</pdk-radio-button>
+    <pdk-radio-group name="hearingLanguage" [inline]="true" required [(ngModel)]="manualCaseDefendant.hearingLanguage">
+      <pdk-radio-button value="E">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
       <pdk-radio-button value="W">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
     </pdk-radio-group>
   </pdk-form-field>

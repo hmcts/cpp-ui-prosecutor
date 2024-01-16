@@ -19,7 +19,7 @@ import {
   PdkRadioInputModule,
   PdkSelectModule,
   PdkTextareaModule,
-  PdkTextInputModule,
+  PdkTextInputModule
 } from '@cpp/pdk';
 import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
 import { By } from '@angular/platform-browser';
@@ -39,8 +39,8 @@ const manualCaseDefendants = [
       personalInformation: {
         title: 'Mr',
         firstName: 'Defendant',
-        lastName: 'One',
-      },
+        lastName: 'One'
+      }
     },
     offences: [
       {
@@ -49,9 +49,9 @@ const manualCaseDefendants = [
         offenceDateCode: 4,
         offenceCommittedDate: '2018-01-01',
         offenceCommittedEndDate: '2018-02-02',
-        offenceWording: 'Caught Driving On Phone',
-      },
-    ],
+        offenceWording: 'Caught Driving On Phone'
+      }
+    ]
   },
   {
     id: '7e967376-eacf-4fca-9b30-21b0c5aad427',
@@ -59,10 +59,10 @@ const manualCaseDefendants = [
       personalInformation: {
         title: 'Mr',
         firstName: 'Defendant',
-        lastName: 'One',
-      },
-    },
-  },
+        lastName: 'One'
+      }
+    }
+  }
 ] as ManualCaseDefendant[];
 
 const particularFormModel = {
@@ -70,19 +70,19 @@ const particularFormModel = {
   sections: [
     {
       type: 'DROPDOWN',
-      label: 'Offence date type',
+      label: 'Offence date type'
     },
     {
       type: 'DATE',
-      label: 'Specify Date',
+      label: 'Specify Date'
     },
     {
       type: 'LABEL',
-      label: 'occurring at',
+      label: 'occurring at'
     },
     {
       type: 'TEXT',
-      label: 'Specify township',
+      label: 'Specify township'
     },
     {
       type: 'LIST',
@@ -93,48 +93,48 @@ const particularFormModel = {
           children: [
             {
               type: 'TEXT',
-              label: 'Specify person',
+              label: 'Specify person'
             },
             {
               type: 'LABEL',
-              label: 'to have possession of an official document, namely',
-            },
-          ],
-        },
-      ],
-    },
-  ],
+              label: 'to have possession of an official document, namely'
+            }
+          ]
+        }
+      ]
+    }
+  ]
 };
 
 const offenceDateCodes = [
   {
     id: '4aaecac5-222b-402d-9047-84803679edac',
     dateCode: '1',
-    dateCodeDescription: 'before',
+    dateCodeDescription: 'before'
   },
   {
     id: '5aaecac5-222b-402d-9047-84803679edac',
     dateCode: '2',
-    dateCodeDescription: 'after',
+    dateCodeDescription: 'after'
   },
   {
     id: '6b07adbc-2d61-40a3-b790-7ed8c8b52e3e',
     dateCode: '4',
-    dateCodeDescription: 'between',
-  },
+    dateCodeDescription: 'between'
+  }
 ];
 
 const alcoholLevelMethods = [
   {
     id: 'f833257e-e355-4c72-838b-d236db530226',
     methodCode: 'B01',
-    methodDescription: 'Breath',
+    methodDescription: 'Breath'
   },
   {
     id: 'd15a29d0-68b4-4a4f-8c46-c1316d7238eb',
     methodCode: 'B02',
-    methodDescription: 'Blood',
-  },
+    methodDescription: 'Blood'
+  }
 ];
 
 describe('Manual Case Offence Component', () => {
@@ -144,8 +144,8 @@ describe('Manual Case Offence Component', () => {
   let fixture: ComponentFixture<ManualCaseOffenceComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
-      declarations: [ManualCaseOffenceComponent, DynamicParticularFormComponent, MockOffenceSearch],
+    TestBed.configureTestingModule({
+      declarations: [ManualCaseOffenceComponent, DynamicParticularFormComponent, MockOffenceSearchComponent],
       imports: [
         MockPipesModule,
         CommonModule,
@@ -164,15 +164,15 @@ describe('Manual Case Offence Component', () => {
         PdkTextareaModule,
         PdkGridModule,
         PdkCheckboxInputModule,
-        PdkDateInputModule,
+        PdkDateInputModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
         {
           provide: Location,
           useValue: {
-            back: () => undefined,
-          },
+            back: () => undefined
+          }
         },
         {
           provide: ManualCaseOffenceStateService,
@@ -184,20 +184,20 @@ describe('Manual Case Offence Component', () => {
             next: () => null,
             getDefendantOptions: () => [],
             getSelectedDefendantIds: () => [],
-            mapOffenceToDefendants: () => expectedDefendantsToStore,
-          },
+            mapOffenceToDefendants: () => expectedDefendantsToStore
+          }
         },
         {
           provide: OffenceParsingService,
           useValue: {
-            parse: () => particularFormModel,
-          },
+            parse: () => particularFormModel
+          }
         },
         {
           provide: OffenceWordingService,
           useValue: {
-            buildParticularWording: () => 'dynamic particular wording',
-          },
+            buildParticularWording: () => 'dynamic particular wording'
+          }
         },
         {
           provide: PCFReferenceDataOffenceService,
@@ -207,12 +207,12 @@ describe('Manual Case Offence Component', () => {
                 cjsOffenceCode: manualCaseDefendants[0].offences[0].offenceCode,
                 standardoffencewording: 'wording with placeholder',
                 drugsOrAlcoholRelated: 'Y',
-                backDutyAllowed: true,
+                backDutyAllowed: true
               }).pipe(take(1)),
-            searchOffenceTypes: () => of(['id']),
-          },
-        },
-      ],
+            searchOffenceTypes: () => of(['id'])
+          }
+        }
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseOffenceComponent);
@@ -239,7 +239,7 @@ describe('Manual Case Offence Component', () => {
     component.update({
       cjsOffenceCode: ':someCode',
       legislation: ':legislation',
-      title: ':title',
+      title: ':title'
     });
 
     expect(component.editOffence.offenceCode).toEqual(':someCode');
@@ -288,10 +288,7 @@ describe('Manual Case Offence Component', () => {
 
   it('should toggle selected defendant ids when select all is ticked', () => {
     component.toggleSelectAll(true);
-    expect(component.selectedDefendantIds).toEqual([
-      manualCaseDefendants[0].id,
-      manualCaseDefendants[1].id,
-    ]);
+    expect(component.selectedDefendantIds).toEqual([manualCaseDefendants[0].id, manualCaseDefendants[1].id]);
 
     component.toggleSelectAll(false);
     expect(component.selectedDefendantIds).toEqual([]);
@@ -300,10 +297,7 @@ describe('Manual Case Offence Component', () => {
   it('should update selected defendants ids', () => {
     component.updateSelectedDefendants(['mocke-defendant-001-id', 'mocke-defendant-002-id']);
 
-    expect(component.selectedDefendantIds).toEqual([
-      'mocke-defendant-001-id',
-      'mocke-defendant-002-id',
-    ]);
+    expect(component.selectedDefendantIds).toEqual(['mocke-defendant-001-id', 'mocke-defendant-002-id']);
     expect(component.selectAll).toBeFalsy();
   });
 
@@ -314,7 +308,7 @@ describe('Manual Case Offence Component', () => {
     expect(component.editOffence).toMatchSnapshot();
     expect(submitDataSpy).toHaveBeenCalledWith({
       navigateToNextPage: false,
-      defendantsWithOffences: expectedDefendantsToStore,
+      defendantsWithOffences: expectedDefendantsToStore
     });
   });
 
@@ -323,15 +317,13 @@ describe('Manual Case Offence Component', () => {
     fixture.debugElement.query(By.css(`button[data-role='continue']`)).nativeElement.click();
     expect(submitDataSpy).toHaveBeenCalledWith({
       navigateToNextPage: true,
-      defendantsWithOffences: expectedDefendantsToStore,
+      defendantsWithOffences: expectedDefendantsToStore
     });
   });
 
   it('should call back() to load the previous offence', async () => {
     component.back();
-    expect(component.editOffence.offenceCode).toEqual(
-      manualCaseDefendants[0].offences[0].offenceCode
-    );
+    expect(component.editOffence.offenceCode).toEqual(manualCaseDefendants[0].offences[0].offenceCode);
   });
 
   @Component({
@@ -340,16 +332,16 @@ describe('Manual Case Offence Component', () => {
     providers: [
       {
         provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => MockOffenceSearch),
-        multi: true,
+        useExisting: forwardRef(() => MockOffenceSearchComponent),
+        multi: true
       },
       {
         provide: FormFieldControl,
-        useExisting: forwardRef(() => MockOffenceSearch),
-      },
-    ],
+        useExisting: forwardRef(() => MockOffenceSearchComponent)
+      }
+    ]
   })
-  class MockOffenceSearch {
+  class MockOffenceSearchComponent {
     input;
 
     propagateChange(fn: any): void {}

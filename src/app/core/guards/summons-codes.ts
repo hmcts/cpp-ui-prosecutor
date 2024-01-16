@@ -15,15 +15,15 @@ export class SummonsCodesGuard implements CanActivate {
   hasSummonsCodesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getSummonsCodes),
-      map((summonsCodes) => summonsCodes && summonsCodes.length > 0),
+      map(summonsCodes => summonsCodes && summonsCodes.length > 0),
       take(1)
     );
   }
 
   hasSummonsCodesInApi(): Observable<boolean> {
     return this.referenceData.getSummonsCode().pipe(
-      map((summonsCodes) => new LoadSummonsCodesSuccessAction(summonsCodes)),
-      tap((action) => this.store.dispatch(action)),
+      map(summonsCodes => new LoadSummonsCodesSuccessAction(summonsCodes)),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -33,7 +33,7 @@ export class SummonsCodesGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasSummonsCodesInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

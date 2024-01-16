@@ -4,19 +4,15 @@ exports[`PleaMitigationComponent should compile correctly 1`] = `
 <plea-mitigation-test
   pleaMitigation={[Function String]}
 >
-  <plea-mitigation
-    ng-reflect-plea-mitigation="Mitigated plea"
-  >
+  <plea-mitigation>
     <h4
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       Mitigation
     </h4>
     <p
       class="govuk-!-margin-bottom-4"
-      ng-reflect-bottom="4"
       pdk-margin-bottom="4"
     >
        Mitigated plea 

@@ -19,7 +19,10 @@ describe('DatesToAvoidContainer', () => {
     navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [DatesToAvoidContainer, MockDatesToAvoidComponent],
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('kase', caseOverviewReducer)],
+      imports: [
+        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
+        StoreModule.forFeature('kase', caseOverviewReducer)
+      ],
       providers: [
         {
           provide: Router,
@@ -31,7 +34,8 @@ describe('DatesToAvoidContainer', () => {
           provide: ActivatedRoute,
           useValue: {}
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     store = TestBed.get(Store);
     fixture = TestBed.createComponent(DatesToAvoidContainer);

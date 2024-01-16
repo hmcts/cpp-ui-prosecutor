@@ -15,15 +15,15 @@ export class PoliceForcesGuard implements CanActivate {
   hasPoliceForcesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getPoliceForces),
-      map((codes) => codes && codes.length > 0),
+      map(codes => codes && codes.length > 0),
       take(1)
     );
   }
 
   hasPoliceForcesInApi(): Observable<boolean> {
     return this.referenceData.getPoliceForces().pipe(
-      map((codes) => new LoadPoliceForcesSuccessAction(codes)),
-      tap((action) => this.store.dispatch(action)),
+      map(codes => new LoadPoliceForcesSuccessAction(codes)),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -33,7 +33,7 @@ export class PoliceForcesGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasPoliceForcesInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

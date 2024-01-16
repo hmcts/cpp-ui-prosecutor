@@ -12,9 +12,10 @@ describe('DevTools - Select User component', () => {
   const userId = 'userId';
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [DevtoolsSelectUserComponent, DevToolsBackButtonComponent],
-      imports: [FormsModule, PdkCoreModule, PdkFormModule, PdkSelectModule]
+      imports: [FormsModule, PdkCoreModule, PdkFormModule, PdkSelectModule],
+      teardown: { destroyAfterEach: false }
     });
 
     fixture = TestBed.createComponent(DevtoolsSelectUserComponent);

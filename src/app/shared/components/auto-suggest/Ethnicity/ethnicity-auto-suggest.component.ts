@@ -1,11 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { State, Ethnicity, getEthnicities, LoadEthnicitiesAction } from '../../../../core';
-import {
-  AutosuggestLiteComponent,
-  coerceBooleanProperty,
-  FormFieldControl,
-  InputWidth,
-} from '@cpp/pdk';
+import { AutosuggestLiteComponent, coerceBooleanProperty, FormFieldControl, InputWidth } from '@cpp/pdk';
 import { Observable, of, Subject } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
@@ -19,16 +14,15 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: EthnicityAutoSuggestComponent,
-      multi: true,
+      multi: true
     },
     {
       provide: FormFieldControl,
-      useExisting: EthnicityAutoSuggestComponent,
-    },
-  ],
+      useExisting: EthnicityAutoSuggestComponent
+    }
+  ]
 })
-export class EthnicityAutoSuggestComponent
-  implements ControlValueAccessor, FormFieldControl, OnInit {
+export class EthnicityAutoSuggestComponent implements ControlValueAccessor, FormFieldControl, OnInit {
   multi = false;
   searchEthnicity$ = new Subject<string>();
   suggestions$: Observable<Ethnicity[]>;
@@ -79,21 +73,19 @@ export class EthnicityAutoSuggestComponent
   constructor(private store: Store<State>) {
     this.fetchEthnicity$ = this.store.pipe(
       select(getEthnicities),
-      filter((ethnicityList) => !!ethnicityList)
+      filter(ethnicityList => !!ethnicityList)
     );
 
     this.suggestions$ = this.searchEthnicity$.pipe(
-      map((q) => (q || '').toLocaleLowerCase().trim()),
-      switchMap((q) => {
+      map(q => (q || '').toLocaleLowerCase().trim()),
+      switchMap(q => {
         if (q) {
           return this.fetchEthnicity$.pipe(
             take(1),
-            map((ethnicityList) =>
+            map(ethnicityList =>
               ethnicityList
                 .filter(
-                  (ethnicity) =>
-                    this.additonalFilterBy(ethnicity) &&
-                    ethnicity.description.toLowerCase().includes(q)
+                  ethnicity => this.additonalFilterBy(ethnicity) && ethnicity.description.toLowerCase().includes(q)
                 )
                 .slice(0, Math.max(this.maxResult, 10))
             )
@@ -116,12 +108,10 @@ export class EthnicityAutoSuggestComponent
       this.fetchEthnicity$
         .pipe(
           take(1),
-          filter((ethnicityList) => ethnicityList.length > 0)
+          filter(ethnicityList => ethnicityList.length > 0)
         )
-        .subscribe((ethnicityList) => {
-          const selectedEthnicity = ethnicityList.find(
-            (ethnicity) => ethnicity[this.suggestionKey] === value
-          );
+        .subscribe(ethnicityList => {
+          const selectedEthnicity = ethnicityList.find(ethnicity => ethnicity[this.suggestionKey] === value);
           this.propagateChange(selectedEthnicity);
           this.autoSuggestLiteRef.writeValue(selectedEthnicity);
         });

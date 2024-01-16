@@ -8,6 +8,8 @@ import { SharedModule } from '../../../shared';
 import { ManualCaseDefendantComponent } from '../manual-case-defendant.component';
 import { ManualCaseDefendantStateService } from '../../defendants-state.service';
 import { ManualCase } from '../../../core/model/manual-case';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
 
 const emptyDefendant = {
   id: '',
@@ -15,46 +17,47 @@ const emptyDefendant = {
     personalInformation: {
       contactDetails: {},
       address: {
-        address1: '',
-      },
-    },
-  },
+        address1: ''
+      }
+    }
+  }
 };
 
 const manualCaseDefendants = [
   {
     organisationName: 'Amazon',
     address: {
-      address1: '14 Bath Road',
+      address1: '14 Bath Road'
     },
     emailAddress1: 'ben@abc.com',
     telephoneNumberBusiness: '07966666666',
     documentationLanguage: 'ENGLISH',
-    hearingLanguage: 'WELSH',
-  },
+    hearingLanguage: 'WELSH'
+  }
 ] as ManualCaseDefendant[];
 
 const manualCaseDetailMock = {
   caseId: 'case-id-mock',
   prosecutor: {
     prosecutionAuthorityId: 'prosecutionAuthorityId-1',
-    prosecutingAuthority: 'Derbyshire Police',
-  },
+    prosecutingAuthority: 'Derbyshire Police'
+  }
 } as ManualCase;
 
 const prosecutorsMock = [
   {
     id: 'prosecutionAuthorityId-1',
-    policeFlag: true,
+    policeFlag: true
   },
   {
     id: 'prosecutionAuthorityId-2',
-    policeFlag: false,
-  },
+    policeFlag: false
+  }
 ];
 
 describe('Manual Case Defendant Component', () => {
   window.scroll = jest.fn();
+  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
 
   let component: Shallow<ManualCaseDefendantComponent>;
 
@@ -70,7 +73,7 @@ describe('Manual Case Defendant Component', () => {
         load: () => manualCaseDefendants[0],
         previous: () => manualCaseDefendants[0],
         addNew: () => emptyDefendant,
-        next: () => null,
+        next: () => null
       })
       .dontMock(
         CommonModule,
@@ -98,8 +101,8 @@ describe('Manual Case Defendant Component', () => {
           manualCaseType: caseType,
           manualCaseDetail,
           prosecutors,
-          handleFormSubmit: () => jest.fn(),
-        },
+          handleFormSubmit: () => jest.fn()
+        }
       }
     );
   }
@@ -115,9 +118,7 @@ describe('Manual Case Defendant Component', () => {
     expect(instance).toBeTruthy();
     expect(fixture).toMatchSnapshot();
     expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(
-      manualCaseDefendants[0].organisationName
-    );
+    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
   });
 
   it('should call submitData() to add a new defendant and do not navigate to the next page', async () => {
@@ -130,7 +131,7 @@ describe('Manual Case Defendant Component', () => {
 
     const formData = {
       action: 'add',
-      defendantToStore: { id: 'def-id-001' },
+      defendantToStore: { id: 'def-id-001' }
     };
 
     instance.submitData(formData);
@@ -140,7 +141,7 @@ describe('Manual Case Defendant Component', () => {
     expect(instance.errors).toBeFalsy();
     expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
       navigateToNextPage: false,
-      defendantToStore: formData.defendantToStore,
+      defendantToStore: formData.defendantToStore
     });
   });
 
@@ -154,7 +155,7 @@ describe('Manual Case Defendant Component', () => {
 
     const formData = {
       action: 'continue',
-      defendantToStore: { id: 'def-id-001' },
+      defendantToStore: { id: 'def-id-001' }
     };
 
     instance.submitData(formData);
@@ -162,24 +163,17 @@ describe('Manual Case Defendant Component', () => {
     expect(instance.editDefendant).toBeNull();
     expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
       navigateToNextPage: true,
-      defendantToStore: formData.defendantToStore,
+      defendantToStore: formData.defendantToStore
     });
   });
 
   it('should call back() load the previous defendant from the in memory list of defendant', async () => {
-    const { instance } = await renderComponent(
-      manualCaseDefendants,
-      'Q',
-      manualCaseDetailMock,
-      prosecutorsMock
-    );
+    const { instance } = await renderComponent(manualCaseDefendants, 'Q', manualCaseDetailMock, prosecutorsMock);
 
     instance.back();
 
     expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(
-      manualCaseDefendants[0].organisationName
-    );
+    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
   });
 
   it('should render the component for SJP case and legal entity defendant', async () => {
@@ -193,19 +187,12 @@ describe('Manual Case Defendant Component', () => {
     expect(instance).toBeTruthy();
     expect(fixture).toMatchSnapshot();
     expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(
-      manualCaseDefendants[0].organisationName
-    );
+    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
   });
 
   describe('#isPoliceProsecutor', () => {
     it('should return true if case prosecutor is police', async () => {
-      const { instance } = await renderComponent(
-        manualCaseDefendants,
-        'Q',
-        manualCaseDetailMock,
-        prosecutorsMock
-      );
+      const { instance } = await renderComponent(manualCaseDefendants, 'Q', manualCaseDetailMock, prosecutorsMock);
 
       expect(instance.isPoliceProsecutor()).toEqual(true);
     });
@@ -215,8 +202,8 @@ describe('Manual Case Defendant Component', () => {
         caseId: 'case-id-mock',
         prosecutor: {
           prosecutionAuthorityId: 'prosecutionAuthorityId-2',
-          prosecutingAuthority: 'TVL',
-        },
+          prosecutingAuthority: 'TVL'
+        }
       } as ManualCase;
       const { instance } = await renderComponent(
         manualCaseDefendants,
@@ -231,7 +218,7 @@ describe('Manual Case Defendant Component', () => {
     it('should return false if no prosecutor exist', async () => {
       const manualCaseDetailMockWithNoProsecutor = {
         ...manualCaseDetailMock,
-        prosecutor: null,
+        prosecutor: null
       };
       const { instance } = await renderComponent(
         manualCaseDefendants,

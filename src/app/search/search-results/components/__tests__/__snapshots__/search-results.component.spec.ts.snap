@@ -4,19 +4,13 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
 <search-results-test
   searchResults={[Function Array]}
 >
-  <search-results
-    ng-reflect-search-result-cases="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-      ng-reflect-show-title="true"
-    >
+  <search-results>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <search-input>
       <label
         class="govuk-label"
-        ng-reflect-type=""
         pdk-label=""
       >
         Enter case reference number or defendant’s last name or company name
@@ -24,7 +18,6 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <form
           class="ng-untouched ng-pristine ng-valid"
@@ -33,35 +26,22 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
         >
           <pdk-grid
             class="govuk-grid-column-one-third"
-            ng-reflect-one-third=""
             one-third=""
           >
             <pdk-form-field>
-              
               <pdk-form-group
                 class="pdk-form-group"
-                ng-reflect-has-error="false"
               >
-                
-                
-                
-                
-                
-                
-                
                 <pdk-searchbar
                   class="ng-untouched ng-pristine ng-valid"
                   name="searchInput"
-                  ng-reflect-name="searchInput"
                 >
                   <div
                     class="pdk-searchbar"
                   >
                     <input
                       class="pdk-searchbar__input govuk-input"
-                      id="pdk-search-2"
-                      ng-reflect-has-error="false"
-                      ng-reflect-width=""
+                      id="pdk-search-GENERATED_ID"
                       pdk-input=""
                       placeholder=""
                       type="text"
@@ -72,7 +52,6 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
                     >
                       <pdk-search-icon
                         color="#fff"
-                        ng-reflect-color="#fff"
                         style="display: flex; align-items: center; justify-content: center;"
                       >
                         <i
@@ -91,25 +70,19 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
                       </pdk-search-icon>
                       <span
                         class="pdk-searchbar__label govuk-visually-hidden"
-                        ng-reflect-hidden=""
                         pdk-visually-hidden=""
                       >
-                          
                       </span>
                     </button>
                   </div>
                 </pdk-searchbar>
-                
-                
               </pdk-form-group>
             </pdk-form-field>
           </pdk-grid>
         </form>
       </pdk-grid>
     </search-input>
-    <list-search-results
-      ng-reflect-search-results="[object Object],[object Object"
-    >
+    <list-search-results>
        [
     {
       "caseId": "caseId1",

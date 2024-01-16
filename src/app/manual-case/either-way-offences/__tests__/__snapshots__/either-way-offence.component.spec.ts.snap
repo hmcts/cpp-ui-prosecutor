@@ -7,142 +7,102 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
   >
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object],[object Object"
-      ng-reflect-hint-text="COMMON.HINT_TEXT_DATE"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.PLEA_DA"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
         <fieldset
           class="govuk-fieldset"
           pdk-fieldset=""
         >
-          
           <legend
             class="govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-hidden="false"
-            ng-reflect-type="small"
           >
              MANUAL_CASE_EITHER_WAY.PLEA_DATE 
           </legend>
           
-          
           <pdk-hint
             class="govuk-hint"
           >
-            
-            
-            
-             COMMON.HINT_TEXT_DATE 
-            
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+              
+            </div>
           </pdk-hint>
           
+          
           <pdk-date-input
-            _nghost-a-c27=""
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            ng-reflect-model="2020-10-10"
-            ng-reflect-name="plea-date-4fc9cb0f24-ac3b-4a76"
-            ng-reflect-past-date=""
-            ng-reflect-required=""
             pastdate=""
             required=""
             validatedate=""
           >
             <div
-              _ngcontent-a-c27=""
               class="pdk-date-input"
             >
               <div
-                _ngcontent-a-c27=""
                 class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
               >
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-68-day"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-day"
                     pdk-label=""
                   >
                      Day 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
-                    id="pdk-date-input-68-day"
+                    id="pdk-date-input-GENERATED_ID-day"
                     name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-68-month"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-month"
                     pdk-label=""
                   >
                      Month 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
-                    id="pdk-date-input-68-month"
+                    id="pdk-date-input-GENERATED_ID-month"
                     name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-68-year"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-year"
                     pdk-label=""
                   >
                      Year 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
-                    id="pdk-date-input-68-year"
+                    id="pdk-date-input-GENERATED_ID-year"
                     name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
                     required=""
                     type="number"
                   />
@@ -154,30 +114,20 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           
         </fieldset>
         
+        
       </pdk-form-group>
     </pdk-form-field>
-    
-    
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object]"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.ALLOCAT"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
-        
-        
         
         <label
           class="govuk-label govuk-label--s"
-          for="pdk-select-70"
-          ng-reflect-hidden="false"
-          ng-reflect-type="small"
+          for="pdk-select-GENERATED_ID"
         >
            MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION 
         </label>
@@ -187,28 +137,25 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
         <pdk-select
           class="ng-untouched ng-pristine ng-valid"
           data-role="allocationDecision-input"
-          ng-reflect-name="allocation-decision-4fc9cb0f24"
-          ng-reflect-placeholder="MANUAL_CASE_EITHER_WAY.CHOOSE_"
-          ng-reflect-required="true"
           required=""
         >
           <select
             class="govuk-select"
-            id="pdk-select-70"
+            id="pdk-select-GENERATED_ID"
             name="allocation-decision-4fc9cb0f24-ac3b-4a76-9c67-1320196daf79-46e1c5f5-5e91-4655-9eda-43368640f218"
             required=""
           >
-            
-            
             <option
-              ng-reflect-value=""
               value=""
             >
               MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
             </option>
             
+            
+            
           </select>
         </pdk-select>
+        
         
         
       </pdk-form-group>
@@ -217,25 +164,17 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
     
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object]"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.VERDICT"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
         <fieldset
           class="govuk-fieldset"
           pdk-fieldset=""
         >
-          
           <legend
             class="govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-hidden="false"
-            ng-reflect-type="small"
           >
              MANUAL_CASE_EITHER_WAY.VERDICT 
           </legend>
@@ -245,9 +184,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           <pdk-radio-group
             class="ng-untouched ng-pristine ng-valid"
             data-role="verdict-input"
-            ng-reflect-inline="false"
-            ng-reflect-name="verdict-4fc9cb0f24-ac3b-4a76-9"
-            ng-reflect-required="true"
             required=""
           >
             <div
@@ -259,146 +195,107 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           
         </fieldset>
         
+        
       </pdk-form-group>
     </pdk-form-field>
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object],[object Object"
-      ng-reflect-hint-text="COMMON.HINT_TEXT_DATE"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.VERDICT"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
         <fieldset
           class="govuk-fieldset"
           pdk-fieldset=""
         >
-          
           <legend
             class="govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-hidden="false"
-            ng-reflect-type="small"
           >
              MANUAL_CASE_EITHER_WAY.VERDICT_DATE 
           </legend>
           
-          
           <pdk-hint
             class="govuk-hint"
           >
-            
-            
-            
-             COMMON.HINT_TEXT_DATE 
-            
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+              
+            </div>
           </pdk-hint>
           
+          
           <pdk-date-input
-            _nghost-a-c27=""
             class="ng-untouched ng-pristine ng-valid"
             data-role="verdictDate-input"
-            ng-reflect-model="2020-10-10"
-            ng-reflect-name="verdict-date-4fc9cb0f24-ac3b-4"
-            ng-reflect-past-date=""
-            ng-reflect-required=""
             pastdate=""
             required=""
             validatedate=""
           >
             <div
-              _ngcontent-a-c27=""
               class="pdk-date-input"
             >
               <div
-                _ngcontent-a-c27=""
                 class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
               >
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-74-day"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-day"
                     pdk-label=""
                   >
                      Day 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
-                    id="pdk-date-input-74-day"
+                    id="pdk-date-input-GENERATED_ID-day"
                     name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-74-month"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-month"
                     pdk-label=""
                   >
                      Month 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
-                    id="pdk-date-input-74-month"
+                    id="pdk-date-input-GENERATED_ID-month"
                     name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c27=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c27=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-74-year"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-year"
                     pdk-label=""
                   >
                      Year 
                   </label>
                   <input
-                    _ngcontent-a-c27=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
-                    id="pdk-date-input-74-year"
+                    id="pdk-date-input-GENERATED_ID-year"
                     name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
                     required=""
                     type="number"
                   />
@@ -410,8 +307,11 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           
         </fieldset>
         
+        
       </pdk-form-group>
     </pdk-form-field>
+    
+    
   </div>
 </pdk-inset-text>
 `;
@@ -423,142 +323,102 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
   >
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object],[object Object"
-      ng-reflect-hint-text="COMMON.HINT_TEXT_DATE"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.PLEA_DA"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
         <fieldset
           class="govuk-fieldset"
           pdk-fieldset=""
         >
-          
           <legend
             class="govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-hidden="false"
-            ng-reflect-type="small"
           >
              MANUAL_CASE_EITHER_WAY.PLEA_DATE 
           </legend>
           
-          
           <pdk-hint
             class="govuk-hint"
           >
-            
-            
-            
-             COMMON.HINT_TEXT_DATE 
-            
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+              
+            </div>
           </pdk-hint>
           
+          
           <pdk-date-input
-            _nghost-a-c15=""
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            ng-reflect-model="2020-10-10"
-            ng-reflect-name="plea-date-12af2be8-b257-4227-9"
-            ng-reflect-past-date=""
-            ng-reflect-required=""
             pastdate=""
             required=""
             validatedate=""
           >
             <div
-              _ngcontent-a-c15=""
               class="pdk-date-input"
             >
               <div
-                _ngcontent-a-c15=""
                 class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
               >
                 <div
-                  _ngcontent-a-c15=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c15=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-34-day"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-day"
                     pdk-label=""
                   >
                      Day 
                   </label>
                   <input
-                    _ngcontent-a-c15=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
-                    id="pdk-date-input-34-day"
+                    id="pdk-date-input-GENERATED_ID-day"
                     name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c15=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c15=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-34-month"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-month"
                     pdk-label=""
                   >
                      Month 
                   </label>
                   <input
-                    _ngcontent-a-c15=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
-                    id="pdk-date-input-34-month"
+                    id="pdk-date-input-GENERATED_ID-month"
                     name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c15=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c15=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-34-year"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-year"
                     pdk-label=""
                   >
                      Year 
                   </label>
                   <input
-                    _ngcontent-a-c15=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
-                    id="pdk-date-input-34-year"
+                    id="pdk-date-input-GENERATED_ID-year"
                     name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
                     required=""
                     type="number"
                   />
@@ -569,6 +429,7 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           </pdk-date-input>
           
         </fieldset>
+        
         
       </pdk-form-group>
     </pdk-form-field>
@@ -585,142 +446,102 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
   >
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object],[object Object"
-      ng-reflect-hint-text="COMMON.HINT_TEXT_DATE"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.PLEA_DA"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
         <fieldset
           class="govuk-fieldset"
           pdk-fieldset=""
         >
-          
           <legend
             class="govuk-fieldset__legend govuk-fieldset__legend--s"
-            ng-reflect-hidden="false"
-            ng-reflect-type="small"
           >
              MANUAL_CASE_EITHER_WAY.PLEA_DATE 
           </legend>
           
-          
           <pdk-hint
             class="govuk-hint"
           >
-            
-            
-            
-             COMMON.HINT_TEXT_DATE 
-            
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+              
+            </div>
           </pdk-hint>
           
+          
           <pdk-date-input
-            _nghost-a-c39=""
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            ng-reflect-model="2020-10-10"
-            ng-reflect-name="plea-date-8ecd315e-c3d3-4e5e-a"
-            ng-reflect-past-date=""
-            ng-reflect-required=""
             pastdate=""
             required=""
             validatedate=""
           >
             <div
-              _ngcontent-a-c39=""
               class="pdk-date-input"
             >
               <div
-                _ngcontent-a-c39=""
                 class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                ng-reflect-form="[object Object]"
               >
                 <div
-                  _ngcontent-a-c39=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c39=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-108-day"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-day"
                     pdk-label=""
                   >
                      Day 
                   </label>
                   <input
-                    _ngcontent-a-c39=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="day"
-                    id="pdk-date-input-108-day"
+                    id="pdk-date-input-GENERATED_ID-day"
                     name="dateDay"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="day"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c39=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c39=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-108-month"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-month"
                     pdk-label=""
                   >
                      Month 
                   </label>
                   <input
-                    _ngcontent-a-c39=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
                     formcontrolname="month"
-                    id="pdk-date-input-108-month"
+                    id="pdk-date-input-GENERATED_ID-month"
                     name="dateMonth"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="month"
-                    ng-reflect-required=""
-                    ng-reflect-width="2"
                     required=""
                     type="number"
                   />
                 </div>
                 <div
-                  _ngcontent-a-c39=""
                   class="govuk-date-input__item"
                 >
                   <label
-                    _ngcontent-a-c39=""
                     class="govuk-date-input__label govuk-label"
-                    for="pdk-date-input-108-year"
-                    ng-reflect-type=""
+                    for="pdk-date-input-GENERATED_ID-year"
                     pdk-label=""
                   >
                      Year 
                   </label>
                   <input
-                    _ngcontent-a-c39=""
                     autocomplete="off"
                     class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
                     formcontrolname="year"
-                    id="pdk-date-input-108-year"
+                    id="pdk-date-input-GENERATED_ID-year"
                     name="dateYear"
-                    ng-reflect-has-error="false"
-                    ng-reflect-name="year"
-                    ng-reflect-required=""
-                    ng-reflect-width="4"
                     required=""
                     type="number"
                   />
@@ -732,30 +553,20 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           
         </fieldset>
         
+        
       </pdk-form-group>
     </pdk-form-field>
-    
-    
     <pdk-form-field
       labeltype="small"
-      ng-reflect-error-messages="[object Object]"
-      ng-reflect-label="MANUAL_CASE_EITHER_WAY.ALLOCAT"
-      ng-reflect-label-type="small"
     >
       
       <pdk-form-group
         class="pdk-form-group"
-        ng-reflect-has-error="false"
       >
-        
-        
-        
         
         <label
           class="govuk-label govuk-label--s"
-          for="pdk-select-110"
-          ng-reflect-hidden="false"
-          ng-reflect-type="small"
+          for="pdk-select-GENERATED_ID"
         >
            MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION 
         </label>
@@ -765,32 +576,31 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
         <pdk-select
           class="ng-untouched ng-pristine ng-valid"
           data-role="allocationDecision-input"
-          ng-reflect-name="allocation-decision-8ecd315e-c"
-          ng-reflect-placeholder="MANUAL_CASE_EITHER_WAY.CHOOSE_"
-          ng-reflect-required="true"
           required=""
         >
           <select
             class="govuk-select"
-            id="pdk-select-110"
+            id="pdk-select-GENERATED_ID"
             name="allocation-decision-8ecd315e-c3d3-4e5e-ace7-0c0e7ee951b1-6c7f97ab-ed75-4414-8e2e-dbeadd9b282d"
             required=""
           >
-            
-            
             <option
-              ng-reflect-value=""
               value=""
             >
               MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
             </option>
             
+            
+            
           </select>
         </pdk-select>
         
         
+        
       </pdk-form-group>
     </pdk-form-field>
+    
+    
     
   </div>
 </pdk-inset-text>
@@ -800,22 +610,19 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "T" should allow in
 <pdk-select
   class="ng-untouched ng-pristine ng-valid"
   data-role="allocationDecision-input"
-  ng-reflect-name="allocation-decision-12af2be8-b"
-  ng-reflect-placeholder="MANUAL_CASE_EITHER_WAY.CHOOSE_"
 >
   <select
     class="govuk-select"
-    id="pdk-select-152"
+    id="pdk-select-GENERATED_ID"
     name="allocation-decision-12af2be8-b257-4227-9cf0-3d77975ed7aa-c0121990-1eaf-4f05-ad4e-491e3aa4092e"
   >
-    
-    
     <option
-      ng-reflect-value=""
       value=""
     >
       MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
     </option>
+    
+    
     
   </select>
 </pdk-select>

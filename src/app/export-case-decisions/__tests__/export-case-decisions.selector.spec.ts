@@ -11,7 +11,11 @@ describe('export case results by date/selectors', () => {
   let state: FeatureState;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}}), StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)]
+      imports: [
+        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
+        StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)
+      ],
+      teardown: { destroyAfterEach: false }
     });
     const store = TestBed.get(Store);
     store.dispatch(

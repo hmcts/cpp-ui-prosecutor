@@ -15,16 +15,12 @@ describe('OnlinePleaGuard', () => {
   let getDefendantsOnlinePlea: jest.Mock;
   let navigate: jest.Mock;
 
-  const routeSnapshot = {
-    params: { caseId: 'caseId' }
-  } as any;
-
   beforeEach(() => {
     getDefendantsOnlinePlea = jest.fn();
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         OnlinePleaGuard,
         {
@@ -39,7 +35,8 @@ describe('OnlinePleaGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(OnlinePleaGuard);

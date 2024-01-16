@@ -39,7 +39,8 @@ describe('OffenceWithdrawReasonsGuard', () => {
           }
         },
         provideMockStore({ initialState })
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(OffenceWithdrawalReasonsGuard);

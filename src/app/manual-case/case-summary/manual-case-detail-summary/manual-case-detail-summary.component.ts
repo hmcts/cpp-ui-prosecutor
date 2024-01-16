@@ -6,7 +6,7 @@ import { CourtCentreWithRooms, PoliceForce } from '../../../core';
 @Component({
   selector: 'manual-case-detail-summary',
   templateUrl: './manual-case-detail-summary.component.html',
-  styleUrls: ['./manual-case-detail-summary.component.scss'],
+  styleUrls: ['./manual-case-detail-summary.component.scss']
 })
 export class ManualCaseDetailSummaryComponent implements OnInit {
   @Input() manualCase: ManualCase;
@@ -21,14 +21,10 @@ export class ManualCaseDetailSummaryComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.courtReceivedToName = this.courtCentres.find(
-      (s) => s.oucode === this.manualCase.courtReceivedToCode
-    ).name;
-    this.courtReceivedFromName = this.courtCentres.find(
-      (s) => s.oucode === this.manualCase.courtReceivedFromCode
-    ).name;
+    this.courtReceivedToName = this.courtCentres.find(s => s.oucode === this.manualCase.courtReceivedToCode).name;
+    this.courtReceivedFromName = this.courtCentres.find(s => s.oucode === this.manualCase.courtReceivedFromCode).name;
     this.policeForceName = this.policeForces.find(
-      (s) => s.policeForceCode === this.manualCase.policeForceCode
+      s => s.policeForceCode === this.manualCase.policeForceCode
     ).policeForceName;
   }
 

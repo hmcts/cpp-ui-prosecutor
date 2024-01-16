@@ -1,7 +1,7 @@
 import { ManualCaseDefendant } from '../core/model/manual-case-defendant';
 import { Injectable } from '@angular/core';
 import { cloneDeep, merge, flatten, omit } from 'lodash';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { ManualCaseOffence } from '../core/model/manual-case-offence';
 import { OffenceModeOfTrialType } from '../core/model/reference-data-interfaces/offence-type';
 
@@ -20,7 +20,7 @@ export class ManualCaseOffenceStateService {
   public iterateOffence = true;
 
   get currentIndex() {
-    return this.offencesInMemory.findIndex((d) => d.offenceId === this.currentOffenceId);
+    return this.offencesInMemory.findIndex(d => d.offenceId === this.currentOffenceId);
   }
 
   getUuid(): string {
@@ -35,20 +35,18 @@ export class ManualCaseOffenceStateService {
   initialise(defendants: ManualCaseDefendant[]) {
     this.allDefendants = defendants;
 
-    const allOffences = flatten(defendants.filter((d) => d.offences).map((d) => d.offences));
+    const allOffences = flatten(defendants.filter(d => d.offences).map(d => d.offences));
 
     const distinctOffences = allOffences.reduce((offenceList, offence) => {
-      if (offenceList.findIndex((o) => o.offenceId === offence.offenceId) === -1) {
+      if (offenceList.findIndex(o => o.offenceId === offence.offenceId) === -1) {
         offenceList.push(offence);
       }
-      return offenceList.sort((a, b) =>
-        a.offenceSequenceNumber > b.offenceSequenceNumber ? 1 : -1
-      );
+      return offenceList.sort((a, b) => (a.offenceSequenceNumber > b.offenceSequenceNumber ? 1 : -1));
     }, []);
 
     if (this.offencesInMemory.length) {
       const newOffences = distinctOffences.filter(
-        (g) => this.offencesInMemory.findIndex((d) => d.offenceId === g.offenceId) === -1
+        g => this.offencesInMemory.findIndex(d => d.offenceId === g.offenceId) === -1
       );
 
       if (newOffences.length && this.iterateOffence) {
@@ -66,7 +64,7 @@ export class ManualCaseOffenceStateService {
   getDefendantOptions(offenceId: string) {
     const defendantOptions = [];
 
-    this.allDefendants.forEach((defendant) => {
+    this.allDefendants.forEach(defendant => {
       let defendentOffence = cloneDeep(this.blankOffence);
 
       if (defendant.offences && offenceId) {
@@ -86,10 +84,10 @@ export class ManualCaseOffenceStateService {
           'backDutyAllowed',
           'locationRequired',
           'dynamicParticularFormData',
-          'standardOffenceWording',
+          'standardOffenceWording'
         ];
 
-        const existingOffence = defendant.offences.find((o) => o.offenceId === offenceId);
+        const existingOffence = defendant.offences.find(o => o.offenceId === offenceId);
 
         if (existingOffence) {
           defendentOffence = merge(this.blankOffence, omit(existingOffence, exclude));
@@ -105,11 +103,7 @@ export class ManualCaseOffenceStateService {
         label: defendentLabel,
         value: defendant.id,
         offence: defendentOffence,
-        checked: !!(
-          defendentOffence.chargeDate ||
-          defendentOffence.laidDate ||
-          defendentOffence.arrestDate
-        ),
+        checked: !!(defendentOffence.chargeDate || defendentOffence.laidDate || defendentOffence.arrestDate)
       });
     });
 
@@ -119,12 +113,8 @@ export class ManualCaseOffenceStateService {
   getSelectedDefendantIds(offenceId: string) {
     const selectedDefendantIds = [];
 
-    this.allDefendants.forEach((defendant) => {
-      if (
-        offenceId &&
-        defendant.offences &&
-        defendant.offences.findIndex((e) => e.offenceId === offenceId) > -1
-      ) {
+    this.allDefendants.forEach(defendant => {
+      if (offenceId && defendant.offences && defendant.offences.findIndex(e => e.offenceId === offenceId) > -1) {
         selectedDefendantIds.push(defendant.id);
       }
     });
@@ -139,14 +129,14 @@ export class ManualCaseOffenceStateService {
     selectedDefendantIds: string[]
   ) {
     const manualCaseDefs = cloneDeep(manualCaseDefendants);
-    const allOffences = flatten(manualCaseDefs.filter((d) => d.offences).map((d) => d.offences));
+    const allOffences = flatten(manualCaseDefs.filter(d => d.offences).map(d => d.offences));
 
     manualCaseDefs.forEach((defendant, defendantIndex) => {
       if (!defendant.offences) {
         defendant.offences = [];
       }
 
-      const defendantOption = offence.defendantOptions.find((d) => d.value === defendant.id);
+      const defendantOption = offence.defendantOptions.find(d => d.value === defendant.id);
 
       const defendantOffence = merge({}, offence, defendantOption.offence);
 
@@ -175,7 +165,7 @@ export class ManualCaseOffenceStateService {
 
       delete defendantOffence.defendantOptions;
 
-      const index = defendant.offences.findIndex((e) => e.offenceId === offence.offenceId);
+      const index = defendant.offences.findIndex(e => e.offenceId === offence.offenceId);
 
       if (index === -1 && selectedDefendantIds.indexOf(defendant.id) > -1) {
         if (!defendantOffence.offenceSequenceNumber) {
@@ -183,7 +173,7 @@ export class ManualCaseOffenceStateService {
         }
         defendant.offences.push(defendantOffence);
       } else if (index > -1 && selectedDefendantIds.indexOf(defendant.id) === -1) {
-        defendant.offences = defendant.offences.filter((o) => o.offenceId !== offence.offenceId);
+        defendant.offences = defendant.offences.filter(o => o.offenceId !== offence.offenceId);
       } else if (index > -1 && selectedDefendantIds.indexOf(defendant.id) > -1) {
         defendant.offences[index] = defendantOffence;
       }
@@ -265,16 +255,13 @@ export class ManualCaseOffenceStateService {
 
   get blankOffence() {
     return {
-      alcoholRelatedOffence: {},
+      alcoholRelatedOffence: {}
     } as ManualCaseOffence;
   }
 
-  getDefendantsGroupedByOffenceId(
-    defendants: ManualCaseDefendant[],
-    initiationCode: string
-  ): OffenceIdsWithDefendants {
+  getDefendantsGroupedByOffenceId(defendants: ManualCaseDefendant[], initiationCode: string): OffenceIdsWithDefendants {
     return defendants.reduce((offences, defendant) => {
-      defendant.offences.forEach((offence) => {
+      defendant.offences.forEach(offence => {
         if (offence.modeOfTrialDerived.toLowerCase() === OffenceModeOfTrialType.EitherWay) {
           if (initiationCode === 'CO') {
             this.initialiseEitherWayFields(offence);
@@ -290,7 +277,7 @@ export class ManualCaseOffenceStateService {
     if (!offence.plea) {
       offence.plea = {
         pleaValue: undefined,
-        pleaDate: undefined,
+        pleaDate: undefined
       };
     }
     if (!offence.verdict) {
@@ -298,19 +285,18 @@ export class ManualCaseOffenceStateService {
         verdictType: {
           id: undefined,
           category: undefined,
-          categoryType: undefined,
+          categoryType: undefined
         },
-        verdictDate: undefined,
+        verdictDate: undefined
       };
     }
   }
 
   hasEitherWayOffence(defendantsWithOffences: ManualCaseDefendant[]): boolean {
-    const eitherWay = defendantsWithOffences.findIndex((defendantsWithOffence) => {
+    const eitherWay = defendantsWithOffences.findIndex(defendantsWithOffence => {
       const hasEitherWayOffence = defendantsWithOffence.offences.findIndex(
-        (offence) =>
-          offence.modeOfTrialDerived &&
-          offence.modeOfTrialDerived.toLowerCase() === OffenceModeOfTrialType.EitherWay
+        offence =>
+          offence.modeOfTrialDerived && offence.modeOfTrialDerived.toLowerCase() === OffenceModeOfTrialType.EitherWay
       );
       return hasEitherWayOffence >= 0;
     });

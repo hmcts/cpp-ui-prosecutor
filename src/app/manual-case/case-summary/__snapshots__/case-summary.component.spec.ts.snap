@@ -2,16 +2,16 @@
 
 exports[`ManualCaseSummaryComponent should render the component 1`] = `
 <manual-case-summary
-  add={[Function EventEmitter]}
+  add={[Function EventEmitter_]}
   caseDetails={[Function Object]}
   defendantNames={[Function Array]}
   defendants={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
+  formSubmit={[Function EventEmitter_]}
   hasNpp={[Function Boolean]}
   location={[Function SpyLocation]}
   offenceStateService={[Function ManualCaseOffenceStateService]}
-  remove={[Function EventEmitter]}
-  submit={[Function EventEmitter]}
+  remove={[Function EventEmitter_]}
 >
   <pdk-grid
     container=""
@@ -22,14 +22,12 @@ exports[`ManualCaseSummaryComponent should render the component 1`] = `
       <h1
         pdk-typography="heading-xlarge"
       >
-         
       </h1>
     </pdk-grid>
   </pdk-grid><prosecution-case-details /><manual-defendant-details /><manual-case-offence-details /><button
     pdk-button=""
     type="submit"
   >
-     
   </button><p
     pdk-margin-top="3"
   >
@@ -38,7 +36,6 @@ exports[`ManualCaseSummaryComponent should render the component 1`] = `
       pdk-link=""
       unvisited=""
     >
-       
     </a>
   </p>
 </manual-case-summary>

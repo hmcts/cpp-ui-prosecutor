@@ -17,7 +17,8 @@ describe('DevTools - Select User component', () => {
             back: mockBack
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(DevToolsBackButtonComponent);
   });

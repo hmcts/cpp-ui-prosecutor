@@ -9,17 +9,16 @@ import { DashPipe } from '../../../../shared/pipes/dash/dash.pipe';
 import { ManualCaseDetailSummaryComponent } from '../manual-case-detail-summary.component';
 import { CourtCentreWithRooms, PoliceForce } from '../../../../core';
 
-
 describe('ManualCaseDetailSummaryComponent', () => {
   let component: ManualCaseDetailSummaryComponent;
   let fixture: ComponentFixture<ManualCaseDetailSummaryComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseDetailSummaryComponent, DashPipe],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm],
+      providers: [ControlContainer, NgForm]
     });
 
     fixture = TestBed.createComponent(ManualCaseDetailSummaryComponent);
@@ -31,17 +30,17 @@ describe('ManualCaseDetailSummaryComponent', () => {
       eitherWayType: 'Direction of Magistrate',
       courtReceivedToCode: '1B02B1',
       courtReceivedFromCode: 'B01CN00',
-      policeForceCode: '2',
+      policeForceCode: '2'
     } as ManualCase;
 
     component.courtCentres = [
       { oucode: '1B02B1', name: `Bexley Magistrates' Court` },
-      { oucode: 'B01CN00', name: `Bromley Magistrates' Court` },
+      { oucode: 'B01CN00', name: `Bromley Magistrates' Court` }
     ] as CourtCentreWithRooms[];
 
     component.policeForces = [
       { policeForceCode: '2', policeForceName: 'London' },
-      { policeForceCode: '3', policeForceName: 'Cumbria' },
+      { policeForceCode: '3', policeForceName: 'Cumbria' }
     ] as PoliceForce[];
   });
 

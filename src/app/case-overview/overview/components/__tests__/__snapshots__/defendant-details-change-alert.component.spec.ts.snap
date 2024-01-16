@@ -4,17 +4,11 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
 <defendant-details-change-alert-test
   legalEntityDetails={[Function Object]}
 >
-  <defendant-details-change-alert
-    ng-reflect-legal-entity-details="[object Object]"
-  >
-    
+  <defendant-details-change-alert>
     <pdk-alert
       aria-describedby="personal-details-updated-alert"
       class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
       icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
       pdk-margin-vertical="1"
       type="warning"
     >
@@ -25,7 +19,6 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
         <div
           class="pdk-alert__container"
         >
-          
           <i
             aria-hidden="true"
             class="pdk-alert__icon pdk-alert__icon--alert"
@@ -36,12 +29,9 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
           >
             <div>
                The following defendant details have been updated: 
-              
-              
               <div>
                 Address details
               </div>
-              
               <div>
                 Name
               </div>
@@ -58,17 +48,11 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
 <defendant-details-change-alert-test
   legalEntityDetails={[Function Object]}
 >
-  <defendant-details-change-alert
-    ng-reflect-legal-entity-details="[object Object]"
-  >
-    
+  <defendant-details-change-alert>
     <pdk-alert
       aria-describedby="personal-details-updated-alert"
       class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
       icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
       pdk-margin-vertical="1"
       type="warning"
     >
@@ -79,7 +63,6 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
         <div
           class="pdk-alert__container"
         >
-          
           <i
             aria-hidden="true"
             class="pdk-alert__icon pdk-alert__icon--alert"
@@ -90,9 +73,6 @@ exports[`DefendantDetailsChangeAlertComponent -> Legal entity defendant should d
           >
             <div>
                The following defendant details have been updated: 
-              
-              
-              
               <div>
                 Name
               </div>
@@ -109,17 +89,11 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
 <defendant-details-change-alert-test
   personalDetails={[Function Object]}
 >
-  <defendant-details-change-alert
-    ng-reflect-personal-details="[object Object]"
-  >
-    
+  <defendant-details-change-alert>
     <pdk-alert
       aria-describedby="personal-details-updated-alert"
       class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
       icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
       pdk-margin-vertical="1"
       type="warning"
     >
@@ -130,7 +104,6 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
         <div
           class="pdk-alert__container"
         >
-          
           <i
             aria-hidden="true"
             class="pdk-alert__icon pdk-alert__icon--alert"
@@ -141,12 +114,9 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
           >
             <div>
                The following defendant details have been updated: 
-              
-              
               <div>
                 Address details
               </div>
-              
               <div>
                 Name
               </div>
@@ -163,17 +133,11 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
 <defendant-details-change-alert-test
   personalDetails={[Function Object]}
 >
-  <defendant-details-change-alert
-    ng-reflect-personal-details="[object Object]"
-  >
-    
+  <defendant-details-change-alert>
     <pdk-alert
       aria-describedby="personal-details-updated-alert"
       class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
       icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
       pdk-margin-vertical="1"
       type="warning"
     >
@@ -184,7 +148,6 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
         <div
           class="pdk-alert__container"
         >
-          
           <i
             aria-hidden="true"
             class="pdk-alert__icon pdk-alert__icon--alert"
@@ -195,15 +158,12 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
           >
             <div>
                The following defendant details have been updated: 
-              
               <div>
                 Date of birth
               </div>
-              
               <div>
                 Address details
               </div>
-              
               <div>
                 Name
               </div>
@@ -220,17 +180,11 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
 <defendant-details-change-alert-test
   personalDetails={[Function Object]}
 >
-  <defendant-details-change-alert
-    ng-reflect-personal-details="[object Object]"
-  >
-    
+  <defendant-details-change-alert>
     <pdk-alert
       aria-describedby="personal-details-updated-alert"
       class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
       icon="true"
-      ng-reflect-icon="true"
-      ng-reflect-type="warning"
-      ng-reflect-vertical="1"
       pdk-margin-vertical="1"
       type="warning"
     >
@@ -241,7 +195,6 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
         <div
           class="pdk-alert__container"
         >
-          
           <i
             aria-hidden="true"
             class="pdk-alert__icon pdk-alert__icon--alert"
@@ -252,9 +205,6 @@ exports[`DefendantDetailsChangeAlertComponent -> person defendant should display
           >
             <div>
                The following defendant details have been updated: 
-              
-              
-              
               <div>
                 Name
               </div>

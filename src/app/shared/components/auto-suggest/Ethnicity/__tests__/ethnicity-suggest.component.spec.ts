@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
-import {
-  pcfReferencedataReducer,
-  PcfReferenceDataState,
-} from '../../../../../core/reducers/pcf-reference-data';
+import { pcfReferencedataReducer, PcfReferenceDataState } from '../../../../../core/reducers/pcf-reference-data';
 import { PdkAutosuggestModule, PdkCoreModule, PdkFormModule, PdkTextInputModule } from '@cpp/pdk';
 import { FormsModule } from '@angular/forms';
 import { Ethnicity } from '../../../../../core/model/reference-data-interfaces';
@@ -19,14 +16,14 @@ describe('EthnicityAutoSuggestComponent', () => {
       id: 'id',
       sequence: 0,
       code: 'br',
-      description: 'British',
+      description: 'British'
     },
     {
       id: 'id1',
       sequence: 0,
       code: 'ir',
-      description: 'Irish',
-    },
+      description: 'Irish'
+    }
   ];
 
   let fixture: ComponentFixture<EthnicityAutoSuggestTestComponent>;
@@ -42,11 +39,11 @@ describe('EthnicityAutoSuggestComponent', () => {
         PdkCoreModule,
         PdkTextInputModule,
         StoreModule.forRoot(() => null, {
-          runtimeChecks: {},
+          runtimeChecks: {}
         }),
-        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer),
+        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer)
       ],
-      declarations: [EthnicityAutoSuggestComponent, EthnicityAutoSuggestTestComponent],
+      declarations: [EthnicityAutoSuggestComponent, EthnicityAutoSuggestTestComponent]
     });
 
     fixture = TestBed.createComponent(EthnicityAutoSuggestTestComponent);
@@ -123,13 +120,7 @@ describe('EthnicityAutoSuggestComponent', () => {
 @Component({
   selector: 'ethnicity-auto-suggest-test',
   template: `
-    <form
-      autocomplete="off"
-      pdk-form
-      novalidate
-      (validSubmit)="submitForm(form.value)"
-      #form="ngForm"
-    >
+    <form autocomplete="off" pdk-form novalidate (validSubmit)="submitForm(form.value)" #form="ngForm">
       <pdk-form-field label="Ethnicity">
         <ethnicity-auto-suggest
           id="EthnicityId"
@@ -142,7 +133,7 @@ describe('EthnicityAutoSuggestComponent', () => {
       </pdk-form-field>
       <button type="submit">Submit</button>
     </form>
-  `,
+  `
 })
 class EthnicityAutoSuggestTestComponent {
   selectedValue;

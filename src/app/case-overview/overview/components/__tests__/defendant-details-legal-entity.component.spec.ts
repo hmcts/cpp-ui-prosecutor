@@ -31,7 +31,8 @@ describe('DefendantDetailsPersonComponent', () => {
         CaseStatusPipeModule,
         FormatDatePipeModule,
         FormatAddressPipeModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     Date.now = jest.fn(() => Date.parse('2017-02-14'));
@@ -53,5 +54,4 @@ describe('DefendantDetailsPersonComponent', () => {
   class TestDefendantDetailsLegalEntityComponent {
     @Input() legalEntityDetails: LegalEntityDetails;
   }
-
 });

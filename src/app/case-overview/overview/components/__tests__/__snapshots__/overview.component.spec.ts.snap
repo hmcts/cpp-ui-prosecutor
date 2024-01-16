@@ -8,16 +8,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -25,9 +17,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -150,28 +140,21 @@ exports[`OverviewComponent should compile correctly 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -179,12 +162,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="1957-03-11"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 1957-03-11
               </div>
@@ -194,29 +174,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -224,7 +191,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -237,11 +203,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -256,11 +218,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -275,17 +233,12 @@ exports[`OverviewComponent should compile correctly 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -293,18 +246,12 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -428,14 +375,12 @@ exports[`OverviewComponent should compile correctly 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -443,12 +388,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -476,21 +417,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -498,11 +434,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -538,13 +470,10 @@ exports[`OverviewComponent should compile correctly 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -558,30 +487,20 @@ exports[`OverviewComponent should compile correctly 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c1=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c1=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -591,8 +510,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -604,20 +521,15 @@ exports[`OverviewComponent should compile correctly 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -626,24 +538,16 @@ exports[`OverviewComponent should compile correctly 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -787,16 +691,11 @@ exports[`OverviewComponent should compile correctly 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -805,14 +704,9 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -958,41 +852,29 @@ exports[`OverviewComponent should compile correctly 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -1000,7 +882,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -1013,38 +894,12 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -1052,10 +907,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -1142,13 +994,10 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -1156,10 +1005,7 @@ exports[`OverviewComponent should compile correctly 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -1171,7 +1017,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -1184,16 +1029,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -1201,9 +1038,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -1326,28 +1161,21 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -1355,12 +1183,9 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="1957-03-11"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 1957-03-11
               </div>
@@ -1370,29 +1195,16 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -1400,7 +1212,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -1413,11 +1224,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -1432,11 +1239,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -1451,17 +1254,12 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -1469,18 +1267,12 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -1604,14 +1396,12 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -1619,12 +1409,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -1652,21 +1438,16 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -1674,11 +1455,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -1714,13 +1491,10 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -1734,29 +1508,20 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -1900,16 +1665,11 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -1918,14 +1678,9 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -2071,41 +1826,29 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -2113,7 +1856,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -2126,38 +1868,12 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -2165,10 +1881,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -2255,13 +1968,10 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -2269,10 +1979,7 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -2284,7 +1991,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -2297,16 +2003,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -2314,9 +2012,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -2439,28 +2135,21 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -2468,12 +2157,9 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="1957-03-11"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 1957-03-11
               </div>
@@ -2483,29 +2169,16 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -2513,7 +2186,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -2526,11 +2198,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -2545,11 +2213,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -2564,17 +2228,12 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -2582,18 +2241,12 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -2717,14 +2370,12 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -2732,12 +2383,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -2765,21 +2412,16 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -2787,11 +2429,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -2827,13 +2465,10 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -2847,29 +2482,20 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
     </pdk-grid>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -3013,16 +2639,11 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -3031,14 +2652,9 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -3184,41 +2800,29 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -3226,7 +2830,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -3239,38 +2842,12 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -3278,10 +2855,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -3368,13 +2942,10 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -3382,10 +2953,7 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -3397,7 +2965,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -3410,16 +2977,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object]"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -3427,9 +2986,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -3552,28 +3109,21 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -3581,12 +3131,9 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="2000-02-14"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 2000-02-14
               </div>
@@ -3596,38 +3143,25 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object]"
-          >
-            
+          <case-warnings>
             <pdk-warning-text
-              _nghost-a-c34=""
               error=""
-              ng-reflect-error=""
             >
               <div
-                _ngcontent-a-c34=""
                 class="govuk-warning-text pdk-warning-text--error"
               >
                 <span
-                  _ngcontent-a-c34=""
                   aria-hidden="true"
                   class="govuk-warning-text__icon"
                 >
                   !
                 </span>
                 <strong
-                  _ngcontent-a-c34=""
                   class="govuk-warning-text__text"
                 >
                   <span
-                    _ngcontent-a-c34=""
                     class="govuk-warning-text__assistive"
                   >
                     Warning
@@ -3636,29 +3170,22 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 </strong>
               </div>
             </pdk-warning-text>
-            
             <pdk-warning-text
-              _nghost-a-c34=""
               error=""
-              ng-reflect-error=""
             >
               <div
-                _ngcontent-a-c34=""
                 class="govuk-warning-text pdk-warning-text--error"
               >
                 <span
-                  _ngcontent-a-c34=""
                   aria-hidden="true"
                   class="govuk-warning-text__icon"
                 >
                   !
                 </span>
                 <strong
-                  _ngcontent-a-c34=""
                   class="govuk-warning-text__text"
                 >
                   <span
-                    _ngcontent-a-c34=""
                     class="govuk-warning-text__assistive"
                   >
                     Warning
@@ -3667,29 +3194,22 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 </strong>
               </div>
             </pdk-warning-text>
-            
             <pdk-warning-text
-              _nghost-a-c34=""
               error=""
-              ng-reflect-error=""
             >
               <div
-                _ngcontent-a-c34=""
                 class="govuk-warning-text pdk-warning-text--error"
               >
                 <span
-                  _ngcontent-a-c34=""
                   aria-hidden="true"
                   class="govuk-warning-text__icon"
                 >
                   !
                 </span>
                 <strong
-                  _ngcontent-a-c34=""
                   class="govuk-warning-text__text"
                 >
                   <span
-                    _ngcontent-a-c34=""
                     class="govuk-warning-text__assistive"
                   >
                     Warning
@@ -3698,17 +3218,13 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 </strong>
               </div>
             </pdk-warning-text>
-            
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -3716,7 +3232,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -3729,11 +3244,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -3748,11 +3259,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -3767,17 +3274,12 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -3785,18 +3287,12 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -3920,14 +3416,12 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -3935,12 +3429,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -3968,21 +3458,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -3990,11 +3475,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -4030,13 +3511,10 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -4050,30 +3528,20 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c31=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c31=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -4083,8 +3551,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -4096,20 +3562,15 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -4118,24 +3579,16 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="0"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               0
             </div>
@@ -4281,41 +3734,29 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -4323,7 +3764,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -4336,38 +3776,12 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -4375,10 +3789,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -4465,13 +3876,10 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -4479,10 +3887,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -4494,7 +3899,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -4507,16 +3911,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -4524,9 +3920,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -4649,28 +4043,21 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -4678,12 +4065,9 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="2000-02-14"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 2000-02-14
               </div>
@@ -4693,17 +4077,11 @@ exports[`OverviewComponent should compile correctly with personal detail change 
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
             <pdk-alert
               aria-describedby="personal-details-updated-alert"
               class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
               icon="true"
-              ng-reflect-icon="true"
-              ng-reflect-type="warning"
-              ng-reflect-vertical="1"
               pdk-margin-vertical="1"
               type="warning"
             >
@@ -4714,7 +4092,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 <div
                   class="pdk-alert__container"
                 >
-                  
                   <i
                     aria-hidden="true"
                     class="pdk-alert__icon pdk-alert__icon--alert"
@@ -4725,36 +4102,23 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   >
                     <div>
                        The following defendant details have been updated: 
-                      
                       <div>
                         Date of birth
                       </div>
-                      
-                      
                     </div>
                   </div>
                 </div>
               </div>
             </pdk-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -4762,7 +4126,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -4775,11 +4138,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -4794,11 +4153,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -4813,17 +4168,12 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -4831,18 +4181,12 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -4966,14 +4310,12 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -4981,12 +4323,8 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -5014,21 +4352,16 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -5036,11 +4369,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -5076,13 +4405,10 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -5096,30 +4422,20 @@ exports[`OverviewComponent should compile correctly with personal detail change 
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c37=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c37=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -5129,8 +4445,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -5142,20 +4456,15 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -5164,24 +4473,16 @@ exports[`OverviewComponent should compile correctly with personal detail change 
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -5325,16 +4626,11 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -5343,14 +4639,9 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -5496,41 +4787,29 @@ exports[`OverviewComponent should compile correctly with personal detail change 
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -5538,7 +4817,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -5551,38 +4829,12 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -5590,10 +4842,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -5680,13 +4929,10 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -5694,10 +4940,7 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -5709,7 +4952,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -5722,16 +4964,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object]"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -5739,9 +4973,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -5864,28 +5096,21 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -5893,12 +5118,9 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="1957-03-11"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 1957-03-11
               </div>
@@ -5908,29 +5130,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object]"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -5938,7 +5147,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -5951,11 +5159,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -5970,11 +5174,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -5989,17 +5189,12 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -6007,18 +5202,12 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -6142,14 +5331,12 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -6157,12 +5344,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -6190,21 +5373,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -6212,11 +5390,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -6252,13 +5426,10 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -6272,30 +5443,20 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c25=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c25=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -6305,8 +5466,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -6318,20 +5477,15 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -6340,24 +5494,16 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="0"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               0
             </div>
@@ -6502,48 +5648,34 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          <plea-mitigation
-            ng-reflect-plea-mitigation="Plea mitigation"
-          >
+          <plea-mitigation>
             <div>
               Plea mitigation
             </div>
           </plea-mitigation>
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -6551,7 +5683,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -6564,38 +5695,12 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -6603,10 +5708,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -6693,13 +5795,10 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -6707,10 +5806,7 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -6722,7 +5818,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -6735,16 +5830,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object]"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -6752,9 +5839,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -6877,28 +5962,21 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -6906,12 +5984,9 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="1957-03-11"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 1957-03-11
               </div>
@@ -6921,29 +5996,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object]"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -6951,7 +6013,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -6964,11 +6025,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -6983,11 +6040,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -7002,17 +6055,12 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -7020,18 +6068,12 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -7155,14 +6197,12 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -7170,12 +6210,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -7203,21 +6239,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -7225,11 +6256,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -7265,13 +6292,10 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -7285,30 +6309,20 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c19=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c19=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -7318,8 +6332,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -7331,20 +6343,15 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -7353,24 +6360,16 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="0"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               0
             </div>
@@ -7514,41 +6513,29 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -7556,7 +6543,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -7569,38 +6555,12 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -7608,10 +6568,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -7698,13 +6655,10 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -7712,10 +6666,7 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -7727,7 +6678,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -7740,16 +6690,8 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions="[object Object]"
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -7757,9 +6699,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -7882,28 +6822,21 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -7911,12 +6844,9 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="2000-02-14"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 2000-02-14
               </div>
@@ -7926,17 +6856,11 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
             <pdk-alert
               aria-describedby="personal-details-updated-alert"
               class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
               icon="true"
-              ng-reflect-icon="true"
-              ng-reflect-type="warning"
-              ng-reflect-vertical="1"
               pdk-margin-vertical="1"
               type="warning"
             >
@@ -7947,7 +6871,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                 <div
                   class="pdk-alert__container"
                 >
-                  
                   <i
                     aria-hidden="true"
                     class="pdk-alert__icon pdk-alert__icon--alert"
@@ -7958,36 +6881,23 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   >
                     <div>
                        The following defendant details have been updated: 
-                      
                       <div>
                         Date of birth
                       </div>
-                      
-                      
                     </div>
                   </div>
                 </div>
               </div>
             </pdk-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -7995,7 +6905,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -8008,11 +6917,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -8027,11 +6932,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -8046,17 +6947,12 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -8064,18 +6960,12 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -8199,14 +7089,12 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -8214,12 +7102,8 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -8247,21 +7131,16 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -8269,11 +7148,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -8309,13 +7184,10 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -8329,30 +7201,20 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c43=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c43=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -8362,8 +7224,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -8375,20 +7235,15 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -8397,24 +7252,16 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -8558,16 +7405,11 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -8576,14 +7418,9 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -8729,41 +7566,29 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -8771,7 +7596,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
                   <li
                     class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                     role="presentation"
@@ -8784,38 +7608,12 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                       role="tab"
                       tabindex="0"
                     >
-                      
-                      
                        Decisions 
-                      
-                      
-                    </a>
-                  </li>
-                  <li
-                    class="govuk-tabs__list-item"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-1"
-                      aria-selected="false"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
                     </a>
                   </li>
                 </ul>
-                
                 <pdk-tab
                   heading="Decisions"
-                  ng-reflect-heading="Decisions"
-                  ng-reflect-selected="true"
                 >
                   <section
                     aria-hidden="false"
@@ -8823,10 +7621,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     id="pdk-tab-section-undefined"
                     role="tabpanel"
                   >
-                    
-                    <case-decisions
-                      ng-reflect-case-decisions-with-offence-decisions="[object Object]"
-                    >
+                    <case-decisions>
                       <div>
                         caseDecisionsWithOffenceDecisions: [
     {
@@ -8913,13 +7708,10 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="false"
                   >
                     <section
                       aria-hidden="true"
@@ -8927,10 +7719,7 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -8942,7 +7731,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;
@@ -8955,16 +7743,8 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   kase={[Function Object]}
   offences={[Function Array]}
 >
-  <case-overview
-    ng-reflect-case-decisions=""
-    ng-reflect-case-notes="[object Object]"
-    ng-reflect-defendant="[object Object]"
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offences="[object Object],[object Object"
-  >
-    <breadcrumb-links
-      ng-reflect-breadcrumbs="[object Object],[object Object"
-    >
+  <case-overview>
+    <breadcrumb-links>
       breadcrumb-links
     </breadcrumb-links>
     <case-header-badge-container>
@@ -8972,9 +7752,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
         case badge
       </pre>
     </case-header-badge-container>
-    <case-submission-messages
-      ng-reflect-kase="[object Object]"
-    >
+    <case-submission-messages>
       <span>
         {
     "id": "case-id-test",
@@ -9097,28 +7875,21 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   }
       </span>
       <span>
-        
       </span>
       <span>
-        
       </span>
     </case-submission-messages>
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div>
           <h1
             class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-heading-xl"
-            ng-reflect-type="heading-xlarge"
-            ng-reflect-vertical="4"
             pdk-margin-vertical="4"
             pdk-typography="heading-xlarge"
           >
@@ -9126,12 +7897,9 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
           </h1>
           <p
             class="govuk-body-m"
-            ng-reflect-type="body-medium"
             pdk-typography="body-medium"
           >
-            <date-of-birth
-              ng-reflect-date-of-birth="2000-02-14"
-            >
+            <date-of-birth>
               <div>
                 dateOfBirth: 2000-02-14
               </div>
@@ -9141,17 +7909,11 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert
-            ng-reflect-personal-details="[object Object]"
-          >
-            
+          <defendant-details-change-alert>
             <pdk-alert
               aria-describedby="personal-details-updated-alert"
               class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
               icon="true"
-              ng-reflect-icon="true"
-              ng-reflect-type="warning"
-              ng-reflect-vertical="1"
               pdk-margin-vertical="1"
               type="warning"
             >
@@ -9162,7 +7924,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                 <div
                   class="pdk-alert__container"
                 >
-                  
                   <i
                     aria-hidden="true"
                     class="pdk-alert__icon pdk-alert__icon--alert"
@@ -9173,36 +7934,23 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   >
                     <div>
                        The following defendant details have been updated: 
-                      
                       <div>
                         Date of birth
                       </div>
-                      
-                      
                     </div>
                   </div>
                 </div>
               </div>
             </pdk-alert>
           </defendant-details-change-alert>
-          <case-warnings
-            ng-reflect-defendant="[object Object]"
-            ng-reflect-offences="[object Object],[object Object"
-          >
-            
-            
-            
-            
+          <case-warnings>
           </case-warnings>
           <div
             class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-            ng-reflect-vertical="8"
             pdk-margin-vertical="8"
           >
             <pdk-tabs>
-              <pdk-tabs-container
-                ng-reflect-vertical="false"
-              >
+              <pdk-tabs-container>
                 <div
                   class="js-enabled govuk-tabs"
                 >
@@ -9210,7 +7958,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                     class="govuk-tabs__list"
                     role="tablist"
                   >
-                    
                     <li
                       class="govuk-tabs__list-item govuk-tabs__list-item--selected"
                       role="presentation"
@@ -9223,11 +7970,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                         role="tab"
                         tabindex="0"
                       >
-                        
-                        
                          Case details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -9242,11 +7985,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Defendant details 
-                        
-                        
                       </a>
                     </li>
                     <li
@@ -9261,17 +8000,12 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                         role="tab"
                         tabindex="-1"
                       >
-                        
-                        
                          Documents 
-                        
-                        
                       </a>
                     </li>
                   </ul>
                   <pdk-tab
                     heading="Case details"
-                    ng-reflect-heading="Case details"
                   >
                     <section
                       aria-hidden="false"
@@ -9279,18 +8013,12 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                       id="pdk-tab-section-0"
                       role="tabpanel"
                     >
-                      
-                      <case-details
-                        ng-reflect-kase="[object Object]"
-                      >
+                      <case-details>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -9414,14 +8142,12 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   }
                         </div>
                         <div>
-                          
                         </div>
                       </case-details>
                     </section>
                   </pdk-tab>
                   <pdk-tab
                     heading="Defendant details"
-                    ng-reflect-heading="Defendant details"
                   >
                     <section
                       aria-hidden="true"
@@ -9429,12 +8155,8 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                       id="pdk-tab-section-1"
                       role="tabpanel"
                     >
-                      
-                      <defendant-details-person
-                        ng-reflect-person-details="[object Object]"
-                      >
+                      <defendant-details-person>
                         <div>
-                          
                         </div>
                         <div>
                           {
@@ -9462,21 +8184,16 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   }
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                       </defendant-details-person>
                     </section>
                   </pdk-tab>
-                  
                   <pdk-tab
                     heading="Documents"
-                    ng-reflect-heading="Documents"
                   >
                     <section
                       aria-hidden="true"
@@ -9484,11 +8201,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <document-list
-                        ng-reflect-case-id="case-id-test"
-                        ng-reflect-documents="[object Object],[object Object"
-                      >
+                      <document-list>
                         <div>
                           [
     {
@@ -9524,13 +8237,10 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   ]
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
-                          
                         </div>
                         <div>
                           case-id-test
@@ -9544,30 +8254,20 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
           </div>
         </div>
       </pdk-grid>
-      
       <pdk-grid
         class="govuk-grid-column-one-third"
-        ng-reflect-one-third=""
         one-third=""
       >
         <div
           class="govuk-!-margin-top-5"
-          ng-reflect-top="5"
           pdk-margin-top="5"
         >
-          <pdk-related
-            _nghost-a-c49=""
-          >
+          <pdk-related>
             <div
-              _ngcontent-a-c49=""
               class="pdk-related"
             >
-              
-              
               <h1
                 class="govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-heading-m"
-                ng-reflect-type="heading-medium"
-                ng-reflect-vertical="1"
                 pdk-margin-vertical="1"
                 pdk-typography="heading-medium"
               >
@@ -9577,8 +8277,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/withdraw-offence"
-                  ng-reflect-router-link="withdraw-offence"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="withdraw-offence"
@@ -9590,20 +8288,15 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                 <a
                   class="govuk-link govuk-section-break govuk-section-break--s"
                   href="/dates-to-avoid"
-                  ng-reflect-router-link="dates-to-avoid"
-                  ng-reflect-type="small"
                   pdk-link=""
                   pdk-section="small"
                   routerlink="dates-to-avoid"
                 >
-                  
                   <span>
                     Add dates to avoid
                   </span>
-                  
                 </a>
               </div>
-              
             </div>
           </pdk-related>
         </div>
@@ -9612,24 +8305,16 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
     <pdk-grid
       class="govuk-grid-row"
       container=""
-      ng-reflect-container=""
     >
       <pdk-grid
         class="govuk-grid-column-two-thirds"
-        ng-reflect-two-thirds=""
         two-thirds=""
       >
-        
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="1"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               1
             </div>
@@ -9773,16 +8458,11 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..
             </div>
           </statement-of-facts>
-          
-          
           <pdk-divider>
             <hr
               class="pdk-divider"
@@ -9791,14 +8471,9 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
         </div>
         <div
           class="govuk-!-margin-top-8 govuk-!-margin-bottom-8"
-          ng-reflect-vertical="8"
           pdk-margin-vertical="8"
         >
-          <defendant-offence
-            ng-reflect-index="2"
-            ng-reflect-kase="[object Object]"
-            ng-reflect-offence="[object Object]"
-          >
+          <defendant-offence>
             <div>
               2
             </div>
@@ -9944,41 +8619,29 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
   }
             </div>
           </defendant-offence>
-          
-          <statement-of-facts
-            ng-reflect-statement-of-facts="An incident took place at GREE"
-          >
+          <statement-of-facts>
             <div>
               An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy
             </div>
           </statement-of-facts>
-          
-          
         </div>
       </pdk-grid>
     </pdk-grid>
-    
     <div
       class="govuk-!-margin-top-5 govuk-!-margin-bottom-0"
-      ng-reflect-bottom="0"
-      ng-reflect-top="5"
       pdk-margin-bottom="0"
       pdk-margin-top="5"
     >
       <pdk-grid
         class="govuk-grid-row"
         container=""
-        ng-reflect-container=""
       >
         <pdk-grid
           class="govuk-grid-column-two-thirds"
-          ng-reflect-two-thirds=""
           two-thirds=""
         >
           <pdk-tabs>
-            <pdk-tabs-container
-              ng-reflect-vertical="false"
-            >
+            <pdk-tabs-container>
               <div
                 class="js-enabled govuk-tabs"
               >
@@ -9986,35 +8649,11 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                  
-                  <li
-                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
-                    role="presentation"
-                  >
-                    <a
-                      aria-controls="pdk-tab-section-0"
-                      aria-selected="true"
-                      class="govuk-tabs__tab"
-                      href="javascript:void(0);"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      
-                      
-                       Notes 
-                      
-                      
-                    </a>
-                  </li>
                 </ul>
-                
-                
                 <div>
                   <pdk-tab
                     data-locator="case-notes-tab"
                     heading="Notes"
-                    ng-reflect-heading="Notes"
-                    ng-reflect-selected="true"
                   >
                     <section
                       aria-hidden="false"
@@ -10022,10 +8661,7 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                       id="pdk-tab-section-undefined"
                       role="tabpanel"
                     >
-                      
-                      <case-notes
-                        ng-reflect-case-notes="[object Object]"
-                      >
+                      <case-notes>
                         case notes
                       </case-notes>
                     </section>
@@ -10037,7 +8673,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
         </pdk-grid>
       </pdk-grid>
     </div>
-    
   </case-overview>
 </case-overview-test>
 `;

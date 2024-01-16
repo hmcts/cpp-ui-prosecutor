@@ -5,21 +5,14 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId1",
     "offenceCode": "CA03013",
@@ -39,45 +32,34 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-a-c0=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c0=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c0=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-1"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 2 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -85,17 +67,14 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          No plea received 
       </pdk-badge>
-      
     </div>
   </defendant-offence>
 </defendant-offence-test>
@@ -106,21 +85,14 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId1",
     "offenceCode": "CA03013",
@@ -143,45 +115,34 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-a-c10=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c10=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c10=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-6"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 2 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -189,17 +150,14 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          No plea received 
       </pdk-badge>
-      
     </div>
   </defendant-offence>
 </defendant-offence-test>
@@ -210,21 +168,14 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId2",
     "offenceCode": "CA03013",
@@ -246,45 +197,34 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 2
     </h3>
     <pdk-foldable-text
-      _nghost-a-c8=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c8=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c8=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-5"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction  
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 1 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -292,17 +232,14 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          Notified Not Guilty 
       </pdk-badge>
-      
     </div>
   </defendant-offence>
 </defendant-offence-test>
@@ -313,21 +250,14 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId1",
     "offenceCode": "CA03013",
@@ -347,45 +277,34 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-a-c2=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c2=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c2=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-2"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 2 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -393,17 +312,14 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          No plea received 
       </pdk-badge>
-      
       <pdk-badge
         class="pdk-badge"
       >
@@ -419,21 +335,14 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId1",
     "offenceCode": "CA03013",
@@ -453,45 +362,34 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-a-c6=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c6=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c6=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-4"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 2 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -499,17 +397,14 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          No plea received 
       </pdk-badge>
-      
     </div>
   </defendant-offence>
 </defendant-offence-test>
@@ -520,21 +415,14 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
   kase={[Function Object]}
   offence={[Function Object]}
 >
-  <defendant-offence
-    ng-reflect-kase="[object Object]"
-    ng-reflect-offence="[object Object]"
-  >
+  <defendant-offence>
     <h2
       class="govuk-heading-l"
-      ng-reflect-type="heading-large"
       pdk-typography="heading-large"
     >
        Offence 
-      
     </h2>
-    <defendant-offence-warnings
-      ng-reflect-offence="[object Object]"
-    >
+    <defendant-offence-warnings>
        {
     "id": "offenceId1",
     "offenceCode": "CA03013",
@@ -554,45 +442,34 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
-      ng-reflect-type="heading-medium"
       pdk-typography="heading-medium"
     >
       offence title 1
     </h3>
     <pdk-foldable-text
-      _nghost-a-c4=""
       class="govuk-body-m"
-      ng-reflect-type="body-medium"
       pdk-typography="body-medium"
     >
       <div
-        _ngcontent-a-c4=""
         class="pdk-foldable"
       >
         <span
-          _ngcontent-a-c4=""
           class="pdk-foldable__content"
-          id="pdk-foldable-text-3"
+          id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
         </span>
-        
       </div>
     </pdk-foldable-text>
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
        legislation 2 
     </p>
-    
     <p
       class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-      ng-reflect-type="body-small"
-      ng-reflect-vertical="4"
       pdk-margin-vertical="4"
       pdk-typography="body-small"
     >
@@ -600,17 +477,14 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
     </p>
     <div
       class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
-      ng-reflect-vertical="6"
       pdk-margin-vertical="6"
     >
       <pdk-badge
         class="govuk-!-margin-right-4 pdk-badge"
-        ng-reflect-right="4"
         pdk-margin-right="4"
       >
          No plea received 
       </pdk-badge>
-      
     </div>
   </defendant-offence>
 </defendant-offence-test>

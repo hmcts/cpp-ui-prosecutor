@@ -13,14 +13,14 @@ describe('Manual case create success', () => {
 
   const manualCaseDetailMock = {
     initiationCode: 'J', // SJP Case
-    prosecutor: {},
+    prosecutor: {}
   } as ManualCase;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [CaseCreateSuccessComponent],
       imports: [CommonModule, PdkContextPanelModule, MockPipesModule, RouterTestingModule],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     });
 
     fixture = TestBed.createComponent(CaseCreateSuccessComponent);

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RouterTestingModule } from '@angular/router/testing';
 import { PdkWarningTextModule } from '@cpp/pdk';
@@ -8,12 +8,15 @@ describe('ReviewNotGuiltyPleasLinkComponent', () => {
   let component: ReviewNotGuiltyPleasLinkComponent;
   let fixture: ComponentFixture<ReviewNotGuiltyPleasLinkComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ReviewNotGuiltyPleasLinkComponent],
-      imports: [RouterTestingModule, PdkWarningTextModule]
-    });
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [ReviewNotGuiltyPleasLinkComponent],
+        imports: [RouterTestingModule, PdkWarningTextModule],
+        teardown: { destroyAfterEach: false }
+      });
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ReviewNotGuiltyPleasLinkComponent);

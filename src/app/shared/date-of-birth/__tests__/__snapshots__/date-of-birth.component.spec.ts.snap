@@ -8,27 +8,18 @@ exports[`DateOfBirthComponent should compile correctly 1`] = `
   <div
     id="withoutDefaultSubstitute"
   >
-    <date-of-birth
-      ng-reflect-date-of-birth="1998-01-31"
-    >
-      
+    <date-of-birth>
       <div>
          31 Jan 1998 (30 years old) 
       </div>
-      
     </date-of-birth>
   </div><div
     id="withDefaultSubstitute"
   >
-    <date-of-birth
-      ng-reflect-date-of-birth="1998-01-31"
-      ng-reflect-default-substitute="–"
-    >
-      
+    <date-of-birth>
       <div>
          31 Jan 1998 (30 years old) 
       </div>
-      
     </date-of-birth>
   </div>
 </date-of-birth-test>
@@ -43,23 +34,17 @@ exports[`DateOfBirthComponent should show dash substitution on both divs 1`] = `
     id="withoutDefaultSubstitute"
   >
     <date-of-birth>
-      
       <div>
          – 
       </div>
-      
     </date-of-birth>
   </div><div
     id="withDefaultSubstitute"
   >
-    <date-of-birth
-      ng-reflect-default-substitute="–"
-    >
-      
+    <date-of-birth>
       <div>
          – 
       </div>
-      
     </date-of-birth>
   </div>
 </date-of-birth-test>
@@ -74,21 +59,16 @@ exports[`DateOfBirthComponent should show nothing on the div(withDefaultSubstitu
     id="withoutDefaultSubstitute"
   >
     <date-of-birth>
-      
       <div>
          – 
       </div>
-      
     </date-of-birth>
   </div><div
     id="withDefaultSubstitute"
   >
     <date-of-birth>
-      
       <div>
-          
       </div>
-      
     </date-of-birth>
   </div>
 </date-of-birth-test>

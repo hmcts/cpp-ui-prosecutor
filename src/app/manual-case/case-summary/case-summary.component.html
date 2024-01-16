@@ -64,13 +64,7 @@
 </manual-case-offence-details>
 
 <table *ngIf="hasAllOffencesAocpEligible()" pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-  <thead
-    pdk-table-head
-    pdk-typography="body-small"
-    class="bold"
-    pdk-margin-bottom="4"
-    pdk-margin-top="4"
-  >
+  <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
     {{
       'MANUAL_CASE_SUMMARY.CASE_DETAILS.CASE' | translate
     }}
@@ -103,12 +97,7 @@
   </tbody>
 </table>
 
-<button
-  pdk-button
-  type="submit"
-  [disabled]="defendantNames && defendantNames.length"
-  (click)="submitManualCase()"
->
+<button pdk-button type="submit" [disabled]="defendantNames && defendantNames.length" (click)="submitManualCase()">
   {{ 'MANUAL_CASE_SUMMARY.CREATE_CASE' | translate }}
 </button>
 <p pdk-margin-top="3">

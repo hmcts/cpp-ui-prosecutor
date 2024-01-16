@@ -24,7 +24,7 @@ describe('manualCaseDetailsReducer', () => {
         offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
         offenceDateCode: 3,
         offenceCommittedDate: '2018-12-01',
-        offenceWording: 'some offence wording',
+        offenceWording: 'some offence wording'
       },
       {
         offenceCode: 'RT88945C',
@@ -37,9 +37,9 @@ describe('manualCaseDetailsReducer', () => {
         offenceId: '7a80c7c5-5fef-4fb1-b400-2811cd918cdd',
         offenceDateCode: 3,
         offenceCommittedDate: '2018-12-01',
-        offenceWording: 'some offence wording',
-      },
-    ] as ManualCaseOffence[],
+        offenceWording: 'some offence wording'
+      }
+    ] as ManualCaseOffence[]
   } as ManualCaseDefendant;
 
   describe('when initialised', () => {
@@ -59,12 +59,12 @@ describe('manualCaseDetailsReducer', () => {
         caseDetails: {
           caseId: 'manual-case-id-001',
           initiationCode: 'S',
-          summonsCode: 'E',
-        },
+          summonsCode: 'E'
+        }
       } as ManualCaseDetailsState);
 
       state = {
-        caseDetails: {},
+        caseDetails: {}
       } as ManualCaseDetailsState;
       resultState = manualCaseDetailsReducer(state, action);
     });
@@ -78,11 +78,11 @@ describe('manualCaseDetailsReducer', () => {
     beforeEach(() => {
       action = new RemoveManualCaseOffence({
         defendantId: '12613fbc-e0c2-429e-836a-bedcfc0bcb47',
-        offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa',
+        offenceId: '12af2be8-b257-4227-9cf0-3d77975ed7aa'
       });
 
       const initialState = {
-        defendants: [mockDefendantWithOffences],
+        defendants: [mockDefendantWithOffences]
       } as ManualCaseDetailsState;
 
       resultState = manualCaseDetailsReducer(initialState, action);
@@ -90,7 +90,7 @@ describe('manualCaseDetailsReducer', () => {
 
     it('should remove given offence', () => {
       expect(resultState.defendants).toEqual([
-        { id: mockDefendantWithOffences.id, offences: [mockDefendantWithOffences.offences[1]] },
+        { id: mockDefendantWithOffences.id, offences: [mockDefendantWithOffences.offences[1]] }
       ]);
     });
   });
@@ -117,25 +117,25 @@ describe('manualCaseDetailsReducer', () => {
               offenceWording: 'some offence wording',
               plea: {
                 pleaValue: 'guilty',
-                pleaDate: '2020-10-10',
+                pleaDate: '2020-10-10'
               },
               verdict: {
                 verdictDate: '2020-10-10',
                 verdictType: {
                   id: 'de77e8d8-4893-4703-8ae1-86dd75cfedf8',
                   category: 'category',
-                  categoryType: 'categoryType',
-                },
-              },
-            },
-          ] as ManualCaseOffence[],
-        } as ManualCaseDefendant,
+                  categoryType: 'categoryType'
+                }
+              }
+            }
+          ] as ManualCaseOffence[]
+        } as ManualCaseDefendant
       ];
 
       action = new StoreManualCaseDefendantsEitherWayOffences(mockDefendantsWithEitherWayOffences);
 
       const initialState = {
-        defendants: [mockDefendantWithOffences],
+        defendants: [mockDefendantWithOffences]
       } as ManualCaseDetailsState;
 
       resultState = manualCaseDetailsReducer(initialState, action);
@@ -144,9 +144,7 @@ describe('manualCaseDetailsReducer', () => {
     it('should update defendents first either way offences leaving second unchanged', () => {
       expect(resultState.defendants.length).toEqual(1);
       expect(resultState.defendants[0].offences.length).toEqual(2);
-      expect(resultState.defendants[0].offences[0]).toEqual(
-        mockDefendantsWithEitherWayOffences[0].offences[0]
-      );
+      expect(resultState.defendants[0].offences[0]).toEqual(mockDefendantsWithEitherWayOffences[0].offences[0]);
       expect(resultState.defendants[0].offences[1]).toEqual(mockDefendantWithOffences.offences[1]);
     });
   });

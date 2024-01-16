@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { capitalize, lowerCase } from 'lodash';
-import * as moment from 'moment';
+import moment from 'moment';
 import { ManualCaseOffence } from '../../core/model/manual-case-offence';
 import { Element, ElementType } from '../../core/model/manual-case';
 import { FormListOption, Offence } from '../../core';
@@ -23,7 +23,7 @@ export class OffenceWordingService {
     sections.forEach((el: Element) => {
       if (el.type === ElementType.Dropdown && el.value) {
         offenceDateCode = +el.value;
-        const { label } = offenceTypes.find((t) => +t.value === offenceDateCode) || { label: '' };
+        const { label } = offenceTypes.find(t => +t.value === offenceDateCode) || { label: '' };
         wording = !!wording ? `${wording} ${lowerCase(label)}` : capitalize(label);
         if (!editOffence.offenceDateCode) {
           editOffence.offenceDateCode = offenceDateCode;
@@ -59,7 +59,7 @@ export class OffenceWordingService {
 
       // We check element value is not undefined explicitly as value is 0 index based.
       if (el.type === ElementType.List && el.value !== undefined) {
-        const item = el.list.find((i) => i.value === el.value);
+        const item = el.list.find(i => i.value === el.value);
 
         if (item.label) {
           const selectedOption = item.label;
@@ -84,11 +84,7 @@ export class OffenceWordingService {
     return wording;
   }
 
-  private setOffenceDates(
-    element: Element,
-    offenceDateCode: number,
-    offence: ManualCaseOffence | Offence
-  ) {
+  private setOffenceDates(element: Element, offenceDateCode: number, offence: ManualCaseOffence | Offence) {
     const startDate = element.value;
     const endDate = element.valueTwo && offenceDateCode === 4 ? element.valueTwo : undefined;
     if ('startDate' in offence && !offence.startDate) {

@@ -16,7 +16,8 @@ describe('NoSeparatePenaltyOffenceDecisionComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NoSeparatePenaltyOffenceDecisionComponent, TestNoSeparatePenaltyOffenceDecisionComponent]
+      declarations: [NoSeparatePenaltyOffenceDecisionComponent, TestNoSeparatePenaltyOffenceDecisionComponent],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestNoSeparatePenaltyOffenceDecisionComponent);
   });
@@ -25,63 +26,62 @@ describe('NoSeparatePenaltyOffenceDecisionComponent', () => {
     fixture.componentInstance.offenceDecision = {
       ...noSeparatePenaltyOffence,
       licenseEndorsement: false,
-      guiltyPleaTakenIntoAccount: false,
+      guiltyPleaTakenIntoAccount: false
     } as NoSeparatePenaltyOffenceDecision;
 
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
-    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain(
-      'Driver licence record endorsed (no points)');
+    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('Driver licence record endorsed (no points)');
 
     expect(fixture.debugElement.nativeElement.innerHTML).not.toContain(
-      'Defendant\'s guilty plea taken into account when imposing sentence');
+      "Defendant's guilty plea taken into account when imposing sentence"
+    );
   });
 
   it('should compile correctly with no separate penalty offence decision, that DOES have licenseEndorsement and guilty plea', () => {
     fixture.componentInstance.offenceDecision = {
       ...noSeparatePenaltyOffence,
       licenseEndorsement: true,
-      guiltyPleaTakenIntoAccount: true,
+      guiltyPleaTakenIntoAccount: true
     } as NoSeparatePenaltyOffenceDecision;
 
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('Driver licence record endorsed (no points)');
     expect(fixture.debugElement.nativeElement.innerHTML).toContain(
-      'Driver licence record endorsed (no points)');
-    expect(fixture.debugElement.nativeElement.innerHTML).toContain(
-      'Defendant\'s guilty plea taken into account when imposing sentence');
+      "Defendant's guilty plea taken into account when imposing sentence"
+    );
   });
 
   it('should compile correctly with no separate penalty offence decision, with only guilty plea', () => {
     fixture.componentInstance.offenceDecision = {
       ...noSeparatePenaltyOffence,
       licenseEndorsement: false,
-      guiltyPleaTakenIntoAccount: true,
+      guiltyPleaTakenIntoAccount: true
     } as NoSeparatePenaltyOffenceDecision;
 
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
-    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain(
-      'Driver licence record endorsed (no points)');
+    expect(fixture.debugElement.nativeElement.innerHTML).not.toContain('Driver licence record endorsed (no points)');
     expect(fixture.debugElement.nativeElement.innerHTML).toContain(
-      'Defendant\'s guilty plea taken into account when imposing sentence');
+      "Defendant's guilty plea taken into account when imposing sentence"
+    );
   });
 
   it('should compile correctly with no separate penalty offence decision, with only licenseEndorsement', () => {
     fixture.componentInstance.offenceDecision = {
       ...noSeparatePenaltyOffence,
       licenseEndorsement: true,
-      guiltyPleaTakenIntoAccount: false,
+      guiltyPleaTakenIntoAccount: false
     } as NoSeparatePenaltyOffenceDecision;
 
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
-    expect(fixture.debugElement.nativeElement.innerHTML).toContain(
-      'Driver licence record endorsed (no points)');
+    expect(fixture.debugElement.nativeElement.innerHTML).toContain('Driver licence record endorsed (no points)');
     expect(fixture.debugElement.nativeElement.innerHTML).not.toContain(
-      'Defendant\'s guilty plea taken into account when imposing sentence');
+      "Defendant's guilty plea taken into account when imposing sentence"
+    );
   });
-
 
   @Component({
     selector: 'no-separate-penalty-offence-decision-test',

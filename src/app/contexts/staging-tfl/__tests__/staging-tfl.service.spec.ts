@@ -12,7 +12,6 @@ import {
   FileUploadStatResult,
   UploadStatus
 } from '../staging-tfl.interface';
-import { zip } from 'rxjs';
 
 describe('StagingTflService', () => {
   let http: CppHttp;
@@ -36,7 +35,8 @@ describe('StagingTflService', () => {
             command: mockCommand
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     http = TestBed.get(CppHttp);

@@ -21,15 +21,15 @@ describe('Summons Codes Guard', () => {
       seqNo: 10,
       summonsCode: 'A',
       summonsCodeDescription: 'Application / Complaint',
-      validFrom: '2019-03-01',
+      validFrom: '2019-03-01'
     },
     {
       id: '5aaecac5-222b-402d-9047-84803679edac',
       seqNo: 20,
       summonsCode: 'B',
       summonsCodeDescription: 'Breach offences',
-      validFrom: '2019-03-01',
-    },
+      validFrom: '2019-03-01'
+    }
   ];
 
   beforeEach(() => {
@@ -45,16 +45,16 @@ describe('Summons Codes Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getSummonsCode,
-          },
+            getSummonsCode
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(SummonsCodesGuard);
@@ -76,9 +76,7 @@ describe('Summons Codes Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getSummonsCode).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadSummonsCodesSuccessAction(summonsCodes)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadSummonsCodesSuccessAction(summonsCodes));
       });
     });
 
@@ -113,9 +111,7 @@ describe('Summons Codes Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getSummonsCode).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadSummonsCodesSuccessAction(summonsCodes)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadSummonsCodesSuccessAction(summonsCodes));
         });
       });
     });

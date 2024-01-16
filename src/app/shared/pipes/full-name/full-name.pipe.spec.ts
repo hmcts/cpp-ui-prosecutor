@@ -1,9 +1,9 @@
-import { FullNamePipe, PersonLike } from './full-name.pipe';
+import { FullNamePipe } from './full-name.pipe';
 
 describe('FullNamePipe', () => {
   const person = {
     firstName: 'jean claude',
-    lastName: 'van Damme',
+    lastName: 'van Damme'
   };
   let pipe: FullNamePipe<{ firstName: string; lastName: string }>;
 
@@ -17,10 +17,12 @@ describe('FullNamePipe', () => {
 
   it('returns the full name for the person', () => {
     expect(pipe.transform(person)).toBe('Jean Claude van Damme');
-    expect(pipe.transform({
-      firstName: '',
-      lastName: ''
-    })).toBe('');
+    expect(
+      pipe.transform({
+        firstName: '',
+        lastName: ''
+      })
+    ).toBe('');
     expect(pipe.transform({} as any, true)).toBe('');
   });
 

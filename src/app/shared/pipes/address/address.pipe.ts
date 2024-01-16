@@ -16,7 +16,7 @@ export class AddressPipe implements PipeTransform {
     'postcode',
     'postCode',
     'addressPostcode',
-    'addressPostCode',
+    'addressPostCode'
   ];
 
   transform(
@@ -43,9 +43,9 @@ export class AddressPipe implements PipeTransform {
       return defaultTo;
     }
     return this.propertyNames
-      .filter((propName) => !!(address as any)[propName])
-      .map((existingProperty) => (address as any)[existingProperty])
-      .map((a) => a.trim())
+      .filter(propName => !!(address as any)[propName])
+      .map(existingProperty => (address as any)[existingProperty])
+      .map(a => a.trim())
       .join(multiLine ? '<br>' : ', ');
   }
 }

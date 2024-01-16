@@ -13,7 +13,7 @@ import { reducers } from '../../core/reducers';
 
 export class TestActions extends Actions {
   set stream(source: Observable<any>) {
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     this.source = source;
   }
 }
@@ -29,15 +29,13 @@ describe('DefendantDetailsUpdatesEffects', () => {
 
   let getDefendantDetailsUpdates: jest.Mock;
   let acknowledgeDefendantDetailsUpdates: jest.Mock;
-  let navigate: jest.Mock;
 
   beforeEach(() => {
     getDefendantDetailsUpdates = jest.fn();
     acknowledgeDefendantDetailsUpdates = jest.fn();
-    navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         DefendantDetailsUpdatesEffects,
         {
@@ -51,7 +49,8 @@ describe('DefendantDetailsUpdatesEffects', () => {
           provide: Actions,
           useFactory: getActions
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     effects = TestBed.get(DefendantDetailsUpdatesEffects);
     actions$ = TestBed.get(Actions);

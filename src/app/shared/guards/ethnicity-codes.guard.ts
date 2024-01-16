@@ -3,16 +3,11 @@ import { CanActivate } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { map, tap, switchMap, catchError, take } from 'rxjs/operators';
-import {
-  State,
-  ApiError,
-  getObservedEthnicities,
-  LoadObservedEthnicitiesSuccessAction,
-} from '../../core';
+import { State, ApiError, getObservedEthnicities, LoadObservedEthnicitiesSuccessAction } from '../../core';
 import { ReferenceDataService } from '../../contexts/reference-data';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class EthnicityCodesGuard implements CanActivate {
   constructor(private store: Store<State>, private pcfReferenceData: ReferenceDataService) {}
@@ -20,28 +15,26 @@ export class EthnicityCodesGuard implements CanActivate {
   hasEthnicityCodesInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getObservedEthnicities),
-      map((ethnicityCodes) => !!ethnicityCodes && ethnicityCodes.length > 0),
+      map(ethnicityCodes => !!ethnicityCodes && ethnicityCodes.length > 0),
       take(1)
     );
   }
 
   hasEthnicityCodesInApi(): Observable<boolean> {
     return this.pcfReferenceData.getObservedEthnicities().pipe(
-      tap((ethnicityCodes) => {
+      tap(ethnicityCodes => {
         this.store.dispatch(new LoadObservedEthnicitiesSuccessAction(ethnicityCodes));
       }),
-      map((ethnicityCodes) => !!ethnicityCodes),
+      map(ethnicityCodes => !!ethnicityCodes),
       take(1)
     );
   }
 
   canActivate(): Observable<boolean> {
     return this.hasEthnicityCodesInStore().pipe(
-      switchMap((hasEthnicityCodes) =>
-        hasEthnicityCodes ? of(hasEthnicityCodes) : this.hasEthnicityCodesInApi()
-      ),
+      switchMap(hasEthnicityCodes => (hasEthnicityCodes ? of(hasEthnicityCodes) : this.hasEthnicityCodesInApi())),
       tap({
-        error: (error) => this.store.dispatch(new ApiError(error)),
+        error: error => this.store.dispatch(new ApiError(error))
       }),
       catchError(() => of(true))
     );

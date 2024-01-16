@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Reference data selectors findCourCentres should return the court centres for the given ou-codes 1`] = `
-Array [
-  Object {
-    "courtrooms": Array [],
+[
+  {
+    "courtrooms": [],
     "id": "id",
     "oucode": "oucode",
     "oucodeL3Name": "oucodeL3Name",
@@ -12,9 +12,9 @@ Array [
 `;
 
 exports[`Reference data selectors getCourtCentres should return the court centres 1`] = `
-Array [
-  Object {
-    "courtrooms": Array [],
+[
+  {
+    "courtrooms": [],
     "id": "id",
     "name": "oucodeL3Name",
     "oucode": "oucode",

@@ -22,7 +22,7 @@ describe('CaseDataGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, {runtimeChecks: {}})],
+      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         CaseDataGuard,
         {
@@ -37,7 +37,8 @@ describe('CaseDataGuard', () => {
             navigate
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
     guard = TestBed.get(CaseDataGuard);

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import * as moment from 'moment';
-import * as uuid from 'uuid/v4';
+import moment from 'moment';
+import uuid from 'uuid/v4';
 import { PleaType } from '@cpp/reference-data';
 import { ManualCasePath } from '../../manual-case.interface';
 import { ManualCaseDefendant, AlcoholLevelMethod } from '../../../core/model';
@@ -10,11 +10,10 @@ import { ManualCaseOffence } from '../../../core/model/manual-case-offence';
 import { VerdictType } from '../../../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../../../core/model/reference-data-interfaces/mot-reason';
 
-
 @Component({
   selector: 'manual-case-offence-details',
   templateUrl: './manual-case-offence-details.component.html',
-  styleUrls: ['./manual-case-offence-details.component.scss'],
+  styleUrls: ['./manual-case-offence-details.component.scss']
 })
 export class OffenceDetailsComponent {
   title: string;
@@ -28,7 +27,7 @@ export class OffenceDetailsComponent {
   @Output() edit = new EventEmitter<ManualCasePath>();
   @Output() add = new EventEmitter<ManualCasePath>();
   @Output() remove = new EventEmitter<any>();
-  todayDate = moment();
+  todayDate = moment().toISOString();
   constructor(private offenceStateService: ManualCaseOffenceStateService) {}
 
   onAdd() {
@@ -45,31 +44,31 @@ export class OffenceDetailsComponent {
     const defendant = this.defendants[defendantIndex];
     this.remove.emit({
       defendantId: defendant.id,
-      offenceId: defendant.offences[offenceIndex].offenceId,
+      offenceId: defendant.offences[offenceIndex].offenceId
     });
   }
 
   getAlcoholLevelMethod(methodCode?: string) {
     if (methodCode) {
-      return this.alcoholLevelMethods.find((m) => m.methodCode === methodCode).methodDescription;
+      return this.alcoholLevelMethods.find(m => m.methodCode === methodCode).methodDescription;
     }
   }
 
   getPleaDescription(pleaValue: string) {
     if (this.pleaTypes) {
-      return this.pleaTypes.find((item) => item.pleaValue === pleaValue).pleaTypeDescription;
+      return this.pleaTypes.find(item => item.pleaValue === pleaValue).pleaTypeDescription;
     }
   }
 
   getVerdictDescription(id: string) {
     if (this.verdictsTypes) {
-      return this.verdictsTypes.find((item) => item.id === id).description;
+      return this.verdictsTypes.find(item => item.id === id).description;
     }
   }
 
   getAllocationDecisionDescription(id: string) {
     if (this.allocationDecisionTypes) {
-      return this.allocationDecisionTypes.find((item) => item.id === id).description;
+      return this.allocationDecisionTypes.find(item => item.id === id).description;
     }
   }
 

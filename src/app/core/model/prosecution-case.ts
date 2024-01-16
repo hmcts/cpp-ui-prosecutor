@@ -7,7 +7,7 @@ import {
   Organisation,
   Person,
   Plea,
-  Verdict,
+  Verdict
 } from './global';
 import { OffenceWordingMessage } from './manual-case';
 import { BailStatus, CustodyEstablishment } from './reference-data-interfaces';
@@ -177,7 +177,7 @@ export enum Usage {
   C = 'Case',
   D = 'Defendant',
   W = 'Witness',
-  V = 'Victim',
+  V = 'Victim'
 }
 
 export interface SelectedCaseMarker {

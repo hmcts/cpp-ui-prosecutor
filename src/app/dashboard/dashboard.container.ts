@@ -9,7 +9,11 @@ import {
   getCasesMissingSJPNotice,
   getProsecutorByUserGroup
 } from '../core/selectors';
-import { PleadedNotGuiltyCaseResult, DefendantDetailsUpdatesResult, CasesMissingSjpNoticeResult } from '../contexts/sjp';
+import {
+  PleadedNotGuiltyCaseResult,
+  DefendantDetailsUpdatesResult,
+  CasesMissingSjpNoticeResult
+} from '../contexts/sjp';
 
 @Component({
   selector: 'prosecutor-dashboard-container',

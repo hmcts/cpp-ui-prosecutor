@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { AcknowledgeDefendantDetailsUpdatesParam, Region } from '../contexts/sjp';
+import { AcknowledgeDefendantDetailsUpdatesParam } from '../contexts/sjp';
 import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
 import { RegionState } from '../core/reducers/entities.reducer';
@@ -33,7 +33,11 @@ import { NgForm } from '@angular/forms';
         </form>
       </pdk-grid>
     </pdk-grid>
-    <table pdk-table *ngIf="defendantDetailsUpdates.defendantDetailsUpdates.length > 0; else noDefendantUpdates" id="cases">
+    <table
+      pdk-table
+      *ngIf="defendantDetailsUpdates.defendantDetailsUpdates.length > 0; else noDefendantUpdates"
+      id="cases"
+    >
       <thead pdk-table-head>
         <tr pdk-table-row>
           <th pdk-table-header>Name</th>
@@ -59,7 +63,7 @@ import { NgForm } from '@angular/forms';
             {{ defendantDetailsUpdate.region }}
           </td>
           <td pdk-table-cell data-role="date-of-birth">
-          {{ !!defendantDetailsUpdate.dateOfBirth ? (defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy') : '' }}
+            {{ !!defendantDetailsUpdate.dateOfBirth ? (defendantDetailsUpdate.dateOfBirth | date: 'dd MMM yyyy') : '' }}
           </td>
           <td pdk-table-cell>
             <what-changed [defendantDetailsUpdate]="defendantDetailsUpdate"></what-changed>
@@ -95,7 +99,7 @@ import { NgForm } from '@angular/forms';
   `
 })
 export class DefendantDetailsUpdatesComponent {
-  @ViewChild(NgForm) form: NgForm;
+  @ViewChild(NgForm, { static: true }) form: NgForm;
   @Input() defendantDetailsUpdates;
   @Input() region: RegionState;
   @Output() setRegion = new EventEmitter();

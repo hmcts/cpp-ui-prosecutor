@@ -2,13 +2,13 @@ import { Component, DebugElement, Type } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { AbstractControl, FormsModule, NgForm } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { EstimateInput } from './estimate-input';
+import { EstimateInputComponent } from './estimate-input.component';
 import { EstimateInputModule } from './index';
 
 function initTest<T>(component: Type<T>, ...directives: Type<any>[]): ComponentFixture<T> {
   TestBed.configureTestingModule({
     declarations: [component, ...directives],
-    imports: [FormsModule, EstimateInputModule],
+    imports: [FormsModule, EstimateInputModule]
   });
   return TestBed.createComponent(component);
 }
@@ -43,12 +43,7 @@ describe('estimate-input', () => {
       minutesInput = fixture.debugElement.query(By.css('[name=estimateMinutes]'));
     });
 
-  const setTimeValues = (values: {
-    weeks?: string;
-    days?: string;
-    hours?: string;
-    minutes?: string;
-  }) => {
+  const setTimeValues = (values: { weeks?: string; days?: string; hours?: string; minutes?: string }) => {
     const { weeks, days, hours, minutes } = values;
 
     if (weeksInput) {
@@ -72,16 +67,15 @@ describe('estimate-input', () => {
       selector: 'estimate-minutes-input',
       template: `
         <form>
-          <estimate-input name="estimate" [ngModel]="model" aria-describedby="identifier">
-          </estimate-input>
+          <estimate-input name="estimate" [ngModel]="model" aria-describedby="identifier"> </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateMinutes {
+    class EstimateMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateMinutes));
+    beforeEach(initTestWith(EstimateMinutesComponent));
 
     it('hides the weeks, days and hours inputs', () => {
       expect(weeksInput).toBeFalsy();
@@ -111,21 +105,16 @@ describe('estimate-input', () => {
       selector: 'estimate-hours-minutes-input',
       template: `
         <form>
-          <estimate-input
-            name="estimate"
-            [ngModel]="model"
-            hours-enabled
-            aria-describedby="identifier"
-          >
+          <estimate-input name="estimate" [ngModel]="model" hours-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateHoursMinutes {
+    class EstimateHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateHoursMinutes));
+    beforeEach(initTestWith(EstimateHoursMinutesComponent));
 
     it('hides the weeks and days inputs', () => {
       expect(weeksInput).toBeFalsy();
@@ -156,22 +145,16 @@ describe('estimate-input', () => {
       selector: 'estimate-days-hours-minutes-input',
       template: `
         <form>
-          <estimate-input
-            name="estimate"
-            [ngModel]="model"
-            hours-enabled
-            days-enabled
-            aria-describedby="identifier"
-          >
+          <estimate-input name="estimate" [ngModel]="model" hours-enabled days-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateDaysHoursMinutes {
+    class EstimateDaysHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateDaysHoursMinutes));
+    beforeEach(initTestWith(EstimateDaysHoursMinutesComponent));
 
     it('hides the weeks input', () => {
       expect(weeksInput).toBeFalsy();
@@ -213,13 +196,13 @@ describe('estimate-input', () => {
           >
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateWeeksDaysHoursMinutes {
+    class EstimateWeeksDaysHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateWeeksDaysHoursMinutes));
+    beforeEach(initTestWith(EstimateWeeksDaysHoursMinutesComponent));
 
     it('sets the model value when a value is entered', () => {
       setTimeValues({ weeks: '6', days: '3', hours: '2', minutes: '59' });
@@ -249,21 +232,16 @@ describe('estimate-input', () => {
       selector: 'estimate-days-minutes-input',
       template: `
         <form>
-          <estimate-input
-            name="estimate"
-            [ngModel]="model"
-            days-enabled
-            aria-describedby="identifier"
-          >
+          <estimate-input name="estimate" [ngModel]="model" days-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateDaysMinutes {
+    class EstimateDaysMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateDaysMinutes));
+    beforeEach(initTestWith(EstimateDaysMinutesComponent));
 
     it('populates the estimate inputs when an external value is provided', fakeAsync(() => {
       fixture.componentInstance.model = 3 * 360 + 1000;
@@ -279,21 +257,16 @@ describe('estimate-input', () => {
       selector: 'estimate-weeks-minutes-input',
       template: `
         <form>
-          <estimate-input
-            name="estimate"
-            [ngModel]="model"
-            weeks-enabled
-            aria-describedby="identifier"
-          >
+          <estimate-input name="estimate" [ngModel]="model" weeks-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateWeeksMinutes {
+    class EstimateWeeksMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateWeeksMinutes));
+    beforeEach(initTestWith(EstimateWeeksMinutesComponent));
 
     it('populates the estimate inputs when an external value is provided', fakeAsync(() => {
       fixture.componentInstance.model = 1 * 2520 + 100;
@@ -309,16 +282,15 @@ describe('estimate-input', () => {
       selector: 'estimate-weeks-hours-minutes-input',
       template: `
         <form>
-          <estimate-input name="estimate" [ngModel]="model" weeks-enabled hours-enabled>
-          </estimate-input>
+          <estimate-input name="estimate" [ngModel]="model" weeks-enabled hours-enabled> </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateWeeksHoursMinutes {
+    class EstimateWeeksHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateWeeksHoursMinutes));
+    beforeEach(initTestWith(EstimateWeeksHoursMinutesComponent));
 
     it('populates the estimate inputs when an external value is provided', fakeAsync(() => {
       fixture.componentInstance.model = 1 * 2520 + 60 * 20 + 5;
@@ -335,16 +307,15 @@ describe('estimate-input', () => {
       selector: 'estimate-weeks-days-minutes-input',
       template: `
         <form>
-          <estimate-input name="estimate" [ngModel]="model" weeks-enabled days-enabled>
-          </estimate-input>
+          <estimate-input name="estimate" [ngModel]="model" weeks-enabled days-enabled> </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateWeeksDaysMinutes {
+    class EstimateWeeksDaysMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateWeeksDaysMinutes));
+    beforeEach(initTestWith(EstimateWeeksDaysMinutesComponent));
 
     it('populates the estimate inputs when an external value is provided', fakeAsync(() => {
       fixture.componentInstance.model = 1 * 2520 + 5 * 360 + 59;
@@ -367,20 +338,20 @@ describe('estimate-input', () => {
             weeks-enabled
             hours-enabled
             days-enabled
-            (focus)="focus($event)"
-            (blur)="blur($event)"
+            (fieldFocus)="focus($event)"
+            (fieldBlur)="blur($event)"
           >
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateAny {
+    class EstimateAnyComponent {
       model: number;
       focus: () => void;
       blur: () => void;
     }
 
-    beforeEach(initTestWith(EstimateAny));
+    beforeEach(initTestWith(EstimateAnyComponent));
 
     it('sets a value of `undefined` when no input is provided', () => {
       setTimeValues({});
@@ -449,13 +420,13 @@ describe('estimate-input', () => {
           >
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateDaysHoursMinutes {
+    class EstimateDaysHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateDaysHoursMinutes));
+    beforeEach(initTestWith(EstimateDaysHoursMinutesComponent));
 
     it('sets the model value when a value is entered', () => {
       setTimeValues({ days: '2', hours: '0', minutes: '0' });
@@ -466,30 +437,25 @@ describe('estimate-input', () => {
   });
 
   describe('when minimum or maximum value validators are provided', () => {
-    let component: EstimateInput;
+    let component: EstimateInputComponent;
 
     @Component({
       selector: 'estimate-days-hours-minutes-input',
       template: `
         <form>
-          <estimate-input
-            name="estimate"
-            [ngModel]="model"
-            aria-describedby="identifier"
-            [minMinutesValue]="10"
-          >
+          <estimate-input name="estimate" [ngModel]="model" aria-describedby="identifier" [minMinutesValue]="10">
           </estimate-input>
         </form>
-      `,
+      `
     })
-    class EstimateDaysHoursMinutes {
+    class EstimateDaysHoursMinutesComponent {
       model: number;
     }
 
-    beforeEach(initTestWith(EstimateDaysHoursMinutes));
+    beforeEach(initTestWith(EstimateDaysHoursMinutesComponent));
 
     beforeEach(() => {
-      component = fixture.debugElement.query(By.directive(EstimateInput)).componentInstance;
+      component = fixture.debugElement.query(By.directive(EstimateInputComponent)).componentInstance;
     });
 
     it('sets the model value when a value is entered greater than the minimum minutes', () => {

@@ -1,26 +1,12 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  Output,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation } from '@angular/core';
 import { ManualCase } from '../../core/model/manual-case';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
 import { Location } from '@angular/common';
 import { ManualCasePath } from '../manual-case.interface';
 import { CourtCentreWithRooms, HearingType } from '../../core/model/global';
-import {
-  Nationality,
-  BailStatus,
-  AlcoholLevelMethod,
-  PoliceForce,
-  Ethnicity,
-  EthnicityCode,
-} from '../../core/model';
+import { Nationality, BailStatus, AlcoholLevelMethod, PoliceForce, Ethnicity, EthnicityCode } from '../../core/model';
 import { ManualCaseOffenceStateService } from '../offences-state.service';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { PleaType, Prosecutor } from '@cpp/reference-data';
 import { VerdictType } from '../../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../../core/model/reference-data-interfaces/mot-reason';
@@ -29,7 +15,7 @@ import { MotReason } from '../../core/model/reference-data-interfaces/mot-reason
   selector: 'manual-case-summary',
   templateUrl: './case-summary.component.html',
   styleUrls: ['./case-summary.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class ManualCaseSummaryComponent implements OnChanges {
   @Input() caseDetails: ManualCase;
@@ -47,7 +33,7 @@ export class ManualCaseSummaryComponent implements OnChanges {
   @Input() verdictsTypes: VerdictType[];
   @Input() allocationDecisionTypes: MotReason[];
   @Input() observedEthnicities: EthnicityCode[];
-  @Output() submit = new EventEmitter();
+  @Output() formSubmit = new EventEmitter();
   @Output() edit = new EventEmitter<ManualCasePath>();
   @Output() remove = new EventEmitter<any>();
   @Output() add = new EventEmitter<ManualCasePath>();
@@ -56,14 +42,11 @@ export class ManualCaseSummaryComponent implements OnChanges {
   victimAocpSurcharge: number;
   totalAocpFine: number;
 
-  constructor(
-    private location: Location,
-    private offenceStateService: ManualCaseOffenceStateService
-  ) {}
+  constructor(private location: Location, private offenceStateService: ManualCaseOffenceStateService) {}
 
   hasAllOffencesAocpEligible() {
-    return this.defendants.every((defendant) => {
-      return (defendant.offences || []).every((offence) => offence.aocpEligible);
+    return this.defendants.every(defendant => {
+      return (defendant.offences || []).every(offence => offence.aocpEligible);
     });
   }
 
@@ -78,8 +61,7 @@ export class ManualCaseSummaryComponent implements OnChanges {
     const charge = surcharge > 34 ? surcharge : 34;
     this.totalAocpFine =
       this.defendants[0].offences.reduce(
-        (total, offence) =>
-          total + (Number(offence.aocpStandardPenalty) + Number(offence.appliedCompensation || 0)),
+        (total, offence) => total + (Number(offence.aocpStandardPenalty) + Number(offence.appliedCompensation || 0)),
         0
       ) +
       prosecutorCost +
@@ -92,7 +74,7 @@ export class ManualCaseSummaryComponent implements OnChanges {
       if (!defendant.offences || defendant.offences.length <= 0) {
         names.push({
           firstName: defendant.individual.personalInformation.firstName,
-          lastName: defendant.individual.personalInformation.lastName,
+          lastName: defendant.individual.personalInformation.lastName
         });
       }
       return names;
@@ -104,7 +86,7 @@ export class ManualCaseSummaryComponent implements OnChanges {
   }
 
   submitManualCase() {
-    this.submit.emit();
+    this.formSubmit.emit();
   }
 
   onEdit(event) {

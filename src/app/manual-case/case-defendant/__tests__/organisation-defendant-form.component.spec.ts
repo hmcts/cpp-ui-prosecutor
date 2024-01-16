@@ -15,12 +15,14 @@ import { OrganisationDefendantFormComponent } from '../organisation-defendant-fo
 import { ManualCaseDefendant } from '../../../core/model/manual-case-defendant';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../../shared';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
 
 Object.defineProperty(window, 'getComputedStyle', {
   value: () => ({
-      getPropertyValue: (prop) => {
-          return '';
-      }
+    getPropertyValue: prop => {
+      return '';
+    }
   })
 });
 
@@ -32,17 +34,19 @@ const manualCaseDefendantMock = {
     address3: '',
     address4: '',
     address5: '',
-    postcode: 'SL1 5ZZ',
+    postcode: 'SL1 5ZZ'
   },
   emailAddress1: 'ben@abc.com',
   telephoneNumberBusiness: '07966666666',
   documentationLanguage: 'ENGLISH',
   hearingLanguage: 'WELSH',
   numPreviousConvictions: 10,
-  asn: '3',
+  asn: '3'
 } as ManualCaseDefendant;
 
 describe('Organisation Defendant Form Component', () => {
+  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
+
   let component: Shallow<OrganisationDefendantFormComponent>;
 
   const generateUUID = jest.fn();
@@ -71,9 +75,9 @@ describe('Organisation Defendant Form Component', () => {
             [manualCaseType]="manualCaseType"
             [showAddButton]="true"
             [isPoliceProsecutor]="isPoliceProsecutor"
-            (onSubmit)="handleFormSubmit($event)"
-            (onError)="handleFormError($event)"
-            (onBack)="handleFormBack($event)">
+            (formSubmit)="handleFormSubmit($event)"
+            (formError)="handleFormError($event)"
+            (goBack)="handleFormBack($event)">
        </organisation-defendant-form>`,
       {
         bind: {
@@ -82,8 +86,8 @@ describe('Organisation Defendant Form Component', () => {
           isPoliceProsecutor,
           handleFormSubmit: () => jest.fn(),
           handleFormError: () => jest.fn(),
-          handleFormBack: () => jest.fn(),
-        },
+          handleFormBack: () => jest.fn()
+        }
       }
     );
   }
@@ -119,7 +123,7 @@ describe('Organisation Defendant Form Component', () => {
 
     expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: manualCaseDefendantMock,
+      defendantToStore: manualCaseDefendantMock
     });
   });
 
@@ -138,7 +142,7 @@ describe('Organisation Defendant Form Component', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    Promise.resolve(true).then((result) => {
+    Promise.resolve(true).then(result => {
       expect(bindings.handleFormError).toHaveBeenCalled();
     });
   });

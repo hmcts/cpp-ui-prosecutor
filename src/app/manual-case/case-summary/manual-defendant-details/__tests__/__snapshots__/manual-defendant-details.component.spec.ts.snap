@@ -2,22 +2,20 @@
 
 exports[`DefendantDetailsComponent should render the component 1`] = `
 <manual-defendant-details
-  add={[Function EventEmitter]}
+  add={[Function EventEmitter_]}
   createUUID={[Function Function]}
   defendantStateService={[Function ManualCaseDefendantStateService]}
   defendants={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   ethnicities={[Function Array]}
   nationalities={[Function Array]}
   observedEthnicities={[Function Array]}
   remandStatuses={[Function Array]}
-  remove={[Function EventEmitter]}
+  remove={[Function EventEmitter_]}
 >
   <div
     class="defendant-details"
   >
-    
-    
     <pdk-divider
       pdk-margin-top="2"
     />
@@ -27,23 +25,21 @@ exports[`DefendantDetailsComponent should render the component 1`] = `
 
 exports[`DefendantDetailsComponent should render the component when case is SJP and legal entity defendant 1`] = `
 <manual-defendant-details
-  add={[Function EventEmitter]}
+  add={[Function EventEmitter_]}
   caseInitiationCode={[Function String]}
   createUUID={[Function Function]}
   defendantStateService={[Function ManualCaseDefendantStateService]}
   defendants={[Function Array]}
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   ethnicities={[Function Array]}
   nationalities={[Function Array]}
   observedEthnicities={[Function Array]}
   remandStatuses={[Function Array]}
-  remove={[Function EventEmitter]}
+  remove={[Function EventEmitter_]}
 >
   <div
     class="defendant-details"
   >
-    
-    
     <pdk-divider
       pdk-margin-top="2"
     />

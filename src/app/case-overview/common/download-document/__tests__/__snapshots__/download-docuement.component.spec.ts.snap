@@ -4,16 +4,12 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
 <download-document-test
   document={[Function Object]}
 >
-  <download-document
-    ng-reflect-document="[object Object]"
-  >
+  <download-document>
     <div
       class="download-document govuk-!-margin-top-2 govuk-!-margin-bottom-2"
-      ng-reflect-vertical="2"
       pdk-margin-vertical="2"
     >
       <pdk-file-download-icon
-        ng-reflect-size="39"
         style="display: inline-block; vertical-align: middle;"
       >
         <div
@@ -47,7 +43,6 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
         <a
           class="govuk-link govuk-body-xs"
           href="javascript:void(0);"
-          ng-reflect-type="body-xsmall"
           pdk-link=""
           pdk-typography="body-xsmall"
         >
@@ -56,7 +51,6 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
         <br />
         <span
           class="govuk-body-xs"
-          ng-reflect-type="body-xsmall"
           pdk-typography="body-xsmall"
         >
           PDF

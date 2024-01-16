@@ -29,7 +29,7 @@ import {
   getModeOfTrialPleaOptions,
   getMagistrateVerdictOptions,
   getProsecutorByUserGroup,
-  ProsecutorType,
+  ProsecutorType
 } from '../core';
 import { ManualCasePath } from './manual-case.interface';
 import { ManualCaseNavigationService } from './manual-case-nav.service';
@@ -44,17 +44,12 @@ import {
   EthnicityCode,
   OffenceDateCode,
   AlcoholLevelMethod,
-  PoliceForce,
+  PoliceForce
 } from '../core/model';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { isEmpty } from 'lodash';
 import { Option } from '../core/model/global/option';
-import {
-  getMotReasonOptions,
-  getMotReasons,
-  getVerdictTypes,
-  getPleaTypes,
-} from '../core/selectors/reference-data';
+import { getMotReasonOptions, getMotReasons, getVerdictTypes, getPleaTypes } from '../core/selectors/reference-data';
 import { getProsecutors, PleaType, Prosecutor } from '@cpp/reference-data';
 import { VerdictType } from '../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../core/model/reference-data-interfaces/mot-reason';
@@ -68,117 +63,119 @@ export interface SubmitData<T> {
   selector: 'manual-case-container',
   template: `
     <div class="manual-case">
-    <ng-container *ngIf="currentView.isCaseTypePage">
-      <manual-case-type
-        [manualCaseDetail]="manualCaseDetail$ | async"
-        [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
-        [summonsCodes]="summonTypes$ | async"
-        (submitFormData)="storeManualCaseData($event)"
-      >
-      </manual-case-type>
-    </ng-container>
+      <ng-container *ngIf="currentView.isCaseTypePage">
+        <manual-case-type
+          [manualCaseDetail]="manualCaseDetail$ | async"
+          [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
+          [summonsCodes]="summonTypes$ | async"
+          (submitFormData)="storeManualCaseData($event)"
+        >
+        </manual-case-type>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isProsecutorPage">
-      <manual-case-prosecutor
-        [manualCaseDetail]="manualCaseDetail$ | async"
-        [nonPoliceProsecutor]="nonPoliceProsecutor$ | async"
-        [prosecutorRouteType]="prosecutorRouteType"
-        (submitFormData)="storeManualCaseData($event)"
-      >
-      </manual-case-prosecutor>
-    </ng-container>
+      <ng-container *ngIf="currentView.isProsecutorPage">
+        <manual-case-prosecutor
+          [manualCaseDetail]="manualCaseDetail$ | async"
+          [nonPoliceProsecutor]="nonPoliceProsecutor$ | async"
+          [prosecutorRouteType]="prosecutorRouteType"
+          (submitFormData)="storeManualCaseData($event)"
+        >
+        </manual-case-prosecutor>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isHearingPage">
-      <manual-case-hearing-details
-        [manualCaseDetail]="manualCaseDetail$ | async"
-        [courtCentres]="courtCentres$ | async"
-        [hearingTypes]="hearingTypes$ | async"
-        (submitFormData)="storeManualCaseData($event)"
-      >
-      </manual-case-hearing-details>
-    </ng-container>
+      <ng-container *ngIf="currentView.isHearingPage">
+        <manual-case-hearing-details
+          [manualCaseDetail]="manualCaseDetail$ | async"
+          [courtCentres]="courtCentres$ | async"
+          [hearingTypes]="hearingTypes$ | async"
+          (submitFormData)="storeManualCaseData($event)"
+        >
+        </manual-case-hearing-details>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isDefendantPage">
-      <manual-case-defendant
-        [manualCaseDetail]="manualCaseDetail$ | async"
-        [manualCaseDefendants]="manualCaseDefendants$ | async"
-        [manualCaseType]="manualCaseType$ | async"
-        [prosecutors]="prosecutors$ | async"
-        [remandStatuses]="remandTypes$ | async"
-        (submitFormData)="storeManualCaseDefendant($event)"
-      >
-      </manual-case-defendant>
-    </ng-container>
+      <ng-container *ngIf="currentView.isDefendantPage">
+        <manual-case-defendant
+          [manualCaseDetail]="manualCaseDetail$ | async"
+          [manualCaseDefendants]="manualCaseDefendants$ | async"
+          [manualCaseType]="manualCaseType$ | async"
+          [prosecutors]="prosecutors$ | async"
+          [remandStatuses]="remandTypes$ | async"
+          (submitFormData)="storeManualCaseDefendant($event)"
+        >
+        </manual-case-defendant>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isOffencePage">
-      <manual-case-offence
-        [manualCaseDefendants]="manualCaseDefendants$ | async"
-        [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
-        [offenceDateCodes]="offenceDateCodes$ | async"
-        [alcoholLevelMethods]="alcoholLevelMethods$ | async"
-        [manualCaseType]="manualCaseType$ | async"
-        (submitFormData)="storeManualCaseDefendantList($event)"
-      >
-      </manual-case-offence>
-    </ng-container>
+      <ng-container *ngIf="currentView.isOffencePage">
+        <manual-case-offence
+          [manualCaseDefendants]="manualCaseDefendants$ | async"
+          [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
+          [offenceDateCodes]="offenceDateCodes$ | async"
+          [alcoholLevelMethods]="alcoholLevelMethods$ | async"
+          [manualCaseType]="manualCaseType$ | async"
+          (submitFormData)="storeManualCaseDefendantList($event)"
+        >
+        </manual-case-offence>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isEitherWayOffencePage">
-      <either-way-offence
-        [manualCaseDefendants]="manualCaseDefendants$ | async"
-        [pleaOptions]="pleaOptions$ | async"
-        [verdictsOptions]="verdictOptions$ | async"
-        [verdictsTypes]="verdictTypes$ | async"
-        [allocationDecisionOptions]="motOptions$ | async"
-        [initiationCode]="(manualCaseDetail$ | async)?.initiationCode"
-        (submitFormData)="storeEitherWayOffenceData($event)"
-      >
-      </either-way-offence>
-    </ng-container>
+      <ng-container *ngIf="currentView.isEitherWayOffencePage">
+        <either-way-offence
+          [manualCaseDefendants]="manualCaseDefendants$ | async"
+          [pleaOptions]="pleaOptions$ | async"
+          [verdictsOptions]="verdictOptions$ | async"
+          [verdictsTypes]="verdictTypes$ | async"
+          [allocationDecisionOptions]="motOptions$ | async"
+          [initiationCode]="(manualCaseDetail$ | async)?.initiationCode"
+          (submitFormData)="storeEitherWayOffenceData($event)"
+        >
+        </either-way-offence>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isCaseSummary">
-      <manual-case-summary
-        [caseDetails]="manualCaseDetail$ | async"
-        [defendants]="manualCaseDefendants$ | async"
-        [courtCentres]="courtCentres$ | async"
-        [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
-        [nationalities]="nationalities$ | async"
-        [alcoholLevelMethods]="alcoholLevelMethods$ | async"
-        [remandStatuses]="remandTypes$ | async"
-        [policeForces]="policeForces$ | async"
-        [hearingTypes]="hearingTypes$ | async"
-        [ethnicities]="ethnicities$ | async"
-        [observedEthnicities]="observedEthnicities$ | async"
-        [pleaTypes]="pleaTypes$ | async"
-        [prosecutors]="prosecutors$ | async"
-        [verdictsTypes]="verdictTypes$ | async"
-        [allocationDecisionTypes]="motReasons$ | async"
-        (edit)="edit($event)"
-        (remove)="remove($event)"
-        (add)="add($event)"
-        (submit)="submitManualCase()"
-      >
-      </manual-case-summary>
-    </ng-container>
+      <ng-container *ngIf="currentView.isCaseSummary">
+        <manual-case-summary
+          [caseDetails]="manualCaseDetail$ | async"
+          [defendants]="manualCaseDefendants$ | async"
+          [courtCentres]="courtCentres$ | async"
+          [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
+          [nationalities]="nationalities$ | async"
+          [alcoholLevelMethods]="alcoholLevelMethods$ | async"
+          [remandStatuses]="remandTypes$ | async"
+          [policeForces]="policeForces$ | async"
+          [hearingTypes]="hearingTypes$ | async"
+          [ethnicities]="ethnicities$ | async"
+          [observedEthnicities]="observedEthnicities$ | async"
+          [pleaTypes]="pleaTypes$ | async"
+          [prosecutors]="prosecutors$ | async"
+          [verdictsTypes]="verdictTypes$ | async"
+          [allocationDecisionTypes]="motReasons$ | async"
+          (edit)="edit($event)"
+          (remove)="remove($event)"
+          (add)="add($event)"
+          (formSubmit)="submitManualCase()"
+        >
+        </manual-case-summary>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isCaseCreated">
-      <manual-case-create-success
-        [reference]="reference"
-        [caseDetails]="manualCaseDetail$ | async"
-      ></manual-case-create-success>
-    </ng-container>
+      <ng-container *ngIf="currentView.isCaseCreated">
+        <manual-case-create-success
+          [reference]="reference"
+          [caseDetails]="manualCaseDetail$ | async"
+        ></manual-case-create-success>
+      </ng-container>
 
-    <ng-container *ngIf="currentView.isDuplicatedProsecutor">
-      <manual-case-duplicated-prosecutor
-        [manualCaseDetail]="manualCaseDetail$ | async"
-        (submitFormData)="updateProsecutorAndSave($event)"
-      >
-      </manual-case-duplicated-prosecutor>
-    </ng-container>
+      <ng-container *ngIf="currentView.isDuplicatedProsecutor">
+        <manual-case-duplicated-prosecutor
+          [manualCaseDetail]="manualCaseDetail$ | async"
+          (submitFormData)="updateProsecutorAndSave($event)"
+        >
+        </manual-case-duplicated-prosecutor>
+      </ng-container>
     </div>
   `,
   styles: [
     `
-      .manual-case {margin: 30px 0}
+      .manual-case {
+        margin: 30px 0;
+      }
     `
   ]
 })
@@ -225,7 +222,7 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
     this.store
       .pipe(select(getManualCase))
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe((manualCase) => {
+      .subscribe(manualCase => {
         this.manualCase = manualCase;
       });
 
@@ -273,7 +270,7 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
       this.store.dispatch(
         new StoreManualCase({
           caseId: uuid(),
-          initiationCode: 'J',
+          initiationCode: 'J'
         })
       );
     }
@@ -288,7 +285,7 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
     if (path === ManualCasePath.CaseCreated) {
       this.reference = {
         prosecutorCaseReference: this.route.snapshot.params['reference'],
-        caseId: this.route.snapshot.params['caseId'],
+        caseId: this.route.snapshot.params['caseId']
       };
     }
 
@@ -327,18 +324,14 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
     this.store.dispatch(new StoreManualCaseDefendantList(payload.defendantsWithOffences));
 
     const initiationCode = this.manualCase.caseDetails.initiationCode;
-    const hasEitherWayOffence = this.offenceStateService.hasEitherWayOffence(
-      payload.defendantsWithOffences
-    );
+    const hasEitherWayOffence = this.offenceStateService.hasEitherWayOffence(payload.defendantsWithOffences);
     const lastEditedOffenceWasEitherWay = payload.isEitherWayOffence;
 
     if (this.route.routeConfig.path === ManualCasePath.EditOffence) {
     }
 
     const isEitherWayOffenceEdited =
-      this.route.routeConfig.path === ManualCasePath.EditOffence
-        ? lastEditedOffenceWasEitherWay
-        : hasEitherWayOffence;
+      this.route.routeConfig.path === ManualCasePath.EditOffence ? lastEditedOffenceWasEitherWay : hasEitherWayOffence;
 
     if (payload.navigateToNextPage) {
       const navigateTo = this.manualCaseNavService.getNavgationPath(
@@ -378,7 +371,7 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
       this.store.dispatch(
         new RemoveManualCaseOffence({
           defendantId: params.defendantId,
-          offenceId: params.offenceId,
+          offenceId: params.offenceId
         })
       );
     } else {

@@ -7,8 +7,7 @@ export interface User {
 export const mockUsers: User[] = [
   {
     id: 'fcd33f4a-f286-4f3a-a8b9-d6e05fbbc3f7',
-    displayName: 'Trevor Lawson (Tvl)',
-
+    displayName: 'Trevor Lawson (Tvl)'
   },
   {
     id: 'b07c8200-5d04-4266-9521-c2312734a9d3',

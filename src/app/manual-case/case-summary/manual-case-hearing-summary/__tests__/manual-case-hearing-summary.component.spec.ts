@@ -21,7 +21,7 @@ describe('Manual case Initial Hearing summary', () => {
     dateOfHearing: '2100-10-18',
     timeOfHearing: '10:10',
     hearingDuration: '00:50',
-    hearingLanguage: 'WELSH',
+    hearingLanguage: 'WELSH'
   } as InitialHearing;
 
   const courtCentresMock = [
@@ -32,14 +32,14 @@ describe('Manual case Initial Hearing summary', () => {
       courtrooms: [
         {
           id: '8e912353-3b5d-36c3-953e-ad3b94b19de3',
-          name: 'Courtroom 01',
+          name: 'Courtroom 01'
         },
         {
           id: '1309d479-b08f-3576-8fa7-fd4e77c8d80c',
-          name: 'Courtroom 02',
-        },
-      ],
-    },
+          name: 'Courtroom 02'
+        }
+      ]
+    }
   ];
 
   const hearingTypesMock = [
@@ -47,16 +47,16 @@ describe('Manual case Initial Hearing summary', () => {
       id: 'test-hearing-type-id',
       code: '2',
       description: 'Show Cause',
-      defaultDurationMin: 10,
-    },
+      defaultDurationMin: 10
+    }
   ] as HearingType[];
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseHearingSummaryComponent, DashPipe],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm],
+      providers: [ControlContainer, NgForm]
     });
 
     fixture = TestBed.createComponent(ManualCaseHearingSummaryComponent);
@@ -75,8 +75,7 @@ describe('Manual case Initial Hearing summary', () => {
     const compiled = fixture.debugElement.nativeElement;
     const courtCentreName = component.getCourtName();
     const courtRoomName = component.getCourtRoomNameByID(initialHearingMock.roomId);
-    const duration =
-      moment.duration(initialHearingMock.hearingDuration).asMinutes() + ' COMMON.MINUTES';
+    const duration = moment.duration(initialHearingMock.hearingDuration).asMinutes() + ' COMMON.MINUTES';
     expect(compiled.querySelector('#hearing-court-name').textContent).toContain(courtCentreName);
     expect(compiled.querySelector('#hearing-room-name').textContent).toContain(courtRoomName);
     expect(compiled.querySelector('#hearing-type').textContent).toContain('Show Cause');

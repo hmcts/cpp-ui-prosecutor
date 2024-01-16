@@ -1,5 +1,4 @@
 import { $, browser, by, element, ExpectedConditions } from 'protractor';
-import { parse } from 'url';
 import { isStable } from './navigate';
 
 export const loginAs = ({ email, password = '1Password2!' }: { email: string; password?: string }) => {

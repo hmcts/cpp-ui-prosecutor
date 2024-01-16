@@ -4,16 +4,16 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Store, StoreModule } from '@ngrx/store';
 import { MockPipesModule } from '../../shared/pipes/mock-pipes';
-import { State, reducers } from '../../core';
+import { reducers, State } from '../../core';
 import {
-  LoadSummonsCodesSuccessAction,
   LoadManualCaseDetailsSuccess,
+  LoadSummonsCodesSuccessAction,
   StoreManualCase,
   StoreManualCaseDefendant,
-  StoreManualCaseDefendantList,
+  StoreManualCaseDefendantList
 } from '../../core/actions';
 import { ManualCaseAndDocuments, ManualCaseDefendant } from '../../core/model';
-import { ManualCaseCreateContainer, SubmitData } from '../manual-case-create.container';
+import { ManualCaseCreateContainer } from '../manual-case-create.container';
 import { ManualCaseNavigationService } from '../manual-case-nav.service';
 import { ManualCasePath } from '../manual-case.interface';
 import { ManualCase } from '../../core/model/manual-case';
@@ -28,37 +28,28 @@ const summonsCodes = [
     seqNo: 10,
     summonsCode: 'A',
     summonsCodeDescription: 'Application / Complaint',
-    validFrom: '2019-03-01',
+    validFrom: '2019-03-01'
   },
   {
     id: '5aaecac5-222b-402d-9047-84803679edac',
     seqNo: 20,
     summonsCode: 'B',
     summonsCodeDescription: 'Breach offences',
-    validFrom: '2019-03-01',
-  },
+    validFrom: '2019-03-01'
+  }
 ];
 
-const initModule = (
-  appPath: string,
-  getNavgationPath,
-  getManualCasePageView,
-  updatePrevRouteParams
-) => {
+const initModule = (appPath: string, getNavgationPath, getManualCasePageView, updatePrevRouteParams) => {
   window.scrollTo = jest.fn();
 
-  TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+  TestBed.configureTestingModule({
     declarations: [
       ManualCaseCreateContainer,
       TestManualCaseTypeComponent,
       TestManualCaseProsecutorComponent,
-      TestManualCaseDefendantComponent,
+      TestManualCaseDefendantComponent
     ],
-    imports: [
-      MockPipesModule,
-      RouterTestingModule,
-      StoreModule.forRoot(reducers, { runtimeChecks: {} }),
-    ],
+    imports: [MockPipesModule, RouterTestingModule, StoreModule.forRoot(reducers, { runtimeChecks: {} })],
     providers: [
       ManualCaseOffenceStateService,
       {
@@ -66,25 +57,25 @@ const initModule = (
         useValue: {
           snapshot: {
             params: { caseId: 'manual-case-id-001' },
-            queryParams: {},
+            queryParams: {}
           },
-          routeConfig: { path: appPath },
-        },
+          routeConfig: { path: appPath }
+        }
       },
       {
         provide: Router,
-        useValue: { navigate },
+        useValue: { navigate }
       },
       {
         provide: ManualCaseNavigationService,
         useValue: {
           getNavgationPath,
           getManualCasePageView,
-          updatePrevRouteParams,
-        },
-      },
+          updatePrevRouteParams
+        }
+      }
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
   });
 };
 
@@ -98,7 +89,7 @@ describe('Manual Case Create Container', () => {
   const caseDetails = {
     caseId: 'manual-case-id-001',
     initiationCode: 'S',
-    summonsCode: 'E',
+    summonsCode: 'E'
   } as ManualCase;
 
   describe('Add case type to store', () => {
@@ -108,12 +99,7 @@ describe('Manual Case Create Container', () => {
       updatePrevRouteParams = jest.fn();
       navigate = jest.fn();
 
-      initModule(
-        ManualCasePath.NewCaseType,
-        getNavgationPath,
-        getManualCasePageView,
-        updatePrevRouteParams
-      );
+      initModule(ManualCasePath.NewCaseType, getNavgationPath, getManualCasePageView, updatePrevRouteParams);
 
       store = TestBed.get(Store);
 
@@ -132,12 +118,14 @@ describe('Manual Case Create Container', () => {
       getNavgationPath.mockReturnValue(['manual-case', 'page-two']);
 
       fixture.detectChanges();
+      const modifiedCaseDetails = {
+        ...caseDetails,
+        summonsCode: 'B'
+      };
 
-      caseDetails.summonsCode = 'B';
+      fixture.componentInstance.storeManualCaseData(modifiedCaseDetails);
 
-      fixture.componentInstance.storeManualCaseData(caseDetails);
-
-      expect(store.dispatch).toHaveBeenCalledWith(new StoreManualCase(caseDetails));
+      expect(store.dispatch).toHaveBeenCalledWith(new StoreManualCase(modifiedCaseDetails));
       expect(getManualCasePageView).toHaveBeenCalledWith(ManualCasePath.NewCaseType);
       expect(getNavgationPath).toHaveBeenCalledWith(ManualCasePath.NewCaseType, 'S');
       expect(navigate).toHaveBeenCalledWith(['manual-case', 'page-two']);
@@ -150,12 +138,7 @@ describe('Manual Case Create Container', () => {
       getManualCasePageView = jest.fn();
       updatePrevRouteParams = jest.fn();
       navigate = jest.fn();
-      initModule(
-        ManualCasePath.CaseSummary,
-        getNavgationPath,
-        getManualCasePageView,
-        updatePrevRouteParams
-      );
+      initModule(ManualCasePath.CaseSummary, getNavgationPath, getManualCasePageView, updatePrevRouteParams);
 
       store = TestBed.get(Store);
       fixture = TestBed.createComponent(ManualCaseCreateContainer);
@@ -174,22 +157,19 @@ describe('Manual Case Create Container', () => {
 
       fixture.componentInstance.storeManualCaseData({
         caseId: 'case_001',
-        initiationCode: 'Application',
+        initiationCode: 'Application'
       });
       expect(navigate).toHaveBeenCalledWith(['application', 'select-type']);
 
       const manualCase = {
         caseId: 'case_001',
-        initiationCode: 'J',
+        initiationCode: 'J'
       } as ManualCase;
 
       fixture.componentInstance.storeManualCaseData(manualCase);
 
       expect(store.dispatch).toHaveBeenCalledWith(new StoreManualCase(manualCase));
-      expect(getNavgationPath).toHaveBeenCalledWith(
-        ManualCasePath.CaseSummary,
-        manualCase.initiationCode
-      );
+      expect(getNavgationPath).toHaveBeenCalledWith(ManualCasePath.CaseSummary, manualCase.initiationCode);
       expect(navigate).toHaveBeenCalledWith(['root', 'child']);
 
       const manualCaseWithDefendant = {
@@ -200,18 +180,16 @@ describe('Manual Case Create Container', () => {
             personalInformation: {
               title: 'Mr',
               firstName: 'Ben',
-              lastName: 'Joyce',
-            },
-          },
-        },
+              lastName: 'Joyce'
+            }
+          }
+        }
       };
 
       fixture.componentInstance.storeManualCaseDefendant(manualCaseWithDefendant);
 
       expect(store.dispatch).toHaveBeenCalledWith(
-        new StoreManualCaseDefendant(
-          manualCaseWithDefendant.defendantToStore as ManualCaseDefendant
-        )
+        new StoreManualCaseDefendant(manualCaseWithDefendant.defendantToStore as ManualCaseDefendant)
       );
       expect(navigate).toHaveBeenCalledWith(['root', 'child']);
 
@@ -221,32 +199,32 @@ describe('Manual Case Create Container', () => {
           individual: {
             personalInformation: {
               firstName: 'Ben',
-              lastName: 'Joyce',
-            },
+              lastName: 'Joyce'
+            }
           },
-          offences: [{ offenceCode: 'MD71513' }],
+          offences: [{ offenceCode: 'MD71513' }]
         },
         {
           id: '6fa8d077-91d6-4806-91f9-d543a4943cf5',
           individual: {
             personalInformation: {
               firstName: 'John',
-              lastName: 'Chivers',
-            },
+              lastName: 'Chivers'
+            }
           },
-          offences: [{ offenceCode: 'MD71513' }],
-        },
+          offences: [{ offenceCode: 'MD71513' }]
+        }
       ] as ManualCaseDefendant[];
 
       const manualCaseWithDefendantAndOffences = {
         navigateToNextPage: true,
         defendantsWithOffences: caseData,
-        isEitherWayOffence: true,
+        isEitherWayOffence: true
       };
 
       const submitData = {
         navigateToNextPage: true,
-        caseData,
+        caseData
       };
 
       fixture.componentInstance.storeManualCaseDefendantList(manualCaseWithDefendantAndOffences);
@@ -258,9 +236,7 @@ describe('Manual Case Create Container', () => {
 
       fixture.componentInstance.storeEitherWayOffenceData(submitData);
 
-      expect(store.dispatch).toHaveBeenCalledWith(
-        new StoreManualCaseDefendantsEitherWayOffences(submitData.caseData)
-      );
+      expect(store.dispatch).toHaveBeenCalledWith(new StoreManualCaseDefendantsEitherWayOffences(submitData.caseData));
       expect(navigate).toHaveBeenCalledWith(['root', 'child']);
     });
   });
@@ -271,7 +247,7 @@ describe('Manual Case Create Container', () => {
   template: `
     <div>{{ manualCaseDetail | json }}</div>
     <div>{{ summonsCodes | json }}</div>
-  `,
+  `
 })
 class TestManualCaseTypeComponent {
   @Input() manualCaseDetail: ManualCase;
@@ -281,7 +257,9 @@ class TestManualCaseTypeComponent {
 
 @Component({
   selector: 'manual-case-prosecutor',
-  template: ` <div></div> `,
+  template: `
+    <div></div>
+  `
 })
 class TestManualCaseProsecutorComponent {
   @Output() submitFormData = new EventEmitter<ManualCase>();
@@ -289,7 +267,9 @@ class TestManualCaseProsecutorComponent {
 
 @Component({
   selector: 'manual-case-defendant',
-  template: ` <div></div> `,
+  template: `
+    <div></div>
+  `
 })
 class TestManualCaseDefendantComponent {
   @Output() submitFormData = new EventEmitter<ManualCase>();

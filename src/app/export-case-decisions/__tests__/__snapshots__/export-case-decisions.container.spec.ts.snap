@@ -18,9 +18,7 @@ exports[`ExportCaseDecisionsContainer should compile correctly with resulted cas
   role$={[Function AnonymousSubject]}
   store={[Function Store]}
 >
-  <export-case-decisions
-    ng-reflect-case-count-result="[object Object]"
-  >
+  <export-case-decisions>
      {
     "casesResultedCount": 10
   }  

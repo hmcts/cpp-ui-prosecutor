@@ -1,3 +1,11 @@
 {
-  "extends": "../node_modules/@cpp/ui.config/dist/tsconfig.e2e.json"
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/e2e",
+    "allowJs": true,
+    "module": "commonjs",
+    "target": "es5",
+    "types": ["jasmine", "jasminewd2", "node"]
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
 }

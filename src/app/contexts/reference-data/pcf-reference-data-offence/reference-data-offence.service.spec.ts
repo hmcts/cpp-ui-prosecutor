@@ -1,10 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { PCFReferenceDataOffenceService } from '../pcf-reference-data-offence';
 import { cold } from 'jasmine-marbles';
-import {
-  OffenceType,
-  OffenceTypeDetails,
-} from '../../../core/model/reference-data-interfaces/offence-type';
+import { OffenceType, OffenceTypeDetails } from '../../../core/model/reference-data-interfaces/offence-type';
 import { CppHttp } from '@cpp/core';
 import { ReferenceDataModule } from '../reference-data.module';
 
@@ -15,7 +12,7 @@ describe('PCFReferenceDataOffenceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ReferenceDataModule],
-      providers: [{ provide: CppHttp, useValue: { query: jasmine.createSpy() } }],
+      providers: [{ provide: CppHttp, useValue: { query: jasmine.createSpy() } }]
     });
     http = TestBed.get(CppHttp);
     service = TestBed.get(PCFReferenceDataOffenceService);
@@ -27,21 +24,19 @@ describe('PCFReferenceDataOffenceService', () => {
         {
           offenceId: '17bd3b5b-de61-46cb-a395-0f46e70774c4',
           cjsOffenceCode: 'GA96101',
-          title:
-            'Aircraft commander / tug driver fail to stop after aircraft accident within Gatwick Airport',
-          legislation: 'whatever',
+          title: 'Aircraft commander / tug driver fail to stop after aircraft accident within Gatwick Airport',
+          legislation: 'whatever'
         },
         {
           offenceId: '42a5fdfe-1642-4358-99c3-7d5816927944',
           cjsOffenceCode: 'GA96011',
-          title:
-            'Allow a vehicle to be on Gatwick Airport after being forbidden to do so by a PC / airport official',
-          legislation: 'whatever',
-        },
+          title: 'Allow a vehicle to be on Gatwick Airport after being forbidden to do so by a PC / airport official',
+          legislation: 'whatever'
+        }
       ];
 
       const offencesResponse: { offences: OffenceType[] } = {
-        offences,
+        offences
       };
 
       const searchOffencesResponse$ = cold('-a|', { a: offencesResponse });
@@ -53,7 +48,7 @@ describe('PCFReferenceDataOffenceService', () => {
       expect(http.query).toHaveBeenCalledWith({
         // tslint:disable-next-line:max-line-length
         url: `/referencedataoffences-query-api/query/api/rest/referencedataoffences/offences/search?q=test&limit=20&offenceDate=2001-01-01`,
-        requestType: 'application/vnd.referencedataoffences.offences-search+json',
+        requestType: 'application/vnd.referencedataoffences.offences-search+json'
       });
     });
   });
@@ -69,10 +64,10 @@ describe('PCFReferenceDataOffenceService', () => {
         details: {
           document: {
             english: {
-              standardoffencewording: 'some standard offence Wording',
-            },
-          },
-        },
+              standardoffencewording: 'some standard offence Wording'
+            }
+          }
+        }
       };
 
       const offence: OffenceTypeDetails = {
@@ -80,7 +75,7 @@ describe('PCFReferenceDataOffenceService', () => {
         drugsOrAlcoholRelated: 'Y',
         locationRequired: 'Y',
         backDuty: false,
-        standardoffencewording: 'some standard offence Wording',
+        standardoffencewording: 'some standard offence Wording'
       };
 
       const searchOffencesResponse$ = cold('-a|', { a: offenceResponse });
@@ -92,7 +87,7 @@ describe('PCFReferenceDataOffenceService', () => {
       expect(http.query).toHaveBeenCalledWith({
         // tslint:disable-next-line:max-line-length
         url: `/referencedataoffences-query-api/query/api/rest/referencedataoffences/offences/test-offence-id-001`,
-        requestType: 'application/vnd.referencedataoffences.offence+json',
+        requestType: 'application/vnd.referencedataoffences.offence+json'
       });
     });
   });

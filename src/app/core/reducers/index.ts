@@ -1,7 +1,4 @@
-import {
-  ReferenceDataState,
-  referenceDataReducer as CoreReferenceDataReducer,
-} from '@cpp/reference-data';
+import { ReferenceDataState, referenceDataReducer as CoreReferenceDataReducer } from '@cpp/reference-data';
 import { UsersGroupsState, usersGroups } from '@cpp/users-groups';
 import { apiReducer, ApiState } from './api.reducer';
 import {
@@ -34,7 +31,6 @@ export interface State extends UsersGroupsState, ReferenceDataState {
   readonly region: RegionState;
   readonly pcfReferenceData: PcfReferenceDataState;
   readonly manualCaseDetails: ManualCaseDetailsState;
-
 }
 
 export const reducers = {
@@ -49,5 +45,5 @@ export const reducers = {
   pcfReferenceData: pcfReferencedataReducer,
   referenceData: CoreReferenceDataReducer,
   manualCaseDetails: manualCaseDetailsReducer,
-  usersGroups,
+  usersGroups
 };

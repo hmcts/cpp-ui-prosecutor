@@ -20,7 +20,7 @@ import { LegalEntityDetails, PersonalDetails } from '../../../contexts/sjp';
   `,
   styles: [
     `
-      :host /deep/ .pdk-alert__container {
+      :host ::ng-deep .pdk-alert__container {
         align-items: stretch !important;
       }
     `
@@ -32,16 +32,9 @@ export class DefendantDetailsChangeAlertComponent {
 
   get displayRedBanner(): boolean {
     if (!!this.personalDetails) {
-      return (
-        this.personalDetails.nameChanged ||
-        this.personalDetails.addressChanged ||
-        this.personalDetails.dobChanged
-      );
+      return this.personalDetails.nameChanged || this.personalDetails.addressChanged || this.personalDetails.dobChanged;
     } else {
-      return (
-        this.legalEntityDetails.legalEntityNameChanged ||
-        this.legalEntityDetails.addressChanged
-      );
+      return this.legalEntityDetails.legalEntityNameChanged || this.legalEntityDetails.addressChanged;
     }
   }
 }

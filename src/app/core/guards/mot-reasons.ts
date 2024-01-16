@@ -16,15 +16,15 @@ export class MotReasonsGuard implements CanActivate {
   hasMotReasonsInStore(): Observable<boolean> {
     return this.store.pipe(
       select(getMotReasons),
-      map((verdictTypes) => verdictTypes && verdictTypes.length > 0),
+      map(verdictTypes => verdictTypes && verdictTypes.length > 0),
       take(1)
     );
   }
 
   hasMotReasonsInApi(): Observable<boolean> {
     return this.referenceData.getMotReasons().pipe(
-      map((verdictTypes) => new LoadMotReasonsSuccess(verdictTypes || [])),
-      tap((action) => this.store.dispatch(action)),
+      map(verdictTypes => new LoadMotReasonsSuccess(verdictTypes || [])),
+      tap(action => this.store.dispatch(action)),
       map(Boolean),
       catchError(() => {
         return of(false);
@@ -34,7 +34,7 @@ export class MotReasonsGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.hasMotReasonsInStore().pipe(
-      switchMap((inStore) => {
+      switchMap(inStore => {
         if (inStore) {
           return of(inStore);
         }

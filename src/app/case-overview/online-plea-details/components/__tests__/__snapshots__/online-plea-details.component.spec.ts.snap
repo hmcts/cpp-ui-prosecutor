@@ -7,10 +7,7 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
   onlinePleas={[Function Array]}
   userGroups={[Function Array]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-case-id="case-id-test"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><case-header-badge-container>
     <pre>
@@ -38,7 +35,7 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
     <caption
       class="pdk-visually-hidden"
     >
-      Personal details
+       Personal details 
     </caption>
     <tbody
       class="column-width"
@@ -149,32 +146,27 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
           pdk-table-cell=""
           pdk-typography="body-small"
         >
-          <date-of-birth
-            ng-reflect-date-of-birth="1960-09-09"
-          >
-            
+          <date-of-birth>
             <div>
                formatted 1960-09-09 (63 years old) 
             </div>
-            
           </date-of-birth>
         </td>
       </tr>
-      
     </tbody>
   </table><h2
     aria-hidden="true"
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Plea for offence 1
+     Plea for offence 1 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Plea for offence 1
+       Plea for offence 1 
     </caption>
     <tbody
       class="column-width"
@@ -197,7 +189,6 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
            Obstruct person executing search warrant for TV receiver 
         </td>
       </tr>
-      
       <tr
         pdk-table-row=""
       >
@@ -215,9 +206,6 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
            Notified Not Guilty 
         </td>
       </tr>
-      
-      
-      
       <tr
         pdk-table-row=""
       >
@@ -241,14 +229,14 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Plea for offence 2
+     Plea for offence 2 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Plea for offence 2
+       Plea for offence 2 
     </caption>
     <tbody
       class="column-width"
@@ -271,7 +259,6 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
            Use / install a television set without a licence 
         </td>
       </tr>
-      
       <tr
         pdk-table-row=""
       >
@@ -289,8 +276,6 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
            Notified Guilty 
         </td>
       </tr>
-      
-      
       <tr
         pdk-table-row=""
       >
@@ -308,7 +293,6 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
            Guilty plea mitigation2 
         </td>
       </tr>
-      
     </tbody>
   </table><h3
     pdk-margin-bottom="0"
@@ -481,16 +465,15 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Finances
+     Finances 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Finances
+       Finances 
     </caption>
-    
     <tbody
       class="column-width"
       pdk-table-body=""
@@ -731,9 +714,8 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
     <caption
       class="pdk-visually-hidden"
     >
-      Monthly outgoings
+       Monthly outgoings 
     </caption>
-    
     <tbody
       class="column-width"
       pdk-table-body=""
@@ -920,10 +902,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
   onlinePleas={[Function Array]}
   userGroups={[Function Array]}
 >
-  <breadcrumb-links
-    ng-reflect-breadcrumbs="[object Object],[object Object"
-    ng-reflect-case-id="case-id-test"
-  >
+  <breadcrumb-links>
     breadcrumb-links
   </breadcrumb-links><case-header-badge-container>
     <pre>
@@ -951,7 +930,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <caption
       class="pdk-visually-hidden"
     >
-      Personal details
+       Personal details 
     </caption>
     <tbody
       class="column-width"
@@ -1062,32 +1041,27 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
           pdk-table-cell=""
           pdk-typography="body-small"
         >
-          <date-of-birth
-            ng-reflect-date-of-birth="1960-09-09"
-          >
-            
+          <date-of-birth>
             <div>
                formatted 1960-09-09 (63 years old) 
             </div>
-            
           </date-of-birth>
         </td>
       </tr>
-      
     </tbody>
   </table><h2
     aria-hidden="true"
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Plea for offence 1
+     Plea for offence 1 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Plea for offence 1
+       Plea for offence 1 
     </caption>
     <tbody
       class="column-width"
@@ -1110,7 +1084,6 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
            Obstruct person executing search warrant for TV receiver 
         </td>
       </tr>
-      
       <tr
         pdk-table-row=""
       >
@@ -1128,9 +1101,6 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
            Notified Not Guilty 
         </td>
       </tr>
-      
-      
-      
       <tr
         pdk-table-row=""
       >
@@ -1154,14 +1124,14 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Plea for offence 2
+     Plea for offence 2 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Plea for offence 2
+       Plea for offence 2 
     </caption>
     <tbody
       class="column-width"
@@ -1184,7 +1154,6 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
            Use / install a television set without a licence 
         </td>
       </tr>
-      
       <tr
         pdk-table-row=""
       >
@@ -1202,8 +1171,6 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
            Notified Guilty 
         </td>
       </tr>
-      
-      
       <tr
         pdk-table-row=""
       >
@@ -1221,7 +1188,6 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
            Guilty plea mitigation2 
         </td>
       </tr>
-      
     </tbody>
   </table><h3
     pdk-margin-bottom="0"
@@ -1394,16 +1360,15 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     pdk-margin-bottom="0"
     pdk-typography="heading-medium"
   >
-    Finances
+     Finances 
   </h2><table
     pdk-table=""
   >
     <caption
       class="pdk-visually-hidden"
     >
-      Finances
+       Finances 
     </caption>
-    
     <tbody
       class="column-width"
       pdk-table-body=""
@@ -1644,9 +1609,8 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
     <caption
       class="pdk-visually-hidden"
     >
-      Monthly outgoings
+       Monthly outgoings 
     </caption>
-    
     <tbody
       class="column-width"
       pdk-table-body=""

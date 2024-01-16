@@ -9,7 +9,7 @@ import { By } from '@angular/platform-browser';
 import { Breadcrumb } from '../breadcrumb-links.interface';
 
 describe('BreadcrumbLinksComponent', () => {
-  let fixture: ComponentFixture<TestBreadCrumbLinks>;
+  let fixture: ComponentFixture<TestBreadCrumbLinksComponent>;
   let navigate: jest.Mock;
   const { location } = window;
 
@@ -27,7 +27,7 @@ describe('BreadcrumbLinksComponent', () => {
 
     TestBed.configureTestingModule({
       imports: [CommonModule, BreadcrumbLinksModule, RouterTestingModule],
-      declarations: [TestBreadCrumbLinks],
+      declarations: [TestBreadCrumbLinksComponent],
       providers: [
         {
           provide: Router,
@@ -36,10 +36,11 @@ describe('BreadcrumbLinksComponent', () => {
             url: '/user'
           }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
-    fixture = TestBed.createComponent(TestBreadCrumbLinks);
+    fixture = TestBed.createComponent(TestBreadCrumbLinksComponent);
     fixture.componentInstance.breadcrumbs = [
       Breadcrumbs.HOME,
       Breadcrumbs.CASES_MISSING_SJP_NOTICES,
@@ -71,7 +72,7 @@ describe('BreadcrumbLinksComponent', () => {
       <breadcrumb-links [breadcrumbs]="breadcrumbs" [caseId]="caseId"></breadcrumb-links>
     `
   })
-  class TestBreadCrumbLinks {
+  class TestBreadCrumbLinksComponent {
     @Input() breadcrumbs: Breadcrumb[];
     @Input() caseId: string;
   }

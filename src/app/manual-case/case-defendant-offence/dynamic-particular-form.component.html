@@ -1,5 +1,5 @@
 <ng-container *ngIf="isEditMode && data">
-  <form pdk-form novalidate (validSubmit)="submitData()" (errors)="onError.emit($event)">
+  <form pdk-form novalidate (validSubmit)="submitData()" (errors)="formError.emit($event)">
     <div *ngFor="let section of data.sections; let i = index">
       <ng-container *ngIf="section.type === 'DROPDOWN'">
         <pdk-form-field
@@ -27,10 +27,7 @@
       <ng-container *ngIf="section.type === 'DATE'">
         <pdk-form-field
           label="{{
-            (section.showValueTwoElement
-              ? 'MANUAL_CASE_OFFENCE.START_DATE'
-              : 'MANUAL_CASE_OFFENCE.DATE'
-            ) | translate
+            (section.showValueTwoElement ? 'MANUAL_CASE_OFFENCE.START_DATE' : 'MANUAL_CASE_OFFENCE.DATE') | translate
           }}"
           labelType="small"
           [errorMessages]="[
@@ -136,9 +133,7 @@
             attr.data-role="value_{{ i }}"
           >
             <div *ngFor="let radio of section.list; let r = index">
-              <pdk-radio-button pdk-margin-bottom="2" [value]="radio.value">{{
-                radio.label
-              }}</pdk-radio-button>
+              <pdk-radio-button pdk-margin-bottom="2" [value]="radio.value">{{ radio.label }}</pdk-radio-button>
 
               <fieldset [disabled]="radio.value !== section.value" *ngIf="radio.children">
                 <div class="radio-container">
@@ -178,13 +173,7 @@
     </div>
 
     <div>
-      <button
-        pdk-button="secondary"
-        type="submit"
-        pdk-margin-top="3"
-        pdk-margin-bottom="3"
-        data-role="apply"
-      >
+      <button pdk-button="secondary" type="submit" pdk-margin-top="3" pdk-margin-bottom="3" data-role="apply">
         Apply Details
       </button>
     </div>

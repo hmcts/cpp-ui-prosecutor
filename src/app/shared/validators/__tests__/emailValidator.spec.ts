@@ -6,17 +6,17 @@ import { By } from '@angular/platform-browser';
 import { EmailValidator } from '../index';
 
 describe('Email Validator', () => {
-  let fixture: ComponentFixture<TestEmailValidator>;
+  let fixture: ComponentFixture<TestEmailValidatorComponent>;
   let form: NgForm;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestEmailValidator, EmailValidator],
-      imports: [FormsModule],
+      declarations: [TestEmailValidatorComponent, EmailValidator],
+      imports: [FormsModule]
     });
 
-    fixture = TestBed.createComponent(TestEmailValidator);
+    fixture = TestBed.createComponent(TestEmailValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     ctrlElement = fixture.debugElement.query(By.css('[name=email]'));
     fixture.detectChanges();
@@ -28,7 +28,7 @@ describe('Email Validator', () => {
   };
 
   const invalidError = {
-    email: { email: true },
+    email: { email: true }
   };
 
   it('should validate the supplied email', () => {
@@ -59,8 +59,8 @@ describe('Email Validator', () => {
     <form>
       <input name="email" [ngModel]="model" validateEmail />
     </form>
-  `,
+  `
 })
-class TestEmailValidator {
+class TestEmailValidatorComponent {
   model: string;
 }

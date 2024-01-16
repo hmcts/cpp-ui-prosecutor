@@ -1,58 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Manual Case Offence State Service should transform defendants\` \`either way\` offences to be grouped by offence id 1`] = `
-Object {
-  "12af2be8-b257-4227-9cf0-3d77975ed7aa": Object {
-    "defendants": Array [
-      Object {
+{
+  "12af2be8-b257-4227-9cf0-3d77975ed7aa": {
+    "defendants": [
+      {
         "id": "46e1c5f5-5e91-4655-9eda-43368640f218",
-        "individual": Object {
-          "personalInformation": Object {
+        "individual": {
+          "personalInformation": {
             "firstName": "Defendant",
             "lastName": "One",
             "title": "Mr",
           },
         },
-        "offences": Array [
-          Object {
+        "offences": [
+          {
             "modeOfTrialDerived": "either way",
             "offenceCode": "RT88584B",
             "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
             "offenceSequenceNumber": 1,
             "offenceWording": "Caught Driving On Phone",
-            "plea": Object {
+            "plea": {
               "pleaDate": undefined,
               "pleaValue": undefined,
             },
-            "verdict": Object {
+            "verdict": {
               "verdictDate": undefined,
-              "verdictType": Object {
+              "verdictType": {
                 "category": undefined,
                 "categoryType": undefined,
                 "id": undefined,
               },
             },
           },
-          Object {
+          {
             "modeOfTrialDerived": "either way",
             "offenceCode": "MR73002",
             "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
             "offenceSequenceNumber": 2,
             "offenceWording": "Assault of a person",
-            "plea": Object {
+            "plea": {
               "pleaDate": undefined,
               "pleaValue": undefined,
             },
-            "verdict": Object {
+            "verdict": {
               "verdictDate": undefined,
-              "verdictType": Object {
+              "verdictType": {
                 "category": undefined,
                 "categoryType": undefined,
                 "id": undefined,
               },
             },
           },
-          Object {
+          {
             "modeOfTrialDerived": "Trial",
             "offenceCode": "AT01020",
             "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
@@ -62,19 +62,19 @@ Object {
         ],
       },
     ],
-    "offence": Object {
+    "offence": {
       "modeOfTrialDerived": "either way",
       "offenceCode": "MR73002",
       "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
       "offenceSequenceNumber": 2,
       "offenceWording": "Assault of a person",
-      "plea": Object {
+      "plea": {
         "pleaDate": undefined,
         "pleaValue": undefined,
       },
-      "verdict": Object {
+      "verdict": {
         "verdictDate": undefined,
-        "verdictType": Object {
+        "verdictType": {
           "category": undefined,
           "categoryType": undefined,
           "id": undefined,

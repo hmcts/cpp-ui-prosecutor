@@ -13,7 +13,7 @@ export type ManualCaseDetailsState = ManualCaseAndDocuments;
 const initialState = {
   caseDetails: { initiationCode: 'J' },
   defendants: [],
-  channel: 'MCC',
+  channel: 'MCC'
 } as ManualCaseAndDocuments;
 
 export function manualCaseDetailsReducer(
@@ -28,13 +28,13 @@ export function manualCaseDetailsReducer(
       return {
         ...state,
         ...{
-          caseDetails: action.payload,
-        },
+          caseDetails: action.payload
+        }
       };
 
     case manualCaseActions.STORE_MANUAL_CASE_DEFENDANT:
       const newState = cloneDeep(state);
-      const index = newState.defendants.findIndex((e) => e.id === action.payload.id);
+      const index = newState.defendants.findIndex(e => e.id === action.payload.id);
 
       if (index === -1) {
         newState.defendants.push(action.payload);
@@ -47,8 +47,8 @@ export function manualCaseDetailsReducer(
       return {
         ...state,
         ...{
-          defendants: action.payload,
-        },
+          defendants: action.payload
+        }
       };
     case manualCaseActions.STORE_MANUAL_CASE_DEFENDANTS_EITHER_WAY_OFFENCES: {
       const updatedDefendants = action.payload;
@@ -57,25 +57,23 @@ export function manualCaseDetailsReducer(
       return {
         ...state,
         ...{
-          defendants,
-        },
+          defendants
+        }
       };
     }
     case manualCaseActions.REMOVE_MANUAL_CASE_DEFENDANT: {
       return {
         ...state,
-        defendants: state.defendants.filter((d) => d.id !== action.payload),
+        defendants: state.defendants.filter(d => d.id !== action.payload)
       };
     }
     case manualCaseActions.REMOVE_MANUAL_CASE_OFFENCE: {
       const defendants = cloneDeep(state.defendants);
-      const defendant = defendants.find((d) => d.id === action.payload.defendantId);
-      defendant.offences = defendant.offences.filter(
-        (o) => o.offenceId !== action.payload.offenceId
-      );
+      const defendant = defendants.find(d => d.id === action.payload.defendantId);
+      defendant.offences = defendant.offences.filter(o => o.offenceId !== action.payload.offenceId);
       return {
         ...state,
-        defendants,
+        defendants
       };
     }
     case createProsecutorSuccess.type: {
@@ -94,9 +92,9 @@ export function manualCaseDetailsReducer(
               name: fullName,
               prosecutingAuthority: oucode,
               address,
-              standard,
-            },
-          },
+              standard
+            }
+          }
         };
       }
       return state;
@@ -111,10 +109,8 @@ function mapToUpdatedDefendants(
   currentDefendants: ManualCaseDefendant[],
   updatedDefendants: ManualCaseDefendant[]
 ): ManualCaseDefendant[] {
-  return currentDefendants.map((defendant) => {
-    const foundDefendant = updatedDefendants.find(
-      (updatedDefendant) => updatedDefendant.id === defendant.id
-    );
+  return currentDefendants.map(defendant => {
+    const foundDefendant = updatedDefendants.find(updatedDefendant => updatedDefendant.id === defendant.id);
     if (foundDefendant) {
       const foundDefendantCopy = cloneDeep(foundDefendant);
       const offences = mapToUpdatedOffences(defendant.offences, foundDefendantCopy.offences);
@@ -130,10 +126,8 @@ function mapToUpdatedOffences(
   currentOffences: ManualCaseOffence[],
   updateOffences: ManualCaseOffence[]
 ): ManualCaseOffence[] {
-  return currentOffences.map((currentOffence) => {
-    const offence = updateOffences.find(
-      (updatedOffence) => updatedOffence.offenceId === currentOffence.offenceId
-    );
+  return currentOffences.map(currentOffence => {
+    const offence = updateOffences.find(updatedOffence => updatedOffence.offenceId === currentOffence.offenceId);
     return offence ? offence : currentOffence;
   });
 }

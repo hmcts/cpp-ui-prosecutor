@@ -1,11 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { Prosecutor } from '@cpp/reference-data';
 import { ProsecutorType } from '../core';
@@ -14,7 +7,7 @@ import { ProsecutorType } from '../core';
   templateUrl: './prosecutor-search.component.html',
   selector: 'prosecutor-search',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  viewProviders: [{ provide: ControlContainer, useExisting: NgForm }],
+  viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
 })
 export class ProsecutorSearchComponent implements OnInit {
   @Input() prosecutorRouteType: ProsecutorType;
@@ -27,9 +20,7 @@ export class ProsecutorSearchComponent implements OnInit {
   includeNonStandardOrganisations = false;
 
   ngOnInit(): void {
-    this.includeNonStandardOrganisations = this.selectedProsecutor
-      ? !this.selectedProsecutor.standard
-      : false;
+    this.includeNonStandardOrganisations = this.selectedProsecutor ? !this.selectedProsecutor.standard : false;
   }
 
   filterByNonStandardOrganisation = (prosecutor: Prosecutor) => {

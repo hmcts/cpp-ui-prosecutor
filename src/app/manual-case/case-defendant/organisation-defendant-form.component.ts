@@ -2,12 +2,12 @@ import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core
 import { NgForm } from '@angular/forms';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
 import { merge } from 'lodash';
-import * as uuid from 'uuid/v4';
+import uuid from 'uuid/v4';
 import { ValidationError } from '@cpp/pdk';
 
 @Component({
   selector: 'organisation-defendant-form',
-  templateUrl: './organisation-defendant-form.component.html',
+  templateUrl: './organisation-defendant-form.component.html'
 })
 export class OrganisationDefendantFormComponent {
   @Input() aliasesReset: boolean;
@@ -15,9 +15,9 @@ export class OrganisationDefendantFormComponent {
   @Input() manualCaseDefendant: ManualCaseDefendant;
   @Input() manualCaseType: string;
   @Input() showAddButton: boolean;
-  @Output() onSubmit = new EventEmitter<any>();
-  @Output() onError = new EventEmitter<ValidationError[]>();
-  @Output() onBack = new EventEmitter();
+  @Output() formSubmit = new EventEmitter<any>();
+  @Output() formError = new EventEmitter<ValidationError[]>();
+  @Output() goBack = new EventEmitter();
   @ViewChild(NgForm) form: NgForm;
 
   param: { value: string } = { value: 'optional' };
@@ -35,7 +35,7 @@ export class OrganisationDefendantFormComponent {
 
   onErrors(error: ValidationError[]) {
     if (error) {
-      this.onError.emit(error);
+      this.formError.emit(error);
     }
   }
 
@@ -44,7 +44,6 @@ export class OrganisationDefendantFormComponent {
   }
 
   submitData(formData: ManualCaseDefendant): void {
-
     if (!this.manualCaseDefendant.id) {
       this.manualCaseDefendant.id = this.getUuid();
     }
@@ -57,10 +56,10 @@ export class OrganisationDefendantFormComponent {
       delete defendantToStore.numPreviousConvictions;
     }
 
-    this.onSubmit.emit({ action: this.submitAction, defendantToStore });
+    this.formSubmit.emit({ action: this.submitAction, defendantToStore });
   }
 
   back() {
-    this.onBack.emit();
+    this.goBack.emit();
   }
 }

@@ -16,10 +16,8 @@ import { Option } from '../../../../../shared/interfaces';
 
 describe('OffenceWithdrawalComponent', () => {
   let fixture: ComponentFixture<TestOffenceComponent>;
-  let navigate: jest.Mock;
 
   beforeEach(() => {
-    navigate = jest.fn();
     TestBed.configureTestingModule({
       declarations: [OffenceWithdrawalComponent, TestOffenceComponent],
       imports: [
@@ -29,7 +27,8 @@ describe('OffenceWithdrawalComponent', () => {
         PdkBadgeModule,
         PdkRadioInputModule,
         PdkFormModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestOffenceComponent);
 

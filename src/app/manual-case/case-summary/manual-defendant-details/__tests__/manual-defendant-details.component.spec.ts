@@ -8,7 +8,7 @@ import { Language, ManualCaseDefendant } from '../../../../core/model';
 import { ManualCaseDefendantStateService } from '../../../defendants-state.service';
 import { MockPipesModule } from '../../../../shared/pipes/mock-pipes';
 import { Ethnicity, EthnicityCode } from '../../../../core/model/reference-data-interfaces';
-import { AddressPipe  } from '../../../../shared/pipes/address/address.pipe';
+import { AddressPipe } from '../../../../shared/pipes/address/address.pipe';
 import { FullNamePipe } from '../../../../shared/pipes/full-name/full-name.pipe';
 import { DashPipe } from '../../../../shared/pipes/dash/dash.pipe';
 
@@ -20,7 +20,7 @@ const mockDefendants = [
         observedEthnicity: 2,
         contactDetails: {
           primaryEmail: 'one@abc.com',
-          home: '07968111111',
+          home: '07968111111'
         },
         address: {
           address1: '11 Wilton Road',
@@ -28,16 +28,16 @@ const mockDefendants = [
           address3: 'Peterborough',
           address4: '',
           address5: '',
-          postcode: 'PE1 5ZZ',
+          postcode: 'PE1 5ZZ'
         },
         title: 'Mr',
         firstName: 'Defendant',
-        lastName: 'One',
+        lastName: 'One'
       },
       selfDefinedInformation: {
         dateOfBirth: '1975-01-01',
         ethnicity: 'W1',
-        ethnicityId: 'ethId',
+        ethnicityId: 'ethId'
       },
       custodyStatus: 'On conditional bail',
       bailConditions: 'bail condition 1',
@@ -45,7 +45,7 @@ const mockDefendants = [
         personalInformation: {
           contactDetails: {
             primaryEmail: 'guardian@abc.com',
-            home: '07968111122',
+            home: '07968111122'
           },
           address: {
             address1: '11 Wilton Road',
@@ -53,17 +53,17 @@ const mockDefendants = [
             address3: 'Peterborough',
             address4: '',
             address5: '',
-            postcode: 'PE1 5ZZ',
+            postcode: 'PE1 5ZZ'
           },
           title: 'Mr',
           firstName: 'Defendant',
-          lastName: 'Guardian',
-        },
-      },
+          lastName: 'Guardian'
+        }
+      }
     },
     numPreviousConvictions: 1,
     documentationLanguage: 'ENGLISH' as Language,
-    hearingLanguage: 'WELSH' as Language,
+    hearingLanguage: 'WELSH' as Language
   },
   {
     id: '46e1c5f5-5e91-4655-9eda-43368640f218',
@@ -71,7 +71,7 @@ const mockDefendants = [
       personalInformation: {
         contactDetails: {
           primaryEmail: 'two@abc.com',
-          home: '07968222222',
+          home: '07968222222'
         },
         address: {
           address1: 'No fixed abode',
@@ -79,15 +79,15 @@ const mockDefendants = [
           address3: '',
           address4: '',
           address5: '',
-          postcode: '',
+          postcode: ''
         },
         title: 'Mr',
         firstName: 'Defendant',
-        lastName: 'Two',
+        lastName: 'Two'
       },
       selfDefinedInformation: {
-        dateOfBirth: '1970-02-02',
-      },
+        dateOfBirth: '1970-02-02'
+      }
     },
     numPreviousConvictions: 2,
     documentationLanguage: 'ENGLISH' as Language,
@@ -97,35 +97,35 @@ const mockDefendants = [
         title: 'Mr',
         firstName: 'James',
         givenName2: 'Terrance',
-        lastName: 'Wilson',
+        lastName: 'Wilson'
       },
       {
         title: 'Sir',
         firstName: 'James',
         givenName2: 'Terrance',
-        lastName: 'Wilson',
-      },
-    ],
+        lastName: 'Wilson'
+      }
+    ]
   },
   {
     id: '46e1c5f5-5e91-4655-9eda-43368640f218',
     individual: {
       parentGuardianInformation: {
-        organisationName: 'organisation',
-      },
+        organisationName: 'organisation'
+      }
     },
     aliasForCorporate: [
       {
-        aliasForCorporate: 'alias 1',
+        aliasForCorporate: 'alias 1'
       },
       {
-        aliasForCorporate: 'alias 2',
-      },
+        aliasForCorporate: 'alias 2'
+      }
     ],
     documentationLanguage: 'ENGLISH' as Language,
-    hearingLanguage: 'WELSH' as Language,
-  },
-] as ManualCaseDefendant[];
+    hearingLanguage: 'WELSH' as Language
+  }
+] as any[];
 
 const mockNationalities = [
   {
@@ -134,7 +134,7 @@ const mockNationalities = [
     isoCode: 'ALB',
     govCode: 'AL',
     countryName: 'Albania',
-    nationality: 'Albanian',
+    nationality: 'Albanian'
   },
   {
     id: '51f09da0-be51-41be-8fe8-407a491e04e1',
@@ -142,8 +142,8 @@ const mockNationalities = [
     isoCode: 'CHL',
     govCode: 'CL',
     countryName: 'Chile',
-    nationality: 'Chilean',
-  },
+    nationality: 'Chilean'
+  }
 ];
 
 const mockRemandStatuses = [
@@ -151,26 +151,26 @@ const mockRemandStatuses = [
     id: 'mock-id-1',
     seqNo: 10,
     statusCode: 'B',
-    statusDescription: 'Conditional Bail',
+    statusDescription: 'Conditional Bail'
   },
   {
     id: 'mock-id-2',
     seqNo: 30,
     statusCode: 'C',
-    statusDescription: 'Remanded into Custody',
+    statusDescription: 'Remanded into Custody'
   },
   {
     id: 'mock-id-3',
     seqNo: 40,
     statusCode: 'A',
-    statusDescription: 'Not applicable',
-  },
+    statusDescription: 'Not applicable'
+  }
 ];
 
 const mockEthnicities = [{ code: 'W1', id: 'ethId', description: 'British' }] as Ethnicity[];
 
 const mockObservedEthnicities = [
-  { ethnicityCode: '2', ethnicityDescription: 'White - South European' },
+  { ethnicityCode: '2', ethnicityDescription: 'White - South European' }
 ] as EthnicityCode[];
 
 describe('DefendantDetailsComponent', () => {
@@ -178,11 +178,11 @@ describe('DefendantDetailsComponent', () => {
   let fixture: ComponentFixture<DefendantDetailsComponent>;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [DefendantDetailsComponent, DashPipe, FullNamePipe, AddressPipe],
       imports: [CommonModule, MockPipesModule, RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseDefendantStateService],
+      providers: [ControlContainer, NgForm, ManualCaseDefendantStateService]
     });
 
     fixture = TestBed.createComponent(DefendantDetailsComponent);
@@ -206,30 +206,25 @@ describe('DefendantDetailsComponent', () => {
         id: 'e58b977c-b3bd-478c-a46a-91e59eb756a8',
         address: {
           address1: '123',
-          postcode: 'cr0 1xx',
+          postcode: 'cr0 1xx'
         },
         documentationLanguage: 'ENGLISH' as Language,
         hearingLanguage: 'ENGLISH' as Language,
         organisationName: 'Organisation Name',
         appliedProsecutorCosts: 1000,
         postingDate: '2020-12-12',
-        numPreviousConvictions: 10,
-      },
+        numPreviousConvictions: 10
+      }
     ] as ManualCaseDefendant[];
     expect(fixture).toMatchSnapshot();
   });
 
   it(`getPersonFull name should return a person's full name in expected format`, () => {
-    expect(component.getPersonFullName(mockDefendants[0].individual.personalInformation)).toEqual(
-      'Mr Defendant ONE'
-    );
+    expect(component.getPersonFullName(mockDefendants[0].individual.personalInformation)).toEqual('Mr Defendant ONE');
   });
 
   it('getIndividualAliases should return expected individual aliases in expected format', () => {
-    expect(component.getIndividualAliases(1)).toEqual([
-      'Mr James Terrance WILSON',
-      'Sir James Terrance WILSON',
-    ]);
+    expect(component.getIndividualAliases(1)).toEqual(['Mr James Terrance WILSON', 'Sir James Terrance WILSON']);
   });
 
   it('guardianIsIndividual should return true when guardian information has no organisation name', () => {
@@ -267,18 +262,14 @@ describe('DefendantDetailsComponent', () => {
 
   it('getOnlineConvictionForCase should return online conviction flag as NO', () => {
     const defendant = {
-      offences: [
-        { prosecutorOfferAOCP: true },
-        { prosecutorOfferAOCP: true },
-        { prosecutorOfferAOCP: false },
-      ],
+      offences: [{ prosecutorOfferAOCP: true }, { prosecutorOfferAOCP: true }, { prosecutorOfferAOCP: false }]
     };
     expect(component.getOnlineConvictionForCase(defendant)).toBe('No');
   });
 
   it('getAllOffenceAocpEligible should return boolean if it is eligible', () => {
     const defendant = {
-      offences: [{ aocpEligible: true }, { aocpEligible: false }, { aocpEligible: false }],
+      offences: [{ aocpEligible: true }, { aocpEligible: false }, { aocpEligible: false }]
     };
     expect(component.getAllOffenceAocpEligible(defendant)).toBe(true);
   });
@@ -299,7 +290,7 @@ describe('DefendantDetailsComponent', () => {
     spyOn(component.remove, 'emit');
     component.onRemove(1);
     expect(component.remove.emit).toHaveBeenCalledWith({
-      defendantId: '46e1c5f5-5e91-4655-9eda-43368640f218',
+      defendantId: '46e1c5f5-5e91-4655-9eda-43368640f218'
     });
   });
 

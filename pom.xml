@@ -22,6 +22,8 @@
     <skip.bat.tests>true</skip.bat.tests>
     <skip.report.pack>true</skip.report.pack>
     <skip.dist.pack>false</skip.dist.pack>
+    <node.version>v14.20.1</node.version>
+    <npm.version>6.14.17</npm.version>
     <npm.test.options />
     <npm.lint.options />
     <npm.build.options />
@@ -138,7 +140,7 @@
             </goals>
             <phase>prepare-package</phase>
             <configuration>
-              <arguments>run-script ci:build:test -- ${npm.build.options}</arguments>
+              <arguments>run-script build -- ${npm.build.options}</arguments>
               <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
               <skip>${skip.npm.build}</skip>
             </configuration>
@@ -150,7 +152,7 @@
             </goals>
             <phase>package</phase>
             <configuration>
-              <arguments>run-script ci:build:prod -- ${npm.build.options}</arguments>
+              <arguments>run-script build:prod -- ${npm.build.options}</arguments>
               <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
               <skip>${skip.npm.build}</skip>
             </configuration>

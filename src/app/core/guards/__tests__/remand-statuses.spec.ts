@@ -21,45 +21,45 @@ describe('Remand Stauses Guard', () => {
       id: 'dd4073b6-22be-3875-9d63-5da286bb3ece',
       seqNo: 10,
       statusCode: 'B',
-      statusDescription: 'Conditional Bail',
+      statusDescription: 'Conditional Bail'
     },
     {
       id: 'eaf18bf8-9569-3656-a4ab-64299f9bd513',
       seqNo: 20,
       statusCode: 'U',
       statusDescription: 'Unconditional Bail',
-      hasConditions: true,
+      hasConditions: true
     },
     {
       id: '12e69486-4d01-3403-a50a-7419ca040635',
       seqNo: 30,
       statusCode: 'C',
-      statusDescription: 'Remanded into Custody',
+      statusDescription: 'Remanded into Custody'
     },
     {
       id: '86009c70-759d-3308-8de4-194886ff9a77',
       seqNo: 40,
       statusCode: 'A',
-      statusDescription: 'Not applicable',
+      statusDescription: 'Not applicable'
     },
     {
       id: '4dc146db-9d89-30bf-93b3-b22bc072d666',
       seqNo: 50,
       statusCode: 'L',
-      statusDescription: 'Remanded into care of Local Authority',
+      statusDescription: 'Remanded into care of Local Authority'
     },
     {
       id: '34443c87-fa6f-34c0-897f-0cce45773df5',
       seqNo: 60,
       statusCode: 'P',
-      statusDescription: 'Conditional Bail with Pre-Release conditions',
+      statusDescription: 'Conditional Bail with Pre-Release conditions'
     },
     {
       id: '549336f9-2a07-3767-960f-107da761a698',
       seqNo: 70,
       statusCode: 'S',
-      statusDescription: 'Remanded into Secure Accommodation',
-    },
+      statusDescription: 'Remanded into Secure Accommodation'
+    }
   ];
 
   beforeEach(() => {
@@ -75,16 +75,16 @@ describe('Remand Stauses Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getRemandStatuses,
-          },
+            getRemandStatuses
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(RemandStatusesGuard);
@@ -141,9 +141,7 @@ describe('Remand Stauses Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getRemandStatuses).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadRemandStatusesSuccess(remandStatuses)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadRemandStatusesSuccess(remandStatuses));
         });
       });
     });

@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { CourtCentreWithRooms, HearingType } from '../../../core';
 import { InitialHearing } from '../../../core/model/manual-case';
 import { ManualCasePath } from '../../manual-case.interface';
@@ -15,7 +8,7 @@ import * as moment from 'moment';
   selector: 'manual-case-hearing-summary',
   templateUrl: './manual-case-hearing-summary.html',
   styleUrls: ['./manual-case-hearing-summary.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ManualCaseHearingSummaryComponent implements OnInit {
   @Input() initialHearing: InitialHearing;
@@ -29,24 +22,20 @@ export class ManualCaseHearingSummaryComponent implements OnInit {
   courtCentre: CourtCentreWithRooms = {
     id: null,
     name: null,
-    courtrooms: [],
+    courtrooms: []
   };
 
   constructor() {}
 
   ngOnInit() {
-    this.courtCentre = this.courtCentres.find(
-      (cc) => cc.oucode === this.initialHearing.courtHearingLocation
-    );
+    this.courtCentre = this.courtCentres.find(cc => cc.oucode === this.initialHearing.courtHearingLocation);
 
     this.courtCentreName = this.getCourtName();
     if (this.initialHearing.roomId) {
       this.courtRoomName = this.getCourtRoomNameByID(this.initialHearing.roomId);
     }
     if (this.initialHearing.hearingTypeCode) {
-      this.hearingTypeDesc = this.hearingTypes.find(
-        (cr) => cr.code === this.initialHearing.hearingTypeCode
-      ).description;
+      this.hearingTypeDesc = this.hearingTypes.find(cr => cr.code === this.initialHearing.hearingTypeCode).description;
     }
     this.duration = moment.duration(this.initialHearing.hearingDuration).asMinutes();
   }
@@ -56,7 +45,7 @@ export class ManualCaseHearingSummaryComponent implements OnInit {
   }
 
   getCourtRoomNameByID(id: string): string {
-    return this.courtCentre.courtrooms.find((cr) => cr.id === id).name;
+    return this.courtCentre.courtrooms.find(cr => cr.id === id).name;
   }
 
   onEdit() {

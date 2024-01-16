@@ -1,13 +1,5 @@
-import {
-  Directive,
-  forwardRef
-} from '@angular/core';
-import {
-  AbstractControl,
-  NG_VALIDATORS,
-  Validator,
-  ValidationErrors
-} from '@angular/forms';
+import { Directive, forwardRef } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@angular/forms';
 
 const PHONE_REGEX = /^[0-9()\\-\\.\\s]+$/;
 
@@ -22,7 +14,6 @@ const PHONE_REGEX = /^[0-9()\\-\\.\\s]+$/;
   ]
 })
 export class PhoneValidator implements Validator {
-
   validate(c: AbstractControl): ValidationErrors | null {
     if (c.value) {
       const invalid = !PHONE_REGEX.test(c.value);

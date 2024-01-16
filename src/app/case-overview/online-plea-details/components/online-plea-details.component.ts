@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Case, PleaType } from '../../../contexts/sjp';
 import { OnlinePleaUi } from './../online-plea-interface';
 import { Breadcrumb } from '../../../shared/breadcrumb-links/breadcrumb-links.interface';
@@ -19,9 +19,11 @@ import { UserGroup } from '@cpp/users-groups';
       </p>
 
       <ng-container *ngIf="!!onlinePlea?.personalDetails">
-      <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Personal details</h2>
+        <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Personal details</h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Personal details</caption>
+          <caption class="pdk-visually-hidden">
+            Personal details
+          </caption>
           <tbody pdk-table-body class="column-width">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">Name</td>
@@ -88,7 +90,9 @@ import { UserGroup } from '@cpp/users-groups';
       <ng-container *ngIf="!!onlinePlea?.onlinePleaLegalEntityDetails">
         <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Organisation details</h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Organisation details</caption>
+          <caption class="pdk-visually-hidden">
+            Organisation details
+          </caption>
           <tbody pdk-table-body class="column-width">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">Name</td>
@@ -125,9 +129,16 @@ import { UserGroup } from '@cpp/users-groups';
       </ng-container>
 
       <ng-container *ngFor="let onlinePleaDetail of onlinePlea.onlinePleaDetails; let index = index">
-        <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Plea for offence {{ index + 1 }}</h2>
+        <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">
+          Plea for offence {{ index + 1 }}
+        </h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Plea for offence {{ index + 1 }}</caption>
+          <caption class="pdk-visually-hidden">
+            Plea for offence
+            {{
+              index + 1
+            }}
+          </caption>
           <tbody pdk-table-body class="column-width">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">Charge</td>
@@ -252,9 +263,13 @@ import { UserGroup } from '@cpp/users-groups';
       </table>
 
       <ng-container *ngIf="!!onlinePlea?.personalDetails && shouldDisplayFinancialData()">
-        <h2 *ngIf="!onlinePlea.aocpAccepted" pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Finances</h2>
+        <h2 *ngIf="!onlinePlea.aocpAccepted" pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">
+          Finances
+        </h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Finances</caption>
+          <caption class="pdk-visually-hidden">
+            Finances
+          </caption>
           <tbody pdk-table-body class="column-width" *ngIf="!onlinePlea.aocpAccepted">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">Would they like to give income or benefits details?</td>
@@ -345,7 +360,9 @@ import { UserGroup } from '@cpp/users-groups';
           Monthly outgoings
         </h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Monthly outgoings</caption>
+          <caption class="pdk-visually-hidden">
+            Monthly outgoings
+          </caption>
           <tbody pdk-table-body class="column-width" *ngIf="!onlinePlea.aocpAccepted">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">
@@ -416,7 +433,9 @@ import { UserGroup } from '@cpp/users-groups';
       <ng-container *ngIf="!!onlinePlea?.onlinePleaLegalEntityDetails && shouldDisplayFinancialData()">
         <h2 pdk-typography="heading-medium" aria-hidden="true" pdk-margin-bottom="0">Company finances</h2>
         <table pdk-table>
-          <caption class="pdk-visually-hidden">Company finances</caption>
+          <caption class="pdk-visually-hidden">
+            Company finances
+          </caption>
           <tbody pdk-table-body class="column-width">
             <tr pdk-table-row>
               <td pdk-table-cell pdk-typography="body-small">Has the company been trading for more than 12 months?</td>
@@ -475,7 +494,12 @@ export class OnlinePleaDetailsComponent {
   @Input() kase: Case;
   @Input() onlinePleas: OnlinePleaUi[];
   @Input() userGroups: UserGroup[] = [];
-  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW, Breadcrumbs.ONLINE_PLEA];
+  breadcrumbs: Breadcrumb[] = [
+    Breadcrumbs.HOME,
+    Breadcrumbs.SEARCH,
+    Breadcrumbs.CASE_OVERVIEW,
+    Breadcrumbs.ONLINE_PLEA
+  ];
 
   shouldDisplayFinancialData() {
     return !this.userGroups.some(group => group.groupName.includes('Prosecutor'));

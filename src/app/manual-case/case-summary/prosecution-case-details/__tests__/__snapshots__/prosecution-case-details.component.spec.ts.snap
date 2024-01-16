@@ -2,7 +2,7 @@
 
 exports[`ProsecutionCaseDetailsComponent should render the component 1`] = `
 <prosecution-case-details
-  edit={[Function EventEmitter]}
+  edit={[Function EventEmitter_]}
   hasNpp={[Function Boolean]}
   prosecutionCase={[Function Object]}
   prosecutors={[Function Array]}
@@ -101,7 +101,6 @@ exports[`ProsecutionCaseDetailsComponent should render the component 1`] = `
              Surrey Police 
           </td>
         </tr>
-        
         <tr
           class="table-row"
           pdk-table-row=""
@@ -138,8 +137,6 @@ exports[`ProsecutionCaseDetailsComponent should render the component 1`] = `
              £22.50 
           </td>
         </tr>
-        
-        
       </tbody>
     </table>
   </div>

@@ -14,6 +14,7 @@ export interface CourtCentre {
     ljaName: string;
   };
   oucodeL1Code?: string;
+  oucodeL3Name?: string;
 }
 
 export interface CourtRoom {

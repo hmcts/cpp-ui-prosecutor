@@ -1,23 +1,20 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { OnlinePleaUi } from './online-plea-interface';
 import { getOnlinePlea } from '../case-overview.selectors';
 import { getCase } from '../../core';
 import { Case } from '../../contexts/sjp';
 import { State } from '../../reducers';
 import { transformOnlinePleaToUiModel } from './online-plea-utils';
-import { UserGroup, getUserGroups } from '@cpp/users-groups';
+import { getUserGroups, UserGroup } from '@cpp/users-groups';
 
 @Component({
   selector: 'online-plea-details-container',
   template: `
-    <online-plea-details
-      [onlinePleas]="onlinePlea$ | async"
-      [kase]="kase$ | async"
-      [userGroups]="userGroups$ | async"
-    > </online-plea-details>
+    <online-plea-details [onlinePleas]="onlinePlea$ | async" [kase]="kase$ | async" [userGroups]="userGroups$ | async">
+    </online-plea-details>
     <button pdk-margin-top="4" id="onlinePleaBackButton" pdk-button routerLink="../../../../">
       Back
     </button>

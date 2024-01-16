@@ -6,16 +6,9 @@ import { ReferenceDataModule } from '@cpp/reference-data';
 import { ProsecutorSearchComponent } from './prosecutor-search.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    PdkFormModule,
-    PdkCoreModule,
-    PdkCheckboxInputModule,
-    ReferenceDataModule,
-    RouterModule,
-  ],
+  imports: [CommonModule, PdkFormModule, PdkCoreModule, PdkCheckboxInputModule, ReferenceDataModule, RouterModule],
 
   declarations: [ProsecutorSearchComponent],
-  exports: [ProsecutorSearchComponent],
+  exports: [ProsecutorSearchComponent]
 })
 export class ProsecutorSearchModule {}

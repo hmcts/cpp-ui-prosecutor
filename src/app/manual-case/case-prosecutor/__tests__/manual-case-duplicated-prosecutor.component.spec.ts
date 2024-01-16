@@ -15,11 +15,11 @@ describe('Manual case prosecutor', () => {
 
   const manualCaseDetailMock = {
     initiationCode: 'J', // SJP Case
-    prosecutor: {},
+    prosecutor: {}
   } as ManualCase;
 
   beforeEach(() => {
-    TestBed.configureCompiler({ preserveWhitespaces: false } as any).configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ManualCaseDuplicatedProsecutorComponent, ProsecutorValidator],
       imports: [
         CommonModule,
@@ -30,10 +30,10 @@ describe('Manual case prosecutor', () => {
         PdkRadioInputModule,
         PdkDateInputModule,
         MockPipesModule,
-        RouterTestingModule,
+        RouterTestingModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm],
+      providers: [ControlContainer, NgForm]
     });
 
     fixture = TestBed.createComponent(ManualCaseDuplicatedProsecutorComponent);
@@ -53,6 +53,5 @@ describe('Manual case prosecutor', () => {
     expect(component.editManualCase.prosecutorCaseReference).toBe(undefined);
     component.updateProsecutionReferenceNo(false);
     expect(component.editManualCase.prosecutorCaseReference).toBe(undefined);
-
   });
 });

@@ -26,7 +26,8 @@ describe('WithdrawOffenceFormComponent', () => {
         PdkGridModule,
         PdkBadgeModule,
         PdkRadioInputModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     }).compileComponents();
     fixture = TestBed.createComponent(TestWithdrawOffenceListFormComponent);
     fixture.componentInstance.offences = MOCK_OFFENCES;

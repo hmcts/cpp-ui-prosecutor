@@ -19,13 +19,13 @@ describe('OffenceDate Codes Guard', () => {
     {
       id: '4aaecac5-222b-402d-9047-84803679edac',
       dateCode: '1',
-      dateCodeDescription: 'before',
+      dateCodeDescription: 'before'
     },
     {
       id: '5aaecac5-222b-402d-9047-84803679edac',
       dateCode: '2',
-      dateCodeDescription: 'after',
-    },
+      dateCodeDescription: 'after'
+    }
   ];
 
   beforeEach(() => {
@@ -41,16 +41,16 @@ describe('OffenceDate Codes Guard', () => {
         {
           provide: ReferenceDataService,
           useValue: {
-            getOffenceDateCode,
-          },
+            getOffenceDateCode
+          }
         },
         {
           provide: Router,
           useValue: {
-            navigate,
-          },
-        },
-      ],
+            navigate
+          }
+        }
+      ]
     });
 
     guard = TestBed.get(OffenceDateCodesGuard);
@@ -72,9 +72,7 @@ describe('OffenceDate Codes Guard', () => {
 
         expect(activate$).toBeObservable(expected$);
         expect(getOffenceDateCode).toHaveBeenCalled();
-        expect(store.dispatch).toHaveBeenCalledWith(
-          new LoadOffenceDateCodesSuccessAction(offenceDateCodes)
-        );
+        expect(store.dispatch).toHaveBeenCalledWith(new LoadOffenceDateCodesSuccessAction(offenceDateCodes));
       });
     });
 
@@ -109,9 +107,7 @@ describe('OffenceDate Codes Guard', () => {
 
           expect(activate$).toBeObservable(expected$);
           expect(getOffenceDateCode).not.toHaveBeenCalled();
-          expect(store.dispatch).not.toHaveBeenCalledWith(
-            new LoadOffenceDateCodesSuccessAction(offenceDateCodes)
-          );
+          expect(store.dispatch).not.toHaveBeenCalledWith(new LoadOffenceDateCodesSuccessAction(offenceDateCodes));
         });
       });
     });

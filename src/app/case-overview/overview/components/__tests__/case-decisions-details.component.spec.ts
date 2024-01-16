@@ -36,7 +36,8 @@ describe('CaseDecisionsDetailsComponent', () => {
         SavedDecisionInformationPipeModule,
         VerdictTypePipeModule,
         MockModule
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     }).overrideModule(MockModule, {
       remove: {
         declarations: [MockNoSeparatePenaltyDecisionComponent],
@@ -64,10 +65,13 @@ describe('CaseDecisionsDetailsComponent', () => {
 
   it('should show press restriction when requested', () => {
     const decisions = MOCK_CASE_DECISION;
-    decisions.offenceDecisions.forEach(od => (od.pressRestriction = {
-      requested: true,
-      name: 'Test name'
-    }));
+    decisions.offenceDecisions.forEach(
+      od =>
+        (od.pressRestriction = {
+          requested: true,
+          name: 'Test name'
+        })
+    );
     fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
     fixture.detectChanges();
 
@@ -77,10 +81,13 @@ describe('CaseDecisionsDetailsComponent', () => {
 
   it('should show press restriction revoked when requested=false', () => {
     const decisions = MOCK_CASE_DECISION;
-    decisions.offenceDecisions.forEach(od => (od.pressRestriction = {
-      requested: false,
-      name: null
-    }));
+    decisions.offenceDecisions.forEach(
+      od =>
+        (od.pressRestriction = {
+          requested: false,
+          name: null
+        })
+    );
     fixture.componentInstance.caseDecisionWithOffenceDecisions = decisions;
     fixture.detectChanges();
 

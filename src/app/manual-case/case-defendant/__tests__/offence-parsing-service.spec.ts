@@ -1,8 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import {
-  OffenceParsingService,
-  MessageProcessor,
-} from '../../case-offence-parsing/offence-parsing.service';
+import { OffenceParsingService, MessageProcessor } from '../../case-offence-parsing/offence-parsing.service';
 
 // Todo: test /n and other special characters in the messages
 
@@ -14,38 +11,38 @@ const top_4FormObject = {
           children: [
             {
               label: 'Specify the bail condition',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'A bail condition, namely',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           children: [
             {
               label: 'Specify the bail conditions',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'Bail conditions, namely',
           type: 'RADIO',
-          value: 1,
-        },
+          value: 1
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label: 'being a person released on ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify date bailed',
-      type: 'TEXT',
+      type: 'TEXT'
     },
     {
       label: ' by',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
@@ -53,126 +50,126 @@ const top_4FormObject = {
           children: [
             {
               label: 'Specify court',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: '',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           children: [
             {
               label: 'Specify police station',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'The custody officer at ',
           type: 'RADIO',
-          value: 1,
-        },
+          value: 1
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label: 'being under a duty to surrender into the custody of a court',
-      type: 'LABEL',
-    },
+      type: 'LABEL'
+    }
   ],
-  title: '',
+  title: ''
 };
 
 const top_1FormObject = {
   sections: [
     {
       label: 'Offence date type',
-      type: 'DROPDOWN',
+      type: 'DROPDOWN'
     },
     {
       label: 'Specify date',
-      type: 'DATE',
+      type: 'DATE'
     },
     {
       label: ' at ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify township',
-      type: 'TEXT',
+      type: 'TEXT'
     },
     {
       label: ' used or threatened unlawful violence towards',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
         {
           label: 'Another',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           label: 'Other persons',
           type: 'RADIO',
-          value: 1,
-        },
+          value: 1
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label:
         'and your conduct was such as would cause a person of reasonable firmness present at the scene to fear for his personal safety',
-      type: 'LABEL',
-    },
+      type: 'LABEL'
+    }
   ],
-  title: '',
+  title: ''
 };
 
 const formObject_1 = {
   sections: [
     {
       label: 'Offence date type',
-      type: 'DROPDOWN',
+      type: 'DROPDOWN'
     },
     {
       label: 'Specify date',
-      type: 'DATE',
+      type: 'DATE'
     },
     {
       label: ' at ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify township',
-      type: 'TEXT',
+      type: 'TEXT'
     },
     {
       label: ' without the authority of the proper officer, was concerned in the ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
         {
           label: 'Cancellation',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           label: 'Alteration',
           type: 'RADIO',
-          value: 1,
+          value: 1
         },
         {
           label: 'Obliteration',
           type: 'RADIO',
-          value: 2,
-        },
+          value: 2
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label: 'of a mark, letter or device on a ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
@@ -180,109 +177,107 @@ const formObject_1 = {
           children: [
             {
               label: 'Specify the goods',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'Container in which goods, namely',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           children: [
             {
               label: 'Specify the goods',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'Lot of goods, namely , which',
           type: 'RADIO',
-          value: 1,
-        },
+          value: 1
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       list: [
         {
-          label:
-            'Loaded as mentioned in section 67(1) of the Customs and Excise Management Act 1979',
+          label: 'Loaded as mentioned in section 67(1) of the Customs and Excise Management Act 1979',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
-          label:
-            'Retained as mentioned in section 67(1) of the Customs and Excise Management Act 1979',
+          label: 'Retained as mentioned in section 67(1) of the Customs and Excise Management Act 1979',
           type: 'RADIO',
-          value: 1,
+          value: 1
         },
         {
           children: [
             {
               label: 'Specify the location',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: 'Brought to a customs and excise station at  for exportation by land',
           type: 'RADIO',
-          value: 2,
-        },
+          value: 2
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label: 'being',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
         {
           label: 'Goods from warehouse',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           label: 'Transit goods',
           type: 'RADIO',
-          value: 1,
+          value: 1
         },
         {
           label: 'Goods chargeable with a duty which had not been paid',
           type: 'RADIO',
-          value: 2,
+          value: 2
         },
         {
           label: 'Drawback goods',
           type: 'RADIO',
-          value: 3,
-        },
+          value: 3
+        }
       ],
-      type: 'LIST',
-    },
+      type: 'LIST'
+    }
   ],
-  title: '',
+  title: ''
 };
 
 const welschEdgeCaseFormObject = {
   sections: [
     {
       label: 'Ar ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify date',
-      type: 'DATE',
+      type: 'DATE'
     },
     {
       label: ' yn ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify township',
-      type: 'TEXT',
+      type: 'TEXT'
     },
     {
       label: ' bu i chi gynllwynio ynghyd √¢/ag',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
@@ -290,72 +285,72 @@ const welschEdgeCaseFormObject = {
           children: [
             {
               label: 'Specify the person',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: '',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           children: [
             {
               label: 'Specify the persons',
-              type: 'TEXT',
-            },
+              type: 'TEXT'
+            }
           ],
           label: '',
           type: 'RADIO',
-          value: 1,
+          value: 1
         },
         {
           label: 'Unigolyn arall',
           type: 'RADIO',
-          value: 2,
+          value: 2
         },
         {
           label: 'Unigolion eraill',
           type: 'RADIO',
-          value: 3,
-        },
+          value: 3
+        }
       ],
-      type: 'LIST',
+      type: 'LIST'
     },
     {
       label: 'i ymosod ar ',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       label: 'Specify the person assaulted',
-      type: 'TEXT',
+      type: 'TEXT'
     },
     {
       label: ' a thrwy hynny beri gwir niwed corfforol',
-      type: 'LABEL',
+      type: 'LABEL'
     },
     {
       list: [
         {
           label: 'Iddo ef',
           type: 'RADIO',
-          value: 0,
+          value: 0
         },
         {
           label: 'Iddi hi',
           type: 'RADIO',
-          value: 1,
-        },
+          value: 1
+        }
       ],
-      type: 'LIST',
-    },
+      type: 'LIST'
+    }
   ],
-  title: '',
+  title: ''
 };
 
 describe('Pre-parsing - preparse()', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [OffenceParsingService],
+      imports: [OffenceParsingService]
     });
   });
 
@@ -468,7 +463,7 @@ describe('Parsing service, message with errors to correct and nested entry eleme
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [OffenceParsingService],
+      imports: [OffenceParsingService]
     });
   });
 

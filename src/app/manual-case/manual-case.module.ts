@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import {
   PdkAccordionModule,
   PdkAlertModule,
@@ -15,7 +14,7 @@ import {
   PdkGridModule,
   PdkInsetTextModule,
   PdkSelectModule,
-  PdkTimeInputModule,
+  PdkTimeInputModule
 } from '@cpp/pdk';
 
 import { TranslateModule } from '@ngx-translate/core';
@@ -43,7 +42,6 @@ import { ManualCaseHearingSummaryComponent } from './case-summary/manual-case-he
 import { RemandStatusesGuard } from '../core/guards/remand-statuses';
 import { OffenceDateCodesGuard } from '../core/guards/offence-date-codes';
 import { OffenceDetailsComponent } from './case-summary/manual-case-offence-details/manual-case-offence-details.component';
-import { CoreModule } from '../core/core.module';
 import { AlcoholLevelMethodsGuard } from '../core/guards/alcohol-level-methods';
 import { PoliceForcesGuard } from '../core/guards/police-forces';
 import { OffenceParsingService } from '../manual-case/case-offence-parsing/offence-parsing.service';
@@ -77,7 +75,7 @@ import { ProsecutorSearchModule } from '../prosecutor-search/prosecutor-search.m
     CaseCreateSuccessComponent,
     OffenceDetailsComponent,
     ManualCaseDuplicatedProsecutorComponent,
-    ManualCaseDetailSummaryComponent,
+    ManualCaseDetailSummaryComponent
   ],
   exports: [
     ManualCaseCreateContainer,
@@ -96,7 +94,7 @@ import { ProsecutorSearchModule } from '../prosecutor-search/prosecutor-search.m
     CaseCreateSuccessComponent,
     OffenceDetailsComponent,
     ManualCaseDuplicatedProsecutorComponent,
-    ManualCaseDetailSummaryComponent,
+    ManualCaseDetailSummaryComponent
   ],
   imports: [
     FormsModule,
@@ -120,7 +118,7 @@ import { ProsecutorSearchModule } from '../prosecutor-search/prosecutor-search.m
     ReferenceDataModule,
     PdkCurrencyInputModule,
     ManualCaseRoutingModule,
-    ProsecutorSearchModule,
+    ProsecutorSearchModule
   ],
   providers: [
     SummonsCodesGuard,
@@ -135,7 +133,7 @@ import { ProsecutorSearchModule } from '../prosecutor-search/prosecutor-search.m
     ManualCaseOffenceStateService,
     CapitalizePipe,
     OffenceParsingService,
-    OffenceWordingService,
-  ],
+    OffenceWordingService
+  ]
 })
 export class ManualCaseModule {}

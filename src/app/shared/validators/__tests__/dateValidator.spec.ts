@@ -6,25 +6,17 @@ import { By } from '@angular/platform-browser';
 import { DateValidator } from '../index';
 
 describe('Date Format Validator', () => {
-
-  let fixture: ComponentFixture<TestDateValidator>;
+  let fixture: ComponentFixture<TestDateValidatorComponent>;
   let form: NgForm;
   let ctrlElement: DebugElement;
 
   beforeEach(() => {
-    TestBed.configureTestingModule(
-      {
-        declarations: [
-          TestDateValidator,
-          DateValidator
-        ],
-        imports: [
-          FormsModule
-        ]
-      }
-    );
+    TestBed.configureTestingModule({
+      declarations: [TestDateValidatorComponent, DateValidator],
+      imports: [FormsModule]
+    });
 
-    fixture = TestBed.createComponent(TestDateValidator);
+    fixture = TestBed.createComponent(TestDateValidatorComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
     ctrlElement = fixture.debugElement.query(By.css('[name=someDate]'));
     fixture.detectChanges();
@@ -64,13 +56,10 @@ describe('Date Format Validator', () => {
   selector: 'test-date-validation',
   template: `
     <form>
-      <input
-        name="someDate"
-        [ngModel]="model"
-        validateDate
-      >
+      <input name="someDate" [ngModel]="model" validateDate />
+    </form>
   `
 })
-class TestDateValidator {
+class TestDateValidatorComponent {
   model: string;
 }
