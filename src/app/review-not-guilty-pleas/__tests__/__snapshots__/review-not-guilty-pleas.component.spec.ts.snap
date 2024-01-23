@@ -85,6 +85,10 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
                 name="selectedRegion"
                 required=""
               >
+                <option
+                  value=""
+                >
+                </option>
               </select>
             </pdk-select>
             <pdk-form-group
@@ -344,6 +348,10 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
                 name="selectedRegion"
                 required=""
               >
+                <option
+                  value=""
+                >
+                </option>
               </select>
             </pdk-select>
             <pdk-form-group

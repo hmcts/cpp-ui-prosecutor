@@ -58,6 +58,10 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
               name="selectedRegion"
               required=""
             >
+              <option
+                value=""
+              >
+              </option>
             </select>
           </pdk-select>
           <pdk-form-group
@@ -349,6 +353,10 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
               name="selectedRegion"
               required=""
             >
+              <option
+                value=""
+              >
+              </option>
             </select>
           </pdk-select>
           <pdk-form-group
