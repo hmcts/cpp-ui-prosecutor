@@ -47,7 +47,7 @@ exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
         class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"
         pdk-button=""
         pdk-margin-vertical="5"
-        routerlink="../../../../../../review-not-guilty-pleas"
+        routerlink="../../../review-not-guilty-pleas"
         type="button"
       >
          Continue 

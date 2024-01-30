@@ -28,7 +28,7 @@ import { Case } from '../../contexts/sjp';
             Submit
           </button>
           <div>
-            <a href="javascript:void(0)" pdk-link routerLink="../../../../" pdk-margin-vertical="5">Cancel</a>
+            <a href="javascript:void(0)" pdk-link unvisited routerLink="../" pdk-margin-vertical="5">Cancel</a>
           </div>
         </form>
       </pdk-grid>

@@ -15,7 +15,7 @@ import { getUserGroups, UserGroup } from '@cpp/users-groups';
   template: `
     <online-plea-details [onlinePleas]="onlinePlea$ | async" [kase]="kase$ | async" [userGroups]="userGroups$ | async">
     </online-plea-details>
-    <button pdk-margin-top="4" id="onlinePleaBackButton" pdk-button routerLink="../../../../">
+    <button pdk-margin-top="4" id="onlinePleaBackButton" pdk-button routerLink="../">
       Back
     </button>
   `

@@ -100,7 +100,7 @@ exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
     id="onlinePleaBackButton"
     pdk-button=""
     pdk-margin-top="4"
-    routerlink="../../../../"
+    routerlink="../"
   >
      Back 
   </button>

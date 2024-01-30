@@ -55,11 +55,12 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
           </button>
           <div>
             <a
-              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
               href="javascript:void(0)"
               pdk-link=""
               pdk-margin-vertical="5"
-              routerlink="../../../../"
+              routerlink="../"
+              unvisited=""
             >
               Cancel
             </a>
@@ -126,11 +127,12 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
           </button>
           <div>
             <a
-              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link"
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
               href="javascript:void(0)"
               pdk-link=""
               pdk-margin-vertical="5"
-              routerlink="../../../../"
+              routerlink="../"
+              unvisited=""
             >
               Cancel
             </a>

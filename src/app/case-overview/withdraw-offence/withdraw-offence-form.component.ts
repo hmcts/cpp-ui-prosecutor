@@ -80,7 +80,7 @@ interface FormValues {
             pdk-typography="body-medium"
             data-test-id="cancel-withdrawal"
             href="javascript:void(0)"
-            routerLink="../../../../"
+            routerLink="../"
           >
             Cancel
           </a>

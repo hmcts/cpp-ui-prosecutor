@@ -135,7 +135,7 @@ exports[`WithdrawOffenceFormComponent should compile correctly 1`] = `
             href="javascript:void(0)"
             pdk-link=""
             pdk-typography="body-medium"
-            routerlink="../../../../"
+            routerlink="../"
           >
              Cancel 
           </a>
