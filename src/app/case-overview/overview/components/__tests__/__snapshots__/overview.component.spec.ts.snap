@@ -174,8 +174,8 @@ exports[`OverviewComponent should compile correctly 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -1195,8 +1195,8 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -2169,8 +2169,8 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -3143,8 +3143,8 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
             <pdk-warning-text
               error=""
@@ -3903,7 +3903,7 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
 </case-overview-test>
 `;
 
-exports[`OverviewComponent should compile correctly with personal detail change alert 1`] = `
+exports[`OverviewComponent should compile correctly with personal detail change notification banner 1`] = `
 <case-overview-test
   caseDecisions={[Function Array]}
   caseNotes={[Function Object]}
@@ -4077,40 +4077,47 @@ exports[`OverviewComponent should compile correctly with personal detail change 
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-            <pdk-alert
-              aria-describedby="personal-details-updated-alert"
-              class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-              icon="true"
-              pdk-margin-vertical="1"
-              type="warning"
+          <defendant-details-change-notification-banner>
+            <pdk-notification-banner
+              aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+              role="region"
+              title="Important"
             >
               <div
-                class="pdk-alert pdk-alert--warning"
-                role="alert"
+                class="govuk-notification-banner__header"
+              >
+                <h2
+                  class="govuk-notification-banner__title"
+                  id="pdk-notification-banner-title-GENERATED_ID"
+                >
+                  Important
+                </h2>
+              </div>
+              <div
+                class="govuk-notification-banner__content"
               >
                 <div
-                  class="pdk-alert__container"
+                  class="govuk-notification-banner__heading"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="pdk-alert__icon pdk-alert__icon--alert"
-                    role="presentation"
-                  />
                   <div
-                    class="pdk-alert__message"
+                    class="govuk-body-m"
+                    pdk-typography="body-medium"
                   >
-                    <div>
-                       The following defendant details have been updated: 
-                      <div>
+                    <p>
+                      The following defendant details have been updated
+                    </p>
+                    <ul
+                      class="list list-bullet"
+                    >
+                      <li>
                         Date of birth
-                      </div>
-                    </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </pdk-alert>
-          </defendant-details-change-alert>
+            </pdk-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -5130,8 +5137,8 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -5996,8 +6003,8 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-          </defendant-details-change-alert>
+          <defendant-details-change-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -6856,40 +6863,47 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-            <pdk-alert
-              aria-describedby="personal-details-updated-alert"
-              class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-              icon="true"
-              pdk-margin-vertical="1"
-              type="warning"
+          <defendant-details-change-notification-banner>
+            <pdk-notification-banner
+              aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+              role="region"
+              title="Important"
             >
               <div
-                class="pdk-alert pdk-alert--warning"
-                role="alert"
+                class="govuk-notification-banner__header"
+              >
+                <h2
+                  class="govuk-notification-banner__title"
+                  id="pdk-notification-banner-title-GENERATED_ID"
+                >
+                  Important
+                </h2>
+              </div>
+              <div
+                class="govuk-notification-banner__content"
               >
                 <div
-                  class="pdk-alert__container"
+                  class="govuk-notification-banner__heading"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="pdk-alert__icon pdk-alert__icon--alert"
-                    role="presentation"
-                  />
                   <div
-                    class="pdk-alert__message"
+                    class="govuk-body-m"
+                    pdk-typography="body-medium"
                   >
-                    <div>
-                       The following defendant details have been updated: 
-                      <div>
+                    <p>
+                      The following defendant details have been updated
+                    </p>
+                    <ul
+                      class="list list-bullet"
+                    >
+                      <li>
                         Date of birth
-                      </div>
-                    </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </pdk-alert>
-          </defendant-details-change-alert>
+            </pdk-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div
@@ -7909,40 +7923,47 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
           </p>
-          <defendant-details-change-alert>
-            <pdk-alert
-              aria-describedby="personal-details-updated-alert"
-              class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-              icon="true"
-              pdk-margin-vertical="1"
-              type="warning"
+          <defendant-details-change-notification-banner>
+            <pdk-notification-banner
+              aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+              role="region"
+              title="Important"
             >
               <div
-                class="pdk-alert pdk-alert--warning"
-                role="alert"
+                class="govuk-notification-banner__header"
+              >
+                <h2
+                  class="govuk-notification-banner__title"
+                  id="pdk-notification-banner-title-GENERATED_ID"
+                >
+                  Important
+                </h2>
+              </div>
+              <div
+                class="govuk-notification-banner__content"
               >
                 <div
-                  class="pdk-alert__container"
+                  class="govuk-notification-banner__heading"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="pdk-alert__icon pdk-alert__icon--alert"
-                    role="presentation"
-                  />
                   <div
-                    class="pdk-alert__message"
+                    class="govuk-body-m"
+                    pdk-typography="body-medium"
                   >
-                    <div>
-                       The following defendant details have been updated: 
-                      <div>
+                    <p>
+                      The following defendant details have been updated
+                    </p>
+                    <ul
+                      class="list list-bullet"
+                    >
+                      <li>
                         Date of birth
-                      </div>
-                    </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </pdk-alert>
-          </defendant-details-change-alert>
+            </pdk-notification-banner>
+          </defendant-details-change-notification-banner>
           <case-warnings>
           </case-warnings>
           <div

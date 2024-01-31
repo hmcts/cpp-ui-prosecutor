@@ -27,9 +27,10 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
             {{ defendant.personalDetails.address | formatAddress: ', ' }}
           </p>
 
-          <defendant-details-change-alert
+          <defendant-details-change-notification-banner
             [personalDetails]="defendant.personalDetails"
-          ></defendant-details-change-alert>
+            [defendantDetailUpdateRequest]="defendant.defendantDetailUpdateRequest"
+          ></defendant-details-change-notification-banner>
 
           <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 
@@ -120,9 +121,10 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
         {{ defendant.legalEntityDetails.address | formatAddress: ', ' }}
       </p>
 
-      <defendant-details-change-alert
+      <defendant-details-change-notification-banner
         [legalEntityDetails]="defendant.legalEntityDetails"
-      ></defendant-details-change-alert>
+        [defendantDetailUpdateRequest]="defendant.defendantDetailUpdateRequest"
+      ></defendant-details-change-notification-banner>
 
       <case-warnings [offences]="offences" [defendant]="defendant"></case-warnings>
 

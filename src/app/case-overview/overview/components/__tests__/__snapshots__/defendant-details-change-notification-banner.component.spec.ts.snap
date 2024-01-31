@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Legal entity defendant should display notification banner if status is PENDING 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  legalEntityDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+    <pdk-notification-banner
+      aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+      role="region"
+      title="Important"
+    >
+      <div
+        class="govuk-notification-banner__header"
+      >
+        <h2
+          class="govuk-notification-banner__title"
+          id="pdk-notification-banner-title-GENERATED_ID"
+        >
+          Important
+        </h2>
+      </div>
+      <div
+        class="govuk-notification-banner__content"
+      >
+        <div
+          class="govuk-notification-banner__heading"
+        >
+          <div
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            <p>
+              The following defendant details have been updated and are awaiting approval
+            </p>
+            <ul
+              class="list list-bullet"
+            >
+              <li>
+                Name
+              </li>
+              <li>
+                Address
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </pdk-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Legal entity defendant should display notification banner if status is UPDATED 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  legalEntityDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+    <pdk-notification-banner
+      aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+      role="region"
+      title="Important"
+    >
+      <div
+        class="govuk-notification-banner__header"
+      >
+        <h2
+          class="govuk-notification-banner__title"
+          id="pdk-notification-banner-title-GENERATED_ID"
+        >
+          Important
+        </h2>
+      </div>
+      <div
+        class="govuk-notification-banner__content"
+      >
+        <div
+          class="govuk-notification-banner__heading"
+        >
+          <div
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            <p>
+              The following defendant details have been updated
+            </p>
+            <ul
+              class="list list-bullet"
+            >
+              <li>
+                Name
+              </li>
+              <li>
+                Address
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </pdk-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Legal entity defendant should not display notification banner if status is REJECTED 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  legalEntityDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Legal entity defendant should not display notification banner if there are no requested changes 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest="undefined"
+  legalEntityDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Person defendant should display notification banner if status is PENDING 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  personalDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+    <pdk-notification-banner
+      aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+      role="region"
+      title="Important"
+    >
+      <div
+        class="govuk-notification-banner__header"
+      >
+        <h2
+          class="govuk-notification-banner__title"
+          id="pdk-notification-banner-title-GENERATED_ID"
+        >
+          Important
+        </h2>
+      </div>
+      <div
+        class="govuk-notification-banner__content"
+      >
+        <div
+          class="govuk-notification-banner__heading"
+        >
+          <div
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            <p>
+              The following defendant details have been updated and are awaiting approval
+            </p>
+            <ul
+              class="list list-bullet"
+            >
+              <li>
+                Name
+              </li>
+              <li>
+                Date of birth
+              </li>
+              <li>
+                Address
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </pdk-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Person defendant should display notification banner if status is UPDATED 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  personalDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+    <pdk-notification-banner
+      aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+      role="region"
+      title="Important"
+    >
+      <div
+        class="govuk-notification-banner__header"
+      >
+        <h2
+          class="govuk-notification-banner__title"
+          id="pdk-notification-banner-title-GENERATED_ID"
+        >
+          Important
+        </h2>
+      </div>
+      <div
+        class="govuk-notification-banner__content"
+      >
+        <div
+          class="govuk-notification-banner__heading"
+        >
+          <div
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            <p>
+              The following defendant details have been updated
+            </p>
+            <ul
+              class="list list-bullet"
+            >
+              <li>
+                Name
+              </li>
+              <li>
+                Date of birth
+              </li>
+              <li>
+                Address
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </pdk-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Person defendant should not display notification banner if status is REJECTED 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest={[Function Object]}
+  personalDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;
+
+exports[`DefendantDetailsChangeNotificationBannerComponent Person defendant should not display notification banner if there are no requested changes 1`] = `
+<defendant-details-change-notification-banner-test
+  defendantDetailUpdateRequest="undefined"
+  personalDetails={[Function Object]}
+>
+  <defendant-details-change-notification-banner>
+  </defendant-details-change-notification-banner>
+</defendant-details-change-notification-banner-test>
+`;

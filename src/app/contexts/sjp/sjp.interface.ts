@@ -105,6 +105,7 @@ export interface Defendant {
   personalDetails?: PersonalDetails;
   legalEntityDetails?: LegalEntityDetails;
   numPreviousConvictions: number;
+  defendantDetailUpdateRequest?: DefendantDetailUpdateRequest;
 }
 export interface Offence {
   id: string;
@@ -140,6 +141,19 @@ export interface Offence {
   outOfTime?: boolean;
   notInEffect?: boolean;
   imprisonable?: boolean;
+}
+
+export type DefendantDetailUpdateRequestStatusType = 'PENDING' | 'UPDATED' | 'REJECTED';
+export interface DefendantDetailUpdateRequest {
+  status: DefendantDetailUpdateRequestStatusType;
+  firstName?: string;
+  lastName?: string;
+  dateOfBirth?: string;
+  legalEntityName?: string;
+  address?: Address;
+  nameUpdated?: boolean;
+  addressUpdated?: boolean;
+  dobUpdated?: boolean;
 }
 
 export type PleaseStatus = 'GUILTY' | 'GUILTY_CASE_COMPLETED' | 'GUILTY_REQUEST_HEARING' | 'NOT_GUILTY' | 'NO_PLEA';

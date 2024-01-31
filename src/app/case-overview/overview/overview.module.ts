@@ -8,6 +8,7 @@ import {
   PdkDividerModule,
   PdkFoldableTextModule,
   PdkGridModule,
+  PdkNotificationBannerModule,
   PdkPageHeaderModule,
   PdkRelatedModule,
   PdkTabsModule,
@@ -32,7 +33,7 @@ import { CaseWarningsComponent } from './components/case-warnings.component';
 import { OffenceWarningModule } from '../common/offence-warning/offence-warning.module';
 import { DefendantOffenceWarningsComponent } from './components/defendant-offence-warnings.component';
 import { CaseHeaderBadgeModule } from '../common/case-header-badge/case-header-badge.module';
-import { DefendantDetailsChangeAlertComponent } from './components/defendant-details-change-alert.component';
+import { DefendantDetailsChangeNotificationBannerComponent } from './components/defendant-details-change-notification-banner.component';
 import { CaseSubmissionMessagesComponent } from './components/case-submission-messages.component';
 import { CaseDecisionsComponent } from './components/case-decisions.component';
 import { SavedDecisionInformationPipeModule } from '../../shared/pipes';
@@ -53,7 +54,7 @@ const DECLARATIONS = [
   CaseWarningsComponent,
   DefendantOffenceWarningsComponent,
   DocumentListComponent,
-  DefendantDetailsChangeAlertComponent,
+  DefendantDetailsChangeNotificationBannerComponent,
   DefendantDetailsPersonComponent,
   DefendantDetailsLegalEntityComponent,
   StatementOfFactsComponent,
@@ -80,6 +81,7 @@ const DECLARATIONS = [
     PdkCoreModule,
     PdkBreadcrumbsModule,
     PdkGridModule,
+    PdkNotificationBannerModule,
     PdkTabsModule,
     PdkPageHeaderModule,
     PdkFoldableTextModule,

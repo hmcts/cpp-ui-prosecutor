@@ -38,7 +38,8 @@ import {
   PdkTextareaModule,
   PdkSelectModule,
   PdkServiceNavigationModule,
-  PdkErrorMessageModule
+  PdkErrorMessageModule,
+  PdkNotificationBannerModule
 } from '@cpp/pdk';
 
 import {
@@ -109,6 +110,7 @@ const MODULE_EXPORT = [
     ReactiveFormsModule,
     CommonModule,
     PdkAlertModule,
+    PdkNotificationBannerModule,
     PdkFormModule,
     PdkCoreModule,
     PdkDateInputModule,
@@ -153,6 +155,7 @@ const MODULE_EXPORT = [
     DynamicParticularFormComponent,
     OffenceSearchComponent,
     PdkAlertModule,
+    PdkNotificationBannerModule,
     PdkFormModule,
     PdkCoreModule,
     PdkDateInputModule,

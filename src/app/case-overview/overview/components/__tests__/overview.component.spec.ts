@@ -6,6 +6,7 @@ import {
   PdkCoreModule,
   PdkDividerModule,
   PdkGridModule,
+  PdkNotificationBannerModule,
   PdkPageHeaderModule,
   PdkRelatedModule,
   PdkTabsModule,
@@ -31,7 +32,7 @@ import {
 } from '../../../../contexts/sjp';
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
-import { DefendantDetailsChangeAlertComponent } from '../defendant-details-change-alert.component';
+import { DefendantDetailsChangeNotificationBannerComponent } from '../defendant-details-change-notification-banner.component';
 import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'src/app/shared/mock-components/mock.module';
@@ -50,7 +51,7 @@ describe('OverviewComponent', () => {
         MockStatementOfFactsComponent,
         MockCaseHeaderBadgeContainer,
         MockSubComponent,
-        DefendantDetailsChangeAlertComponent,
+        DefendantDetailsChangeNotificationBannerComponent,
         MockSubmissionMessagesComponent,
         MockCaseDecisionComponent,
         MockDateOfBirthComponent
@@ -63,6 +64,7 @@ describe('OverviewComponent', () => {
         PdkGridModule,
         PdkDividerModule,
         PdkAlertModule,
+        PdkNotificationBannerModule,
         AgePipeModule,
         DefendantNamePipeModule,
         FormatDatePipeModule,
@@ -135,13 +137,13 @@ describe('OverviewComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should compile correctly with personal detail change alert', () => {
+  it('should compile correctly with personal detail change notification banner', () => {
     fixture.componentInstance.defendant.personalDetails.dobChanged = true;
     fixture.detectChanges();
 
     const compiled = fixture.debugElement.nativeElement;
-    const alertMessage = compiled.querySelector('defendant-details-change-alert');
-    expect(alertMessage.textContent).toContain('The following defendant details have been updated:');
+    const alertMessage = compiled.querySelector('defendant-details-change-notification-banner');
+    expect(alertMessage.textContent).toContain('The following defendant details have been updated');
     expect(fixture).toMatchSnapshot();
   });
 
