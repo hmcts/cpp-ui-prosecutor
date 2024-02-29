@@ -153,4 +153,38 @@ describe('Manual case prosecutor', () => {
     component.setManualCaseProsecutor();
     expect(component.editManualCase.originatingOrganisation).toEqual(undefined);
   });
+
+  it('should show prosecutor full name instead of field title', () => {
+    component.nonPoliceProsecutor = {
+      id: ':id',
+      oucode: 'ouCode',
+      fullName: 'DVLA',
+      address: {
+        address1: ':address1',
+        address2: ':address2',
+        postcode: ':postcode'
+      }
+    } as Prosecutor;
+    component.manualCaseDetail = manualCaseDetailMock;
+    component.hasNonProsecutorFullName();
+    fixture.detectChanges();
+    const content = fixture.nativeElement.querySelector('h1');
+    expect(component.nonPoliceProsecutor.fullName).toEqual(content.textContent.trim());
+  });
+
+  it('should show prosecutor title when full name is not there', () => {
+    component.nonPoliceProsecutor = {
+      id: ':id',
+      oucode: 'ouCode',
+      address: {
+        address1: ':address1',
+        address2: ':address2',
+        postcode: ':postcode'
+      }
+    } as Prosecutor;
+    component.manualCaseDetail = manualCaseDetailMock;
+    fixture.detectChanges();
+    const content = fixture.nativeElement.querySelector('h1');
+    expect('MANUAL_CASE_PROSECUTOR.TITLE').toEqual(content.textContent.trim());
+  });
 });

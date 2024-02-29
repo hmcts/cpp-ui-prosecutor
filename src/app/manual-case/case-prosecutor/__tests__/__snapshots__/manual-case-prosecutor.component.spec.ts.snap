@@ -29,7 +29,7 @@ exports[`Manual case prosecutor should render for npp 1`] = `
         class="govuk-heading-xl"
         pdk-typography="heading-xlarge"
       >
-         MANUAL_CASE_PROSECUTOR.TITLE 
+         DVLA 
       </h1>
     </pdk-grid>
   </pdk-grid><pdk-grid

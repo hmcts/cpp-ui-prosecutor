@@ -142,4 +142,8 @@ export class ManualCaseProsecutorComponent implements OnInit {
   handleBackFocus() {
     this.focused = !this.focused;
   }
+
+  hasNonProsecutorFullName() {
+    return !!this.nonPoliceProsecutor && !!this.nonPoliceProsecutor.fullName;
+  }
 }

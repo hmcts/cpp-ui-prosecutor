@@ -3,7 +3,7 @@
 <pdk-grid container>
   <pdk-grid full>
     <h1 pdk-typography="heading-xlarge">
-      {{ 'MANUAL_CASE_PROSECUTOR.TITLE' | translate }}
+      {{ hasNonProsecutorFullName() ? nonPoliceProsecutor.fullName : ('MANUAL_CASE_PROSECUTOR.TITLE' | translate) }}
     </h1>
   </pdk-grid>
 </pdk-grid>
