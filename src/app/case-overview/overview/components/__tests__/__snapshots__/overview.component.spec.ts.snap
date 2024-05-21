@@ -897,6 +897,21 @@ exports[`OverviewComponent should compile correctly 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -994,23 +1009,21 @@ exports[`OverviewComponent should compile correctly 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -1871,6 +1884,21 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -1968,23 +1996,21 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -2845,6 +2871,21 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -2942,23 +2983,21 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -3779,6 +3818,21 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -3876,23 +3930,21 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -4839,6 +4891,21 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -4936,23 +5003,21 @@ exports[`OverviewComponent should compile correctly with personal detail change 
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -5705,6 +5770,21 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -5802,23 +5882,21 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -6565,6 +6643,21 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -6662,23 +6755,21 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -7625,6 +7716,21 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                        Decisions 
                     </a>
                   </li>
+                  <li
+                    class="govuk-tabs__list-item"
+                    role="presentation"
+                  >
+                    <a
+                      aria-controls="pdk-tab-section-1"
+                      aria-selected="false"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                       Notes 
+                    </a>
+                  </li>
                 </ul>
                 <pdk-tab
                   heading="Decisions"
@@ -7722,23 +7828,21 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
                     </case-decisions>
                   </section>
                 </pdk-tab>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="true"
+                    class="govuk-tabs__panel govuk-tabs__panel--hidden"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
                   >
-                    <section
-                      aria-hidden="true"
-                      class="govuk-tabs__panel govuk-tabs__panel--hidden"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
-                    >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>
@@ -8670,24 +8774,37 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
                   class="govuk-tabs__list"
                   role="tablist"
                 >
-                </ul>
-                <div>
-                  <pdk-tab
-                    data-locator="case-notes-tab"
-                    heading="Notes"
+                  <li
+                    class="govuk-tabs__list-item govuk-tabs__list-item--selected"
+                    role="presentation"
                   >
-                    <section
-                      aria-hidden="false"
-                      class="govuk-tabs__panel"
-                      id="pdk-tab-section-undefined"
-                      role="tabpanel"
+                    <a
+                      aria-controls="pdk-tab-section-0"
+                      aria-selected="true"
+                      class="govuk-tabs__tab"
+                      href="javascript:void(0);"
+                      role="tab"
+                      tabindex="0"
                     >
-                      <case-notes>
-                        case notes
-                      </case-notes>
-                    </section>
-                  </pdk-tab>
-                </div>
+                       Notes 
+                    </a>
+                  </li>
+                </ul>
+                <pdk-tab
+                  data-locator="case-notes-tab"
+                  heading="Notes"
+                >
+                  <section
+                    aria-hidden="false"
+                    class="govuk-tabs__panel"
+                    id="pdk-tab-section-undefined"
+                    role="tabpanel"
+                  >
+                    <case-notes>
+                      case notes
+                    </case-notes>
+                  </section>
+                </pdk-tab>
               </div>
             </pdk-tabs-container>
           </pdk-tabs>

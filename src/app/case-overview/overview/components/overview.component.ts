@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../contexts/sjp';
 import { Breadcrumb } from '../../../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.constant';
+import { CaseNotesComponent } from './case-notes.component';
+import { TabComponent } from '@cpp/pdk';
 
 @Component({
   selector: 'case-overview',
@@ -98,15 +100,15 @@ import { Breadcrumbs } from '../../../shared/breadcrumb-links/breadcrumb-links.c
     <div pdk-margin-top="5" pdk-margin-bottom="0" *ngIf="showInformationTabs">
       <pdk-grid container>
         <pdk-grid two-thirds>
-          <pdk-tabs>
+          <pdk-tabs (selectedTabChange)="tabChanged($event)">
             <pdk-tab *ngIf="showDecisionsTab" heading="Decisions" [selected]="showDecisionsTab">
               <case-decisions [caseDecisionsWithOffenceDecisions]="caseDecisions"></case-decisions>
             </pdk-tab>
-            <div *ngIf="showNotesTab">
+            <ng-container *ngIf="showNotesTab">
               <pdk-tab heading="Notes" [selected]="!showDecisionsTab" data-locator="case-notes-tab">
                 <case-notes [caseNotes]="caseNotes"></case-notes>
               </pdk-tab>
-            </div>
+            </ng-container>
           </pdk-tabs>
         </pdk-grid>
       </pdk-grid>
@@ -154,6 +156,8 @@ export class OverviewComponent implements OnInit {
   @Input() displayDatesToAvoidUpdateFailedBanner: boolean;
   @Input() caseDecisions: CaseDecision[];
   @Input() caseNotes: CaseNotes;
+  @ViewChild(CaseNotesComponent)
+  caseNotesComponent: CaseNotesComponent;
 
   breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW];
   showSideBar: boolean;
@@ -173,5 +177,9 @@ export class OverviewComponent implements OnInit {
   ngOnInit(): void {
     this.showSideBar =
       (!this.kase.assigned && !this.kase.completed) || this.kase.onlinePleaReceived || this.kase.defendantAcceptedAocp;
+  }
+
+  tabChanged(_: TabComponent): void {
+    this.caseNotesComponent?.changeRef.markForCheck();
   }
 }

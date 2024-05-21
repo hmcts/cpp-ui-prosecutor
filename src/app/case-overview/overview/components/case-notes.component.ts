@@ -1,5 +1,5 @@
 import { CaseNotes } from '../../../contexts/sjp';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'case-notes',
@@ -34,6 +34,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class CaseNotesComponent {
   @Input() caseNotes: CaseNotes;
+
+  constructor(public changeRef: ChangeDetectorRef) {}
 
   checkCaseNoteType(caseNote: string) {
     return caseNote === 'CASE_MANAGEMENT' ? 'Case management note' : 'General note';
