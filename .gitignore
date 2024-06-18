@@ -1,82 +1,61 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Java
+*.class
 
-# config file
-src/app/config/app.override.config.json
+# Package Files
+*.jar
+*.war
+*.ear
+*.rar
+*.puml
 
-# Node Specifics
-node_modules/
-npm-debug.*
-.npmrc
-
-# Maven wrapper specifics
-bin/
-/build/
-etc/
-node/
-share/
-lib/
-target/
-.nvmrc
-
-# compiled output
-/dist
-/tmp
-/out-tsc
-/reports
-
-# dependencies
-yarn.lock
-/node
-/node_modules
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-*.iml
-
-src/app/config/app.override.config.sample
-src/app/config/app.override.config.bak.json
-
-# IDE - VSCode
-.vscode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
-
-# misc
-/.angular/cache
-/.sass-cache
-/connect.lock
-/coverage
-/documentation
-/libpeerconnection.log
-testem.log
-/typings
-/build
-.history/
-npm-debug.log
-yarn-error.log
-
-# Sonar
-/.scannerwork
-
-# System Files
-.DS_Store
+# Thumbnails
 Thumbs.db
 
-# Keep folders
-tools/fixtures/data/*
-!.gitkeep
+# Object files (no binaries in git repos!)
+*.obj
+*.exe
+*.so
+*.zip
+*.tar
+*.gz
 
-errors.json
+# Mac
+.fseventsd/
+.Spotlight-V100/
+.Trashes/
+._.Trashes
+
+# Eclipse
+.classpath
+.compatibility
+.project
+.pydevproject
+.factorypath
+.checkstyle
+.metadata/
+.settings/
+.pmd
+.springBeans
+.tern-project
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Subversion
+.svn/
+
+# Misc
+*~
+*.log
+*.orig
+*.sonar
+deployWars.sh
+buildContexts.sh
+
+
+lightning-jenkins.properties
+**/.DS_Store
