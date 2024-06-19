@@ -27,7 +27,7 @@ pool:
   name: "MDV-ADO-AGENTS-01"
 
 variables:
-  sonarqubeProject: "" # update eg: uk.gov.moj.cpp.ui:ui-hearing
+  sonarqubeProject: "uk.gov.moj.cpp.ui:ui-prosecutor"
 
 stages:
   - ${{ if eq(variables['Build.Reason'], 'PullRequest') }}:
