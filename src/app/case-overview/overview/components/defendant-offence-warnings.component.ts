@@ -14,6 +14,9 @@ import { Offence } from '../../../contexts/sjp';
     <offence-warning *ngIf="offence.imprisonable">
       Imprisonable offence
     </offence-warning>
+    <offence-warning *ngIf="offence?.isNonSummaryOffence">
+      Case includes non summary offence
+    </offence-warning>
   `
 })
 export class DefendantOffenceWarningsComponent {
