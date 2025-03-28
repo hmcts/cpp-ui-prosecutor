@@ -48,6 +48,7 @@ target/
 # Subversion
 .svn/
 
+
 # Misc
 *~
 *.log
@@ -55,7 +56,26 @@ target/
 *.sonar
 deployWars.sh
 buildContexts.sh
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/documentation
+/libpeerconnection.log
+testem.log
+/typings
+/build
+.history/
 
 
 lightning-jenkins.properties
 **/.DS_Store
+.angular/
+coverage/
+dist/
+src/app/config/app.override.config.json
+
+# Node Specifics
+node_modules/
+npm-debug.*
+.npmrc
