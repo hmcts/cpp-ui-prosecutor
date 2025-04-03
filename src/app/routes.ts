@@ -3,7 +3,7 @@ import { CaseDataGuard, DefendantDetailsUpdatesLinkDataGuard, PleadedNotGuiltyDa
 import { CaseNotesGuard } from './core/guards/case-notes.guard';
 import { SjpNoticeCasesDataGuard } from './cases-missing-sjp-notices/sjp-notice-cases-data.guard';
 import { RegionsGuard } from './core/guards/regions.guard';
-import { ERROR_PAGES_ROUTES, ERROR_ROUTE_PATHS } from '@cpp/application';
+import { ERROR_PAGES_ROUTES, ERROR_ROUTE_PATHS, SYSTEM_ANNOUNCEMENT_ROUTES } from '@cpp/application';
 import { UserPermissionsGuard } from '@cpp/users-groups';
 import { ProsecutorByCodeGuard } from './shared/guards/prosecutorByCode.guard';
 
@@ -90,5 +90,6 @@ export const routes: Routes = [
       }
     ]
   },
+  ...SYSTEM_ANNOUNCEMENT_ROUTES,
   ...ERROR_PAGES_ROUTES
 ];

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CppHttp, HttpModule } from '@cpp/core';
 import { StagingTflService } from '../staging-tfl.service';
 import { CsvUploadRequestParam } from '../staging-tfl-param.interface';
-import { v4 as uuid } from 'uuid';
+import uuid from 'uuid/v4';
 import {
   CsvFileUploadDetails,
   CsvFileUploadReport,

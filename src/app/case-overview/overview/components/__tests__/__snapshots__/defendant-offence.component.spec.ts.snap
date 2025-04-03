@@ -44,7 +44,7 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -127,7 +127,7 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -209,7 +209,7 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction  
@@ -289,7 +289,7 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -374,7 +374,7 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -454,7 +454,7 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
         class="pdk-foldable"
       >
         <span
-          class="pdk-foldable__content"
+          class="pdk-foldable__content pdk-foldable__content__single"
           id="pdk-foldable-text-GENERATED_ID"
         >
            On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
