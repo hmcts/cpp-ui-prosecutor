@@ -23,7 +23,7 @@ exports[`StatementOfFactsComponent should compile correctly 1`] = `
           class="pdk-foldable"
         >
           <span
-            class="pdk-foldable__content"
+            class="pdk-foldable__content pdk-foldable__content__single"
             id="pdk-foldable-text-GENERATED_ID"
           >
              statement of facts 

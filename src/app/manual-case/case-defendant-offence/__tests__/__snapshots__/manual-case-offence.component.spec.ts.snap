@@ -95,74 +95,78 @@ exports[`Manual Case Offence Component should compile correctly and render the p
                 class="ng-untouched ng-pristine ng-valid"
                 name="offenceSearchDate"
               >
-                <div
-                  class="pdk-date-input"
-                >
-                  <div
-                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                  >
+                <pdk-interaction-container>
+                  <div>
                     <div
-                      class="govuk-date-input__item"
+                      class="pdk-date-input"
                     >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-day"
-                        pdk-label=""
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
                       >
-                         Day 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                        formcontrolname="day"
-                        id="pdk-date-input-GENERATED_ID-day"
-                        name="dateDay"
-                        required=""
-                        type="number"
-                      />
-                    </div>
-                    <div
-                      class="govuk-date-input__item"
-                    >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-month"
-                        pdk-label=""
-                      >
-                         Month 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                        formcontrolname="month"
-                        id="pdk-date-input-GENERATED_ID-month"
-                        name="dateMonth"
-                        required=""
-                        type="number"
-                      />
-                    </div>
-                    <div
-                      class="govuk-date-input__item"
-                    >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-year"
-                        pdk-label=""
-                      >
-                         Year 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
-                        formcontrolname="year"
-                        id="pdk-date-input-GENERATED_ID-year"
-                        name="dateYear"
-                        required=""
-                        type="number"
-                      />
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </pdk-interaction-container>
               </pdk-date-input>
             </fieldset>
           </pdk-form-group>
@@ -356,74 +360,78 @@ exports[`Manual Case Offence Component should compile correctly if AOCP eligible
                 class="ng-untouched ng-pristine ng-valid"
                 name="offenceSearchDate"
               >
-                <div
-                  class="pdk-date-input"
-                >
-                  <div
-                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
-                  >
+                <pdk-interaction-container>
+                  <div>
                     <div
-                      class="govuk-date-input__item"
+                      class="pdk-date-input"
                     >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-day"
-                        pdk-label=""
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
                       >
-                         Day 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                        formcontrolname="day"
-                        id="pdk-date-input-GENERATED_ID-day"
-                        name="dateDay"
-                        required=""
-                        type="number"
-                      />
-                    </div>
-                    <div
-                      class="govuk-date-input__item"
-                    >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-month"
-                        pdk-label=""
-                      >
-                         Month 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
-                        formcontrolname="month"
-                        id="pdk-date-input-GENERATED_ID-month"
-                        name="dateMonth"
-                        required=""
-                        type="number"
-                      />
-                    </div>
-                    <div
-                      class="govuk-date-input__item"
-                    >
-                      <label
-                        class="govuk-date-input__label govuk-label"
-                        for="pdk-date-input-GENERATED_ID-year"
-                        pdk-label=""
-                      >
-                         Year 
-                      </label>
-                      <input
-                        autocomplete="off"
-                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
-                        formcontrolname="year"
-                        id="pdk-date-input-GENERATED_ID-year"
-                        name="dateYear"
-                        required=""
-                        type="number"
-                      />
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </pdk-interaction-container>
               </pdk-date-input>
             </fieldset>
           </pdk-form-group>

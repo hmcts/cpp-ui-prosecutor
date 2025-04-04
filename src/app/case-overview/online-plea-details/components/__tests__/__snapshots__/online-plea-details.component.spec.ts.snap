@@ -148,7 +148,7 @@ exports[`OnlinePleaComponent should compile correctly with legal entity defendan
         >
           <date-of-birth>
             <div>
-               formatted 1960-09-09 (63 years old) 
+               formatted 1960-09-09 (64 years old) 
             </div>
           </date-of-birth>
         </td>
@@ -1043,7 +1043,7 @@ exports[`OnlinePleaComponent should display online plea 1`] = `
         >
           <date-of-birth>
             <div>
-               formatted 1960-09-09 (63 years old) 
+               formatted 1960-09-09 (64 years old) 
             </div>
           </date-of-birth>
         </td>

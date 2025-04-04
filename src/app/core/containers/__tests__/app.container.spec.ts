@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 import { PdkCoreModule } from '@cpp/pdk';
 import { AppRouterContainer } from '../app.router.container';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { UsersGroupsService } from '@cpp/users-groups';
+import { SystemAnnouncementsService } from '@cpp/users-groups';
 import { ApplicationModule } from '@cpp/application';
 import { reducers } from '../../../reducers';
 
@@ -83,9 +83,9 @@ describe('App page component', () => {
           }
         },
         {
-          provide: UsersGroupsService,
+          provide: SystemAnnouncementsService,
           useValue: {
-            getUserSystemAnnouncement: jest.fn().mockReturnValue(of({ announcement: undefined }))
+            getSystemAnnouncements: jest.fn().mockReturnValue(of({ announcement: undefined }))
           }
         },
         TranslateService

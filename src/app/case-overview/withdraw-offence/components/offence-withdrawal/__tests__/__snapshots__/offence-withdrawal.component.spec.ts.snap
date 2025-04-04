@@ -41,7 +41,7 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
             class="pdk-foldable"
           >
             <span
-              class="pdk-foldable__content"
+              class="pdk-foldable__content pdk-foldable__content__single"
               id="pdk-foldable-text-GENERATED_ID"
             >
                On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -236,7 +236,7 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
             class="pdk-foldable"
           >
             <span
-              class="pdk-foldable__content"
+              class="pdk-foldable__content pdk-foldable__content__single"
               id="pdk-foldable-text-GENERATED_ID"
             >
                On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
@@ -431,7 +431,7 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
             class="pdk-foldable"
           >
             <span
-              class="pdk-foldable__content"
+              class="pdk-foldable__content pdk-foldable__content__single"
               id="pdk-foldable-text-GENERATED_ID"
             >
                On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
