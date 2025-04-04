@@ -74,6 +74,7 @@
     "@cpp/ui.config": "^2.0.0",
     "@cpp/ui.priming": "2.0.2",
     "@cpp/ui.test-utils": "2.1.5",
+    "@ng-select/ng-select": "^10.0.4",
     "@ngrx/store-devtools": "15.4.0",
     "@types/archiver": "^2.1.2",
     "@types/file-saver": "^2.0.1",
