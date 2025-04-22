@@ -42,6 +42,18 @@ Thumbs.db
 .idea/
 *.iml
 
+src/app/config/app.override.config.json
+src/app/config/app.override.config.sample
+src/app/config/app.override.config.bak.json
+
+# IDE - VSCode
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # Maven
 target/
 
@@ -74,6 +86,14 @@ lightning-jenkins.properties
 coverage/
 dist/
 src/app/config/app.override.config.json
+
+# IDE - VSCode
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Node Specifics
 node_modules/
