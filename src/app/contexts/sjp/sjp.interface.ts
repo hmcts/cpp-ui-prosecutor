@@ -141,6 +141,7 @@ export interface Offence {
   outOfTime?: boolean;
   notInEffect?: boolean;
   imprisonable?: boolean;
+  isNonSummaryOffence?: boolean;
 }
 
 export type DefendantDetailUpdateRequestStatusType = 'PENDING' | 'UPDATED' | 'REJECTED';

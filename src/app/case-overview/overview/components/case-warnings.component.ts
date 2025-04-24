@@ -18,6 +18,9 @@ import { isUnderAge } from '../../../contexts/sjp/util/sjp-util';
     <pdk-warning-text error *ngIf="isImprisonable">
       Imprisonable offence
     </pdk-warning-text>
+    <pdk-warning-text error *ngIf="isNonSummaryOffence">
+      Case includes non summary offence
+    </pdk-warning-text>
   `
 })
 export class CaseWarningsComponent {
@@ -25,7 +28,10 @@ export class CaseWarningsComponent {
   @Input() defendant: Defendant;
 
   get isUnderAge(): boolean {
-    return !!this.defendant.personalDetails && isUnderAge(this.offences[0].chargeDate, this.defendant.personalDetails.dateOfBirth);
+    return (
+      !!this.defendant.personalDetails &&
+      isUnderAge(this.offences[0].chargeDate, this.defendant.personalDetails.dateOfBirth)
+    );
   }
 
   get isOffenceOutOfTime() {
@@ -38,5 +44,9 @@ export class CaseWarningsComponent {
 
   get isImprisonable() {
     return this.offences.some(({ imprisonable }) => !!imprisonable);
+  }
+
+  get isNonSummaryOffence() {
+    return this.offences.some(({ isNonSummaryOffence }) => !!isNonSummaryOffence);
   }
 }
