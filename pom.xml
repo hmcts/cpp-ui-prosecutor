@@ -11,7 +11,7 @@
 
   <groupId>uk.gov.moj.cpp.ui</groupId>
   <artifactId>ui-prosecutor</artifactId>
-  <version>0.0.197-SNAPSHOT</version>
+  <version>0.0.198-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <protractor.baseUrl>http://localhost:4650</protractor.baseUrl>
@@ -238,6 +238,17 @@
       <plugin>
         <groupId>external.atlassian.jgitflow</groupId>
         <artifactId>jgitflow-maven-plugin</artifactId>
+        <configuration>
+          <flowInitContext>
+              <masterBranchName>dev/release</masterBranchName>
+              <developBranchName>main</developBranchName>
+              <featureBranchPrefix>dev/feature-</featureBranchPrefix>
+              <releaseBranchPrefix>dev/release-</releaseBranchPrefix>
+              <hotfixBranchPrefix>dev/hotfix-</hotfixBranchPrefix>
+              <versionTagPrefix>v</versionTagPrefix>
+          </flowInitContext>
+          <pushReleases>${pushReleases}</pushReleases>
+      </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
