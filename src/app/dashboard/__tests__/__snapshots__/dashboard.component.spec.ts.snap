@@ -91,19 +91,19 @@ exports[`DashboardComponent should compile correctly 1`] = `
         hero=""
         label="cases missing SJP notices"
       >
-        <div
+        <dl
           class="pdk-summary-item"
         >
-          <span
+          <dt
             class="pdk-summary-item__number pdk-summary-item__number--hero"
           >
-          </span>
-          <span
+          </dt>
+          <dd
             class="pdk-summary-item__label"
           >
             cases missing SJP notices
-          </span>
-        </div>
+          </dd>
+        </dl>
       </pdk-summary-item>
     </pdk-grid>
   </pdk-grid>
