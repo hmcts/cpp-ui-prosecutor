@@ -55,14 +55,29 @@ exports[`EthnicityAutoSuggestComponent should render correctly 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
+                      aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                      aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
                       aria-expanded="false"
-                      aria-owns="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
                       autocomplete="off"
                       class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
                       id="EthnicityId"
                       role="combobox"
                       type="text"
                     />
+                    <span
+                      class="govuk-visually-hidden"
+                      id="pdk-autosuggest__instructions-GENERATED_ID"
+                      pdk-visually-hidden=""
+                    >
+                       When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                    </span>
+                    <span
+                      aria-live="polite"
+                      class="govuk-visually-hidden"
+                      pdk-visually-hidden=""
+                      role="status"
+                    >
+                    </span>
                     <div
                       class="pdk-autosuggest__suggestions-container"
                       id="pdk-autosuggest__suggestions-container-GENERATED_ID"
