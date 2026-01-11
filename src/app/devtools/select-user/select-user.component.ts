@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { PdkFormFieldComponent, PdkSelectComponent, PdkFormGroupComponent, PdkCore, PdkForm, PdkButtonComponent } from "@cpp/pdk";
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'dev-tools-select-user',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'dev-tools-select-user',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <div pdk-container>
       <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="8">
         Developer tools
@@ -30,7 +32,8 @@ import { NgForm } from '@angular/forms';
         </pdk-form-group>
       </form>
     </div>
-  `
+  `,
+    imports: [PdkCore, PdkForm, PdkButtonComponent, PdkFormFieldComponent, PdkSelectComponent, PdkFormGroupComponent, FormsModule]
 })
 export class DevtoolsSelectUserComponent {
   @ViewChild(NgForm, { static: true }) form: NgForm;

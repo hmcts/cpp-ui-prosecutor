@@ -1,6 +1,6 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { NationalInsuranceNumberValidator } from '../index';
@@ -12,8 +12,7 @@ describe('NationalInsuranceNumber Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestNationalInsuranceNumberValidatorComponent, NationalInsuranceNumberValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestNationalInsuranceNumberValidatorComponent, NationalInsuranceNumberValidator]
     });
 
     fixture = TestBed.createComponent(TestNationalInsuranceNumberValidatorComponent);
@@ -68,8 +67,9 @@ describe('NationalInsuranceNumber Validator', () => {
     <form>
       <input name="niNumber" [ngModel]="model" validateNI />
     </form>
-  `
+  `,
+  imports: [FormsModule, NationalInsuranceNumberValidator]
 })
-class TestNationalInsuranceNumberValidatorComponent {
+class TestNationalInsuranceNumberValidatorComponent implements Validators {
   model: string;
 }

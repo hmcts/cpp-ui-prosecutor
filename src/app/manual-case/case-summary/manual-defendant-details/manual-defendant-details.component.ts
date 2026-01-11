@@ -1,16 +1,35 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { ManualCaseDefendant } from '../../../core/model/manual-case-defendant';
 import { ManualCasePath } from '../../manual-case.interface';
 import { ManualCaseDefendantStateService } from '../../defendants-state.service';
 import uuid from 'uuid/v4';
 import { Nationality, BailStatus, Ethnicity, EthnicityCode } from '../../../core/model';
-
+import { PdkCore, PdkDividerComponent, PdkGridComponent, PdkTable } from '@cpp/pdk';
+import { TranslateModule } from '@ngx-translate/core';
+import { FullNamePipe } from '../../../shared/pipes/full-name/full-name.pipe';
+import { DashPipe } from '../../../shared/pipes/dash/dash.pipe';
+import { DatePipe, TitleCasePipe } from '@angular/common';
+import { AddressPipe } from '../../../shared/pipes/address/address.pipe';
 @Component({
   selector: 'manual-defendant-details',
   templateUrl: './manual-defendant-details.component.html',
-  styleUrls: ['./manual-defendant-details.component.scss']
+  styleUrls: ['./manual-defendant-details.component.scss'],
+  imports: [
+    PdkCore,
+    PdkTable,
+    PdkDividerComponent,
+    PdkGridComponent,
+    TranslateModule,
+    FullNamePipe,
+    DashPipe,
+    TitleCasePipe,
+    DatePipe,
+    AddressPipe
+  ]
 })
 export class DefendantDetailsComponent {
+  private defendantStateService = inject(ManualCaseDefendantStateService);
+
   title: string;
   @Input() defendants: ManualCaseDefendant[];
   @Input() nationalities: Nationality[];
@@ -22,7 +41,7 @@ export class DefendantDetailsComponent {
   @Output() add = new EventEmitter<ManualCasePath>();
   @Output() remove = new EventEmitter<any>();
 
-  constructor(private defendantStateService: ManualCaseDefendantStateService) {}
+  constructor() {}
 
   getIndividualAliases(index) {
     const defendant = this.defendants[index];
@@ -90,15 +109,17 @@ export class DefendantDetailsComponent {
   }
 
   getAllOffenceAocpEligible(defendant) {
-    if (defendant) {
+    if (defendant && defendant.offences) {
       return defendant.offences.some(offence => offence.aocpEligible);
     }
+    return false;
   }
 
   getOnlineConvictionForCase(defendant) {
-    if (defendant) {
+    if (defendant && defendant.offences) {
       return defendant.offences.every(offence => offence.prosecutorOfferAOCP) ? 'Yes' : 'No';
     }
+    return 'No';
   }
 
   onEdit(index) {

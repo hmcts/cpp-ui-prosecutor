@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
-import { PdkCoreModule, PdkFoldableTextModule } from '@cpp/pdk';
-import { CommonModule } from '@angular/common';
 import { PleaMitigationComponent } from '../plea-mitigation.component';
 
 describe('PleaMitigationComponent', () => {
@@ -9,8 +7,7 @@ describe('PleaMitigationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PleaMitigationComponent, TestPleaMitigationComponent],
-      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule],
+      imports: [TestPleaMitigationComponent, PleaMitigationComponent],
       teardown: { destroyAfterEach: false }
     });
 
@@ -27,7 +24,8 @@ describe('PleaMitigationComponent', () => {
     selector: 'plea-mitigation-test',
     template: `
       <plea-mitigation [pleaMitigation]="pleaMitigation"> </plea-mitigation>
-    `
+    `,
+    imports: [PleaMitigationComponent]
   })
   class TestPleaMitigationComponent {
     pleaMitigation: string;

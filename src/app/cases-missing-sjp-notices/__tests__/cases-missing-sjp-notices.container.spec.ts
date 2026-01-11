@@ -2,11 +2,9 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CasesMissingSjpNoticesContainer } from '../cases-missing-sjp-notices.container';
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { CaseDetails, CaseSummary, DefendantSummary } from '../../contexts/sjp';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
-import { casesMissingSjpNoticesReducer } from '../cases-missing-sjp-notices.reducer';
 import { LoadCasesMissingSjpNoticeSuccess } from '../cases-missing-sjp-notices.action';
 
 describe('CasesMissingSjpNoticesContainer', () => {
@@ -49,15 +47,12 @@ describe('CasesMissingSjpNoticesContainer', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [CasesMissingSjpNoticesContainer, MockCasesMissingSjpNoticesComponent],
-        imports: [
-          CommonModule,
-          StoreModule.forRoot({ ...reducers, casesMissingNotice: casesMissingSjpNoticesReducer }, { runtimeChecks: {} })
-        ],
+        imports: [MockCasesMissingSjpNoticesComponent, CasesMissingSjpNoticesContainer],
+        providers: [provideStore(reducers, { runtimeChecks: {} })],
         teardown: { destroyAfterEach: false }
       });
 
-      store = TestBed.get(Store);
+      store = TestBed.inject(Store);
       fixture = TestBed.createComponent(CasesMissingSjpNoticesContainer);
 
       store.dispatch(new LoadCasesMissingSjpNoticeSuccess(mockCaseDetails));

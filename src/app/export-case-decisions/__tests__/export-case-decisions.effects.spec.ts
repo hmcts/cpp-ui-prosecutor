@@ -1,7 +1,6 @@
 import { Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs';
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ExportCaseDecisionsEffects } from '../export-case-decisions.effects';
 import { CaseCountResult, MiReportService } from '../../contexts/mi-report';
 import { LoadResultedCaseCount, LoadResultedCaseCountSuccess } from '../export-case-decisions.actions';
@@ -19,7 +18,6 @@ describe('Export case results by date/effects', () => {
     getResultedCaseCount = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       providers: [
         ExportCaseDecisionsEffects,
         {

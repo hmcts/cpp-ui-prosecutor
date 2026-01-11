@@ -1,31 +1,33 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { PdkBadgeModule, PdkCoreModule, PdkFormModule, PdkGridModule, PdkRadioInputModule } from '@cpp/pdk';
 import { WithdrawOffenceFormComponent } from '../withdraw-offence-form.component';
 import { Offence } from '../../../contexts/sjp';
 import { MOCK_OFFENCES } from '../../__tests__/test-mock-data';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Option } from '../../../shared/interfaces';
+import { OffenceWithdrawalComponent } from '../components/offence-withdrawal/offence-withdrawal.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('WithdrawOffenceFormComponent', () => {
   let fixture: ComponentFixture<TestWithdrawOffenceListFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        WithdrawOffenceFormComponent,
-        TestWithdrawOffenceListFormComponent,
-        MockOffenceWithdrawalComponent
-      ],
       imports: [
-        CommonModule,
         FormsModule,
-        PdkFormModule,
-        PdkCoreModule,
-        PdkGridModule,
-        PdkBadgeModule,
-        PdkRadioInputModule
+        TestWithdrawOffenceListFormComponent,
+        MockOffenceWithdrawalComponent,
+        WithdrawOffenceFormComponent
+      ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: { params: { id: '123' } },
+            params: of({ id: '123' })
+          }
+        }
       ],
       teardown: { destroyAfterEach: false }
     }).compileComponents();
@@ -49,7 +51,8 @@ describe('WithdrawOffenceFormComponent', () => {
         (submitOffenceWithdrawals)="formSubmit.emit($event)"
       >
       </withdraw-list-form>
-    `
+    `,
+    imports: [TestWithdrawOffenceListFormComponent, WithdrawOffenceFormComponent]
   })
   class TestWithdrawOffenceListFormComponent {
     offences: Offence[];
@@ -63,7 +66,8 @@ describe('WithdrawOffenceFormComponent', () => {
     selector: 'offence-withdrawal-component',
     template: `
       <span></span>
-    `
+    `,
+    imports: [OffenceWithdrawalComponent]
   })
   class MockOffenceWithdrawalComponent {
     @Input() index: number;

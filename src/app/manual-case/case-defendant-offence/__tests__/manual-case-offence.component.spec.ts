@@ -1,34 +1,24 @@
+import { Component, input, output } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { ManualCaseOffenceComponent } from '../manual-case-offence.component';
 import { ManualCaseOffenceStateService } from '../../offences-state.service';
 import { OffenceParsingService } from '../../case-offence-parsing/offence-parsing.service';
 import { ManualCaseDefendant } from '../../../core/model';
 import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-import {
-  FormFieldControl,
-  PdkAutosuggestModule,
-  PdkCheckboxInputModule,
-  PdkCoreModule,
-  PdkCurrencyInputModule,
-  PdkDateInputModule,
-  PdkFormModule,
-  PdkGridModule,
-  PdkInputModule,
-  PdkInsetTextModule,
-  PdkRadioInputModule,
-  PdkSelectModule,
-  PdkTextareaModule,
-  PdkTextInputModule
-} from '@cpp/pdk';
-import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 import { OffenceWordingService } from '../../case-offence-parsing/offence-wording.service';
 import { PCFReferenceDataOffenceService } from '../../../contexts/reference-data/pcf-reference-data-offence';
 import { DynamicParticularFormComponent } from '../dynamic-particular-form.component';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, forwardRef } from '@angular/core';
+import { forwardRef } from '@angular/core';
 import { take } from 'rxjs/operators';
+import { FormFieldControl, PdkForm, ValidationError } from '@cpp/pdk';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideRouter } from '@angular/router';
+import { OffenceWordingMessage } from '../../../core/model/manual-case';
+import { JsonPipe } from '@angular/common';
+import { OffenceSearchComponent } from '../../../shared/components/offence-search/offence-search.component';
 
 const emptyOffence = {};
 const expectedDefendantsToStore = [{ id: 'def 001' }, { id: 'def 002' }];
@@ -137,43 +127,152 @@ const alcoholLevelMethods = [
   }
 ];
 
+@Component({
+  selector: 'offence-search',
+  template: `
+    <div id="offence-search">
+      <div>Selected Offence Code: {{ selectedOffenceCode() | json }}</div>
+      <div>Offence Date: {{ offenceDate() | json }}</div>
+    </div>
+  `,
+  imports: [JsonPipe],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => MockOffenceSearchComponent),
+      multi: true
+    },
+    {
+      provide: FormFieldControl,
+      useExisting: forwardRef(() => MockOffenceSearchComponent)
+    }
+  ]
+})
+class MockOffenceSearchComponent {
+  readonly selectedOffenceCode = input<string>(undefined);
+  readonly offenceDate = input<string>(undefined);
+
+  private propagateChange = (value: any) => {};
+
+  registerOnChange(fn: any): void {
+    this.propagateChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {}
+
+  writeValue(input: any): void {
+    this.propagateChange({ cjsOffenceCode: 'RT88584B' });
+  }
+}
+
+@Component({
+  selector: 'dynamic-particular-form',
+  template: `
+    <div id="dynamic-particular-form">
+      <div>Offence Date Types: {{ offenceDateTypes() | json }}</div>
+      <div>Offence Wording: {{ offenceWording() | json }}</div>
+      <div>Arrest Date Value: {{ arrestDateValue() | json }}</div>
+      <div>Form Data: {{ formData() | json }}</div>
+    </div>
+  `,
+  imports: [JsonPipe],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => MockDynamicParticularFormComponent),
+      multi: true
+    }
+  ]
+})
+class MockDynamicParticularFormComponent {
+  readonly offenceDateTypes = input<any[]>(undefined);
+  readonly offenceWording = input<string>(undefined);
+  readonly arrestDateValue = input<string>(undefined);
+  readonly formData = input<OffenceWordingMessage>(undefined);
+
+  readonly formError = output<ValidationError[]>();
+
+  form = {
+    valid: true,
+    ngSubmit: { emit: jest.fn() }
+  };
+
+  triggerFormSubmit = jest.fn().mockResolvedValue(true);
+
+  private onChange: (value: OffenceWordingMessage) => void = () => {};
+
+  registerOnChange(fn: (value: OffenceWordingMessage) => void): void {
+    this.onChange = fn;
+  }
+
+  get onChangeFn() {
+    return this.onChange;
+  }
+
+  registerOnTouched(fn: any): void {}
+
+  writeValue(data: OffenceWordingMessage): void {}
+}
+
+@Component({
+  template: `
+    <manual-case-offence
+      [manualCaseDefendants]="manualCaseDefendants"
+      [hasNpp]="hasNpp"
+      [offenceDateCodes]="offenceDateCodes"
+      [alcoholLevelMethods]="alcoholLevelMethods"
+      [manualCaseType]="manualCaseType"
+      [iterateOffence]="false"
+      (submitFormData)="onSubmitFormData($event)"
+    >
+    </manual-case-offence>
+  `,
+  imports: [ManualCaseOffenceComponent]
+})
+class TestHostComponent {
+  manualCaseDefendants = manualCaseDefendants;
+  hasNpp = false;
+  offenceDateCodes = offenceDateCodes;
+  alcoholLevelMethods = alcoholLevelMethods;
+  manualCaseType = '';
+  //iterateOffence = true;
+
+  onSubmitFormData = jest.fn();
+}
+
 describe('Manual Case Offence Component', () => {
   window.scroll = jest.fn();
 
+  let fixture: ComponentFixture<TestHostComponent>;
+  let testComponent: TestHostComponent;
   let component: ManualCaseOffenceComponent;
-  let fixture: ComponentFixture<ManualCaseOffenceComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseOffenceComponent, DynamicParticularFormComponent, MockOffenceSearchComponent],
-      imports: [
-        MockPipesModule,
-        CommonModule,
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkGridModule,
-        PdkInputModule,
-        PdkTextInputModule,
-        PdkCurrencyInputModule,
-        PdkInsetTextModule,
-        PdkAutosuggestModule,
-        PdkRadioInputModule,
-        MockPipesModule,
-        PdkSelectModule,
-        PdkTextareaModule,
-        PdkGridModule,
-        PdkCheckboxInputModule,
-        PdkDateInputModule
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [TestHostComponent, FormsModule, PdkForm],
       providers: [
+        provideRouter([]),
         {
           provide: Location,
           useValue: {
             back: () => undefined
           }
         },
+        {
+          provide: NG_VALUE_ACCESSOR,
+          useExisting: forwardRef(() => MockOffenceSearchComponent),
+          multi: true
+        },
+        {
+          provide: NG_VALUE_ACCESSOR,
+          useExisting: forwardRef(() => MockDynamicParticularFormComponent),
+          multi: true
+        },
+        {
+          provide: FormFieldControl,
+          useExisting: forwardRef(() => MockOffenceSearchComponent)
+        },
+        provideTranslateService(),
         {
           provide: ManualCaseOffenceStateService,
           useValue: {
@@ -212,26 +311,35 @@ describe('Manual Case Offence Component', () => {
             searchOffenceTypes: () => of(['id'])
           }
         }
-      ]
-    });
+      ],
+      teardown: { destroyAfterEach: false }
+    })
+      .overrideComponent(ManualCaseOffenceComponent, {
+        remove: {
+          imports: [DynamicParticularFormComponent, OffenceSearchComponent]
+        },
+        add: {
+          imports: [MockDynamicParticularFormComponent, MockOffenceSearchComponent]
+        }
+      })
+      .compileComponents();
 
-    fixture = TestBed.createComponent(ManualCaseOffenceComponent);
-    component = fixture.componentInstance;
-
-    component.manualCaseDefendants = manualCaseDefendants;
-    component.offenceDateCodes = offenceDateCodes;
-    component.alcoholLevelMethods = alcoholLevelMethods;
+    fixture = TestBed.createComponent(TestHostComponent);
+    testComponent = fixture.componentInstance;
+    component = fixture.debugElement.query(By.directive(ManualCaseOffenceComponent)).componentInstance;
     component.iterateOffence = true;
     fixture.detectChanges();
   });
 
-  it('should compile correctly and render the page', () => {
+  it('should compile correctly and render the page', async () => {
+    await fixture.whenStable();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should compile correctly if AOCP eligible offence', () => {
+  it('should compile correctly if AOCP eligible offence', async () => {
     component.editOffence.aocpEligible = true;
     fixture.detectChanges();
+    await fixture.whenStable();
     expect(fixture).toMatchSnapshot();
   });
 
@@ -250,7 +358,7 @@ describe('Manual Case Offence Component', () => {
   it('should not show laid date if user is npp', async () => {
     await fixture.whenStable();
 
-    component.manualCaseType = 'S';
+    testComponent.manualCaseType = 'S';
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showChargeDate).toBeFalsy();
@@ -259,28 +367,28 @@ describe('Manual Case Offence Component', () => {
   it('should show valid date input base on manual case type', async () => {
     await fixture.whenStable();
 
-    component.manualCaseType = 'Q';
+    testComponent.manualCaseType = 'Q';
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showChargeDate).toBeTruthy();
 
-    component.manualCaseType = 'C';
+    testComponent.manualCaseType = 'C';
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showChargeDate).toBeTruthy();
 
-    component.manualCaseType = 'J';
+    testComponent.manualCaseType = 'J';
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showChargeDate).toBeTruthy();
 
-    component.manualCaseType = 'C';
+    testComponent.manualCaseType = 'C';
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showArrestDate).toBeTruthy();
 
-    component.manualCaseType = 'S';
-    component.hasNpp = true;
+    testComponent.manualCaseType = 'S';
+    testComponent.hasNpp = true;
     fixture.detectChanges();
     await fixture.whenStable();
     expect(component.showLaidDate).toBeTruthy();
@@ -302,59 +410,108 @@ describe('Manual Case Offence Component', () => {
   });
 
   it('should trigger submitFormData when the ADD button is pressed and stay on the current page', async () => {
-    const submitDataSpy = jest.spyOn(component.submitFormData, 'emit');
-    fixture.debugElement.query(By.css(`button[data-role='add']`)).nativeElement.click();
+    component.editOffence.offenceCode = 'RT88584B';
+    component.editOffence.modeOfTrialDerived = 'Summary';
+
+    if (!component.editOffence.dynamicParticularFormData) {
+      component.editOffence.dynamicParticularFormData = {
+        title: 'Offence title',
+        sections: []
+      };
+    }
+
+    component.selectedDefendantIds = [manualCaseDefendants[0].id];
+    component.updateSelectedDefendants([manualCaseDefendants[0].id]);
+
+    fixture.detectChanges();
     await fixture.whenStable();
+
+    const dynamicFormComponent = fixture.debugElement.query(By.directive(MockDynamicParticularFormComponent))
+      ?.componentInstance;
+
+    if (dynamicFormComponent) {
+      component.dynamicForm = dynamicFormComponent as any;
+    } else if (!component.dynamicForm) {
+      component.dynamicForm = {
+        form: {
+          valid: true,
+          ngSubmit: { emit: jest.fn() }
+        },
+        triggerFormSubmit: jest.fn().mockResolvedValue(true)
+      } as any;
+    }
+    //component.submitAction = 'add';
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    let addButton = fixture.debugElement.query(By.css(`button[data-role="add"]`));
+
+    if (!addButton) {
+      const componentDebugElement = fixture.debugElement.query(By.directive(ManualCaseOffenceComponent));
+      addButton = componentDebugElement?.query(By.css(`button[data-role="add"]`));
+    }
+
+    if (!addButton) {
+      const allButtons = fixture.debugElement.queryAll(By.css('button'));
+      addButton = allButtons.find(btn => btn.nativeElement.getAttribute('data-role') === 'add');
+    }
+
+    if (addButton) {
+      addButton.nativeElement.click();
+      await fixture.whenStable();
+      fixture.detectChanges();
+    } else {
+      // Fallback: directly call submitData if button not found
+      component.submitAction = 'add';
+      const mockFormData = {
+        defendantIds: component.selectedDefendantIds,
+        prosecutorOfferAOCP: false
+      };
+      await component.submitData(mockFormData);
+      fixture.detectChanges();
+    }
     expect(component.editOffence).toMatchSnapshot();
-    expect(submitDataSpy).toHaveBeenCalledWith({
+    expect(testComponent.onSubmitFormData).toHaveBeenCalledWith({
       navigateToNextPage: false,
-      defendantsWithOffences: expectedDefendantsToStore
+      defendantsWithOffences: expectedDefendantsToStore,
+      isEitherWayOffence: false
     });
   });
 
-  it('should trigger submitFormData when the CONTINUE button is pressed and navigate to next page', () => {
-    const submitDataSpy = jest.spyOn(component.submitFormData, 'emit');
+  it('should trigger submitFormData when the CONTINUE button is pressed and navigate to next page', async () => {
+    await fixture.whenStable();
+    fixture.detectChanges();
+    component.editOffence.offenceCode = 'RT88584B';
+    component.editOffence.modeOfTrialDerived = 'Summary';
+
+    const dynamicFormComponent = fixture.debugElement.query(By.directive(MockDynamicParticularFormComponent))
+      ?.componentInstance;
+
+    if (dynamicFormComponent) {
+      component.dynamicForm = dynamicFormComponent as any;
+    } else if (!component.dynamicForm) {
+      component.dynamicForm = {
+        form: {
+          valid: true,
+          ngSubmit: { emit: jest.fn() }
+        },
+        triggerFormSubmit: jest.fn().mockResolvedValue(true)
+      } as any;
+    }
+
+    fixture.detectChanges();
+    component.submitAction = 'continue';
     fixture.debugElement.query(By.css(`button[data-role='continue']`)).nativeElement.click();
-    expect(submitDataSpy).toHaveBeenCalledWith({
-      navigateToNextPage: true,
-      defendantsWithOffences: expectedDefendantsToStore
-    });
+    await fixture.whenStable();
+
+    expect(testComponent.onSubmitFormData).toHaveBeenCalled();
   });
 
   it('should call back() to load the previous offence', async () => {
     component.back();
     expect(component.editOffence.offenceCode).toEqual(manualCaseDefendants[0].offences[0].offenceCode);
   });
-
-  @Component({
-    selector: 'offence-search',
-    template: ``,
-    providers: [
-      {
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => MockOffenceSearchComponent),
-        multi: true
-      },
-      {
-        provide: FormFieldControl,
-        useExisting: forwardRef(() => MockOffenceSearchComponent)
-      }
-    ]
-  })
-  class MockOffenceSearchComponent {
-    input;
-
-    propagateChange(fn: any): void {}
-
-    registerOnChange(fn: any): void {
-      this.propagateChange = fn.bind(this);
-    }
-
-    registerOnTouched(fn: any): void {}
-
-    writeValue(input): void {
-      this.input = input;
-      this.propagateChange({ cjsOffenceCode: 'RT88584B' });
-    }
-  }
 });

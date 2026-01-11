@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import moment from 'moment';
 import uuid from 'uuid/v4';
 import { PleaType } from '@cpp/reference-data';
@@ -9,13 +9,20 @@ import { ManualCaseOffenceStateService } from '../../offences-state.service';
 import { ManualCaseOffence } from '../../../core/model/manual-case-offence';
 import { VerdictType } from '../../../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../../../core/model/reference-data-interfaces/mot-reason';
-
+import { PdkGrid, PdkDividerComponent, PdkCore, PdkTable } from "@cpp/pdk";
+import { TranslateModule } from '@ngx-translate/core';
+import { CurrencyPipe } from '@angular/common';
+import { FullNamePipe } from '../../../shared/pipes/full-name/full-name.pipe';
+import { LowerCasePipe, TitleCasePipe, DatePipe } from '@angular/common';
 @Component({
-  selector: 'manual-case-offence-details',
-  templateUrl: './manual-case-offence-details.component.html',
-  styleUrls: ['./manual-case-offence-details.component.scss']
+    selector: 'manual-case-offence-details',
+    templateUrl: './manual-case-offence-details.component.html',
+    styleUrls: ['./manual-case-offence-details.component.scss'],
+    imports: [PdkCore, PdkGrid, PdkTable, PdkDividerComponent, TranslateModule, DatePipe, CurrencyPipe, FullNamePipe, LowerCasePipe, TitleCasePipe]
 })
 export class OffenceDetailsComponent {
+  private offenceStateService = inject(ManualCaseOffenceStateService);
+
   title: string;
   @Input() defendants: ManualCaseDefendant[];
   @Input() hasNpp = true;
@@ -28,7 +35,8 @@ export class OffenceDetailsComponent {
   @Output() add = new EventEmitter<ManualCasePath>();
   @Output() remove = new EventEmitter<any>();
   todayDate = moment().toISOString();
-  constructor(private offenceStateService: ManualCaseOffenceStateService) {}
+
+  constructor() {}
 
   onAdd() {
     this.offenceStateService.editOffence(this.createUUID());

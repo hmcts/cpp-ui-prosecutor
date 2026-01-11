@@ -5,12 +5,51 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
   acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter_]}
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   setRegion={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
-    breadcrumb-links
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Defendant details updates 
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <h1
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+      pdk-margin-vertical="6"
+      pdk-typography="heading-xlarge"
+    >
+       Defendant details updates 
+    </h1>
   </breadcrumb-links><pdk-inset-text>
     <div
       class="govuk-inset-text"
@@ -64,7 +103,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
             class="pdk-form-group"
           >
             <button
-              class="govuk-button"
+              class="govuk-!-margin-left-2 govuk-button"
               pdk-button=""
               pdk-margin-left="2"
               type="submit"
@@ -76,63 +115,84 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
       </form>
     </pdk-grid>
   </pdk-grid><table
+    class="govuk-table"
     id="cases"
     pdk-table=""
   >
     <thead
+      class="govuk-table__head"
       pdk-table-head=""
     >
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Name
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Case reference number
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Region
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Date of birth
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           What changed?
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Updated on
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Remove from list
         </th>
       </tr>
     </thead>
     <tbody
+      class="govuk-table__body"
       pdk-table-body=""
     >
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <td
+          class="govuk-table__cell"
           data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -142,24 +202,28 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </a>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="urn"
           pdk-table-cell=""
         >
            TVL7105556000 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
            London 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="date-of-birth"
           pdk-table-cell=""
         >
            17 Oct 1977 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <what-changed>
@@ -183,15 +247,18 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </what-changed>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
@@ -201,13 +268,16 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         </td>
       </tr>
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <td
+          class="govuk-table__cell"
           data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -217,24 +287,28 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </a>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="urn"
           pdk-table-cell=""
         >
            TVL9772166531 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
            London 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="date-of-birth"
           pdk-table-cell=""
         >
            19 Feb 1991 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <what-changed>
@@ -258,15 +332,18 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           </what-changed>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
@@ -293,12 +370,51 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   acknowledgeDefendantDetailsUpdatesEmitter={[Function EventEmitter_]}
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   setRegion={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
-    breadcrumb-links
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Defendant details updates 
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <h1
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+      pdk-margin-vertical="6"
+      pdk-typography="heading-xlarge"
+    >
+       Defendant details updates 
+    </h1>
   </breadcrumb-links><pdk-inset-text>
     <div
       class="govuk-inset-text"
@@ -355,7 +471,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
             class="pdk-form-group"
           >
             <button
-              class="govuk-button"
+              class="govuk-!-margin-left-2 govuk-button"
               pdk-button=""
               pdk-margin-left="2"
               type="submit"
@@ -367,63 +483,84 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
       </form>
     </pdk-grid>
   </pdk-grid><table
+    class="govuk-table"
     id="cases"
     pdk-table=""
   >
     <thead
+      class="govuk-table__head"
       pdk-table-head=""
     >
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Name
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Case reference number
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Region
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Date of birth
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           What changed?
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Updated on
         </th>
         <th
+          class="govuk-table__cell"
           pdk-table-header=""
+          scope="col"
         >
           Remove from list
         </th>
       </tr>
     </thead>
     <tbody
+      class="govuk-table__body"
       pdk-table-body=""
     >
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <td
+          class="govuk-table__cell"
           data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -433,24 +570,28 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </a>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="urn"
           pdk-table-cell=""
         >
            TVL7105556000 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
            London 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="date-of-birth"
           pdk-table-cell=""
         >
            17 Oct 1977 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <what-changed>
@@ -474,15 +615,18 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </what-changed>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""
@@ -492,13 +636,16 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         </td>
       </tr>
       <tr
+        class="govuk-table__row"
         pdk-table-row=""
       >
         <td
+          class="govuk-table__cell"
           data-role="defendant-name"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             href="javascript:void(0)"
             pdk-link=""
           >
@@ -508,24 +655,28 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </a>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="urn"
           pdk-table-cell=""
         >
            TVL9772166531 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
            London 
         </td>
         <td
+          class="govuk-table__cell"
           data-role="date-of-birth"
           pdk-table-cell=""
         >
            19 Feb 1991 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <what-changed>
@@ -549,15 +700,18 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           </what-changed>
         </td>
         <td
+          class="govuk-table__cell"
           data-role="updated-on"
           pdk-table-cell=""
         >
            04 Apr 2019 
         </td>
         <td
+          class="govuk-table__cell"
           pdk-table-cell=""
         >
           <a
+            class="govuk-link"
             data-role="remove-link"
             href="javascript:void(0)"
             pdk-link=""

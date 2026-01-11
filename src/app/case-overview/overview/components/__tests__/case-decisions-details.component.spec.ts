@@ -2,47 +2,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { ApplicationDecision, CaseDecision } from '../../../../contexts/sjp';
 import { MOCK_CASE_DECISION } from '../../../../case-overview/__tests__/test-mock-data';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule, PdkTabsModule } from '@cpp/pdk';
 import { CaseDecisionsDetailsComponent } from '../case-decisions-details.component';
-import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
-import {
-  FirstLastNamePipeModule,
-  FormatDatePipeModule,
-  SavedDecisionInformationPipeModule
-} from '../../../../shared/pipes';
-import { MockModule } from '../../../../shared/mock-components/mock.module';
 import { NoSeparatePenaltyOffenceDecisionComponent } from '../no-separate-penalty-decision.component';
-import { MockNoSeparatePenaltyDecisionComponent } from 'src/app/shared/mock-components/mock-no-separate-penalty-decision.component';
 
 describe('CaseDecisionsDetailsComponent', () => {
   let fixture: ComponentFixture<TestCaseDecisionsDetailsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        CaseDecisionsDetailsComponent,
-        TestCaseDecisionsDetailsComponent,
-        NoSeparatePenaltyOffenceDecisionComponent,
-        MockApplicationDecisionComponent
-      ],
       imports: [
-        CommonModule,
-        PdkDividerModule,
-        PdkGridModule,
-        PdkTabsModule,
-        FormatDatePipeModule,
-        FirstLastNamePipeModule,
-        SavedDecisionInformationPipeModule,
-        VerdictTypePipeModule,
-        MockModule
+        TestCaseDecisionsDetailsComponent,
+        MockApplicationDecisionComponent,
+        CaseDecisionsDetailsComponent,
+        NoSeparatePenaltyOffenceDecisionComponent
       ],
       teardown: { destroyAfterEach: false }
-    }).overrideModule(MockModule, {
-      remove: {
-        declarations: [MockNoSeparatePenaltyDecisionComponent],
-        exports: [MockNoSeparatePenaltyDecisionComponent]
-      }
     });
     fixture = TestBed.createComponent(TestCaseDecisionsDetailsComponent);
   });
@@ -126,7 +100,8 @@ describe('CaseDecisionsDetailsComponent', () => {
       <case-decisions-details
         [caseDecisionWithOffenceDecisions]="caseDecisionWithOffenceDecisions"
       ></case-decisions-details>
-    `
+    `,
+    imports: [CaseDecisionsDetailsComponent]
   })
   class TestCaseDecisionsDetailsComponent {
     @Input() caseDecisionWithOffenceDecisions: CaseDecision;
@@ -136,7 +111,8 @@ describe('CaseDecisionsDetailsComponent', () => {
     selector: 'application-decision-details',
     template: `
       application-decision-details
-    `
+    `,
+    imports: [MockApplicationDecisionComponent]
   })
   class MockApplicationDecisionComponent {
     @Input() applicationDecision: ApplicationDecision;

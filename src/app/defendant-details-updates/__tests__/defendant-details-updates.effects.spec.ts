@@ -1,7 +1,7 @@
 import { Actions } from '@ngrx/effects';
 import { TestBed } from '@angular/core/testing';
 import { cold, hot } from 'jasmine-marbles';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { ApiError, LoadDefendantDetailsUpdates } from '../../core/actions';
 import { Observable } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
@@ -10,21 +10,11 @@ import { DefendantDetailsUpdatesEffects } from '../defendant-details-updates.eff
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
 import { AcknowledgeDefendantDetailsUpdates } from '../defendant-details-updates.action';
 import { reducers } from '../../core/reducers';
-
-export class TestActions extends Actions {
-  set stream(source: Observable<any>) {
-    // eslint-disable-next-line
-    this.source = source;
-  }
-}
-
-export function getActions() {
-  return new TestActions();
-}
+import { provideMockActions } from '@ngrx/effects/testing';
 
 describe('DefendantDetailsUpdatesEffects', () => {
   let effects: DefendantDetailsUpdatesEffects;
-  let actions$: TestActions;
+  let actions$: Observable<any>;
   let store: Store<State>;
 
   let getDefendantDetailsUpdates: jest.Mock;
@@ -35,8 +25,8 @@ describe('DefendantDetailsUpdatesEffects', () => {
     acknowledgeDefendantDetailsUpdates = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         DefendantDetailsUpdatesEffects,
         {
           provide: SjpService,
@@ -45,16 +35,13 @@ describe('DefendantDetailsUpdatesEffects', () => {
             acknowledgeDefendantDetailsUpdates
           }
         },
-        {
-          provide: Actions,
-          useFactory: getActions
-        }
+        provideMockActions(() => actions$)
       ],
       teardown: { destroyAfterEach: false }
     });
-    effects = TestBed.get(DefendantDetailsUpdatesEffects);
-    actions$ = TestBed.get(Actions);
-    store = TestBed.get(Store);
+    effects = TestBed.inject(DefendantDetailsUpdatesEffects);
+    actions$ = TestBed.inject(Actions);
+    store = TestBed.inject(Store);
     store.dispatch(new LoadDefendantDetailsUpdates(MOCK_DEFENDANT_DETAILS_UPDATES));
   });
 
@@ -68,7 +55,7 @@ describe('DefendantDetailsUpdatesEffects', () => {
 
       const action = new AcknowledgeDefendantDetailsUpdates(acknowledgeParams);
 
-      actions$.stream = hot('-a', { a: action });
+      actions$ = hot('-a', { a: action });
       acknowledgeDefendantDetailsUpdates.mockReturnValue(cold('-b|', { b: {} }));
 
       const updatedDetails = { total: 0, defendantDetailsUpdates: [] };
@@ -88,7 +75,7 @@ describe('DefendantDetailsUpdatesEffects', () => {
       const acknowledgeParams = { caseId: '1', defendantId: '2' };
 
       const action = new AcknowledgeDefendantDetailsUpdates(acknowledgeParams);
-      actions$.stream = hot('-a', { a: action });
+      actions$ = hot('-a', { a: action });
 
       const apiError = new ApiError(error);
 

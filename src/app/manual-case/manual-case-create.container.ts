@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -54,46 +54,56 @@ import { getProsecutors, PleaType, Prosecutor } from '@cpp/reference-data';
 import { VerdictType } from '../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../core/model/reference-data-interfaces/mot-reason';
 import { ManualCaseOffenceStateService } from './offences-state.service';
+import { ManualCaseTypeComponent } from "./case-type/manual-case-type.component";
+import { ManualCaseProsecutorComponent } from "./case-prosecutor/manual-case-prosecutor.component";
+import { ManualCaseHearingDetailsComponent } from "./case-hearing-details/manual-case-hearing-details.component";
+import { ManualCaseDefendantComponent } from "./case-defendant/manual-case-defendant.component";
+import { ManualCaseOffenceComponent } from "./case-defendant-offence/manual-case-offence.component";
+import { EitherWayOffenceComponent } from "./either-way-offences/either-way-offence.component";
+import { ManualCaseSummaryComponent } from "./case-summary/case-summary.component";
+import { CaseCreateSuccessComponent } from "./case-create-success/manual-case-create-success.component";
+import { ManualCaseDuplicatedProsecutorComponent } from "./case-prosecutor/manual-case-duplicated-prosecutor.component";
+import { AsyncPipe } from '@angular/common';
 
 export interface SubmitData<T> {
   caseData: T;
   navigateToNextPage: boolean;
 }
 @Component({
-  selector: 'manual-case-container',
-  template: `
+    selector: 'manual-case-container',
+    template: `
     <div class="manual-case">
-      <ng-container *ngIf="currentView.isCaseTypePage">
+      @if (currentView.isCaseTypePage) {
         <manual-case-type
           [manualCaseDetail]="manualCaseDetail$ | async"
           [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
           [summonsCodes]="summonTypes$ | async"
           (submitFormData)="storeManualCaseData($event)"
-        >
+          >
         </manual-case-type>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isProsecutorPage">
+      }
+    
+      @if (currentView.isProsecutorPage) {
         <manual-case-prosecutor
           [manualCaseDetail]="manualCaseDetail$ | async"
           [nonPoliceProsecutor]="nonPoliceProsecutor$ | async"
           [prosecutorRouteType]="prosecutorRouteType"
           (submitFormData)="storeManualCaseData($event)"
-        >
+          >
         </manual-case-prosecutor>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isHearingPage">
+      }
+    
+      @if (currentView.isHearingPage) {
         <manual-case-hearing-details
           [manualCaseDetail]="manualCaseDetail$ | async"
           [courtCentres]="courtCentres$ | async"
           [hearingTypes]="hearingTypes$ | async"
           (submitFormData)="storeManualCaseData($event)"
-        >
+          >
         </manual-case-hearing-details>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isDefendantPage">
+      }
+    
+      @if (currentView.isDefendantPage) {
         <manual-case-defendant
           [manualCaseDetail]="manualCaseDetail$ | async"
           [manualCaseDefendants]="manualCaseDefendants$ | async"
@@ -101,11 +111,11 @@ export interface SubmitData<T> {
           [prosecutors]="prosecutors$ | async"
           [remandStatuses]="remandTypes$ | async"
           (submitFormData)="storeManualCaseDefendant($event)"
-        >
+          >
         </manual-case-defendant>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isOffencePage">
+      }
+    
+      @if (currentView.isOffencePage) {
         <manual-case-offence
           [manualCaseDefendants]="manualCaseDefendants$ | async"
           [hasNpp]="(nonPoliceProsecutor$ | async).cpsFlag"
@@ -113,11 +123,11 @@ export interface SubmitData<T> {
           [alcoholLevelMethods]="alcoholLevelMethods$ | async"
           [manualCaseType]="manualCaseType$ | async"
           (submitFormData)="storeManualCaseDefendantList($event)"
-        >
+          >
         </manual-case-offence>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isEitherWayOffencePage">
+      }
+    
+      @if (currentView.isEitherWayOffencePage) {
         <either-way-offence
           [manualCaseDefendants]="manualCaseDefendants$ | async"
           [pleaOptions]="pleaOptions$ | async"
@@ -126,11 +136,11 @@ export interface SubmitData<T> {
           [allocationDecisionOptions]="motOptions$ | async"
           [initiationCode]="(manualCaseDetail$ | async)?.initiationCode"
           (submitFormData)="storeEitherWayOffenceData($event)"
-        >
+          >
         </either-way-offence>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isCaseSummary">
+      }
+    
+      @if (currentView.isCaseSummary) {
         <manual-case-summary
           [caseDetails]="manualCaseDetail$ | async"
           [defendants]="manualCaseDefendants$ | async"
@@ -151,35 +161,42 @@ export interface SubmitData<T> {
           (remove)="remove($event)"
           (add)="add($event)"
           (formSubmit)="submitManualCase()"
-        >
+          >
         </manual-case-summary>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isCaseCreated">
+      }
+    
+      @if (currentView.isCaseCreated) {
         <manual-case-create-success
           [reference]="reference"
           [caseDetails]="manualCaseDetail$ | async"
         ></manual-case-create-success>
-      </ng-container>
-
-      <ng-container *ngIf="currentView.isDuplicatedProsecutor">
+      }
+    
+      @if (currentView.isDuplicatedProsecutor) {
         <manual-case-duplicated-prosecutor
           [manualCaseDetail]="manualCaseDetail$ | async"
           (submitFormData)="updateProsecutorAndSave($event)"
-        >
+          >
         </manual-case-duplicated-prosecutor>
-      </ng-container>
+      }
     </div>
-  `,
-  styles: [
-    `
+    `,
+    styles: [
+        `
       .manual-case {
         margin: 30px 0;
       }
     `
-  ]
+    ],
+    imports: [ManualCaseTypeComponent, ManualCaseProsecutorComponent, ManualCaseHearingDetailsComponent, ManualCaseDefendantComponent, ManualCaseOffenceComponent, EitherWayOffenceComponent, ManualCaseSummaryComponent, CaseCreateSuccessComponent, ManualCaseDuplicatedProsecutorComponent, AsyncPipe]
 })
 export class ManualCaseCreateContainer implements OnInit, OnDestroy {
+  private manualCaseNavService = inject(ManualCaseNavigationService);
+  private offenceStateService = inject(ManualCaseOffenceStateService);
+  private store = inject<Store<State>>(Store);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+
   manualCaseDetail$: Observable<ManualCase>;
   summonTypes$: Observable<any[]>;
   courtCentres$: Observable<CourtCentreWithRooms[]>;
@@ -210,13 +227,7 @@ export class ManualCaseCreateContainer implements OnInit, OnDestroy {
 
   currentView: any;
 
-  constructor(
-    private manualCaseNavService: ManualCaseNavigationService,
-    private offenceStateService: ManualCaseOffenceStateService,
-    private store: Store<State>,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.store

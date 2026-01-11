@@ -1,62 +1,76 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Location } from '@angular/common';
-import { SessionService } from '../../';
+import { DashboardContainer } from '../../../dashboard/dashboard.container';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute, provideRouter, Router } from '@angular/router';
+import { provideStore, Store } from '@ngrx/store';
+import {
+  MOCK_PENDING_DATES_TO_AVOID,
+  MOCK_DEFENDANT_DETAILS_UPDATES
+} from '../../../dashboard/__tests__/test-mock-data';
+import { LoadPleadedNotGuiltyCases, LoadDefendantDetailsUpdates } from '../../../core/actions/entities';
+import { reducers } from '../../../reducers';
+import { JsonPipe } from '@angular/common';
+import { DashboardComponent } from '../../../dashboard/dashboard.component';
 
-import { DevToolsDashboardPageComponent } from '../dashboard.container';
-import { DevToolsDashboardComponent } from '../dashboard.component';
-import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
-import { DevToolsBackButtonComponent } from '../../back-button/back-button.component';
+@Component({
+  selector: 'prosecutor-dashboard',
+  template: `
+    <span>{{ pleadedNotGuiltyCasesDetail | json }}</span>
+    <span>{{ defendantDetailsUpdates | json }}</span>
+    <span>{{ casesMissingSjpNoticeCount | json }}</span>
+  `,
+  imports: [JsonPipe]
+})
+class MockDashboardComponent {
+  @Input() pleadedNotGuiltyCasesDetail;
+  @Input() defendantDetailsUpdates;
+  @Input() casesMissingSjpNoticeCount;
+  @Input() hasNpp;
+}
 
-jest.mock('../../session/users.constant', () => ({
-  mockUsers: [
-    {
-      id: 'userId',
-      displayName: 'Charging lawyer 1 - Tina Turner'
-    }
-  ]
-}));
-
-describe('DevTools - dashboard container', () => {
-  let fixture: ComponentFixture<DevToolsDashboardPageComponent>;
-  let spyOnGetUserId: any;
-  let pageComponent: any;
-  const mockSessionService = {
-    getUserId: () => {}
-  };
+describe('DashboardContainer', () => {
+  let fixture: ComponentFixture<DashboardContainer>;
+  let store: Store<any>;
+  let router: Router;
 
   beforeEach(() => {
-    TestBed.overrideProvider(SessionService, { useValue: mockSessionService });
-
     TestBed.configureTestingModule({
-      declarations: [DevToolsDashboardPageComponent, DevToolsDashboardComponent, DevToolsBackButtonComponent],
-      imports: [PdkCoreModule, PdkGridModule],
       providers: [
-        SessionService,
+        provideStore(reducers, { runtimeChecks: {} }),
         {
-          provide: Location,
+          provide: ActivatedRoute,
           useValue: {
-            back: jest.fn()
+            snapshot: {
+              params: {
+                id: '123'
+              }
+            }
           }
-        }
+        },
+        provideRouter([])
       ],
       teardown: { destroyAfterEach: false }
-    });
+    })
+      .overrideComponent(DashboardContainer, {
+        remove: {
+          imports: [DashboardComponent]
+        },
+        add: {
+          imports: [MockDashboardComponent]
+        }
+      })
+      .compileComponents();
 
-    spyOnGetUserId = spyOn(mockSessionService, 'getUserId');
-    fixture = TestBed.createComponent(DevToolsDashboardPageComponent);
-    pageComponent = fixture.debugElement.componentInstance;
+    store = TestBed.inject(Store);
+    router = TestBed.inject(Router);
+    jest.spyOn(router, 'navigate');
+    fixture = TestBed.createComponent(DashboardContainer);
+  });
+
+  it('should compile correctly', () => {
+    store.dispatch(new LoadPleadedNotGuiltyCases(MOCK_PENDING_DATES_TO_AVOID));
+    store.dispatch(new LoadDefendantDetailsUpdates(MOCK_DEFENDANT_DETAILS_UPDATES));
     fixture.detectChanges();
-  });
-
-  it('compiles', () => {
     expect(fixture).toMatchSnapshot();
-    expect(pageComponent.user).toBeFalsy();
-  });
-
-  it('user is correctly set', () => {
-    const USER_ID = 'userId';
-    spyOnGetUserId.and.returnValue(USER_ID);
-    pageComponent.ngOnInit();
-    expect(pageComponent.user.id).toEqual(USER_ID);
   });
 });

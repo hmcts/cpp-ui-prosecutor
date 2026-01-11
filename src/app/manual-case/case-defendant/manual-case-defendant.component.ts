@@ -1,17 +1,25 @@
-import { Component, OnInit, OnChanges, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, EventEmitter, Output, Input, inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { cloneDeep } from 'lodash';
 import { ManualCaseDefendant, BailStatus } from '../../core/model';
-import { ValidationError } from '@cpp/pdk';
+import { ValidationError, PdkGrid, PdkRadioGroupComponent, PdkRadioButtonComponent, PdkCore, PdkFieldsetComponent } from '@cpp/pdk';
 import { ManualCaseDefendantStateService } from '../defendants-state.service';
 import { ManualCase } from '../../core/model/manual-case';
 import { Prosecutor } from '@cpp/reference-data';
+import { IndividualDefendantFormComponent } from "./individual-defendant-form.component";
+import { OrganisationDefendantFormComponent } from "./organisation-defendant-form.component";
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'manual-case-defendant',
-  templateUrl: './manual-case-defendant.component.html'
+    selector: 'manual-case-defendant',
+    templateUrl: './manual-case-defendant.component.html',
+    imports: [PdkCore, PdkGrid, PdkRadioGroupComponent, PdkRadioButtonComponent, IndividualDefendantFormComponent, OrganisationDefendantFormComponent, TranslateModule, FormsModule, PdkFieldsetComponent]
 })
 export class ManualCaseDefendantComponent implements OnInit, OnChanges {
+  private location = inject(Location);
+  private defendantStateService = inject(ManualCaseDefendantStateService);
+
   @Input() manualCaseDetail: ManualCase;
   @Input() manualCaseDefendants: ManualCaseDefendant[];
   @Input() manualCaseType: string;
@@ -26,7 +34,7 @@ export class ManualCaseDefendantComponent implements OnInit, OnChanges {
   aliasesReset = false;
   iterateDefendant: boolean;
 
-  constructor(private location: Location, private defendantStateService: ManualCaseDefendantStateService) {}
+  constructor() {}
 
   ngOnChanges(): void {
     const defendants = cloneDeep(this.manualCaseDefendants);

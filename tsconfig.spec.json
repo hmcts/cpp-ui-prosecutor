@@ -4,7 +4,7 @@
     "outDir": "../out-tsc/spec",
     "target": "ES2020",
     "allowJs": true,
-    "types": ["jest"]
+    "types": ["jest", "node"]
   },
   "files": ["src/test.ts", "./polyfills.ts"],
   "include": ["**/*.spec.ts", "**/*.d.ts"]

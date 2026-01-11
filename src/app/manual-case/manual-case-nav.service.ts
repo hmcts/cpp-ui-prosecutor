@@ -1,7 +1,9 @@
 import { ManualCasePath } from './manual-case.interface';
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ManualCaseNavigationService {
   prevRouteParams;
 

@@ -4,6 +4,25 @@ import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interfac
 import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
 import { RegionState } from '../core/reducers/entities.reducer';
 import { NgForm } from '@angular/forms';
+import { BreadcrumbLinksComponent } from '../shared/breadcrumb-links/breadcrumb-links.component';
+import {
+  PdkInsetTextComponent,
+  PdkSelectComponent,
+  PdkFormGroupComponent,
+  PdkWarningTextComponent,
+  PdkDividerComponent,
+  PdkCore,
+  PdkForm,
+  PdkGrid,
+  PdkTable,
+  PdkLabelDirective,
+  PdkButtonDirective
+} from '@cpp/pdk';
+import { DatePipe, NgPlural, NgPluralCase } from '@angular/common';
+import { WhatChangedComponent } from './what-changed/what-changed.component';
+import { DefendantNamePipe } from '../shared/pipes/defendant-name/defendant-name.pipe';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'defendant-details-updates',
@@ -16,8 +35,9 @@ import { NgForm } from '@angular/forms';
         <ng-template ngPluralCase="=1">case has</ng-template>
         <ng-template ngPluralCase="other">cases have</ng-template>
       </span>
-      updates
-      <span *ngIf="defendantDetailsUpdates.total > 50">(first 50 shown below)</span>
+      updates @if (defendantDetailsUpdates.total > 50) {
+      <span>(first 50 shown below)</span>
+      }
     </pdk-inset-text>
     <pdk-grid container>
       <pdk-grid one-half>
@@ -33,11 +53,8 @@ import { NgForm } from '@angular/forms';
         </form>
       </pdk-grid>
     </pdk-grid>
-    <table
-      pdk-table
-      *ngIf="defendantDetailsUpdates.defendantDetailsUpdates.length > 0; else noDefendantUpdates"
-      id="cases"
-    >
+    @if (defendantDetailsUpdates.defendantDetailsUpdates.length > 0) {
+    <table pdk-table id="cases">
       <thead pdk-table-head>
         <tr pdk-table-row>
           <th pdk-table-header>Name</th>
@@ -50,7 +67,8 @@ import { NgForm } from '@angular/forms';
         </tr>
       </thead>
       <tbody pdk-table-body>
-        <tr pdk-table-row *ngFor="let defendantDetailsUpdate of defendantDetailsUpdates.defendantDetailsUpdates">
+        @for (defendantDetailsUpdate of defendantDetailsUpdates.defendantDetailsUpdates; let i = $index; track i) {
+        <tr pdk-table-row>
           <td pdk-table-cell data-role="defendant-name">
             <a href="javascript:void(0)" pdk-link (click)="viewCase.emit(defendantDetailsUpdate.caseId)">
               <b>{{ defendantDetailsUpdate | defendantName: false }}</b>
@@ -83,20 +101,43 @@ import { NgForm } from '@angular/forms';
             >
           </td>
         </tr>
+        }
       </tbody>
     </table>
-    <ng-template #noDefendantUpdates>
-      <h4 pdk-section="large">
-        <pdk-warning-text>
-          There are no cases with defendant detail updates
-        </pdk-warning-text>
-        <pdk-divider></pdk-divider>
-      </h4>
-    </ng-template>
+    } @else {
+    <h4 pdk-section="large">
+      <pdk-warning-text>
+        There are no cases with defendant detail updates
+      </pdk-warning-text>
+      <pdk-divider></pdk-divider>
+    </h4>
+    }
     <button id="back-button" pdk-button routerLink="/">
       Back to home
     </button>
-  `
+  `,
+  imports: [
+    PdkCore,
+    PdkForm,
+    PdkTable,
+    PdkButtonDirective,
+    BreadcrumbLinksComponent,
+    PdkInsetTextComponent,
+    PdkGrid,
+    PdkSelectComponent,
+    PdkFormGroupComponent,
+    WhatChangedComponent,
+    PdkWarningTextComponent,
+    PdkDividerComponent,
+    NgPlural,
+    NgPluralCase,
+    DatePipe,
+    DefendantNamePipe,
+    FormsModule,
+    RouterLink,
+    PdkLabelDirective,
+    PdkButtonDirective
+  ]
 })
 export class DefendantDetailsUpdatesComponent {
   @ViewChild(NgForm, { static: true }) form: NgForm;

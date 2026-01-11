@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PdkCoreModule, PdkFormModule, PdkWarningTextModule } from '@cpp/pdk';
 import { Component } from '@angular/core';
 import { OffenceWarningComponent } from '../offence-warning.component';
 
@@ -7,8 +6,7 @@ describe('OffenceWarning', () => {
   let fixture: ComponentFixture<TestOffenceWarningComponent>;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestOffenceWarningComponent, OffenceWarningComponent],
-      imports: [PdkCoreModule, PdkFormModule, PdkWarningTextModule],
+      imports: [TestOffenceWarningComponent, OffenceWarningComponent],
       teardown: { destroyAfterEach: false }
     });
 
@@ -26,7 +24,8 @@ describe('OffenceWarning', () => {
       <offence-warning>
         This is a warning
       </offence-warning>
-    `
+    `,
+    imports: [OffenceWarningComponent]
   })
   class TestOffenceWarningComponent {}
 });

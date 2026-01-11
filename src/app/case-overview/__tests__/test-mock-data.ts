@@ -51,7 +51,7 @@ export const MOCK_OFFENCES: Offence[] = [
 
     plea: 'NOT_GUILTY',
     pleaMethod: 'POSTAL',
-    pleaDate: '2019-02-27T15:32:20.593Z',
+    pleaDate: '2019-02-27',
 
     pendingWithdrawal: true,
     prosecutionFacts:
@@ -98,14 +98,14 @@ export const MOCK_CASE: Case = {
       nameChanged: false
     }
   },
-  dateTimeCreated: '2019-02-24T16:35:46.273Z',
+  dateTimeCreated: '2019-02-24',
   caseDocuments: [
     {
       id: 'documentId1',
       materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
       documentType: 'PLEA',
       documentNumber: 1,
-      addedAt: '2019-02-25T09:30:24.442Z',
+      addedAt: '2019-02-25',
       metadata: {
         fileName: 'fileName.pdf'
       } as CaseDocumentMetaData
@@ -115,7 +115,7 @@ export const MOCK_CASE: Case = {
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'SJPN',
       documentNumber: 1,
-      addedAt: '2019-02-24T16:35:56.558Z',
+      addedAt: '2019-02-24',
       metadata: {
         fileName: 'fileName1.pdf'
       } as CaseDocumentMetaData
@@ -125,7 +125,7 @@ export const MOCK_CASE: Case = {
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'CITN',
       documentNumber: 1,
-      addedAt: '2019-02-24T16:35:56.558Z',
+      addedAt: '2019-02-24',
       metadata: {
         fileName: 'fileName1.pdf'
       } as CaseDocumentMetaData
@@ -177,14 +177,14 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
       legalEntityNameChanged: false
     } as LegalEntityDetails
   },
-  dateTimeCreated: '2019-02-24T16:35:46.273Z',
+  dateTimeCreated: '2019-02-24',
   caseDocuments: [
     {
       id: 'documentId1',
       materialId: '736fabcb-f42e-4677-9f0e-aa7620c5812c',
       documentType: 'PLEA',
       documentNumber: 1,
-      addedAt: '2019-02-25T09:30:24.442Z',
+      addedAt: '2019-02-25',
       metadata: {
         fileName: 'fileName.pdf'
       } as CaseDocumentMetaData
@@ -194,7 +194,7 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'SJPN',
       documentNumber: 1,
-      addedAt: '2019-02-24T16:35:56.558Z',
+      addedAt: '2019-02-24',
       metadata: {
         fileName: 'fileName1.pdf'
       } as CaseDocumentMetaData
@@ -204,7 +204,7 @@ export const MOCK_CASE_LEGAL_ENTITY_DEFENDANT: Case = {
       materialId: '5c0ab97e-20e4-4c67-9b78-0ffb9e92c782',
       documentType: 'CITN',
       documentNumber: 1,
-      addedAt: '2019-02-24T16:35:56.558Z',
+      addedAt: '2019-02-24T',
       metadata: {
         fileName: 'fileName1.pdf'
       } as CaseDocumentMetaData
@@ -234,8 +234,8 @@ export const MOCK_CASE_DECISION: CaseDecision = {
     courtHouseCode: 'B01OK',
     courtHouseName: `Wimbledon Magistrates' Court`,
     localJusticeAreaNationalCourtCode: '2577',
-    startedAt: '2018-12-01T16:10:28.259Z',
-    endedAt: '2018-12-01T16:10:28.259Z',
+    startedAt: '2018-12-01',
+    endedAt: '2018-12-01',
     sessionType: 'DELEGATEDPOWERS',
     legalAdviser: {
       userId: 'legal-adviser-1',
@@ -244,7 +244,7 @@ export const MOCK_CASE_DECISION: CaseDecision = {
     },
     magistrate: 'Jenny'
   },
-  savedAt: '2018-12-01T16:10:28.259Z',
+  savedAt: '2018-12-01',
   offenceDecisions: [
     {
       id: 'mock-case-offence-decision-1',
@@ -314,8 +314,8 @@ export const MOCK_CASE_DECISION_2: CaseDecision = {
     courtHouseCode: 'B01OK',
     courtHouseName: `Wimbledon Magistrates' Court`,
     localJusticeAreaNationalCourtCode: '2577',
-    startedAt: '2019-12-01T16:10:28.259Z',
-    endedAt: '2019-12-01T16:10:28.259Z',
+    startedAt: '2019-12-01',
+    endedAt: '2019-12-01',
     sessionType: 'DELEGATEDPOWERS',
     legalAdviser: {
       userId: 'legal-adviser-2',
@@ -323,7 +323,7 @@ export const MOCK_CASE_DECISION_2: CaseDecision = {
       lastName: 'Adams'
     }
   },
-  savedAt: '2019-12-01T16:10:28.259Z',
+  savedAt: '2019-12-01',
   offenceDecisions: [
     {
       id: 'mock-case-offence-decision-1',
@@ -366,8 +366,8 @@ export const MOCK_CASE_DECISION_WITH_UNSORTED_OFFENCE_DECISIONS: CaseDecision = 
     courtHouseCode: 'B01OK',
     courtHouseName: `Wimbledon Magistrates' Court`,
     localJusticeAreaNationalCourtCode: '2577',
-    startedAt: '2018-12-01T16:10:28.259Z',
-    endedAt: '2018-12-01T16:10:28.259Z',
+    startedAt: '2018-12-01',
+    endedAt: '2018-12-01',
     sessionType: 'DELEGATEDPOWERS',
     legalAdviser: {
       userId: 'legal-adviser-1',
@@ -375,7 +375,7 @@ export const MOCK_CASE_DECISION_WITH_UNSORTED_OFFENCE_DECISIONS: CaseDecision = 
       lastName: 'Adams'
     }
   },
-  savedAt: '2018-12-01T16:10:28.259Z',
+  savedAt: '2018-12-01',
   offenceDecisions: [
     {
       id: 'mock-case-offence-decision-1',
@@ -433,8 +433,8 @@ export const MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION: CaseDecision = {
     courtHouseCode: 'B01OK',
     courtHouseName: `Wimbledon Magistrates' Court`,
     localJusticeAreaNationalCourtCode: '2577',
-    startedAt: '2018-12-01T16:10:28.259Z',
-    endedAt: '2018-12-01T16:10:28.259Z',
+    startedAt: '2018-12-01',
+    endedAt: '2018-12-01',
     sessionType: 'DELEGATED_POWERS',
     legalAdviser: {
       userId: 'legal-adviser-1',
@@ -443,7 +443,7 @@ export const MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION: CaseDecision = {
     },
     magistrate: 'Jenny'
   },
-  savedAt: '2018-12-01T16:10:28.259Z',
+  savedAt: '2018-12-01',
   offenceDecisions: [
     {
       id: 'mock-case-offence-decision-1',
@@ -511,7 +511,7 @@ export const MOCK_ONLINE_PLEA_DETAIL: DefendantOnlinePlea = {
     {
       caseId: 'caseId',
       defendantId: 'defendantId',
-      submittedOn: '2019-10-18T15:10:28.881Z',
+      submittedOn: '2019-10-18',
       onlinePleaDetails: [
         {
           id: 'onlinePleaId1',
@@ -587,7 +587,7 @@ export const MOCK_CASE_NOTES = {
       noteId: '751e8907-2c67-4f02-94b7-309a39ef2030',
       noteType: 'ADJOURNMENT',
       noteText: 'Not enough documents',
-      addedAt: '2019-07-04T10:53:15.149',
+      addedAt: '2019-07-04',
       authorFirstName: 'Erica',
       authorLastName: 'Wilson',
       decisionId: '009879ca-7817-42ed-b742-c782316936c7'
@@ -596,7 +596,7 @@ export const MOCK_CASE_NOTES = {
       noteId: '6614df24-d9bb-4bcd-9a3f-57c436177d67',
       noteType: 'ADJOURNMENT',
       noteText: 'Not enough documents',
-      addedAt: '2019-07-02T21:26:21.784',
+      addedAt: '2019-07-02',
       authorFirstName: 'Erica',
       authorLastName: 'Wilson',
       decisionId: 'cb42e4e9-a23e-45de-8e62-a15e6ed948ac'
@@ -611,7 +611,7 @@ export const MOCK_CASE_MANAGEMENT_NOTES = {
       noteId: '751e8907-2c67-4f02-94b7-309a39ef2030',
       noteType: 'CASE_MANAGEMENT',
       noteText: 'Not enough documents',
-      addedAt: '2019-07-04T10:53:15.149',
+      addedAt: '2019-07-04',
       authorFirstName: 'Erica',
       authorLastName: 'Wilson',
       decisionId: '009879ca-7817-42ed-b742-c782316936c7'
@@ -620,7 +620,7 @@ export const MOCK_CASE_MANAGEMENT_NOTES = {
       noteId: '6614df24-d9bb-4bcd-9a3f-57c436177d67',
       noteType: 'CASE_MANAGEMENT',
       noteText: 'Not enough documents',
-      addedAt: '2019-07-02T21:26:21.784',
+      addedAt: '2019-07-02',
       authorFirstName: 'Erica',
       authorLastName: 'Wilson',
       decisionId: 'cb42e4e9-a23e-45de-8e62-a15e6ed948ac'

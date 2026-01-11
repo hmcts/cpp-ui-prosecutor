@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -8,11 +8,13 @@ import { State } from '../reducers';
 import { AcknowledgeDefendantDetailsUpdates } from './defendant-details-updates.action';
 import { RegionState } from '../core/reducers/entities.reducer';
 import { LoadSelectedRegionSuccess } from '../core';
+import { DefendantDetailsUpdatesComponent } from "./defendant-details-updates.component";
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'defendant-details-updates-container',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'defendant-details-updates-container',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <defendant-details-updates
       [defendantDetailsUpdates]="defendantDetailsUpdates$ | async"
       (acknowledgeDefendantDetailsUpdatesEmitter)="acknowledgeDefendantDetailsUpdates($event)"
@@ -21,13 +23,17 @@ import { LoadSelectedRegionSuccess } from '../core';
       (viewCase)="viewCase($event)"
     >
     </defendant-details-updates>
-  `
+  `,
+    imports: [DefendantDetailsUpdatesComponent, AsyncPipe]
 })
 export class DefendantDetailsUpdatesContainer {
+  private store = inject<Store<State>>(Store);
+  private router = inject(Router);
+
   defendantDetailsUpdates$: Observable<DefendantDetailsUpdatesResult>;
   region$: Observable<RegionState>;
 
-  constructor(private store: Store<State>, private router: Router) {
+  constructor() {
     this.defendantDetailsUpdates$ = this.store.pipe(select(getDefendantDetailsUpdates));
     this.region$ = this.store.pipe(select(getRegion));
   }

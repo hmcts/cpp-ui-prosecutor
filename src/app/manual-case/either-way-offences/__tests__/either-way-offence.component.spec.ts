@@ -1,31 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ControlContainer, NgForm, FormsModule } from '@angular/forms';
+import { ControlContainer, NgForm } from '@angular/forms';
 import { EitherWayOffenceComponent } from '../either-way-offence.component';
-import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
-import { FullNamePipe } from '../../../shared/pipes/full-name/full-name.pipe';
 import { ManualCaseDefendant } from '../../../core/model/manual-case-defendant';
 import { By } from '@angular/platform-browser';
 import { ManualCaseOffenceStateService } from '../../offences-state.service';
 import { OffenceModeOfTrialType } from '../../../core/model/reference-data-interfaces/offence-type';
-import {
-  PdkSelectModule,
-  PdkFormModule,
-  PdkCoreModule,
-  PdkGridModule,
-  PdkInputModule,
-  PdkTextInputModule,
-  PdkCurrencyInputModule,
-  PdkInsetTextModule,
-  PdkAutosuggestModule,
-  PdkRadioInputModule,
-  PdkTextareaModule,
-  PdkCheckboxInputModule,
-  PdkDateInputModule
-} from '@cpp/pdk';
-
+import { provideRouter } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { FullNamePipe } from '../../../shared/pipes/full-name/full-name.pipe';
+import { provideTranslateService } from '@ngx-translate/core';
 const mockDefendants = ([
   {
     id: 'c0121990-1eaf-4f05-ad4e-491e3aa4092e',
@@ -167,29 +151,19 @@ describe('EitherWayOffenceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [EitherWayOffenceComponent, FullNamePipe],
-      imports: [
-        MockPipesModule,
-        CommonModule,
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkGridModule,
-        PdkInputModule,
-        PdkTextInputModule,
-        PdkCurrencyInputModule,
-        PdkInsetTextModule,
-        PdkAutosuggestModule,
-        PdkRadioInputModule,
-        PdkSelectModule,
-        PdkTextareaModule,
-        PdkGridModule,
-        PdkCheckboxInputModule,
-        PdkDateInputModule,
-        RouterTestingModule
-      ],
+      imports: [EitherWayOffenceComponent, FullNamePipe],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService]
+      providers: [
+        ControlContainer,
+        NgForm,
+        ManualCaseOffenceStateService,
+        provideRouter([]),
+        { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } },
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(EitherWayOffenceComponent);

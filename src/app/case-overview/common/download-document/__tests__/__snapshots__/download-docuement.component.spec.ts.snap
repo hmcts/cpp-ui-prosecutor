@@ -60,7 +60,7 @@ exports[`DownloadDocumentComponent should compile correctly 1`] = `
         class="clear"
       />
       <p>
-        Added at 25 February 2019 at 9:30 am
+        Added at 25 February 2019 at 12:00 am
       </p>
     </div>
   </download-document>

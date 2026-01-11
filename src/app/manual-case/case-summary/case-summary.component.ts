@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation, inject } from '@angular/core';
 import { ManualCase } from '../../core/model/manual-case';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
 import { Location } from '@angular/common';
@@ -10,14 +10,25 @@ import uuid from 'uuid/v4';
 import { PleaType, Prosecutor } from '@cpp/reference-data';
 import { VerdictType } from '../../core/model/reference-data-interfaces/verdicts';
 import { MotReason } from '../../core/model/reference-data-interfaces/mot-reason';
-
+import { PdkAlertComponent, PdkButtonDirective, PdkCore, PdkGridComponent, PdkTable } from "@cpp/pdk";
+import { ProsecutionCaseDetailsComponent } from "./prosecution-case-details/prosecution-case-details.component";
+import { ManualCaseHearingSummaryComponent } from "./manual-case-hearing-summary/manual-case-hearing-summary.component";
+import { DefendantDetailsComponent } from "./manual-defendant-details/manual-defendant-details.component";
+import { OffenceDetailsComponent } from "./manual-case-offence-details/manual-case-offence-details.component";
+import { TranslateModule } from '@ngx-translate/core';
+import { UpperCasePipe } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 @Component({
-  selector: 'manual-case-summary',
-  templateUrl: './case-summary.component.html',
-  styleUrls: ['./case-summary.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'manual-case-summary',
+    templateUrl: './case-summary.component.html',
+    styleUrls: ['./case-summary.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    imports: [PdkTable, PdkCore, PdkButtonDirective, PdkAlertComponent, PdkGridComponent, ProsecutionCaseDetailsComponent, ManualCaseHearingSummaryComponent, DefendantDetailsComponent, OffenceDetailsComponent, TranslateModule, UpperCasePipe, CurrencyPipe]
 })
 export class ManualCaseSummaryComponent implements OnChanges {
+  private location = inject(Location);
+  private offenceStateService = inject(ManualCaseOffenceStateService);
+
   @Input() caseDetails: ManualCase;
   @Input() defendants: ManualCaseDefendant[];
   @Input() courtCentres: CourtCentreWithRooms[];
@@ -42,7 +53,7 @@ export class ManualCaseSummaryComponent implements OnChanges {
   victimAocpSurcharge: number;
   totalAocpFine: number;
 
-  constructor(private location: Location, private offenceStateService: ManualCaseOffenceStateService) {}
+  constructor() {}
 
   hasAllOffencesAocpEligible() {
     return this.defendants.every(defendant => {

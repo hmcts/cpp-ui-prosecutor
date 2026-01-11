@@ -8,6 +8,110 @@ exports[`devTools - select user container compiles 1`] = `
   userId={[Function String]}
   users={[Function Array]}
 >
-  <dev-tools-select-user /><dev-tools-back />
+  <dev-tools-select-user>
+    <div
+      class="govuk-width-container"
+      pdk-container=""
+      style="display: block;"
+    >
+      <h1
+        class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+        pdk-margin-vertical="8"
+        pdk-typography="heading-xlarge"
+      >
+         Developer tools 
+      </h1>
+      <h3
+        class="govuk-heading-m"
+        pdk-typography="heading-medium"
+      >
+        Select a user
+      </h3>
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field>
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <pdk-select
+              class="ng-untouched ng-pristine ng-valid"
+              id="selectUser"
+              name="userId"
+              placeholder="---Please select---"
+              required=""
+            >
+              <select
+                class="govuk-select"
+                id="selectUser"
+                name="userId"
+                required=""
+              >
+                <option
+                  value=""
+                >
+                  ---Please select---
+                </option>
+                <option
+                  value="fcd33f4a-f286-4f3a-a8b9-d6e05fbbc3f7"
+                >
+                   Trevor Lawson (Tvl) 
+                </option>
+                <option
+                  value="b07c8200-5d04-4266-9521-c2312734a9d3"
+                >
+                   David Brown (Tfl) 
+                </option>
+                <option
+                  value="919d2dd0-5f6e-4f7b-89d5-31be30840770"
+                >
+                   Frank Michaels (DVLA) 
+                </option>
+                <option
+                  value="c2a3f402-7b77-4b0a-b284-454ff0c58e06"
+                >
+                   Glenn Thornton (Warwickshire Police) 
+                </option>
+                <option
+                  value="a9448185-672e-4aea-94d6-5988355ed459"
+                >
+                   Helen Sutton (Court Admin) 
+                </option>
+                <option
+                  value="735b9bf6-2f4c-4947-92af-b607c7d2880f"
+                >
+                   Evan Roberts (Legal advisor) 
+                </option>
+                <option
+                  value="a085e359-6069-4694-8820-7810e7dfe762"
+                >
+                   Erica Wilson (Legal advisor) 
+                </option>
+              </select>
+            </pdk-select>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            pdk-button=""
+            type="submit"
+          >
+             Confirm identity 
+          </button>
+        </pdk-form-group>
+      </form>
+    </div>
+  </dev-tools-select-user><dev-tools-back>
+    <button
+      class="govuk-button"
+      pdk-button=""
+    >
+       Back 
+    </button>
+  </dev-tools-back>
 </dev-tools-select-user-page>
 `;

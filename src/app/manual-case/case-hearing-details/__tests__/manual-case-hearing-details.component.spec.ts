@@ -1,22 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ManualCaseHearingDetailsComponent } from '../manual-case-hearing-details.component';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ControlContainer, NgForm } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkDateInputModule,
-  PdkAutosuggestModule,
-  PdkGridModule,
-  PdkRadioInputModule,
-  PdkTextareaModule,
-  PdkInputModule
-} from '@cpp/pdk';
-import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
-import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ManualCase } from '../../../core/model/manual-case';
-import { SharedModule } from '../../../shared';
+import { AgeMockPipe } from '../../../shared/pipes/mock-pipes/age-mock.pipe';
+import { TranslateMockPipe } from '../../../shared/pipes/mock-pipes/translate-mock.pipe';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('Manual case initial hearing', () => {
   let fixture: ComponentFixture<ManualCaseHearingDetailsComponent>;
@@ -36,25 +26,17 @@ describe('Manual case initial hearing', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseHearingDetailsComponent],
-      imports: [
-        CommonModule,
-        SharedModule,
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkInputModule,
-        PdkDateInputModule,
-        PdkAutosuggestModule,
-        PdkRadioInputModule,
-        PdkTextareaModule,
-        PdkCoreModule,
-        PdkGridModule,
-        MockPipesModule,
-        RouterTestingModule
-      ],
+      imports: [FormsModule, AgeMockPipe, TranslateMockPipe, ManualCaseHearingDetailsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm]
+      providers: [
+        ControlContainer,
+        NgForm,
+        provideRouter([]),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseHearingDetailsComponent);

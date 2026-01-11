@@ -16,7 +16,8 @@ exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updat
 >
   <p>
     <a
-      href="/defendant-details-updates"
+      class="govuk-link govuk-section-break govuk-section-break--s"
+      href="/"
       id="defendant-details-updates-link"
       pdk-link=""
       pdk-section="small"

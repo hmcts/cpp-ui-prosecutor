@@ -20,58 +20,76 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
       </div>
     </pdk-inset-text>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case reference number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case status
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Prosecutor
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Notice served
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId2"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -80,43 +98,48 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TVL26116MZMMI
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              Completed 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TVL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             27 Jan 2019
           </td>
         </tr>
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId3"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -125,43 +148,48 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TFL84598WRMSZ
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              No plea received 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TFL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             04 Mar 1989
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             28 Jan 2019
           </td>
         </tr>
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId4"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -170,43 +198,48 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TFL92613WXH4V
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              No plea received - ready for decision 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TFL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             14 Mar 1949
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             28 Jan 2019
           </td>
         </tr>
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId5"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -215,29 +248,32 @@ exports[`ListSearchResultsComponent should compile correctly with multiple resul
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TVL26120QYR99
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              Completed 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TVL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             05 Mar 1981
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             27 Jan 2019
@@ -306,7 +342,8 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
               class="govuk-warning-text__text"
             >
               <span
-                class="govuk-warning-text__assistive"
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
               >
                 Warning
               </span>
@@ -317,53 +354,71 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
       </div>
     </pdk-inset-text>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case reference number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case status
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Prosecutor
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Notice served
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <pdk-warning-text
@@ -383,13 +438,14 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
                   class="govuk-warning-text__text"
                 >
                   <span
-                    class="govuk-warning-text__assistive"
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
                   >
                     Warning
                   </span>
                   <a
                     class="govuk-link"
-                    href="/case-overview/caseId1"
+                    href="/"
                     pdk-link=""
                   >
                     <b>
@@ -401,29 +457,32 @@ exports[`ListSearchResultsComponent should compile correctly with single result 
             </pdk-warning-text>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TFL26168N21T5
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              Completed 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TFL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             11 Mar 1957
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             27 Jan 2019
@@ -455,58 +514,76 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
       </div>
     </pdk-inset-text>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case reference number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case status
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Prosecutor
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Notice served
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId2"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -515,12 +592,14 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TVL26116MZMMI
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              Referred for court hearing 
@@ -532,18 +611,19 @@ exports[`ListSearchResultsComponent should display Awaiting listing for refer to
             </div>
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TVL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             27 Jan 2019
@@ -575,58 +655,76 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
       </div>
     </pdk-inset-text>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case reference number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Case status
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Prosecutor
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Notice served
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
               class="govuk-link"
-              href="/case-overview/caseId2"
+              href="/"
               pdk-link=""
             >
               <b>
@@ -635,29 +733,32 @@ exports[`ListSearchResultsComponent should display the 'Upload and enter postal 
             </a>
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
             TVL26116MZMMI
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              No plea received - ready for decision 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             TVL
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             04 Mar 1985
           </td>
           <td
-            class="no-wrap"
+            class="no-wrap govuk-table__cell"
             pdk-table-cell=""
           >
             27 Jan 2019

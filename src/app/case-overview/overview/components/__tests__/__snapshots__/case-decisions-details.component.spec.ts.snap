@@ -15,6 +15,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -28,13 +29,14 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -44,9 +46,10 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -64,7 +67,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -79,7 +82,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -100,7 +103,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -115,7 +118,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -136,7 +139,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -151,7 +154,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -172,7 +175,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -187,7 +190,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -208,7 +211,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -223,7 +226,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -244,7 +247,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -259,7 +262,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -280,7 +283,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -295,7 +298,7 @@ exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -329,6 +332,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -342,13 +346,14 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -358,9 +363,10 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -378,7 +384,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -393,7 +399,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -414,7 +420,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -429,7 +435,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -450,7 +456,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -465,7 +471,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -486,7 +492,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -501,7 +507,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -522,7 +528,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -537,7 +543,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -558,7 +564,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -573,7 +579,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -594,7 +600,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -609,7 +615,7 @@ exports[`CaseDecisionsDetailsComponent should not show press restriction when un
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -643,6 +649,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -656,13 +663,14 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -672,9 +680,10 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -683,14 +692,45 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
         </pdk-grid>
       </pdk-grid>
       <application-decision-details>
-         application-decision-details 
+        <pdk-grid
+          container=""
+          data-role="application-decision-details"
+        >
+          <pdk-grid
+            one-third=""
+          >
+            <div
+              class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              pdk-margin-left="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Application
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            two-thirds=""
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              pdk-padding-vertical="2"
+            >
+              <p
+                data-role="application-rejected"
+              >
+                 Refused: Test reason 
+              </p>
+            </div>
+          </pdk-grid>
+        </pdk-grid>
       </application-decision-details>
     </div>
     <div
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -705,7 +745,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -726,7 +766,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -741,7 +781,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -762,7 +802,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -777,7 +817,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -798,7 +838,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -813,7 +853,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -834,7 +874,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -849,7 +889,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -870,7 +910,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -885,7 +925,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -906,7 +946,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -921,7 +961,7 @@ exports[`CaseDecisionsDetailsComponent should show application 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -955,6 +995,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -968,13 +1009,14 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -984,9 +1026,10 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -1004,7 +1047,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1019,7 +1062,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1066,7 +1109,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1081,7 +1124,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1128,7 +1171,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1143,7 +1186,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1190,7 +1233,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1205,7 +1248,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1252,7 +1295,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1267,7 +1310,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1314,7 +1357,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1329,7 +1372,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1376,7 +1419,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1391,7 +1434,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction revoked whe
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1451,6 +1494,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -1464,13 +1508,14 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -1480,9 +1525,10 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -1500,7 +1546,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1515,7 +1561,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1562,7 +1608,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1577,7 +1623,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1624,7 +1670,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1639,7 +1685,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1686,7 +1732,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1701,7 +1747,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1748,7 +1794,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1763,7 +1809,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1810,7 +1856,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1825,7 +1871,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1872,7 +1918,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -1887,7 +1933,7 @@ exports[`CaseDecisionsDetailsComponent should show press restriction when reques
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -1947,6 +1993,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           one-third=""
         >
           <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-margin-left="2"
             pdk-padding-vertical="2"
           >
@@ -1960,13 +2007,14 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           two-thirds=""
         >
           <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
             pdk-padding-vertical="2"
           >
             <div>
                1 December 2018 
             </div>
             <div>
-               4:10pm 
+               12:00am 
             </div>
             <div
               class="pre-line"
@@ -1976,9 +2024,10 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
                Legal Adviser: Mark Adams 
             </div>
             <div>
-               Magistrate: Jenny 
+              Magistrate: Jenny
             </div>
             <div
+              class="pdk-!-text-color-dark-grey"
               pdk-text-colour="dark-grey"
             >
                Wimbledon Magistrates' Court 
@@ -1996,7 +2045,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId1"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2011,7 +2060,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2032,7 +2081,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId2"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2047,7 +2096,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2068,7 +2117,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId3"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2083,7 +2132,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2104,7 +2153,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId4"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2119,7 +2168,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2140,7 +2189,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId5"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2155,7 +2204,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2176,7 +2225,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId6"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2191,7 +2240,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >
@@ -2212,7 +2261,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
       data-role="offence-decision-container-offenceId7"
     >
       <pdk-grid
-        class="govuk-grid-row"
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
         container=""
         pdk-padding-horizontal="2"
       >
@@ -2227,7 +2276,7 @@ exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
           </div>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-column-two-thirds"
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
           pdk-padding-bottom="2"
           two-thirds=""
         >

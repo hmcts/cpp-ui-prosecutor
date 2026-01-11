@@ -1,6 +1,6 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { DateValidator } from '../index';
@@ -12,8 +12,7 @@ describe('Date Format Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestDateValidatorComponent, DateValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestDateValidatorComponent, DateValidator]
     });
 
     fixture = TestBed.createComponent(TestDateValidatorComponent);
@@ -58,8 +57,9 @@ describe('Date Format Validator', () => {
     <form>
       <input name="someDate" [ngModel]="model" validateDate />
     </form>
-  `
+  `,
+  imports: [FormsModule, DateValidator]
 })
-class TestDateValidatorComponent {
+class TestDateValidatorComponent implements Validators {
   model: string;
 }

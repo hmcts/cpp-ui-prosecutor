@@ -1,4 +1,3 @@
-import { Store } from '@ngrx/store';
 import { TestBed } from '@angular/core/testing';
 import { cold } from 'jasmine-marbles';
 import { DatesToAvoidGuard } from '../dates-to-avoid.guard';
@@ -12,14 +11,13 @@ describe('DatesToAvoidGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [],
       providers: [DatesToAvoidGuard, provideMockStore({ initialState })],
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(DatesToAvoidGuard);
-    store = TestBed.get(Store);
-    spyOn(store, 'dispatch');
+    guard = TestBed.inject(DatesToAvoidGuard);
+    store = TestBed.inject(MockStore);
+    jest.spyOn(store, 'dispatch');
   });
 
   it('should fetch the data from store and resolve the route', () => {

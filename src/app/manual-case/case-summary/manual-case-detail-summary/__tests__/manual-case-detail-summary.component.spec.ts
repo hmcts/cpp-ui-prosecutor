@@ -1,13 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { ManualCase } from '../../../../core/model/manual-case';
-import { MockPipesModule } from '../../../../shared/pipes/mock-pipes';
-import { DashPipe } from '../../../../shared/pipes/dash/dash.pipe';
 import { ManualCaseDetailSummaryComponent } from '../manual-case-detail-summary.component';
 import { CourtCentreWithRooms, PoliceForce } from '../../../../core';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('ManualCaseDetailSummaryComponent', () => {
   let component: ManualCaseDetailSummaryComponent;
@@ -15,10 +12,16 @@ describe('ManualCaseDetailSummaryComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseDetailSummaryComponent, DashPipe],
-      imports: [CommonModule, MockPipesModule, RouterTestingModule],
+      imports: [ManualCaseDetailSummaryComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm]
+      providers: [
+        ControlContainer,
+        NgForm,
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseDetailSummaryComponent);

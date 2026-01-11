@@ -10,7 +10,7 @@ describe('Manual Case NavigationParam Service', () => {
       providers: [ManualCaseNavigationService]
     });
 
-    caseNavService = TestBed.get(ManualCaseNavigationService);
+    caseNavService = TestBed.inject(ManualCaseNavigationService);
   });
 
   afterEach(() => {

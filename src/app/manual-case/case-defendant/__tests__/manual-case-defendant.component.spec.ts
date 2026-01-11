@@ -1,15 +1,15 @@
-import { CommonModule, Location } from '@angular/common';
-import { Shallow } from 'shallow-render';
-import { FormsModule } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule, PdkGridModule, PdkRadioInputModule } from '@cpp/pdk';
-import { ManualCaseModule } from '../../manual-case.module';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 import { ManualCaseDefendant } from '../../../core/model';
-import { SharedModule } from '../../../shared';
 import { ManualCaseDefendantComponent } from '../manual-case-defendant.component';
 import { ManualCaseDefendantStateService } from '../../defendants-state.service';
 import { ManualCase } from '../../../core/model/manual-case';
-import { RouterTestingModule } from '@angular/router/testing';
-import { RouterModule } from '@angular/router';
+import { Location } from '@angular/common';
+import { By } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideMockStore } from '@ngrx/store/testing';
 
 const emptyDefendant = {
   id: '',
@@ -57,147 +57,151 @@ const prosecutorsMock = [
 
 describe('Manual Case Defendant Component', () => {
   window.scroll = jest.fn();
-  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
 
-  let component: Shallow<ManualCaseDefendantComponent>;
+  let fixture: ComponentFixture<TestManualCaseDefendantComponent>;
+  let component: ManualCaseDefendantComponent;
 
   const generateUUID = jest.fn();
   generateUUID.mockReturnValue('uuid-001');
 
   beforeEach(() => {
-    component = new Shallow(ManualCaseDefendantComponent, ManualCaseModule)
-      .provide([Location, ManualCaseDefendantStateService])
-      .mock(Location, { back: () => undefined })
-      .mock(ManualCaseDefendantStateService, {
-        initialise: () => jest.fn(),
-        load: () => manualCaseDefendants[0],
-        previous: () => manualCaseDefendants[0],
-        addNew: () => emptyDefendant,
-        next: () => null
-      })
-      .dontMock(
-        CommonModule,
-        SharedModule,
-        FormsModule,
-        PdkRadioInputModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkGridModule
-      );
-  });
+    const mockDefendantStateService = {
+      initialise: jest.fn(),
+      load: jest.fn(() => manualCaseDefendants[0]),
+      previous: jest.fn(() => manualCaseDefendants[0]),
+      addNew: jest.fn(() => emptyDefendant),
+      next: jest.fn(() => null),
+      iterateDefendant: false,
+      counter: '1'
+    };
 
-  function renderComponent(defendant, caseType, manualCaseDetail, prosecutors) {
-    return component.render(
-      `<manual-case-defendant
-            [manualCaseDefendants]="manualCaseDefendants"
-            [manualCaseDetail]="manualCaseDetail"
-            [manualCaseType]="manualCaseType"
-            [prosecutors]="prosecutors"
-            (submitFormData)="handleFormSubmit($event)">
-       </manual-case-defendant>`,
-      {
-        bind: {
-          manualCaseDefendants: defendant,
-          manualCaseType: caseType,
-          manualCaseDetail,
-          prosecutors,
-          handleFormSubmit: () => jest.fn()
+    const mockLocation = {
+      back: jest.fn()
+    };
+
+    TestBed.configureTestingModule({
+      imports: [TestManualCaseDefendantComponent, ManualCaseDefendantComponent],
+      providers: [
+        provideRouter([]),
+        provideMockStore({
+          initialState: {}
+        }),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        }),
+        {
+          provide: Location,
+          useValue: mockLocation
+        },
+        {
+          provide: ManualCaseDefendantStateService,
+          useValue: mockDefendantStateService
         }
-      }
-    );
-  }
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      teardown: { destroyAfterEach: false }
+    });
 
-  it('should render the component for the Ist defendant from the list', async () => {
-    const { fixture, instance } = await renderComponent(
-      manualCaseDefendants,
-      'Q',
-      manualCaseDetailMock,
-      prosecutorsMock
-    );
-
-    expect(instance).toBeTruthy();
-    expect(fixture).toMatchSnapshot();
-    expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
+    fixture = TestBed.createComponent(TestManualCaseDefendantComponent);
+    component = fixture.debugElement.query(By.directive(ManualCaseDefendantComponent)).componentInstance;
   });
 
-  it('should call submitData() to add a new defendant and do not navigate to the next page', async () => {
-    const { bindings, instance } = await renderComponent(
-      manualCaseDefendants,
-      'Q',
-      manualCaseDetailMock,
-      prosecutorsMock
-    );
+  it('should render the component for the Ist defendant from the list', () => {
+    fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+    fixture.componentInstance.manualCaseType = 'Q';
+    fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+    fixture.componentInstance.prosecutors = prosecutorsMock;
+    fixture.detectChanges();
+
+    expect(component).toBeTruthy();
+    expect(fixture).toMatchSnapshot();
+    expect(component.defendantType).toEqual('ORGANISATION');
+    expect(component.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
+  });
+
+  it('should call submitData() to add a new defendant and do not navigate to the next page', () => {
+    fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+    fixture.componentInstance.manualCaseType = 'Q';
+    fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+    fixture.componentInstance.prosecutors = prosecutorsMock;
+    fixture.detectChanges();
 
     const formData = {
       action: 'add',
       defendantToStore: { id: 'def-id-001' }
     };
 
-    instance.submitData(formData);
+    component.submitData(formData);
 
-    expect(instance.defendantType).toEqual('INDIVIDUAL');
-    expect(instance.editDefendant.id).toEqual('');
-    expect(instance.errors).toBeFalsy();
-    expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
+    expect(component.defendantType).toEqual('INDIVIDUAL');
+    expect(component.editDefendant.id).toEqual('');
+    expect(component.errors).toBeFalsy();
+    expect(fixture.componentInstance.handleFormSubmit).toHaveBeenCalledWith({
       navigateToNextPage: false,
       defendantToStore: formData.defendantToStore
     });
   });
 
-  it('should call submitData() to post the defendant and continue navigating to the next page', async () => {
-    const { bindings, instance } = await renderComponent(
-      manualCaseDefendants,
-      'Q',
-      manualCaseDetailMock,
-      prosecutorsMock
-    );
+  it('should call submitData() to post the defendant and continue navigating to the next page', () => {
+    fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+    fixture.componentInstance.manualCaseType = 'Q';
+    fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+    fixture.componentInstance.prosecutors = prosecutorsMock;
+    fixture.detectChanges();
 
     const formData = {
       action: 'continue',
       defendantToStore: { id: 'def-id-001' }
     };
 
-    instance.submitData(formData);
+    component.submitData(formData);
 
-    expect(instance.editDefendant).toBeNull();
-    expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
+    expect(component.editDefendant).toBeNull();
+    expect(fixture.componentInstance.handleFormSubmit).toHaveBeenCalledWith({
       navigateToNextPage: true,
       defendantToStore: formData.defendantToStore
     });
   });
 
-  it('should call back() load the previous defendant from the in memory list of defendant', async () => {
-    const { instance } = await renderComponent(manualCaseDefendants, 'Q', manualCaseDetailMock, prosecutorsMock);
+  it('should call back() load the previous defendant from the in memory list of defendant', () => {
+    fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+    fixture.componentInstance.manualCaseType = 'Q';
+    fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+    fixture.componentInstance.prosecutors = prosecutorsMock;
+    fixture.detectChanges();
 
-    instance.back();
+    component.back();
 
-    expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
+    expect(component.defendantType).toEqual('ORGANISATION');
+    expect(component.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
   });
 
-  it('should render the component for SJP case and legal entity defendant', async () => {
-    const { fixture, instance } = await renderComponent(
-      manualCaseDefendants,
-      'J',
-      manualCaseDetailMock,
-      prosecutorsMock
-    );
+  it('should render the component for SJP case and legal entity defendant', () => {
+    fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+    fixture.componentInstance.prosecutors = prosecutorsMock;
+    fixture.detectChanges();
 
-    expect(instance).toBeTruthy();
+    expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
-    expect(instance.defendantType).toEqual('ORGANISATION');
-    expect(instance.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
+    expect(component.defendantType).toEqual('ORGANISATION');
+    expect(component.editDefendant.organisationName).toEqual(manualCaseDefendants[0].organisationName);
   });
 
   describe('#isPoliceProsecutor', () => {
-    it('should return true if case prosecutor is police', async () => {
-      const { instance } = await renderComponent(manualCaseDefendants, 'Q', manualCaseDetailMock, prosecutorsMock);
+    it('should return true if case prosecutor is police', () => {
+      fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+      fixture.componentInstance.manualCaseType = 'Q';
+      fixture.componentInstance.manualCaseDetail = manualCaseDetailMock;
+      fixture.componentInstance.prosecutors = prosecutorsMock;
+      fixture.detectChanges();
 
-      expect(instance.isPoliceProsecutor()).toEqual(true);
+      expect(component.isPoliceProsecutor()).toEqual(true);
     });
 
-    it('should return false if prosecutor is not police', async () => {
+    it('should return false if prosecutor is not police', () => {
       const manualCaseDetailMockWithNoPolice = {
         caseId: 'case-id-mock',
         prosecutor: {
@@ -205,29 +209,51 @@ describe('Manual Case Defendant Component', () => {
           prosecutingAuthority: 'TVL'
         }
       } as ManualCase;
-      const { instance } = await renderComponent(
-        manualCaseDefendants,
-        'Q',
-        manualCaseDetailMockWithNoPolice,
-        prosecutorsMock
-      );
 
-      expect(instance.isPoliceProsecutor()).toEqual(false);
+      fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+      fixture.componentInstance.manualCaseType = 'Q';
+      fixture.componentInstance.manualCaseDetail = manualCaseDetailMockWithNoPolice;
+      fixture.componentInstance.prosecutors = prosecutorsMock;
+      fixture.detectChanges();
+
+      expect(component.isPoliceProsecutor()).toEqual(false);
     });
 
-    it('should return false if no prosecutor exist', async () => {
+    it('should return false if no prosecutor exist', () => {
       const manualCaseDetailMockWithNoProsecutor = {
         ...manualCaseDetailMock,
         prosecutor: null
       };
-      const { instance } = await renderComponent(
-        manualCaseDefendants,
-        'Q',
-        manualCaseDetailMockWithNoProsecutor,
-        prosecutorsMock
-      );
 
-      expect(instance.isPoliceProsecutor()).toEqual(false);
+      fixture.componentInstance.manualCaseDefendants = manualCaseDefendants;
+      fixture.componentInstance.manualCaseType = 'Q';
+      fixture.componentInstance.manualCaseDetail = manualCaseDetailMockWithNoProsecutor;
+      fixture.componentInstance.prosecutors = prosecutorsMock;
+      fixture.detectChanges();
+
+      expect(component.isPoliceProsecutor()).toEqual(false);
     });
   });
+
+  @Component({
+    selector: 'manual-case-defendant-test',
+    template: `
+      <manual-case-defendant
+        [manualCaseDefendants]="manualCaseDefendants"
+        [manualCaseDetail]="manualCaseDetail"
+        [manualCaseType]="manualCaseType"
+        [prosecutors]="prosecutors"
+        (submitFormData)="handleFormSubmit($event)"
+      >
+      </manual-case-defendant>
+    `,
+    imports: [ManualCaseDefendantComponent]
+  })
+  class TestManualCaseDefendantComponent {
+    manualCaseDefendants: ManualCaseDefendant[];
+    manualCaseType: string;
+    manualCaseDetail: ManualCase;
+    prosecutors: any[];
+    handleFormSubmit = jest.fn();
+  }
 });

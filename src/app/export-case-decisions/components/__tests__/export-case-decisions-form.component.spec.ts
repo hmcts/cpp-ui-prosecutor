@@ -1,24 +1,32 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ExportCaseDecisionsFormComponent } from '../export-case-decisions-form.component';
-import { FromToDatesModule } from '../../../shared/from-to-dates/from-to-dates.module';
 import { By } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { PdkFormModule } from '@cpp/pdk';
+import { FormsModule, NgForm } from '@angular/forms';
+import { ActivatedRoute, provideRouter } from '@angular/router';
+import { InputValues } from '../../../shared/from-to-dates/from-to-dates.component';
+import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 
 describe('ExportCaseDecisionsComponent', () => {
   let fixture: ComponentFixture<TestExportCaseDecisionsFormComponent>;
-  let formComponent: ExportCaseDecisionsFormComponent;
+  let formComponent: MockExportCaseDecisionsFormComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ExportCaseDecisionsFormComponent, TestExportCaseDecisionsFormComponent],
-      imports: [FormsModule, PdkFormModule, FromToDatesModule],
+      providers: [{ provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }, provideRouter([])],
       teardown: { destroyAfterEach: false }
+    }).overrideComponent(TestExportCaseDecisionsFormComponent, {
+      remove: {
+        imports: [ExportCaseDecisionsFormComponent]
+      },
+      add: {
+        imports: [MockExportCaseDecisionsFormComponent]
+      }
     });
 
     fixture = TestBed.createComponent(TestExportCaseDecisionsFormComponent);
-    formComponent = fixture.debugElement.query(By.directive(ExportCaseDecisionsFormComponent)).componentInstance;
+    fixture.detectChanges();
+    formComponent = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent)).componentInstance;
   });
 
   it('should compile correctly', () => {
@@ -52,10 +60,36 @@ describe('ExportCaseDecisionsComponent', () => {
     template: `
       <export-case-decisions-form (loadCaseCount)="loadCaseCount($event)" (errors)="errors($event)">
       </export-case-decisions-form>
-    `
+    `,
+    imports: [FormsModule, ExportCaseDecisionsFormComponent]
   })
   class TestExportCaseDecisionsFormComponent {
     loadCaseCount = jest.fn();
     errors = jest.fn();
+  }
+
+  @Component({
+    selector: 'export-case-decisions-form',
+    template: `
+      <form (ngSubmit)="submit(form.value)">
+        <input type="text" [(ngModel)]="currentDate" name="currentDate" />
+        <button type="submit">Search</button>
+      </form>
+    `,
+    imports: [FormsModule]
+  })
+  class MockExportCaseDecisionsFormComponent {
+    currentDate = '';
+    @ViewChild(NgForm, { static: true }) form: NgForm;
+    @Output() loadCaseCount: EventEmitter<InputValues> = new EventEmitter();
+    @Output() errors: EventEmitter<ValidationError[]> = new EventEmitter();
+
+    submit(formValue: any) {
+      this.errors.emit();
+      this.loadCaseCount.emit({
+        fromDate: this.currentDate,
+        toDate: this.currentDate
+      });
+    }
   }
 });

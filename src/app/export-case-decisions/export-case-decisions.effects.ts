@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
@@ -13,6 +13,9 @@ import { ApiError } from '../core/actions/api';
 
 @Injectable()
 export class ExportCaseDecisionsEffects {
+  private actions$ = inject(Actions);
+  private miReport = inject(MiReportService);
+
   loadCaseCount$: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType<LoadResultedCaseCount>(ResultedCaseCountActionTypes.LOAD_RESULTED_CASE_COUNT),
@@ -23,5 +26,5 @@ export class ExportCaseDecisionsEffects {
     )
   );
 
-  constructor(private actions$: Actions, private miReport: MiReportService) {}
+  constructor() {}
 }

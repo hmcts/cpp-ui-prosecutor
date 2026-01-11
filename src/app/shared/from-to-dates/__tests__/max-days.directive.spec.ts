@@ -16,8 +16,7 @@ describe('`maxDays` directive', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [MaxDaysDirective, TestMaxDateValidationComponent],
-      imports: [FormsModule],
+      imports: [FormsModule, TestMaxDateValidationComponent, MaxDaysDirective],
       teardown: { destroyAfterEach: false }
     });
 
@@ -60,7 +59,8 @@ describe('`maxDays` directive', () => {
       <form>
         <input type="text" name="toDate" ngModel [maxDays]="maxDays" [fromDate]="fromDate" />
       </form>
-    `
+    `,
+    imports: [FormsModule, MaxDaysDirective]
   })
   class TestMaxDateValidationComponent {
     fromDate: string;

@@ -1,37 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
-import {
-  AgePipeModule,
-  CaseStatusPipeModule,
-  DefendantNamePipeModule,
-  FormatAddressPipeModule,
-  FormatDatePipeModule,
-  IfEmptyPipeModule
-} from '../../../../shared/pipes';
+
 import { DefendantDetailsPersonComponent } from '../defendant-details-person.component';
-import { CommonModule } from '@angular/common';
 import { PersonalDetails } from '../../../../contexts/sjp';
+import { DateOfBirthComponent } from '../../../../shared/date-of-birth/date-of-birth.component';
 
 describe('DefendantDetailsPersonComponent', () => {
   let fixture: ComponentFixture<TestDefendantDetailsPersonComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantDetailsPersonComponent, TestDefendantDetailsPersonComponent, MockDateOfBirthComponent],
-      imports: [
-        CommonModule,
-        PdkCoreModule,
-        PdkPageHeaderModule,
-        PdkGridModule,
-        AgePipeModule,
-        IfEmptyPipeModule,
-        DefendantNamePipeModule,
-        CaseStatusPipeModule,
-        FormatDatePipeModule,
-        FormatAddressPipeModule
-      ],
+      imports: [TestDefendantDetailsPersonComponent, MockDateOfBirthComponent, DefendantDetailsPersonComponent],
       teardown: { destroyAfterEach: false }
     });
 
@@ -49,7 +29,8 @@ describe('DefendantDetailsPersonComponent', () => {
     selector: 'defendant-details-test',
     template: `
       <defendant-details-person [personDetails]="personDetails"> </defendant-details-person>
-    `
+    `,
+    imports: [DefendantDetailsPersonComponent]
   })
   class TestDefendantDetailsPersonComponent {
     personDetails: PersonalDetails;
@@ -60,7 +41,8 @@ describe('DefendantDetailsPersonComponent', () => {
     template: `
       <div>dateOfBirth: {{ dateOfBirth }}</div>
       <div>defaultSubstitute: {{ defaultSubstitute }}</div>
-    `
+    `,
+    imports: [DateOfBirthComponent]
   })
   class MockDateOfBirthComponent {
     @Input() dateOfBirth: string;

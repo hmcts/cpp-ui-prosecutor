@@ -1,95 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DevTools - dashboard container compiles 1`] = `
-<dev-tools-page
-  fakeSession={[Function Object]}
+exports[`DashboardContainer should compile correctly 1`] = `
+<prosecutor-dashboard-container
+  casesMissingSjpNoticeCount$={[Function _Store]}
+  defendantDetailsUpdates$={[Function _Store]}
+  nonPoliceProsecutor$={[Function _Store]}
+  pleadedNotGuiltyCasesDetail$={[Function _Store]}
+  store={[Function _Store]}
 >
-  <dev-tools-dashboard>
-    <pdk-grid
-      class="govuk-grid-row"
-      container=""
-    >
-      <pdk-grid
-        class="govuk-grid-column-one-half"
-        one-half=""
-      >
-        <h1
-          class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
-          pdk-margin-vertical="8"
-          pdk-typography="heading-xlarge"
-        >
-          Developer tools
-        </h1>
-      </pdk-grid>
-    </pdk-grid>
-    <pdk-grid
-      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-grid-row"
-      container=""
-      pdk-margin-vertical="8"
-    >
-      <pdk-grid
-        class="govuk-grid-column-two-thirds"
-        two-thirds=""
-      >
-        <span
-          class="govuk-body-m"
-          pdk-typography="body-medium"
-        >
-          You are not currently logged in as a user.
-        </span>
-      </pdk-grid>
-    </pdk-grid>
-    <pdk-grid
-      class="govuk-grid-row"
-      container=""
-    >
-      <pdk-grid
-        class="govuk-grid-column-one-quarter"
-        one-quarter=""
-      >
-        <ul
-          class="govuk-!-margin-top-6 govuk-list"
-          pdk-list=""
-          pdk-margin-top="6"
-        >
-          <li>
-            <a
-              class="govuk-link"
-              pdk-link=""
-              routerlink="select-user"
-            >
-              Select user
-            </a>
-          </li>
-        </ul>
-      </pdk-grid>
-      <pdk-grid
-        class="govuk-grid-column-one-quarter"
-        one-quarter=""
-      >
-        <ul
-          class="govuk-!-margin-top-6 govuk-list"
-          pdk-list=""
-          pdk-margin-top="6"
-        >
-          <li>
-            <a
-              class="govuk-link"
-              pdk-link=""
-              routerlink="/user"
-            >
-              Prosecutor
-            </a>
-          </li>
-        </ul>
-      </pdk-grid>
-    </pdk-grid>
-  </dev-tools-dashboard><dev-tools-back>
-    <button
-      pdk-button=""
-    >
-       Back 
-    </button>
-  </dev-tools-back>
-</dev-tools-page>
+  <prosecutor-dashboard>
+    <span>
+      {
+    "cases": [
+      {
+        "caseId": "f10c88de-e577-47df-98af-c8944c5094d0",
+        "pleaEntry": "2019-03-14T11:54:08.167Z",
+        "firstName": "Dennon Dennon Dennon",
+        "lastName": "Smith",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "address5": "London",
+          "postcode": "LE3 1AB"
+        },
+        "referenceNumber": "TVL640029AGBG",
+        "region": "London",
+        "dateOfBirth": "1975-03-25"
+      },
+      {
+        "caseId": "facca075-d7a5-4f66-ac54-c2e0a2b47d77",
+        "pleaEntry": "2019-03-19T16:56:14.915Z",
+        "firstName": "Stefanos Stefanos Stefanos",
+        "lastName": "Smith",
+        "address": {
+          "address1": "Flat 1, Armageddon House",
+          "address2": "13 Old Road",
+          "address3": "Giggleswick",
+          "address4": "Merton",
+          "address5": "London",
+          "postcode": "SE21 1AB"
+        },
+        "referenceNumber": "TVL143468N9KN",
+        "region": "London",
+        "dateOfBirth": "2001-03-23"
+      }
+    ],
+    "count": 2
+  }
+    </span>
+    <span>
+      {
+    "total": 2,
+    "defendantDetailsUpdates": [
+      {
+        "firstName": "John",
+        "lastName": "Jones",
+        "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
+        "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+        "region": "London",
+        "caseUrn": "TVL7105556000",
+        "dateOfBirth": "1977-10-17",
+        "nameUpdated": true,
+        "dateOfBirthUpdated": true,
+        "addressUpdated": true,
+        "updatedOn": "2019-04-04"
+      },
+      {
+        "firstName": "Bob",
+        "lastName": "Last",
+        "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
+        "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+        "region": "London",
+        "caseUrn": "TVL9772166531",
+        "dateOfBirth": "1991-02-19",
+        "nameUpdated": true,
+        "dateOfBirthUpdated": true,
+        "addressUpdated": true,
+        "updatedOn": "2019-04-04"
+      }
+    ]
+  }
+    </span>
+    <span>
+    </span>
+  </prosecutor-dashboard>
+</prosecutor-dashboard-container>
 `;

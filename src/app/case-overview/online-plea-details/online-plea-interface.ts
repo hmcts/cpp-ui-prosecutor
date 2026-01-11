@@ -6,8 +6,9 @@ import {
   OnlinePleaPersonalDetails,
   Outgoings,
   OnlinePleaEmployment,
-  Address
-} from 'src/app/contexts/sjp';
+  Address,
+  EmploymentStatusType
+} from '../../contexts/sjp';
 
 export interface OnlinePleaUi extends OnlinePlea {
   pleaDetails: PleaDetailsUi;
@@ -52,8 +53,8 @@ export interface OutgoingsUi extends Outgoings {
 export interface OnlinePleaEmploymentUi extends OnlinePleaEmployment {
   wantGiveIncomeBenefitDetails?: boolean;
   incomeAfterTaxType?: string;
-  status?: string;
-  details?: string;
+  status: EmploymentStatusType;
+  details: string;
 }
 
 export interface OnlinePleaLegalEntityDetails {

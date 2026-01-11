@@ -1,8 +1,7 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { ChangeDetectorRef } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, provideRouter, Router } from '@angular/router';
 import { AppRouterContainer } from '../app.router.container';
-import { RouterTestingModule } from '@angular/router/testing';
 import { BehaviorSubject } from 'rxjs';
 
 describe('App router component', () => {
@@ -14,8 +13,7 @@ describe('App router component', () => {
     mockRouterEvent = new BehaviorSubject<any>({});
 
     TestBed.configureTestingModule({
-      declarations: [AppRouterContainer],
-      imports: [RouterTestingModule],
+      imports: [AppRouterContainer],
       providers: [
         ChangeDetectorRef,
         {
@@ -25,7 +23,8 @@ describe('App router component', () => {
             url: 'home#fragment',
             parseUrl: mockParseUrl
           }
-        }
+        },
+        provideRouter([])
       ],
       schemas: [],
       teardown: { destroyAfterEach: false }

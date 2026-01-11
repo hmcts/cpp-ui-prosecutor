@@ -1,4 +1,3 @@
-import { Store } from '@ngrx/store';
 import { TestBed } from '@angular/core/testing';
 import { cold } from 'jasmine-marbles';
 import { initialState } from '../../../core/reducers/api.reducer';
@@ -23,7 +22,6 @@ describe('OffenceWithdrawReasonsGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [],
       providers: [
         OffenceWithdrawalReasonsGuard,
         {
@@ -43,18 +41,16 @@ describe('OffenceWithdrawReasonsGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(OffenceWithdrawalReasonsGuard);
-    store = TestBed.get(Store);
-    referenceDataService = TestBed.get(ReferenceDataService);
+    guard = TestBed.inject(OffenceWithdrawalReasonsGuard);
+    store = TestBed.inject(MockStore);
+    referenceDataService = TestBed.inject(ReferenceDataService);
     navigate.mockReturnValue(Promise.resolve(true));
-    spyOn(store, 'dispatch');
+    jest.spyOn(store, 'dispatch');
   });
 
   it('should allow state transition when offence withdrawal reasons already in store', () => {
     store.setState({ offenceWithdrawalReasons });
-
     const expected = cold('(a|)', { a: true });
-
     expect(guard.canActivate()).toBeObservable(expected);
     expect(store.dispatch).not.toHaveBeenCalled();
     expect(referenceDataService.getOffenceWithdrawalReasons).not.toHaveBeenCalled();

@@ -38,14 +38,16 @@
           {{ getProsecutorCode() }}
         </td>
       </tr>
-      <tr *ngIf="prosecutionCase?.originatingPoliceForce?.name" pdk-table-row class="table-row">
-        <th pdk-table-header="row" class="header">
-          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.ORIGINATING_POLICE_FORCE' | translate }}
-        </th>
-        <td pdk-table-cell class="data" data-role="originating-police-force">
-          {{ prosecutionCase.originatingPoliceForce.name }}
-        </td>
-      </tr>
+      @if (prosecutionCase?.originatingPoliceForce?.name) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.ORIGINATING_POLICE_FORCE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="originating-police-force">
+            {{ prosecutionCase.originatingPoliceForce.name }}
+          </td>
+        </tr>
+      }
       <tr pdk-table-row class="table-row">
         <th pdk-table-header="row" class="header">
           {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.COST_CLAIMED' | translate }}
@@ -54,22 +56,26 @@
           {{ prosecutionCase?.prosecutor?.appliedProsecutorCosts | currency: 'GBP' }}
         </td>
       </tr>
-      <tr *ngIf="prosecutionCase.initiationCode === 'S'" pdk-table-row class="table-row">
-        <th pdk-table-header="row" class="header">
-          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.SUMMONS_REQUEST_RECEIVED_DATE' | translate }}
-        </th>
-        <td pdk-table-cell class="data" data-role="summons-request-receipt-date">
-          {{ prosecutionCase?.prosecutor?.summonsRequestReceivedDate | date: 'd MMMM yyyy' }}
-        </td>
-      </tr>
-      <tr *ngIf="isSJPOrRequisition()" pdk-table-row class="table-row">
-        <th pdk-table-header="row" class="header">
-          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.CHARGE_POSTING_DATE' | translate }}
-        </th>
-        <td pdk-table-cell class="data" data-role="charge-posting-date">
-          {{ prosecutionCase?.prosecutor?.chargePostingDate | date: 'd MMMM yyyy' }}
-        </td>
-      </tr>
+      @if (prosecutionCase.initiationCode === 'S') {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.SUMMONS_REQUEST_RECEIVED_DATE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="summons-request-receipt-date">
+            {{ prosecutionCase?.prosecutor?.summonsRequestReceivedDate | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      }
+      @if (isSJPOrRequisition()) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.CHARGE_POSTING_DATE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="charge-posting-date">
+            {{ prosecutionCase?.prosecutor?.chargePostingDate | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      }
     </tbody>
   </table>
 </div>

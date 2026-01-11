@@ -9,12 +9,16 @@ exports[`Manual case Initial Hearing summary should render the component 1`] = `
   initialHearing={[Function Object]}
 >
   <div
-    class="hearing-details"
+    class="hearing-details govuk-!-margin-bottom-7"
     pdk-margin-bottom="7"
   >
     <pdk-divider
       class="margin-top-0"
-    />
+    >
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
     <pdk-grid
       container=""
     >

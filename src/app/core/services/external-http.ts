@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { GetRequestOptions } from '@cpp/core';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
@@ -13,7 +13,10 @@ import { State } from '../reducers';
   providedIn: 'root'
 })
 export class ExternalHttp {
-  constructor(private http: HttpClient, private store: Store<State>) {}
+  private http = inject(HttpClient);
+  private store = inject<Store<State>>(Store);
+
+  constructor() {}
 
   get<T>(url: string, options: GetRequestOptions): Observable<T> {
     const request: RequestOptions = {

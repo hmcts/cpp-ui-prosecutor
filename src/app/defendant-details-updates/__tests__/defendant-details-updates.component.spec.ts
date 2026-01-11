@@ -1,21 +1,12 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
 import { DefendantDetailsUpdatesComponent } from '../defendant-details-updates.component';
-import { DefendantNamePipeModule } from '../../shared/pipes';
-import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
-import {
-  PdkButtonModule,
-  PdkDividerModule,
-  PdkFormModule,
-  PdkGridModule,
-  PdkInsetTextModule,
-  PdkSelectModule,
-  PdkWarningTextModule
-} from '@cpp/pdk';
 import { Component, Input } from '@angular/core';
 import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
-import { MockModule } from '../../shared/mock-components/mock.module';
+import { WhatChangedComponent } from '../what-changed/what-changed.component';
+import { ActivatedRoute } from '@angular/router';
+import { provideRouter } from '@angular/router';
+import { JsonPipe } from '@angular/common';
 
 let component: DefendantDetailsUpdatesComponent;
 let fixture: ComponentFixture<DefendantDetailsUpdatesComponent>;
@@ -24,33 +15,29 @@ describe('DefendantDetailsUpdatesComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [DefendantDetailsUpdatesComponent, MockWhatChangedComponent],
-        imports: [
-          RouterTestingModule,
-          PdkButtonModule,
-          PdkGridModule,
-          PdkSelectModule,
-          PdkFormModule,
-          PdkInsetTextModule,
-          DefendantNamePipeModule,
-          MockModule,
-          PdkWarningTextModule,
-          PdkDividerModule
-        ],
+        providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
         teardown: { destroyAfterEach: false }
-      });
-
-      fixture = TestBed.createComponent(DefendantDetailsUpdatesComponent);
-      component = fixture.componentInstance;
+      })
+        .overrideComponent(DefendantDetailsUpdatesComponent, {
+          remove: {
+            imports: [WhatChangedComponent]
+          },
+          add: {
+            imports: [MockWhatChangedComponent]
+          }
+        })
+        .compileComponents()
+        .then(() => {
+          fixture = TestBed.createComponent(DefendantDetailsUpdatesComponent);
+          component = fixture.componentInstance;
+        });
     })
   );
 
   describe('when the component is loaded with less than 50 updates', () => {
-    beforeEach(
-      waitForAsync(() => {
-        component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
-      })
-    );
+    beforeEach(() => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+    });
 
     it('should display defendant details updates with no limit message', () => {
       fixture.detectChanges();
@@ -59,14 +46,12 @@ describe('DefendantDetailsUpdatesComponent', () => {
   });
 
   describe('when the component is loaded with more than 50 updates', () => {
-    beforeEach(
-      waitForAsync(() => {
-        component.defendantDetailsUpdates = {
-          total: 51,
-          defendantDetailsUpdates: MOCK_DEFENDANT_DETAILS_UPDATES.defendantDetailsUpdates
-        };
-      })
-    );
+    beforeEach(() => {
+      component.defendantDetailsUpdates = {
+        total: 51,
+        defendantDetailsUpdates: MOCK_DEFENDANT_DETAILS_UPDATES.defendantDetailsUpdates
+      };
+    });
 
     it('should display defendant details updates with limit message', () => {
       fixture.detectChanges();
@@ -84,7 +69,7 @@ describe('DefendantDetailsUpdatesComponent', () => {
         defendantId: DEFENDANT_ID
       } as AcknowledgeDefendantDetailsUpdatesParam;
 
-      spyOn(component.acknowledgeDefendantDetailsUpdatesEmitter, 'emit');
+      jest.spyOn(component.acknowledgeDefendantDetailsUpdatesEmitter, 'emit');
 
       component.acknowledgeDefendendantDetailsUpdate(CASE_ID, DEFENDANT_ID);
 
@@ -99,7 +84,8 @@ describe('DefendantDetailsUpdatesComponent', () => {
   template: `
     <span>{{ defendantDetailsUpdate | json }}</span>
     <span>{{ region | json }}</span>
-  `
+  `,
+  imports: [JsonPipe]
 })
 class MockWhatChangedComponent {
   @Input() defendantDetailsUpdate;

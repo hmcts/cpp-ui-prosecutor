@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { reducers } from '../../reducers';
@@ -33,8 +33,8 @@ describe('Nationalities Guard', () => {
     apiSuccessCaseDetails$ = cold('-(a|)', { a: nationalties });
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         NationalitiesGuard,
         {
           provide: ReferenceDataService,
@@ -51,8 +51,8 @@ describe('Nationalities Guard', () => {
       ]
     });
 
-    guard = TestBed.get(NationalitiesGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(NationalitiesGuard);
+    store = TestBed.inject(Store);
   });
 
   describe('The store is empty', () => {

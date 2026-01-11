@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OffenceType, OffenceTypeDetails } from '../../../core/model/reference-data-interfaces/offence-type';
 import { CppHttp } from '@cpp/core';
@@ -6,9 +6,14 @@ import { map } from 'rxjs/operators';
 
 const baseUrl = '/referencedataoffences-query-api/query/api/rest/referencedataoffences/offences/';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PCFReferenceDataOffenceService {
-  constructor(private readonly api: CppHttp) {}
+  private readonly api = inject(CppHttp);
+
+
+  constructor() {}
 
   searchOffenceTypes(query: string, limit: number, offenceDate = ''): Observable<OffenceType[]> {
     const offenceDateString = offenceDate && `&offenceDate=${offenceDate}`;

@@ -1,57 +1,63 @@
 <div [formGroup]="estimateInputs" class="form-estimate">
-  <div class="form-group" *ngIf="weeksEnabled">
-    <pdk-form-field label="Weeks" [errorMessages]="getErrors('weeks')">
-      <input
-        pdk-text-input
-        [pdk-input]="2"
-        [id]="id + '-weeks'"
-        [ariaDescribedBy]="getAriaDescribedbyFor('weeks')"
-        formControlName="weeks"
-        type="text"
-        name="estimateWeeks"
-        pattern="[0-9]*"
-        autocomplete="off"
-        (focus)="handleFocusInput($event)"
-        (blur)="handleBlurInput($event)"
-      />
-    </pdk-form-field>
-  </div>
+  @if (weeksEnabled) {
+    <div class="form-group">
+      <pdk-form-field label="Weeks" [errorMessages]="getErrors('weeks')">
+        <input
+          pdk-text-input
+          [pdk-input]="2"
+          [id]="id + '-weeks'"
+         [ariaDescribedBy]="getAriaDescribedbyFor('weeks')"
+          formControlName="weeks"
+          type="text"
+          name="estimateWeeks"
+          pattern="[0-9]*"
+          autocomplete="off"
+          (focus)="handleFocusInput($event)"
+          (blur)="handleBlurInput($event)"
+          />
+      </pdk-form-field>
+    </div>
+  }
 
-  <div class="form-group" *ngIf="daysEnabled">
-    <pdk-form-field label="Days" [errorMessages]="getErrors('days')">
-      <input
-        pdk-text-input
-        [pdk-input]="2"
-        [id]="id + '-days'"
+  @if (daysEnabled) {
+    <div class="form-group">
+      <pdk-form-field label="Days" [errorMessages]="getErrors('days')">
+        <input
+          pdk-text-input
+          [pdk-input]="2"
+          [id]="id + '-days'"
         [ariaDescribedBy]="getAriaDescribedbyFor('days')"
-        formControlName="days"
-        type="text"
-        name="estimateDays"
-        pattern="[0-9]*"
-        autocomplete="off"
-        (focus)="handleFocusInput($event)"
-        (blur)="handleBlurInput($event)"
-      />
-    </pdk-form-field>
-  </div>
+          formControlName="days"
+          type="text"
+          name="estimateDays"
+          pattern="[0-9]*"
+          autocomplete="off"
+          (focus)="handleFocusInput($event)"
+          (blur)="handleBlurInput($event)"
+          />
+      </pdk-form-field>
+    </div>
+  }
 
-  <div class="form-group" *ngIf="hoursEnabled">
-    <pdk-form-field label="Hours" [errorMessages]="getErrors('hours')">
-      <input
-        pdk-text-input
-        [pdk-input]="2"
-        [id]="id + '-hours'"
+  @if (hoursEnabled) {
+    <div class="form-group">
+      <pdk-form-field label="Hours" [errorMessages]="getErrors('hours')">
+        <input
+          pdk-text-input
+          [pdk-input]="2"
+          [id]="id + '-hours'"
         [ariaDescribedBy]="getAriaDescribedbyFor('hours')"
-        formControlName="hours"
-        type="text"
-        name="estimateHours"
-        pattern="[0-9]*"
-        autocomplete="off"
-        (focus)="handleFocusInput($event)"
-        (blur)="handleBlurInput($event)"
-      />
-    </pdk-form-field>
-  </div>
+          formControlName="hours"
+          type="text"
+          name="estimateHours"
+          pattern="[0-9]*"
+          autocomplete="off"
+          (focus)="handleFocusInput($event)"
+          (blur)="handleBlurInput($event)"
+          />
+      </pdk-form-field>
+    </div>
+  }
 
   <div class="form-group">
     <pdk-form-field label="Minutes" [errorMessages]="getErrors('minutes')">
@@ -67,7 +73,7 @@
         autocomplete="off"
         (focus)="handleFocusInput($event)"
         (blur)="handleBlurInput($event)"
-      />
+        />
     </pdk-form-field>
   </div>
 </div>

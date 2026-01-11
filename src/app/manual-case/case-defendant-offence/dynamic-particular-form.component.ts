@@ -8,14 +8,29 @@ import {
   Output,
   EventEmitter,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  inject
 } from '@angular/core';
 import { flatten } from 'lodash';
 import { ControlValueAccessor, NgForm, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ValidationError } from '@cpp/pdk';
+import {
+  ValidationError,
+  PdkFormFieldComponent,
+  PdkSelectComponent,
+  PdkDateInputComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkForm,
+  PdkCore,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective,
+  PdkResizeDirective
+} from '@cpp/pdk';
 import { Element, ElementType, OffenceWordingMessage } from '../../core/model/manual-case';
 import { FormListOption } from '../../core/model/court-document';
-
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 // The entirety of this component needs
 // a complete rewrite. it is difficult to maintain in my opinion
 @Component({
@@ -40,20 +55,38 @@ import { FormListOption } from '../../core/model/court-document';
       multi: true
     }
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    PdkFormFieldComponent,
+    PdkSelectComponent,
+    PdkDateInputComponent,
+    PdkRadioGroupComponent,
+    PdkRadioButtonComponent,
+    TranslateModule,
+    FormsModule,
+    PdkForm,
+    PdkCore,
+    PdkTextInput,
+    PdkInput,
+    PdkButtonDirective,
+    PdkSelectComponent,
+    PdkResizeDirective
+  ]
 })
 export class DynamicParticularFormComponent implements ControlValueAccessor, OnChanges {
+  private cdr = inject(ChangeDetectorRef);
+
   @Input() arrestDateValue: string;
   @Input() offenceDateTypes: FormListOption[];
   @Input() offenceWording: string;
-  @Output() formError = new EventEmitter<ValidationError[]>();
+  @Output() formError = new EventEmitter<ValidationError[] | any>();
   @ViewChild(NgForm) form: NgForm;
   errors: ValidationError[] = [];
   data: OffenceWordingMessage;
   isEditMode = true;
   onChange = (_: OffenceWordingMessage) => {};
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (

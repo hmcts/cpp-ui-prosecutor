@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { DefendantDetailsUpdatesLinkDataGuard } from '../defendant-details-updates-data.guard';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { DefendantDetailsUpdatesResult, SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
@@ -19,8 +19,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
 
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         DefendantDetailsUpdatesLinkDataGuard,
         {
           provide: SjpService,
@@ -38,8 +38,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    defendantDetailsUpdatesDataGuard = TestBed.get(DefendantDetailsUpdatesLinkDataGuard);
-    store = TestBed.get(Store);
+    defendantDetailsUpdatesDataGuard = TestBed.inject(DefendantDetailsUpdatesLinkDataGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

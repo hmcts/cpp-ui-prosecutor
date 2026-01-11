@@ -1,14 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideState, provideStore, Store } from '@ngrx/store';
 import { pcfReferencedataReducer, PcfReferenceDataState } from '../../../../../core/reducers/pcf-reference-data';
 import { NationalityAutoSuggestComponent } from '../nationality-auto-suggest.component';
-import { PdkAutosuggestModule, PdkCoreModule, PdkFormModule, PdkTextInputModule } from '@cpp/pdk';
 import { FormsModule } from '@angular/forms';
 import { Nationality } from '../../../../../core/model/reference-data-interfaces';
 import { By } from '@angular/platform-browser';
 import { LoadNationalitiesAction, LoadNationalitieSuccessAction } from '../../../../../core/actions';
+import { reducers } from '../../../../../core/reducers';
+import { PdkAutosuggestLiteComponent, PdkForm, PdkFormFieldComponent } from '@cpp/pdk';
 
 describe('NationalityAutoSuggestComponent', () => {
   const nationalities = [
@@ -35,24 +35,16 @@ describe('NationalityAutoSuggestComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        FormsModule,
-        PdkFormModule,
-        PdkAutosuggestModule,
-        PdkCoreModule,
-        PdkTextInputModule,
-        StoreModule.forRoot(() => null, {
-          runtimeChecks: {}
-        }),
-        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer)
+      imports: [NationalityAutoSuggestTestComponent, NationalityAutoSuggestComponent],
+      providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
+        provideState('pcfReferenceData', pcfReferencedataReducer)
       ],
-      declarations: [NationalityAutoSuggestComponent, NationalityAutoSuggestTestComponent]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     });
 
     fixture = TestBed.createComponent(NationalityAutoSuggestTestComponent);
-
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
   });
 
   it('should render the component correctly', () => {
@@ -111,7 +103,7 @@ describe('NationalityAutoSuggestComponent', () => {
   });
 
   it('should dispatch action to load  nationality', async () => {
-    spyOn(store, 'dispatch');
+    jest.spyOn(store, 'dispatch');
     fixture.componentInstance.getNationalitiesOnMount = true;
 
     fixture.detectChanges();
@@ -137,7 +129,8 @@ describe('NationalityAutoSuggestComponent', () => {
       </pdk-form-field>
       <button type="submit">Submit</button>
     </form>
-  `
+  `,
+  imports: [FormsModule, PdkForm, NationalityAutoSuggestComponent, PdkFormFieldComponent, PdkAutosuggestLiteComponent]
 })
 class NationalityAutoSuggestTestComponent {
   selectedValue;

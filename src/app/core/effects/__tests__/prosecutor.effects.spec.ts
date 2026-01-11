@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Prosecutor, ReferenceDataActions, ReferenceDataService } from '@cpp/reference-data';
 import { Actions } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';
-import { StoreModule } from '@ngrx/store';
+import { Action, provideStore } from '@ngrx/store';
 import { cold, hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
 import { ReferenceDataService as PCFReferenceDataService } from '../../../contexts/reference-data';
@@ -13,7 +13,7 @@ import { reducers } from '../../reducers';
 import { ProsecutorEffects } from '../prosecutor.effects';
 
 describe('ProsecutorEffects', () => {
-  let actions$: Observable<any>;
+  let actions$ = new Observable<Action>();
 
   let effects: ProsecutorEffects;
   let navigate: jest.Mock;
@@ -26,8 +26,8 @@ describe('ProsecutorEffects', () => {
     mockCreateProsecutor = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         ProsecutorEffects,
         provideMockActions(() => actions$),
         {
@@ -47,11 +47,13 @@ describe('ProsecutorEffects', () => {
           useValue: {
             createProsecutor: mockCreateProsecutor
           }
-        }
-      ]
+        },
+        provideMockActions(() => actions$)
+      ],
+      teardown: { destroyAfterEach: false }
     });
-    effects = TestBed.get(ProsecutorEffects);
-    actions$ = TestBed.get(Actions);
+    effects = TestBed.inject(ProsecutorEffects);
+    actions$ = TestBed.inject(Actions);
   });
 
   describe('createProsecutor$', () => {

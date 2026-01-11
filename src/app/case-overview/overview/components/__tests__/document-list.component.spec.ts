@@ -1,18 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
-import { CommonModule } from '@angular/common';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import { DocumentListComponent } from '../document-list.component';
 import { CaseDocument } from '../../../../contexts/sjp';
+import { DownloadDocumentComponent } from '../../../common/download-document/download-document.component';
+import { provideCppCoreHttpServices } from '@cpp/core';
+import { provideStore } from '@ngrx/store';
 
 describe('DocumentListComponent', () => {
   let fixture: ComponentFixture<TestDocumentListComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DocumentListComponent, MockDownloadDocumentComponent, TestDocumentListComponent],
-      imports: [CommonModule, PdkCoreModule, PdkGridModule],
+      imports: [DocumentListComponent, MockDownloadDocumentComponent, TestDocumentListComponent],
+      providers: [provideCppCoreHttpServices(), provideStore()],
       teardown: { destroyAfterEach: false }
     });
 
@@ -29,7 +30,8 @@ describe('DocumentListComponent', () => {
     selector: 'document-list-test',
     template: `
       <document-list [documents]="documents"> </document-list>
-    `
+    `,
+    imports: [DocumentListComponent, DownloadDocumentComponent]
   })
   class TestDocumentListComponent {
     documents: CaseDocument[];

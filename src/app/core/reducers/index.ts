@@ -19,6 +19,10 @@ import {
 import { CasesMissingSjpNoticeResult } from '../../contexts/sjp';
 import { PcfReferenceDataState, pcfReferencedataReducer } from './pcf-reference-data';
 import { manualCaseDetailsReducer, ManualCaseDetailsState } from './manual-case-details';
+import { searchReducer, SearchState } from '../../search/search.reducer';
+import { casesMissingSjpNoticesReducer as casesMissingSjpNoticesListReducer, CasesMissingSjpNoticesState } from '../../cases-missing-sjp-notices/cases-missing-sjp-notices.reducer';
+import { exportCaseDecisionsReducer, CaseCountResultState } from '../../export-case-decisions/export-case-decisions.reducer';
+import { caseOverviewReducer, CaseOverviewState } from '../../case-overview/case-overview.reducer';
 
 export interface State extends UsersGroupsState, ReferenceDataState {
   readonly api: ApiState;
@@ -31,6 +35,10 @@ export interface State extends UsersGroupsState, ReferenceDataState {
   readonly region: RegionState;
   readonly pcfReferenceData: PcfReferenceDataState;
   readonly manualCaseDetails: ManualCaseDetailsState;
+  readonly search: SearchState;
+  readonly casesMissingNotices: CasesMissingSjpNoticesState;
+  readonly resultedCaseCount: CaseCountResultState;
+  readonly caseOverview: CaseOverviewState;
 }
 
 export const reducers = {
@@ -45,5 +53,9 @@ export const reducers = {
   pcfReferenceData: pcfReferencedataReducer,
   referenceData: CoreReferenceDataReducer,
   manualCaseDetails: manualCaseDetailsReducer,
-  usersGroups
+  usersGroups,
+  search: searchReducer,
+  casesMissingNotices: casesMissingSjpNoticesListReducer,
+  resultedCaseCount: exportCaseDecisionsReducer,
+  caseOverview: caseOverviewReducer
 };

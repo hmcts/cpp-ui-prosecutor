@@ -30,7 +30,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Address line 1 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address1"
             maxlength="50"
             name="address1"
@@ -51,7 +51,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Address line 2 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address2"
             maxlength="50"
             name="address2"
@@ -72,7 +72,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Address line 3 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address3"
             maxlength="50"
             name="address3"
@@ -93,7 +93,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Address line 4 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address4"
             maxlength="50"
             name="address4"
@@ -114,7 +114,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Address line 5 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address5"
             maxlength="50"
             name="address5"
@@ -135,7 +135,7 @@ exports[`Address Input component all fields optional correctly compiles 1`] = `
              Postcode (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-postcode"
             maxlength="8"
             name="postcode"
@@ -185,7 +185,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Enter at least one line of address 
           </pdk-error-message>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input form-control-error"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid form-control-error"
             id="address-control-undefined-GENERATED_ID-address1"
             maxlength="50"
             name="address1"
@@ -207,7 +207,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Address line 2 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address2"
             maxlength="50"
             name="address2"
@@ -229,7 +229,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Address line 3 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address3"
             maxlength="50"
             name="address3"
@@ -251,7 +251,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Address line 4 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address4"
             maxlength="50"
             name="address4"
@@ -273,7 +273,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Address line 5 (optional) 
           </label>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
             id="address-control-undefined-GENERATED_ID-address5"
             maxlength="50"
             name="address5"
@@ -301,7 +301,7 @@ exports[`Address Input component with required field(s) should compile correctly
              Postcode must be in the right format with a space, for example AB1 2CD 
           </pdk-error-message>
           <input
-            class="form-control ng-untouched ng-pristine ng-invalid govuk-input form-control-error"
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid form-control-error"
             id="address-control-undefined-GENERATED_ID-postcode"
             maxlength="8"
             name="postcode"
@@ -324,9 +324,9 @@ exports[`Address Input component with required field(s) should compile correctly
 
 exports[`Address Input component with required field(s) should raise a \`postcodeFormat\` validation error when postcode does not have a space 1`] = `
 [
-  "address-control-XX-postcode",
+  "address-control-undefined-GENERATED_ID-postcode",
   {
-    "id": "address-error-XX-postcode",
+    "id": "address-error-undefined-GENERATED_ID-postcode",
     "message": "Postcode must be in the right format with a space, for example AB1 2CD",
   },
 ]
@@ -334,9 +334,9 @@ exports[`Address Input component with required field(s) should raise a \`postcod
 
 exports[`Address Input component with required field(s) should raise a \`postcodeFormat\` validation error when postcode field is invalidated 1`] = `
 [
-  "address-control-XX-postcode",
+  "address-control-undefined-GENERATED_ID-postcode",
   {
-    "id": "address-error-XX-postcode",
+    "id": "address-error-undefined-GENERATED_ID-postcode",
     "message": "Postcode must be in the right format with a space, for example AB1 2CD",
   },
 ]
@@ -344,9 +344,9 @@ exports[`Address Input component with required field(s) should raise a \`postcod
 
 exports[`Address Input component with required field(s) should raise an \`addressRequired\` validation error when required field(s) is/are empty 1`] = `
 [
-  "address-control-XX-address1",
+  "address-control-undefined-GENERATED_ID-address1",
   {
-    "id": "address-error-XX-address1",
+    "id": "address-error-undefined-GENERATED_ID-address1",
     "message": "Enter at least one line of address",
   },
 ]
@@ -354,9 +354,9 @@ exports[`Address Input component with required field(s) should raise an \`addres
 
 exports[`Address Input component with required field(s) should raise an \`postcodeRequired\` validation error when required postcode field is empty 1`] = `
 [
-  "address-control-XX-postcode",
+  "address-control-undefined-GENERATED_ID-postcode",
   {
-    "id": "address-error-XX-postcode",
+    "id": "address-error-undefined-GENERATED_ID-postcode",
     "message": "Postcode must be in the right format with a space, for example AB1 2CD",
   },
 ]
@@ -364,9 +364,9 @@ exports[`Address Input component with required field(s) should raise an \`postco
 
 exports[`Address Input component with required field(s) should raises a \`address1SpecialChar\` validation error when address line 1 starts with a special char 1`] = `
 [
-  "address-control-XX-address1",
+  "address-control-undefined-GENERATED_ID-address1",
   {
-    "id": "address-error-XX-address1",
+    "id": "address-error-undefined-GENERATED_ID-address1",
     "message": "Address line 1 can only start with letters or numbers",
   },
 ]

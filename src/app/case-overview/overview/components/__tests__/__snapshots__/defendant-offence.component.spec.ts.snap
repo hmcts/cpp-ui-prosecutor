@@ -13,22 +13,6 @@ exports[`DefendantOffenceComponent should compile correctly 1`] = `
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId1",
-    "offenceCode": "CA03013",
-    "title": "offence title 1",
-    "legislation": "legislation 2",
-    "offenceSequenceNumber": 1,
-    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-19",
-    "chargeDate": "2019-01-24",
-    "compensation": 30,
-    "withdrawalRequestReasonId": "1",
-    "withdrawalRequestReason": "Insufficient Evidence",
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
-  } 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
@@ -93,25 +77,45 @@ exports[`DefendantOffenceComponent should compile correctly with offence warning
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId1",
-    "offenceCode": "CA03013",
-    "title": "offence title 1",
-    "legislation": "legislation 2",
-    "offenceSequenceNumber": 1,
-    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-19",
-    "chargeDate": "2019-01-24",
-    "compensation": 30,
-    "withdrawalRequestReasonId": "1",
-    "withdrawalRequestReason": "Insufficient Evidence",
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London ..",
-    "outOfTime": true,
-    "notInEffect": true,
-    "imprisonable": true
-  } 
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Offence may be out of time 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Offence not in effect - refer to court and see SJPN for offence details 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Imprisonable offence 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
@@ -176,24 +180,6 @@ exports[`DefendantOffenceComponent should compile correctly with the offence is 
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId2",
-    "offenceCode": "CA03013",
-    "title": "offence title 2",
-    "legislation": "legislation 1",
-    "offenceSequenceNumber": 2,
-    "wording": "On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction ",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-15",
-    "chargeDate": "2019-01-27",
-    "compensation": 23,
-    "plea": "NOT_GUILTY",
-    "pleaMethod": "POSTAL",
-    "pleaDate": "2019-02-27T15:32:20.593Z",
-    "pendingWithdrawal": true,
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London Underground staff regarding your train journey and the associated fare.The facts of this incidents are now being considered and I must advise you that legal proceedings may be initiated against you regarding this matter in accordance with the LU prosecution policy"
-  } 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
@@ -258,22 +244,6 @@ exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there 
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId1",
-    "offenceCode": "CA03013",
-    "title": "offence title 1",
-    "legislation": "legislation 2",
-    "offenceSequenceNumber": 1,
-    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-19",
-    "chargeDate": "2019-01-24",
-    "compensation": 30,
-    "withdrawalRequestReasonId": "1",
-    "withdrawalRequestReason": "with reason",
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
-  } 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
@@ -343,22 +313,6 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the c
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId1",
-    "offenceCode": "CA03013",
-    "title": "offence title 1",
-    "legislation": "legislation 2",
-    "offenceSequenceNumber": 1,
-    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-19",
-    "chargeDate": "2019-01-24",
-    "compensation": 30,
-    "withdrawalRequestReasonId": "1",
-    "withdrawalRequestReason": "some reason",
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
-  } 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"
@@ -423,22 +377,6 @@ exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the r
        Offence 
     </h2>
     <defendant-offence-warnings>
-       {
-    "id": "offenceId1",
-    "offenceCode": "CA03013",
-    "title": "offence title 1",
-    "legislation": "legislation 2",
-    "offenceSequenceNumber": 1,
-    "wording": "On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on ..",
-    "cjsCode": "CA03013",
-    "sequenceNumber": 1,
-    "startDate": "2019-01-19",
-    "chargeDate": "2019-01-24",
-    "compensation": 30,
-    "withdrawalRequestReasonId": null,
-    "withdrawalRequestReason": "",
-    "prosecutionFacts": "An incident took place at GREEN PARK station whereby you were spoken to by a member of London .."
-  } 
     </defendant-offence-warnings>
     <h3
       class="govuk-heading-m"

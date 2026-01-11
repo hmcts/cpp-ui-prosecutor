@@ -1,18 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  forwardRef,
-  Injector,
-  Input,
-  OnInit,
-  Output,
-  EventEmitter,
-  OnDestroy,
-  Optional,
-  OnChanges,
-  SimpleChanges
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Injector, Input, OnInit, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges, inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -24,10 +10,12 @@ import {
   FormGroup,
   Validator,
   ValidationErrors,
-  Validators
+  Validators,
+  FormsModule,
+  ReactiveFormsModule
 } from '@angular/forms';
 
-import { FormComponent, FormFieldControl, generateId } from '@cpp/pdk';
+import { FormFieldControl, generateId, PdkForm, PdkFormComponent, PdkCheckboxComponent, PdkErrorMessageComponent, PdkCore, PdkTextInputDirective, PdkFormFieldComponent, PdkFormGroupComponent, PdkLabelDirective, PdkFormGroupDirective, PdkTextInput } from '@cpp/pdk';
 import { Subject } from 'rxjs';
 import { takeUntil, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Address } from '../../../../app/core';
@@ -82,10 +70,10 @@ const defaultErrorMessages = (validatedFormElements: string[], customErrorMessag
 };
 
 @Component({
-  selector: 'input-address',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <ng-container *ngIf="showFixedAbode">
+    selector: 'input-address',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
+    @if (showFixedAbode) {
       <pdk-form-field>
         <pdk-checkbox
           data-role="no-fixed-abode"
@@ -98,21 +86,22 @@ const defaultErrorMessages = (validatedFormElements: string[], customErrorMessag
           No fixed abode
         </pdk-checkbox>
       </pdk-form-field>
-    </ng-container>
-
+    }
+    
     <div [formGroup]="address" pdk-margin-bottom="6">
-      <ng-container *ngFor="let formItem of formElements; trackBy: trackByFn; index as i">
+      @for (formItem of formElements; track trackByFn(formItem.name); let i = $index) {
         <pdk-form-group [hasError]="getHasError(formItem.name)">
           <label [for]="'address-control-' + identifier + '-' + formItem.name" pdk-label="small" pdk-margin-top="6">
             {{ formItem.label }}
           </label>
-          <pdk-error-message
-            *ngIf="getHasError(formItem.name)"
-            [id]="'address-error-' + identifier + '-' + formItem.name"
-            [errors]="getErrors(formItem.name)"
-            [errorMessages]="errorMessages"
-          >
-          </pdk-error-message>
+          @if (getHasError(formItem.name)) {
+            <pdk-error-message
+              [id]="'address-error-' + identifier + '-' + formItem.name"
+              [errors]="getErrors(formItem.name)"
+              [errorMessages]="errorMessages"
+              >
+            </pdk-error-message>
+          }
           <input
             [id]="'address-control-' + identifier + '-' + formItem.name"
             type="text"
@@ -126,29 +115,35 @@ const defaultErrorMessages = (validatedFormElements: string[], customErrorMessag
             pdk-text-input
             pdk-input
           />
+
         </pdk-form-group>
-      </ng-container>
+      }
     </div>
-  `,
-  providers: [
-    {
-      provide: FormFieldControl,
-      useExisting: AddressInputComponent
-    },
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => AddressInputComponent),
-      multi: true
-    },
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => AddressInputComponent),
-      multi: true
-    }
-  ]
+    `,
+    providers: [
+        {
+            provide: FormFieldControl,
+            useExisting: AddressInputComponent
+        },
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => AddressInputComponent),
+            multi: true
+        },
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => AddressInputComponent),
+            multi: true
+        }
+    ],
+    imports: [PdkCore, PdkForm, PdkCheckboxComponent, PdkErrorMessageComponent, PdkTextInputDirective, FormsModule, ReactiveFormsModule, PdkFormFieldComponent, PdkFormGroupComponent, PdkForm, PdkLabelDirective, PdkFormGroupDirective, PdkTextInput]
 })
 export class AddressInputComponent
   implements OnInit, ControlValueAccessor, FormFieldControl, Validator, OnDestroy, OnChanges {
+  private pdkForm = inject(PdkFormComponent, { optional: true })!;
+  private cdr = inject(ChangeDetectorRef);
+  private injector = inject(Injector);
+
   @Input() id: string;
   @Input() ariaDescribedBy: string | null;
   @Input() isRequired: boolean;
@@ -177,13 +172,11 @@ export class AddressInputComponent
 
   private propagateChange = (_: any) => {};
 
-  constructor(
-    @Optional() private pdkForm: FormComponent,
-    private cdr: ChangeDetectorRef,
-    fb: FormBuilder,
-    ngForm: NgForm,
-    private injector: Injector
-  ) {
+  constructor() {
+    const cdr = this.cdr;
+    const fb = inject(FormBuilder);
+    const ngForm = inject(NgForm);
+
     this.address = fb.group(EMPTY_ADDRESS_OBJ);
 
     this.address.valueChanges.pipe(takeUntil(this.subscription$)).subscribe((val: any) => {

@@ -7,7 +7,7 @@ import {
   ReferredToOpenCourtOffenceDecision,
   OffenceDecision,
   NoSeparatePenaltyOffenceDecision
-} from 'src/app/contexts/sjp';
+} from '../../../../contexts/sjp';
 
 export const MOCK_CASE_DECISION: CaseDecision = {
   id: 'mock-case-decision-1',
@@ -59,7 +59,7 @@ export const MOCK_CASE_DECISSION_WITH_LEGACY_OFFENCE_DECISION: CaseDecision = {
     sessionId: '9917917f-ab2e-4be6-8e89-97f864450c3e',
     legalAdviserUserId: '31ec3a16-8721-498c-8da5-f099390ee254',
     courtHouseCode: 'B01LY00',
-    courtHouseName: 'Lavender Hill Magistrates\' Court',
+    courtHouseName: "Lavender Hill Magistrates' Court",
     localJusticeAreaNationalCourtCode: '2577',
     startedAt: '2018-12-14T11:16:50.970Z',
     endedAt: '2018-12-14T12:10:28.259Z',
@@ -76,9 +76,9 @@ export const MOCK_CASE_DECISSION_WITH_LEGACY_OFFENCE_DECISION: CaseDecision = {
       offenceId: 'c92d4210-1ce2-49dd-81c1-2542ce4edafa',
       decisionType: 'REFERRED_TO_OPEN_COURT',
       verdict: 'NO_VERDICT',
-      magistratesCourt: 'Lavender Hill Magistrates\' Court',
+      magistratesCourt: "Lavender Hill Magistrates' Court",
       reason: 'For trial',
-      referredToCourt: 'South West London Magistrates\' Court',
+      referredToCourt: "South West London Magistrates' Court",
       referredToDateTime: '2018-12-15T11:16:00.000Z',
       referredToRoom: 1
     } as ReferredToOpenCourtOffenceDecision,

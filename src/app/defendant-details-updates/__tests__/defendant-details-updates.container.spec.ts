@@ -1,37 +1,46 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
-import { reducers, State } from '../../reducers';
+import { provideStore, Store } from '@ngrx/store';
+import { State } from '../../reducers';
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LoadDefendantDetailsUpdates } from '../../core/actions/entities';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
 import { DefendantDetailsUpdatesContainer } from '../defendant-details-updates.container';
 import { AcknowledgeDefendantDetailsUpdates } from '../defendant-details-updates.action';
 import { AcknowledgeDefendantDetailsUpdatesParam } from '../../contexts/sjp';
-import { Router } from '@angular/router';
+import { JsonPipe } from '@angular/common';
+import { DefendantDetailsUpdatesComponent } from '../defendant-details-updates.component';
+import { ActivatedRoute } from '@angular/router';
 
 describe('DefendantDetailsUpdatesContainer', () => {
   let fixture: ComponentFixture<DefendantDetailsUpdatesContainer>;
   let store: Store<State>;
-  let navigate: jest.Mock;
 
   beforeEach(() => {
-    navigate = jest.fn();
     TestBed.configureTestingModule({
-      declarations: [DefendantDetailsUpdatesContainer, MockDefendantDetailsUpdatesComponent],
-      imports: [CommonModule, StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
         {
-          provide: Router,
+          provide: ActivatedRoute,
           useValue: {
-            navigate
+            snapshot: {
+              params: {
+                id: '123'
+              }
+            }
           }
-        }
+        },
+        provideStore()
       ],
       teardown: { destroyAfterEach: false }
+    }).overrideComponent(DefendantDetailsUpdatesContainer, {
+      remove: {
+        imports: [DefendantDetailsUpdatesComponent]
+      },
+      add: {
+        imports: [MockDefendantDetailsUpdatesComponent]
+      }
     });
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
     fixture = TestBed.createComponent(DefendantDetailsUpdatesContainer);
   });
 
@@ -65,7 +74,8 @@ describe('DefendantDetailsUpdatesContainer', () => {
   template: `
     <span>{{ defendantDetailsUpdates | json }}</span>
     <span>{{ region | json }}</span>
-  `
+  `,
+  imports: [JsonPipe]
 })
 class MockDefendantDetailsUpdatesComponent {
   @Input() defendantDetailsUpdates;

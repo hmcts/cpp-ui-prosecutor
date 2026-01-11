@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
-import { exportCaseDecisionsReducer } from '../export-case-decisions.reducer';
+import { provideStore, Store } from '@ngrx/store';
 import { LoadResultedCaseCountSuccess } from '../export-case-decisions.actions';
 import { CaseCountResult } from '../../contexts/mi-report';
 import { FeatureState, getResultedCaseCount } from '../export-case-decisions.selector';
@@ -11,13 +10,10 @@ describe('export case results by date/selectors', () => {
   let state: FeatureState;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
-        StoreModule.forFeature('resultedCaseCount', exportCaseDecisionsReducer)
-      ],
+      providers: [provideStore(reducers, { runtimeChecks: {} })],
       teardown: { destroyAfterEach: false }
     });
-    const store = TestBed.get(Store);
+    const store = TestBed.inject(Store);
     store.dispatch(
       new LoadResultedCaseCountSuccess({
         casesResultedCount: 10

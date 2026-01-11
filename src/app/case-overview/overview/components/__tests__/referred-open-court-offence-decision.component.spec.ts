@@ -1,10 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input, Pipe, PipeTransform } from '@angular/core';
 import { ReferredToOpenCourtOffenceDecision } from '../../../../contexts/sjp';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
 import { ReferredToOpenCourtOffenceDecisionComponent } from '../referred-open-court-offence-decision.component';
-import { SharedModule } from '../../../../shared';
 
 describe('ReferredOpenCourtOffeneDecision', () => {
   let fixture: ComponentFixture<TestReferreredOpenourtOffenceDecisionComponent>;
@@ -17,19 +14,18 @@ describe('ReferredOpenCourtOffeneDecision', () => {
     magistratesCourt: "Lavender Hill Magistrates' Court",
     referredToCourt: "south West London Magistrates' Court",
     referredToRoom: 5,
-    referredToDateTime: '2019-06-04T14:34:54.164Z',
+    referredToDateTime: '2019-06-04',
     offenceSequenceNumber: 1,
     verdict: 'FOUND_GUILTY'
   };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
+      imports: [
         TestReferreredOpenourtOffenceDecisionComponent,
-        ReferredToOpenCourtOffenceDecisionComponent,
-        MockFormatDatePipe
+        MockFormatDatePipe,
+        ReferredToOpenCourtOffenceDecisionComponent
       ],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestReferreredOpenourtOffenceDecisionComponent);
@@ -48,15 +44,14 @@ describe('ReferredOpenCourtOffeneDecision', () => {
     selector: 'referred-open-court-offence-decision-test',
     template: `
       <refer-to-open-court-offence-decision [offenceDecision]="offenceDecision"></refer-to-open-court-offence-decision>
-    `
+    `,
+    imports: [ReferredToOpenCourtOffenceDecisionComponent]
   })
   class TestReferreredOpenourtOffenceDecisionComponent {
     @Input() offenceDecision: ReferredToOpenCourtOffenceDecision;
   }
 
-  @Pipe({
-    name: 'formatDate'
-  })
+  @Pipe({ name: 'formatDate' })
   class MockFormatDatePipe implements PipeTransform {
     transform(value: any) {
       return value;

@@ -2,11 +2,15 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { ManualCase } from '../../../core/model/manual-case';
 import { ManualCasePath } from '../../manual-case.interface';
 import { CourtCentreWithRooms, PoliceForce } from '../../../core';
+import { PdkCore, PdkDividerComponent, PdkGridComponent, PdkTable } from "@cpp/pdk";
+import { TranslateModule } from '@ngx-translate/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'manual-case-detail-summary',
-  templateUrl: './manual-case-detail-summary.component.html',
-  styleUrls: ['./manual-case-detail-summary.component.scss']
+    selector: 'manual-case-detail-summary',
+    templateUrl: './manual-case-detail-summary.component.html',
+    styleUrls: ['./manual-case-detail-summary.component.scss'],
+    imports: [PdkDividerComponent, PdkGridComponent, TranslateModule, DatePipe, PdkCore, PdkTable]
 })
 export class ManualCaseDetailSummaryComponent implements OnInit {
   @Input() manualCase: ManualCase;

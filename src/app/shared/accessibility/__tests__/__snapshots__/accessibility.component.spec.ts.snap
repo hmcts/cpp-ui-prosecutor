@@ -1,244 +1,257 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AccessibilityComponent should render correctly 1`] = `
-<atcm-accessibility>
-  <pdk-grid
-    class="govuk-grid-row"
-    container=""
-  >
+<test-accessibility>
+  <h1>
+    Accessibility statement for ATCM
+  </h1><atcm-accessibility>
     <pdk-grid
-      class="govuk-grid-column-one-third"
-      one-third=""
+      container=""
     >
-      <h1
-        class="heading-medium"
-        style="margin-top: 60px;"
+      <pdk-grid
+        one-third=""
       >
-         Contents 
-      </h1>
-      <ul
-        class="list list-view"
+        <h1
+          class="heading-medium"
+          style="margin-top: 60px;"
+        >
+           atcm.accessibility.nav.title 
+        </h1>
+        <ul
+          class="list list-view"
+        >
+          <li>
+            <a
+              class="govuk-link"
+              fragment="a11y-statement"
+              href="/#a11y-statement"
+              pdk-link=""
+            >
+               atcm.accessibility.nav.statementLink 
+            </a>
+          </li>
+          <li>
+            <a
+              class="govuk-link"
+              fragment="a11y-what-to-do"
+              href="/#a11y-what-to-do"
+              pdk-link=""
+            >
+               atcm.accessibility.nav.whatToDoLink 
+            </a>
+          </li>
+          <li>
+            <a
+              class="govuk-link"
+              fragment="a11y-enforcement-procedure"
+              href="/#a11y-enforcement-procedure"
+              pdk-link=""
+            >
+               atcm.accessibility.nav.enforcementProcedureLink 
+            </a>
+          </li>
+          <li>
+            <a
+              class="govuk-link"
+              fragment="a11y-technical-information"
+              href="/#a11y-technical-information"
+              pdk-link=""
+            >
+               atcm.accessibility.nav.technicalInformationLink 
+            </a>
+          </li>
+          <li>
+            <a
+              class="govuk-link"
+              fragment="a11y-what-we-re-doing"
+              href="/#a11y-what-we-re-doing"
+              pdk-link=""
+            >
+               atcm.accessibility.nav.whatWereDoingLink 
+            </a>
+          </li>
+        </ul>
+      </pdk-grid>
+      <pdk-grid
+        two-thirds=""
       >
-        <li>
+        <h1
+          class="govuk-heading-l"
+          pdk-typography="heading-large"
+        >
+           atcm.accessibility.title 
           <a
-            class="govuk-link"
-            fragment="a11y-statement"
-            href="/#a11y-statement"
-            pdk-link=""
+            id="a11y-statement"
+          />
+        </h1>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.statement.paragraph1
+        </p>
+        <ul
+          class="list list-bullet"
+        >
+          <li
+            class="govuk-body-m"
+            pdk-typography="body-medium"
           >
-             Accessibility statement for ATCM 
-          </a>
-        </li>
-        <li>
+            atcm.accessibility.statement.bullets.font_size
+          </li>
+          <li
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            atcm.accessibility.statement.bullets.zoom_up
+          </li>
+          <li
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            atcm.accessibility.statement.bullets.navigate_keyboard
+          </li>
+          <li
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            atcm.accessibility.statement.bullets.navigate_speech
+          </li>
+          <li
+            class="govuk-body-m"
+            pdk-typography="body-medium"
+          >
+            atcm.accessibility.statement.bullets.listen_screen_reader
+          </li>
+        </ul>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.statement.paragraph2
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
           <a
-            class="govuk-link"
-            fragment="a11y-what-to-do"
-            href="/#a11y-what-to-do"
-            pdk-link=""
+            href="https://mcmw.abilitynet.org.uk/"
+            target="_blank"
           >
-             What to do if you can't access parts of this website 
+            AbilityNet (atcm.accessibility.opens_new_window)
           </a>
-        </li>
-        <li>
+           atcm.accessibility.statement.paragraph3 
+        </p>
+        <h2
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           atcm.accessibility.what_to_do.title 
           <a
-            class="govuk-link"
-            fragment="a11y-enforcement-procedure"
-            href="/#a11y-enforcement-procedure"
-            pdk-link=""
-          >
-             Enforcement procedure 
-          </a>
-        </li>
-        <li>
+            id="a11y-what-to-do"
+          />
+        </h2>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+           atcm.accessibility.what_to_do.paragraph1 
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+           • atcm.accessibility.what_to_do.email 
           <a
-            class="govuk-link"
-            fragment="a11y-technical-information"
-            href="/#a11y-technical-information"
-            pdk-link=""
+            href="mailto:cjscp-pmo@hmcts.net"
+            target="_blank"
           >
-             Technical information about this website's accessibility 
+            cjscp-pmo@hmcts.net
           </a>
-        </li>
-        <li>
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+           atcm.accessibility.what_to_do.paragraph1b 
+        </p>
+        <h2
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           atcm.accessibility.enforcement.title 
           <a
-            class="govuk-link"
-            fragment="a11y-what-we-re-doing"
-            href="/#a11y-what-we-re-doing"
-            pdk-link=""
+            id="a11y-enforcement-procedure"
+          />
+        </h2>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+           atcm.accessibility.enforcement.paragraph1 
+          <a
+            href="https://www.equalityadvisoryservice.com/"
+            target="_blank"
           >
-             What we're doing to improve accessibility 
+             atcm.accessibility.enforcement.link (atcm.accessibility.opens_new_window) 
           </a>
-        </li>
-      </ul>
+        </p>
+        <h2
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           atcm.accessibility.technical.title 
+          <a
+            id="a11y-technical-information"
+          />
+        </h2>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.technical.paragraph1
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.technical.paragraph2
+        </p>
+        <h2
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           atcm.accessibility.what-were-doing.title 
+          <a
+            id="a11y-what-we-re-doing"
+          />
+        </h2>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.what-were-doing.paragraph1
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.what-were-doing.paragraph2
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.what-were-doing.paragraph3
+        </p>
+        <p
+          class="govuk-body-m"
+          pdk-typography="body-medium"
+        >
+          atcm.accessibility.what-were-doing.paragraph4
+        </p>
+      </pdk-grid>
     </pdk-grid>
-    <pdk-grid
-      class="govuk-grid-column-two-thirds"
-      two-thirds=""
-    >
-      <h1
-        bold=""
-        compound=""
-        pdk-page-title=""
-        pdk-text=""
-      >
-         Accessibility statement for ATCM 
-        <a
-          id="a11y-statement"
-        />
-      </h1>
-      <p
-        pdk-text=""
-      >
-        The ATCM website is run by the Ministry of Justice Crime Reform Programme. We want as many people as possible to be able to use it. For example, that means you should be able to:
-      </p>
-      <ul
-        class="list list-bullet"
-      >
-        <li
-          pdk-text=""
-        >
-          change font size
-        </li>
-        <li
-          pdk-text=""
-        >
-          zoom in up to 300% without the text spilling off the screen
-        </li>
-        <li
-          pdk-text=""
-        >
-          navigate most of the website using just a keyboard
-        </li>
-        <li
-          pdk-text=""
-        >
-          navigate most of the website using speech recognition software
-        </li>
-        <li
-          pdk-text=""
-        >
-          listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)
-        </li>
-      </ul>
-      <p
-        pdk-text=""
-      >
-        We've also made the website text as simple as possible to understand.
-      </p>
-      <p
-        pdk-text=""
-      >
-        <a
-          href="https://mcmw.abilitynet.org.uk/"
-          target="_blank"
-        >
-          AbilityNet (opens in new window)
-        </a>
-         has advice on making your device easier to use if you have a disability. 
-      </p>
-      <h2
-        bold=""
-        class="heading-medium"
-        compound=""
-      >
-         What to do if you can't access parts of this website 
-        <a
-          id="a11y-what-to-do"
-        />
-      </h2>
-      <p
-        pdk-text=""
-      >
-         We're always looking to improve the accessibility of this website. If you find any problems that aren't listed on this page or think we're not meeting accessibility requirements, contact: 
-      </p>
-      <p
-        pdk-text=""
-      >
-         • email 
-        <a
-          href="mailto:cjscp-pmo@hmcts.net"
-          target="_blank"
-        >
-          cjscp-pmo@hmcts.net
-        </a>
-      </p>
-      <p
-        pdk-text=""
-      >
-         You will receive a reply within 10 working days. 
-      </p>
-      <h2
-        bold=""
-        class="heading-medium"
-        compound=""
-      >
-         Enforcement procedure 
-        <a
-          id="a11y-enforcement-procedure"
-        />
-      </h2>
-      <p
-        pdk-text=""
-      >
-         The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the 'accessibility regulations'). If you're not happy with how we respond to your complaint, contact the 
-        <a
-          href="https://www.equalityadvisoryservice.com/"
-          target="_blank"
-        >
-           Equality Advisory and Support Service (EASS). (opens in new window) 
-        </a>
-      </p>
-      <h2
-        bold=""
-        class="heading-medium"
-        compound=""
-      >
-         Technical information about this website's accessibility 
-        <a
-          id="a11y-technical-information"
-        />
-      </h2>
-      <p
-        pdk-text=""
-      >
-        The Ministry of Justice Crime Reform Programme is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
-      </p>
-      <p
-        pdk-text=""
-      >
-        We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any accessibility issues. We plan to fix any accessibility issues it identifies up to the WCAG 2.1 AA standards apart from any which would be a disproportionate burden.
-      </p>
-      <h2
-        bold=""
-        class="heading-medium"
-        compound=""
-      >
-         What we're doing to improve accessibility 
-        <a
-          id="a11y-what-we-re-doing"
-        />
-      </h2>
-      <p
-        pdk-text=""
-      >
-        We are currently conducting an internal accessibility audit of a representative sample of our screens in order to identify any other accessibility issues.
-      </p>
-      <p
-        pdk-text=""
-      >
-        After this audit is complete we plan to review and update our internal platform development kit if necessary. This contains templates of common patterns and components which are then used consistently across the system. Ensuring these patterns and components are WCAG 2.1 AA compliant will make all instances of them across our systems compliant.
-      </p>
-      <p
-        pdk-text=""
-      >
-        We will release front end development resources to fix other identified accessibility issues. We plan to do all this before our screens are released to their full user base.
-      </p>
-      <p
-        pdk-text=""
-      >
-        We will also consider conducting external accessibility audits by the Digital Accessibility Centre (DAC) following subsequent major new code releases where this is appropriate.
-      </p>
-    </pdk-grid>
-  </pdk-grid>
-</atcm-accessibility>
+  </atcm-accessibility>
+</test-accessibility>
 `;

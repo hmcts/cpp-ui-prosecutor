@@ -1,19 +1,57 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, Input, inject } from '@angular/core';
 import moment from 'moment';
 import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { ManualCase, ManualCaseProsecutor } from '../../core/model/manual-case';
 import uuid from 'uuid/v4';
 import { cloneDeep } from 'lodash';
-import { ValidationError } from '@cpp/pdk';
+import {
+  ValidationError,
+  PdkErrorSummaryComponent,
+  PdkGrid,
+  PdkFormFieldComponent,
+  PdkCurrencyInputComponent,
+  PdkDateInputComponent,
+  PdkFormGroupComponent,
+  PdkTextColorDirective,
+  PdkFillColorDirective,
+  PdkForm,
+  PdkCore,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective
+} from '@cpp/pdk';
 import { Prosecutor } from '@cpp/reference-data';
 import { ProsecutorType, filterByCpsFlag } from '../../core';
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
+import { DateValidator } from '../../shared';
 @Component({
   selector: 'manual-case-prosecutor',
   templateUrl: './manual-case-prosecutor.component.html',
-  styleUrls: ['./manual-case-prosecutor.component.scss']
+  styleUrls: ['./manual-case-prosecutor.component.scss'],
+  imports: [
+    PdkForm,
+    PdkCore,
+    PdkErrorSummaryComponent,
+    PdkGrid,
+    PdkFormFieldComponent,
+    PdkCurrencyInputComponent,
+    PdkDateInputComponent,
+    PdkFormGroupComponent,
+    TranslateModule,
+    FormsModule,
+    PdkTextColorDirective,
+    PdkFillColorDirective,
+    PdkButtonDirective,
+    PdkTextInput,
+    PdkInput,
+    DateValidator
+  ]
 })
 export class ManualCaseProsecutorComponent implements OnInit {
+  private location = inject(Location);
+
   @Input() manualCaseDetail: ManualCase;
   @Input() nonPoliceProsecutor = { cpsFlag: true } as Prosecutor;
   @Input() prosecutorRouteType: ProsecutorType;
@@ -21,7 +59,7 @@ export class ManualCaseProsecutorComponent implements OnInit {
   @ViewChild(NgForm) form: NgForm;
 
   editManualCase: ManualCase;
-  errors: ValidationError[] = [];
+  errors: ValidationError[] | any = [];
   selectedProsecutorAuthority: Prosecutor;
   selectedCpsProsecutor?: Prosecutor;
   isTypeSjp = false;
@@ -33,7 +71,7 @@ export class ManualCaseProsecutorComponent implements OnInit {
 
   standardProsecutors = (prosecutor: Prosecutor) => prosecutor.standard;
 
-  constructor(private location: Location) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.editManualCase = cloneDeep(this.manualCaseDetail);

@@ -1,25 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
-import {
-  PdkAlertModule,
-  PdkBreadcrumbsModule,
-  PdkCoreModule,
-  PdkDividerModule,
-  PdkGridModule,
-  PdkNotificationBannerModule,
-  PdkPageHeaderModule,
-  PdkRelatedModule,
-  PdkTabsModule,
-  PdkWarningTextModule
-} from '@cpp/pdk';
 import { MOCK_CASE, MOCK_CASE_DECISION, MOCK_OFFENCES, MOCK_CASE_NOTES } from '../../../__tests__/test-mock-data';
-import {
-  AgePipeModule,
-  DefendantNamePipeModule,
-  FormatAddressPipeModule,
-  FormatDatePipeModule,
-  SavedDecisionInformationPipeModule
-} from '../../../../shared/pipes';
 import {
   Case,
   CaseDecision,
@@ -33,48 +14,38 @@ import {
 import { OverviewComponent } from '../overview.component';
 import { CaseWarningsComponent } from '../case-warnings.component';
 import { DefendantDetailsChangeNotificationBannerComponent } from '../defendant-details-change-notification-banner.component';
-import { VerdictTypePipeModule } from '../../../../shared/pipes/verdict-type/verdict-type.module';
-import { RouterTestingModule } from '@angular/router/testing';
-import { MockModule } from 'src/app/shared/mock-components/mock.module';
+import { provideRouter } from '@angular/router';
+import { provideMockStore } from '@ngrx/store/testing';
+import { provideCppCoreHttpServices } from '@cpp/core';
+import { State } from '../../../../reducers';
 
 describe('OverviewComponent', () => {
   let fixture: ComponentFixture<TestCaseOverviewComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        OverviewComponent,
+      imports: [
         TestCaseOverviewComponent,
         MockOffenceComponent,
-        CaseWarningsComponent,
         MockPleaMitigationComponent,
         MockStatementOfFactsComponent,
         MockCaseHeaderBadgeContainer,
         MockSubComponent,
-        DefendantDetailsChangeNotificationBannerComponent,
         MockSubmissionMessagesComponent,
         MockCaseDecisionComponent,
-        MockDateOfBirthComponent
+        MockDateOfBirthComponent,
+        OverviewComponent,
+        CaseWarningsComponent,
+        DefendantDetailsChangeNotificationBannerComponent
       ],
-      imports: [
-        PdkCoreModule,
-        PdkPageHeaderModule,
-        PdkTabsModule,
-        PdkWarningTextModule,
-        PdkGridModule,
-        PdkDividerModule,
-        PdkAlertModule,
-        PdkNotificationBannerModule,
-        AgePipeModule,
-        DefendantNamePipeModule,
-        FormatDatePipeModule,
-        FormatAddressPipeModule,
-        PdkBreadcrumbsModule,
-        PdkRelatedModule,
-        SavedDecisionInformationPipeModule,
-        VerdictTypePipeModule,
-        RouterTestingModule,
-        MockModule
+      providers: [
+        provideRouter([]),
+        provideMockStore({
+          initialState: {
+            case: MOCK_CASE
+          } as State
+        }),
+        provideCppCoreHttpServices()
       ],
       teardown: { destroyAfterEach: false }
     });
@@ -184,7 +155,8 @@ describe('OverviewComponent', () => {
         [caseDecisions]="caseDecisions"
         [caseNotes]="caseNotes"
       ></case-overview>
-    `
+    `,
+    imports: [OverviewComponent]
   })
   class TestCaseOverviewComponent {
     kase: Case;

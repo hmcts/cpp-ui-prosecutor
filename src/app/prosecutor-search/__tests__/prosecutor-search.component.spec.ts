@@ -1,21 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CommonModule } from '@angular/common';
-import { PdkCoreModule } from '@cpp/pdk';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { PdkCore } from '@cpp/pdk';
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ProsecutorSearchComponent } from '../prosecutor-search.component';
 import { Prosecutor } from '@cpp/reference-data';
+import { provideStore } from '@ngrx/store';
+import { ActivatedRoute } from '@angular/router';
 describe('ProsecutorSearchComponent', () => {
   let component: ProsecutorSearchComponent;
   let fixture: ComponentFixture<ProsecutorSearchComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ProsecutorSearchComponent],
-      imports: [CommonModule, PdkCoreModule],
-      schemas: [NO_ERRORS_SCHEMA]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [PdkCore, ProsecutorSearchComponent],
+        providers: [provideStore(), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
+        schemas: [NO_ERRORS_SCHEMA]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProsecutorSearchComponent);

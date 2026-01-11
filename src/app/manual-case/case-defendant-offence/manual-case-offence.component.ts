@@ -7,36 +7,88 @@ import {
   OnChanges,
   ViewChild,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  inject
 } from '@angular/core';
 import uuid from 'uuid/v4';
 import { cloneDeep } from 'lodash';
-import { Location } from '@angular/common';
+import { Location, NgTemplateOutlet } from '@angular/common';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
 import { ManualCaseOffence } from '../../core/model/manual-case-offence';
 import { ManualCaseOffenceStateService } from '../offences-state.service';
 import { take } from 'rxjs/operators';
-import { ValidationError } from '@cpp/pdk';
+import {
+  ValidationError,
+  PdkGrid,
+  PdkErrorSummaryComponent,
+  PdkFormFieldComponent,
+  PdkDateInputComponent,
+  PdkInsetTextComponent,
+  PdkRadioGroupComponent,
+  PdkCheckboxGroupComponent,
+  PdkCheckboxComponent,
+  PdkCurrencyInputComponent,
+  PdkRadioButtonComponent,
+  PdkFormGroupComponent,
+  PdkForm,
+  PdkCore,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective
+} from '@cpp/pdk';
 import { OffenceParsingService } from '../case-offence-parsing/offence-parsing.service';
 import { OffenceTypeDetails, OffenceDateCode, AlcoholLevelMethod, FormListOption } from '../../core';
 import { PCFReferenceDataOffenceService } from '../../contexts/reference-data/pcf-reference-data-offence';
 import { OffenceModeOfTrialType } from '../../core/model/reference-data-interfaces/offence-type';
 import { DynamicParticularFormComponent } from './dynamic-particular-form.component';
 import { OffenceWordingService } from '../case-offence-parsing/offence-wording.service';
-import { OffenceWordingMessage } from 'src/app/core/model/manual-case';
+import { OffenceWordingMessage } from '../../core/model/manual-case';
+import { OffenceSearchComponent } from '../../shared';
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'manual-case-offence',
   templateUrl: './manual-case-offence.component.html',
   styleUrls: ['./manual-case-offence.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    PdkForm,
+    PdkCore,
+    PdkGrid,
+    PdkErrorSummaryComponent,
+    PdkFormFieldComponent,
+    PdkDateInputComponent,
+    OffenceSearchComponent,
+    PdkInsetTextComponent,
+    DynamicParticularFormComponent,
+    PdkRadioGroupComponent,
+    PdkCheckboxGroupComponent,
+    PdkCheckboxComponent,
+    PdkCurrencyInputComponent,
+    PdkRadioButtonComponent,
+    PdkFormGroupComponent,
+    TranslateModule,
+    FormsModule,
+    PdkTextInput,
+    PdkInput,
+    PdkButtonDirective,
+    NgTemplateOutlet
+  ]
 })
 export class ManualCaseOffenceComponent implements OnInit, OnChanges {
-  get formErrors(): ValidationError[] | null {
+  private location = inject(Location);
+  private referenceDataOffenceService = inject(PCFReferenceDataOffenceService);
+  private offenceStateService = inject(ManualCaseOffenceStateService);
+  private offenceParsingService = inject(OffenceParsingService);
+  private offenceWordingService = inject(OffenceWordingService);
+  private changeDetector = inject(ChangeDetectorRef);
+
+  get formErrors(): ValidationError[] | null | any {
     return this._formErrors;
   }
 
-  set formErrors(errors: ValidationError[] | null) {
+  set formErrors(errors: ValidationError[] | null | any) {
     if (this._dynamicFormErrors && errors) {
       this._formErrors = this._dynamicFormErrors.concat(errors);
     } else {
@@ -71,14 +123,7 @@ export class ManualCaseOffenceComponent implements OnInit, OnChanges {
   private _formErrors: ValidationError[];
   private _dynamicFormErrors: ValidationError[];
 
-  constructor(
-    private location: Location,
-    private referenceDataOffenceService: PCFReferenceDataOffenceService,
-    private offenceStateService: ManualCaseOffenceStateService,
-    private offenceParsingService: OffenceParsingService,
-    private offenceWordingService: OffenceWordingService,
-    private changeDetector: ChangeDetectorRef
-  ) {}
+  constructor() {}
 
   get getStartDateValue() {
     const dateSection = this.editOffence.dynamicParticularFormData.sections.find(section => section.type === 'DATE');

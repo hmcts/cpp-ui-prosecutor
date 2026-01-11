@@ -1,11 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ManualCaseDetailsState } from '../../core/reducers/manual-case-details';
 import { CppHttp } from '@cpp/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ProsecutionCaseFileService {
-  constructor(private http: CppHttp) {}
+  private http = inject(CppHttp);
+
+
+  constructor() {}
 
   createManualCaseSJP(payload: ManualCaseDetailsState): Observable<any> {
     return this.http.commandSync({

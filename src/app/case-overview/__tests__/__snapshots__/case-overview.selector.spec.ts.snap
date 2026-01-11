@@ -36,11 +36,11 @@ exports[`case overview/selectors getCase should select and sort multiple case de
         "withdrawalReasonId": "1",
       },
     ],
-    "savedAt": "2019-12-01T16:10:28.259Z",
+    "savedAt": "2019-12-01",
     "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
-      "endedAt": "2019-12-01T16:10:28.259Z",
+      "endedAt": "2019-12-01",
       "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
@@ -50,7 +50,7 @@ exports[`case overview/selectors getCase should select and sort multiple case de
       "localJusticeAreaNationalCourtCode": "2577",
       "sessionId": "mock-case-decision-session-2",
       "sessionType": "DELEGATEDPOWERS",
-      "startedAt": "2019-12-01T16:10:28.259Z",
+      "startedAt": "2019-12-01",
     },
   },
   {
@@ -116,11 +116,11 @@ exports[`case overview/selectors getCase should select and sort multiple case de
         "verdict": "PROVED_SJP",
       },
     ],
-    "savedAt": "2018-12-01T16:10:28.259Z",
+    "savedAt": "2018-12-01",
     "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
-      "endedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01",
       "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
@@ -131,7 +131,7 @@ exports[`case overview/selectors getCase should select and sort multiple case de
       "magistrate": "Jenny",
       "sessionId": "mock-case-decision-session-1",
       "sessionType": "DELEGATEDPOWERS",
-      "startedAt": "2018-12-01T16:10:28.259Z",
+      "startedAt": "2018-12-01",
     },
   },
 ]
@@ -188,11 +188,11 @@ exports[`case overview/selectors getCase should select and sort offence decision
         "verdict": "NO_VERDICT",
       },
     ],
-    "savedAt": "2018-12-01T16:10:28.259Z",
+    "savedAt": "2018-12-01",
     "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
-      "endedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01",
       "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
@@ -202,7 +202,7 @@ exports[`case overview/selectors getCase should select and sort offence decision
       "localJusticeAreaNationalCourtCode": "2577",
       "sessionId": "mock-case-decision-session-1",
       "sessionType": "DELEGATEDPOWERS",
-      "startedAt": "2018-12-01T16:10:28.259Z",
+      "startedAt": "2018-12-01",
     },
   },
 ]
@@ -273,11 +273,11 @@ exports[`case overview/selectors getCase should select case decisions from the s
         "verdict": "PROVED_SJP",
       },
     ],
-    "savedAt": "2018-12-01T16:10:28.259Z",
+    "savedAt": "2018-12-01",
     "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
-      "endedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01",
       "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
@@ -288,7 +288,7 @@ exports[`case overview/selectors getCase should select case decisions from the s
       "magistrate": "Jenny",
       "sessionId": "mock-case-decision-session-1",
       "sessionType": "DELEGATEDPOWERS",
-      "startedAt": "2018-12-01T16:10:28.259Z",
+      "startedAt": "2018-12-01",
     },
   },
 ]

@@ -1,20 +1,37 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { PdkCoreModule, PdkErrorSummaryModule, PdkGridModule } from '@cpp/pdk';
+import { Component } from '@angular/core';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
 import { DatesToAvoidComponent } from '../dates-to-avoid.component';
-import { MockModule } from '../../../shared/mock-components/mock.module';
+import { CaseHeaderBadgeContainer } from '../../common/case-header-badge/case-header-badge.container';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
+import { provideStore } from '@ngrx/store';
+
+@Component({
+  selector: 'case-header-badge-container',
+  template: `
+    <pre>case badge</pre>
+  `
+})
+class MockCaseHeaderBadgeContainer {}
 
 describe('DatesToAvoidComponent', () => {
   let fixture: ComponentFixture<DatesToAvoidComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DatesToAvoidComponent],
-      imports: [PdkCoreModule, PdkGridModule, PdkErrorSummaryModule, MockModule],
-      schemas: [NO_ERRORS_SCHEMA],
+      providers: [provideHttpClient(), provideStore(), provideRouter([])],
       teardown: { destroyAfterEach: false }
-    }).compileComponents();
+    })
+      .overrideComponent(DatesToAvoidComponent, {
+        remove: {
+          imports: [CaseHeaderBadgeContainer]
+        },
+        add: {
+          imports: [MockCaseHeaderBadgeContainer]
+        }
+      })
+      .compileComponents();
 
     fixture = TestBed.createComponent(DatesToAvoidComponent);
     fixture.componentInstance.kase = { id: 'case-id' } as any;

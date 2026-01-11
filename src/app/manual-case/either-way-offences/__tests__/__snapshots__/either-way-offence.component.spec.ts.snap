@@ -29,7 +29,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
               
                COMMON.HINT_TEXT_DATE 
               
-              
             </div>
           </pdk-hint>
           
@@ -37,7 +36,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           <pdk-date-input
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            pastdate=""
             required=""
             validatedate=""
           >
@@ -156,15 +154,12 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
             </option>
             
             
-            
           </select>
         </pdk-select>
         
         
-        
       </pdk-form-group>
     </pdk-form-field>
-    
     
     <pdk-form-field
       labeltype="small"
@@ -226,7 +221,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
               
                COMMON.HINT_TEXT_DATE 
               
-              
             </div>
           </pdk-hint>
           
@@ -234,7 +228,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           <pdk-date-input
             class="ng-untouched ng-pristine ng-valid"
             data-role="verdictDate-input"
-            pastdate=""
             required=""
             validatedate=""
           >
@@ -319,7 +312,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
       </pdk-form-group>
     </pdk-form-field>
     
-    
   </div>
 </pdk-inset-text>
 `;
@@ -353,7 +345,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
               
                COMMON.HINT_TEXT_DATE 
               
-              
             </div>
           </pdk-hint>
           
@@ -361,7 +352,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           <pdk-date-input
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            pastdate=""
             required=""
             validatedate=""
           >
@@ -480,7 +470,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
               
                COMMON.HINT_TEXT_DATE 
               
-              
             </div>
           </pdk-hint>
           
@@ -488,7 +477,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
           <pdk-date-input
             class="ng-untouched ng-pristine ng-valid"
             data-role="pleaDate-input"
-            pastdate=""
             required=""
             validatedate=""
           >
@@ -607,15 +595,12 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow i
             </option>
             
             
-            
           </select>
         </pdk-select>
         
         
-        
       </pdk-form-group>
     </pdk-form-field>
-    
     
     
   </div>
@@ -637,7 +622,6 @@ exports[`EitherWayOffenceComponent when \`initiationCode === "T" should allow in
     >
       MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
     </option>
-    
     
     
   </select>

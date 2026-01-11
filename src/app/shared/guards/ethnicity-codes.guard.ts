@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CanActivate } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Store, select } from '@ngrx/store';
@@ -10,7 +10,10 @@ import { ReferenceDataService } from '../../contexts/reference-data';
   providedIn: 'root'
 })
 export class EthnicityCodesGuard implements CanActivate {
-  constructor(private store: Store<State>, private pcfReferenceData: ReferenceDataService) {}
+  private store = inject<Store<State>>(Store);
+  private pcfReferenceData = inject(ReferenceDataService);
+
+  constructor() {}
 
   hasEthnicityCodesInStore(): Observable<boolean> {
     return this.store.pipe(

@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CaseDecision } from '../../../contexts/sjp';
-import { formatCurrency, formatString } from 'src/app/contexts/sjp/util/sjp-util';
-import { formatDate } from '../../../../../tools/utils/date';
+import { formatCurrency, formatString } from '../../../contexts/sjp/util/sjp-util';
+import { PdkCore, PdkGrid } from '@cpp/pdk';
+import { PaymentTypePipe } from '../../../shared/pipes/payment-type/payment-type.pipe';
+import { formatDate } from '../../../../../utils/date';
 
 @Component({
   selector: 'payment-and-collection',
@@ -12,25 +14,32 @@ import { formatDate } from '../../../../../tools/utils/date';
         <b pdk-typography="heading-medium">Payment and collection</b>
       </div>
       <div>
-        <pdk-grid container container pdk-padding-vertical="1">
+        <pdk-grid container pdk-padding-vertical="1">
           <pdk-grid one-third>
-            <b *ngIf="isCollectionOrderMade; else noCollectionOrder">Collection order made</b>
-            <ng-template #noCollectionOrder><b>No collection order made</b> </ng-template>
+            @if (isCollectionOrderMade) {
+            <b>Collection order made</b>
+            } @else {
+            <b>No collection order made</b>
+            }
           </pdk-grid>
           <pdk-grid two-thirds> {{ caseDecision.financialImposition.payment.paymentType | paymentType }}. </pdk-grid>
         </pdk-grid>
 
         <pdk-grid container pdk-padding-vertical="1">
           <pdk-grid one-third>
-            <div *ngIf="payment.paymentType === 'PAY_TO_COURT'">
+            @if (payment.paymentType === 'PAY_TO_COURT') {
+            <div>
               <b>Reason no deduction or attachment made</b>
             </div>
-            <div *ngIf="payment.paymentType === 'DEDUCT_FROM_BENEFITS'">
+            } @if (payment.paymentType === 'DEDUCT_FROM_BENEFITS') {
+            <div>
               <b>Application made for benefit deductions </b>
             </div>
-            <div *ngIf="payment.paymentType === 'ATTACH_TO_EARNINGS'">
+            } @if (payment.paymentType === 'ATTACH_TO_EARNINGS') {
+            <div>
               <b>Attachment of Earnings Order made for the collection of </b>
             </div>
+            }
           </pdk-grid>
           <pdk-grid two-thirds>
             {{ paymentExplanation }}
@@ -56,7 +65,8 @@ import { formatDate } from '../../../../../tools/utils/date';
         </pdk-grid>
       </div>
     </div>
-  `
+  `,
+  imports: [PdkCore, PdkGrid, PaymentTypePipe]
 })
 export class PaymentAndCollectionComponent {
   @Input() caseDecision: CaseDecision;

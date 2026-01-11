@@ -1,14 +1,11 @@
 import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { RouterTestingModule } from '@angular/router/testing';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule, PdkAutosuggestModule } from '@cpp/pdk';
 import { of } from 'rxjs';
-
 import { OffenceSearchComponent } from './offence-search.component';
 import { PCFReferenceDataOffenceService } from '../../../contexts/reference-data/pcf-reference-data-offence';
+import { FormsModule, NgForm } from '@angular/forms';
+import { PdkForm, PdkFormFieldComponent } from '@cpp/pdk';
 
 describe('OffenceSearchComponent', () => {
   let fixture: ComponentFixture<TestOffenceSearchComponent>;
@@ -19,17 +16,8 @@ describe('OffenceSearchComponent', () => {
     searchOffenceTypes = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        RouterTestingModule,
-        PdkAutosuggestModule
-      ],
+      imports: [FormsModule, TestOffenceSearchComponent, OffenceSearchComponent],
       schemas: [NO_ERRORS_SCHEMA],
-      declarations: [OffenceSearchComponent, TestOffenceSearchComponent],
       providers: [
         {
           provide: PCFReferenceDataOffenceService,
@@ -58,7 +46,8 @@ describe('OffenceSearchComponent', () => {
     search.propagateChange(offences[0]);
     fixture.detectChanges();
 
-    const form = fixture.debugElement.children[0].injector.get(NgForm);
+    const formElement = fixture.debugElement.query(By.css('form'));
+    const form = formElement.injector.get(NgForm);
 
     expect(form.value).toEqual({
       offence: {
@@ -108,7 +97,8 @@ describe('OffenceSearchComponent', () => {
           <offence-search name="offence" [selectedOffenceCode]="'HAHA'" ngModel> </offence-search>
         </pdk-form-field>
       </form>
-    `
+    `,
+    imports: [OffenceSearchComponent, PdkFormFieldComponent, PdkForm, FormsModule]
   })
   class TestOffenceSearchComponent {
     noResult = false;

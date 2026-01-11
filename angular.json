@@ -15,12 +15,14 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": {
+              "base": "dist",
+              "browser": ""
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "polyfills.ts",
+            "polyfills": ["polyfills.ts"],
             "baseHref": "/prosecutor/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -29,19 +31,24 @@
                 "input": "./src/app/config",
                 "output": "."
               },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@cpp/pdk/govuk-assets",
+                "output": "/assets"
+              },
               "src/i18n",
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
-            "allowedCommonJsDependencies": ["uuid/v4", "file-saver", "uuid", "clean-deep", "moment", "lodash"]
+            "allowedCommonJsDependencies": ["uuid/v4", "file-saver", "uuid", "clean-deep", "moment", "lodash"],
+
+            "browser": "src/main.ts"
           },
           "configurations": {
             "idam": {
@@ -70,8 +77,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -96,8 +101,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -116,22 +119,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "prosecutor:build",
-            "port": 4750
+            "port": 4750,
+            "buildTarget": "prosecutor:build"
           },
           "configurations": {
             "idam": {
-              "browserTarget": "prosecutor:build:idam"
+              "buildTarget": "prosecutor:build:idam"
             },
             "production": {
-              "browserTarget": "prosecutor:build:production"
+              "buildTarget": "prosecutor:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "prosecutor:build"
+            "buildTarget": "prosecutor:build"
           }
         },
         "test": {

@@ -2,7 +2,6 @@ import { By } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DevtoolsSelectUserComponent } from '../select-user.component';
 import { FormsModule } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule, PdkSelectModule } from '@cpp/pdk';
 import { DevToolsBackButtonComponent } from '../../back-button/back-button.component';
 
 describe('DevTools - Select User component', () => {
@@ -13,8 +12,7 @@ describe('DevTools - Select User component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DevtoolsSelectUserComponent, DevToolsBackButtonComponent],
-      imports: [FormsModule, PdkCoreModule, PdkFormModule, PdkSelectModule],
+      imports: [FormsModule, DevtoolsSelectUserComponent, DevToolsBackButtonComponent],
       teardown: { destroyAfterEach: false }
     });
 

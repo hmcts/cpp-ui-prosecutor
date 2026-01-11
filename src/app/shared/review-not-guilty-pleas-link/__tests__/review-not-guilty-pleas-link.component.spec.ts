@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
-import { RouterTestingModule } from '@angular/router/testing';
-import { PdkWarningTextModule } from '@cpp/pdk';
 import { ReviewNotGuiltyPleasLinkComponent } from '../review-not-guilty-pleas-link.component';
+import { ActivatedRoute } from '@angular/router';
 
 describe('ReviewNotGuiltyPleasLinkComponent', () => {
   let component: ReviewNotGuiltyPleasLinkComponent;
@@ -11,8 +9,15 @@ describe('ReviewNotGuiltyPleasLinkComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [ReviewNotGuiltyPleasLinkComponent],
-        imports: [RouterTestingModule, PdkWarningTextModule],
+        imports: [ReviewNotGuiltyPleasLinkComponent],
+        providers: [
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              snapshot: { params: { id: '123' } }
+            }
+          }
+        ],
         teardown: { destroyAfterEach: false }
       });
     })

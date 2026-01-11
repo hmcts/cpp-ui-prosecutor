@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { reducers, State } from '../../../../reducers';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import { Case } from '../../../../contexts/sjp';
 import { LoadCaseSuccess } from '../../../../core/actions';
@@ -13,12 +13,12 @@ describe('CaseHeaderBadgeContainer', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseHeaderBadgeContainer, MockCaseHeaderBadgeComponent],
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
+      imports: [CaseHeaderBadgeContainer, MockCaseHeaderBadgeComponent],
+      providers: [provideStore(reducers, { runtimeChecks: {} })],
       teardown: { destroyAfterEach: false }
     });
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
     fixture = TestBed.createComponent(CaseHeaderBadgeContainer);
   });
 

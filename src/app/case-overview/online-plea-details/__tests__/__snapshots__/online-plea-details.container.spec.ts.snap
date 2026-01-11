@@ -2,10 +2,10 @@
 
 exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
 <online-plea-details-container
-  kase$={[Function Store]}
-  onlinePlea$={[Function Store]}
-  store={[Function MockStore]}
-  userGroups$={[Function Store]}
+  kase$={[Function _Store]}
+  onlinePlea$={[Function _Store]}
+  store={[Function _MockStore]}
+  userGroups$={[Function _Store]}
 >
   <online-plea-details>
     <div>
@@ -15,7 +15,7 @@ exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
     {
       "caseId": "caseId",
       "defendantId": "defendantId",
-      "submittedOn": "2019-10-18T15:10:28.881Z",
+      "submittedOn": "2019-10-18",
       "onlinePleaDetails": [
         {
           "id": "onlinePleaId1",
@@ -97,10 +97,12 @@ exports[`OnlinePleaDetailsContainer should compile correctly 1`] = `
       null
     </div>
   </online-plea-details><button
+    class="govuk-button"
     id="onlinePleaBackButton"
     pdk-button=""
     pdk-margin-top="4"
     routerlink="../"
+    tabindex="0"
   >
      Back 
   </button>

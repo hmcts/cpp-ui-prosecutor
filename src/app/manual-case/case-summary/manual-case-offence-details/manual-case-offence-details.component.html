@@ -12,9 +12,11 @@
     </pdk-grid>
   </pdk-grid>
 
-  <div *ngFor="let defendant of defendants; let i = index" class="defendant" pdk-margin-bottom="7">
+  @for (defendant of defendants; let i = $index; track i) {
+  <div class="defendant" pdk-margin-bottom="7">
     <pdk-divider pdk-margin-top="1" [dark]="true"></pdk-divider>
-    <div *ngIf="defendant.offences && defendant.offences.length">
+    @if (defendant.offences && defendant.offences.length) {
+    <div>
       <pdk-grid container>
         <pdk-grid two-thirds>
           <span pdk-typography="heading-medium" class="table-header">{{
@@ -26,8 +28,11 @@
           }}</span>
         </pdk-grid>
       </pdk-grid>
-      <div *ngFor="let offence of defendant.offences; let y = index">
-        <pdk-divider *ngIf="y !== 0" [dark]="true"></pdk-divider>
+      @for (offence of defendant.offences; let y = $index; track y;) {
+      <div>
+        @if (y !== 0) {
+        <pdk-divider [dark]="true"></pdk-divider>
+        }
         <pdk-grid container class="offence-header">
           <pdk-grid two-thirds>
             <span class="table-header bold" pdk-typography="body-small">{{
@@ -59,14 +64,11 @@
                 <div>{{ offence?.offenceLegislation }}</div>
               </td>
               <td pdk-table-cell align="right">
-                <a
-                  pdk-link
-                  *ngIf="defendant.offences.length > 1"
-                  class="remove-link"
-                  href="javascript:void(0)"
-                  (click)="onRemove(i, y)"
-                  >{{ 'MANUAL_CASE_SUMMARY.REMOVE' | translate }}</a
-                >
+                @if (defendant.offences.length > 1) {
+                <a pdk-link class="remove-link" href="javascript:void(0)" (click)="onRemove(i, y)">{{
+                  'MANUAL_CASE_SUMMARY.REMOVE' | translate
+                }}</a>
+                }
               </td>
             </tr>
             <tr pdk-table-row class="table-row">
@@ -78,7 +80,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.arrestDate" pdk-table-row class="table-row">
+            @if (offence?.arrestDate) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ARREST_DATE' | translate }}
               </th>
@@ -87,7 +90,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.chargeDate" pdk-table-row class="table-row">
+            } @if (offence?.chargeDate) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.CHARGE_DATE' | translate }}
               </th>
@@ -96,8 +100,8 @@
               </td>
               <td></td>
             </tr>
-
-            <tr *ngIf="offence?.aocpEligible" pdk-table-row class="table-row">
+            } @if (offence?.aocpEligible) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.FINE' | translate }}
               </th>
@@ -106,8 +110,8 @@
               </td>
               <td></td>
             </tr>
-
-            <tr *ngIf="offence?.appliedCompensation" pdk-table-row class="table-row">
+            } @if (offence?.appliedCompensation) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.COMPENSATION_CLAIMED' | translate }}
               </th>
@@ -116,7 +120,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelMethod" pdk-table-row class="table-row">
+            } @if (offence?.alcoholRelatedOffence?.alcoholLevelMethod) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_METHOD' | translate }}
               </th>
@@ -125,7 +130,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.alcoholRelatedOffence?.alcoholLevelAmount" pdk-table-row class="table-row">
+            } @if (offence?.alcoholRelatedOffence?.alcoholLevelAmount) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_AMOUNT' | translate }}
               </th>
@@ -138,7 +144,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.backDuty" pdk-table-row class="table-row">
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_OWED' | translate }}
               </th>
@@ -147,7 +154,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.backDuty" pdk-table-row class="table-row">
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_FROM_DATE' | translate }}
               </th>
@@ -156,7 +164,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.backDuty" pdk-table-row class="table-row">
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_TO_DATE' | translate }}
               </th>
@@ -165,7 +174,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.laidDate && hasNpp" pdk-table-row class="table-row">
+            } @if (offence?.laidDate && hasNpp) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.LAID_DATE' | translate }}
               </th>
@@ -174,8 +184,8 @@
               </td>
               <td></td>
             </tr>
-
-            <tr *ngIf="!hasNpp && prosecutionCase.initiationCode === 'S'" pdk-table-row class="table-row">
+            } @if (!hasNpp && prosecutionCase.initiationCode === 'S') {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.LAID_DATE' | translate }}
               </th>
@@ -184,7 +194,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.plea?.pleaValue" pdk-table-row class="table-row">
+            } @if (offence?.plea?.pleaValue) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.PLEA' | translate }}
               </th>
@@ -193,7 +204,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.plea?.pleaDate" pdk-table-row class="table-row">
+            } @if (offence?.plea?.pleaDate) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.PLEA_DATE' | translate }}
               </th>
@@ -202,7 +214,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.verdict?.verdictType?.id" pdk-table-row class="table-row">
+            } @if (offence?.verdict?.verdictType?.id) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.VERDICT' | translate }}
               </th>
@@ -211,7 +224,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.verdict?.verdictDate" pdk-table-row class="table-row">
+            } @if (offence?.verdict?.verdictDate) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.VERDICT_DATE' | translate }}
               </th>
@@ -220,7 +234,8 @@
               </td>
               <td></td>
             </tr>
-            <tr *ngIf="offence?.motReasonId" pdk-table-row class="table-row">
+            } @if (offence?.motReasonId) {
+            <tr pdk-table-row class="table-row">
               <th pdk-table-header="row" class="header">
                 {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALLOCATION_DECISION' | translate }}
               </th>
@@ -229,9 +244,13 @@
               </td>
               <td></td>
             </tr>
+            }
           </tbody>
         </table>
       </div>
+      }
     </div>
+    }
   </div>
+  }
 </div>

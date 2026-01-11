@@ -1,4 +1,4 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
@@ -20,8 +20,8 @@ describe('OnlinePleaGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         OnlinePleaGuard,
         {
           provide: SjpService,
@@ -39,8 +39,8 @@ describe('OnlinePleaGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(OnlinePleaGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(OnlinePleaGuard);
+    store = TestBed.inject(Store);
     store.dispatch(new LoadCaseSuccess({ defendant: { id: 'defendantId' } as Defendant } as Case));
     jest.spyOn(store, 'dispatch');
   });

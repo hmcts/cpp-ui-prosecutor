@@ -2,11 +2,11 @@
 
 exports[`WithdrawOffenceContainer should compile correctly 1`] = `
 <withdraw-offence
-  case$={[Function Store]}
-  caseWithdrawnStatus$={[Function Store]}
-  offenceWithdrawalReasons$={[Function Store]}
-  offences$={[Function Store]}
-  store={[Function Store]}
+  case$={[Function _Store]}
+  caseWithdrawnStatus$={[Function _Store]}
+  offenceWithdrawalReasons$={[Function _Store]}
+  offences$={[Function _Store]}
+  store={[Function _Store]}
 >
   <withdraw-offence-list>
     <pre>

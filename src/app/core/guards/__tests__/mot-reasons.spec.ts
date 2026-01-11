@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { reducers, State } from '../../reducers';
@@ -44,8 +44,8 @@ describe('Mode of trail reasons Guard', () => {
     apiSuccessCaseDetails$ = cold('-(a|)', { a: motReasons });
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         MotReasonsGuard,
         {
           provide: ReferenceDataService,
@@ -62,8 +62,8 @@ describe('Mode of trail reasons Guard', () => {
       ]
     });
 
-    guard = TestBed.get(MotReasonsGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(MotReasonsGuard);
+    store = TestBed.inject(Store);
   });
 
   describe('The store is empty', () => {

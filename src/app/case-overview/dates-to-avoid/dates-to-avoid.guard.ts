@@ -1,14 +1,18 @@
 import { CanActivate } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { State } from '../../core/reducers';
 import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { getCase } from '../../core/selectors';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DatesToAvoidGuard implements CanActivate {
-  constructor(private store: Store<State>) {}
+  private store = inject<Store<State>>(Store);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(

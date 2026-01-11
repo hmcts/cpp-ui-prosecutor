@@ -1,13 +1,40 @@
 import { Component, Input, ChangeDetectionStrategy, OnChanges } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
+import { ControlContainer, FormsModule, NgForm } from '@angular/forms';
 import { cloneDeep } from 'lodash';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
+import {
+  PdkInsetTextComponent,
+  PdkGrid,
+  PdkFormFieldComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkCore,
+  PdkTextInput,
+  PdkInput
+} from '@cpp/pdk';
+import { AddressInputComponent, EmailValidator, PhoneValidator } from '../../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'individual-defendant-guardian',
   templateUrl: 'individual-defendant-guardian.component.html',
   viewProviders: [{ provide: ControlContainer, useExisting: NgForm }],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    PdkInsetTextComponent,
+    PdkGrid,
+    PdkFormFieldComponent,
+    PdkRadioGroupComponent,
+    PdkRadioButtonComponent,
+    AddressInputComponent,
+    TranslateModule,
+    FormsModule,
+    PdkCore,
+    PdkTextInput,
+    PdkInput,
+    PhoneValidator,
+    EmailValidator
+  ]
 })
 export class IndividualDefendantGuardianComponent implements OnChanges {
   @Input() manualCaseType: string;

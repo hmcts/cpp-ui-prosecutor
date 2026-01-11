@@ -2,12 +2,17 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
 import { Prosecutor } from '@cpp/reference-data';
 import { ManualCase } from '../../../core/model/manual-case';
 import { ManualCasePath } from '../../manual-case.interface';
+import { PdkCore, PdkDividerComponent, PdkGrid, PdkTable } from "@cpp/pdk";
+import { TranslateModule } from '@ngx-translate/core';
+import { DashPipe } from '../../../shared/pipes/dash/dash.pipe';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'prosecution-case-details',
-  templateUrl: './prosecution-case-details.component.html',
-  styleUrls: ['./prosecution-case-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'prosecution-case-details',
+    templateUrl: './prosecution-case-details.component.html',
+    styleUrls: ['./prosecution-case-details.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [PdkCore,PdkDividerComponent, PdkGrid, TranslateModule, DashPipe, CurrencyPipe, DatePipe, PdkTable] 
 })
 export class ProsecutionCaseDetailsComponent {
   title: string;

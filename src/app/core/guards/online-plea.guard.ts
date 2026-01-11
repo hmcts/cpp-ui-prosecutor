@@ -1,16 +1,22 @@
 import { CanActivate, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { State } from '../reducers';
 import { SjpService } from '../../contexts/sjp';
-import { LoadOnlinePleaSuccess } from 'src/app/case-overview/case-overview.action';
+import { LoadOnlinePleaSuccess } from '../../case-overview/case-overview.action';
 import { getCase } from '../selectors';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class OnlinePleaGuard implements CanActivate {
-  constructor(private store: Store<State>, private router: Router, private sjpService: SjpService) {}
+  private store = inject<Store<State>>(Store);
+  private router = inject(Router);
+  private sjpService = inject(SjpService);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(

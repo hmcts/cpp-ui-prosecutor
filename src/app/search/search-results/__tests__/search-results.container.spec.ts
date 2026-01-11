@@ -1,57 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CaseDetails } from '../../../contexts/sjp';
 import { FeatureState } from '../../search.selectors';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { SearchResultsContainer } from '../seach-results.container';
-import { reducers } from '../../../reducers';
-import { searchReducer } from '../../search.reducer';
 import { SearchSuccess } from '../../search.action';
 import { MOCK_SEARCH_RESULTS } from '../../__tests__/test-mock-data';
 import { By } from '@angular/platform-browser';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, Router } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
+import { reducers } from '../../../reducers';
 
 describe('SearchResultsContainer', () => {
   let fixture: ComponentFixture<SearchResultsContainer>;
   let store: Store<FeatureState>;
   let router: Router;
-  let navigate: jest.Mock;
-  const snapshot = {
-    params: {
-      keyword: ''
-    }
-  };
 
   beforeEach(() => {
-    navigate = jest.fn();
-
     TestBed.configureTestingModule({
-      declarations: [SearchResultsContainer, MockSearchResultsComponent],
-      imports: [
-        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
-        StoreModule.forFeature('search', searchReducer),
-        RouterTestingModule
-      ],
-      providers: [
-        {
-          provide: Router,
-          useValue: {
-            navigate
-          }
-        },
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            snapshot
-          }
-        }
-      ],
+      imports: [MockSearchResultsComponent, SearchResultsContainer],
+      providers: [provideStore(reducers, { runtimeChecks: {} }), provideRouter([])],
       teardown: { destroyAfterEach: false }
     });
 
-    store = TestBed.get(Store);
-    router = TestBed.get(Router);
+    store = TestBed.inject(Store);
+    router = TestBed.inject(Router);
     fixture = TestBed.createComponent(SearchResultsContainer);
   });
 
@@ -62,11 +34,14 @@ describe('SearchResultsContainer', () => {
   });
 
   it('should emit search keyword and dispatch search event', () => {
+    store.dispatch(new SearchSuccess({ ...MOCK_SEARCH_RESULTS, keyword: '' }));
     fixture.detectChanges();
     spyOn(store, 'dispatch');
-    const child = fixture.debugElement.query(By.directive(MockSearchResultsComponent)).componentInstance;
-    child.search.emit('john');
-    expect(router.navigate).toHaveBeenCalledWith(['./', 'john'], { relativeTo: { snapshot } });
+    jest.spyOn(router, 'navigate');
+    const child = fixture.debugElement.query(By.css('search-results'))?.componentInstance;
+    expect(child).toBeTruthy();
+    child.searchRequested.emit('john');
+    expect(router.navigate).toHaveBeenCalledWith(['./', 'john'], { relativeTo: expect.any(Object) });
   });
 
   @Component({
@@ -79,6 +54,5 @@ describe('SearchResultsContainer', () => {
   class MockSearchResultsComponent {
     @Input() searchResultCases: CaseDetails[];
     @Input() keyword: string;
-    @Output() search = new EventEmitter<string>();
   }
 });

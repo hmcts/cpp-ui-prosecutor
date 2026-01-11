@@ -1,10 +1,29 @@
-import { Component, forwardRef, Injector, Input, ViewChild, ChangeDetectorRef, OnInit } from '@angular/core';
+import {
+  Component,
+  forwardRef,
+  Injector,
+  Input,
+  ChangeDetectorRef,
+  OnInit,
+  inject,
+  input,
+  viewChild
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, NgForm } from '@angular/forms';
 import { filter, map, switchMap, throttleTime, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { FormFieldControl, AutosuggestComponent } from '@cpp/pdk';
+import {
+  FormFieldControl,
+  PdkAutosuggestComponent,
+  PdkTextColorDirective,
+  PdkCore,
+  PdkGridComponent,
+  PdkTypographyDirective,
+  PdkColor
+} from '@cpp/pdk';
 import { OffenceType } from '../../../core';
 import { PCFReferenceDataOffenceService } from '../../../contexts/reference-data/pcf-reference-data-offence';
+import { AsyncPipe } from '@angular/common';
 
 let i = 1;
 
@@ -24,6 +43,14 @@ interface OffenceTypeAutoSuggestion {
 
 @Component({
   selector: 'offence-search',
+  imports: [
+    PdkAutosuggestComponent,
+    PdkTextColorDirective,
+    PdkCore,
+    PdkTypographyDirective,
+    AsyncPipe,
+    PdkGridComponent
+  ],
   styleUrls: ['./offence-search.scss'],
   templateUrl: 'offence-search.component.html',
   providers: [
@@ -39,10 +66,13 @@ interface OffenceTypeAutoSuggestion {
   ]
 })
 export class OffenceSearchComponent implements ControlValueAccessor, FormFieldControl, OnInit {
-  @Input() id = generateId();
-  @Input() ariaDescribedBy: string | null;
-  @Input() selectedOffenceCode: string;
-  @Input() offenceDate = '';
+  private injector = inject(Injector);
+  referenceDataOffenceService = inject(PCFReferenceDataOffenceService);
+
+  @Input() id: string = generateId();
+  @Input() ariaDescribedBy: string | null = null;
+  readonly selectedOffenceCode = input<string>(undefined);
+  readonly offenceDate = input('');
 
   @Input()
   get required() {
@@ -52,7 +82,7 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
     this._required = coerceBooleanProperty(req);
   }
 
-  @ViewChild('autosuggest') autoSuggest: AutosuggestComponent;
+  readonly autoSuggest = viewChild<PdkAutosuggestComponent>('autosuggest');
 
   noResult = false;
   controlType = 'autosuggest';
@@ -78,18 +108,17 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
 
   propagateChange: (_: any) => void = (_: any) => {};
 
-  constructor(
-    private injector: Injector,
-    changeDetectorRef: ChangeDetectorRef,
-    ngForm: NgForm,
-    public referenceDataOffenceService: PCFReferenceDataOffenceService
-  ) {
+  constructor() {
+    const changeDetectorRef = inject(ChangeDetectorRef);
+    const ngForm = inject(NgForm);
+    const referenceDataOffenceService = this.referenceDataOffenceService;
+
     this.input$
       .pipe(
         tap(text => (this.inputValue = text)),
         filter(text => text.length > 2),
         throttleTime(250),
-        switchMap(text => referenceDataOffenceService.searchOffenceTypes(text, 10, this.offenceDate)),
+        switchMap(text => referenceDataOffenceService.searchOffenceTypes(text, 10, this.offenceDate())),
         tap(offences => {
           if (!offences || offences.length === 0) {
             this.noResult = true;
@@ -120,8 +149,9 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
 
   ngOnInit() {
     setTimeout(() => {
-      if (this.selectedOffenceCode) {
-        this.referenceDataOffenceService.searchOffenceTypes(this.selectedOffenceCode, 10, '').subscribe(x => {
+      const selectedOffenceCode = this.selectedOffenceCode();
+      if (selectedOffenceCode) {
+        this.referenceDataOffenceService.searchOffenceTypes(selectedOffenceCode, 10, '').subscribe(x => {
           this.selected = x[0];
           this.propagateChange(this.selected);
         });
@@ -143,7 +173,7 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
     return option.label;
   }
 
-  getTextColour(defaultColor: string, highlighted: boolean) {
+  getTextColour(defaultColor: PdkColor, highlighted: boolean): PdkColor {
     return highlighted ? 'white' : defaultColor;
   }
 
@@ -172,7 +202,7 @@ export class OffenceSearchComponent implements ControlValueAccessor, FormFieldCo
         this.propagateChange(this.selected);
       }
     };
-    this.autoSuggest.registerOnChange(fn);
+    this.autoSuggest().registerOnChange(fn);
   }
 
   registerOnTouched(fn: any) {}

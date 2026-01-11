@@ -68,7 +68,6 @@ exports[`OffenceWithdrawalComponent should compile correctly 1`] = `
               </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
-                inline=""
                 required=""
               >
                 <div
@@ -263,7 +262,6 @@ exports[`OffenceWithdrawalComponent should display the PENDING_WITHDRAWAL badge 
               </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
-                inline=""
                 required=""
               >
                 <div
@@ -458,7 +456,6 @@ exports[`OffenceWithdrawalComponent should display the reasons options when yes 
               </div>
               <pdk-radio-group
                 class="ng-untouched ng-pristine ng-valid"
-                inline=""
                 required=""
               >
                 <div

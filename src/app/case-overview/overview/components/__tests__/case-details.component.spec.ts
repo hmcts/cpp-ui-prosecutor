@@ -1,36 +1,31 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
-import { PdkCoreModule, PdkGridModule, PdkPageHeaderModule } from '@cpp/pdk';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
-import {
-  AgePipeModule,
-  CaseStatusPipeModule,
-  DefendantNamePipeModule,
-  FormatAddressPipeModule,
-  FormatDatePipeModule,
-  IfEmptyPipeModule
-} from '../../../../shared/pipes';
 import { CaseDetailsComponent } from '../case-details.component';
 import { Case } from '../../../../contexts/sjp';
-import { ApplicationStatusPipeModule } from 'src/app/shared/pipes/application-status/application-status.module';
+import { IfEmptyPipe } from '../../../../shared/pipes/if-empty/if-empty.pipe';
+import { CaseStatusPipe } from '../../../../shared/pipes/case-status/case-status.pipe';
+import { DefendantNamePipe } from '../../../../shared/pipes/defendant-name/defendant-name.pipe';
+import { AgePipe } from '../../../../shared/pipes/age/age.pipe';
+import { FormatDatePipe } from '../../../../shared/pipes/format-date/format-date.pipe';
+import { FormatAddressPipe } from '../../../../shared/pipes/format-address/format-address.pipe';
+import { ApplicationStatusPipe } from '../../../../shared/pipes/application-status/application-status.pipe';
 
 describe('CaseDetailsComponent', () => {
   let fixture: ComponentFixture<TestCaseDetailsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseDetailsComponent, TestCaseDetailsComponent],
       imports: [
-        PdkCoreModule,
-        PdkPageHeaderModule,
-        PdkGridModule,
-        AgePipeModule,
-        IfEmptyPipeModule,
-        DefendantNamePipeModule,
-        CaseStatusPipeModule,
-        FormatDatePipeModule,
-        FormatAddressPipeModule,
-        ApplicationStatusPipeModule
+        AgePipe,
+        IfEmptyPipe,
+        DefendantNamePipe,
+        CaseStatusPipe,
+        FormatDatePipe,
+        FormatAddressPipe,
+        ApplicationStatusPipe,
+        TestCaseDetailsComponent,
+        CaseDetailsComponent
       ],
       teardown: { destroyAfterEach: false }
     });
@@ -107,7 +102,17 @@ describe('CaseDetailsComponent', () => {
     selector: 'case-details-test',
     template: `
       <case-details [kase]="kase"> </case-details>
-    `
+    `,
+    imports: [
+      AgePipe,
+      IfEmptyPipe,
+      DefendantNamePipe,
+      CaseStatusPipe,
+      FormatDatePipe,
+      FormatAddressPipe,
+      ApplicationStatusPipe,
+      CaseDetailsComponent
+    ]
   })
   class TestCaseDetailsComponent {
     kase: Case;

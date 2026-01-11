@@ -12,7 +12,7 @@ describe('Manual Case Offence State Service', () => {
       providers: [ManualCaseOffenceStateService]
     });
 
-    offenceStateService = TestBed.get(ManualCaseOffenceStateService);
+    offenceStateService = TestBed.inject(ManualCaseOffenceStateService);
     offenceStateService.getUuid = jest.fn().mockReturnValue('uuid');
   });
 

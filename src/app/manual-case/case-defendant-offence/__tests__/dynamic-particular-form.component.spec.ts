@@ -1,21 +1,11 @@
 import { FormsModule } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkDateInputModule,
-  PdkRadioInputModule,
-  PdkSelectModule,
-  PdkTextInputModule
-} from '@cpp/pdk';
-
-import { CommonModule } from '@angular/common';
 import { DynamicParticularFormComponent } from '../dynamic-particular-form.component';
 import { ElementType, Element, OffenceWordingMessage } from '../../../core/model/manual-case';
 import { OffenceWordingService } from '../../case-offence-parsing/offence-wording.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { FormListOption, Offence } from 'src/app/core';
+import { FormListOption, Offence } from '../../../core';
 import { By } from '@angular/platform-browser';
 
 const offenceTypes = [
@@ -110,19 +100,8 @@ describe('Organisation Defendant Form Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        FormsModule,
-        PdkRadioInputModule,
-        PdkSelectModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkDateInputModule,
-        PdkTextInputModule,
-        TranslateModule.forRoot()
-      ],
-      providers: [OffenceWordingService],
-      declarations: [TestHostDynamicFormComponent, DynamicParticularFormComponent]
+      imports: [FormsModule, TranslateModule.forRoot(), TestHostDynamicFormComponent, DynamicParticularFormComponent],
+      providers: [OffenceWordingService]
     });
 
     fixture = TestBed.createComponent(TestHostDynamicFormComponent);
@@ -182,10 +161,13 @@ describe('Organisation Defendant Form Component', () => {
       (formError)="onError($event)"
     >
     </dynamic-particular-form>
-  `
+  `,
+  imports: [FormsModule, DynamicParticularFormComponent]
 })
 class TestHostDynamicFormComponent {
-  constructor(private wordingService: OffenceWordingService) {}
+  private wordingService = inject(OffenceWordingService);
+
+  constructor() {}
   data: OffenceWordingMessage;
   offenceWording: string;
   offenceTypes: FormListOption[];

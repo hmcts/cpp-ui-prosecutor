@@ -1,5 +1,8 @@
 import { CaseNotes } from '../../../contexts/sjp';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, inject } from '@angular/core';
+import { PdkFoldableTextComponent, PdkDividerComponent, PdkCore, PdkGrid } from '@cpp/pdk';
+import { FormatDatePipe } from '../../../shared/pipes/format-date/format-date.pipe';
+import { FirstLastNamePipe } from '../../../shared/pipes/first-last-name/first-last-name.pipe';
 
 @Component({
   selector: 'case-notes',
@@ -8,7 +11,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@a
     <pdk-grid container>
       <pdk-grid>
         <div>
-          <div *ngFor="let caseNote of caseNotes.notes; let last = last">
+          @for (caseNote of caseNotes.notes; track caseNote.noteId; let last = $last) {
+          <div>
             <div pdk-margin-left="2">
               <div pdk-typography="heading-medium">
                 {{ checkCaseNoteType(caseNote.noteType) }}
@@ -25,17 +29,23 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@a
                 {{ caseNote.noteText }}
               </pdk-foldable-text>
             </div>
-            <pdk-divider *ngIf="!last"></pdk-divider>
+            @if (!last) {
+            <pdk-divider></pdk-divider>
+            }
           </div>
+          }
         </div>
       </pdk-grid>
     </pdk-grid>
-  `
+  `,
+  imports: [PdkCore, PdkFoldableTextComponent, PdkDividerComponent, PdkGrid, FormatDatePipe, FirstLastNamePipe]
 })
 export class CaseNotesComponent {
+  changeRef = inject(ChangeDetectorRef);
+
   @Input() caseNotes: CaseNotes;
 
-  constructor(public changeRef: ChangeDetectorRef) {}
+  constructor() {}
 
   checkCaseNoteType(caseNote: string) {
     return caseNote === 'CASE_MANAGEMENT' ? 'Case management note' : 'General note';

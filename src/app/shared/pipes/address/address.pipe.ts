@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'address' })
+@Pipe({ name: 'address'})
 export class AddressPipe implements PipeTransform {
   private readonly propertyNames = [
     'address1',

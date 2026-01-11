@@ -1,6 +1,6 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { DocumentNameValidator } from '../index';
@@ -12,8 +12,7 @@ describe('Document Name Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestDocumentNameValidatorComponent, DocumentNameValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestDocumentNameValidatorComponent, DocumentNameValidator]
     });
 
     fixture = TestBed.createComponent(TestDocumentNameValidatorComponent);
@@ -58,8 +57,9 @@ describe('Document Name Validator', () => {
     <form>
       <input name="someDocumentName" [ngModel]="model" validateDocumentName />
     </form>
-  `
+  `,
+  imports: [FormsModule, DocumentNameValidator]
 })
-class TestDocumentNameValidatorComponent {
+class TestDocumentNameValidatorComponent implements Validators {
   model: string;
 }

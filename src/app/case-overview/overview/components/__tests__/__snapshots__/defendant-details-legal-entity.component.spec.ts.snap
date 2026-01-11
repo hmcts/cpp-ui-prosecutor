@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
+exports[`DefendantDetailsLegalEntityComponent should compile correctly 1`] = `
 <defendant-details-test
   legalEntityDetails={[Function Object]}
 >

@@ -8,11 +8,16 @@ exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
   policeForces={[Function Array]}
 >
   <div
+    class="govuk-!-margin-bottom-6"
     pdk-margin-bottom="6"
   >
     <pdk-divider
       class="margin-top-0"
-    />
+    >
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
     <pdk-grid
       container=""
     >

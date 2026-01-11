@@ -5,8 +5,6 @@ import {
   DisqualificationPeriod,
   FinancialPenaltyOffenceDecision
 } from '../../../../contexts/sjp';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
 
 import { FinancialOffenceDecisionComponent } from '../financial-offence-decision.component';
 
@@ -23,11 +21,12 @@ describe('FinancialOffenceDecisionComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FinancialOffenceDecisionComponent, TestFinancialOffenceDecisionComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule],
+      imports: [TestFinancialOffenceDecisionComponent, FinancialOffenceDecisionComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestFinancialOffenceDecisionComponent);
+    // Initialize with a default value before first detectChanges
+    fixture.componentInstance.offenceDecision = financialOffence as FinancialPenaltyOffenceDecision;
   });
 
   it('should compile correctly with discharge offence decision with absolute discharge', () => {
@@ -387,7 +386,8 @@ describe('FinancialOffenceDecisionComponent', () => {
     selector: 'financial-offence-decision-test',
     template: `
       <financial-offence-decision [offenceDecision]="offenceDecision"></financial-offence-decision>
-    `
+    `,
+    imports: [FinancialOffenceDecisionComponent]
   })
   class TestFinancialOffenceDecisionComponent {
     @Input() offenceDecision: any;

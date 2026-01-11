@@ -1,14 +1,16 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
-import { Prosecutor } from '@cpp/reference-data';
+import { ControlContainer, FormsModule, NgForm } from '@angular/forms';
+import { Prosecutor, ProsecutorAutosuggestComponent } from '@cpp/reference-data';
 import { ProsecutorType } from '../core';
+import { PdkFormFieldComponent, PdkCheckboxComponent, PdkCore } from "@cpp/pdk";
+import { RouterLink } from '@angular/router';
 
 @Component({
-  templateUrl: './prosecutor-search.component.html',
-  selector: 'prosecutor-search',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
-})
+    templateUrl: './prosecutor-search.component.html',
+    selector: 'prosecutor-search',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    viewProviders: [{ provide: ControlContainer, useExisting: NgForm }],
+    imports: [PdkFormFieldComponent, PdkCheckboxComponent, ProsecutorAutosuggestComponent, RouterLink, FormsModule, PdkCore]})
 export class ProsecutorSearchComponent implements OnInit {
   @Input() prosecutorRouteType: ProsecutorType;
   @Input() searchLabel = 'Prosecuting authority (Original informant on the case)';

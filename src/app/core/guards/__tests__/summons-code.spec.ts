@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { reducers, State } from '../../reducers';
@@ -39,8 +39,8 @@ describe('Summons Codes Guard', () => {
     apiSuccessCaseDetails$ = cold('-(a|)', { a: summonsCodes });
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         SummonsCodesGuard,
         {
           provide: ReferenceDataService,
@@ -57,8 +57,8 @@ describe('Summons Codes Guard', () => {
       ]
     });
 
-    guard = TestBed.get(SummonsCodesGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(SummonsCodesGuard);
+    store = TestBed.inject(Store);
   });
 
   describe('The store is empty', () => {

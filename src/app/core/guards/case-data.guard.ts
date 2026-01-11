@@ -1,5 +1,5 @@
 import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../reducers';
 import { catchError, mapTo, take, tap } from 'rxjs/operators';
@@ -7,9 +7,15 @@ import { Observable, of } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
 import { LoadCaseSuccess } from '../actions/entities';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CaseDataGuard implements CanActivate {
-  constructor(private store: Store<State>, private router: Router, private sjpService: SjpService) {}
+  private store = inject<Store<State>>(Store);
+  private router = inject(Router);
+  private sjpService = inject(SjpService);
+
+  constructor() {}
 
   canActivate({ params }: ActivatedRouteSnapshot): Observable<boolean> {
     const { caseId } = params;

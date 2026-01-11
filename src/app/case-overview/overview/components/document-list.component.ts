@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CaseDocument } from '../../../contexts/sjp';
+import { PdkGrid, PdkPaddingDirective, PdkTypographyDirective } from '@cpp/pdk';
+import { DownloadDocumentComponent } from '../../common/download-document/download-document.component';
 
 @Component({
   selector: 'document-list',
@@ -11,12 +13,13 @@ import { CaseDocument } from '../../../contexts/sjp';
         <div pdk-padding-vertical="2"><b>Uploaded files</b></div>
       </pdk-grid>
       <pdk-grid two-thirds>
-        <ng-container *ngFor="let document of documents">
-          <download-document [document]="document" [caseId]="caseId"></download-document>
-        </ng-container>
+        @for (document of documents; track document.id) {
+        <download-document [document]="document" [caseId]="caseId"></download-document>
+        }
       </pdk-grid>
     </pdk-grid>
-  `
+  `,
+  imports: [PdkPaddingDirective, PdkTypographyDirective, PdkGrid, DownloadDocumentComponent]
 })
 export class DocumentListComponent {
   @Input() documents: CaseDocument[];

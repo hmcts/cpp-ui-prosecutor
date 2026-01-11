@@ -1,5 +1,5 @@
 import { CanActivate, Router } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { State } from '../../core/reducers';
 import { catchError, mapTo, switchMap, take, tap } from 'rxjs/operators';
@@ -8,13 +8,16 @@ import { ReferenceDataService } from '../../contexts/reference-data';
 import { getOffenceWithdrawalReasons } from '../../core/selectors';
 import { LoadOffenceWithdrawalReasonsSuccess } from '../../core/actions';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class OffenceWithdrawalReasonsGuard implements CanActivate {
-  constructor(
-    private store: Store<State>,
-    private referenceDataService: ReferenceDataService,
-    private router: Router
-  ) {}
+  private store = inject<Store<State>>(Store);
+  private referenceDataService = inject(ReferenceDataService);
+  private router = inject(Router);
+
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(

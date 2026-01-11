@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { PdkMarginDirective, PdkTypographyDirective } from '@cpp/pdk';
 
 @Component({
   selector: 'plea-mitigation',
@@ -8,7 +9,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
     <p pdk-margin-bottom="4">
       {{ pleaMitigation }}
     </p>
-  `
+  `,
+  imports: [PdkTypographyDirective, PdkMarginDirective]
 })
 export class PleaMitigationComponent {
   @Input() pleaMitigation: string;

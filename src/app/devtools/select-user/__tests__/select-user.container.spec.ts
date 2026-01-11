@@ -1,11 +1,8 @@
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { PdkCoreModule, PdkFormModule } from '@cpp/pdk';
 import { SessionService } from '../../index';
 import { DevtoolsSelectUserPageComponent } from '../select-user.container';
-import { RouterTestingModule } from '@angular/router/testing';
 
 describe('devTools - select user container', () => {
   let fixture: ComponentFixture<DevtoolsSelectUserPageComponent>;
@@ -21,8 +18,7 @@ describe('devTools - select user container', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      declarations: [DevtoolsSelectUserPageComponent],
-      imports: [FormsModule, PdkCoreModule, PdkFormModule, RouterTestingModule],
+      imports: [DevtoolsSelectUserPageComponent],
       providers: [
         {
           provide: SessionService,

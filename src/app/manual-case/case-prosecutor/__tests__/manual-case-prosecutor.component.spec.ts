@@ -1,22 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ManualCaseProsecutorComponent } from '../manual-case-prosecutor.component';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ControlContainer, NgForm } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkDateInputModule,
-  PdkTextInputModule,
-  PdkInputModule,
-  PdkCurrencyInputModule,
-  PdkAutosuggestModule
-} from '@cpp/pdk';
-import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ManualCase } from '../../../core/model/manual-case';
-import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
 import { Prosecutor, ProsecutorAutosuggestComponent } from '@cpp/reference-data';
 import { provideMockStore } from '@ngrx/store/testing';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('Manual case prosecutor', () => {
   let fixture: ComponentFixture<ManualCaseProsecutorComponent>;
@@ -30,22 +20,18 @@ describe('Manual case prosecutor', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseProsecutorComponent, ProsecutorAutosuggestComponent],
-      imports: [
-        CommonModule,
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkDateInputModule,
-        MockPipesModule,
-        RouterTestingModule,
-        PdkTextInputModule,
-        PdkInputModule,
-        PdkCurrencyInputModule,
-        PdkAutosuggestModule
-      ],
+      imports: [FormsModule, ProsecutorAutosuggestComponent, ManualCaseProsecutorComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, provideMockStore()]
+      providers: [
+        ControlContainer,
+        NgForm,
+        provideMockStore(),
+        provideRouter([]),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseProsecutorComponent);

@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { CaseDetails } from '../../../../contexts/sjp';
-import { PdkCoreModule, PdkGridModule, PdkInsetTextModule } from '@cpp/pdk';
-import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
-import { SearchInputModule } from '../../../search-input/search-input.module';
 import { SearchResultsComponent } from '../search-results.component';
-import { MockModule } from '../../../../shared/mock-components/mock.module';
+import { ActivatedRoute, provideRouter } from '@angular/router';
+import { ListSearchResultsComponent } from '../list-search-results.component';
 
 describe('SearchResultsComponent', () => {
   let fixture: ComponentFixture<TestSearchResultsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SearchResultsComponent, TestSearchResultsComponent, MockListSearchComponent],
-      imports: [RouterTestingModule, PdkCoreModule, PdkGridModule, PdkInsetTextModule, SearchInputModule, MockModule],
+      imports: [SearchResultsComponent, TestSearchResultsComponent, MockListSearchComponent],
+      providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
       teardown: { destroyAfterEach: false }
     });
 
@@ -31,7 +29,8 @@ describe('SearchResultsComponent', () => {
     selector: 'search-results-test',
     template: `
       <search-results [searchResultCases]="searchResults"></search-results>
-    `
+    `,
+    imports: [SearchResultsComponent]
   })
   class TestSearchResultsComponent {
     searchResults: CaseDetails[];
@@ -41,7 +40,8 @@ describe('SearchResultsComponent', () => {
     selector: 'list-search-results',
     template: `
       {{ searchResults | json }}
-    `
+    `,
+    imports: [ListSearchResultsComponent]
   })
   class MockListSearchComponent {
     @Input() searchResults: CaseDetails[];

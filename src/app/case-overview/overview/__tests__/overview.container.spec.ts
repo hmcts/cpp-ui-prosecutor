@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { reducers } from '../../../reducers';
-import { Store, StoreModule } from '@ngrx/store';
-import { caseOverviewReducer } from '../../case-overview.reducer';
+import { provideStore, Store } from '@ngrx/store';
 import { MOCK_CASE, MOCK_CASE_DECISION } from '../../__tests__/test-mock-data';
 import { FeatureState } from '../../case-overview.selectors';
 import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../../contexts/sjp';
 import { OverviewContainer } from '../overview.container';
 import { LoadCaseSuccess } from '../../../core/actions';
+import { provideCppCoreHttpServices } from '@cpp/core';
 
 describe('OverviewContainer', () => {
   let fixture: ComponentFixture<OverviewContainer>;
@@ -15,15 +15,12 @@ describe('OverviewContainer', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OverviewContainer, MockCaseOverviewComponent],
-      imports: [
-        StoreModule.forRoot(reducers, { runtimeChecks: {} }),
-        StoreModule.forFeature('caseOverview', caseOverviewReducer)
-      ],
+      imports: [MockCaseOverviewComponent, OverviewContainer],
+      providers: [provideStore(reducers, { runtimeChecks: {} }), provideCppCoreHttpServices()],
       teardown: { destroyAfterEach: false }
     });
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
     fixture = TestBed.createComponent(OverviewContainer);
   });
 

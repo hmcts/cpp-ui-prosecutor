@@ -9,10 +9,12 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
     container=""
   >
     <div
+      class="govuk-!-margin-left-2 govuk-!-margin-bottom-3"
       pdk-margin-bottom="3"
       pdk-margin-left="2"
     >
       <b
+        class="govuk-heading-m"
         pdk-typography="heading-medium"
       >
         Court decision
@@ -21,85 +23,312 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
     <div>
       <case-decisions-details>
         <div>
-          caseDecisionWithOffenceDecisions: {
-    "id": "mock-case-decision-1",
-    "session": {
-      "sessionId": "mock-case-decision-session-1",
-      "legalAdviserUserId": "mock-case-decision-session-userid-1",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2018-12-01T16:10:28.259Z",
-      "endedAt": "2018-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOWERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-1",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      },
-      "magistrate": "Jenny"
-    },
-    "savedAt": "2018-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId1",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 1
-      },
-      {
-        "id": "mock-case-offence-decision-2",
-        "offenceId": "offenceId2",
-        "decisionType": "WITHDRAW",
-        "withdrawalReason": "Insufficient evidence",
-        "withdrawalReasonId": "1",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 2
-      },
-      {
-        "id": "mock-case-offence-decision-3",
-        "offenceId": "offenceId3",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-11",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 3
-      },
-      {
-        "id": "mock-case-offence-decision-4",
-        "offenceId": "offenceId4",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-07-11",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 4
-      },
-      {
-        "id": "mock-case-offence-decision-5",
-        "offenceId": "offenceId5",
-        "decisionType": "ADJOURN",
-        "adjournedTo": "2019-06-21",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 5
-      },
-      {
-        "id": "mock-case-offence-decision-6",
-        "offenceId": "offenceId6",
-        "decisionType": "REFER_FOR_COURT_HEARING",
-        "referralReason": "Not suitable for SJP",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 6
-      },
-      {
-        "id": "mock-case-offence-decision-7",
-        "offenceId": "offenceId7",
-        "decisionType": "DISMISS",
-        "verdict": "PROVED_SJP",
-        "offenceSequenceNumber": 7
-      }
-    ]
-  }
+          <pdk-grid
+            class="govuk-grid-row"
+            container=""
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div
+                class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+                pdk-margin-left="2"
+                pdk-padding-vertical="2"
+              >
+                <b>
+                  Decision made
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-grid-column-two-thirds"
+              two-thirds=""
+            >
+              <div
+                class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+                pdk-padding-vertical="2"
+              >
+                <div>
+                   1 December 2018 
+                </div>
+                <div>
+                   12:00am 
+                </div>
+                <div
+                  class="pre-line"
+                >
+                </div>
+                <div>
+                   Legal Adviser: Mark Adams 
+                </div>
+                <div>
+                  Magistrate: Jenny
+                </div>
+                <div
+                  class="pdk-!-text-color-dark-grey"
+                  pdk-text-colour="dark-grey"
+                >
+                   Wimbledon Magistrates' Court 
+                </div>
+              </div>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId1"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 1 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId2"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 2 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId3"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 3 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 11 Jun 2019 (or after)
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId4"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 4 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 11 Jul 2019 (or after)
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId5"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 5 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Adjourned to 21 Jun 2019 (or after)
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId6"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 6 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p
+                data-role="offence-decision"
+              >
+                Referred for court hearing - Not suitable for SJP
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId7"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 7 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+              <p>
+                 Proved SJP 
+              </p>
+              <p
+                data-role="offence-decision"
+              >
+                Dismissed
+              </p>
+            </pdk-grid>
+          </pdk-grid>
         </div>
       </case-decisions-details>
     </div>
@@ -110,10 +339,12 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
     </pdk-divider>
     <div>
       <div
+        class="govuk-!-margin-left-2 govuk-!-margin-bottom-3"
         pdk-margin-bottom="3"
         pdk-margin-left="2"
       >
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
           style="margin-top: 70px;"
         >
@@ -122,57 +353,165 @@ exports[`CaseDecisionsComponent should compile correctly 1`] = `
       </div>
       <case-decisions-details>
         <div>
-          caseDecisionWithOffenceDecisions: {
-    "id": "mock-case-decision-2",
-    "session": {
-      "sessionId": "mock-case-decision-session-2",
-      "legalAdviserUserId": "mock-case-decision-session-userid-2",
-      "courtHouseCode": "B01OK",
-      "courtHouseName": "Wimbledon Magistrates' Court",
-      "localJusticeAreaNationalCourtCode": "2577",
-      "startedAt": "2019-12-01T16:10:28.259Z",
-      "endedAt": "2019-12-01T16:10:28.259Z",
-      "sessionType": "DELEGATEDPOWERS",
-      "legalAdviser": {
-        "userId": "legal-adviser-2",
-        "firstName": "Mark",
-        "lastName": "Adams"
-      }
-    },
-    "savedAt": "2019-12-01T16:10:28.259Z",
-    "offenceDecisions": [
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId3",
-        "decisionType": "WITHDRAW",
-        "withdrawalReasonId": "1",
-        "withdrawalReason": "Insufficient evidence",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 3,
-        "offenceTitle": "Use / install a television set without a licence"
-      },
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId4",
-        "decisionType": "WITHDRAW",
-        "withdrawalReasonId": "1",
-        "withdrawalReason": "Insufficient evidence",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 4,
-        "offenceTitle": "Use / install a television set without a licence"
-      },
-      {
-        "id": "mock-case-offence-decision-1",
-        "offenceId": "offenceId5",
-        "decisionType": "WITHDRAW",
-        "withdrawalReasonId": "1",
-        "withdrawalReason": "Insufficient evidence",
-        "verdict": "NO_VERDICT",
-        "offenceSequenceNumber": 5,
-        "offenceTitle": "Use / install a television set without a licence"
-      }
-    ]
-  }
+          <pdk-grid
+            class="govuk-grid-row"
+            container=""
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div
+                class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+                pdk-margin-left="2"
+                pdk-padding-vertical="2"
+              >
+                <b>
+                  Decision made
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-grid-column-two-thirds"
+              two-thirds=""
+            >
+              <div
+                class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+                pdk-padding-vertical="2"
+              >
+                <div>
+                   1 December 2019 
+                </div>
+                <div>
+                   12:00am 
+                </div>
+                <div
+                  class="pre-line"
+                >
+                </div>
+                <div>
+                   Legal Adviser: Mark Adams 
+                </div>
+                <div
+                  class="pdk-!-text-color-dark-grey"
+                  pdk-text-colour="dark-grey"
+                >
+                   Wimbledon Magistrates' Court 
+                </div>
+              </div>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId3"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 3 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+               Use / install a television set without a licence 
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId4"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 4 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+               Use / install a television set without a licence 
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </pdk-grid>
+          </pdk-grid>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div
+          data-role="offence-decision-container-offenceId5"
+        >
+          <pdk-grid
+            class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+            container=""
+            pdk-padding-horizontal="2"
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <div>
+                <b>
+                  Offence 5 
+                </b>
+              </div>
+            </pdk-grid>
+            <pdk-grid
+              class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+              pdk-padding-bottom="2"
+              two-thirds=""
+            >
+               Use / install a television set without a licence 
+              <p
+                data-role="offence-decision"
+              >
+                Withdrawn - Insufficient evidence
+              </p>
+            </pdk-grid>
+          </pdk-grid>
         </div>
       </case-decisions-details>
     </div>

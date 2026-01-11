@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { State, getNationalities, LoadNationalitiesAction, Nationality } from '../../../../core';
-import { AutosuggestLiteComponent, coerceBooleanProperty, FormFieldControl, InputWidth } from '@cpp/pdk';
+import { coerceBooleanProperty, FormFieldControl, InputWidth, PdkAutosuggestLiteComponent } from '@cpp/pdk';
 import { Observable, of, Subject } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'nationality-auto-suggest',
@@ -20,14 +21,17 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
       provide: FormFieldControl,
       useExisting: NationalityAutoSuggestComponent
     }
-  ]
+  ],
+  imports: [PdkAutosuggestLiteComponent, AsyncPipe]
 })
 export class NationalityAutoSuggestComponent implements ControlValueAccessor, FormFieldControl, OnInit {
+  private store = inject<Store<State>>(Store);
+
   multi = false;
   searchNationality$ = new Subject<string>();
   suggestions$: Observable<Nationality[]>;
-  @ViewChild(AutosuggestLiteComponent)
-  autoSuggestLiteRef: AutosuggestLiteComponent<Nationality>;
+  @ViewChild(PdkAutosuggestLiteComponent)
+  autoSuggestLiteRef: PdkAutosuggestLiteComponent<Nationality>;
   private _mapSelectionToKey = false;
   private _getNationalitiesOnMount = false;
   private fetchNationality$: Observable<Nationality[]>;
@@ -69,7 +73,10 @@ export class NationalityAutoSuggestComponent implements ControlValueAccessor, Fo
     return this.autoSuggestLiteRef.ngControl;
   }
 
-  constructor(private store: Store<State>) {
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {
     this.fetchNationality$ = this.store.pipe(
       select(getNationalities),
       filter(nationalities => !!nationalities)

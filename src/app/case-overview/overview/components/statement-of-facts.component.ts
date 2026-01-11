@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { PdkFoldableTextComponent, PdkMarginDirective, PdkTypographyDirective } from '@cpp/pdk';
 
 @Component({
   selector: 'statement-of-facts',
@@ -10,7 +11,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
         {{ statementOfFacts }}
       </pdk-foldable-text>
     </div>
-  `
+  `,
+  imports: [PdkTypographyDirective, PdkFoldableTextComponent, PdkMarginDirective]
 })
 export class StatementOfFactsComponent {
   @Input() statementOfFacts: string;

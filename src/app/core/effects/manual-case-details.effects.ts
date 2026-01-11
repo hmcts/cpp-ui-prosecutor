@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
@@ -14,6 +14,10 @@ import cleanDeep from 'clean-deep';
 
 @Injectable()
 export class ManualCaseDetailsEffects {
+  private actions$ = inject(Actions);
+  private router = inject(Router);
+  private prosecutionCaseFileService = inject(ProsecutionCaseFileService);
+
   createManualCase$: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType<manualCaseDetailsActions.CreateManualCase>(manualCaseDetailsActions.CREATE_MANUAL_CASE),
@@ -136,9 +140,6 @@ export class ManualCaseDetailsEffects {
     }
   }
 
-  constructor(
-    private actions$: Actions,
-    private router: Router,
-    private prosecutionCaseFileService: ProsecutionCaseFileService
-  ) {}
+
+  constructor() {}
 }

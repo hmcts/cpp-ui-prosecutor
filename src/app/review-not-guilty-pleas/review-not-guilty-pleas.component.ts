@@ -1,8 +1,25 @@
 import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core';
 import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { RegionState } from '../core/reducers/entities.reducer';
+import { BreadcrumbLinksComponent } from '../shared/breadcrumb-links/breadcrumb-links.component';
+import {
+  PdkWarningTextComponent,
+  PdkDividerComponent,
+  PdkGridComponent,
+  PdkSelectComponent,
+  PdkFormGroupComponent,
+  PdkTable,
+  PdkForm,
+  PdkCore,
+  PdkLabelDirective,
+  PdkButtonDirective
+} from '@cpp/pdk';
+import { DatePipe, NgPlural, NgPluralCase } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { DefendantNamePipe } from '../shared/pipes/defendant-name/defendant-name.pipe';
+import { FormatAddressPipe } from '../shared/pipes/format-address/format-address.pipe';
 
 @Component({
   selector: 'review-not-guilty-pleas',
@@ -15,7 +32,8 @@ import { RegionState } from '../core/reducers/entities.reducer';
         <ng-template ngPluralCase="other">cases</ng-template> </span
       >)
     </h2>
-    <span *ngIf="pleadedNotGuiltyCasesDetail.count > 0; else noNotGuiltyPleaCases">
+    @if (pleadedNotGuiltyCasesDetail.count > 0) {
+    <span>
       <span>
         <h4 pdk-section="large">
           <pdk-warning-text>
@@ -39,7 +57,8 @@ import { RegionState } from '../core/reducers/entities.reducer';
           </form>
         </pdk-grid>
       </pdk-grid>
-      <table pdk-table *ngIf="pleadedNotGuiltyCasesDetail.cases.length > 0; else noNotGuiltyPleaCases">
+      @if (pleadedNotGuiltyCasesDetail.cases.length > 0) {
+      <table pdk-table>
         <thead pdk-table-head>
           <tr pdk-table-row>
             <th pdk-table-header>Name</th>
@@ -51,7 +70,8 @@ import { RegionState } from '../core/reducers/entities.reducer';
           </tr>
         </thead>
         <tbody pdk-table-body>
-          <tr pdk-table-row *ngFor="let pleadedNotGuiltyCase of pleadedNotGuiltyCasesDetail.cases">
+          @for (pleadedNotGuiltyCase of pleadedNotGuiltyCasesDetail.cases; track pleadedNotGuiltyCase.caseId) {
+          <tr pdk-table-row>
             <td pdk-table-cell>
               <a href="javascript:void(0)" pdk-link (click)="viewCase.emit(pleadedNotGuiltyCase.caseId)">
                 <b>{{ pleadedNotGuiltyCase | defendantName: false }}</b>
@@ -73,19 +93,48 @@ import { RegionState } from '../core/reducers/entities.reducer';
               {{ pleadedNotGuiltyCase.pleaEntry | date: 'dd MMM yyyy' }}
             </td>
           </tr>
+          }
         </tbody>
       </table>
-    </span>
-    <ng-template #noNotGuiltyPleaCases>
+      } @else {
       <h4 pdk-section="large">
         <pdk-warning-text>
           There are no cases to review
         </pdk-warning-text>
         <pdk-divider></pdk-divider>
       </h4>
-    </ng-template>
+      }
+    </span>
+    } @else {
+    <h4 pdk-section="large">
+      <pdk-warning-text>
+        There are no cases to review
+      </pdk-warning-text>
+      <pdk-divider></pdk-divider>
+    </h4>
+    }
     <button pdk-button="" type="button" routerLink="/">Back to home</button>
-  `
+  `,
+  imports: [
+    BreadcrumbLinksComponent,
+    PdkWarningTextComponent,
+    PdkDividerComponent,
+    PdkGridComponent,
+    PdkSelectComponent,
+    PdkFormGroupComponent,
+    NgPlural,
+    NgPluralCase,
+    DefendantNamePipe,
+    DatePipe,
+    FormatAddressPipe,
+    FormsModule,
+    RouterLink,
+    PdkTable,
+    PdkForm,
+    PdkCore,
+    PdkLabelDirective,
+    PdkButtonDirective
+  ]
 })
 export class ReviewNotGuiltyPleasComponent {
   @ViewChild(NgForm) form: NgForm;

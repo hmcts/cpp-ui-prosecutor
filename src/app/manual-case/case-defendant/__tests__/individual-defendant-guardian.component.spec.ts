@@ -1,22 +1,11 @@
-import { Shallow } from 'shallow-render';
-import { FormsModule, ReactiveFormsModule, ControlContainer, NgForm } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkRadioInputModule,
-  PdkInsetTextModule,
-  PdkTextareaModule,
-  PdkInputModule,
-  PdkDateInputModule,
-  PdkGridModule
-} from '@cpp/pdk';
-import { ManualCaseModule } from '../../manual-case.module';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ManualCaseDefendant } from '../../../core/model';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../../shared';
 import { IndividualDefendantGuardianComponent } from '../individual-defendant-guardian.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { RouterModule } from '@angular/router';
+import { By } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideTranslateService } from '@ngx-translate/core';
 
 const individualCaseDefendant = {
   individual: {
@@ -34,7 +23,15 @@ const individualCaseDefendant = {
     parentGuardianInformation: {
       personalInformation: {
         lastName: 'Guardian One',
-        contactDetails: {}
+        contactDetails: {},
+        address: {
+          address1: '',
+          address2: '',
+          address3: '',
+          address4: '',
+          address5: '',
+          postcode: ''
+        }
       }
     }
   }
@@ -57,102 +54,121 @@ const defendantWithCompanyAstGuardian = {
       personalInformation: { lastName: '' },
       organisationName: 'ZZZ Company',
       address: {
-        address1: 'No fixed adobe'
+        address1: 'No fixed adobe',
+        address2: '',
+        address3: '',
+        address4: '',
+        address5: '',
+        postcode: ''
       }
     }
   }
 } as ManualCaseDefendant;
 
 describe('Individual Defendant Guardian Component', () => {
-  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
-  let component: Shallow<IndividualDefendantGuardianComponent>;
-
-  const generateUUID = jest.fn();
-  generateUUID.mockReturnValue('uuid-001');
+  let fixture: ComponentFixture<TestIndividualDefendantGuardianComponent>;
+  let guardianComponent: IndividualDefendantGuardianComponent;
 
   beforeEach(() => {
-    component = new Shallow(IndividualDefendantGuardianComponent, ManualCaseModule)
-      .provide([ControlContainer, NgForm])
-      .dontMock(
-        CommonModule,
-        SharedModule,
-        FormsModule,
-        PdkRadioInputModule,
-        ReactiveFormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        NgForm,
-        PdkInputModule,
-        PdkRadioInputModule,
-        PdkInsetTextModule,
-        PdkCoreModule,
-        PdkDateInputModule,
-        PdkTextareaModule,
-        PdkGridModule
-      );
+    TestBed.configureTestingModule({
+      imports: [FormsModule, TestIndividualDefendantGuardianComponent, IndividualDefendantGuardianComponent],
+      providers: [
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      teardown: { destroyAfterEach: false }
+    });
+
+    fixture = TestBed.createComponent(TestIndividualDefendantGuardianComponent);
+    guardianComponent = fixture.debugElement.query(By.directive(IndividualDefendantGuardianComponent))
+      .componentInstance;
   });
 
-  function renderComponent(manualCaseDefendant, manualCaseType) {
-    return component.render(
-      `<individual-defendant-guardian
-          [manualCaseType]="manualCaseType"
-          [manualCaseDefendant]="manualCaseDefendant">
-       </individual-defendant-guardian>`,
-      {
-        bind: {
-          manualCaseDefendant,
-          manualCaseType
-        }
-      }
-    );
-  }
+  it('should render the defendant form correctly when individual is a guardian', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...individualCaseDefendant };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.detectChanges();
 
-  it('should render the defendant form correctly when individual is a guardian', async () => {
-    const { fixture, instance } = await renderComponent(individualCaseDefendant, 'J');
-
-    expect(instance).toBeTruthy();
+    expect(guardianComponent).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should copy defendant address to individual-guardian-address', async () => {
-    const { find, fixture } = await renderComponent(individualCaseDefendant, 'J');
-    const sameAsButton = find('a[data-role="same-as-individual-defendant"]');
+  it('should copy defendant address to individual-guardian-address', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...individualCaseDefendant };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.detectChanges();
 
+    const sameAsButton = fixture.debugElement.query(By.css('a[data-role="same-as-individual-defendant"]'));
     sameAsButton.nativeElement.click();
+    fixture.detectChanges();
+
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should copy defendant address to organisation-guardian-address', async () => {
-    const { find, fixture } = await renderComponent(defendantWithCompanyAstGuardian, 'J');
-    const sameAsButton = find('a[data-role="same-as-organisation-defendant"]');
+  it('should copy defendant address to organisation-guardian-address', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...defendantWithCompanyAstGuardian };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.detectChanges();
 
+    const sameAsButton = fixture.debugElement.query(By.css('a[data-role="same-as-organisation-defendant"]'));
     sameAsButton.nativeElement.click();
+    fixture.detectChanges();
+
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should clear guardian form when remove button is clicked', async () => {
-    const { find, instance, fixture } = await renderComponent(individualCaseDefendant, 'J');
-    const removeButton = find('a[data-role="remove-guardian-link"]');
+  it('should clear guardian form when remove button is clicked', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...individualCaseDefendant };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.detectChanges();
 
-    expect(instance.showGuardian).toBeTruthy();
+    expect(guardianComponent.showGuardian).toBeTruthy();
+
+    const removeButton = fixture.debugElement.query(By.css('a[data-role="remove-guardian-link"]'));
     removeButton.nativeElement.click();
+    fixture.detectChanges();
+
     expect(fixture).toMatchSnapshot();
-    expect(instance.showGuardian).toBeFalsy();
+    expect(guardianComponent.showGuardian).toBeFalsy();
   });
 
-  it('should not render noFixedAbode checkbox when case type is Summons and individual is a guardian', async () => {
-    const { fixture, find, instance } = await renderComponent(individualCaseDefendant, 'S');
+  it('should not render noFixedAbode checkbox when case type is Summons and individual is a guardian', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...individualCaseDefendant };
+    fixture.componentInstance.manualCaseType = 'S';
+    fixture.detectChanges();
 
-    expect(find(`pdk-checkbox[data-role='no-fixed-abode']`)).toHaveLength(0);
-    expect(instance).toBeTruthy();
+    const noFixedAbodeCheckbox = fixture.debugElement.query(By.css(`pdk-checkbox[data-role='no-fixed-abode']`));
+    expect(noFixedAbodeCheckbox).toBeNull();
+    expect(guardianComponent).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should not render noFixedAbode checkbox when case type is Summons and company is a guardian', async () => {
-    const { fixture, find, instance } = await renderComponent(defendantWithCompanyAstGuardian, 'S');
+  it('should not render noFixedAbode checkbox when case type is Summons and company is a guardian', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...defendantWithCompanyAstGuardian };
+    fixture.componentInstance.manualCaseType = 'S';
+    fixture.detectChanges();
 
-    expect(find(`pdk-checkbox[data-role='no-fixed-abode']`)).toHaveLength(0);
-    expect(instance).toBeTruthy();
+    const noFixedAbodeCheckbox = fixture.debugElement.query(By.css(`pdk-checkbox[data-role='no-fixed-abode']`));
+    expect(noFixedAbodeCheckbox).toBeNull();
+    expect(guardianComponent).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
+
+  @Component({
+    selector: 'individual-defendant-guardian-test',
+    template: `
+      <form #form="ngForm" pdk-form>
+        <individual-defendant-guardian [manualCaseType]="manualCaseType" [manualCaseDefendant]="manualCaseDefendant">
+        </individual-defendant-guardian>
+      </form>
+    `,
+    imports: [FormsModule, IndividualDefendantGuardianComponent]
+  })
+  class TestIndividualDefendantGuardianComponent {
+    manualCaseDefendant: ManualCaseDefendant;
+    manualCaseType: string;
+  }
 });

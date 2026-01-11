@@ -1,32 +1,41 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ExportCaseDecisionsComponent } from '../export-case-decisions.component';
-import { PdkBreadcrumbsModule, PdkCoreModule, PdkErrorSummaryModule } from '@cpp/pdk';
 import { CaseCountResult } from '../../../contexts/mi-report';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { InputValues } from '../../../shared/from-to-dates/from-to-dates.component';
 import { By } from '@angular/platform-browser';
-import { MockModule } from '../../../shared/mock-components/mock.module';
-import { RouterTestingModule } from '@angular/router/testing';
+import { JsonPipe } from '@angular/common';
+import { DownloadCaseDecisionsComponent } from '../download-case-decisions.component';
+import { ExportCaseDecisionsFormComponent } from '../export-case-decisions-form.component';
 
 describe('ExportCaseDecisionsComponent', () => {
   let fixture: ComponentFixture<TestExportCaseDecisionsComponent>;
   let form;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        ExportCaseDecisionsComponent,
-        MockExportCaseDecisionsFormComponent,
-        MockDownloadCaseDecisionsFormComponent,
-        TestExportCaseDecisionsComponent
-      ],
-      imports: [RouterTestingModule, PdkBreadcrumbsModule, PdkErrorSummaryModule, PdkCoreModule, MockModule],
-      teardown: { destroyAfterEach: false }
-    });
-    fixture = TestBed.createComponent(TestExportCaseDecisionsComponent);
-    form = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent));
-  });
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          MockExportCaseDecisionsFormComponent,
+          MockDownloadCaseDecisionsFormComponent,
+          TestExportCaseDecisionsComponent,
+          ExportCaseDecisionsComponent
+        ],
+        teardown: { destroyAfterEach: false }
+      }).overrideComponent(ExportCaseDecisionsComponent, {
+        remove: {
+          imports: [ExportCaseDecisionsFormComponent, DownloadCaseDecisionsComponent]
+        },
+        add: {
+          imports: [MockExportCaseDecisionsFormComponent, MockDownloadCaseDecisionsFormComponent]
+        }
+      });
+      fixture = TestBed.createComponent(TestExportCaseDecisionsComponent);
+      fixture.detectChanges();
+      form = fixture.debugElement.query(By.directive(MockExportCaseDecisionsFormComponent));
+    })
+  );
 
   it('should compile correctly', () => {
     fixture.detectChanges();
@@ -45,6 +54,7 @@ describe('ExportCaseDecisionsComponent', () => {
   });
 
   it('should compile correctly with errors', () => {
+    fixture.detectChanges();
     form.componentInstance.errors.emit([
       {
         id: 'pdk-error-id1',
@@ -70,7 +80,8 @@ describe('ExportCaseDecisionsComponent', () => {
     template: `
       <export-case-decisions [role]="role" [caseCountResult]="caseCountResult" (loadCaseCount)="loadCaseCount($event)">
       </export-case-decisions>
-    `
+    `,
+    imports: [ExportCaseDecisionsComponent]
   })
   class TestExportCaseDecisionsComponent {
     role: string;
@@ -83,7 +94,8 @@ describe('ExportCaseDecisionsComponent', () => {
     template: `
       {{ caseCountResult | json }}
       {{ role | json }}
-    `
+    `,
+    imports: [JsonPipe]
   })
   class MockDownloadCaseDecisionsFormComponent {
     @Input() role: string;

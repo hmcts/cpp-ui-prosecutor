@@ -7,11 +7,9 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
 >
   <dates-to-avoid-form>
     <pdk-grid
-      class="govuk-grid-row"
       container=""
     >
       <pdk-grid
-        class="govuk-grid-column-two-thirds"
         two-thirds=""
       >
         <form
@@ -56,7 +54,7 @@ exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
           <div>
             <a
               class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
-              href="javascript:void(0)"
+              href="/"
               pdk-link=""
               pdk-margin-vertical="5"
               routerlink="../"
@@ -79,11 +77,9 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
 >
   <dates-to-avoid-form>
     <pdk-grid
-      class="govuk-grid-row"
       container=""
     >
       <pdk-grid
-        class="govuk-grid-column-two-thirds"
         two-thirds=""
       >
         <form
@@ -128,7 +124,7 @@ exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
           <div>
             <a
               class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
-              href="javascript:void(0)"
+              href="/"
               pdk-link=""
               pdk-margin-vertical="5"
               routerlink="../"

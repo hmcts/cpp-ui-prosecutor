@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReferenceDataActions, ReferenceDataService } from '@cpp/reference-data';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
@@ -15,13 +15,14 @@ import { getQueryParams } from '../selectors/app';
 
 @Injectable()
 export class ProsecutorEffects {
-  constructor(
-    private actions$: Actions,
-    private referenceDataService: ReferenceDataService,
-    private pcfReferenceDataService: PCFReferenceDataService,
-    private store: Store<State>,
-    private router: Router
-  ) {}
+  private actions$ = inject(Actions);
+  private referenceDataService = inject(ReferenceDataService);
+  private pcfReferenceDataService = inject(PCFReferenceDataService);
+  private store = inject<Store<State>>(Store);
+  private router = inject(Router);
+
+
+  constructor() {}
 
   createProsecutor$ = createEffect(() =>
     this.actions$.pipe(

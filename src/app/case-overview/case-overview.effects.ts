@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { Action, select, Store } from '@ngrx/store';
@@ -20,6 +20,11 @@ import { State } from '../reducers';
 
 @Injectable()
 export class CaseOverviewEffects {
+  private actions$ = inject(Actions);
+  private sjpService = inject(SjpService);
+  private router = inject(Router);
+  private store = inject<Store<State>>(Store);
+
   withdrawOffences: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType<WithdrawOffences>(CaseOverviewActionType.WITHDRAW_OFFENCES),
@@ -82,10 +87,5 @@ export class CaseOverviewEffects {
     )
   );
 
-  constructor(
-    private actions$: Actions,
-    private sjpService: SjpService,
-    private router: Router,
-    private store: Store<State>
-  ) {}
+  constructor() {}
 }

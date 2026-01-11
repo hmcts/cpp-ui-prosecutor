@@ -1,7 +1,7 @@
 import { Actions } from '@ngrx/effects';
 import { TestBed } from '@angular/core/testing';
 import { Observable } from 'rxjs';
-import { StoreModule } from '@ngrx/store';
+import { Action, provideStore } from '@ngrx/store';
 import { PCFReferenceDataEffects } from '../pcf-reference-data.effects';
 import { cold, hot } from 'jasmine-marbles';
 import { reducers } from '../../reducers';
@@ -21,7 +21,7 @@ import { provideMockActions } from '@ngrx/effects/testing';
 
 describe('Reference Data Effects', () => {
   let effects: PCFReferenceDataEffects;
-  let actions$: Observable<any>;
+  let actions$ = new Observable<Action>();
 
   let getEthnicities: jest.Mock;
   let getObservedEthnicities: jest.Mock;
@@ -59,8 +59,8 @@ describe('Reference Data Effects', () => {
     downloadCriminalMediaReport = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         PCFReferenceDataEffects,
         provideMockActions(() => actions$),
         {
@@ -72,12 +72,14 @@ describe('Reference Data Effects', () => {
             getCustodyEstablishment,
             downloadCriminalMediaReport
           }
-        }
-      ]
+        },
+        provideMockActions(() => actions$)
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
-    effects = TestBed.get(PCFReferenceDataEffects);
-    actions$ = TestBed.get(Actions);
+    effects = TestBed.inject(PCFReferenceDataEffects);
+    actions$ = TestBed.inject(Actions);
   });
 
   describe('loadEthnicities$', () => {

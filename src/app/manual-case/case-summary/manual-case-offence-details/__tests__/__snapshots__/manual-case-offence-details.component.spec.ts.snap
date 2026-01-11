@@ -13,7 +13,7 @@ exports[`OffenceDetailsComponent should render the component 1`] = `
   todayDate={[Function String]}
 >
   <div
-    class="defendant-details"
+    class="defendant-details govuk-!-margin-bottom-7"
     pdk-margin-bottom="7"
   >
     <pdk-grid

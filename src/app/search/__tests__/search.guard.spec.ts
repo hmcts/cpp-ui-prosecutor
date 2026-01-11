@@ -1,4 +1,4 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
@@ -22,8 +22,8 @@ describe('SearchGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         SearchGuard,
         {
           provide: SjpService,
@@ -41,8 +41,8 @@ describe('SearchGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(SearchGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(SearchGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

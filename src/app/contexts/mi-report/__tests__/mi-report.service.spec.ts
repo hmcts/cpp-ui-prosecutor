@@ -24,7 +24,7 @@ describe('MiReportService', () => {
       ],
       teardown: { destroyAfterEach: false }
     });
-    miReportService = TestBed.get(MiReportService);
+    miReportService = TestBed.inject(MiReportService);
   });
 
   describe('getResultedCaseCount()', () => {

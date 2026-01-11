@@ -5,7 +5,7 @@ exports[`WhatChangedComponent should show address changed 1`] = `
   defendantDetailsUpdate={[Function Object]}
 >
   <ul
-    class="govuk-list"
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
     pdk-margin-vertical="2"
   >
     <li
@@ -22,7 +22,7 @@ exports[`WhatChangedComponent should show all change 1`] = `
   defendantDetailsUpdate={[Function Object]}
 >
   <ul
-    class="govuk-list"
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
     pdk-margin-vertical="2"
   >
     <li
@@ -49,7 +49,7 @@ exports[`WhatChangedComponent should show date of birth changed 1`] = `
   defendantDetailsUpdate={[Function Object]}
 >
   <ul
-    class="govuk-list"
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
     pdk-margin-vertical="2"
   >
     <li
@@ -66,7 +66,7 @@ exports[`WhatChangedComponent should show name changed 1`] = `
   defendantDetailsUpdate={[Function Object]}
 >
   <ul
-    class="govuk-list"
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
     pdk-margin-vertical="2"
   >
     <li

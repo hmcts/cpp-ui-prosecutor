@@ -1,10 +1,7 @@
 import { State } from '../core/reducers';
-import { SearchState } from './search.reducer';
 import { createSelector } from '@ngrx/store';
 
-export interface FeatureState extends State {
-  search: SearchState;
-}
+export type FeatureState = State;
 
 export const getSearchResult = (state: FeatureState) => state.search;
 export const getKeyword = (state: FeatureState) => state.search && state.search.keyword;

@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Organisation Defendant Form Component should render the component correctly when case type is Non-SJP 1`] = `
-<ng-component>
+<organisation-defendant-form-test
+  handleFormBack={[Function Function]}
+  handleFormError={[Function Function]}
+  handleFormSubmit={[Function Function]}
+  isPoliceProsecutor="false"
+  manualCaseDefendant={[Function Object]}
+  manualCaseType={[Function String]}
+>
   <organisation-defendant-form>
     <form
-      class="ng-untouched ng-valid ng-dirty"
+      class="ng-untouched ng-pristine ng-valid"
       novalidate=""
       pdk-form=""
     >
@@ -16,6 +23,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label govuk-label--s"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.ORGANISATION_NAME 
+          </label>
           <textarea
             class="ng-untouched ng-pristine ng-valid govuk-input"
             data-role="organisationName-input"
@@ -36,6 +49,7 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_ADDRESS 
       </h2>
       <pdk-form-field
         class="govuk-!-margin-bottom-3"
@@ -49,8 +63,13 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend govuk-fieldset__legend--s"
+            >
+               MANUAL_CASE_DEFENDANT.ADDRESS 
+            </legend>
             <input-address
-              class="ng-untouched ng-valid ng-dirty"
+              class="ng-untouched ng-pristine ng-valid"
               data-role="address-input"
               name="address"
             >
@@ -70,7 +89,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 1 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address1"
                     maxlength="35"
                     name="address1"
@@ -92,7 +111,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 2 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address2"
                     maxlength="35"
                     name="address2"
@@ -114,7 +133,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 3 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address3"
                     maxlength="35"
                     name="address3"
@@ -136,7 +155,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 4 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address4"
                     maxlength="35"
                     name="address4"
@@ -158,7 +177,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 5 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address5"
                     maxlength="35"
                     name="address5"
@@ -180,7 +199,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Postcode 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-postcode"
                     maxlength="8"
                     name="postcode"
@@ -200,11 +219,18 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_CONTACT_DETAILS 
       </h2>
       <pdk-form-field>
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.EMAIL 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -221,6 +247,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.PHONE 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -238,6 +270,7 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_NEEDS 
       </h2>
       <pdk-form-field>
         <pdk-form-group
@@ -247,6 +280,11 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               MANUAL_CASE_DEFENDANT.WRITTEN_LANGUAGE_NEEDS 
+            </legend>
             <pdk-radio-group
               class="ng-untouched ng-pristine ng-valid"
               name="documentationLanguage"
@@ -256,7 +294,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                 class="govuk-radios govuk-radios--inline"
               >
                 <pdk-radio-button
-                  value="E"
+                  value="ENGLISH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -266,18 +304,19 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="E"
+                      value="ENGLISH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.ENGLISH
                     </label>
                   </div>
                 </pdk-radio-button>
                 <pdk-radio-button
-                  value="W"
+                  value="WELSH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -287,13 +326,14 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="W"
+                      value="WELSH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.WELSH
                     </label>
                   </div>
                 </pdk-radio-button>
@@ -310,6 +350,11 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               MANUAL_CASE_DEFENDANT.HEARING_LANGUAGE_NEEDS 
+            </legend>
             <pdk-radio-group
               class="ng-untouched ng-pristine ng-valid"
               name="hearingLanguage"
@@ -319,7 +364,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                 class="govuk-radios govuk-radios--inline"
               >
                 <pdk-radio-button
-                  value="E"
+                  value="ENGLISH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -329,18 +374,19 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="E"
+                      value="ENGLISH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.ENGLISH
                     </label>
                   </div>
                 </pdk-radio-button>
                 <pdk-radio-button
-                  value="W"
+                  value="WELSH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -350,13 +396,14 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="W"
+                      value="WELSH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.WELSH
                     </label>
                   </div>
                 </pdk-radio-button>
@@ -366,13 +413,14 @@ exports[`Organisation Defendant Form Component should render the component corre
         </pdk-form-group>
       </pdk-form-field>
       <button
-        class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-button pdk-button--secondary"
+        class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-button govuk-button--secondary"
         data-role="add"
         pdk-button="secondary"
         pdk-margin-bottom="3"
         pdk-margin-top="3"
         type="submit"
       >
+         MANUAL_CASE_DEFENDANT.ADD_DEFENDANT 
       </button>
       <pdk-form-group
         class="pdk-form-group"
@@ -383,6 +431,7 @@ exports[`Organisation Defendant Form Component should render the component corre
           pdk-button=""
           type="submit"
         >
+           MANUAL_CASE_DEFENDANT.CONTINUE 
         </button>
       </pdk-form-group>
       <p
@@ -395,18 +444,26 @@ exports[`Organisation Defendant Form Component should render the component corre
           pdk-link=""
           unvisited=""
         >
+           MANUAL_CASE_DEFENDANT.BACK 
         </a>
       </p>
     </form>
   </organisation-defendant-form>
-</ng-component>
+</organisation-defendant-form-test>
 `;
 
 exports[`Organisation Defendant Form Component should render the component correctly when case type is SJP 1`] = `
-<ng-component>
+<organisation-defendant-form-test
+  handleFormBack={[Function Function]}
+  handleFormError={[Function Function]}
+  handleFormSubmit={[Function Function]}
+  isPoliceProsecutor={[Function Boolean]}
+  manualCaseDefendant={[Function Object]}
+  manualCaseType={[Function String]}
+>
   <organisation-defendant-form>
     <form
-      class="ng-untouched ng-valid ng-dirty"
+      class="ng-untouched ng-pristine ng-valid"
       novalidate=""
       pdk-form=""
     >
@@ -418,6 +475,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label govuk-label--s"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.ORGANISATION_NAME 
+          </label>
           <textarea
             class="ng-untouched ng-pristine ng-valid govuk-input"
             data-role="organisationName-input"
@@ -439,6 +502,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label govuk-label--s"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -455,6 +524,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label govuk-label--s"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.ARREST_SUMMONS_NUMBER 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -472,6 +547,7 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_ADDRESS 
       </h2>
       <pdk-form-field
         class="govuk-!-margin-bottom-3"
@@ -485,8 +561,13 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend govuk-fieldset__legend--s"
+            >
+               MANUAL_CASE_DEFENDANT.ADDRESS 
+            </legend>
             <input-address
-              class="ng-untouched ng-valid ng-dirty"
+              class="ng-untouched ng-pristine ng-valid"
               data-role="address-input"
               name="address"
             >
@@ -506,7 +587,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 1 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address1"
                     maxlength="35"
                     name="address1"
@@ -528,7 +609,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 2 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address2"
                     maxlength="35"
                     name="address2"
@@ -550,7 +631,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 3 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address3"
                     maxlength="35"
                     name="address3"
@@ -572,7 +653,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 4 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address4"
                     maxlength="35"
                     name="address4"
@@ -594,7 +675,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Address line 5 (optional) 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine ng-invalid govuk-input"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-address5"
                     maxlength="35"
                     name="address5"
@@ -616,7 +697,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                      Postcode 
                   </label>
                   <input
-                    class="form-control ng-untouched ng-pristine govuk-input ng-valid"
+                    class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
                     id="address-control-undefined-GENERATED_ID-postcode"
                     maxlength="8"
                     name="postcode"
@@ -636,11 +717,18 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_CONTACT_DETAILS 
       </h2>
       <pdk-form-field>
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.EMAIL 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -657,6 +745,12 @@ exports[`Organisation Defendant Form Component should render the component corre
         <pdk-form-group
           class="pdk-form-group"
         >
+          <label
+            class="govuk-label"
+            for="pdk-form-control-undefined-GENERATED_ID"
+          >
+             MANUAL_CASE_DEFENDANT.PHONE 
+          </label>
           <input
             class="ng-untouched ng-pristine ng-valid govuk-input"
             id="pdk-form-control-undefined-GENERATED_ID"
@@ -674,6 +768,7 @@ exports[`Organisation Defendant Form Component should render the component corre
         pdk-margin-bottom="3"
         pdk-typography="body-medium"
       >
+         MANUAL_CASE_DEFENDANT.DEFENDANT_NEEDS 
       </h2>
       <pdk-form-field>
         <pdk-form-group
@@ -683,6 +778,11 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               MANUAL_CASE_DEFENDANT.WRITTEN_LANGUAGE_NEEDS 
+            </legend>
             <pdk-radio-group
               class="ng-untouched ng-pristine ng-valid"
               name="documentationLanguage"
@@ -692,7 +792,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                 class="govuk-radios govuk-radios--inline"
               >
                 <pdk-radio-button
-                  value="E"
+                  value="ENGLISH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -702,18 +802,19 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="E"
+                      value="ENGLISH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.ENGLISH
                     </label>
                   </div>
                 </pdk-radio-button>
                 <pdk-radio-button
-                  value="W"
+                  value="WELSH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -723,13 +824,14 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="W"
+                      value="WELSH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.WELSH
                     </label>
                   </div>
                 </pdk-radio-button>
@@ -746,6 +848,11 @@ exports[`Organisation Defendant Form Component should render the component corre
             class="govuk-fieldset"
             pdk-fieldset=""
           >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               MANUAL_CASE_DEFENDANT.HEARING_LANGUAGE_NEEDS 
+            </legend>
             <pdk-radio-group
               class="ng-untouched ng-pristine ng-valid"
               name="hearingLanguage"
@@ -755,7 +862,7 @@ exports[`Organisation Defendant Form Component should render the component corre
                 class="govuk-radios govuk-radios--inline"
               >
                 <pdk-radio-button
-                  value="E"
+                  value="ENGLISH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -765,18 +872,19 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="E"
+                      value="ENGLISH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.ENGLISH
                     </label>
                   </div>
                 </pdk-radio-button>
                 <pdk-radio-button
-                  value="W"
+                  value="WELSH"
                 >
                   <div
                     class="govuk-radios__item"
@@ -786,13 +894,14 @@ exports[`Organisation Defendant Form Component should render the component corre
                       id="pdk-radio-GENERATED_ID"
                       name="pdk-radio-group-GENERATED_ID"
                       type="radio"
-                      value="W"
+                      value="WELSH"
                     />
                     <label
                       class="govuk-radios__label govuk-label"
                       for="pdk-radio-GENERATED_ID"
                       pdk-label=""
                     >
+                      MANUAL_CASE_DEFENDANT.WELSH
                     </label>
                   </div>
                 </pdk-radio-button>
@@ -810,6 +919,7 @@ exports[`Organisation Defendant Form Component should render the component corre
           pdk-button=""
           type="submit"
         >
+           MANUAL_CASE_DEFENDANT.CONTINUE 
         </button>
       </pdk-form-group>
       <p
@@ -822,9 +932,10 @@ exports[`Organisation Defendant Form Component should render the component corre
           pdk-link=""
           unvisited=""
         >
+           MANUAL_CASE_DEFENDANT.BACK 
         </a>
       </p>
     </form>
   </organisation-defendant-form>
-</ng-component>
+</organisation-defendant-form-test>
 `;

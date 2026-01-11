@@ -5,39 +5,53 @@ import { DisqualificationPeriodPipe } from '../../../shared/pipes/disqualificati
 import { DISQUALIFICATION_DECISION_TEXT } from './disqualification/disqualification.constants';
 
 @Component({
-  selector: 'financial-offence-decision',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <div *ngIf="offenceDecision.decisionType === 'DISCHARGE'" data-role="discharge-type">{{ dischargeType }}</div>
-    <div *ngIf="offenceDecision.decisionType === 'FINANCIAL_PENALTY' && fine" data-role="fine">Fine {{ fine }}</div>
-    <div *ngIf="offenceDecision.decisionType === 'FINANCIAL_PENALTY' && excisePenalty" data-role="excise-penalty">
-      Excise penalty {{ excisePenalty }}
-    </div>
-    <div
-      *ngIf="(offenceDecision.decisionType === 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty"
-      data-role="back-duty"
-    >
-      Back duty {{ backDuty }}
-    </div>
+    selector: 'financial-offence-decision',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
+    @if (offenceDecision.decisionType === 'DISCHARGE') {
+      <div data-role="discharge-type">{{ dischargeType }}</div>
+    }
+    @if (offenceDecision.decisionType === 'FINANCIAL_PENALTY' && fine) {
+      <div data-role="fine">Fine {{ fine }}</div>
+    }
+    @if (offenceDecision.decisionType === 'FINANCIAL_PENALTY' && excisePenalty) {
+      <div data-role="excise-penalty">
+        Excise penalty {{ excisePenalty }}
+      </div>
+    }
+    @if ((offenceDecision.decisionType === 'FINANCIAL_PENALTY' || 'DISCHARGE') && backDuty) {
+      <div
+        data-role="back-duty"
+        >
+        Back duty {{ backDuty }}
+      </div>
+    }
     <div data-role="compensation">{{ compensation }}</div>
-    <div *ngIf="offenceDecision.licenceEndorsement" data-role="licence-endorsement">
-      {{ licenceEndorsement }}
-    </div>
-    <div
-      *ngIf="offenceDecision.licenceEndorsement && offenceDecision.additionalPointsReason"
-      data-role="additional-points-reason"
-    >
-      {{
+    @if (offenceDecision.licenceEndorsement) {
+      <div data-role="licence-endorsement">
+        {{ licenceEndorsement }}
+      </div>
+    }
+    @if (offenceDecision.licenceEndorsement && offenceDecision.additionalPointsReason) {
+      <div
+        data-role="additional-points-reason"
+        >
+        {{
         'Reason for penalty points being imposed on more than one offence: ' + offenceDecision.additionalPointsReason
-      }}
-    </div>
-    <div *ngIf="offenceDecision.disqualification" data-role="disqualification">
-      {{ disqualification }}
-    </div>
-    <div *ngIf="offenceDecision.guiltyPleaTakenIntoAccount" data-role="guilty-plea-taken-into-account">
-      {{ "Defendant's guilty plea Taken into account when imposing sentence" }}
-    </div>
-  `
+        }}
+      </div>
+    }
+    @if (offenceDecision.disqualification) {
+      <div data-role="disqualification">
+        {{ disqualification }}
+      </div>
+    }
+    @if (offenceDecision.guiltyPleaTakenIntoAccount) {
+      <div data-role="guilty-plea-taken-into-account">
+        {{ "Defendant's guilty plea Taken into account when imposing sentence" }}
+      </div>
+    }
+    `,
 })
 export class FinancialOffenceDecisionComponent {
   @Input() offenceDecision: FinancialPenaltyOffenceDecision | DischargeOffenceDecision;

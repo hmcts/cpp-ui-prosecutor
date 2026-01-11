@@ -340,7 +340,6 @@ export interface CourtReferralOffenceDecision extends OffenceDecision {
   referralReason: string;
 }
 
-// eslint-disable-next-line
 export interface DismissOffenceDecision extends OffenceDecision {}
 
 export interface DischargeOffenceDecision extends FinancialImpositionOffenceDecision {
@@ -509,7 +508,7 @@ export interface OnlinePleaDetail {
   offenceId: string;
   caseId: string;
   defendantId: string;
-  plea: string;
+  plea: PleaseStatus;
   notGuiltyBecause?: string;
   mitigation?: string;
   offenceTitle: string;

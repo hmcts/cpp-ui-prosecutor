@@ -1,12 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { ProsecutionCaseDetailsComponent } from '../prosecution-case-details.component';
 import { ManualCase } from '../../../../core/model/manual-case';
-import { MockPipesModule } from '../../../../shared/pipes/mock-pipes';
-import { DashPipe } from '../../../../shared/pipes/dash/dash.pipe';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('ProsecutionCaseDetailsComponent', () => {
   let component: ProsecutionCaseDetailsComponent;
@@ -14,10 +11,16 @@ describe('ProsecutionCaseDetailsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProsecutionCaseDetailsComponent, DashPipe],
-      imports: [CommonModule, MockPipesModule, RouterTestingModule],
+      imports: [ProsecutionCaseDetailsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm]
+      providers: [
+        ControlContainer,
+        NgForm,
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ProsecutionCaseDetailsComponent);

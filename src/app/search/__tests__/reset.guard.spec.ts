@@ -1,4 +1,4 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { ResetSearchResult } from '../search.action';
@@ -10,13 +10,12 @@ describe('ResetGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
-      providers: [ResetGuard],
+      providers: [provideStore(reducers, { runtimeChecks: {} }), ResetGuard],
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(ResetGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(ResetGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

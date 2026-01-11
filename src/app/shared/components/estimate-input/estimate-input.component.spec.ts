@@ -1,14 +1,19 @@
-import { Component, DebugElement, Type } from '@angular/core';
+import { Component, DebugElement, forwardRef, Type } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { AbstractControl, FormsModule, NgForm } from '@angular/forms';
+import { AbstractControl, FormsModule, NG_VALUE_ACCESSOR, NgForm } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { EstimateInputComponent } from './estimate-input.component';
-import { EstimateInputModule } from './index';
 
 function initTest<T>(component: Type<T>, ...directives: Type<any>[]): ComponentFixture<T> {
   TestBed.configureTestingModule({
-    declarations: [component, ...directives],
-    imports: [FormsModule, EstimateInputModule]
+    imports: [FormsModule],
+    providers: [
+      {
+        provide: NG_VALUE_ACCESSOR,
+        useExisting: forwardRef(() => EstimateInputComponent),
+        multi: true
+      }
+    ]
   });
   return TestBed.createComponent(component);
 }
@@ -69,7 +74,8 @@ describe('estimate-input', () => {
         <form>
           <estimate-input name="estimate" [ngModel]="model" aria-describedby="identifier"> </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateMinutesComponent {
       model: number;
@@ -108,7 +114,8 @@ describe('estimate-input', () => {
           <estimate-input name="estimate" [ngModel]="model" hours-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateHoursMinutesComponent {
       model: number;
@@ -148,7 +155,8 @@ describe('estimate-input', () => {
           <estimate-input name="estimate" [ngModel]="model" hours-enabled days-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateDaysHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateDaysHoursMinutesComponent {
       model: number;
@@ -196,7 +204,8 @@ describe('estimate-input', () => {
           >
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateWeeksDaysHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateWeeksDaysHoursMinutesComponent {
       model: number;
@@ -235,7 +244,8 @@ describe('estimate-input', () => {
           <estimate-input name="estimate" [ngModel]="model" days-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateDaysMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateDaysMinutesComponent {
       model: number;
@@ -260,7 +270,8 @@ describe('estimate-input', () => {
           <estimate-input name="estimate" [ngModel]="model" weeks-enabled aria-describedby="identifier">
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateWeeksMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateWeeksMinutesComponent {
       model: number;
@@ -284,7 +295,8 @@ describe('estimate-input', () => {
         <form>
           <estimate-input name="estimate" [ngModel]="model" weeks-enabled hours-enabled> </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateWeeksHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateWeeksHoursMinutesComponent {
       model: number;
@@ -309,7 +321,8 @@ describe('estimate-input', () => {
         <form>
           <estimate-input name="estimate" [ngModel]="model" weeks-enabled days-enabled> </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateWeeksDaysMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateWeeksDaysMinutesComponent {
       model: number;
@@ -343,7 +356,8 @@ describe('estimate-input', () => {
           >
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateAnyComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateAnyComponent {
       model: number;
@@ -420,7 +434,8 @@ describe('estimate-input', () => {
           >
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateDaysHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateDaysHoursMinutesComponent {
       model: number;
@@ -446,7 +461,8 @@ describe('estimate-input', () => {
           <estimate-input name="estimate" [ngModel]="model" aria-describedby="identifier" [minMinutesValue]="10">
           </estimate-input>
         </form>
-      `
+      `,
+      imports: [EstimateDaysHoursMinutesComponent, FormsModule, EstimateInputComponent]
     })
     class EstimateDaysHoursMinutesComponent {
       model: number;

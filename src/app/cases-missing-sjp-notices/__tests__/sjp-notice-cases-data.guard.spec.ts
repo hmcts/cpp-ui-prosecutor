@@ -1,12 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
-import { State } from '../../reducers';
+import { provideStore, Store } from '@ngrx/store';
+import { reducers, State } from '../../reducers';
 import { CasesMissingSjpNoticeResult, SjpService } from '../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { SjpNoticeCasesDataGuard } from '../sjp-notice-cases-data.guard';
 import { LoadCasesWithSjpNoticeCountSuccess } from '../../core';
-import { casesMissingSjpNoticesReducer } from '../cases-missing-sjp-notices.reducer';
 
 describe('SjpNoticeCasesDataGuard', () => {
   let pleadedNotGuiltyCasesDataGuard: SjpNoticeCasesDataGuard;
@@ -19,9 +18,8 @@ describe('SjpNoticeCasesDataGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      declarations: [],
-      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         SjpNoticeCasesDataGuard,
         {
           provide: SjpService,
@@ -39,8 +37,8 @@ describe('SjpNoticeCasesDataGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    pleadedNotGuiltyCasesDataGuard = TestBed.get(SjpNoticeCasesDataGuard);
-    store = TestBed.get(Store);
+    pleadedNotGuiltyCasesDataGuard = TestBed.inject(SjpNoticeCasesDataGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

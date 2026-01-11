@@ -3,7 +3,7 @@
 exports[`Case note component should display case notes 1`] = `
 <case-notes
   caseNotes={[Function Object]}
-  changeRef={[Function ViewRef$1]}
+  changeRef={[Function ViewRef]}
 >
   <pdk-grid
     class="govuk-grid-row"
@@ -13,21 +13,25 @@ exports[`Case note component should display case notes 1`] = `
       <div>
         <div>
           <div
+            class="govuk-!-margin-left-2"
             pdk-margin-left="2"
           >
             <div
+              class="govuk-heading-m"
               pdk-typography="heading-medium"
             >
                General note 
               <br />
               <span
+                class="pdk-!-text-color-dark-grey govuk-body-m"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body-medium"
               >
-                 4 July 2019 at 10:53am by Erica Wilson 
+                 4 July 2019 at 12:00am by Erica Wilson 
               </span>
             </div>
             <pdk-foldable-text
+              class="govuk-body-m"
               pdk-typography="body-medium"
             >
               <div
@@ -50,21 +54,25 @@ exports[`Case note component should display case notes 1`] = `
         </div>
         <div>
           <div
+            class="govuk-!-margin-left-2"
             pdk-margin-left="2"
           >
             <div
+              class="govuk-heading-m"
               pdk-typography="heading-medium"
             >
                General note 
               <br />
               <span
+                class="pdk-!-text-color-dark-grey govuk-body-m"
                 pdk-text-colour="dark-grey"
                 pdk-typography="body-medium"
               >
-                 2 July 2019 at 9:26pm by Erica Wilson 
+                 2 July 2019 at 12:00am by Erica Wilson 
               </span>
             </div>
             <pdk-foldable-text
+              class="govuk-body-m"
               pdk-typography="body-medium"
             >
               <div

@@ -6,10 +6,12 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -17,7 +19,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -38,7 +40,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -58,7 +60,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -79,7 +81,7 @@ exports[`FinancialImpositionsComponent should compile correctly 1`] = `
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -111,10 +113,12 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -122,7 +126,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -143,7 +147,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -163,7 +167,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -184,7 +188,7 @@ exports[`FinancialImpositionsComponent should compile correctly with NOT all abs
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -215,10 +219,12 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -226,7 +232,7 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -246,7 +252,7 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -267,7 +273,7 @@ exports[`FinancialImpositionsComponent should compile correctly with all absolut
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -298,10 +304,12 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -309,7 +317,7 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -330,7 +338,7 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -350,7 +358,7 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -371,7 +379,7 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -392,7 +400,7 @@ exports[`FinancialImpositionsComponent should display backDuty and calculated fi
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -423,10 +431,12 @@ exports[`FinancialImpositionsComponent should display backDuty, if case decision
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -434,7 +444,7 @@ exports[`FinancialImpositionsComponent should display backDuty, if case decision
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -454,7 +464,7 @@ exports[`FinancialImpositionsComponent should display backDuty, if case decision
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -475,7 +485,7 @@ exports[`FinancialImpositionsComponent should display backDuty, if case decision
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -496,7 +506,7 @@ exports[`FinancialImpositionsComponent should display backDuty, if case decision
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -527,10 +537,12 @@ exports[`FinancialImpositionsComponent should display excisePenalty and not disp
 >
   <financial-impositions>
     <div
+      class="govuk-!-margin-left-2"
       pdk-margin-left="2"
     >
       <div>
         <b
+          class="govuk-heading-m"
           pdk-typography="heading-medium"
         >
           Impositions
@@ -538,7 +550,7 @@ exports[`FinancialImpositionsComponent should display excisePenalty and not disp
       </div>
       <div>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -558,7 +570,7 @@ exports[`FinancialImpositionsComponent should display excisePenalty and not disp
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -579,7 +591,7 @@ exports[`FinancialImpositionsComponent should display excisePenalty and not disp
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >
@@ -600,7 +612,7 @@ exports[`FinancialImpositionsComponent should display excisePenalty and not disp
           </pdk-grid>
         </pdk-grid>
         <pdk-grid
-          class="govuk-grid-row"
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
           container=""
           pdk-padding-vertical="1"
         >

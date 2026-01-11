@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { CppHttpConfig } from '@cpp/core';
@@ -10,15 +10,18 @@ import { catchError, tap } from 'rxjs/operators';
 // dependencies required by submodules, so long as it implements their
 // interfaces
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class AppConfigService implements CppHttpConfig {
+  private http = inject(HttpClient);
+
   accountUrl: string;
   baseUrl: string;
   cppHomeUrl: string;
   logoutUrl: string;
   appUrl: string;
 
-  constructor(private http: HttpClient) {}
+
+  constructor() {}
 
   load() {
     return this.http

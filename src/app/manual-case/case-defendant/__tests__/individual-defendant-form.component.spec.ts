@@ -1,16 +1,13 @@
-import { Shallow } from 'shallow-render';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PdkCoreModule, PdkDateInputModule, PdkInsetTextModule, PdkFormModule, PdkRadioInputModule } from '@cpp/pdk';
-import { ManualCaseModule } from '../../manual-case.module';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IndividualDefendantFormComponent } from '../individual-defendant-form.component';
 import { ManualCaseDefendant } from '../../../core';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../../shared';
 import cleanDeep from 'clean-deep';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
-import { RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideRouter } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { provideStore } from '@ngrx/store';
+import { provideTranslateService } from '@ngx-translate/core';
 
 const remandStatuses = [
   {
@@ -107,110 +104,176 @@ const manualCaseDefendant = {
   hearingLanguage: 'WELSH'
 } as ManualCaseDefendant;
 
+@Component({
+  selector: 'nationality-auto-suggest',
+  template: `
+    <div></div>
+  `
+})
+class MockNationalityAutoSuggestComponent {
+  @Input() value: string;
+  @Input() suggestionKey: string;
+  @Input() mapSelectionToKey: boolean;
+  @Output() valueChange = new EventEmitter<string>();
+}
+
+@Component({
+  selector: 'ethnicity-auto-suggest',
+  template: `
+    <div></div>
+  `
+})
+class MockEthnicityAutoSuggestComponent {
+  @Input() value: string;
+  @Input() suggestionKey: string;
+  @Input() mapSelectionToKey: boolean;
+  @Output() valueChange = new EventEmitter<string>();
+}
+
+@Component({
+  selector: 'ethnicity-code-auto-suggest',
+  template: `
+    <div></div>
+  `
+})
+class MockEthnicityCodeAutoSuggestComponent {
+  @Input() value: string;
+  @Input() suggestionKey: string;
+  @Input() mapSelectionToKey: boolean;
+  @Output() valueChange = new EventEmitter<string>();
+}
+
+@Component({
+  selector: 'test-input-address',
+  template: `
+    <div></div>
+  `
+})
+class MockAddressInputComponent {
+  @Input() address: any;
+  @Input() isRequired: boolean;
+  @Input() id: string;
+  @Input() ariaDescribedBy: string | null;
+  @Input() maxLength?: number;
+  @Input() showFixedAbode = false;
+  @Input() validWhenEmpty = true;
+  @Input() customErrorMessage?: string;
+  @Input() validatedFormElements?: string[];
+  @Input() labelWithOptionalText?: string[];
+  @Output() addressChange = new EventEmitter<any>();
+}
+
+@Component({
+  selector: 'individual-defendant-guardian',
+  template: `
+    <div></div>
+  `
+})
+class MockIndividualDefendantGuardianComponent {
+  @Input() manualCaseDefendant: ManualCaseDefendant;
+  @Input() manualCaseType: string;
+}
+
 describe('Individual Defendant Form Component', () => {
-  let component: Shallow<IndividualDefendantFormComponent>;
+  let component: IndividualDefendantFormComponent;
+  let fixture: ComponentFixture<IndividualDefendantFormComponent>;
   const generateUUID = jest.fn();
   generateUUID.mockReturnValue('uuid-001');
-  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
 
   beforeEach(() => {
-    component = new Shallow(IndividualDefendantFormComponent, ManualCaseModule)
-      .dontMock(
-        CommonModule,
-        SharedModule,
-        FormsModule,
-        ReactiveFormsModule,
-        PdkRadioInputModule,
-        PdkInsetTextModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkDateInputModule
-      )
-      .provide([Store])
-      .mock(Store, { pipe: () => of({}) });
+    TestBed.configureTestingModule({
+      providers: [
+        provideStore(),
+        provideRouter([]),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        }),
+        { provide: Store, useValue: { pipe: () => of({}) } }
+      ],
+      teardown: { destroyAfterEach: false }
+    }).overrideComponent(IndividualDefendantFormComponent, {
+      remove: {
+        imports: []
+      },
+      add: {
+        imports: [
+          MockNationalityAutoSuggestComponent,
+          MockEthnicityAutoSuggestComponent,
+          MockEthnicityCodeAutoSuggestComponent,
+          MockAddressInputComponent,
+          MockIndividualDefendantGuardianComponent
+        ]
+      }
+    });
+
+    fixture = TestBed.createComponent(IndividualDefendantFormComponent);
+    component = fixture.componentInstance;
+    component.getUuid = generateUUID;
+    // Spy on EventEmitter methods
+    jest.spyOn(component.formSubmit, 'emit');
+    jest.spyOn(component.formError, 'emit');
+    jest.spyOn(component.goBack, 'emit');
   });
 
-  async function renderComponent(defendant, caseType) {
-    return component.render(
-      `<individual-defendant-form
-            [manualCaseDefendant]="manualCaseDefendant"
-            [manualCaseType]="manualCaseType"
-            [remandStatuses]="remandStatuses"
-            [aliasesReset]="true"
-            [showAddButton]="true"
-            (formSubmit)="handleFormSubmit($event)"
-            (formError)="handleFormError($event)"
-            (goBack)="handleFormBack($event)">
-       </individual-defendant-form>`,
-      {
-        bind: {
-          manualCaseDefendant: defendant,
-          manualCaseType: caseType,
-          remandStatuses,
-          handleFormSubmit: () => jest.fn(),
-          handleFormError: () => jest.fn(),
-          handleFormBack: () => jest.fn()
-        }
-      }
-    );
+  function setupComponent(defendant: ManualCaseDefendant, caseType: string) {
+    fixture.componentRef.setInput('manualCaseDefendant', defendant);
+    fixture.componentRef.setInput('manualCaseType', caseType);
+    fixture.componentRef.setInput('remandStatuses', remandStatuses);
+    fixture.componentRef.setInput('aliasesReset', true);
+    fixture.componentRef.setInput('showAddButton', true);
+    fixture.detectChanges();
   }
 
-  it('should render the component correctly when case type is SJP', async () => {
-    const { fixture, find, instance } = await renderComponent(manualCaseDefendant, 'J');
+  it('should render the component correctly when case type is SJP', () => {
+    setupComponent(manualCaseDefendant, 'J');
 
-    expect(find(`button[data-role='add']`)).toHaveLength(0);
-    expect(instance).toBeTruthy();
+    const addButton = fixture.nativeElement.querySelector(`button[data-role='add']`);
+    expect(addButton).toBeNull();
+    expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should submit valid defendant form with individual as guardian', async () => {
-    manualCaseDefendant.individual.guardianType = 'INDIVIDUAL';
-    const { find, bindings, instance } = await renderComponent(manualCaseDefendant, 'J');
+  it('should submit valid defendant form with individual as guardian', () => {
+    const defendant = { ...manualCaseDefendant };
+    defendant.individual.guardianType = 'INDIVIDUAL';
+    setupComponent(defendant, 'J');
 
-    const continueButton = find(`button[data-role='continue']`);
+    const continueButton = fixture.nativeElement.querySelector(`button[data-role='continue']`);
+    continueButton.click();
 
-    instance.getUuid = generateUUID;
+    defendant.id = 'uuid-001';
+    delete defendant.individual.guardianType;
+    delete defendant.individual.parentGuardianInformation.organisationName;
+    delete defendant.individual.parentGuardianInformation.address;
+    delete defendant.individual.parentGuardianInformation.companyTelephoneNumber;
 
-    continueButton.nativeElement.click();
-
-    manualCaseDefendant.id = 'uuid-001';
-
-    delete manualCaseDefendant.individual.guardianType;
-    delete manualCaseDefendant.individual.parentGuardianInformation.organisationName;
-    delete manualCaseDefendant.individual.parentGuardianInformation.address;
-    delete manualCaseDefendant.individual.parentGuardianInformation.companyTelephoneNumber;
-
-    expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
+    expect(component.formSubmit.emit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: cleanDeep(manualCaseDefendant)
+      defendantToStore: cleanDeep(defendant)
     });
   });
 
-  it('should submit valid defendant form with organisation as guardian', async () => {
-    manualCaseDefendant.individual.guardianType = 'ORGANISATION';
-    const { find, bindings, instance } = await renderComponent(manualCaseDefendant, 'J');
+  it('should submit valid defendant form with organisation as guardian', () => {
+    const defendant = { ...manualCaseDefendant };
+    defendant.individual.guardianType = 'ORGANISATION';
+    setupComponent(defendant, 'J');
 
-    const continueButton = find(`button[data-role='continue']`);
+    const continueButton = fixture.nativeElement.querySelector(`button[data-role='continue']`);
+    continueButton.click();
 
-    instance.getUuid = generateUUID;
+    defendant.id = 'uuid-001';
+    delete defendant.individual.guardianType;
+    delete defendant.individual.parentGuardianInformation.personalInformation;
+    delete defendant.individual.parentGuardianInformation.gender;
 
-    continueButton.nativeElement.click();
-
-    manualCaseDefendant.id = 'uuid-001';
-
-    delete manualCaseDefendant.individual.guardianType;
-    delete manualCaseDefendant.individual.parentGuardianInformation.personalInformation;
-    delete manualCaseDefendant.individual.parentGuardianInformation.gender;
-
-    expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
+    expect(component.formSubmit.emit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: cleanDeep(manualCaseDefendant)
+      defendantToStore: cleanDeep(defendant)
     });
   });
 
   it('should submit empty form trigger form error event', async () => {
-    jest.useFakeTimers();
-
     const emptyModel = {
       individual: {
         personalInformation: {
@@ -219,30 +282,27 @@ describe('Individual Defendant Form Component', () => {
         },
         selfDefinedInformation: {}
       }
-    };
+    } as ManualCaseDefendant;
 
-    const { find, bindings, fixture } = await renderComponent(emptyModel, 'J');
-    const continueButton = find(`button[data-role='continue']`);
-    continueButton.nativeElement.click();
-    await fixture.whenStable();
-    fixture.detectChanges();
-
-    jest.runAllTimers(); // the pdk emits errors in a setTimeout function, we need to mock this to avoid race conditions
+    setupComponent(emptyModel, 'J');
+    const continueButton = fixture.nativeElement.querySelector(`button[data-role='continue']`);
+    continueButton.click();
 
     await fixture.whenStable();
     fixture.detectChanges();
 
-    Promise.resolve(true).then(result => {
-      expect(bindings.handleFormError).toHaveBeenCalled();
-    });
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(component.formError.emit).toHaveBeenCalled();
   });
 
-  it('should trigger onBack event', async () => {
-    const { find, bindings } = await renderComponent(manualCaseDefendant, 'J');
+  it('should trigger onBack event', () => {
+    setupComponent(manualCaseDefendant, 'J');
 
-    const backButton = find('a:last-child');
-    backButton.nativeElement.click();
+    const backButton = fixture.nativeElement.querySelector('a:last-child');
+    backButton.click();
 
-    expect(bindings.handleFormBack).toHaveBeenCalled();
+    expect(component.goBack.emit).toHaveBeenCalled();
   });
 });

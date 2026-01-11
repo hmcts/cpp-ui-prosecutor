@@ -75,7 +75,6 @@ exports[`Organisation Defendant Form Component should render component correctly
               </legend>
               <pdk-date-input
                 class="ng-untouched ng-valid ng-dirty"
-                pastdate=""
                 picker=""
                 required=""
               >
@@ -403,7 +402,7 @@ exports[`Organisation Defendant Form Component should render component correctly
       </div>
       <div>
         <button
-          class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"
+          class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-button govuk-button--secondary"
           data-role="apply"
           pdk-button="secondary"
           pdk-margin-bottom="3"
@@ -421,16 +420,53 @@ exports[`Organisation Defendant Form Component should render component correctly
 exports[`Organisation Defendant Form Component should throw error build wording from a blank form 1`] = `
 [
   {
+    "controlRef": ElementRef {
+      "nativeElement": <select
+        class="govuk-select pdk-select--justified"
+        id="pdk-select-GENERATED_ID"
+        name="value_0"
+        required=""
+      >
+        
+        <option
+          value="3"
+        >
+           after 
+        </option>
+        <option
+          value="4"
+        >
+           between 
+        </option>
+        
+      </select>,
+    },
     "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.OFFENCE_DATE_TYPE_REQUIRED",
     "shouldFocus": true,
   },
   {
+    "controlRef": ElementRef {
+      "nativeElement": <input
+        autocomplete="off"
+        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+        formcontrolname="day"
+        id="pdk-date-input-GENERATED_ID-day"
+        name="dateDay"
+        required=""
+        type="number"
+      />,
+    },
     "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.DATE_REQUIRED",
     "shouldFocus": true,
   },
   {
+    "controlRef": {
+      "nativeElement": {
+        "focus": [Function],
+      },
+    },
     "id": "pdk-form-error-undefined-GENERATED_ID",
     "message": "MANUAL_CASE_OFFENCE.SELECT_AN_OPTION",
     "shouldFocus": true,

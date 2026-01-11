@@ -5,6 +5,7 @@ exports[`DevTools - Select User component should compile correctly 1`] = `
   location={[Function Object]}
 >
   <button
+    class="govuk-button"
     pdk-button=""
   >
      Back 

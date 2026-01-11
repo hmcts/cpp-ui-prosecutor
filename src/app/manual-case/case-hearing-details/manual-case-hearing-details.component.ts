@@ -6,21 +6,63 @@ import {
   EventEmitter,
   ViewChild,
   ChangeDetectorRef,
-  AfterContentChecked
+  AfterContentChecked,
+  inject
 } from '@angular/core';
 import { ManualCase, InitialHearing } from '../../core/model/manual-case';
-import { NgForm } from '@angular/forms';
-import { ValidationError } from '@cpp/pdk';
+import { FormsModule, NgForm } from '@angular/forms';
+import {
+  ValidationError,
+  PdkErrorSummaryComponent,
+  PdkGrid,
+  PdkFormFieldComponent,
+  PdkAutosuggestLiteComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkInsetTextComponent,
+  PdkCharacterCountComponent,
+  PdkDateInputComponent,
+  PdkTimeInputComponent,
+  PdkForm,
+  PdkCore,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective
+} from '@cpp/pdk';
 import { cloneDeep } from 'lodash';
 import { CourtCentreWithRooms, CourtRoom, HearingType } from '../../core';
 import { Location } from '@angular/common';
-import { JurisdictionCode } from 'src/app/core/model/global/courts-definitions';
+import { JurisdictionCode } from '../../core/model/global/courts-definitions';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'manual-case-hearing-details',
-  templateUrl: './manual-case-hearing-details.html'
+  templateUrl: './manual-case-hearing-details.html',
+  imports: [
+    PdkForm,
+    PdkCore,
+    PdkErrorSummaryComponent,
+    PdkGrid,
+    PdkFormFieldComponent,
+    PdkAutosuggestLiteComponent,
+    PdkRadioGroupComponent,
+    PdkRadioButtonComponent,
+    PdkInsetTextComponent,
+    PdkCharacterCountComponent,
+    PdkDateInputComponent,
+    PdkTimeInputComponent,
+    TranslateModule,
+    FormsModule,
+    PdkTextInput,
+    PdkInput,
+    PdkRadioButtonComponent,
+    PdkButtonDirective
+  ]
 })
 export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentChecked {
+  private cdr = inject(ChangeDetectorRef);
+  private location = inject(Location);
+
   @Input() manualCaseDetail: ManualCase;
   @Input() courtCentres: CourtCentreWithRooms[];
   @Input() hearingTypes: HearingType[];
@@ -30,22 +72,22 @@ export class ManualCaseHearingDetailsComponent implements OnInit, AfterContentCh
   private _hearingDurationFocused = false;
   hasCourtRoom = false;
   editManualCase: ManualCase;
-  errors: ValidationError[];
-  dateFilter: undefined;
+  errors: ValidationError[] | any;
+  dateFilter: any;
   courtRoomSugestions: CourtRoom[] = [];
   courtCentreSuggestions: CourtCentreWithRooms[] = [];
   hearingTypeSuggestions: HearingType[] = [];
 
   jurisdictionTypeCode = JurisdictionCode;
 
-  constructor(private cdr: ChangeDetectorRef, private location: Location) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.editManualCase = cloneDeep(this.manualCaseDetail);
     if (!this.editManualCase.initialHearing) {
       this.editManualCase.initialHearing = {
         hearingDuration: '0:20',
-        hearingLanguage: 'E'
+        hearingLanguage: 'ENGLISH'
       } as InitialHearing;
     } else {
       if (this.editManualCase.initialHearing.roomId) {

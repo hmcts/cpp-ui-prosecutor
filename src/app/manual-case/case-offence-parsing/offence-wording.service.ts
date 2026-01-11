@@ -8,7 +8,9 @@ import { FormListOption, Offence } from '../../core';
 // The entirety of this service needs
 // a complete rewrite. It also needs to be named purposefully.
 // It is difficult to maintain in my opinion
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class OffenceWordingService {
   // tslint:disable-next-line: cognitive-complexity
   buildParticularWording(

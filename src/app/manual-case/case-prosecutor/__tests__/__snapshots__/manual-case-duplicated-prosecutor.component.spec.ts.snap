@@ -3,21 +3,40 @@
 exports[`Manual case prosecutor should render the component 1`] = `
 <manual-case-duplicated-prosecutor
   editManualCase={[Function Object]}
-  form={[Function NgForm]}
-  location={[Function SpyLocation]}
+  form={[Function _NgForm]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   oldValue="undefined"
   requiresRefNumber="false"
   submitFormData={[Function EventEmitter_]}
 >
   <pdk-alert
-    icon="true"
     type="warning"
   >
-     Prosecution reference 
-    <strong>
-    </strong>
-     already exists - enter correct reference
+    <div
+      class="pdk-alert pdk-alert--warning"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--alert"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             Prosecution reference 
+            <strong>
+            </strong>
+             already exists - enter correct reference
+          </div>
+        </div>
+      </div>
+    </div>
   </pdk-alert><pdk-grid
     class="govuk-grid-row"
     container=""
@@ -120,6 +139,7 @@ exports[`Manual case prosecutor should render the component 1`] = `
           class="pdk-form-group"
         >
           <button
+            class="govuk-button"
             data-role="save-applicant-details-button"
             pdk-button=""
             type="submit"

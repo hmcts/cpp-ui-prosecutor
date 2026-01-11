@@ -3,14 +3,47 @@
 exports[`ReviewNotGuiltyPleasComponent then the component should be created with out failure 1`] = `
 <review-not-guilty-pleas
   breadcrumbs={[Function Array]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
   setRegion={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
-    breadcrumb-links
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
   </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
     pdk-section="large"
   >
      Review not guilty pleas (2 
@@ -21,6 +54,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
   </h2><span>
     <span>
       <h4
+        class="govuk-section-break govuk-section-break--l"
         pdk-section="large"
       >
         <pdk-warning-text>
@@ -37,7 +71,8 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
               class="govuk-warning-text__text"
             >
               <span
-                class="govuk-warning-text__assistive"
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
               >
                 Warning
               </span>
@@ -53,11 +88,9 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
       </h4>
     </span>
     <pdk-grid
-      class="govuk-grid-row"
       container=""
     >
       <pdk-grid
-        class="govuk-grid-column-one-half"
         one-half=""
       >
         <form
@@ -91,7 +124,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
               class="pdk-form-group"
             >
               <button
-                class="govuk-button"
+                class="govuk-!-margin-left-2 govuk-button"
                 pdk-button=""
                 pdk-margin-left="2"
                 type="submit"
@@ -104,56 +137,75 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
       </pdk-grid>
     </pdk-grid>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Address
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Reference Number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Region
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Plea entry
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
+              class="govuk-link"
               href="javascript:void(0)"
               pdk-link=""
             >
@@ -163,7 +215,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
             </a>
           </td>
           <td
-            class="pre-line"
+            class="pre-line govuk-table__cell"
             pdk-table-cell=""
           >
              Flat 1, Armageddon House
@@ -174,35 +226,42 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
   LE3 1AB 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
              TVL640029AGBG 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="region"
             pdk-table-cell=""
           >
              London 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              25 Mar 1975 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              14 Mar 2019 
           </td>
         </tr>
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
+              class="govuk-link"
               href="javascript:void(0)"
               pdk-link=""
             >
@@ -212,7 +271,7 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
             </a>
           </td>
           <td
-            class="pre-line"
+            class="pre-line govuk-table__cell"
             pdk-table-cell=""
           >
              Flat 1, Armageddon House
@@ -223,23 +282,27 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
   SE21 1AB 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
              TVL143468N9KN 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="region"
             pdk-table-cell=""
           >
              London 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              23 Mar 2001 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              19 Mar 2019 
@@ -262,14 +325,47 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
 exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case then the component should be created with out failure 1`] = `
 <review-not-guilty-pleas
   breadcrumbs={[Function Array]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
   setRegion={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
-    breadcrumb-links
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
   </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
     pdk-section="large"
   >
      Review not guilty pleas (2 
@@ -280,6 +376,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
   </h2><span>
     <span>
       <h4
+        class="govuk-section-break govuk-section-break--l"
         pdk-section="large"
       >
         <pdk-warning-text>
@@ -296,7 +393,8 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
               class="govuk-warning-text__text"
             >
               <span
-                class="govuk-warning-text__assistive"
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
               >
                 Warning
               </span>
@@ -312,11 +410,9 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
       </h4>
     </span>
     <pdk-grid
-      class="govuk-grid-row"
       container=""
     >
       <pdk-grid
-        class="govuk-grid-column-one-half"
         one-half=""
       >
         <form
@@ -350,7 +446,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
               class="pdk-form-group"
             >
               <button
-                class="govuk-button"
+                class="govuk-!-margin-left-2 govuk-button"
                 pdk-button=""
                 pdk-margin-left="2"
                 type="submit"
@@ -363,56 +459,75 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
       </pdk-grid>
     </pdk-grid>
     <table
+      class="govuk-table"
       pdk-table=""
     >
       <thead
+        class="govuk-table__head"
         pdk-table-head=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Name
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Address
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Reference Number
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Region
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Date of birth
           </th>
           <th
+            class="govuk-table__cell"
             pdk-table-header=""
+            scope="col"
           >
             Plea entry
           </th>
         </tr>
       </thead>
       <tbody
+        class="govuk-table__body"
         pdk-table-body=""
       >
         <tr
+          class="govuk-table__row"
           pdk-table-row=""
         >
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
             <a
+              class="govuk-link"
               href="javascript:void(0)"
               pdk-link=""
             >
@@ -422,7 +537,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
             </a>
           </td>
           <td
-            class="pre-line"
+            class="pre-line govuk-table__cell"
             pdk-table-cell=""
           >
              Flat 1, Armageddon House
@@ -433,23 +548,27 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
   SE21 1AB 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="urn"
             pdk-table-cell=""
           >
              TVL143468N9KN 
           </td>
           <td
+            class="govuk-table__cell"
             data-role="region"
             pdk-table-cell=""
           >
              London 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              23 Mar 2001 
           </td>
           <td
+            class="govuk-table__cell"
             pdk-table-cell=""
           >
              19 Mar 2019 
@@ -478,8 +597,41 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
-    breadcrumb-links
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
   </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
     pdk-section="large"
   >
      Review not guilty pleas (0 
@@ -488,6 +640,7 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
     </span>
     ) 
   </h2><h4
+    class="govuk-section-break govuk-section-break--l"
     pdk-section="large"
   >
     <pdk-warning-text>
@@ -504,7 +657,8 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>

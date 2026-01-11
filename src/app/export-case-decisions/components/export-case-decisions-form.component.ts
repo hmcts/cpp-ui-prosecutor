@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { PdkButtonDirective, PdkDateInput, PdkForm, PdkLinkDirective, PdkMarginDirective } from '@cpp/pdk';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
-import { InputValues } from '../../shared/from-to-dates/from-to-dates.component';
+import { InputValues, FromToDatesComponent } from '../../shared/from-to-dates/from-to-dates.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'export-case-decisions-form',
@@ -16,7 +18,17 @@ import { InputValues } from '../../shared/from-to-dates/from-to-dates.component'
         <a href="javascript: void(0)" routerLink=".." pdk-link>Cancel</a>
       </div>
     </form>
-  `
+  `,
+  imports: [
+    FromToDatesComponent,
+    RouterLink,
+    PdkButtonDirective,
+    PdkLinkDirective,
+    PdkMarginDirective,
+    PdkForm,
+    FormsModule,
+    PdkDateInput
+  ]
 })
 export class ExportCaseDecisionsFormComponent {
   currentDate = '';

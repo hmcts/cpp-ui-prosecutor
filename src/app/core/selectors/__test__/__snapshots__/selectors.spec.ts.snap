@@ -183,11 +183,11 @@ exports[`selectors getCaseDecisions should select the case decisions from the st
         "verdict": "PROVED_SJP",
       },
     ],
-    "savedAt": "2018-12-01T16:10:28.259Z",
+    "savedAt": "2018-12-01",
     "session": {
       "courtHouseCode": "B01OK",
       "courtHouseName": "Wimbledon Magistrates' Court",
-      "endedAt": "2018-12-01T16:10:28.259Z",
+      "endedAt": "2018-12-01",
       "legalAdviser": {
         "firstName": "Mark",
         "lastName": "Adams",
@@ -198,7 +198,7 @@ exports[`selectors getCaseDecisions should select the case decisions from the st
       "magistrate": "Jenny",
       "sessionId": "mock-case-decision-session-1",
       "sessionType": "DELEGATEDPOWERS",
-      "startedAt": "2018-12-01T16:10:28.259Z",
+      "startedAt": "2018-12-01",
     },
   },
 ]
@@ -209,7 +209,7 @@ exports[`selectors getCaseNotes should select and sort the case notes in desc 1`
   "caseId": "0f03e10f-d9a5-47f9-92ba-a8e220448451",
   "notes": [
     {
-      "addedAt": "2019-07-04T10:53:15.149",
+      "addedAt": "2019-07-04",
       "authorFirstName": "Erica",
       "authorLastName": "Wilson",
       "decisionId": "009879ca-7817-42ed-b742-c782316936c7",
@@ -218,7 +218,7 @@ exports[`selectors getCaseNotes should select and sort the case notes in desc 1`
       "noteType": "ADJOURNMENT",
     },
     {
-      "addedAt": "2019-07-02T21:26:21.784",
+      "addedAt": "2019-07-02",
       "authorFirstName": "Erica",
       "authorLastName": "Wilson",
       "decisionId": "cb42e4e9-a23e-45de-8e62-a15e6ed948ac",

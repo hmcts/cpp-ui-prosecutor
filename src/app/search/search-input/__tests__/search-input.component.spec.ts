@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { SearchInputComponent } from '../search-input.component';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule, PdkGridModule, PdkSearchbarModule } from '@cpp/pdk';
+import { ActivatedRoute, provideRouter } from '@angular/router';
 
 describe('SearchInputComponent', () => {
   let fixture: ComponentFixture<TestSearchInputComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SearchInputComponent, TestSearchInputComponent],
-      imports: [CommonModule, FormsModule, PdkCoreModule, PdkFormModule, PdkSearchbarModule, PdkGridModule],
+      imports: [FormsModule, TestSearchInputComponent, SearchInputComponent],
+      providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestSearchInputComponent);
@@ -26,7 +25,8 @@ describe('SearchInputComponent', () => {
     selector: 'search-test',
     template: `
       <search-input></search-input>
-    `
+    `,
+    imports: [SearchInputComponent]
   })
   class TestSearchInputComponent {}
 });

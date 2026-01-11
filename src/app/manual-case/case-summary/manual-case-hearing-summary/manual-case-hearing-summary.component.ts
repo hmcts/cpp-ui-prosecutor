@@ -3,12 +3,27 @@ import { CourtCentreWithRooms, HearingType } from '../../../core';
 import { InitialHearing } from '../../../core/model/manual-case';
 import { ManualCasePath } from '../../manual-case.interface';
 import * as moment from 'moment';
+import { PdkCore, PdkDividerComponent, PdkGridComponent, PdkTable } from '@cpp/pdk';
+import { TitleCasePipe, LowerCasePipe, DatePipe } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { DashPipe } from '../../../shared/pipes/dash/dash.pipe';
 
 @Component({
   selector: 'manual-case-hearing-summary',
   templateUrl: './manual-case-hearing-summary.html',
   styleUrls: ['./manual-case-hearing-summary.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    PdkDividerComponent,
+    PdkGridComponent,
+    TranslateModule,
+    DatePipe,
+    TitleCasePipe,
+    LowerCasePipe,
+    DashPipe,
+    PdkTable,
+    PdkCore
+  ]
 })
 export class ManualCaseHearingSummaryComponent implements OnInit {
   @Input() initialHearing: InitialHearing;

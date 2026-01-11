@@ -1,16 +1,20 @@
 import { CanActivate, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
 import { Store, select } from '@ngrx/store';
 import { State } from '../reducers';
 import { LoadPleadedNotGuiltyCases } from '../actions/entities';
 import { getRegion } from '../selectors';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class PleadedNotGuiltyDataGuard implements CanActivate {
-  constructor(private store: Store<State>, private sjpService: SjpService, private router: Router) {}
+  private store = inject<Store<State>>(Store);
+  private sjpService = inject(SjpService);
+  private router = inject(Router);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(

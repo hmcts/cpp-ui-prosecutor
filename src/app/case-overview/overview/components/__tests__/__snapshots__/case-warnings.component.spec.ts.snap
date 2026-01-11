@@ -6,9 +6,7 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
   offences={[Function Array]}
 >
   <case-warnings>
-    <pdk-warning-text
-      error=""
-    >
+    <pdk-warning-text>
       <div
         class="govuk-warning-text pdk-warning-text--error"
       >
@@ -22,7 +20,8 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
@@ -30,9 +29,7 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    <pdk-warning-text
-      error=""
-    >
+    <pdk-warning-text>
       <div
         class="govuk-warning-text pdk-warning-text--error"
       >
@@ -46,7 +43,8 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
@@ -54,9 +52,7 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    <pdk-warning-text
-      error=""
-    >
+    <pdk-warning-text>
       <div
         class="govuk-warning-text pdk-warning-text--error"
       >
@@ -70,7 +66,8 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
@@ -78,9 +75,7 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
         </strong>
       </div>
     </pdk-warning-text>
-    <pdk-warning-text
-      error=""
-    >
+    <pdk-warning-text>
       <div
         class="govuk-warning-text pdk-warning-text--error"
       >
@@ -94,7 +89,8 @@ exports[`CaseWarnings should compile correctly with all warnings 1`] = `
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
@@ -112,9 +108,7 @@ exports[`CaseWarnings should compile correctly without any warnings 1`] = `
   offences={[Function Array]}
 >
   <case-warnings>
-    <pdk-warning-text
-      error=""
-    >
+    <pdk-warning-text>
       <div
         class="govuk-warning-text pdk-warning-text--error"
       >
@@ -128,7 +122,8 @@ exports[`CaseWarnings should compile correctly without any warnings 1`] = `
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>

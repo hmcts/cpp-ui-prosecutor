@@ -6,11 +6,11 @@ exports[`Manual case prosecutor should render for npp 1`] = `
   errors={[Function Array]}
   filterByCps={[Function Function]}
   focused="false"
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   isTrialOrSentence="false"
   isTypeSjp={[Function Boolean]}
   isTypeSummons="false"
-  location={[Function SpyLocation]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   nonPoliceProsecutor={[Function Object]}
   requiresRefNumber="false"
@@ -20,9 +20,11 @@ exports[`Manual case prosecutor should render for npp 1`] = `
   submitFormData={[Function EventEmitter_]}
 >
   <pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-full"
       full=""
     >
       <h1
@@ -33,9 +35,11 @@ exports[`Manual case prosecutor should render for npp 1`] = `
       </h1>
     </pdk-grid>
   </pdk-grid><pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-one-half"
       one-half=""
     >
       <form
@@ -129,13 +133,12 @@ exports[`Manual case prosecutor should render for npp 1`] = `
                 class="govuk-hint"
               >
                 <div>
-                  For example, 23 10 2017
+                   For example, 23 10 2017 
                 </div>
               </pdk-hint>
               <pdk-date-input
                 class="ng-untouched ng-pristine ng-invalid"
                 name="chargePostingDate"
-                pastdate=""
                 required=""
                 validatedate=""
               >
@@ -219,6 +222,7 @@ exports[`Manual case prosecutor should render for npp 1`] = `
           class="pdk-form-group"
         >
           <button
+            class="govuk-button"
             data-role="save-applicant-details-button"
             pdk-button=""
             type="submit"
@@ -231,7 +235,7 @@ exports[`Manual case prosecutor should render for npp 1`] = `
           pdk-margin-top="2"
         >
           <button
-            class="back-button pdk-!-fill-color-undefined pdk-!-text-color-blue govuk-link"
+            class="back-button pdk-!-text-color-blue govuk-link"
             pdk-link=""
             type="button"
           >
@@ -250,11 +254,11 @@ exports[`Manual case prosecutor should render the component 1`] = `
   errors={[Function Array]}
   filterByCps={[Function Function]}
   focused="false"
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   isTrialOrSentence="false"
   isTypeSjp={[Function Boolean]}
   isTypeSummons="false"
-  location={[Function SpyLocation]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   nonPoliceProsecutor={[Function Object]}
   requiresRefNumber="false"
@@ -264,9 +268,11 @@ exports[`Manual case prosecutor should render the component 1`] = `
   submitFormData={[Function EventEmitter_]}
 >
   <pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-full"
       full=""
     >
       <h1
@@ -277,9 +283,11 @@ exports[`Manual case prosecutor should render the component 1`] = `
       </h1>
     </pdk-grid>
   </pdk-grid><pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-one-half"
       one-half=""
     >
       <form
@@ -373,13 +381,12 @@ exports[`Manual case prosecutor should render the component 1`] = `
                 class="govuk-hint"
               >
                 <div>
-                  For example, 23 10 2017
+                   For example, 23 10 2017 
                 </div>
               </pdk-hint>
               <pdk-date-input
                 class="ng-untouched ng-pristine ng-valid"
                 name="chargePostingDate"
-                pastdate=""
                 required=""
                 validatedate=""
               >
@@ -463,6 +470,7 @@ exports[`Manual case prosecutor should render the component 1`] = `
           class="pdk-form-group"
         >
           <button
+            class="govuk-button"
             data-role="save-applicant-details-button"
             pdk-button=""
             type="submit"
@@ -475,7 +483,7 @@ exports[`Manual case prosecutor should render the component 1`] = `
           pdk-margin-top="2"
         >
           <button
-            class="back-button pdk-!-fill-color-undefined pdk-!-text-color-blue govuk-link"
+            class="back-button pdk-!-text-color-blue govuk-link"
             pdk-link=""
             type="button"
           >
@@ -494,11 +502,11 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
   errors={[Function Array]}
   filterByCps={[Function Function]}
   focused="false"
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   isTrialOrSentence="false"
   isTypeSjp={[Function Boolean]}
   isTypeSummons="false"
-  location={[Function SpyLocation]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   nonPoliceProsecutor={[Function Object]}
   requiresRefNumber="false"
@@ -508,9 +516,11 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
   submitFormData={[Function EventEmitter_]}
 >
   <pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-full"
       full=""
     >
       <h1
@@ -521,9 +531,11 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
       </h1>
     </pdk-grid>
   </pdk-grid><pdk-grid
+    class="govuk-grid-row"
     container=""
   >
     <pdk-grid
+      class="govuk-grid-column-one-half"
       one-half=""
     >
       <form
@@ -617,13 +629,12 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
                 class="govuk-hint"
               >
                 <div>
-                  For example, 23 10 2017
+                   For example, 23 10 2017 
                 </div>
               </pdk-hint>
               <pdk-date-input
                 class="ng-untouched ng-pristine ng-valid"
                 name="chargePostingDate"
-                pastdate=""
                 required=""
                 validatedate=""
               >
@@ -707,6 +718,7 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
           class="pdk-form-group"
         >
           <button
+            class="govuk-button"
             data-role="save-applicant-details-button"
             pdk-button=""
             type="submit"
@@ -719,7 +731,7 @@ exports[`Manual case prosecutor should render the component with a npp 1`] = `
           pdk-margin-top="2"
         >
           <button
-            class="back-button pdk-!-fill-color-undefined pdk-!-text-color-blue govuk-link"
+            class="back-button pdk-!-text-color-blue govuk-link"
             pdk-link=""
             type="button"
           >

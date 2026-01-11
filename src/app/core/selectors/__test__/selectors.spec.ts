@@ -5,7 +5,7 @@ import { combineReducers } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { MOCK_CASE, MOCK_PENDING_DATES_TO_AVOID, MOCK_OFFENCE_WITHDRAWAL_REASON } from './test-mock-data';
 import { MOCK_CASE_DECISION, MOCK_CASE_NOTES } from '../../../case-overview/__tests__/test-mock-data';
-import { getCaseNotes } from 'src/app/case-overview/case-overview.selectors';
+import { getCaseNotes } from '../../../case-overview/case-overview.selectors';
 
 describe('selectors', () => {
   const reducer = combineReducers({ ...reducers });

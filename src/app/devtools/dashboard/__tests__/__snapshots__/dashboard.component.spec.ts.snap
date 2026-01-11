@@ -53,6 +53,7 @@ exports[`DevTools dashboard component compiles 1`] = `
           <li>
             <a
               class="govuk-link"
+              href="/"
               pdk-link=""
               routerlink="select-user"
             >
@@ -73,6 +74,7 @@ exports[`DevTools dashboard component compiles 1`] = `
           <li>
             <a
               class="govuk-link"
+              href="/user"
               pdk-link=""
               routerlink="/user"
             >
@@ -145,6 +147,7 @@ exports[`DevTools dashboard component shows user details when user is set 1`] = 
           <li>
             <a
               class="govuk-link"
+              href="/"
               pdk-link=""
               routerlink="select-user"
             >
@@ -165,6 +168,7 @@ exports[`DevTools dashboard component shows user details when user is set 1`] = 
           <li>
             <a
               class="govuk-link"
+              href="/user"
               pdk-link=""
               routerlink="/user"
             >

@@ -1,15 +1,19 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, Input, inject } from '@angular/core';
 import { Location } from '@angular/common';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ManualCase } from '../../core/model/manual-case';
 import { cloneDeep } from 'lodash';
-import { ValidationError } from '@cpp/pdk';
+import { ValidationError, PdkGrid, PdkFormFieldComponent, PdkRadioGroupComponent, PdkRadioButtonComponent, PdkInsetTextComponent, PdkFormGroupComponent, PdkAlertComponent, PdkErrorSummaryComponent, PdkForm, PdkCore, PdkTextInput, PdkInput, PdkButtonDirective } from '@cpp/pdk';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'manual-case-duplicated-prosecutor',
-  templateUrl: './manual-case-duplicated-prosecutor.component.html'
+    selector: 'manual-case-duplicated-prosecutor',
+    templateUrl: './manual-case-duplicated-prosecutor.component.html',
+    imports: [PdkGrid, PdkForm, PdkCore, PdkFormFieldComponent, PdkRadioGroupComponent, PdkRadioButtonComponent, PdkInsetTextComponent, PdkFormGroupComponent, PdkAlertComponent, TranslateModule, PdkErrorSummaryComponent, FormsModule, PdkButtonDirective, PdkTextInput, PdkInput] 
 })
 export class ManualCaseDuplicatedProsecutorComponent implements OnInit {
+  private location = inject(Location);
+
   @Input() manualCaseDetail: ManualCase;
   @Output() submitFormData = new EventEmitter<ManualCase>();
   @ViewChild(NgForm) form: NgForm;
@@ -17,10 +21,10 @@ export class ManualCaseDuplicatedProsecutorComponent implements OnInit {
   oldValue: string;
 
   editManualCase: ManualCase;
-  errors: ValidationError[];
+  errors: ValidationError[] | any;
   requiresRefNumber = false;
 
-  constructor(private location: Location) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.editManualCase = cloneDeep(this.manualCaseDetail);

@@ -1,20 +1,12 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Location } from '@angular/common';
-import { Shallow } from 'shallow-render';
 import { FormsModule } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkDateInputModule,
-  PdkGridModule,
-  PdkRadioInputModule,
-  PdkInsetTextModule
-} from '@cpp/pdk';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ManualCaseTypeComponent } from '../manual-case-type.component';
-import { ManualCaseModule } from '../../manual-case.module';
 import { ManualCase } from '../../../core/model/manual-case';
 import { AppConfigService } from '../../../config';
-import { RouterTestingModule } from '@angular/router/testing';
-import { RouterModule } from '@angular/router';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
 
 const manualCaseDetail = {
   caseId: 'ba73207f-3ced-488a-82a0-3fba79c2ce85',
@@ -40,86 +32,85 @@ const summonsCodes = [
 ];
 
 describe('Manual Case Type Component', () => {
-  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
-
-  let component: Shallow<ManualCaseTypeComponent>;
+  let component: ManualCaseTypeComponent;
+  let fixture: ComponentFixture<ManualCaseTypeComponent>;
+  let location: Location;
 
   beforeEach(() => {
-    component = new Shallow(ManualCaseTypeComponent, ManualCaseModule)
-      .provide([Location])
-      .mock(Location, { back: () => undefined })
-      .provide(AppConfigService)
-      .mock(AppConfigService, { getBaseUrl: () => 'mock-base-url' })
-      .dontMock(
-        FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkDateInputModule,
-        // InlineSVGComponent,
-        PdkGridModule,
-        PdkRadioInputModule,
-        PdkInsetTextModule
-      );
+    const mockLocation = {
+      back: jest.fn()
+    };
+
+    TestBed.configureTestingModule({
+      imports: [FormsModule, ManualCaseTypeComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [
+        {
+          provide: Location,
+          useValue: mockLocation
+        },
+        {
+          provide: AppConfigService,
+          useValue: {
+            getBaseUrl: () => 'mock-base-url'
+          }
+        },
+        provideRouter([]),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ],
+      teardown: { destroyAfterEach: false }
+    });
+
+    fixture = TestBed.createComponent(ManualCaseTypeComponent);
+    component = fixture.componentInstance;
+    location = TestBed.inject(Location);
   });
 
-  function renderComponent(defendant, codes, hasNpp = true) {
-    return component.render(
-      `<manual-case-type
-            [manualCaseDetail]="manualCaseDetail"
-            [hasNpp]="hasNpp"
-            [summonsCodes]="summonsCodes"
-            (submitFormData)="handleSubmitForm($event)">
-       </manual-case-type>`,
-      {
-        bind: {
-          hasNpp,
-          manualCaseDetail: defendant,
-          summonsCodes: codes,
-          handleSubmitForm: () => jest.fn()
-        }
-      }
-    );
+  function setupComponent(defendant: ManualCase, codes: any[], hasNpp = true) {
+    component.manualCaseDetail = defendant;
+    component.summonsCodes = codes;
+    component.hasNpp = hasNpp;
+    fixture.detectChanges();
   }
 
-  it('should render the component correctly in edit mode', async () => {
-    const { fixture, instance } = await renderComponent(manualCaseDetail, summonsCodes);
-
-    expect(instance).toBeTruthy();
+  it('should render the component correctly in edit mode', () => {
+    setupComponent(manualCaseDetail, summonsCodes);
+    expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should render the component for npp', async () => {
-    const { fixture, instance } = await renderComponent(manualCaseDetail, summonsCodes, false);
-
-    expect(instance).toBeTruthy();
+  it('should render the component for npp', () => {
+    setupComponent(manualCaseDetail, summonsCodes, false);
+    expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should render the component correctly in addnew mode', async () => {
-    const { fixture, instance } = await renderComponent({}, summonsCodes);
-
-    expect(instance).toBeTruthy();
+  it('should render the component correctly in addnew mode', () => {
+    setupComponent({} as ManualCase, summonsCodes);
+    expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should submit individual type applicant data', async () => {
+  it('should submit individual type applicant data', () => {
     const mockData = {
       initiationCode: 'S',
       summonsCode: 'E'
     } as ManualCase;
 
-    const { instance } = await renderComponent({}, summonsCodes);
+    setupComponent({} as ManualCase, summonsCodes);
 
-    instance.submitData(mockData);
-    expect(instance.editManualCase.initiationCode).toEqual(mockData.initiationCode);
-    expect(instance.editManualCase.summonsCode).toEqual(mockData.summonsCode);
+    component.submitData(mockData);
+    expect(component.editManualCase.initiationCode).toEqual(mockData.initiationCode);
+    expect(component.editManualCase.summonsCode).toEqual(mockData.summonsCode);
   });
 
-  it('should call location back', async () => {
-    const { instance, get } = await renderComponent({}, {});
-    instance.back();
+  it('should call location back', () => {
+    setupComponent({} as ManualCase, []);
+    component.back();
 
-    const location = get(Location);
     expect(location.back).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,4 +1,4 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
@@ -19,8 +19,8 @@ describe('DefendantDetailsUpdatesPageDataGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         DefendantDetailsUpdatesPageDataGuard,
         {
           provide: SjpService,
@@ -38,8 +38,8 @@ describe('DefendantDetailsUpdatesPageDataGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(DefendantDetailsUpdatesPageDataGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(DefendantDetailsUpdatesPageDataGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

@@ -1,24 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CaseNotesComponent } from '../case-notes.component';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule, PdkFoldableTextModule } from '@cpp/pdk';
-import { FormatDatePipeModule, FirstLastNamePipeModule } from 'src/app/shared/pipes';
-import { MOCK_CASE_NOTES, MOCK_CASE_MANAGEMENT_NOTES } from 'src/app/case-overview/__tests__/test-mock-data';
+import { MOCK_CASE_NOTES, MOCK_CASE_MANAGEMENT_NOTES } from '../../../__tests__/test-mock-data';
+import { FormatDatePipe } from '../../../../shared/pipes/format-date/format-date.pipe';
+import { FirstLastNamePipe } from '../../../../shared/pipes/first-last-name/first-last-name.pipe';
 
 describe('Case note component', () => {
   let fixture: ComponentFixture<CaseNotesComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseNotesComponent],
-      imports: [
-        PdkFoldableTextModule,
-        CommonModule,
-        PdkDividerModule,
-        PdkGridModule,
-        FormatDatePipeModule,
-        FirstLastNamePipeModule
-      ],
+      imports: [FormatDatePipe, FirstLastNamePipe, CaseNotesComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(CaseNotesComponent);

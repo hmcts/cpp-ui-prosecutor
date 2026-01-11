@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { isEmpty } from 'lodash';
 import { CanActivate } from '@angular/router';
 import { select, Store } from '@ngrx/store';
@@ -13,7 +13,10 @@ import { State, ApiError, getProsecutorByUserGroup, LoadProsecutorByUserGroupSuc
   providedIn: 'root'
 })
 export class ProsecutorByCodeGuard implements CanActivate {
-  constructor(private referenceDataService: ReferenceDataService, private store: Store<State>) {}
+  private referenceDataService = inject(ReferenceDataService);
+  private store = inject<Store<State>>(Store);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return combineLatest([

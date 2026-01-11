@@ -1,21 +1,11 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
 import { ReviewNotGuiltyPleasComponent } from '../review-not-guilty-pleas.component';
-import { DefendantNamePipeModule, FormatAddressPipeModule } from '../../shared/pipes';
-import { RouterTestingModule } from '@angular/router/testing';
 import {
   MOCK_PENDING_DATES_TO_AVOID,
   MOCK_PENDING_DATES_TO_AVOID_WITH_SINGLE_CASE
 } from '../../dashboard/__tests__/test-mock-data';
-import {
-  PdkButtonModule,
-  PdkDividerModule,
-  PdkWarningTextModule,
-  PdkSelectModule,
-  PdkGridModule,
-  PdkFormModule
-} from '@cpp/pdk';
-import { MockModule } from '../../shared/mock-components/mock.module';
+import { provideRouter } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 describe('ReviewNotGuiltyPleasComponent', () => {
   let component: ReviewNotGuiltyPleasComponent;
@@ -24,19 +14,8 @@ describe('ReviewNotGuiltyPleasComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [ReviewNotGuiltyPleasComponent],
-        imports: [
-          FormatAddressPipeModule,
-          RouterTestingModule,
-          DefendantNamePipeModule,
-          PdkDividerModule,
-          PdkWarningTextModule,
-          PdkButtonModule,
-          MockModule,
-          PdkSelectModule,
-          PdkGridModule,
-          PdkFormModule
-        ],
+        imports: [ReviewNotGuiltyPleasComponent],
+        providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
         teardown: { destroyAfterEach: false }
       });
 

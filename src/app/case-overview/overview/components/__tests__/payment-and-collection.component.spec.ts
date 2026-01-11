@@ -1,19 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { CaseDecision } from '../../../../contexts/sjp';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
 import { MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION } from '../../../../case-overview/__tests__/test-mock-data';
 import { PaymentAndCollectionComponent } from '../payment-and-collection.component';
-import { SharedModule } from '../../../../shared';
 
 describe('PaymentAndCollectionComponent', () => {
   let fixture: ComponentFixture<TestPaymentAndCollectionComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PaymentAndCollectionComponent, TestPaymentAndCollectionComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, SharedModule],
+      imports: [TestPaymentAndCollectionComponent, PaymentAndCollectionComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestPaymentAndCollectionComponent);
@@ -56,7 +52,8 @@ describe('PaymentAndCollectionComponent', () => {
     selector: 'payment-and-collection-test',
     template: `
       <payment-and-collection [caseDecision]="caseDecision"></payment-and-collection>
-    `
+    `,
+    imports: [PaymentAndCollectionComponent]
   })
   class TestPaymentAndCollectionComponent {
     @Input() caseDecision: CaseDecision;

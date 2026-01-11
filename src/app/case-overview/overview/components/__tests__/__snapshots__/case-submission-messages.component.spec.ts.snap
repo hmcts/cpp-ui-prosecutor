@@ -8,7 +8,6 @@ exports[`CaseSubmissionMessagesComponent should compile correctly 1`] = `
 >
   <pdk-alert
     class="govuk-!-margin-top-3"
-    icon="true"
     pdk-margin-top="3"
     type="confirmation"
   >
@@ -35,7 +34,6 @@ exports[`CaseSubmissionMessagesComponent should compile correctly 1`] = `
     </div>
   </pdk-alert><pdk-alert
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    icon="true"
     pdk-margin-vertical="1"
     type="warning"
   >
@@ -62,7 +60,6 @@ exports[`CaseSubmissionMessagesComponent should compile correctly 1`] = `
     </div>
   </pdk-alert><pdk-alert
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    icon="true"
     pdk-margin-vertical="1"
     type="warning"
   >
@@ -99,7 +96,6 @@ exports[`CaseSubmissionMessagesComponent should display alert when case is assig
 >
   <pdk-alert
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    icon="true"
     pdk-margin-vertical="1"
     type="warning"
   >
@@ -136,7 +132,6 @@ exports[`CaseSubmissionMessagesComponent should display alert when case is compl
 >
   <pdk-alert
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    icon="true"
     pdk-margin-vertical="1"
     type="warning"
   >
@@ -173,7 +168,6 @@ exports[`CaseSubmissionMessagesComponent should display banner if withdraw offen
 >
   <pdk-alert
     class="govuk-!-margin-top-3"
-    icon="true"
     pdk-margin-top="3"
     type="confirmation"
   >
@@ -210,7 +204,6 @@ exports[`CaseSubmissionMessagesComponent should display correct banner if case i
 >
   <pdk-alert
     class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
-    icon="true"
     pdk-margin-vertical="1"
     type="warning"
   >

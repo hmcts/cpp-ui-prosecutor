@@ -1,17 +1,5 @@
 import { map } from 'rxjs/operators';
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  forwardRef,
-  Injector,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  SimpleChanges,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, Injector, Input, OnChanges, OnInit, Output, SimpleChanges, ViewEncapsulation, inject } from '@angular/core';
 import {
   ControlValueAccessor,
   FormGroup,
@@ -22,7 +10,10 @@ import {
   Validator,
   ValidationErrors
 } from '@angular/forms';
-import { FormFieldControl } from '@cpp/pdk';
+import { FormFieldControl, PdkFormFieldComponent, PdkInput, PdkInputComponent, PdkTextInputDirective } from '@cpp/pdk';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 let i = 0;
 
@@ -40,28 +31,31 @@ const DEFAULT_ERROR_MESSAGES = [
 ];
 
 @Component({
-  selector: 'estimate-input',
-  templateUrl: './estimate-input.component.html',
-  styleUrls: ['./estimate-input.component.scss'],
-  providers: [
-    {
-      provide: FormFieldControl,
-      useExisting: EstimateInputComponent
-    },
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => EstimateInputComponent),
-      multi: true
-    },
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => EstimateInputComponent),
-      multi: true
-    }
-  ],
-  encapsulation: ViewEncapsulation.None
+    selector: 'estimate-input',
+    templateUrl: './estimate-input.component.html',
+    styleUrls: ['./estimate-input.component.scss'],
+    providers: [
+        {
+            provide: FormFieldControl,
+            useExisting: EstimateInputComponent
+        },
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => EstimateInputComponent),
+            multi: true
+        },
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => EstimateInputComponent),
+            multi: true
+        }
+    ],
+    encapsulation: ViewEncapsulation.None,
+    imports: [PdkFormFieldComponent, PdkInputComponent, FormsModule, ReactiveFormsModule, PdkTextInputDirective, PdkInput]
 })
 export class EstimateInputComponent implements ControlValueAccessor, FormFieldControl, Validator, OnInit, OnChanges {
+  private injector = inject(Injector);
+
   // tslint:disable-next-line: no-input-rename
   @Input('aria-describedby') ariaDescribedBy: string;
 
@@ -92,7 +86,9 @@ export class EstimateInputComponent implements ControlValueAccessor, FormFieldCo
 
   private propagateChange = (_: any) => {};
 
-  constructor(private injector: Injector, elementRef: ElementRef) {
+  constructor() {
+    const elementRef = inject(ElementRef);
+
     i += 1;
 
     const el = elementRef.nativeElement;

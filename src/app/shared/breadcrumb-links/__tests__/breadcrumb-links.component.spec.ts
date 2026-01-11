@@ -1,13 +1,10 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { CommonModule } from '@angular/common';
-import { BreadcrumbLinksModule } from '../breadcrumb-links.module';
 import { Input, Component } from '@angular/core';
-import { RouterTestingModule } from '@angular/router/testing';
-import { Router } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 import { Breadcrumbs } from '../breadcrumb-links.constant';
 import { By } from '@angular/platform-browser';
 import { Breadcrumb } from '../breadcrumb-links.interface';
-
+import { BreadcrumbLinksComponent } from '../breadcrumb-links.component';
 describe('BreadcrumbLinksComponent', () => {
   let fixture: ComponentFixture<TestBreadCrumbLinksComponent>;
   let navigate: jest.Mock;
@@ -19,16 +16,16 @@ describe('BreadcrumbLinksComponent', () => {
   });
 
   afterAll(() => {
-    window.location = location;
+    Object.defineProperty(window, 'location', { value: location, writable: true });
   });
 
   beforeEach(() => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [CommonModule, BreadcrumbLinksModule, RouterTestingModule],
-      declarations: [TestBreadCrumbLinksComponent],
+      imports: [BreadcrumbLinksComponent, TestBreadCrumbLinksComponent],
       providers: [
+        provideRouter([]),
         {
           provide: Router,
           useValue: {
@@ -70,7 +67,8 @@ describe('BreadcrumbLinksComponent', () => {
     selector: 'test-breadcrumb-links',
     template: `
       <breadcrumb-links [breadcrumbs]="breadcrumbs" [caseId]="caseId"></breadcrumb-links>
-    `
+    `,
+    imports: [BreadcrumbLinksComponent]
   })
   class TestBreadCrumbLinksComponent {
     @Input() breadcrumbs: Breadcrumb[];

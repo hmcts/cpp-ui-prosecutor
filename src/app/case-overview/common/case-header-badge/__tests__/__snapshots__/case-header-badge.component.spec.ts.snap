@@ -5,6 +5,7 @@ exports[`CaseHeaderBadgeComponent should compile correctly 1`] = `
   kase={[Function Object]}
 >
   <div
+    class="govuk-!-margin-top-4"
     pdk-margin-top="4"
   >
     <pdk-page-header>

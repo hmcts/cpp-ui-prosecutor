@@ -6,73 +6,88 @@ import {
   OffenceDecision
 } from '../../../contexts/sjp';
 import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
+import { PdkCore, PdkGrid } from "@cpp/pdk";
 
 @Component({
-  selector: 'financial-impositions',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'financial-impositions',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <div pdk-margin-left="2">
       <div>
         <b pdk-typography="heading-medium">Impositions</b>
       </div>
       <div>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="calcFine() > 0">
-          <pdk-grid one-third>
-            <b>To pay fine of</b>
+        @if (calcFine() > 0) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay fine of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-fine-amount">
+              {{ formatCurrency(this.calcFine()) }}
+            </pdk-grid>
           </pdk-grid>
-          <pdk-grid two-thirds data-role="imposition-fine-amount">
-            {{ formatCurrency(this.calcFine()) }}
+        }
+        @if (showCompensation) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay compensation of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-compensation-amount">
+              {{ formatCurrency(this.calcTotalCompensation()) }}
+            </pdk-grid>
           </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="showCompensation">
-          <pdk-grid one-third>
-            <b>To pay compensation of</b>
+        }
+        @if (payment.fineTransferredTo) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>Transfer of fine made to </b>
+            </pdk-grid>
+            <pdk-grid two-thirds>
+              {{ payment.fineTransferredTo.nationalCourtName }}
+            </pdk-grid>
           </pdk-grid>
-          <pdk-grid two-thirds data-role="imposition-compensation-amount">
-            {{ formatCurrency(this.calcTotalCompensation()) }}
+        }
+        @if (calcTotalExcisePenalty() > 0) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay excise penalty of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-excise-penalty-amount">
+              {{ formatCurrency(this.calcTotalExcisePenalty()) }}
+            </pdk-grid>
           </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container *ngIf="payment.fineTransferredTo" pdk-padding-vertical="1">
-          <pdk-grid one-third>
-            <b>Transfer of fine made to </b>
+        }
+        @if (calcTotalBackDuty() > 0) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay back duty of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-backduty-amount">
+              {{ formatCurrency(this.calcTotalBackDuty()) }}
+            </pdk-grid>
           </pdk-grid>
-          <pdk-grid two-thirds>
-            {{ payment.fineTransferredTo.nationalCourtName }}
+        }
+        @if (showCosts) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>To pay costs of</b>
+            </pdk-grid>
+            <pdk-grid two-thirds data-role="imposition-costs-amount">
+              {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.costs) }}
+            </pdk-grid>
           </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="calcTotalExcisePenalty() > 0">
-          <pdk-grid one-third>
-            <b>To pay excise penalty of</b>
+        }
+        @if (!showCosts && reasonForNoCosts) {
+          <pdk-grid container pdk-padding-vertical="1">
+            <pdk-grid one-third>
+              <b>No order for costs because</b>
+            </pdk-grid>
+            <pdk-grid two-thirds>
+              {{ reasonForNoCosts }}
+            </pdk-grid>
           </pdk-grid>
-          <pdk-grid two-thirds data-role="imposition-excise-penalty-amount">
-            {{ formatCurrency(this.calcTotalExcisePenalty()) }}
-          </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="calcTotalBackDuty() > 0">
-          <pdk-grid one-third>
-            <b>To pay back duty of</b>
-          </pdk-grid>
-          <pdk-grid two-thirds data-role="imposition-backduty-amount">
-            {{ formatCurrency(this.calcTotalBackDuty()) }}
-          </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="showCosts">
-          <pdk-grid one-third>
-            <b>To pay costs of</b>
-          </pdk-grid>
-          <pdk-grid two-thirds data-role="imposition-costs-amount">
-            {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.costs) }}
-          </pdk-grid>
-        </pdk-grid>
-        <pdk-grid container pdk-padding-vertical="1" *ngIf="!showCosts && reasonForNoCosts">
-          <pdk-grid one-third>
-            <b>No order for costs because</b>
-          </pdk-grid>
-          <pdk-grid two-thirds>
-            {{ reasonForNoCosts }}
-          </pdk-grid>
-        </pdk-grid>
-        <ng-container *ngIf="hasVictimSurcharge">
+        }
+        @if (hasVictimSurcharge) {
           <pdk-grid container pdk-padding-vertical="1">
             <pdk-grid one-third>
               <b>To pay victim surcharge of</b>
@@ -81,27 +96,32 @@ import { formatCurrency } from '../../../contexts/sjp/util/sjp-util';
               {{ this.formatCurrency(this.caseDecision.financialImposition.costsAndSurcharge.victimSurcharge) }}
             </pdk-grid>
           </pdk-grid>
-          <pdk-grid container pdk-padding-vertical="1"
-            *ngIf="caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge">
+          @if (caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge) {
+            <pdk-grid container pdk-padding-vertical="1"
+              >
+              <pdk-grid one-third>
+                <b>Victim surcharge reduced because</b>
+              </pdk-grid>
+              <pdk-grid two-thirds>
+                {{ this.caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge }}
+              </pdk-grid>
+            </pdk-grid>
+          }
+        }
+        @if (!hasVictimSurcharge && noVictimSurchargeReason) {
+          <pdk-grid container pdk-padding-vertical="1">
             <pdk-grid one-third>
-              <b>Victim surcharge reduced because</b>
+              <b>Victim surcharge not imposed because</b>
             </pdk-grid>
             <pdk-grid two-thirds>
-                {{ this.caseDecision.financialImposition.costsAndSurcharge.reasonForReducedVictimSurcharge }}
+              {{ noVictimSurchargeReason }}
             </pdk-grid>
           </pdk-grid>
-        </ng-container>
-        <pdk-grid *ngIf="!hasVictimSurcharge && noVictimSurchargeReason" container pdk-padding-vertical="1">
-          <pdk-grid one-third>
-              <b>Victim surcharge not imposed because</b>
-          </pdk-grid>
-          <pdk-grid two-thirds>
-              {{ noVictimSurchargeReason }}
-          </pdk-grid>
-        </pdk-grid>
+        }
       </div>
     </div>
-  `
+    `,
+    imports: [PdkCore, PdkGrid]
 })
 export class FinancialImpositionsComponent {
   mCaseDecision: CaseDecision;

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../reducers';
 import { LoadResultedCaseCount, ResetResultedCaseCount } from './export-case-decisions.actions';
@@ -7,6 +7,9 @@ import { CaseCountResult } from '../contexts/mi-report';
 import { getResultedCaseCount } from './export-case-decisions.selector';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { ExportCaseDecisionsComponent } from './components/export-case-decisions.component';
+import { AsyncPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'export-case-decisions-container',
@@ -19,13 +22,18 @@ import { map } from 'rxjs/operators';
       (errorsOutput)="ngOnDestroy()"
     >
     </export-case-decisions>
-  `
+  `,
+  imports: [ExportCaseDecisionsComponent, AsyncPipe, FormsModule]
 })
 export class ExportCaseDecisionsContainer implements OnDestroy {
+  private store = inject<Store<State>>(Store);
+
   caseCountResult$: Observable<CaseCountResult>;
   role$: Observable<string>;
 
-  constructor(private store: Store<State>, route: ActivatedRoute) {
+  constructor() {
+    const route = inject(ActivatedRoute);
+
     this.caseCountResult$ = this.store.select(getResultedCaseCount);
     this.role$ = route.params.pipe(map(params => params.role));
   }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { Observable } from 'rxjs';
 import {
@@ -11,12 +11,17 @@ import { map } from 'rxjs/operators';
 import { v4 as uuid } from 'uuid';
 import { CsvUploadRequestParam } from './staging-tfl-param.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class StagingTflService {
+  private http = inject(CppHttp);
+
   private readonly query = '/stagingtfl-query-api/query/api/rest/stagingtfl';
   private readonly command = '/stagingtfl-command-api/command/api/rest/staging-tfl';
 
-  constructor(private http: CppHttp) {}
+
+  constructor() {}
 
   getFileUploadStats(): Observable<FileUploadStatResult> {
     return this.http.query({

@@ -10,7 +10,9 @@ export const fileNameMap = {
   APPLICATION: 'Application',
 };
 
-@Pipe({ name: 'docFileName' })
+@Pipe({
+    name: 'docFileName',
+})
 export class DocFileNamePipe implements PipeTransform {
   transform(type: CaseDocumentType): string {
     return fileNameMap[type];

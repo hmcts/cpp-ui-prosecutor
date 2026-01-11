@@ -1,16 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule, PdkTabsModule } from '@cpp/pdk';
 import { ApplicationDecisionDetailsComponent } from '../application-decision-details.component';
-import { SharedModule } from '../../../../shared';
 
 describe('ApplicationDecisionDetailsComponent', () => {
   let fixture: ComponentFixture<ApplicationDecisionDetailsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ApplicationDecisionDetailsComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule, PdkTabsModule, SharedModule],
+      imports: [ApplicationDecisionDetailsComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(ApplicationDecisionDetailsComponent);

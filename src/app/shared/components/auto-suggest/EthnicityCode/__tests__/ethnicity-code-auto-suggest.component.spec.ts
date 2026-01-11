@@ -1,14 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { pcfReferencedataReducer, PcfReferenceDataState } from '../../../../../core/reducers/pcf-reference-data';
-import { PdkAutosuggestModule, PdkCoreModule, PdkFormModule, PdkTextInputModule } from '@cpp/pdk';
 import { FormsModule } from '@angular/forms';
 import { EthnicityCode } from '../../../../../core/model/reference-data-interfaces';
 import { By } from '@angular/platform-browser';
 import { LoadObservedEthnicitiesAction, LoadObservedEthnicitiesSuccessAction } from '../../../../../core/actions';
 import { EthnicityCodeAutoSuggestComponent } from '../ethnicity-code-auto-suggest.component';
+import { PdkForm, PdkFormFieldComponent } from '@cpp/pdk';
 
 describe('EthnicityCodeAutoSuggestComponent', () => {
   const ethnicityCodes = [
@@ -30,23 +29,27 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        CommonModule,
-        FormsModule,
-        PdkFormModule,
-        PdkAutosuggestModule,
-        PdkCoreModule,
-        PdkTextInputModule,
-        StoreModule.forRoot(() => null, {
-          runtimeChecks: {}
-        }),
-        StoreModule.forFeature('pcfReferenceData', pcfReferencedataReducer)
+        EthnicityCodeAutoSuggestTestComponent,
+        EthnicityCodeAutoSuggestComponent,
+        PdkForm,
+        PdkFormFieldComponent,
+        FormsModule
       ],
-      declarations: [EthnicityCodeAutoSuggestComponent, EthnicityCodeAutoSuggestTestComponent]
+      providers: [
+        provideStore(
+          {
+            pcfReferenceData: pcfReferencedataReducer
+          },
+          {
+            runtimeChecks: {}
+          }
+        )
+      ]
     });
 
     fixture = TestBed.createComponent(EthnicityCodeAutoSuggestTestComponent);
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
   });
 
   it('should render correctly', () => {
@@ -131,7 +134,8 @@ describe('EthnicityCodeAutoSuggestComponent', () => {
       </pdk-form-field>
       <button type="submit">Submit</button>
     </form>
-  `
+  `,
+  imports: [FormsModule, PdkForm, PdkFormFieldComponent, EthnicityCodeAutoSuggestComponent]
 })
 class EthnicityCodeAutoSuggestTestComponent {
   selectedValue;

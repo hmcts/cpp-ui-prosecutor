@@ -1,13 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ControlContainer, NgForm } from '@angular/forms';
-import { MockPipesModule } from '../../shared/pipes/mock-pipes';
 import { ManualCaseSummaryComponent } from './case-summary.component';
 import { ManualCase } from '../../core/model/manual-case';
 import { ManualCaseOffenceStateService } from '../offences-state.service';
 import { ManualCaseDefendant } from '../../core';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('ManualCaseSummaryComponent', () => {
   let component: ManualCaseSummaryComponent;
@@ -35,7 +33,8 @@ describe('ManualCaseSummaryComponent', () => {
           firstName: 'Defendant',
           lastName: 'One'
         }
-      }
+      },
+      offences: []
     },
     {
       individual: {
@@ -57,22 +56,31 @@ describe('ManualCaseSummaryComponent', () => {
           firstName: 'Defendant',
           lastName: 'Three'
         }
-      }
+      },
+      offences: []
     }
   ] as ManualCaseDefendant[];
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseSummaryComponent],
-      imports: [CommonModule, MockPipesModule, RouterTestingModule],
+      imports: [ManualCaseSummaryComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseOffenceStateService]
+      providers: [
+        ControlContainer,
+        NgForm,
+        ManualCaseOffenceStateService,
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseSummaryComponent);
     component = fixture.componentInstance;
     component.caseDetails = mockCaseDetails;
     component.defendants = [];
+    component.prosecutors = [];
   });
 
   it('should render the component', () => {

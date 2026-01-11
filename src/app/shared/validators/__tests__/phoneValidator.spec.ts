@@ -1,8 +1,7 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-
 import { PhoneValidator } from '../index';
 
 describe('PhoneNumber Validator', () => {
@@ -12,8 +11,7 @@ describe('PhoneNumber Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestPhoneValidatorComponent, PhoneValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestPhoneValidatorComponent, PhoneValidator]
     });
 
     fixture = TestBed.createComponent(TestPhoneValidatorComponent);
@@ -25,6 +23,7 @@ describe('PhoneNumber Validator', () => {
   const setValue = (elementRef, value) => {
     elementRef.nativeElement.value = value;
     elementRef.nativeElement.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
   };
 
   const invalidError = {
@@ -63,8 +62,9 @@ describe('PhoneNumber Validator', () => {
     <form>
       <input name="phoneNumber" [ngModel]="model" validatePhone />
     </form>
-  `
+  `,
+  imports: [FormsModule, PhoneValidator]
 })
-class TestPhoneValidatorComponent {
+class TestPhoneValidatorComponent implements Validators {
   model: string;
 }

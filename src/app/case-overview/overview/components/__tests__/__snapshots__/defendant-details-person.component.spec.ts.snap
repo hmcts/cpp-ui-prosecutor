@@ -69,10 +69,7 @@ exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
         >
           <date-of-birth>
             <div>
-              dateOfBirth: 1957-03-11
-            </div>
-            <div>
-              defaultSubstitute: –
+               11 Mar 1957 (59 years old) 
             </div>
           </date-of-birth>
         </div>

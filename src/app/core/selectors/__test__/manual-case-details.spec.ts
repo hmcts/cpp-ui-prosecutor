@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { StoreModule, Store, select } from '@ngrx/store';
+import { Store, select, provideStore } from '@ngrx/store';
 import { State, reducers } from '../../reducers';
 import { LoadManualCaseDetailsSuccess, StoreManualCaseDefendantsEitherWayOffences } from '../../actions';
 import { ManualCase } from '../../model/manual-case';
@@ -22,10 +22,10 @@ describe('Manual case details selectors', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })]
+      providers: [provideStore(reducers, { runtimeChecks: {} })]
     });
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
   });
 
   it('should return default state of store', () => {

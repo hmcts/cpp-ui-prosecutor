@@ -1,6 +1,6 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { EmailValidator } from '../index';
@@ -12,8 +12,7 @@ describe('Email Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestEmailValidatorComponent, EmailValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestEmailValidatorComponent, EmailValidator]
     });
 
     fixture = TestBed.createComponent(TestEmailValidatorComponent);
@@ -59,8 +58,9 @@ describe('Email Validator', () => {
     <form>
       <input name="email" [ngModel]="model" validateEmail />
     </form>
-  `
+  `,
+  imports: [FormsModule, EmailValidator]
 })
-class TestEmailValidatorComponent {
+class TestEmailValidatorComponent implements Validators {
   model: string;
 }

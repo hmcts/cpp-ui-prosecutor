@@ -25,7 +25,8 @@ describe('AppConfigService', () => {
         {
           provide: CppHttp,
           useValue: {
-            query
+            query: jasmine.createSpy(),
+            commandSync: jasmine.createSpy()
           }
         },
         AppConfigService
@@ -36,7 +37,7 @@ describe('AppConfigService', () => {
     query.mockReturnValue({ pipe });
     pipe.mockReturnValue(of(true));
 
-    service = TestBed.get(AppConfigService);
+    service = TestBed.inject(AppConfigService);
   });
 
   it('should load all configs', () => {

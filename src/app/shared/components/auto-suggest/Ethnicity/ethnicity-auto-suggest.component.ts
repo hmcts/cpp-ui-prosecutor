@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { State, Ethnicity, getEthnicities, LoadEthnicitiesAction } from '../../../../core';
-import { AutosuggestLiteComponent, coerceBooleanProperty, FormFieldControl, InputWidth } from '@cpp/pdk';
+import { coerceBooleanProperty, FormFieldControl, InputWidth, PdkAutosuggestLiteComponent } from '@cpp/pdk';
 import { Observable, of, Subject } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'ethnicity-auto-suggest',
@@ -20,17 +21,20 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
       provide: FormFieldControl,
       useExisting: EthnicityAutoSuggestComponent
     }
-  ]
+  ],
+  imports: [PdkAutosuggestLiteComponent, AsyncPipe]
 })
 export class EthnicityAutoSuggestComponent implements ControlValueAccessor, FormFieldControl, OnInit {
+  private store = inject<Store<State>>(Store);
+
   multi = false;
   searchEthnicity$ = new Subject<string>();
   suggestions$: Observable<Ethnicity[]>;
   private _mapSelectionToKey: boolean;
   private _getEthnicitiesOnMount: boolean;
   private fetchEthnicity$: Observable<Ethnicity[]>;
-  @ViewChild(AutosuggestLiteComponent)
-  autoSuggestLiteRef: AutosuggestLiteComponent<Ethnicity>;
+  @ViewChild(PdkAutosuggestLiteComponent)
+  autoSuggestLiteRef: PdkAutosuggestLiteComponent<Ethnicity>;
   @Input()
   suggestionKey: keyof Ethnicity = 'id';
   @Input() suggestionLabel: keyof Ethnicity = 'description';
@@ -70,7 +74,7 @@ export class EthnicityAutoSuggestComponent implements ControlValueAccessor, Form
     return this.autoSuggestLiteRef.ngControl;
   }
 
-  constructor(private store: Store<State>) {
+  constructor() {
     this.fetchEthnicity$ = this.store.pipe(
       select(getEthnicities),
       filter(ethnicityList => !!ethnicityList)

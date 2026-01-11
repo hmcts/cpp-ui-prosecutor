@@ -13,8 +13,7 @@ describe('Email Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestSplitCaseValidatorComponent],
-      imports: [FormsModule, ReactiveFormsModule]
+      imports: [FormsModule, ReactiveFormsModule, TestSplitCaseValidatorComponent]
     });
 
     fixture = TestBed.createComponent(TestSplitCaseValidatorComponent);
@@ -99,12 +98,13 @@ describe('Email Validator', () => {
   template: `
     <form [formGroup]="formGroup">
       <ng-container formArrayName="splitCases">
-        <ng-container *ngFor="let item of formGroup.controls['splitCases'].controls; let i = index; let first = first">
-          <input name="splitCase_{{ i }}" [formControl]="item" />
-        </ng-container>
+        @for (item of formGroup.controls['splitCases'].controls; let i = $index; track i; let first = $first) {
+        <input name="splitCase_{{ i }}" [formControl]="item" />
+        }
       </ng-container>
     </form>
-  `
+  `,
+  imports: [FormsModule, ReactiveFormsModule]
 })
 class TestSplitCaseValidatorComponent {
   formGroup = new FormGroup({

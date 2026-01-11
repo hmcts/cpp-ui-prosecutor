@@ -3,17 +3,12 @@ if (!process.env.NODE_ENV) {
 }
 
 module.exports = {
-  roots: ['<rootDir>/src'],
-  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-  testRunner: 'jest-jasmine2',
-  moduleDirectories: ['node_modules', '.'],
   testEnvironmentOptions: {
     url: 'http://localhost/'
   },
-  moduleNameMapper: {
-    '^lodash-es$': 'lodash'
-  },
-  testPathIgnorePatterns: ['<rootDir>/src/test.ts'],
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  testRunner: 'jest-jasmine2',
+  roots: ['<rootDir>/src'],
   coverageDirectory: '<rootDir>/build/coverage/jest',
   coverageThreshold: {
     global: {
@@ -22,5 +17,9 @@ module.exports = {
       lines: 80,
       statements: 80
     }
+  },
+
+  moduleNameMapper: {
+    '^lodash-es$': 'lodash'
   }
 };

@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DefendantDetailsUpdatesLinkComponent } from '../defendant-details-updates-link.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideRouter } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 describe('DefendantDetailsUpdatesLinkComponent', () => {
   let component: DefendantDetailsUpdatesLinkComponent;
@@ -10,8 +11,8 @@ describe('DefendantDetailsUpdatesLinkComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [DefendantDetailsUpdatesLinkComponent],
-        imports: [RouterTestingModule],
+        imports: [DefendantDetailsUpdatesLinkComponent],
+        providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
         teardown: { destroyAfterEach: false }
       });
     })

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { CaseCountResult } from '../../../contexts/mi-report';
-import { PdkCoreModule, PdkInsetTextModule } from '@cpp/pdk';
 import { DownloadCaseDecisionsComponent } from '../download-case-decisions.component';
 
 describe('DownloadCaseDecisionsComponent', () => {
@@ -9,8 +8,7 @@ describe('DownloadCaseDecisionsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DownloadCaseDecisionsComponent, TestDownloadCaseDecisionsComponent],
-      imports: [PdkCoreModule, PdkInsetTextModule],
+      imports: [TestDownloadCaseDecisionsComponent, DownloadCaseDecisionsComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestDownloadCaseDecisionsComponent);
@@ -42,7 +40,8 @@ describe('DownloadCaseDecisionsComponent', () => {
     selector: 'download-case-decisions-test',
     template: `
       <download-case-decisions [role]="role" [caseCountResult]="caseCountResult"></download-case-decisions>
-    `
+    `,
+    imports: [DownloadCaseDecisionsComponent]
   })
   class TestDownloadCaseDecisionsComponent {
     role: string;

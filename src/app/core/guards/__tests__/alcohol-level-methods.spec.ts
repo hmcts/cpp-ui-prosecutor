@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
 import { reducers, State } from '../../reducers';
@@ -35,8 +35,8 @@ describe('Alcohol Level Methods Guard', () => {
     apiSuccessCaseDetails$ = cold('-(a|)', { a: alcoholLevelMethods });
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         AlcoholLevelMethodsGuard,
         {
           provide: ReferenceDataService,
@@ -53,8 +53,8 @@ describe('Alcohol Level Methods Guard', () => {
       ]
     });
 
-    guard = TestBed.get(AlcoholLevelMethodsGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(AlcoholLevelMethodsGuard);
+    store = TestBed.inject(Store);
   });
 
   describe('The store is empty', () => {

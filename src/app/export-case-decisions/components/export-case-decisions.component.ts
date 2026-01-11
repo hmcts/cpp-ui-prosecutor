@@ -4,21 +4,32 @@ import { CaseCountResult } from '../../contexts/mi-report';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.constant';
+import { BreadcrumbLinksComponent } from '../../shared/breadcrumb-links/breadcrumb-links.component';
+import { PdkErrorSummaryComponent, PdkForm } from '@cpp/pdk';
+import { ExportCaseDecisionsFormComponent } from './export-case-decisions-form.component';
+import { DownloadCaseDecisionsComponent } from './download-case-decisions.component';
 
 @Component({
   selector: 'export-case-decisions',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <breadcrumb-links [breadcrumbs]="breadcrumbs" [showTitle]="true"></breadcrumb-links>
-    <pdk-error-summary *ngIf="errors" [errors]="errors" title="Fix the following" focusOnChange></pdk-error-summary>
+    @if (errors) {
+    <pdk-error-summary [errors]="errors" title="Fix the following" [focusOnChange]="true"></pdk-error-summary>
+    }
     <export-case-decisions-form (errors)="handleFormErrors($event)" (loadCaseCount)="loadCaseCount.emit($event)">
     </export-case-decisions-form>
-    <download-case-decisions
-      *ngIf="caseCountResult"
-      [caseCountResult]="caseCountResult"
-      [role]="role"
-    ></download-case-decisions>
-  `
+    @if (caseCountResult) {
+    <download-case-decisions [caseCountResult]="caseCountResult" [role]="role"></download-case-decisions>
+    }
+  `,
+  imports: [
+    BreadcrumbLinksComponent,
+    PdkErrorSummaryComponent,
+    ExportCaseDecisionsFormComponent,
+    DownloadCaseDecisionsComponent,
+    PdkForm
+  ]
 })
 export class ExportCaseDecisionsComponent {
   @Input() role: string;

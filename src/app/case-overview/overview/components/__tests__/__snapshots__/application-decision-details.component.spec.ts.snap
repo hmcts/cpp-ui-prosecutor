@@ -5,12 +5,10 @@ exports[`ApplicationDecisionDetailsComponent Reopening should display rejected r
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -24,7 +22,6 @@ exports[`ApplicationDecisionDetailsComponent Reopening should display rejected r
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -52,12 +49,10 @@ exports[`ApplicationDecisionDetailsComponent Reopening should display reopening 
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -71,7 +66,6 @@ exports[`ApplicationDecisionDetailsComponent Reopening should display reopening 
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -99,12 +93,10 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display out of time
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -118,7 +110,6 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display out of time
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -147,12 +138,10 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display rejected re
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -166,7 +155,6 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display rejected re
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -194,12 +182,10 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec de
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -213,7 +199,6 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec de
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -241,12 +226,10 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec de
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -260,7 +243,6 @@ exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec de
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div
@@ -288,12 +270,10 @@ exports[`ApplicationDecisionDetailsComponent should compile correctly 1`] = `
   applicationDecision={[Function Object]}
 >
   <pdk-grid
-    class="govuk-grid-row"
     container=""
     data-role="application-decision-details"
   >
     <pdk-grid
-      class="govuk-grid-column-one-third"
       one-third=""
     >
       <div
@@ -307,7 +287,6 @@ exports[`ApplicationDecisionDetailsComponent should compile correctly 1`] = `
       </div>
     </pdk-grid>
     <pdk-grid
-      class="govuk-grid-column-two-thirds"
       two-thirds=""
     >
       <div

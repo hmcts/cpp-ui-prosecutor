@@ -5,6 +5,7 @@ import {
   LegalEntityDetails,
   PersonalDetails
 } from '../../../contexts/sjp';
+import { PdkCore, PdkNotificationBannerComponent } from "@cpp/pdk";
 
 const DefendantStatusMessages: Record<DefendantDetailUpdateRequestStatusType, string> = {
   PENDING: 'The following defendant details have been updated and are awaiting approval',
@@ -13,20 +14,29 @@ const DefendantStatusMessages: Record<DefendantDetailUpdateRequestStatusType, st
 };
 
 @Component({
-  selector: 'defendant-details-change-notification-banner',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <pdk-notification-banner *ngIf="displayNotificationBanner" title="Important">
-      <div pdk-typography="body-medium">
-        <p [innerHTML]="statusMessage"></p>
-        <ul class="list list-bullet">
-          <li *ngIf="nameChanged">Name</li>
-          <li *ngIf="dobChanged">Date of birth</li>
-          <li *ngIf="addressChanged">Address</li>
-        </ul>
-      </div>
-    </pdk-notification-banner>
-  `
+    selector: 'defendant-details-change-notification-banner',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
+    @if (displayNotificationBanner) {
+      <pdk-notification-banner title="Important">
+        <div pdk-typography="body-medium">
+          <p [innerHTML]="statusMessage"></p>
+          <ul class="list list-bullet">
+            @if (nameChanged) {
+              <li>Name</li>
+            }
+            @if (dobChanged) {
+              <li>Date of birth</li>
+            }
+            @if (addressChanged) {
+              <li>Address</li>
+            }
+          </ul>
+        </div>
+      </pdk-notification-banner>
+    }
+    `,
+    imports: [PdkCore, PdkNotificationBannerComponent]
 })
 export class DefendantDetailsChangeNotificationBannerComponent implements OnChanges {
   @Input() personalDetails?: PersonalDetails;

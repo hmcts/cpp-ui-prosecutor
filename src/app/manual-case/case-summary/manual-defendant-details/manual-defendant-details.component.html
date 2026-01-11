@@ -1,5 +1,6 @@
 <div class="defendant-details">
-  <div *ngIf="!isSJP()">
+  @if (!isSJP()) {
+  <div>
     <pdk-divider pdk-margin-top="2" [dark]="true"></pdk-divider>
     <pdk-grid container>
       <pdk-grid two-thirds>
@@ -14,10 +15,11 @@
       </pdk-grid>
     </pdk-grid>
   </div>
-
-  <div *ngFor="let defendant of defendants; let i = index" class="defendant" pdk-margin-bottom="7">
+  } @for (defendant of defendants; let i = $index; track defendant.id || i;) {
+  <div class="defendant" pdk-margin-bottom="7">
     <pdk-divider pdk-margin-top="2" [dark]="true"></pdk-divider>
-    <div *ngIf="defendant.individual; else organisation">
+    @if (defendant.individual) {
+    <div>
       <pdk-grid container>
         <pdk-grid two-thirds>
           <span pdk-typography="heading-medium" class="table-header">{{
@@ -32,7 +34,6 @@
           }}</a>
         </pdk-grid>
       </pdk-grid>
-
       <table pdk-table>
         <thead pdk-table-head>
           <span pdk-visually-hidden>
@@ -51,20 +52,25 @@
                   : defendant?.organisationName
               }}
             </td>
-            <td pdk-table-cell *ngIf="defendants.length > 1" class="remove-link" (click)="onRemove(i)">
+            @if (defendants.length > 1) {
+            <td pdk-table-cell class="remove-link" (click)="onRemove(i)">
               <a pdk-link href="javascript:void(0)">Remove</a>
             </td>
+            }
           </tr>
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ALIAS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="defendant-aliases">
-              <div *ngFor="let alias of getIndividualAliases(i)">{{ alias }}</div>
+              @for (alias of getIndividualAliases(i); let index = $index; track index;) {
+              <div>{{ alias }}</div>
+              }
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isTrialOrSentence()" pdk-table-row class="table-row">
+          @if (isTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PNCID' | translate }}
             </th>
@@ -73,7 +79,8 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="defendant.asn" pdk-table-row class="table-row">
+          } @if (defendant.asn) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ARREST_SUMMONS_NUMBER' | translate }}
             </th>
@@ -82,6 +89,7 @@
             </td>
             <td></td>
           </tr>
+          }
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DOB' | translate }}
@@ -91,7 +99,8 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isTrialOrSentence()" pdk-table-row class="table-row">
+          @if (isTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.GENDER' | translate }}
             </th>
@@ -100,7 +109,8 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isChargeTrialOrSentence()" pdk-table-row class="table-row">
+          } @if (isChargeTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NATIONALITY' | translate }}
             </th>
@@ -109,11 +119,8 @@
             </td>
             <td></td>
           </tr>
-          <tr
-            *ngIf="isChargeTrialOrSentence() && defendant?.individual?.selfDefinedInformation?.additionalNationality"
-            pdk-table-row
-            class="table-row"
-          >
+          } @if (isChargeTrialOrSentence() && defendant?.individual?.selfDefinedInformation?.additionalNationality) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.SECOND_NATIONALITY' | translate }}
             </th>
@@ -122,7 +129,8 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isTrialOrSentence()" pdk-table-row class="table-row">
+          } @if (isTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'CASE_DETAILS.DEFENDANT.SELFETHNICITY' | translate }}
             </th>
@@ -131,7 +139,8 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isTrialOrSentence()" pdk-table-row class="table-row">
+          } @if (isTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.OBSERVEDETHNICITY' | translate }}
             </th>
@@ -140,23 +149,27 @@
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="isChargeTrialOrSentence()" pdk-table-row class="table-row">
+          } @if (isChargeTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.REMAND_STATUS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="remand-status">
               {{ getRemandStatus(defendant?.individual?.custodyStatus) }}
-              <div *ngIf="defendant?.individual?.bailConditions">
+              @if (defendant?.individual?.bailConditions) {
+              <div>
                 {{
                   ('MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.BAIL_CONDITIONS' | translate) +
                     ': ' +
                     defendant?.individual?.bailConditions
                 }}
               </div>
+              }
             </td>
             <td></td>
           </tr>
-          <tr *ngIf="!isTrialOrSentence()" pdk-table-row class="table-row">
+          } @if (!isTrialOrSentence()) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate }}
             </th>
@@ -165,6 +178,7 @@
             </td>
             <td></td>
           </tr>
+          }
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
@@ -176,7 +190,6 @@
           </tr>
         </tbody>
       </table>
-
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
         <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
@@ -202,7 +215,6 @@
           </tr>
         </tbody>
       </table>
-
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
         <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
@@ -215,7 +227,7 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.WRITTEN_LANGUAGE_NEEDS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="documentation-language">
-              {{ (defendant?.documentationLanguage === 'E' ? 'English' : 'Welsh') | titlecase }}
+              {{ (defendant?.documentationLanguage === 'ENGLISH' ? 'English' : 'Welsh') | titlecase }}
             </td>
           </tr>
           <tr pdk-table-row class="table-row">
@@ -223,11 +235,11 @@
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.HEARING_LANGUAGE_NEEDS' | translate }}
             </th>
             <td pdk-table-cell class="data" data-role="hearing-language">
-              {{ (defendant?.hearingLanguage === 'E' ? 'English' : 'Welsh') | titlecase }}
+              {{ (defendant?.hearingLanguage === 'ENGLISH' ? 'English' : 'Welsh') | titlecase }}
             </td>
           </tr>
-
-          <tr pdk-table-row class="table-row" *ngIf="getAllOffenceAocpEligible(defendant)">
+          @if (getAllOffenceAocpEligible(defendant)) {
+          <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ONLINE_CONVICTION' | translate }}
             </th>
@@ -235,16 +247,13 @@
               {{ getOnlineConvictionForCase(defendant) }}
             </td>
           </tr>
+          }
         </tbody>
       </table>
-
-      <div *ngIf="guardianIsIndividual(defendant); else guardianOrganisation">
-        <table
-          *ngIf="defendant.individual.parentGuardianInformation"
-          pdk-table
-          pdk-margin-bottom="4"
-          pdk-margin-top="2"
-        >
+      @if (guardianIsIndividual(defendant)) {
+      <div>
+        @if (defendant.individual.parentGuardianInformation) {
+        <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
           <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_DETAILS' | translate
@@ -273,13 +282,8 @@
             </tr>
           </tbody>
         </table>
-
-        <table
-          *ngIf="defendant.individual.parentGuardianInformation"
-          pdk-table
-          pdk-margin-bottom="4"
-          pdk-margin-top="2"
-        >
+        } @if (defendant.individual.parentGuardianInformation) {
+        <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
           <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
             {{
               'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_CONTACT_DETAILS' | translate
@@ -306,178 +310,172 @@
             </tr>
           </tbody>
         </table>
+        }
       </div>
-
-      <ng-template #guardianOrganisation>
-        <table
-          *ngIf="defendant.individual.parentGuardianInformation"
-          pdk-table
-          pdk-margin-bottom="4"
-          pdk-margin-top="2"
-        >
-          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
-            {{
-              'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_DETAILS' | translate
-            }}
-          </thead>
-          <tbody pdk-table-body>
-            <tr pdk-table-row class="table-row">
-              <th pdk-table-header="row" class="header">
-                {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ORGANISATION_NAME' | translate }}
-              </th>
-              <td pdk-table-cell class="data" data-role="guardian-organisation-name">
-                {{ defendant?.individual?.parentGuardianInformation?.organisationName }}
-              </td>
-            </tr>
-            <tr pdk-table-row class="table-row">
-              <th pdk-table-header="row" class="header">
-                {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
-              </th>
-              <td pdk-table-cell class="data" data-role="guardian-address">
-                <div [innerHTML]="defendant?.individual?.parentGuardianInformation?.address | address: true"></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <table
-          *ngIf="defendant.individual.parentGuardianInformation"
-          pdk-table
-          pdk-margin-bottom="4"
-          pdk-margin-top="2"
-        >
-          <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
-            {{
-              'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_CONTACT_DETAILS' | translate
-            }}
-          </thead>
-          <tbody pdk-table-body>
-            <tr pdk-table-row class="table-row">
-              <th pdk-table-header="row" class="header">
-                {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PHONE_NUMBER' | translate }}
-              </th>
-              <td pdk-table-cell class="data" data-role="guardian-organisation-number">
-                {{ defendant?.individual?.parentGuardianInformation?.companyTelephoneNumber | dash }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </ng-template>
-    </div>
-
-    <ng-template #organisation>
-      <pdk-grid container>
-        <pdk-grid two-thirds>
-          <span pdk-typography="heading-medium" class="table-header">{{
-            defendant?.organisationName + ' - ' + ('MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate)
-          }}</span>
-        </pdk-grid>
-        <pdk-grid one-third class="change-link">
-          <a pdk-link href="javascript:void(0)" (click)="onEdit(i)" data-role="defendant-change-link">{{
-            'MANUAL_CASE_SUMMARY.CHANGE' | translate
-          }}</a>
-        </pdk-grid>
-      </pdk-grid>
-
-      <table pdk-table>
-        <thead pdk-table-head>
-          <span pdk-visually-hidden>
-            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate }}
-          </span>
+      } @else { @if (defendant.individual.parentGuardianInformation) {
+      <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
+        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
+          {{
+            'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_DETAILS' | translate
+          }}
         </thead>
         <tbody pdk-table-body>
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.FULL_NAME' | translate }}
+              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ORGANISATION_NAME' | translate }}
             </th>
-            <td pdk-table-cell class="data" data-role="defendant-organisation-name">
-              {{ defendant?.organisationName }}
+            <td pdk-table-cell class="data" data-role="guardian-organisation-name">
+              {{ defendant?.individual?.parentGuardianInformation?.organisationName }}
             </td>
-            <td class="remove-link" (click)="onRemove(i)">
-              <a pdk-link *ngIf="defendants.length > 1" href="javascript:void(0)">Remove</a>
-            </td>
-          </tr>
-          <tr pdk-table-row class="table-row">
-            <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ALIAS' | translate }}
-            </th>
-            <td pdk-table-cell class="data" data-role="organisation-aliases">
-              <div *ngFor="let alias of getOrganisationAliases(i)">{{ alias }}</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr *ngIf="isSJP()" pdk-table-row class="table-row">
-            <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate }}
-            </th>
-            <td pdk-table-cell class="data" data-role="previous-convictions">
-              {{ defendant?.numPreviousConvictions | dash }}
-            </td>
-            <td></td>
           </tr>
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
             </th>
-            <td pdk-table-cell class="data" data-role="organisation-address">
-              <div [innerHTML]="defendant.address | address: true"></div>
+            <td pdk-table-cell class="data" data-role="guardian-address">
+              <div [innerHTML]="defendant?.individual?.parentGuardianInformation?.address | address: true"></div>
             </td>
-            <td></td>
           </tr>
         </tbody>
       </table>
-
+      } @if (defendant.individual.parentGuardianInformation) {
       <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
         <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
           {{
-            'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_CONTACT_DETAILS' | translate
+            'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PARENT_GUARDIAN_CONTACT_DETAILS' | translate
           }}
         </thead>
         <tbody pdk-table-body>
-          <tr pdk-table-row class="table-row">
-            <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.EMAIL_ADDRESS' | translate }}
-            </th>
-            <td pdk-table-cell class="data" data-role="organisation-email">
-              {{ defendant?.emailAddress1 | dash }}
-            </td>
-          </tr>
           <tr pdk-table-row class="table-row">
             <th pdk-table-header="row" class="header">
               {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PHONE_NUMBER' | translate }}
             </th>
-            <td pdk-table-cell class="data" data-role="organisation-number">
-              {{ defendant?.telephoneNumberBusiness | dash }}
+            <td pdk-table-cell class="data" data-role="guardian-organisation-number">
+              {{ defendant?.individual?.parentGuardianInformation?.companyTelephoneNumber | dash }}
             </td>
           </tr>
         </tbody>
       </table>
-
-      <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
-        <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
-          {{
-            'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_NEEDS' | translate
-          }}
-        </thead>
-        <tbody pdk-table-body>
-          <tr pdk-table-row class="table-row">
-            <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.WRITTEN_LANGUAGE_NEEDS' | translate }}
-            </th>
-            <td pdk-table-cell class="data" data-role="documentation-language">
-              {{ (defendant?.documentationLanguage === 'E' ? 'English' : 'Welsh') | titlecase }}
-            </td>
-          </tr>
-          <tr pdk-table-row class="table-row">
-            <th pdk-table-header="row" class="header">
-              {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.HEARING_LANGUAGE_NEEDS' | translate }}
-            </th>
-            <td pdk-table-cell class="data" data-role="hearing-language">
-              {{ (defendant?.hearingLanguage === 'E' ? 'English' : 'Welsh') | titlecase }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </ng-template>
+      } }
+    </div>
+    } @else {
+    <pdk-grid container>
+      <pdk-grid two-thirds>
+        <span pdk-typography="heading-medium" class="table-header">{{
+          defendant?.organisationName + ' - ' + ('MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate)
+        }}</span>
+      </pdk-grid>
+      <pdk-grid one-third class="change-link">
+        <a pdk-link href="javascript:void(0)" (click)="onEdit(i)" data-role="defendant-change-link">{{
+          'MANUAL_CASE_SUMMARY.CHANGE' | translate
+        }}</a>
+      </pdk-grid>
+    </pdk-grid>
+    <table pdk-table>
+      <thead pdk-table-head>
+        <span pdk-visually-hidden>
+          {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.TITLE' | translate }}
+        </span>
+      </thead>
+      <tbody pdk-table-body>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.FULL_NAME' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="defendant-organisation-name">
+            {{ defendant?.organisationName }}
+          </td>
+          <td class="remove-link" (click)="onRemove(i)">
+            @if (defendants.length > 1) {
+            <a pdk-link href="javascript:void(0)">Remove</a>
+            }
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.ALIAS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="organisation-aliases">
+            @for (alias of getOrganisationAliases(i); let index = $index; track index;) {
+            <div>{{ alias }}</div>
+            }
+          </td>
+          <td></td>
+        </tr>
+        @if (isSJP()) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.NUMBER_OF_PREVIOUS_CONVICTIONS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="previous-convictions">
+            {{ defendant?.numPreviousConvictions | dash }}
+          </td>
+          <td></td>
+        </tr>
+        }
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_ADDRESS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="organisation-address">
+            <div [innerHTML]="defendant.address | address: true"></div>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
+      <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
+        {{
+          'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_CONTACT_DETAILS' | translate
+        }}
+      </thead>
+      <tbody pdk-table-body>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.EMAIL_ADDRESS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="organisation-email">
+            {{ defendant?.emailAddress1 | dash }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.PHONE_NUMBER' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="organisation-number">
+            {{ defendant?.telephoneNumberBusiness | dash }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
+      <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
+        {{
+          'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.DEFENDANT_NEEDS' | translate
+        }}
+      </thead>
+      <tbody pdk-table-body>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.WRITTEN_LANGUAGE_NEEDS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="documentation-language">
+            {{ (defendant?.documentationLanguage === 'ENGLISH' ? 'English' : 'Welsh') | titlecase }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.DEFENDANT_DETAILS.HEARING_LANGUAGE_NEEDS' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="hearing-language">
+            {{ (defendant?.hearingLanguage === 'ENGLISH' ? 'English' : 'Welsh') | titlecase }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    }
   </div>
+  }
   <pdk-divider pdk-margin-top="2" [dark]="true"></pdk-divider>
 </div>

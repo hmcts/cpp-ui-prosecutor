@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, Input } from '@angular/core';
 import { CaseDecision, DischargeOffenceDecision, FinancialPenaltyOffenceDecision } from '../../../../contexts/sjp';
-import { CommonModule } from '@angular/common';
-import { PdkDividerModule, PdkGridModule } from '@cpp/pdk';
 import { FinancialImpositionsComponent } from '../financial-impositions.component';
 import { MOCK_CASE_DECISION_WITH_FINANCIAL_IMPOSITION } from '../../../../case-overview/__tests__/test-mock-data';
 import { By } from '@angular/platform-browser';
@@ -12,8 +10,7 @@ describe('FinancialImpositionsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FinancialImpositionsComponent, TestFinancialImpositionsComponent],
-      imports: [CommonModule, PdkDividerModule, PdkGridModule],
+      imports: [TestFinancialImpositionsComponent, FinancialImpositionsComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestFinancialImpositionsComponent);
@@ -144,7 +141,8 @@ describe('FinancialImpositionsComponent', () => {
     selector: 'financial-impositions-test',
     template: `
       <financial-impositions [caseDecision]="caseDecision"></financial-impositions>
-    `
+    `,
+    imports: [FinancialImpositionsComponent]
   })
   class TestFinancialImpositionsComponent {
     @Input() caseDecision: CaseDecision;

@@ -1,20 +1,19 @@
 import { Actions } from '@ngrx/effects';
 import { TestBed } from '@angular/core/testing';
-import { StoreModule } from '@ngrx/store';
+import { Action, provideStore } from '@ngrx/store';
 import { cold, hot } from 'jasmine-marbles';
-import { reducers } from '../../reducers';
 import { CreateManualCase, CreateManualCaseSuccess } from '../../actions';
 import { ManualCaseDetailsState } from '../../reducers/manual-case-details';
 import { ManualCaseDetailsEffects } from '..';
-import { RouterTestingModule } from '@angular/router/testing';
-import { Router } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 import { ProsecutionCaseFileService } from '../../../contexts/prosecution-case-file';
 import { Observable, of } from 'rxjs';
 import { provideMockActions } from '@ngrx/effects/testing';
+import { reducers } from '../../../reducers';
 
 describe('Reference Data Effects', () => {
   let effects: ManualCaseDetailsEffects;
-  let actions$: Observable<any>;
+  let actions$ = new Observable<Action>();
 
   let createManualCaseSJP: jest.Mock;
   let createManualCaseCC: jest.Mock;
@@ -26,9 +25,10 @@ describe('Reference Data Effects', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} }), RouterTestingModule],
       providers: [
         ManualCaseDetailsEffects,
+        provideStore(reducers, { runtimeChecks: {} }),
+        provideRouter([]),
         provideMockActions(() => actions$),
         {
           provide: ProsecutionCaseFileService,
@@ -41,11 +41,12 @@ describe('Reference Data Effects', () => {
           provide: Router,
           useValue: { navigate }
         }
-      ]
+      ],
+      teardown: { destroyAfterEach: false }
     });
 
-    effects = TestBed.get(ManualCaseDetailsEffects);
-    actions$ = TestBed.get(Actions);
+    effects = TestBed.inject(ManualCaseDetailsEffects);
+    actions$ = TestBed.inject(Actions);
   });
 
   describe('createManualCase$', () => {

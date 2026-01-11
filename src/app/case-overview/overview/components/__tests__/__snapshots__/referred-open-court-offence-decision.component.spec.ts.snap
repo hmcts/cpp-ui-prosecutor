@@ -9,7 +9,7 @@ exports[`ReferredOpenCourtOffeneDecision should compile correctly 1`] = `
       <p>
          Summons issued for hearing before south West London Magistrates' Court 
          (Room 5) 
-         on 2019-06-04T14:34:54.164Z at Lavender Hill Magistrates' Court at 2019-06-04T14:34:54.164Z 
+         on 4 Jun 2019 at Lavender Hill Magistrates' Court at 12:00am 
       </p>
       <p>
         Reason: Equivocal plea (For Trial)

@@ -1,21 +1,65 @@
 import { Component, Input, Output, EventEmitter, ViewChild, ChangeDetectionStrategy } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import cleanDeep from 'clean-deep';
 import { merge } from 'lodash';
 import uuid from 'uuid/v4';
-import { ValidationError } from '@cpp/pdk';
-import { Observable } from 'rxjs';
+import {
+  ValidationError,
+  PdkFormFieldComponent,
+  PdkDateInputComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkDetailsTextDirective,
+  PdkInsetTextComponent,
+  PdkFormGroupComponent,
+  PdkCore,
+  PdkForm,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective,
+  PdkResizeDirective,
+  PdkDetailsDirective
+} from '@cpp/pdk';
 import { ManualCaseDefendant, BailStatus } from '../../core/model';
+import { NationalityAutoSuggestComponent } from '../../shared/components/auto-suggest/nationality/nationality-auto-suggest.component';
+import { EthnicityAutoSuggestComponent } from '../../shared/components/auto-suggest/Ethnicity/ethnicity-auto-suggest.component';
+import { EthnicityCodeAutoSuggestComponent } from '../../shared/components/auto-suggest/EthnicityCode/ethnicity-code-auto-suggest.component';
+import { AddressInputComponent } from '../../shared';
+import { IndividualDefendantGuardianComponent } from './individual-defendant-guardian.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'individual-defendant-form',
   templateUrl: './individual-defendant-form.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    PdkForm,
+    PdkCore,
+    PdkTextInput,
+    PdkInput,
+    PdkButtonDirective,
+    PdkFormFieldComponent,
+    PdkDateInputComponent,
+    PdkRadioGroupComponent,
+    PdkRadioButtonComponent,
+    NationalityAutoSuggestComponent,
+    PdkDetailsTextDirective,
+    EthnicityAutoSuggestComponent,
+    EthnicityCodeAutoSuggestComponent,
+    PdkInsetTextComponent,
+    AddressInputComponent,
+    IndividualDefendantGuardianComponent,
+    TranslateModule,
+    FormsModule,
+    PdkFormGroupComponent,
+    PdkResizeDirective,
+    PdkDetailsDirective
+  ]
 })
 export class IndividualDefendantFormComponent {
   @Input() manualCaseDefendant: ManualCaseDefendant;
   @Input() manualCaseType: string;
-  @Input() remandStatuses: Observable<BailStatus[]>;
+  @Input() remandStatuses: BailStatus[];
   @Input() aliasesReset: boolean;
   @Input() showAddButton: boolean;
   @Input() isPoliceProsecutor: boolean;
@@ -54,7 +98,7 @@ export class IndividualDefendantFormComponent {
     return this.manualCaseType === 'C' || this.manualCaseType === 'T' || this.manualCaseType === 'CO';
   }
 
-  onErrors(error: ValidationError[]) {
+  onErrors(error: ValidationError[] | any) {
     if (error) {
       this.formError.emit(error);
     }

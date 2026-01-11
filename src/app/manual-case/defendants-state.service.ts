@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep, merge } from 'lodash';
 import { ManualCaseDefendant } from '../core/model/manual-case-defendant';
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ManualCaseDefendantStateService {
   public counter: string;
   private total: number;

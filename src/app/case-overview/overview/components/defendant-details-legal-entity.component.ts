@@ -1,10 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { LegalEntityDetails } from '../../../contexts/sjp';
+import { PdkCore, PdkGrid } from "@cpp/pdk";
+import { DefendantNamePipe } from '../../../shared/pipes/defendant-name/defendant-name.pipe';
+import { IfEmptyPipe } from '../../../shared/pipes/if-empty/if-empty.pipe';
+import { FormatAddressPipe } from '../../../shared/pipes/format-address/format-address.pipe';
 
 @Component({
-  selector: 'defendant-details-legal-entity',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'defendant-details-legal-entity',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <h4 pdk-typography="heading-medium">Defendant details</h4>
 
       <pdk-grid container>
@@ -71,7 +75,8 @@ import { LegalEntityDetails } from '../../../contexts/sjp';
           </div>
         </pdk-grid>
       </pdk-grid>
-  `
+  `,
+    imports: [PdkCore,PdkGrid, DefendantNamePipe, IfEmptyPipe, FormatAddressPipe]
 })
 export class DefendantDetailsLegalEntityComponent {
   @Input() legalEntityDetails: LegalEntityDetails;

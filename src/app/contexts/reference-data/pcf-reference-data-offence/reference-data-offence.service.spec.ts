@@ -3,19 +3,16 @@ import { PCFReferenceDataOffenceService } from '../pcf-reference-data-offence';
 import { cold } from 'jasmine-marbles';
 import { OffenceType, OffenceTypeDetails } from '../../../core/model/reference-data-interfaces/offence-type';
 import { CppHttp } from '@cpp/core';
-import { ReferenceDataModule } from '../reference-data.module';
-
 describe('PCFReferenceDataOffenceService', () => {
   let service: PCFReferenceDataOffenceService;
   let http: CppHttp;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ReferenceDataModule],
       providers: [{ provide: CppHttp, useValue: { query: jasmine.createSpy() } }]
     });
-    http = TestBed.get(CppHttp);
-    service = TestBed.get(PCFReferenceDataOffenceService);
+    http = TestBed.inject(CppHttp);
+    service = TestBed.inject(PCFReferenceDataOffenceService);
   });
 
   describe('#searchOffenceTypes', () => {

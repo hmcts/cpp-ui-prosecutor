@@ -13,7 +13,9 @@ export const periodMapSingular = {
   YEAR: 'year'
 };
 
-@Pipe({ name: 'disqualificationPeriod' })
+@Pipe({
+    name: 'disqualificationPeriod',
+})
 export class DisqualificationPeriodPipe implements PipeTransform {
   transform(period: DisqualificationPeriod): string {
     if (period == null) {

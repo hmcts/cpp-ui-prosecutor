@@ -1,20 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OnlinePleaDetailsComponent } from '../online-plea-details.component';
-import {
-  AgePipeModule,
-  DefendantNamePipeModule,
-  EmploymentStatusModule,
-  FormatAddressPipeModule,
-  IfEmptyPipeModule,
-  PleaStatusPipeModule,
-  SjpCurrencyPipeModule,
-  YesNoPipeModule
-} from '../../../../shared/pipes';
-import { PdkGridModule } from '@cpp/pdk';
-import { CommonModule } from '@angular/common';
 import { By } from '@angular/platform-browser';
-import { Component, Pipe, PipeTransform } from '@angular/core';
-import { DateOfBirthComponent } from './../../../../shared/date-of-birth/date-of-birth.component';
+import { Component } from '@angular/core';
 import { transformOnlinePleaToUiModel } from '../../online-plea-utils';
 import {
   MOCK_CASE,
@@ -22,34 +9,25 @@ import {
   MOCK_OFFENCES,
   MOCK_ONLINE_PLEA_DETAIL
 } from './../../../__tests__/test-mock-data';
-import { MockBreadcrumbLinksComponent } from './../../../../shared/mock-components/mock-breadcrumb-links.component';
 import { Case } from './../../../../contexts/sjp';
+import { reducers } from '../../../../core/reducers';
+import { provideStore } from '@ngrx/store';
+import { CaseHeaderBadgeContainer } from '../../../common/case-header-badge/case-header-badge.container';
 
 describe('OnlinePleaComponent', () => {
   let fixture: ComponentFixture<OnlinePleaDetailsComponent>;
   const mockOnlinePleas = transformOnlinePleaToUiModel(MOCK_ONLINE_PLEA_DETAIL.pleas);
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        DateOfBirthComponent,
-        OnlinePleaDetailsComponent,
-        MockFormatDatePipe,
-        MockCaseHeaderBadgeContainer,
-        MockBreadcrumbLinksComponent
-      ],
-      imports: [
-        CommonModule,
-        PdkGridModule,
-        DefendantNamePipeModule,
-        FormatAddressPipeModule,
-        YesNoPipeModule,
-        IfEmptyPipeModule,
-        SjpCurrencyPipeModule,
-        EmploymentStatusModule,
-        PleaStatusPipeModule,
-        AgePipeModule
-      ],
+      providers: [provideStore(reducers, { runtimeChecks: {} })],
       teardown: { destroyAfterEach: false }
+    }).overrideComponent(OnlinePleaDetailsComponent, {
+      remove: {
+        imports: [CaseHeaderBadgeContainer]
+      },
+      add: {
+        imports: [MockCaseHeaderBadgeContainer]
+      }
     });
     fixture = TestBed.createComponent(OnlinePleaDetailsComponent);
   });
@@ -95,16 +73,6 @@ describe('OnlinePleaComponent', () => {
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
-
-  @Pipe({
-    name: 'formatDate'
-  })
-  class MockFormatDatePipe implements PipeTransform {
-    transform(value: any) {
-      return `formatted ${value}`;
-    }
-  }
-
   @Component({
     selector: 'case-header-badge-container',
     template: `

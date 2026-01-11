@@ -1,8 +1,7 @@
 import { CasesMissingSjpNoticesGuard } from '../cases-missing-sjp-notices.guard';
-import { State } from '../../reducers';
-import { Store, StoreModule } from '@ngrx/store';
+import { reducers, State } from '../../reducers';
+import { provideStore, Store } from '@ngrx/store';
 import { TestBed } from '@angular/core/testing';
-import { casesMissingSjpNoticesReducer } from '../cases-missing-sjp-notices.reducer';
 import { CaseSummary, DefendantSummary, SjpService } from '../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
@@ -19,9 +18,8 @@ describe('CasesMissingSjpNoticeGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      declarations: [],
-      imports: [StoreModule.forRoot(casesMissingSjpNoticesReducer, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         CasesMissingSjpNoticesGuard,
         {
           provide: SjpService,
@@ -39,8 +37,8 @@ describe('CasesMissingSjpNoticeGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    casesMissingSjpNoticeGuard = TestBed.get(CasesMissingSjpNoticesGuard);
-    store = TestBed.get(Store);
+    casesMissingSjpNoticeGuard = TestBed.inject(CasesMissingSjpNoticesGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
@@ -23,8 +23,8 @@ describe('CaseNotesGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         CaseNotesGuard,
         {
           provide: SjpService,
@@ -42,8 +42,8 @@ describe('CaseNotesGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(CaseNotesGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(CaseNotesGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 

@@ -1,9 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CaseDetails, CaseSummary, DefendantSummary } from '../../../contexts/sjp';
 import { CasesMissingSjpNoticesComponent } from '../cases-missing-sjp-notices.component';
-import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
 import { Component, Input } from '@angular/core';
-import { MockModule } from '../../../shared/mock-components/mock.module';
 
 describe('CasesMissingSjpNoticesComponent', () => {
   let fixture: ComponentFixture<CasesMissingSjpNoticesComponent>;
@@ -45,8 +43,7 @@ describe('CasesMissingSjpNoticesComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [CasesMissingSjpNoticesComponent, MockListCasesMissingSjpNoticesComponent],
-        imports: [PdkCoreModule, PdkGridModule, MockModule],
+        imports: [MockListCasesMissingSjpNoticesComponent, CasesMissingSjpNoticesComponent],
         teardown: { destroyAfterEach: false }
       });
       fixture = TestBed.createComponent(CasesMissingSjpNoticesComponent);

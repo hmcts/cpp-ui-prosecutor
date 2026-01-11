@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
+import { ControlContainer, FormsModule, NgForm } from '@angular/forms';
+import { PdkFormFieldComponent, PdkForm, PdkDateInput } from '@cpp/pdk';
+import { MaxDaysDirective } from './max-days.directive';
 
 export interface InputValues {
   fromDate: string;
@@ -26,7 +28,8 @@ export interface InputValues {
       >
       </pdk-date-input>
     </pdk-form-field>
-  `
+  `,
+  imports: [PdkFormFieldComponent, FormsModule, PdkForm, PdkDateInput, MaxDaysDirective]
 })
 export class FromToDatesComponent implements OnInit {
   maxDateErrorMessage = [

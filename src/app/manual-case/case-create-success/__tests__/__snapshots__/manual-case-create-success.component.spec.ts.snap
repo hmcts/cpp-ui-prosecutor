@@ -5,6 +5,7 @@ exports[`Manual case create success should render the component 1`] = `
   caseDetails={[Function Object]}
 >
   <pdk-grid
+    class="govuk-!-margin-top-3"
     container=""
     pdk-margin-top="3"
   >
@@ -30,12 +31,13 @@ exports[`Manual case create success should render the component 1`] = `
                 class="govuk-body-l"
               >
                 <p
+                  class="govuk-!-margin-bottom-4"
                   pdk-margin-bottom="4"
                   pdk-typography="body-lead"
                 >
                 </p>
                 <p
-                  class="bold"
+                  class="bold govuk-!-margin-bottom-5"
                   data-role="prosecutor-case-reference"
                   pdk-margin-bottom="5"
                   pdk-typography="heading-xlarge"

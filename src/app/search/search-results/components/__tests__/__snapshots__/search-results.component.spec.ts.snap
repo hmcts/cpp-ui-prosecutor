@@ -6,7 +6,46 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
 >
   <search-results>
     <breadcrumb-links>
-      breadcrumb-links
+      <nav
+        aria-label="Breadcrumb"
+      >
+        <ol
+          class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+          pdk-breadcrumb-list=""
+          pdk-margin-top="4"
+        >
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <a
+              class="govuk-breadcrumbs__link"
+              data-breadcrumb="home"
+              href="javascript: void(0)"
+              pdk-breadcrumb=""
+            >
+               Home 
+            </a>
+          </li>
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <div
+              aria-current="page"
+            >
+               Search for a case 
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+        pdk-margin-vertical="6"
+        pdk-typography="heading-xlarge"
+      >
+         Search for a case 
+      </h1>
     </breadcrumb-links>
     <search-input>
       <label
@@ -83,103 +122,383 @@ exports[`SearchResultsComponent should compile correctly 1`] = `
       </pdk-grid>
     </search-input>
     <list-search-results>
-       [
-    {
-      "caseId": "caseId1",
-      "urn": "TFL26168N21T5",
-      "assigned": false,
-      "completed": true,
-      "enterpriseId": "Z8QG1JR7CMTD",
-      "prosecutingAuthority": "TFL",
-      "postingDate": "2019-01-27",
-      "defendant": {
-        "firstName": "Guy",
-        "lastName": "Smith",
-        "dateOfBirth": "1957-03-11",
-        "dobChanged": false,
-        "nameChanged": false,
-        "gender": "male",
-        "title": "alpha",
-        "outdated": true,
-        "address": {
-          "address1": "Hogwards",
-          "postcode": "E1"
-        },
-        "addressChanged": false,
-        "contactDetails": {}
-      },
-      "status": "COMPLETED",
-      "listedInCriminalCourts": false
-    },
-    {
-      "caseId": "caseId2",
-      "urn": "TVL26116MZMMI",
-      "assigned": false,
-      "completed": true,
-      "enterpriseId": "Y91FYLC8SCJJ",
-      "prosecutingAuthority": "TVL",
-      "postingDate": "2019-01-27",
-      "defendant": {
-        "firstName": "Jonti Jonti Jonti",
-        "lastName": "Smith",
-        "dateOfBirth": "1985-03-04",
-        "outdated": false
-      },
-      "status": "COMPLETED",
-      "listedInCriminalCourts": false
-    },
-    {
-      "caseId": "caseId3",
-      "urn": "TFL84598WRMSZ",
-      "assigned": false,
-      "completed": false,
-      "enterpriseId": "JZPFWZ26GWBF",
-      "prosecutingAuthority": "TFL",
-      "postingDate": "2019-01-28",
-      "defendant": {
-        "firstName": "Murad",
-        "lastName": "Smith",
-        "dateOfBirth": "1989-03-04",
-        "outdated": false
-      },
-      "status": "NO_PLEA_RECEIVED",
-      "listedInCriminalCourts": false
-    },
-    {
-      "caseId": "caseId4",
-      "urn": "TFL92613WXH4V",
-      "assigned": false,
-      "completed": false,
-      "enterpriseId": "7XQLP31VP93C",
-      "prosecutingAuthority": "TFL",
-      "postingDate": "2019-01-28",
-      "defendant": {
-        "firstName": "Petru",
-        "lastName": "Smith",
-        "dateOfBirth": "1949-03-14",
-        "outdated": false
-      },
-      "status": "NO_PLEA_RECEIVED_READY_FOR_DECISION",
-      "listedInCriminalCourts": false
-    },
-    {
-      "caseId": "caseId5",
-      "urn": "TVL26120QYR99",
-      "assigned": false,
-      "completed": true,
-      "enterpriseId": "8PQ1KQYQK8ZC",
-      "prosecutingAuthority": "TVL",
-      "postingDate": "2019-01-27",
-      "defendant": {
-        "firstName": "Sartaaj Sartaaj Sartaaj",
-        "lastName": "Smith",
-        "dateOfBirth": "1981-03-05",
-        "outdated": false
-      },
-      "status": "COMPLETED",
-      "listedInCriminalCourts": false
-    }
-  ] 
+      <pdk-inset-text
+        class="govuk-!-margin-top-6"
+        pdk-margin-top="6"
+      >
+        <div
+          class="govuk-inset-text"
+        >
+           5 
+          <span>
+            results
+          </span>
+           available 
+          <pdk-warning-text
+            class="govuk-!-margin-top-2"
+            pdk-margin-top="2"
+          >
+            <div
+              class="govuk-warning-text"
+            >
+              <span
+                aria-hidden="true"
+                class="govuk-warning-text__icon"
+              >
+                !
+              </span>
+              <strong
+                class="govuk-warning-text__text"
+              >
+                <span
+                  class="govuk-visually-hidden"
+                  pdk-visually-hidden=""
+                >
+                  Warning
+                </span>
+                Cases with updated defendant name 
+              </strong>
+            </div>
+          </pdk-warning-text>
+        </div>
+      </pdk-inset-text>
+      <table
+        class="govuk-table"
+        pdk-table=""
+      >
+        <thead
+          class="govuk-table__head"
+          pdk-table-head=""
+        >
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Case reference number
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Case status
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Prosecutor
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Date of birth
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              Notice served
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="govuk-table__body"
+          pdk-table-body=""
+        >
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              <pdk-warning-text
+                class="govuk-!-margin-top-5"
+                pdk-margin-top="5"
+              >
+                <div
+                  class="govuk-warning-text"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="govuk-warning-text__icon"
+                  >
+                    !
+                  </span>
+                  <strong
+                    class="govuk-warning-text__text"
+                  >
+                    <span
+                      class="govuk-visually-hidden"
+                      pdk-visually-hidden=""
+                    >
+                      Warning
+                    </span>
+                    <a
+                      class="govuk-link"
+                      href="/"
+                      pdk-link=""
+                    >
+                      <b>
+                        SMITH Guy
+                      </b>
+                    </a>
+                  </strong>
+                </div>
+              </pdk-warning-text>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-role="urn"
+              pdk-table-cell=""
+            >
+              TFL26168N21T5
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+               Completed 
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              TFL
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              11 Mar 1957
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              27 Jan 2019
+            </td>
+          </tr>
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              <a
+                class="govuk-link"
+                href="/"
+                pdk-link=""
+              >
+                <b>
+                  SMITH Jonti Jonti Jonti
+                </b>
+              </a>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-role="urn"
+              pdk-table-cell=""
+            >
+              TVL26116MZMMI
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+               Completed 
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              TVL
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              04 Mar 1985
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              27 Jan 2019
+            </td>
+          </tr>
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              <a
+                class="govuk-link"
+                href="/"
+                pdk-link=""
+              >
+                <b>
+                  SMITH Murad
+                </b>
+              </a>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-role="urn"
+              pdk-table-cell=""
+            >
+              TFL84598WRMSZ
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+               No plea received 
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              TFL
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              04 Mar 1989
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              28 Jan 2019
+            </td>
+          </tr>
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              <a
+                class="govuk-link"
+                href="/"
+                pdk-link=""
+              >
+                <b>
+                  SMITH Petru
+                </b>
+              </a>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-role="urn"
+              pdk-table-cell=""
+            >
+              TFL92613WXH4V
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+               No plea received - ready for decision 
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              TFL
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              14 Mar 1949
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              28 Jan 2019
+            </td>
+          </tr>
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              <a
+                class="govuk-link"
+                href="/"
+                pdk-link=""
+              >
+                <b>
+                  SMITH Sartaaj Sartaaj Sartaaj
+                </b>
+              </a>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-role="urn"
+              pdk-table-cell=""
+            >
+              TVL26120QYR99
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+               Completed 
+            </td>
+            <td
+              class="govuk-table__cell"
+              pdk-table-cell=""
+            >
+              TVL
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              05 Mar 1981
+            </td>
+            <td
+              class="no-wrap govuk-table__cell"
+              pdk-table-cell=""
+            >
+              27 Jan 2019
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </list-search-results>
   </search-results>
 </search-results-test>

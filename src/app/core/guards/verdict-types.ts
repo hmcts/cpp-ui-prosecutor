@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CanActivate } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
@@ -9,9 +9,14 @@ import { LoadVerdictTypesSuccess } from '../actions/pcf-reference-data.actions';
 import { getVerdictTypes } from '../selectors';
 import { ReferenceDataService } from '../../contexts/reference-data';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class VerdictTypesGuard implements CanActivate {
-  constructor(private store: Store<State>, private referenceData: ReferenceDataService) {}
+  private store = inject<Store<State>>(Store);
+  private referenceData = inject(ReferenceDataService);
+
+  constructor() {}
 
   hasVerdictTypesInStore(): Observable<boolean> {
     return this.store.pipe(

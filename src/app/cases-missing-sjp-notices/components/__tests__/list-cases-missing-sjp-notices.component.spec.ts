@@ -2,8 +2,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ListCasesMissingSjpNoticesComponent } from '../list-cases-missing-sjp-notices.component';
 import { CaseSummary, DefendantSummary } from '../../../contexts/sjp';
-import { PdkCoreModule, PdkTableModule } from '@cpp/pdk';
-import { DefendantNamePipeModule, FormatDatePipeModule } from '../../../shared/pipes';
 
 describe('ListCasesMissingSjpNotices.ComponentComponent', () => {
   let component: ListCasesMissingSjpNoticesComponent;
@@ -45,8 +43,7 @@ describe('ListCasesMissingSjpNotices.ComponentComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [ListCasesMissingSjpNoticesComponent],
-        imports: [PdkCoreModule, PdkTableModule, FormatDatePipeModule, DefendantNamePipeModule],
+        imports: [ListCasesMissingSjpNoticesComponent],
         teardown: { destroyAfterEach: false }
       });
       fixture = TestBed.createComponent(ListCasesMissingSjpNoticesComponent);

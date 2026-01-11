@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PdkCoreModule, PdkWarningTextModule } from '@cpp/pdk';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
 import { Component } from '@angular/core';
 import { Offence } from '../../../../contexts/sjp';
@@ -13,12 +12,7 @@ describe('DefendantOffenceWarnings', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        TestDefendantOffenceWarningsComponent,
-        DefendantOffenceWarningsComponent,
-        MockOffenceWarningsComponent
-      ],
-      imports: [PdkCoreModule, PdkWarningTextModule],
+      imports: [TestDefendantOffenceWarningsComponent, MockOffenceWarningsComponent, DefendantOffenceWarningsComponent],
       teardown: { destroyAfterEach: false }
     });
 
@@ -53,7 +47,8 @@ describe('DefendantOffenceWarnings', () => {
     selector: 'defendant-offence-warnings-test',
     template: `
       <defendant-offence-warnings [offence]="offence"></defendant-offence-warnings>
-    `
+    `,
+    imports: [DefendantOffenceWarningsComponent]
   })
   class TestDefendantOffenceWarningsComponent {
     offence: Offence;
@@ -63,7 +58,8 @@ describe('DefendantOffenceWarnings', () => {
     selector: 'offence-warning',
     template: `
       <ng-content></ng-content>
-    `
+    `,
+    imports: [DefendantOffenceWarningsComponent]
   })
   class MockOffenceWarningsComponent {}
 });

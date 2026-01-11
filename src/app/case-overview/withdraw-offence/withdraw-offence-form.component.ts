@@ -3,6 +3,20 @@ import { NgForm } from '@angular/forms';
 import { Offence, WithdrawOffenceParam } from '../../contexts/sjp';
 import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { Option } from '../../shared/interfaces';
+import {
+  PdkBadge,
+  PdkFormFieldComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkCore,
+  PdkForm,
+  PdkButtonDirective
+} from '@cpp/pdk';
+import { OffenceWithdrawalComponent } from './components/offence-withdrawal/offence-withdrawal.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgPlural, NgPluralCase } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 interface FormValues {
   [key: string]: {
@@ -16,44 +30,52 @@ interface FormValues {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <form pdk-form (errors)="errors.emit($event)" (validSubmit)="mapFormValues(form.value)" novalidate>
-      <div *ngIf="offences.length > 1">
+      @if (offences.length > 1) {
+      <div>
         <h1 pdk-typography="heading-medium">
           <span>Would you like to withdraw the case (all offences)?</span>
         </h1>
-        <div *ngIf="caseWithdrawnStatus" pdk-margin-vertical="5">
+        @if (caseWithdrawnStatus) {
+        <div pdk-margin-vertical="5">
           <pdk-badge>
             Case Pending Withdrawal
           </pdk-badge>
         </div>
+        }
         <pdk-form-field>
-          <pdk-radio-group inline #case="ngModel" [(ngModel)]="caseWithdrawn" name="case.withdraw" required>
+          <pdk-radio-group
+            [inline]="true"
+            #case="ngModel"
+            [(ngModel)]="caseWithdrawn"
+            name="case.withdraw"
+            [required]="true"
+          >
             <pdk-radio-button [value]="true">Yes</pdk-radio-button>
             <pdk-radio-button [value]="false">No</pdk-radio-button>
           </pdk-radio-group>
-
-          <ng-container *ngIf="case.value">
-            <pdk-form-field
-              pdk-margin-top="5"
-              labelHidden="true"
-              label="Reason for withdrawing"
-              labelType="small"
-              [errorMessages]="errorMessages"
+          @if (case.value) {
+          <pdk-form-field
+            pdk-margin-top="5"
+            labelHidden="true"
+            label="Reason for withdrawing"
+            labelType="small"
+            [errorMessages]="errorMessages"
+          >
+            <pdk-radio-group
+              [ngModel]="caseReason"
+              name="case.withdrawalRequestReasonId"
+              [options]="offenceWithdrawalReasons"
+              [required]="true"
             >
-              <pdk-radio-group
-                [ngModel]="caseReason"
-                name="case.withdrawalRequestReasonId"
-                [options]="offenceWithdrawalReasons"
-                required
-              >
-              </pdk-radio-group>
-            </pdk-form-field>
-          </ng-container>
+            </pdk-radio-group>
+          </pdk-form-field>
+          }
         </pdk-form-field>
-
         <h1 pdk-typography="heading-medium" pdk-margin-vertical="5">
           <span>Or</span>
         </h1>
       </div>
+      }
 
       <h1 pdk-typography="heading-medium" pdk-margin-top="5">
         <span [ngPlural]="offences.length">
@@ -62,7 +84,8 @@ interface FormValues {
         </span>
       </h1>
 
-      <div *ngFor="let offence of offences; let i = index">
+      @for (offence of offences; track offence.id; let i = $index) {
+      <div>
         <offence-withdrawal-component
           [index]="offences.length > 1 ? i + 1 : 0"
           [offence]="offence"
@@ -70,6 +93,7 @@ interface FormValues {
           [offenceWithdrawalReasons]="offenceWithdrawalReasons"
         ></offence-withdrawal-component>
       </div>
+      }
 
       <div pdk-margin-top="5" pdk-margin-bottom="0">
         <button pdk-button type="submit" [disabled]="this.form.untouched">Confirm</button>
@@ -87,7 +111,23 @@ interface FormValues {
         </div>
       </div>
     </form>
-  `
+  `,
+  imports: [
+    PdkCore,
+    PdkForm,
+    PdkBadge,
+    PdkFormFieldComponent,
+    PdkRadioGroupComponent,
+    FormsModule,
+    PdkRadioButtonComponent,
+    OffenceWithdrawalComponent,
+    TranslateModule,
+    NgPlural,
+    NgPluralCase,
+    PdkButtonDirective,
+    RouterLink,
+    PdkButtonDirective
+  ]
 })
 export class WithdrawOffenceFormComponent implements OnInit {
   public readonly errorMessages = [{ rule: 'required', message: 'Choose a reason' }];
@@ -100,7 +140,7 @@ export class WithdrawOffenceFormComponent implements OnInit {
   @Input() caseWithdrawnStatus: boolean;
   @Input() offences: Offence[];
   @Input() offenceWithdrawalReasons: Option[];
-  @Output() errors = new EventEmitter<ValidationError[]>();
+  @Output() errors = new EventEmitter<ValidationError[] | any>();
   @Output() submitOffenceWithdrawals = new EventEmitter<WithdrawOffenceParam[]>();
 
   ngOnInit(): void {

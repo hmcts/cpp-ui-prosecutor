@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
 import { OffenceWithdrawalReason } from './reference-data.interface';
@@ -24,11 +24,14 @@ import {
 import { MotReason } from '../../core/model/reference-data-interfaces/mot-reason';
 import { VerdictType } from '../../core/model/reference-data-interfaces/verdicts';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ReferenceDataService {
+  private http = inject(CppHttp);
+
   private readonly query = '/referencedata-query-api/query/api/rest/referencedata';
 
-  constructor(private http: CppHttp) {}
+
+  constructor() {}
 
   getOffenceWithdrawalReasons(): Observable<OffenceWithdrawalReason[]> {
     return this.http

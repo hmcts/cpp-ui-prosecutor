@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PdkCoreModule, PdkNotificationBannerModule } from '@cpp/pdk';
 import { DefendantDetailsChangeNotificationBannerComponent } from '../defendant-details-change-notification-banner.component';
 import { DefendantDetailUpdateRequest, LegalEntityDetails, PersonalDetails } from '../../../../contexts/sjp';
 import { MOCK_CASE, MOCK_CASE_LEGAL_ENTITY_DEFENDANT } from '../../../../case-overview/__tests__/test-mock-data';
@@ -42,11 +40,10 @@ describe('DefendantDetailsChangeNotificationBannerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        DefendantDetailsChangeNotificationBannerComponent,
-        MockDefendantDetailsChangeNotificationBannerComponent
-      ],
-      imports: [PdkNotificationBannerModule, PdkCoreModule]
+      imports: [
+        MockDefendantDetailsChangeNotificationBannerComponent,
+        DefendantDetailsChangeNotificationBannerComponent
+      ]
     });
   });
 
@@ -171,7 +168,8 @@ describe('DefendantDetailsChangeNotificationBannerComponent', () => {
         [legalEntityDetails]="legalEntityDetails"
         [defendantDetailUpdateRequest]="defendantDetailUpdateRequest"
       ></defendant-details-change-notification-banner>
-    `
+    `,
+    imports: [DefendantDetailsChangeNotificationBannerComponent]
   })
   class MockDefendantDetailsChangeNotificationBannerComponent {
     @Input() personalDetails: PersonalDetails;

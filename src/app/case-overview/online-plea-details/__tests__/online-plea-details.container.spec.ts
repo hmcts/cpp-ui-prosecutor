@@ -1,10 +1,8 @@
 import { OnlinePleaDetailsContainer } from '../online-plea-details.container';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store } from '@ngrx/store';
 import { FeatureState } from '../../case-overview.selectors';
 import { Component, Input } from '@angular/core';
 import { MOCK_CASE, MOCK_ONLINE_PLEA_DETAIL } from '../../__tests__/test-mock-data';
-import { MockModule } from '../../../shared/mock-components/mock.module';
 import { Case, FrequencyOptions, OnlinePlea } from '../../../contexts/sjp';
 import { LoadCaseSuccess, LoadProsecutorByUserGroupSuccess } from '../../../core';
 import { LoadOnlinePleaSuccess } from '../../case-overview.action';
@@ -12,7 +10,11 @@ import { OnlinePleaUi } from '../online-plea-interface';
 import { transformOnlinePleaToUiModel } from '../online-plea-utils';
 import { UserGroup } from '@cpp/users-groups';
 import { Prosecutor } from '@cpp/reference-data';
+import { ActivatedRoute } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
+import { Store } from '@ngrx/store';
+import { JsonPipe } from '@angular/common';
+import { OnlinePleaDetailsComponent } from '../components/online-plea-details.component';
 
 describe('OnlinePleaDetailsContainer', () => {
   let fixture: ComponentFixture<OnlinePleaDetailsContainer>;
@@ -20,19 +22,38 @@ describe('OnlinePleaDetailsContainer', () => {
   const mockOnlinePleas = transformOnlinePleaToUiModel(MOCK_ONLINE_PLEA_DETAIL.pleas);
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OnlinePleaDetailsContainer, MockOnlinePleaDetailsComponent],
-      imports: [MockModule],
-      teardown: { destroyAfterEach: false },
-      providers: provideMockStore({
-        initialState: {
-          caseOverview: {
-            onlinePlea: MOCK_ONLINE_PLEA_DETAIL
+      providers: [
+        provideMockStore({
+          initialState: {
+            caseOverview: {
+              onlinePlea: MOCK_ONLINE_PLEA_DETAIL
+            }
+          }
+        }),
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              params: {
+                id: '123'
+              }
+            }
           }
         }
+      ],
+      teardown: { destroyAfterEach: false }
+    })
+      .overrideComponent(OnlinePleaDetailsContainer, {
+        remove: {
+          imports: [OnlinePleaDetailsComponent]
+        },
+        add: {
+          imports: [MockOnlinePleaDetailsComponent]
+        }
       })
-    });
+      .compileComponents();
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
     fixture = TestBed.createComponent(OnlinePleaDetailsContainer);
     store.dispatch(new LoadCaseSuccess(MOCK_CASE));
     store.dispatch(new LoadOnlinePleaSuccess(MOCK_ONLINE_PLEA_DETAIL));
@@ -46,7 +67,8 @@ describe('OnlinePleaDetailsContainer', () => {
       <div>{{ kase | json }}</div>
       <div>{{ onlinePleas | json }}</div>
       <div>{{ userGroups | json }}</div>
-    `
+    `,
+    imports: [JsonPipe, MockOnlinePleaDetailsComponent]
   })
   class MockOnlinePleaDetailsComponent {
     @Input() kase: Case;

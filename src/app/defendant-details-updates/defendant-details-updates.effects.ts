@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
@@ -9,6 +9,9 @@ import { DefendantDetailsUpdatesAction, DefendantDetailsUpdatesActionType } from
 
 @Injectable()
 export class DefendantDetailsUpdatesEffects {
+  private actions$ = inject(Actions);
+  private sjpService = inject(SjpService);
+
   defendantDetailsUpdates$: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType<DefendantDetailsUpdatesAction>(DefendantDetailsUpdatesActionType.ACKNOWLEDGE_DEFENDANT_DETAILS_UPDATES),
@@ -30,5 +33,5 @@ export class DefendantDetailsUpdatesEffects {
     )
   );
 
-  constructor(private actions$: Actions, private sjpService: SjpService) {}
+  constructor() {}
 }

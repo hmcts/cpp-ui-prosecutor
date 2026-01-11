@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { cold } from 'jasmine-marbles';
-import { CommonModule } from '@angular/common';
-import { CppHttp, HttpModule } from '@cpp/core';
+import { CppHttp, provideCppCoreHttpServices } from '@cpp/core';
 import { SjpService } from '../sjp.service';
 import { Case, CaseDetails, SearchResult, Region } from '../sjp.interface';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/test-mock-data';
@@ -71,8 +70,8 @@ describe('SjpService', () => {
     get = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [HttpModule, CommonModule],
       providers: [
+        provideCppCoreHttpServices(),
         SjpService,
         {
           provide: CppHttp,

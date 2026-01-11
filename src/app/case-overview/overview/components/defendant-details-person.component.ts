@@ -1,10 +1,15 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { PersonalDetails } from '../../../contexts/sjp';
+import { PdkCore, PdkGrid } from "@cpp/pdk";
+import { DateOfBirthComponent } from "../../../shared/date-of-birth/date-of-birth.component";
+import { DefendantNamePipe } from '../../../shared/pipes/defendant-name/defendant-name.pipe';
+import { FormatAddressPipe } from '../../../shared/pipes/format-address/format-address.pipe';
+import { IfEmptyPipe } from '../../../shared/pipes/if-empty/if-empty.pipe';
 
 @Component({
-  selector: 'defendant-details-person',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'defendant-details-person',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <h4 pdk-typography="heading-medium">Defendant details</h4>
 
     <pdk-grid container>
@@ -110,7 +115,8 @@ import { PersonalDetails } from '../../../contexts/sjp';
         </div>
       </pdk-grid>
     </pdk-grid>
-  `
+  `,
+    imports: [PdkCore, PdkGrid, DateOfBirthComponent, DefendantNamePipe, FormatAddressPipe, IfEmptyPipe]
 })
 export class DefendantDetailsPersonComponent {
   @Input() personDetails?: PersonalDetails;

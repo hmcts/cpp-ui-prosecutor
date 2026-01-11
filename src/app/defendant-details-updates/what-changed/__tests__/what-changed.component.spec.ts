@@ -6,9 +6,9 @@ describe('WhatChangedComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WhatChangedComponent],
-      teardown: { destroyAfterEach: false }
-    });
+    imports: [WhatChangedComponent],
+    teardown: { destroyAfterEach: false }
+});
 
     fixture = TestBed.createComponent(WhatChangedComponent);
   });

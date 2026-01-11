@@ -1,8 +1,8 @@
 import { Actions } from '@ngrx/effects';
+import { provideMockActions } from '@ngrx/effects/testing';
 import { TestBed } from '@angular/core/testing';
 import { cold, hot } from 'jasmine-marbles';
-import { Store, StoreModule } from '@ngrx/store';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideStore, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CaseOverviewEffects } from '../case-overview.effects';
 import {
@@ -21,17 +21,6 @@ import { reducers, State } from '../../reducers';
 import { LoadCaseSuccess } from '../../core/actions';
 import { caseOverviewReducer } from '../case-overview.reducer';
 
-export class TestActions extends Actions {
-  set stream(source: Observable<any>) {
-    // eslint-disable-next-line
-    this.source = source;
-  }
-}
-
-export function getActions() {
-  return new TestActions();
-}
-
 describe('Case Overview Effects', () => {
   const withdrawOffenceParam = {
     withdrawalRequestsStatus: [
@@ -44,7 +33,7 @@ describe('Case Overview Effects', () => {
   const datesToAvoid = 'datesToAvoid';
 
   let effects: CaseOverviewEffects;
-  let actions$: TestActions;
+  let actions$: Observable<any> = new Observable();
   let store: Store<State>;
 
   let getCaseById: jest.Mock;
@@ -60,9 +49,8 @@ describe('Case Overview Effects', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        StoreModule.forRoot(
+      providers: [
+        provideStore(
           {
             ...reducers,
             router: (state, routerAction) => ({
@@ -75,10 +63,9 @@ describe('Case Overview Effects', () => {
           {
             runtimeChecks: {}
           }
-        )
-      ],
-      providers: [
+        ),
         CaseOverviewEffects,
+        provideMockActions(() => actions$),
         {
           provide: Router,
           useValue: {
@@ -92,26 +79,21 @@ describe('Case Overview Effects', () => {
             withdrawOffences,
             submitDatesToAvoid
           }
-        },
-        {
-          provide: Actions,
-          useFactory: getActions
-        },
-        RouterTestingModule
+        }
       ],
       teardown: { destroyAfterEach: false }
     });
 
-    effects = TestBed.get(CaseOverviewEffects);
-    actions$ = TestBed.get(Actions);
-    store = TestBed.get(Store);
+    effects = TestBed.inject(CaseOverviewEffects);
+    actions$ = TestBed.inject(Actions);
+    store = TestBed.inject(Store);
     store.dispatch(new LoadCaseSuccess(MOCK_CASE));
   });
 
   describe('withdrawOffences', () => {
     beforeEach(() => {
       action = new WithdrawOffences(withdrawOffenceParam);
-      actions$.stream = hot('-a', { a: action });
+      actions$ = hot('-a', { a: action });
     });
 
     it('should respond with success', () => {
@@ -170,7 +152,7 @@ describe('Case Overview Effects', () => {
   describe('datesToAvoid', () => {
     it('should respond with success', () => {
       action = new SubmitDatesToAvoid(datesToAvoid);
-      actions$.stream = hot('-a', { a: action });
+      actions$ = hot('-a', { a: action });
 
       const expected$ = cold('----(bc)', {
         b: new LoadCaseSuccess(MOCK_CASE),
@@ -194,7 +176,7 @@ describe('Case Overview Effects', () => {
       };
 
       action = new SubmitDatesToAvoid(datesToAvoid);
-      actions$.stream = hot('-a', { a: action });
+      actions$ = hot('-a', { a: action });
 
       const expected$ = cold(
         '---(bc)',

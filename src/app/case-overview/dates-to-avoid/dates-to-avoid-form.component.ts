@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Case } from '../../contexts/sjp';
+import { PdkButtonDirective, PdkCore, PdkForm, PdkFormFieldComponent, PdkGridComponent, PdkInput, PdkResizeDirective, PdkTextInput } from "@cpp/pdk";
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'dates-to-avoid-form',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'dates-to-avoid-form',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <pdk-grid container>
       <pdk-grid two-thirds>
         <form pdk-form (validSubmit)="formSubmit.emit(form.value.datesToAvoid)" #form="ngForm">
@@ -33,7 +36,8 @@ import { Case } from '../../contexts/sjp';
         </form>
       </pdk-grid>
     </pdk-grid>
-  `
+  `,
+    imports: [PdkGridComponent, PdkFormFieldComponent, FormsModule, PdkCore, PdkForm, PdkButtonDirective, PdkTextInput, PdkInput, PdkResizeDirective, RouterLink]
 })
 export class DatesToAvoidFormComponent {
   public readonly errorMessages = [

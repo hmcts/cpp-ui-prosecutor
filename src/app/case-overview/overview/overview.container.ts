@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import {
@@ -11,11 +11,13 @@ import {
 import { Case, CaseDecision, Defendant, Offence, CaseNotes } from '../../contexts/sjp';
 import { ResetCaseOverviewState } from '../case-overview.action';
 import { getCase, getDefendant, getOffences } from '../../core/selectors';
+import { OverviewComponent } from "./components";
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'case-overview-container',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'case-overview-container',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <case-overview
       [kase]="kase$ | async"
       [defendant]="defendant$ | async"
@@ -25,9 +27,12 @@ import { getCase, getDefendant, getOffences } from '../../core/selectors';
       [caseDecisions]="caseDecisions$ | async"
       [caseNotes]="caseNotes$ | async"
     ></case-overview>
-  `
+  `,
+    imports: [OverviewComponent, AsyncPipe]
 })
 export class OverviewContainer implements OnDestroy {
+  private store = inject<Store<FeatureState>>(Store);
+
   kase$: Observable<Case>;
   defendant$: Observable<Defendant>;
   offences$: Observable<Offence[]>;
@@ -36,7 +41,7 @@ export class OverviewContainer implements OnDestroy {
   caseDecisions$: Observable<CaseDecision[]>;
   caseNotes$: Observable<CaseNotes>;
 
-  constructor(private store: Store<FeatureState>) {
+  constructor() {
     this.kase$ = this.store.pipe(select(getCase));
     this.defendant$ = this.store.pipe(select(getDefendant));
     this.offences$ = this.store.pipe(select(getOffences));

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PdkFormGroupComponent, PdkFormGroupDirective, PdkTextColorDirective, PdkTypographyDirective } from '@cpp/pdk';
 
 @Component({
   selector: 'offence-warning',
@@ -10,6 +11,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <ng-content></ng-content>
       </div>
     </pdk-form-group>
-  `
+  `,
+  imports: [PdkFormGroupComponent, PdkTypographyDirective, PdkTextColorDirective, PdkFormGroupDirective]
 })
 export class OffenceWarningComponent {}

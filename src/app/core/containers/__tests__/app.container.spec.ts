@@ -1,19 +1,25 @@
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { AppContainer } from '../app.container';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppConfigService } from '../../../config';
-import { Store, StoreModule } from '@ngrx/store';
-import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, RouteConfigLoadStart, Router } from '@angular/router';
+import { provideStore, Store } from '@ngrx/store';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  PRIMARY_OUTLET,
+  provideRouter,
+  RouteConfigLoadStart,
+  Router
+} from '@angular/router';
 import { BehaviorSubject, of } from 'rxjs';
 import { ApiError, PendingApiRequest } from '../../actions/api';
 import { Title } from '@angular/platform-browser';
-import { PdkCoreModule } from '@cpp/pdk';
 import { AppRouterContainer } from '../app.router.container';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SystemAnnouncementsService } from '@cpp/users-groups';
-import { ApplicationModule } from '@cpp/application';
 import { reducers } from '../../../reducers';
+import { provideCppCoreHttpServices } from '@cpp/core';
+import { provideCPPApplicationEnvironment } from '@cpp/application';
+import { provideTranslateService, TranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SystemAnnouncementsService } from '@cpp/users-groups';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('App page component', () => {
   window.scrollTo = jest.fn();
@@ -25,78 +31,54 @@ describe('App page component', () => {
   let mockRouterEvent: BehaviorSubject<any>;
   let routeData: BehaviorSubject<{}>;
 
-  beforeEach(() => {
-    mockRouterEvent = new BehaviorSubject<any>({});
-    routeData = new BehaviorSubject<{}>({});
-
-    TestBed.configureTestingModule({
-      declarations: [AppContainer, AppRouterContainer],
-      imports: [
-        CommonModule,
-        PdkCoreModule,
-        ApplicationModule.forRoot({ production: false }),
-        StoreModule.forRoot(reducers, {
-          runtimeChecks: {},
-          initialState: {
-            usersGroups: {
-              userGroups: [
-                {
-                  groupName: 'Court Administrators',
-                  groupId: '*',
-                  description: 'user group'
-                }
-              ],
-              permissionsMap: {}
+  beforeEach(
+    waitForAsync(() => {
+      mockRouterEvent = new BehaviorSubject<any>({});
+      routeData = new BehaviorSubject<{}>({});
+      TestBed.configureTestingModule({
+        imports: [AppContainer, AppRouterContainer],
+        providers: [
+          provideCPPApplicationEnvironment({ production: false }),
+          provideStore(reducers, { runtimeChecks: {} }),
+          provideRouter([]),
+          provideCppCoreHttpServices(),
+          provideHttpClientTesting(),
+          {
+            provide: SystemAnnouncementsService,
+            useValue: {
+              getSystemAnnouncements: jest.fn().mockReturnValue(of({ announcement: undefined }))
             }
-          }
-        }),
-        RouterTestingModule,
-        TranslateModule.forRoot()
-      ],
-      providers: [
-        {
-          provide: Title,
-          useValue: { setTitle }
-        },
-        {
-          provide: AppConfigService,
-          useValue: {
-            cppHomeUrl: 'https://cpp.home.nonlive',
-            getAccountUrl: () => 'path/to/account',
-            getLogoutUrl: () => 'path/to/logout',
-            getBaseUrl: () => 'path/to/home',
-            getAppUrl: () => 'path/to/home'
-          }
-        },
-        {
-          provide: Router,
-          useValue: {
-            events: mockRouterEvent,
-            parseUrl: mockParseUrl
-          }
-        },
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            outlet: PRIMARY_OUTLET,
-            data: routeData
-          }
-        },
-        {
-          provide: SystemAnnouncementsService,
-          useValue: {
-            getSystemAnnouncements: jest.fn().mockReturnValue(of({ announcement: undefined }))
-          }
-        },
-        TranslateService
-      ],
-      schemas: [],
-      teardown: { destroyAfterEach: false }
-    });
+          },
+          { provide: Title, useValue: { getTitle: jest.fn(), setTitle } },
+          {
+            provide: Router,
+            useValue: {
+              events: mockRouterEvent,
+              parseUrl: mockParseUrl
+            }
+          },
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              outlet: PRIMARY_OUTLET,
+              data: routeData
+            }
+          },
+          provideTranslateService({
+            lang: 'en',
+            fallbackLang: 'en',
+            loader: provideTranslateHttpLoader({
+              prefix: 'assets/i18n/',
+              suffix: '.json'
+            })
+          })
+        ]
+      }).compileComponents();
 
-    store = TestBed.get(Store);
-    mockParseUrl.mockReturnValue({ url: 'home' });
-  });
+      store = TestBed.inject(Store);
+      mockParseUrl.mockReturnValue({ url: 'home' });
+    })
+  );
 
   it('should compile correctly', () => {
     fixture = TestBed.createComponent(AppContainer);
@@ -113,7 +95,7 @@ describe('App page component', () => {
   });
 
   it('should check translate service is being called', () => {
-    const translate = TestBed.get(TranslateService);
+    const translate = TestBed.inject(TranslateService);
     const translateSpy = jest.spyOn(translate, 'use');
     fixture = TestBed.createComponent(AppContainer);
     expect(translateSpy).toHaveBeenCalledWith('en');

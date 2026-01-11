@@ -1,14 +1,16 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { State, EthnicityCode, getObservedEthnicities, LoadObservedEthnicitiesAction } from '../../../../core';
-import { AutosuggestLiteComponent, coerceBooleanProperty, FormFieldControl, InputWidth } from '@cpp/pdk';
+import { coerceBooleanProperty, FormFieldControl, InputWidth, PdkAutosuggestLiteComponent } from '@cpp/pdk';
 import { Observable, of, Subject } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'ethnicity-code-auto-suggest',
   templateUrl: './ethnicity-code-auto-suggest.component.html',
+  imports: [PdkAutosuggestLiteComponent, AsyncPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
@@ -23,11 +25,13 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class EthnicityCodeAutoSuggestComponent implements ControlValueAccessor, FormFieldControl, OnInit {
+  private store = inject<Store<State>>(Store);
+
   multi = false;
   searchEthnicityCode$ = new Subject<string>();
   suggestions$: Observable<EthnicityCode[]>;
-  @ViewChild(AutosuggestLiteComponent)
-  autoSuggestLiteRef: AutosuggestLiteComponent<EthnicityCode>;
+  @ViewChild(PdkAutosuggestLiteComponent)
+  autoSuggestLiteRef: PdkAutosuggestLiteComponent<EthnicityCode>;
   @Input()
   suggestionKey: keyof EthnicityCode = 'ethnicityCode';
   @Input() suggestionLabel: keyof EthnicityCode = 'ethnicityDescription';
@@ -70,7 +74,7 @@ export class EthnicityCodeAutoSuggestComponent implements ControlValueAccessor, 
     return this.autoSuggestLiteRef.ngControl;
   }
 
-  constructor(private store: Store<State>) {
+  constructor() {
     this.fetchEthnicity$ = this.store.pipe(
       select(getObservedEthnicities),
       filter(ethnicityCodes => !!ethnicityCodes)

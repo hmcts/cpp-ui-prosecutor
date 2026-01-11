@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -13,7 +13,7 @@ import { select, Store } from '@ngrx/store';
 import { combineLatest, fromEvent, merge, Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, mapTo, mergeMap, startWith } from 'rxjs/operators';
 
-import { HeaderNavItem } from '@cpp/application';
+import { HeaderNavItem, CppApplicationLayoutComponent } from '@cpp/application';
 
 import { getHasApiActivity, getHasApiError } from '../selectors';
 import { AppConfigService } from '../../config';
@@ -21,11 +21,12 @@ import { environment } from '../../../environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 import { getUserGroups } from '@cpp/users-groups';
 import { State } from '../../reducers';
+import { AppRouterContainer } from "./app.router.container";
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
-  template: `
-    <pdk-provider>
+    selector: 'app-root',
+    template: `
       <cpp-application-layout
         [apiError]="apiError$ | async"
         [offline]="offline$ | async"
@@ -40,10 +41,13 @@ import { State } from '../../reducers';
       >
         <router-container></router-container>
       </cpp-application-layout>
-    </pdk-provider>
-  `
+  `,
+    imports: [ CppApplicationLayoutComponent, AppRouterContainer, AsyncPipe]
 })
 export class AppContainer {
+  private appConfigService = inject(AppConfigService);
+  private translate = inject(TranslateService);
+
   headerNavItems$: Observable<HeaderNavItem[]>;
   devTools = environment.devTools;
   offline$: Observable<boolean>;
@@ -51,14 +55,13 @@ export class AppContainer {
   isBusy$: Observable<boolean>;
   searchEnabled$: Observable<boolean>;
 
-  constructor(
-    private appConfigService: AppConfigService,
-    activatedRoute: ActivatedRoute,
-    router: Router,
-    store: Store<State>,
-    titleService: Title,
-    private translate: TranslateService
-  ) {
+
+  constructor() {
+    const activatedRoute = inject(ActivatedRoute);
+    const router = inject(Router);
+    const store = inject<Store<State>>(Store);
+    const titleService = inject(Title);
+
     // Translate
     this.translate.addLangs(['en']);
     this.translate.setDefaultLang('en');

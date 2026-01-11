@@ -1,5 +1,5 @@
 import { CanActivate, Router } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { State } from '../reducers';
 import { Store } from '@ngrx/store';
@@ -7,9 +7,15 @@ import { SjpService } from '../contexts/sjp';
 import { catchError, mapTo, take, tap } from 'rxjs/operators';
 import { LoadCasesMissingSjpNoticeSuccess } from './cases-missing-sjp-notices.action';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CasesMissingSjpNoticesGuard implements CanActivate {
-  constructor(private store: Store<State>, private sjpService: SjpService, private router: Router) {}
+  private store = inject<Store<State>>(Store);
+  private sjpService = inject(SjpService);
+  private router = inject(Router);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.sjpService.getCasesMissingSjpNotice().pipe(

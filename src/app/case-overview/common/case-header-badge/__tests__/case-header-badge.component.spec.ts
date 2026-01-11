@@ -1,16 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CaseHeaderBadgeComponent } from '../case-header-badge.component';
 import { MOCK_CASE } from '../../../__tests__/test-mock-data';
-import { DefendantNamePipeModule } from '../../../../shared/pipes';
-import { PdkPageHeaderModule } from '@cpp/pdk';
 
 describe('CaseHeaderBadgeComponent', () => {
   let fixture: ComponentFixture<CaseHeaderBadgeComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CaseHeaderBadgeComponent],
-      imports: [DefendantNamePipeModule, PdkPageHeaderModule],
+      imports: [CaseHeaderBadgeComponent],
       teardown: { destroyAfterEach: false }
     });
 

@@ -2,7 +2,7 @@
 
 exports[`DevTools - Select User component compiles 1`] = `
 <dev-tools-select-user
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   selectUser={[Function EventEmitter_]}
   users={[Function Array]}
 >
@@ -78,7 +78,7 @@ exports[`DevTools - Select User component compiles 1`] = `
 
 exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
 <dev-tools-select-user
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   selectUser={[Function EventEmitter_]}
   userId={[Function String]}
   users={[Function Array]}
@@ -154,7 +154,7 @@ exports[`DevTools - Select User component it invokes navigate on submit 1`] = `
 
 exports[`DevTools - Select User component it shows error messages when form is submitted with no input 1`] = `
 <dev-tools-select-user
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   selectUser={[Function EventEmitter_]}
   users={[Function Array]}
 >

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import {
   Case,
@@ -17,12 +17,18 @@ import { map, switchMap } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 import { ExternalHttp } from '../../core/services/external-http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SjpService {
+  private http = inject(CppHttp);
+  private externalHttp = inject(ExternalHttp);
+
   private readonly query = '/sjp-query-api/query/api/rest/sjp';
   private readonly command = '/sjp-command-api/command/api/rest/sjp';
 
-  constructor(private http: CppHttp, private externalHttp: ExternalHttp) {}
+
+  constructor() {}
 
   getCaseById(caseId: string): Observable<Case> {
     return this.http.query({

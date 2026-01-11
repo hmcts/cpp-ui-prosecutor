@@ -2,7 +2,10 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CaseSummary } from '../../contexts/sjp';
 import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.constant';
 import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.interface';
-
+import { BreadcrumbLinksComponent } from '../../shared/breadcrumb-links/breadcrumb-links.component';
+import { NgPlural, NgPluralCase } from '@angular/common';
+import { ListCasesMissingSjpNoticesComponent } from './list-cases-missing-sjp-notices.component';
+import { PdkTypographyDirective } from '@cpp/pdk';
 @Component({
   selector: 'cases-missing-sjp-notices',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,7 +21,14 @@ import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.inter
     </p>
 
     <list-cases-missing-sjp-notices [casesMissingNotices]="casesMissingNotices"></list-cases-missing-sjp-notices>
-  `
+  `,
+  imports: [
+    BreadcrumbLinksComponent,
+    ListCasesMissingSjpNoticesComponent,
+    NgPlural,
+    NgPluralCase,
+    PdkTypographyDirective
+  ]
 })
 export class CasesMissingSjpNoticesComponent {
   @Input() casesMissingNotices: CaseSummary[];

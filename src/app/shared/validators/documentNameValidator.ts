@@ -2,14 +2,14 @@ import { Directive, forwardRef } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@angular/forms';
 
 @Directive({
-  selector: '[validateDocumentName]',
-  providers: [
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => DocumentNameValidator),
-      multi: true
-    }
-  ]
+    selector: '[validateDocumentName]',
+    providers: [
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => DocumentNameValidator),
+            multi: true
+        }
+    ],
 })
 export class DocumentNameValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {

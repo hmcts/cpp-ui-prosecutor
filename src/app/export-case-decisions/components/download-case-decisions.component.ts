@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CaseCountResult } from '../../contexts/mi-report';
+import { PdkButtonDirective, PdkInsetTextComponent, PdkMarginDirective, PdkTypographyDirective } from '@cpp/pdk';
+import { NgPlural, NgPluralCase } from '@angular/common';
 
 @Component({
   selector: 'download-case-decisions',
@@ -16,17 +18,25 @@ import { CaseCountResult } from '../../contexts/mi-report';
         found from {{ caseCountResult.fromDate }} to {{ caseCountResult.toDate }}
       </p>
 
-      <ng-container *ngIf="caseCountResult.casesResultedCount">
-        <a [href]="jsonDownloadUrl" target="_blank" pdk-button="secondary">
-          Download results in json file
-        </a>
-
-        <a *ngIf="role !== 'tfl'" [href]="csvDownloadUrl" target="_blank" pdk-button="secondary" pdk-margin-left="2">
-          Download results in excel/csv file
-        </a>
-      </ng-container>
+      @if (caseCountResult.casesResultedCount) {
+      <a [href]="jsonDownloadUrl" target="_blank" pdk-button="secondary">
+        Download results in json file
+      </a>
+      @if (role !== 'tfl') {
+      <a [href]="csvDownloadUrl" target="_blank" pdk-button="secondary" pdk-margin-left="2">
+        Download results in excel/csv file
+      </a>
+      } }
     </pdk-inset-text>
-  `
+  `,
+  imports: [
+    PdkInsetTextComponent,
+    NgPlural,
+    NgPluralCase,
+    PdkTypographyDirective,
+    PdkButtonDirective,
+    PdkMarginDirective
+  ]
 })
 export class DownloadCaseDecisionsComponent {
   @Input() role: string;

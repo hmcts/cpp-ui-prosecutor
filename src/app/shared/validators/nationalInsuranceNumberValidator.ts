@@ -2,14 +2,14 @@ import { Directive, forwardRef } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@angular/forms';
 
 @Directive({
-  selector: '[validateNI]',
-  providers: [
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => NationalInsuranceNumberValidator),
-      multi: true
-    }
-  ]
+    selector: '[validateNI]',
+    providers: [
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => NationalInsuranceNumberValidator),
+            multi: true
+        }
+    ],
 })
 export class NationalInsuranceNumberValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {

@@ -19,12 +19,14 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with mu
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
           <a
-            href="/review-not-guilty-pleas"
+            class="govuk-link govuk-section-break govuk-section-break--s"
+            href="/"
             pdk-link=""
             pdk-section="small"
             routerlink="review-not-guilty-pleas"
@@ -61,12 +63,14 @@ exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with si
           class="govuk-warning-text__text"
         >
           <span
-            class="govuk-warning-text__assistive"
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
           >
             Warning
           </span>
           <a
-            href="/review-not-guilty-pleas"
+            class="govuk-link govuk-section-break govuk-section-break--s"
+            href="/"
             pdk-link=""
             pdk-section="small"
             routerlink="review-not-guilty-pleas"

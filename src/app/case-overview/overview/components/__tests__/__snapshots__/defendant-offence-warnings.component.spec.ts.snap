@@ -6,13 +6,43 @@ exports[`DefendantOffenceWarnings should compile correctly with all warnings 1`]
 >
   <defendant-offence-warnings>
     <offence-warning>
-       Offence may be out of time 
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Offence may be out of time 
+        </div>
+      </pdk-form-group>
     </offence-warning>
     <offence-warning>
-       Offence not in effect - refer to court and see SJPN for offence details 
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Offence not in effect - refer to court and see SJPN for offence details 
+        </div>
+      </pdk-form-group>
     </offence-warning>
     <offence-warning>
-       Imprisonable offence 
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Imprisonable offence 
+        </div>
+      </pdk-form-group>
     </offence-warning>
   </defendant-offence-warnings>
 </defendant-offence-warnings-test>

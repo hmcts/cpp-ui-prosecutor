@@ -14,14 +14,14 @@ export const ALT = 18;
 const NUMBER_REGEX = /^\d+$/;
 
 @Directive({
-  selector: '[validateDigitsOnly]',
-  providers: [
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => DigitsOnlyValidator),
-      multi: true
-    }
-  ]
+    selector: '[validateDigitsOnly]',
+    providers: [
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => DigitsOnlyValidator),
+            multi: true
+        }
+    ],
 })
 export class DigitsOnlyValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {

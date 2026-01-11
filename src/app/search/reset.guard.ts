@@ -1,12 +1,16 @@
 import { CanActivate } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FeatureState } from './search.selectors';
 import { ResetSearchResult } from './search.action';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ResetGuard implements CanActivate {
-  constructor(private store: Store<FeatureState>) {}
+  private store = inject<Store<FeatureState>>(Store);
+
+  constructor() {}
 
   canActivate(): boolean {
     this.store.dispatch(new ResetSearchResult());

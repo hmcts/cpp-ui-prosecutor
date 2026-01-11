@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { ProsecutorValidator } from '../index';
 
 describe('Prosecutor Validator', () => {
@@ -9,8 +9,7 @@ describe('Prosecutor Validator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestProsecutorValidatorComponent, ProsecutorValidator],
-      imports: [FormsModule]
+      imports: [FormsModule, TestProsecutorValidatorComponent, ProsecutorValidator]
     });
 
     fixture = TestBed.createComponent(TestProsecutorValidatorComponent);
@@ -40,9 +39,10 @@ describe('Prosecutor Validator', () => {
     <form>
       <input name="prosecutorCaseReference" [ngModel]="model" prosecutorValidator [oldValue]="oldValue" />
     </form>
-  `
+  `,
+  imports: [FormsModule, ProsecutorValidator]
 })
-class TestProsecutorValidatorComponent {
+class TestProsecutorValidatorComponent implements Validators {
   model: string;
   oldValue: string;
 }

@@ -1,6 +1,8 @@
-<pdk-error-summary *ngIf="errors" [errors]="errors" focusOnChange></pdk-error-summary>
+@if (errors) {
+<pdk-error-summary [errors]="errors" focusOnChange> </pdk-error-summary>
+}
 
-<pdk-alert icon="true" type="warning">
+<pdk-alert [icon]="true" type="warning">
   Prosecution reference <strong>{{ oldValue }}</strong> already exists - enter correct reference
 </pdk-alert>
 
@@ -30,7 +32,7 @@
             name="hasProsecutionReferenceNo"
             [ngModel]="hasProsecutorReferenceNumber()"
             (ngModelChange)="requiresRefNumber = $event; updateProsecutionReferenceNo($event)"
-            [required]="true"
+            required
             [inline]="true"
             data-role="hasProsecutionReferenceNo-input"
             required
@@ -40,7 +42,8 @@
           </pdk-radio-group>
         </pdk-form-field>
 
-        <pdk-inset-text *ngIf="requiresRefNumber || hasProsecutorReferenceNumber()" class="pl-m">
+        @if (requiresRefNumber || hasProsecutorReferenceNumber()) {
+        <pdk-inset-text class="pl-m">
           <pdk-form-field
             label="Prosecution reference number"
             labelType="small"
@@ -60,7 +63,7 @@
               pdk-input
               name="prosecutorCaseReference"
               type="text"
-              [required]="true"
+              required
               [(ngModel)]="editManualCase.prosecutorCaseReference"
               maxlength="30"
               required
@@ -69,6 +72,7 @@
             />
           </pdk-form-field>
         </pdk-inset-text>
+        }
       </ng-container>
 
       <pdk-form-group>

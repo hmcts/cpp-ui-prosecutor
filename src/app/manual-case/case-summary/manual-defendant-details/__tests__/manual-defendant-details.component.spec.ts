@@ -1,16 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DefendantDetailsComponent } from '../manual-defendant-details.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ControlContainer, NgForm } from '@angular/forms';
 import { Language, ManualCaseDefendant } from '../../../../core/model';
 import { ManualCaseDefendantStateService } from '../../../defendants-state.service';
-import { MockPipesModule } from '../../../../shared/pipes/mock-pipes';
+
 import { Ethnicity, EthnicityCode } from '../../../../core/model/reference-data-interfaces';
-import { AddressPipe } from '../../../../shared/pipes/address/address.pipe';
-import { FullNamePipe } from '../../../../shared/pipes/full-name/full-name.pipe';
-import { DashPipe } from '../../../../shared/pipes/dash/dash.pipe';
+import { provideTranslateService } from '@ngx-translate/core';
 
 const mockDefendants = [
   {
@@ -179,10 +174,16 @@ describe('DefendantDetailsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DefendantDetailsComponent, DashPipe, FullNamePipe, AddressPipe],
-      imports: [CommonModule, MockPipesModule, RouterTestingModule],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm, ManualCaseDefendantStateService]
+      imports: [DefendantDetailsComponent],
+      providers: [
+        ControlContainer,
+        NgForm,
+        ManualCaseDefendantStateService,
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(DefendantDetailsComponent);

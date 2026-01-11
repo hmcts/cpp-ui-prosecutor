@@ -1,18 +1,21 @@
 import { Component, Input } from '@angular/core';
+import { PdkCore, PdkWarningTextComponent } from '@cpp/pdk';
+import { NgPlural, NgPluralCase, NgTemplateOutlet } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'review-not-guilty-pleas-link',
+  imports: [PdkWarningTextComponent, NgPlural, NgPluralCase, NgTemplateOutlet, PdkCore, RouterLink, NgTemplateOutlet],
   template: `
     <p>
-      <pdk-warning-text *ngIf="numberOfCases > 0; else noGuiltyPleaCases">
+      @if (numberOfCases > 0) {
+      <pdk-warning-text>
         <a href="javascript: void(0)" pdk-link pdk-section="small" routerLink="review-not-guilty-pleas">
           Review not guilty pleas ({{ numberOfCases }} <ng-container [ngTemplateOutlet]="casesText"></ng-container>)
         </a>
       </pdk-warning-text>
+      } @else { Review not guilty pleas (0) }
 
-      <ng-template #noGuiltyPleaCases>
-        Review not guilty pleas (0)
-      </ng-template>
       <ng-template #casesText>
         <span [ngPlural]="numberOfCases">
           <ng-template ngPluralCase="=1">case</ng-template>

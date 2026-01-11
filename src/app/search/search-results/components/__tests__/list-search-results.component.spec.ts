@@ -1,27 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { CaseDetails } from '../../../../contexts/sjp';
-import { CaseStatusPipeModule, DefendantNamePipeModule } from '../../../../shared/pipes';
-import { PdkCoreModule, PdkGridModule, PdkInsetTextModule, PdkWarningTextModule } from '@cpp/pdk';
 import { ListSearchResultsComponent } from '../list-search-results.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
+import { provideRouter } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 describe('ListSearchResultsComponent', () => {
   let fixture: ComponentFixture<TestListSearchResultsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestListSearchResultsComponent, ListSearchResultsComponent],
-      imports: [
-        RouterTestingModule,
-        PdkCoreModule,
-        PdkGridModule,
-        PdkInsetTextModule,
-        PdkWarningTextModule,
-        DefendantNamePipeModule,
-        CaseStatusPipeModule
-      ],
+      imports: [TestListSearchResultsComponent, ListSearchResultsComponent],
+      providers: [provideRouter([]), { provide: ActivatedRoute, useValue: { snapshot: { params: { id: '123' } } } }],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestListSearchResultsComponent);
@@ -74,7 +65,8 @@ describe('ListSearchResultsComponent', () => {
     selector: 'list-search-results-test',
     template: `
       <list-search-results [searchResults]="searchResults"></list-search-results>
-    `
+    `,
+    imports: [ListSearchResultsComponent]
   })
   class TestListSearchResultsComponent {
     searchResults: CaseDetails[];

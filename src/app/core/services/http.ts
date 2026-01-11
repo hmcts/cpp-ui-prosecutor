@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
@@ -20,12 +20,13 @@ export type RequestOptions = HttpQueryOptions | HttpComandOptions | HttpCommandS
 /* istanbul ignore file */
 @Injectable()
 export class CustomHttp extends CppHttp {
-  constructor(
-    @Inject(GENERATE_UNIQUE_KEY) generateUniqueKey: GenerateUniqueKeyFn,
-    backend: CppHttpBackend,
-    notifications: NotificationDispatcher,
-    private store: Store<State>
-  ) {
+  private store = inject<Store<State>>(Store);
+
+  constructor() {
+    const generateUniqueKey = inject<GenerateUniqueKeyFn>(GENERATE_UNIQUE_KEY);
+    const backend = inject(CppHttpBackend);
+    const notifications = inject(NotificationDispatcher);
+
     super(generateUniqueKey, backend, notifications);
   }
 
@@ -69,5 +70,5 @@ export function loadHttpFactory(
   notifications: NotificationDispatcher,
   store: Store<State>
 ) {
-  return new CustomHttp(generateUniqueKey, backend, notifications, store);
+  return new CustomHttp();
 }

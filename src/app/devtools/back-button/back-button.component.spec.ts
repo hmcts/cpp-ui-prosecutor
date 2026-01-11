@@ -9,17 +9,17 @@ describe('DevTools - Select User component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DevToolsBackButtonComponent],
-      providers: [
+    imports: [DevToolsBackButtonComponent],
+    providers: [
         {
-          provide: Location,
-          useValue: {
-            back: mockBack
-          }
+            provide: Location,
+            useValue: {
+                back: mockBack
+            }
         }
-      ],
-      teardown: { destroyAfterEach: false }
-    });
+    ],
+    teardown: { destroyAfterEach: false }
+});
     fixture = TestBed.createComponent(DevToolsBackButtonComponent);
   });
 

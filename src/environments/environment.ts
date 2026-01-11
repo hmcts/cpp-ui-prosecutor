@@ -1,14 +1,22 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { DevToolsModule } from '../app/devtools';
+import { provideCppFakeSession } from '@cpp/core';
+import { mockUsers, User } from '../app/devtools/session/users.constant';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+
+const getDefaultUserId = (): string => {
+  const defaultUser: User = mockUsers.find(user => user.default);
+  return defaultUser.id || '';
+};
 
 export const environment = {
   production: false,
   devTools: true,
-  modules: [StoreDevtoolsModule.instrument(), DevToolsModule],
-  providers: []
+  providers: [
+    provideCppFakeSession({ defaultUserId: getDefaultUserId() }),
+    provideStoreDevtools({ connectInZone: true })
+  ]
 };
 
 /*

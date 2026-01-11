@@ -9,7 +9,7 @@
 
   <groupId>uk.gov.moj.cpp.ui</groupId>
   <artifactId>ui-prosecutor</artifactId>
-  <version>0.0.201-SNAPSHOT</version>
+  <version>19.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <protractor.baseUrl>http://localhost:4650</protractor.baseUrl>
@@ -22,8 +22,11 @@
     <skip.bat.tests>true</skip.bat.tests>
     <skip.report.pack>true</skip.report.pack>
     <skip.dist.pack>false</skip.dist.pack>
-    <node.version>v14.20.1</node.version>
-    <npm.version>6.14.17</npm.version>
+    <node.version>v18.20.4</node.version>
+    <npm.version>10.7.0</npm.version> 
+   <node.download.root>https://nodejs.org/dist</node.download.root>
+   <npm.download.root>https://registry.npmjs.org/-/binary/npm/v</npm.download.root>
+   <npm.registry.url>https://registry.npmjs.org</npm.registry.url>
     <npm.test.options />
     <npm.lint.options />
     <npm.build.options />
@@ -75,6 +78,17 @@
               <npmRegistryURL>${npm.registry.url}</npmRegistryURL>
               <skip>${skip.node.install}</skip>
             </configuration>
+          </execution>
+          <execution>
+              <id>npm config</id>
+              <goals>
+                  <goal>npm</goal>
+              </goals>
+              <phase>generate-sources</phase>
+              <configuration>
+                  <arguments>config fix</arguments>
+                  <skip>${skip.npm.install}</skip>
+              </configuration>
           </execution>
           <execution>
             <id>npm ci</id>

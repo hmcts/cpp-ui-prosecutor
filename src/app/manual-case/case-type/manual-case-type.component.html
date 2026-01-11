@@ -1,4 +1,6 @@
-<pdk-error-summary *ngIf="errors" [errors]="errors" focusOnChange> </pdk-error-summary>
+@if (errors) {
+<pdk-error-summary [errors]="errors" focusOnChange> </pdk-error-summary>
+}
 
 <pdk-grid container>
   <pdk-grid full>
@@ -27,35 +29,37 @@
           required
           data-role="enter-case-type"
         >
-          <pdk-radio-button value="Application" *ngIf="hasNpp">
+          @if (hasNpp) {
+          <pdk-radio-button value="Application">
             {{ 'MANUAL_CASE_TYPE.APPLICATION' | translate }}
           </pdk-radio-button>
+          }
 
           <pdk-radio-button value="S">
             {{ 'MANUAL_CASE_TYPE.SUMMONS' | translate }}
           </pdk-radio-button>
-          <ng-container *ngIf="editManualCase.initiationCode === 'S'">
-            <pdk-inset-text compound="true">
-              <pdk-form-field
-                label="{{ 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate }}"
-                [labelType]="'normal'"
-                [errorMessages]="[
-                  {
-                    rule: 'required',
-                    message: 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate
-                  }
-                ]"
+          @if (editManualCase.initiationCode === 'S') {
+          <pdk-inset-text [compound]="true">
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate }}"
+              labelType="none"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate
+                }
+              ]"
+            >
+              <pdk-radio-group
+                name="summonsCode"
+                [(ngModel)]="editManualCase.summonsCode"
+                [options]="summonsCodes"
+                required
               >
-                <pdk-radio-group
-                  name="summonsCode"
-                  [(ngModel)]="editManualCase.summonsCode"
-                  [options]="summonsCodes"
-                  required
-                >
-                </pdk-radio-group>
-              </pdk-form-field>
-            </pdk-inset-text>
-          </ng-container>
+              </pdk-radio-group>
+            </pdk-form-field>
+          </pdk-inset-text>
+          }
 
           <pdk-radio-button value="Q">
             {{ 'MANUAL_CASE_TYPE.REQUISITIONS' | translate }}
@@ -65,17 +69,19 @@
             {{ 'MANUAL_CASE_TYPE.SJP' | translate }}
           </pdk-radio-button>
 
-          <pdk-radio-button value="C" *ngIf="hasNpp">
+          @if (hasNpp) {
+          <pdk-radio-button value="C">
             {{ 'MANUAL_CASE_TYPE.CHARGE' | translate }}
           </pdk-radio-button>
-
-          <pdk-radio-button value="T" *ngIf="hasNpp">
+          } @if (hasNpp) {
+          <pdk-radio-button value="T">
             {{ 'MANUAL_CASE_TYPE.TRIAL' | translate }}
           </pdk-radio-button>
-
-          <pdk-radio-button value="CO" *ngIf="hasNpp">
+          } @if (hasNpp) {
+          <pdk-radio-button value="CO">
             {{ 'MANUAL_CASE_TYPE.COMMITTAL' | translate }}
           </pdk-radio-button>
+          }
         </pdk-radio-group>
       </pdk-form-field>
 

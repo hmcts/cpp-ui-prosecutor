@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { cold } from 'jasmine-marbles';
-import { CommonModule } from '@angular/common';
-import { CppHttp, HttpModule } from '@cpp/core';
+import { CppHttp, provideCppCoreHttpServices } from '@cpp/core';
 import { StagingTflService } from '../staging-tfl.service';
 import { CsvUploadRequestParam } from '../staging-tfl-param.interface';
 import uuid from 'uuid/v4';
@@ -25,8 +24,8 @@ describe('StagingTflService', () => {
     mockCommand = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [HttpModule, CommonModule],
       providers: [
+        provideCppCoreHttpServices(),
         StagingTflService,
         {
           provide: CppHttp,
@@ -39,8 +38,8 @@ describe('StagingTflService', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    http = TestBed.get(CppHttp);
-    service = TestBed.get(StagingTflService);
+    http = TestBed.inject(CppHttp);
+    service = TestBed.inject(StagingTflService);
   });
 
   describe('getFileUploadStats', () => {

@@ -1,33 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Manual Case Create Container Add case type to store should render the case type component 1`] = `
-<manual-case-container
-  manualCaseNavService={[Function Object]}
-  ngUnsubscribe={[Function Subject]}
-  offenceStateService={[Function ManualCaseOffenceStateService]}
-  route={[Function Object]}
-  router={[Function Object]}
-  store={[Function Store]}
+exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
+<export-case-decisions-form-test
+  errors={[Function Function]}
+  loadCaseCount={[Function Function]}
 >
-  <div
-    class="manual-case"
-  >
-  </div>
-</manual-case-container>
-`;
-
-exports[`Manual Case Create Container Save Manual Case to DB should render the Add application component 1`] = `
-<manual-case-container
-  manualCaseNavService={[Function Object]}
-  ngUnsubscribe={[Function Subject]}
-  offenceStateService={[Function ManualCaseOffenceStateService]}
-  route={[Function Object]}
-  router={[Function Object]}
-  store={[Function Store]}
->
-  <div
-    class="manual-case"
-  >
-  </div>
-</manual-case-container>
+  <export-case-decisions-form>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+    >
+      <input
+        class="ng-untouched ng-pristine ng-valid"
+        name="currentDate"
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </export-case-decisions-form>
+</export-case-decisions-form-test>
 `;

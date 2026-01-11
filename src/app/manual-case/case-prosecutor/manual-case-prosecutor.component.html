@@ -1,4 +1,6 @@
-<pdk-error-summary *ngIf="!!errors && errors.length > 0" [errors]="errors" focusOnChange></pdk-error-summary>
+@if (!!errors && errors.length > 0) {
+<pdk-error-summary [errors]="errors" focusOnChange> </pdk-error-summary>
+}
 
 <pdk-grid container>
   <pdk-grid full>
@@ -11,84 +13,82 @@
 <pdk-grid container>
   <pdk-grid one-half>
     <form pdk-form novalidate (validSubmit)="submitData()" (errors)="errors = $event">
-      <ng-container *ngIf="isTypeSjp">
+      @if (isTypeSjp) {
+      <pdk-form-field
+        label="Prosecution reference number"
+        labelType="small"
+        [errorMessages]="[
+          {
+            rule: 'required',
+            message: 'Enter prosecution reference number'
+          }
+        ]"
+      >
+        <input
+          pdk-text-input
+          pdk-input
+          name="prosecutorCaseReference"
+          type="text"
+          required
+          [(ngModel)]="editManualCase.prosecutorCaseReference"
+          maxlength="30"
+          required
+          data-role="prosecutionAuthorityReference-input"
+        />
+      </pdk-form-field>
+      <div pdk-margin-bottom="3">
         <pdk-form-field
-          label="Prosecution reference number"
+          label="Cost claimed by prosecutor"
           labelType="small"
           [errorMessages]="[
             {
-              rule: 'required',
-              message: 'Enter prosecution reference number'
-            }
-          ]"
-        >
-          <input
-            pdk-text-input
-            pdk-input
-            name="prosecutorCaseReference"
-            type="text"
-            [required]="true"
-            [(ngModel)]="editManualCase.prosecutorCaseReference"
-            maxlength="30"
-            required
-            data-role="prosecutionAuthorityReference-input"
-          />
-        </pdk-form-field>
-
-        <div pdk-margin-bottom="3">
-          <pdk-form-field
-            label="Cost claimed by prosecutor"
-            labelType="small"
-            [errorMessages]="[
-              {
-                rule: 'invalidCurrency',
-                message: 'Enter numerals only, for example £100.00'
-              },
-              {
-                rule: 'required',
-                message: 'Enter cost claimed by prosecution'
-              },
-              {
-                rule: 'maxValue',
-                message: 'Cost must be less than £1,000,000,000'
-              }
-            ]"
-          >
-            <pdk-currency-input
-              name="appliedProsecutorCosts"
-              [required]="true"
-              [(ngModel)]="editManualCase.prosecutor.appliedProsecutorCosts"
-              data-role="costClaimed-input"
-            ></pdk-currency-input>
-          </pdk-form-field>
-        </div>
-
-        <pdk-form-field
-          label="Date of notice"
-          labelType="small"
-          hint
-          [errorMessages]="[
-            {
-              rule: 'required',
-              message: 'Enter date of notice'
+              rule: 'invalidCurrency',
+              message: 'Enter numerals only, for example £100.00'
             },
             {
-              rule: 'pastDate',
-              message: 'Charge posting date must be today or in the past'
+              rule: 'required',
+              message: 'Enter cost claimed by prosecution'
+            },
+            {
+              rule: 'maxValue',
+              message: 'Cost must be less than £1,000,000,000'
             }
           ]"
         >
-          <pdk-date-input
-            name="chargePostingDate"
-            [ngModel]="editManualCase?.prosecutor?.chargePostingDate"
-            (ngModelChange)="editManualCase.prosecutor.chargePostingDate = $event"
+          <pdk-currency-input
+            name="appliedProsecutorCosts"
             required
-            validateDate
-            pastDate
-          >
-          </pdk-date-input>
+            [(ngModel)]="editManualCase.prosecutor.appliedProsecutorCosts"
+            data-role="costClaimed-input"
+          ></pdk-currency-input>
         </pdk-form-field>
-      </ng-container>
+      </div>
+      <pdk-form-field
+        label="Date of notice"
+        labelType="small"
+        hint
+        [errorMessages]="[
+          {
+            rule: 'required',
+            message: 'Enter date of notice'
+          },
+          {
+            rule: 'pastDate',
+            message: 'Charge posting date must be today or in the past'
+          }
+        ]"
+      >
+        <pdk-date-input
+          name="chargePostingDate"
+          [ngModel]="editManualCase?.prosecutor?.chargePostingDate"
+          (ngModelChange)="editManualCase.prosecutor.chargePostingDate = $event"
+          required
+          validateDate
+          [pastDate]="true"
+        >
+        </pdk-date-input>
+      </pdk-form-field>
+      }
 
       <pdk-form-group>
         <button pdk-button type="submit" data-role="save-applicant-details-button">

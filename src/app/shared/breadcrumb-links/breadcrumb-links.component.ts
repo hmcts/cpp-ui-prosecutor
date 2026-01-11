@@ -1,6 +1,13 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Breadcrumb } from './breadcrumb-links.interface';
+import {
+  PdkBreadcrumbDirective,
+  PdkBreadcrumbListComponent,
+  PdkBreadcrumbListItemDirective,
+  PdkCore,
+  PdkTypographyDirective
+} from '@cpp/pdk';
 
 @Component({
   selector: 'breadcrumb-links',
@@ -8,9 +15,10 @@ import { Breadcrumb } from './breadcrumb-links.interface';
   template: `
     <nav aria-label="Breadcrumb">
       <ol pdk-breadcrumb-list pdk-margin-top="4">
-        <li pdk-breadcrumb-list-item *ngFor="let breadcrumb of breadcrumbs; last as isLast">
+        @for (breadcrumb of breadcrumbs; track breadcrumb.id; let isLast = $last) {
+        <li pdk-breadcrumb-list-item>
+          @if (!isLast) {
           <a
-            *ngIf="!isLast"
             href="javascript: void(0)"
             (click)="this.redirect(breadcrumb.link)"
             [attr.data-breadcrumb]="breadcrumb.id"
@@ -18,23 +26,39 @@ import { Breadcrumb } from './breadcrumb-links.interface';
           >
             {{ breadcrumb.title }}
           </a>
-          <div *ngIf="isLast" aria-current="page">
+          } @if (isLast) {
+          <div aria-current="page">
             {{ breadcrumb.title }}
           </div>
+          }
         </li>
+        }
       </ol>
     </nav>
-    <h1 *ngIf="showTitle && title" pdk-typography="heading-xlarge" pdk-margin-vertical="6">
+    @if (showTitle && title) {
+    <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="6">
       {{ title }}
     </h1>
-  `
+    }
+  `,
+  imports: [
+    PdkCore,
+    PdkBreadcrumbDirective,
+    PdkTypographyDirective,
+    PdkBreadcrumbListComponent,
+    PdkBreadcrumbListItemDirective
+  ]
 })
 export class BreadcrumbLinksComponent {
+  private router = inject(Router);
+
   @Input() breadcrumbs: Array<Breadcrumb>;
   @Input() caseId?: string;
   @Input() showTitle = false;
 
-  constructor(private router: Router) {
+  constructor() {
+    const router = this.router;
+
     this.router = router;
   }
 

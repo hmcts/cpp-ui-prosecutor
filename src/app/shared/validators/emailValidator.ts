@@ -3,14 +3,14 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@an
 const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 @Directive({
-  selector: '[validateEmail]',
-  providers: [
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => EmailValidator),
-      multi: true
-    }
-  ]
+    selector: '[validateEmail]',
+    providers: [
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => EmailValidator),
+            multi: true
+        }
+    ],
 })
 export class EmailValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {

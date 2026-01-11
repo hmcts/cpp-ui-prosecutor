@@ -1,17 +1,22 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, Input, ChangeDetectionStrategy, inject } from '@angular/core';
 import { Location } from '@angular/common';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { cloneDeep, merge } from 'lodash';
-import { ValidationError } from '@cpp/pdk';
+import { ValidationError, PdkErrorSummaryComponent, PdkGrid, PdkFormFieldComponent, PdkRadioGroupComponent, PdkRadioButtonComponent, PdkInsetTextComponent, PdkFormGroupComponent, PdkForm, PdkCore, PdkButtonDirective } from '@cpp/pdk';
 import { ManualCase } from '../../core/model/manual-case';
 import { AppConfigService } from '../../config';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'manual-case-type',
-  templateUrl: './manual-case-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'manual-case-type',
+    templateUrl: './manual-case-type.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [PdkErrorSummaryComponent, PdkGrid, PdkFormFieldComponent, PdkRadioGroupComponent, PdkRadioButtonComponent, PdkInsetTextComponent, PdkFormGroupComponent, FormsModule, TranslateModule, PdkForm, PdkButtonDirective, PdkCore]
 })
 export class ManualCaseTypeComponent implements OnInit {
+  private location = inject(Location);
+  private appConfigService = inject(AppConfigService);
+
   get homepageUrl() {
     return this.appConfigService.getBaseUrl();
   }
@@ -22,10 +27,10 @@ export class ManualCaseTypeComponent implements OnInit {
   @Output() submitFormData = new EventEmitter<ManualCase>();
 
   @ViewChild(NgForm) form: NgForm;
-  errors: ValidationError[];
+  errors: ValidationError[] | any;
   editManualCase: ManualCase;
 
-  constructor(private location: Location, private appConfigService: AppConfigService) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.editManualCase = cloneDeep(this.manualCaseDetail);

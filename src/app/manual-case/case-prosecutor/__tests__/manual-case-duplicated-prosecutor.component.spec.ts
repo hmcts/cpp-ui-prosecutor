@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ControlContainer, NgForm } from '@angular/forms';
-import { PdkCoreModule, PdkFormModule, PdkDateInputModule, PdkGridModule, PdkRadioInputModule } from '@cpp/pdk';
-import { MockPipesModule } from '../../../shared/pipes/mock-pipes';
+
 import { ManualCase } from '../../../core/model/manual-case';
 import { ProsecutorValidator } from '../../../shared/validators';
 import { ManualCaseDuplicatedProsecutorComponent } from '../manual-case-duplicated-prosecutor.component';
+import { AgeMockPipe } from '../../../shared/pipes/mock-pipes/age-mock.pipe';
+import { TranslateMockPipe } from '../../../shared/pipes/mock-pipes/translate-mock.pipe';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('Manual case prosecutor', () => {
   let fixture: ComponentFixture<ManualCaseDuplicatedProsecutorComponent>;
@@ -20,20 +21,23 @@ describe('Manual case prosecutor', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManualCaseDuplicatedProsecutorComponent, ProsecutorValidator],
       imports: [
-        CommonModule,
         FormsModule,
-        PdkCoreModule,
-        PdkFormModule,
-        PdkGridModule,
-        PdkRadioInputModule,
-        PdkDateInputModule,
-        MockPipesModule,
-        RouterTestingModule
+        AgeMockPipe,
+        TranslateMockPipe,
+        ManualCaseDuplicatedProsecutorComponent,
+        ProsecutorValidator
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      providers: [ControlContainer, NgForm]
+      providers: [
+        ControlContainer,
+        NgForm,
+        provideRouter([]),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ]
     });
 
     fixture = TestBed.createComponent(ManualCaseDuplicatedProsecutorComponent);

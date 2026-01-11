@@ -1,24 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import {
-  PdkAlertModule,
-  PdkBreadcrumbsModule,
-  PdkButtonModule,
-  PdkCoreModule,
-  PdkErrorSummaryModule,
-  PdkFormModule,
-  PdkGridModule,
-  PdkInputModule,
-  PdkPageHeaderModule,
-  PdkTextareaModule,
-  PdkTextInputModule
-} from '@cpp/pdk';
+import { Component } from '@angular/core';
 import { Case } from '../../../contexts/sjp';
 import { MOCK_CASE } from '../../__tests__/test-mock-data';
-import { CommonModule } from '@angular/common';
 import { DatesToAvoidFormComponent } from '../dates-to-avoid-form.component';
 import { By } from '@angular/platform-browser';
 import { mockNativeMethods } from '../../../test/jest-mock';
+import { ActivatedRoute } from '@angular/router';
 
 describe('DatesToAvoidFormComponent', () => {
   let fixture: ComponentFixture<TestDatesToAvoidFormComponent>;
@@ -26,22 +13,17 @@ describe('DatesToAvoidFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DatesToAvoidFormComponent, TestDatesToAvoidFormComponent],
-      imports: [
-        CommonModule,
-        PdkAlertModule,
-        PdkBreadcrumbsModule,
-        PdkButtonModule,
-        PdkCoreModule,
-        PdkErrorSummaryModule,
-        PdkFormModule,
-        PdkGridModule,
-        PdkInputModule,
-        PdkTextInputModule,
-        PdkTextareaModule,
-        PdkPageHeaderModule
+      imports: [TestDatesToAvoidFormComponent, DatesToAvoidFormComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              params: { id: '123' }
+            }
+          }
+        }
       ],
-      schemas: [NO_ERRORS_SCHEMA],
       teardown: { destroyAfterEach: false }
     });
     mockNativeMethods();
@@ -76,7 +58,8 @@ describe('DatesToAvoidFormComponent', () => {
     selector: 'test-dates-to-avoid-form',
     template: `
       <dates-to-avoid-form [kase]="kase" (formSubmit)="formSubmit($event)"></dates-to-avoid-form>
-    `
+    `,
+    imports: [DatesToAvoidFormComponent]
   })
   class TestDatesToAvoidFormComponent {
     kase: Case;

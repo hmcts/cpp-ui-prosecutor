@@ -1,22 +1,12 @@
-import { Shallow } from 'shallow-render';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  PdkCoreModule,
-  PdkFormModule,
-  PdkRadioInputModule,
-  PdkInsetTextModule,
-  PdkTextareaModule,
-  PdkInputModule,
-  PdkDateInputModule
-} from '@cpp/pdk';
-
-import { ManualCaseModule } from '../../manual-case.module';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { OrganisationDefendantFormComponent } from '../organisation-defendant-form.component';
 import { ManualCaseDefendant } from '../../../core/model/manual-case-defendant';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../../shared';
-import { RouterTestingModule } from '@angular/router/testing';
-import { RouterModule } from '@angular/router';
+import { By } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideMockStore } from '@ngrx/store/testing';
 
 Object.defineProperty(window, 'getComputedStyle', {
   value: () => ({
@@ -45,114 +35,131 @@ const manualCaseDefendantMock = {
 } as ManualCaseDefendant;
 
 describe('Organisation Defendant Form Component', () => {
-  Shallow.alwaysReplaceModule(RouterModule, RouterTestingModule);
-
-  let component: Shallow<OrganisationDefendantFormComponent>;
-
+  let fixture: ComponentFixture<TestOrganisationDefendantFormComponent>;
+  let formComponent: OrganisationDefendantFormComponent;
   const generateUUID = jest.fn();
   generateUUID.mockReturnValue('uuid-001');
 
   beforeEach(() => {
-    component = new Shallow(OrganisationDefendantFormComponent, ManualCaseModule).dontMock(
-      CommonModule,
-      SharedModule,
-      FormsModule,
-      PdkFormModule,
-      ReactiveFormsModule,
-      PdkInputModule,
-      PdkRadioInputModule,
-      PdkInsetTextModule,
-      PdkCoreModule,
-      PdkDateInputModule,
-      PdkTextareaModule
-    );
+    TestBed.configureTestingModule({
+      imports: [FormsModule, TestOrganisationDefendantFormComponent, OrganisationDefendantFormComponent],
+      providers: [
+        provideMockStore({
+          initialState: {}
+        }),
+        provideTranslateService({
+          lang: 'en',
+          fallbackLang: 'en'
+        })
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      teardown: { destroyAfterEach: false }
+    });
+
+    fixture = TestBed.createComponent(TestOrganisationDefendantFormComponent);
+    formComponent = fixture.debugElement.query(By.directive(OrganisationDefendantFormComponent)).componentInstance;
   });
 
-  function renderComponent(manualCaseDefendant, manualCaseType, isPoliceProsecutor) {
-    return component.render(
-      `<organisation-defendant-form
-            [manualCaseDefendant]="manualCaseDefendant"
-            [manualCaseType]="manualCaseType"
-            [showAddButton]="true"
-            [isPoliceProsecutor]="isPoliceProsecutor"
-            (formSubmit)="handleFormSubmit($event)"
-            (formError)="handleFormError($event)"
-            (goBack)="handleFormBack($event)">
-       </organisation-defendant-form>`,
-      {
-        bind: {
-          manualCaseDefendant,
-          manualCaseType,
-          isPoliceProsecutor,
-          handleFormSubmit: () => jest.fn(),
-          handleFormError: () => jest.fn(),
-          handleFormBack: () => jest.fn()
-        }
-      }
-    );
-  }
+  it('should render the component correctly when case type is SJP', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...manualCaseDefendantMock };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.componentInstance.isPoliceProsecutor = true;
+    fixture.detectChanges();
 
-  it('should render the component correctly when case type is SJP', async () => {
-    const { fixture, find, instance } = await renderComponent(manualCaseDefendantMock, 'J', true);
-
-    expect(find(`button[data-role='add']`)).toHaveLength(0);
-
-    expect(instance).toBeTruthy();
+    const addButton = fixture.debugElement.query(By.css(`button[data-role='add']`));
+    expect(addButton).toBeNull();
+    expect(formComponent).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should render the component correctly when case type is Non-SJP', async () => {
-    const { fixture, find, instance } = await renderComponent(manualCaseDefendantMock, 'Q', false);
+  it('should render the component correctly when case type is Non-SJP', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...manualCaseDefendantMock };
+    fixture.componentInstance.manualCaseType = 'Q';
+    fixture.componentInstance.isPoliceProsecutor = false;
+    fixture.detectChanges();
 
-    expect(find(`button[data-role='add']`)).toHaveLength(1);
-
-    expect(instance).toBeTruthy();
+    const addButton = fixture.debugElement.query(By.css(`button[data-role='add']`));
+    expect(addButton).toBeTruthy();
+    expect(formComponent).toBeTruthy();
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should submit valid form with all data entered', async () => {
-    const { find, bindings, instance } = await renderComponent(manualCaseDefendantMock, 'J', true);
+  it('should submit valid form with all data entered', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...manualCaseDefendantMock };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.componentInstance.isPoliceProsecutor = true;
+    fixture.detectChanges();
 
-    const continueButton = find(`button[data-role='continue']`);
+    formComponent.getUuid = generateUUID;
 
-    instance.getUuid = generateUUID;
-
+    const continueButton = fixture.debugElement.query(By.css(`button[data-role='continue']`));
     continueButton.nativeElement.click();
+    fixture.detectChanges();
 
-    manualCaseDefendantMock.id = 'uuid-001';
+    const expectedDefendant = { ...manualCaseDefendantMock };
+    expectedDefendant.id = 'uuid-001';
 
-    expect(bindings.handleFormSubmit).toHaveBeenCalledWith({
+    expect(fixture.componentInstance.handleFormSubmit).toHaveBeenCalledWith({
       action: 'continue',
-      defendantToStore: manualCaseDefendantMock
+      defendantToStore: expectedDefendant
     });
   });
 
-  it('should submit empty form trigger form error event', async () => {
-    jest.useFakeTimers();
+  it('should submit empty form trigger form error event', fakeAsync(() => {
+    const emptyModel = {} as ManualCaseDefendant;
 
-    const { find, bindings, fixture } = await renderComponent({}, 'J', true);
+    fixture.componentInstance.manualCaseDefendant = emptyModel;
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.componentInstance.isPoliceProsecutor = true;
+    fixture.detectChanges();
+    tick();
 
-    const continueButton = find(`button[data-role='continue']`);
+    const continueButton = fixture.debugElement.query(By.css(`button[data-role='continue']`));
     continueButton.nativeElement.click();
-    await fixture.whenStable();
+    fixture.detectChanges();
+    tick(); // the pdk emits errors in a setTimeout function, we need to tick to advance timers
+
+    fixture.detectChanges();
+    tick();
+
+    expect(fixture.componentInstance.handleFormError).toHaveBeenCalled();
+  }));
+
+  it('should trigger onBack event', () => {
+    fixture.componentInstance.manualCaseDefendant = { ...manualCaseDefendantMock };
+    fixture.componentInstance.manualCaseType = 'J';
+    fixture.componentInstance.isPoliceProsecutor = false;
     fixture.detectChanges();
 
-    jest.runAllTimers(); // the pdk emits errors in a setTimeout function, we need to mock this to avoid race conditions
-
-    await fixture.whenStable();
-    fixture.detectChanges();
-
-    Promise.resolve(true).then(result => {
-      expect(bindings.handleFormError).toHaveBeenCalled();
-    });
-  });
-
-  it('should trigger onBack event', async () => {
-    const { find, bindings } = await renderComponent(manualCaseDefendantMock, 'J', false);
-
-    const backButton = find('a:last-child');
+    const backButton = fixture.debugElement.query(By.css('a:last-child'));
     backButton.nativeElement.click();
+    fixture.detectChanges();
 
-    expect(bindings.handleFormBack).toHaveBeenCalled();
+    expect(fixture.componentInstance.handleFormBack).toHaveBeenCalled();
   });
+
+  @Component({
+    selector: 'organisation-defendant-form-test',
+    template: `
+      <organisation-defendant-form
+        [manualCaseDefendant]="manualCaseDefendant"
+        [manualCaseType]="manualCaseType"
+        [showAddButton]="true"
+        [isPoliceProsecutor]="isPoliceProsecutor"
+        (formSubmit)="handleFormSubmit($event)"
+        (formError)="handleFormError($event)"
+        (goBack)="handleFormBack($event)"
+      >
+      </organisation-defendant-form>
+    `,
+    imports: [OrganisationDefendantFormComponent]
+  })
+  class TestOrganisationDefendantFormComponent {
+    manualCaseDefendant: ManualCaseDefendant;
+    manualCaseType: string;
+    isPoliceProsecutor: boolean;
+    handleFormSubmit = jest.fn();
+    handleFormError = jest.fn();
+    handleFormBack = jest.fn();
+  }
 });

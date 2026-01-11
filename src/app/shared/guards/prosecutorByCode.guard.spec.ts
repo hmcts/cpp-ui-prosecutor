@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { TestColdObservable } from 'jasmine-marbles/src/test-observables';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
@@ -21,8 +21,8 @@ describe('ProsecutorByCodeGuard', () => {
     getProsecutorByCode = jest.fn();
 
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         ProsecutorByCodeGuard,
         MockStore,
         provideMockStore({
@@ -42,8 +42,8 @@ describe('ProsecutorByCodeGuard', () => {
         }
       ]
     });
-    store = TestBed.get(Store);
-    guard = TestBed.get(ProsecutorByCodeGuard);
+    store = TestBed.inject(MockStore);
+    guard = TestBed.inject(ProsecutorByCodeGuard);
   });
 
   describe('Exists in store', () => {

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { OrganisationUnit, ReferenceDataActions } from '@cpp/reference-data';
-import { select, Store, StoreModule } from '@ngrx/store';
+import { provideStore, select, Store } from '@ngrx/store';
 import {
   LoadAlcoholLevelMethodsSuccessAction,
   LoadObservedEthnicitiesSuccessAction,
@@ -38,10 +38,10 @@ let store: Store<State>;
 describe('Reference data selectors', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })]
+      providers: [provideStore(reducers, { runtimeChecks: {} })]
     });
 
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
   });
 
   describe('getEthnicities', () => {

@@ -9,7 +9,9 @@ export interface OffenceIdsWithDefendants {
   [offenceCode: string]: { defendants: ManualCaseDefendant[]; offence: ManualCaseOffence };
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ManualCaseOffenceStateService {
   public counter: string;
   private total: number;

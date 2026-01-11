@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Element, OffenceWordingMessage, ElementType } from '../../core/model/manual-case';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class OffenceParsingService {
   mp: MessageProcessor;
   sections: Element[];

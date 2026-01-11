@@ -16,10 +16,11 @@ describe('NoSeparatePenaltyOffenceDecisionComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NoSeparatePenaltyOffenceDecisionComponent, TestNoSeparatePenaltyOffenceDecisionComponent],
+      imports: [TestNoSeparatePenaltyOffenceDecisionComponent, NoSeparatePenaltyOffenceDecisionComponent],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestNoSeparatePenaltyOffenceDecisionComponent);
+    fixture.componentInstance.offenceDecision = noSeparatePenaltyOffence as NoSeparatePenaltyOffenceDecision;
   });
 
   it('should compile correctly with no separate penalty offence decision, that DOES NOT have licenseEndorsement and guilty plea', () => {
@@ -87,7 +88,8 @@ describe('NoSeparatePenaltyOffenceDecisionComponent', () => {
     selector: 'no-separate-penalty-offence-decision-test',
     template: `
       <no-separate-penalty-offence-decision [offenceDecision]="offenceDecision"></no-separate-penalty-offence-decision>
-    `
+    `,
+    imports: [NoSeparatePenaltyOffenceDecisionComponent]
   })
   class TestNoSeparatePenaltyOffenceDecisionComponent {
     @Input() offenceDecision: any;

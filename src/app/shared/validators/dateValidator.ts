@@ -9,14 +9,14 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors } from '@an
 const DATE_REGEX = /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/;
 
 @Directive({
-  selector: '[validateDate]',
-  providers: [
-    {
-      provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => DateValidator),
-      multi: true
-    }
-  ]
+    selector: '[validateDate]',
+    providers: [
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => DateValidator),
+            multi: true
+        }
+    ],
 })
 export class DateValidator implements Validator {
   validate(c: AbstractControl): ValidationErrors | null {

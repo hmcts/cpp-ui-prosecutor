@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { DigitsOnlyValidator } from '../digitsOnlyValidator';
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { DELETE, BACKSPACE, TAB, ENTER, ZERO, NINE } from '../digitsOnlyValidator';
 
 const P = 80;
@@ -17,8 +17,7 @@ describe('DigitsOnlyValidator', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DigitsOnlyValidator, TestDigitsOnlyComponent],
-      imports: [FormsModule]
+      imports: [FormsModule, TestDigitsOnlyComponent, DigitsOnlyValidator]
     });
     fixture = TestBed.createComponent(TestDigitsOnlyComponent);
     form = fixture.debugElement.children[0].injector.get(NgForm);
@@ -101,8 +100,9 @@ describe('DigitsOnlyValidator', () => {
     <form>
       <input name="digitsOnly" type="text" [ngModel]="model" validateDigitsOnly />
     </form>
-  `
+  `,
+  imports: [FormsModule, DigitsOnlyValidator]
 })
-class TestDigitsOnlyComponent {
+class TestDigitsOnlyComponent implements Validators {
   model: string;
 }

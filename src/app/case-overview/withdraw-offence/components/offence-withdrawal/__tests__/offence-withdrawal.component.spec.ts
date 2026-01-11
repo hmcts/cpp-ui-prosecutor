@@ -1,33 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { OffenceWithdrawalComponent } from '../offence-withdrawal.component';
-import {
-  PdkBadgeModule,
-  PdkCoreModule,
-  PdkDividerModule,
-  PdkFoldableTextModule,
-  PdkFormModule,
-  PdkRadioInputModule
-} from '@cpp/pdk';
 import { MOCK_OFFENCES } from '../../../../__tests__/test-mock-data';
 import { Offence } from '../../../../../contexts/sjp/index';
 import { By } from '@angular/platform-browser';
 import { Option } from '../../../../../shared/interfaces';
+import { FormsModule } from '@angular/forms';
+import { provideStore } from '@ngrx/store';
 
 describe('OffenceWithdrawalComponent', () => {
   let fixture: ComponentFixture<TestOffenceComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OffenceWithdrawalComponent, TestOffenceComponent],
-      imports: [
-        PdkCoreModule,
-        PdkDividerModule,
-        PdkFoldableTextModule,
-        PdkBadgeModule,
-        PdkRadioInputModule,
-        PdkFormModule
-      ],
+      imports: [TestOffenceComponent, OffenceWithdrawalComponent, FormsModule],
+      providers: [provideStore()],
       teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(TestOffenceComponent);
@@ -69,7 +56,8 @@ describe('OffenceWithdrawalComponent', () => {
           [offenceWithdrawalReasons]="offenceWithdrawalReasons"
         ></offence-withdrawal-component>
       </form>
-    `
+    `,
+    imports: [FormsModule, OffenceWithdrawalComponent]
   })
   class TestOffenceComponent {
     offence: Offence;

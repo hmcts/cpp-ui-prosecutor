@@ -4,14 +4,21 @@ import { ValidationError } from '@cpp/pdk/form/form.interfaces';
 import { Option } from '../../shared/interfaces';
 import { Breadcrumb } from '../../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.constant';
+import { BreadcrumbLinksComponent } from '../../shared/breadcrumb-links/breadcrumb-links.component';
+
+import { PdkCore, PdkErrorSummaryComponent, PdkGrid } from '@cpp/pdk';
+import { WithdrawOffenceFormComponent } from './withdraw-offence-form.component';
+import { CaseHeaderBadgeContainer } from '../common/case-header-badge/case-header-badge.container';
 
 @Component({
   selector: 'withdraw-offence-list',
   template: `
     <breadcrumb-links [caseId]="kase.id" [breadcrumbs]="breadcrumbs"></breadcrumb-links>
     <case-header-badge-container></case-header-badge-container>
-    <pdk-error-summary *ngIf="errors" pdk-margin-top="5" focusOnChange title="Fix the following" [errors]="errors">
+    @if (errors) {
+    <pdk-error-summary pdk-margin-top="5" focusOnChange title="Fix the following" [errors]="errors">
     </pdk-error-summary>
+    }
 
     <div>
       <h1 pdk-typography="heading-xlarge" pdk-margin-vertical="5" data-test="withdraw-offence-heading">
@@ -33,7 +40,15 @@ import { Breadcrumbs } from '../../shared/breadcrumb-links/breadcrumb-links.cons
       </pdk-grid>
     </pdk-grid>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    BreadcrumbLinksComponent,
+    PdkErrorSummaryComponent,
+    PdkGrid,
+    PdkCore,
+    WithdrawOffenceFormComponent,
+    CaseHeaderBadgeContainer
+  ]
 })
 export class WithdrawOffenceComponent {
   @Input() offences: Offence[];
@@ -42,5 +57,10 @@ export class WithdrawOffenceComponent {
   @Input() offenceWithdrawalReasons: Option[];
   @Output() formSubmit = new EventEmitter<WithdrawOffenceParam[]>();
   errors: ValidationError[];
-  breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.SEARCH, Breadcrumbs.CASE_OVERVIEW, Breadcrumbs.WITHDRAW_OFFENCE];
+  breadcrumbs: Breadcrumb[] = [
+    Breadcrumbs.HOME,
+    Breadcrumbs.SEARCH,
+    Breadcrumbs.CASE_OVERVIEW,
+    Breadcrumbs.WITHDRAW_OFFENCE
+  ];
 }

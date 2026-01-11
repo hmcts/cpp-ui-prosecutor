@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
-import { PdkCoreModule, PdkFoldableTextModule } from '@cpp/pdk';
-import { CommonModule } from '@angular/common';
 import { StatementOfFactsComponent } from '../statement-of-facts.component';
 
 describe('StatementOfFactsComponent', () => {
@@ -9,8 +7,7 @@ describe('StatementOfFactsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StatementOfFactsComponent, TestStatementOfFactsComponent],
-      imports: [CommonModule, PdkCoreModule, PdkFoldableTextModule],
+      imports: [TestStatementOfFactsComponent, StatementOfFactsComponent],
       teardown: { destroyAfterEach: false }
     });
 
@@ -27,7 +24,8 @@ describe('StatementOfFactsComponent', () => {
     selector: 'statement-of-facts-test',
     template: `
       <statement-of-facts [statementOfFacts]="statement"> </statement-of-facts>
-    `
+    `,
+    imports: [StatementOfFactsComponent]
   })
   class TestStatementOfFactsComponent {
     statement: string;

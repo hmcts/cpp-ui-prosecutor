@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DevToolsDashboardComponent } from '../dashboard.component';
-import { PdkCoreModule, PdkGridModule } from '@cpp/pdk';
+import { ActivatedRoute } from '@angular/router';
 
 describe('DevTools dashboard component', () => {
   let fixture: ComponentFixture<TestComponent>;
@@ -12,8 +12,15 @@ describe('DevTools dashboard component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent, DevToolsDashboardComponent],
-      imports: [PdkCoreModule, PdkGridModule],
+      imports: [TestComponent, DevToolsDashboardComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: { params: { id: '123' } }
+          }
+        }
+      ],
       teardown: { destroyAfterEach: false }
     });
 
@@ -46,7 +53,8 @@ describe('DevTools dashboard component', () => {
 
 @Component({
   selector: 'test-devtools',
-  template: '<dev-tools-dashboard [user]="user"></dev-tools-dashboard>'
+  template: '<dev-tools-dashboard [user]="user"></dev-tools-dashboard>',
+  imports: [DevToolsDashboardComponent]
 })
 class TestComponent {
   fakeSessionEnabled: boolean;

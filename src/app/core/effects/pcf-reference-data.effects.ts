@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Action, select, Store } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
@@ -12,6 +12,10 @@ import { ReferenceDataService } from '../../contexts/reference-data';
 
 @Injectable()
 export class PCFReferenceDataEffects {
+  private actions$ = inject(Actions);
+  private store = inject<Store<State>>(Store);
+  private referenceData = inject(ReferenceDataService);
+
   loadEthnicities$: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType<ReferenceDataActions.LoadEthnicitiesAction>(ReferenceDataActions.LOAD_ETHNICITIES),
@@ -54,5 +58,6 @@ export class PCFReferenceDataEffects {
     )
   );
 
-  constructor(private actions$: Actions, private store: Store<State>, private referenceData: ReferenceDataService) {}
+
+  constructor() {}
 }

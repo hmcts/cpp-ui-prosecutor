@@ -1,19 +1,24 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
+import { AgePipe } from '../pipes/age/age.pipe';
+import { FormatDatePipe } from '../pipes/format-date/format-date.pipe';
+
 @Component({
-  selector: 'date-of-birth',
-  template: `
-    <div *ngIf="!!dateOfBirth; else noDateOfBirth">
-      {{ dateOfBirth | formatDate: 'd MMM y' }}
-      ({{ dateOfBirth | age }} years old)
-    </div>
-    <ng-template #noDateOfBirth>
+    selector: 'date-of-birth',
+    template: `
+    @if (!!dateOfBirth) {
+      <div>
+        {{ dateOfBirth | formatDate: 'd MMM y' }}
+        ({{ dateOfBirth | age }} years old)
+      </div>
+    } @else {
       <div>
         {{ defaultSubstitute }}
       </div>
-    </ng-template>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    }
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [AgePipe, FormatDatePipe],
 })
 export class DateOfBirthComponent {
   @Input()

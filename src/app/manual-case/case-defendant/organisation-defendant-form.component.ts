@@ -1,13 +1,44 @@
 import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ManualCaseDefendant } from '../../core/model/manual-case-defendant';
 import { merge } from 'lodash';
 import uuid from 'uuid/v4';
-import { ValidationError } from '@cpp/pdk';
+import {
+  ValidationError,
+  PdkFormFieldComponent,
+  PdkRadioGroupComponent,
+  PdkRadioButtonComponent,
+  PdkFormGroupComponent,
+  PdkCore,
+  PdkForm,
+  PdkTextInput,
+  PdkInput,
+  PdkButtonDirective,
+  PdkResizeDirective
+} from '@cpp/pdk';
+import { AddressInputComponent, EmailValidator, PhoneValidator } from '../../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'organisation-defendant-form',
-  templateUrl: './organisation-defendant-form.component.html'
+  templateUrl: './organisation-defendant-form.component.html',
+  imports: [
+    PdkForm,
+    PdkCore,
+    PdkFormFieldComponent,
+    AddressInputComponent,
+    PdkRadioGroupComponent,
+    PdkRadioButtonComponent,
+    PdkFormGroupComponent,
+    TranslateModule,
+    FormsModule,
+    PdkTextInput,
+    PdkInput,
+    PdkButtonDirective,
+    PdkResizeDirective,
+    PhoneValidator,
+    EmailValidator
+  ]
 })
 export class OrganisationDefendantFormComponent {
   @Input() aliasesReset: boolean;
@@ -33,7 +64,7 @@ export class OrganisationDefendantFormComponent {
     return uuid();
   }
 
-  onErrors(error: ValidationError[]) {
+  onErrors(error: ValidationError[] | any) {
     if (error) {
       this.formError.emit(error);
     }

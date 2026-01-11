@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { PleadedNotGuiltyDataGuard } from '../pleaded-not-guilty-data.guard';
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../../reducers';
 import { PleadedNotGuiltyCaseResult, SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
-import { LoadPleadedNotGuiltyCases } from '../../actions/entities';
+import { LoadPleadedNotGuiltyCases, LoadSelectedRegionSuccess } from '../../actions/entities';
 
 describe('PleadedNotGuiltyDataGuard', () => {
   let pleadedNotGuiltyCasesDataGuard: PleadedNotGuiltyDataGuard;
@@ -18,9 +18,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
     navigate = jest.fn();
 
     TestBed.configureTestingModule({
-      declarations: [],
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         PleadedNotGuiltyDataGuard,
         {
           provide: SjpService,
@@ -38,8 +37,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    pleadedNotGuiltyCasesDataGuard = TestBed.get(PleadedNotGuiltyDataGuard);
-    store = TestBed.get(Store);
+    pleadedNotGuiltyCasesDataGuard = TestBed.inject(PleadedNotGuiltyDataGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 
@@ -47,6 +46,8 @@ describe('PleadedNotGuiltyDataGuard', () => {
     const pendingDatesToAvoidPayLoad = {} as PleadedNotGuiltyCaseResult;
     const pendingCasesToAvoid$ = cold('-a|', { a: pendingDatesToAvoidPayLoad });
     const expected$ = cold('-(b|)', { b: true });
+
+    store.dispatch(new LoadSelectedRegionSuccess('WEST'));
 
     getPendingDatesToAvoid.mockReturnValue(pendingCasesToAvoid$);
 

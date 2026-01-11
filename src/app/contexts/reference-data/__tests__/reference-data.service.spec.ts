@@ -25,7 +25,7 @@ describe('ReferenceDataService', () => {
         }
       ]
     });
-    referenceData = TestBed.get(ReferenceDataService);
+    referenceData = TestBed.inject(ReferenceDataService);
   });
 
   describe('getOffenceWithdrawalReasons', () => {

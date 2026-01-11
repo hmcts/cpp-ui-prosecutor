@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Employment } from 'src/app/contexts/sjp';
+import { Employment } from '../../../contexts/sjp';
 
 export const employmentStatusMap = {
   EMPLOYED: 'Employed',

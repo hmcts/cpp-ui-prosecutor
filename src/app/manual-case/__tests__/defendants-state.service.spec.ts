@@ -10,7 +10,7 @@ describe('Manual Case Defendant State Service', () => {
       providers: [ManualCaseDefendantStateService]
     });
 
-    defendantStateService = TestBed.get(ManualCaseDefendantStateService);
+    defendantStateService = TestBed.inject(ManualCaseDefendantStateService);
   });
 
   afterEach(() => {

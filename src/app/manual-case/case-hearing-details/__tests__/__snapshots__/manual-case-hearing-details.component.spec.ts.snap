@@ -3,16 +3,16 @@
 exports[`Manual case initial hearing should render the component 1`] = `
 <manual-case-hearing-details
   _hearingDurationFocused="false"
-  cdr={[Function ViewRef$1]}
+  cdr={[Function ViewRef]}
   courtCentreSuggestions={[Function Array]}
   courtCentres={[Function Array]}
   courtRoomSugestions={[Function Array]}
   editManualCase={[Function Object]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   hasCourtRoom={[Function Boolean]}
   hearingTypeSuggestions={[Function Array]}
   jurisdictionTypeCode={[Function Object]}
-  location={[Function SpyLocation]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   submitFormData={[Function EventEmitter_]}
 >
@@ -131,7 +131,7 @@ exports[`Manual case initial hearing should render the component 1`] = `
                     class="govuk-hint"
                   >
                     <div>
-                      For example, 23 10 2017
+                       For example, 23 10 2017 
                     </div>
                   </pdk-hint>
                   <pdk-date-input
@@ -278,14 +278,12 @@ exports[`Manual case initial hearing should render the component 1`] = `
                   class="govuk-hint"
                 >
                   <div>
-                    For example, 10 30
+                     For example, 10 30 
                   </div>
                 </pdk-hint>
                 <pdk-time-input
-                  autoshift=""
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="hearing-earliest-start-input"
-                  labelhidden="false"
                   name="timeOfHearing"
                   required=""
                 >
@@ -360,7 +358,6 @@ exports[`Manual case initial hearing should render the component 1`] = `
                 <pdk-time-input
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="hearing-estimated-minutes-input"
-                  labelhidden="false"
                   name="hearingDuration"
                   required=""
                 >
@@ -441,7 +438,7 @@ exports[`Manual case initial hearing should render the component 1`] = `
                     class="govuk-radios govuk-radios--inline"
                   >
                     <pdk-radio-button
-                      value="E"
+                      value="ENGLISH"
                     >
                       <div
                         class="govuk-radios__item"
@@ -451,7 +448,7 @@ exports[`Manual case initial hearing should render the component 1`] = `
                           id="pdk-radio-GENERATED_ID"
                           name="pdk-radio-group-GENERATED_ID"
                           type="radio"
-                          value="E"
+                          value="ENGLISH"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
@@ -463,7 +460,7 @@ exports[`Manual case initial hearing should render the component 1`] = `
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      value="W"
+                      value="WELSH"
                     >
                       <div
                         class="govuk-radios__item"
@@ -473,7 +470,7 @@ exports[`Manual case initial hearing should render the component 1`] = `
                           id="pdk-radio-GENERATED_ID"
                           name="pdk-radio-group-GENERATED_ID"
                           type="radio"
-                          value="W"
+                          value="WELSH"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
@@ -522,16 +519,16 @@ exports[`Manual case initial hearing should render the component 1`] = `
 exports[`Manual case initial hearing should render the component 2 1`] = `
 <manual-case-hearing-details
   _hearingDurationFocused="false"
-  cdr={[Function ViewRef$1]}
+  cdr={[Function ViewRef]}
   courtCentreSuggestions={[Function Array]}
   courtCentres={[Function Array]}
   courtRoomSugestions={[Function Array]}
   editManualCase={[Function Object]}
-  form={[Function NgForm]}
+  form={[Function _NgForm]}
   hasCourtRoom="false"
   hearingTypeSuggestions={[Function Array]}
   jurisdictionTypeCode={[Function Object]}
-  location={[Function SpyLocation]}
+  location={[Function _Location]}
   manualCaseDetail={[Function Object]}
   submitFormData={[Function EventEmitter_]}
 >
@@ -650,7 +647,7 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                     class="govuk-hint"
                   >
                     <div>
-                      For example, 23 10 2017
+                       For example, 23 10 2017 
                     </div>
                   </pdk-hint>
                   <pdk-date-input
@@ -797,14 +794,12 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                   class="govuk-hint"
                 >
                   <div>
-                    For example, 10 30
+                     For example, 10 30 
                   </div>
                 </pdk-hint>
                 <pdk-time-input
-                  autoshift=""
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="hearing-earliest-start-input"
-                  labelhidden="false"
                   name="timeOfHearing"
                   required=""
                 >
@@ -879,7 +874,6 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                 <pdk-time-input
                   class="ng-untouched ng-pristine ng-valid"
                   data-role="hearing-estimated-minutes-input"
-                  labelhidden="false"
                   name="hearingDuration"
                   required=""
                 >
@@ -960,7 +954,7 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                     class="govuk-radios govuk-radios--inline"
                   >
                     <pdk-radio-button
-                      value="E"
+                      value="ENGLISH"
                     >
                       <div
                         class="govuk-radios__item"
@@ -970,7 +964,7 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                           id="pdk-radio-GENERATED_ID"
                           name="pdk-radio-group-GENERATED_ID"
                           type="radio"
-                          value="E"
+                          value="ENGLISH"
                         />
                         <label
                           class="govuk-radios__label govuk-label"
@@ -982,7 +976,7 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                       </div>
                     </pdk-radio-button>
                     <pdk-radio-button
-                      value="W"
+                      value="WELSH"
                     >
                       <div
                         class="govuk-radios__item"
@@ -992,7 +986,7 @@ exports[`Manual case initial hearing should render the component 2 1`] = `
                           id="pdk-radio-GENERATED_ID"
                           name="pdk-radio-group-GENERATED_ID"
                           type="radio"
-                          value="W"
+                          value="WELSH"
                         />
                         <label
                           class="govuk-radios__label govuk-label"

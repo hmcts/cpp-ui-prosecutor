@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import { State } from '../core/reducers';
@@ -8,9 +8,15 @@ import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
 import { LoadDefendantDetailsUpdates } from '../core/actions';
 import { getRegion } from '../core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DefendantDetailsUpdatesPageDataGuard implements CanActivate {
-  constructor(private store: Store<State>, private sjpService: SjpService, private router: Router) {}
+  private store = inject<Store<State>>(Store);
+  private sjpService = inject(SjpService);
+  private router = inject(Router);
+
+  constructor() {}
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(

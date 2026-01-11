@@ -1,4 +1,4 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { provideStore, Store } from '@ngrx/store';
 import { reducers, State } from '../../reducers';
 import { TestBed } from '@angular/core/testing';
 import { cold } from 'jasmine-marbles';
@@ -17,8 +17,8 @@ describe('RegionsGuard', () => {
     getRegions = jest.fn();
     navigate = jest.fn();
     TestBed.configureTestingModule({
-      imports: [StoreModule.forRoot(reducers, { runtimeChecks: {} })],
       providers: [
+        provideStore(reducers, { runtimeChecks: {} }),
         RegionsGuard,
         {
           provide: SjpService,
@@ -36,8 +36,8 @@ describe('RegionsGuard', () => {
       teardown: { destroyAfterEach: false }
     });
 
-    guard = TestBed.get(RegionsGuard);
-    store = TestBed.get(Store);
+    guard = TestBed.inject(RegionsGuard);
+    store = TestBed.inject(Store);
     jest.spyOn(store, 'dispatch');
   });
 
