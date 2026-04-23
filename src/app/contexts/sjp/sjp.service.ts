@@ -9,7 +9,7 @@ import {
   DefendantOnlinePlea,
   PleadedNotGuiltyCaseResult,
   Region,
-  SearchResult,
+  SearchResult
 } from './sjp.interface';
 import { WithdrawOffenceRequestParam } from './sjp-param.interface';
 import { Observable } from 'rxjs';
@@ -27,7 +27,6 @@ export class SjpService {
   private readonly query = '/sjp-query-api/query/api/rest/sjp';
   private readonly command = '/sjp-command-api/command/api/rest/sjp';
 
-
   constructor() {}
 
   getCaseById(caseId: string): Observable<Case> {
@@ -37,10 +36,17 @@ export class SjpService {
     });
   }
 
-  getPendingDatesToAvoid(regionId: string = null): Observable<PleadedNotGuiltyCaseResult> {
+  getPendingDatesToAvoid(
+    regionId: string = null,
+    prosecutingAuthority: string = null
+  ): Observable<PleadedNotGuiltyCaseResult> {
     let params = new HttpParams();
     if (regionId && regionId !== 'ALL') {
       params = params.set('regionId', regionId);
+    }
+
+    if (prosecutingAuthority && prosecutingAuthority !== 'All') {
+      params = params.set('prosecutingAuthority', prosecutingAuthority);
     }
 
     return this.http.query({
@@ -79,10 +85,18 @@ export class SjpService {
     });
   }
 
-  getDefendantDetailsUpdates(limit: number, regionId: string = null): Observable<DefendantDetailsUpdatesResult> {
+  getDefendantDetailsUpdates(
+    limit: number,
+    regionId: string = null,
+    prosecutingAuthority: string = null
+  ): Observable<DefendantDetailsUpdatesResult> {
     let params = new HttpParams().set('limit', limit.toString());
     if (regionId && regionId !== 'ALL') {
       params = params.set('regionId', regionId);
+    }
+
+    if (prosecutingAuthority && prosecutingAuthority !== 'All') {
+      params = params.set('prosecutingAuthority', prosecutingAuthority);
     }
 
     return this.http.query({

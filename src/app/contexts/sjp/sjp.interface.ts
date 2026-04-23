@@ -263,6 +263,7 @@ interface DefendantDetailsUpdate {
   addressUpdated: boolean;
   caseId: string;
   caseUrn: string;
+  prosecutingAuthority: string;
   defendantId: string;
   nameUpdated: boolean;
   region: string;

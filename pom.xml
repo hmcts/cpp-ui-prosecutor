@@ -23,7 +23,7 @@
     <skip.report.pack>true</skip.report.pack>
     <skip.dist.pack>false</skip.dist.pack>
     <node.version>v18.20.4</node.version>
-    <npm.version>10.7.0</npm.version> 
+    <npm.version>10.7.0</npm.version>
    <node.download.root>https://nodejs.org/dist</node.download.root>
    <npm.download.root>https://registry.npmjs.org/-/binary/npm/v</npm.download.root>
    <npm.registry.url>https://registry.npmjs.org</npm.registry.url>

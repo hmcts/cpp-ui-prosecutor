@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideStore, Store } from '@ngrx/store';
 import { State } from '../../reducers';
 import { Component, Input } from '@angular/core';
-import { LoadDefendantDetailsUpdates } from '../../core/actions/entities';
+import { LoadDefendantDetailsUpdates } from '../../core';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../dashboard/__tests__/test-mock-data';
 import { DefendantDetailsUpdatesContainer } from '../defendant-details-updates.container';
 import { AcknowledgeDefendantDetailsUpdates } from '../defendant-details-updates.action';
@@ -66,6 +66,34 @@ describe('DefendantDetailsUpdatesContainer', () => {
       expect(store.dispatch).toHaveBeenCalledWith(new AcknowledgeDefendantDetailsUpdates(params));
     });
   });
+
+  describe('setRegion', () => {
+    it('should dispatch SetFilter action and navigate to the selected region', () => {
+      const payload = {
+        selectedRegion: 'London',
+        prosecutor: 'TFL'
+      };
+
+      spyOn(store, 'dispatch');
+      const routerSpy = spyOn(fixture.componentInstance['router'], 'navigate');
+
+      fixture.componentInstance.setFilter(payload);
+
+      expect(store.dispatch).toHaveBeenCalledWith(expect.any(Object));
+      expect(routerSpy).toHaveBeenCalledWith(['user', 'defendant-details-updates', 'London', 'TFL']);
+    });
+  });
+
+  describe('viewCase', () => {
+    it('should navigate to case overview with the correct caseId', () => {
+      const caseId = 'test-case-id-123';
+      const routerSpy = spyOn(fixture.componentInstance['router'], 'navigate');
+
+      fixture.componentInstance.viewCase(caseId);
+
+      expect(routerSpy).toHaveBeenCalledWith(['user', 'case-overview', caseId]);
+    });
+  });
 });
 
 // noinspection AngularMissingOrInvalidDeclarationInModule
@@ -74,10 +102,12 @@ describe('DefendantDetailsUpdatesContainer', () => {
   template: `
     <span>{{ defendantDetailsUpdates | json }}</span>
     <span>{{ region | json }}</span>
+    <span>{{ prosecutorOptions | json }}</span>
   `,
   imports: [JsonPipe]
 })
 class MockDefendantDetailsUpdatesComponent {
-  @Input() defendantDetailsUpdates;
-  @Input() region;
+  @Input() defendantDetailsUpdates: any;
+  @Input() region: any;
+  @Input() prosecutorOptions: any;
 }

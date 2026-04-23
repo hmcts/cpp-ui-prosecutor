@@ -6,7 +6,9 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
   form={[Function _NgForm]}
-  setRegion={[Function EventEmitter_]}
+  minNumberOfProsecutor={[Function Number]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
@@ -77,30 +79,39 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         novalidate=""
         pdk-form=""
       >
-        <label
-          class="govuk-label"
-          pdk-label=""
-        >
-          Filter by region
-        </label>
         <div
           style="display: inline-flex;"
         >
-          <pdk-select
-            class="ng-untouched ng-pristine ng-valid"
-            name="selectedRegion"
-            required=""
+          <pdk-form-field
+            label="Filter by region"
           >
-            <select
-              class="govuk-select"
-              id="pdk-select-GENERATED_ID"
-              name="selectedRegion"
-              required=""
+            <pdk-form-group
+              class="pdk-form-group"
             >
-            </select>
-          </pdk-select>
+              <label
+                class="govuk-label"
+                for="pdk-select-GENERATED_ID"
+              >
+                 Filter by region 
+              </label>
+              <pdk-select
+                class="ng-untouched ng-pristine ng-valid"
+                name="selectedRegion"
+                required=""
+              >
+                <select
+                  class="govuk-select"
+                  id="pdk-select-GENERATED_ID"
+                  name="selectedRegion"
+                  required=""
+                >
+                </select>
+              </pdk-select>
+            </pdk-form-group>
+          </pdk-form-field>
           <pdk-form-group
             class="pdk-form-group"
+            style="align-content: end;"
           >
             <button
               class="govuk-!-margin-left-2 govuk-button"
@@ -140,6 +151,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
           scope="col"
         >
           Case reference number
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Prosecutor
         </th>
         <th
           class="govuk-table__cell"
@@ -210,6 +228,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         </td>
         <td
           class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           DVLA 
+        </td>
+        <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
@@ -231,6 +256,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
               {
     "firstName": "John",
     "lastName": "Jones",
+    "prosecutingAuthority": "DVLA",
     "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
     "caseId": "842054bb-3e72-4166-ae67-52355f047765",
     "region": "London",
@@ -295,6 +321,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
         </td>
         <td
           class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           DVLA 
+        </td>
+        <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
@@ -316,6 +349,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with less
               {
     "firstName": "Bob",
     "lastName": "Last",
+    "prosecutingAuthority": "DVLA",
     "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
     "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
     "region": "London",
@@ -371,7 +405,9 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
   breadcrumbs={[Function Array]}
   defendantDetailsUpdates={[Function Object]}
   form={[Function _NgForm]}
-  setRegion={[Function EventEmitter_]}
+  minNumberOfProsecutor={[Function Number]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
@@ -445,30 +481,39 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         novalidate=""
         pdk-form=""
       >
-        <label
-          class="govuk-label"
-          pdk-label=""
-        >
-          Filter by region
-        </label>
         <div
           style="display: inline-flex;"
         >
-          <pdk-select
-            class="ng-untouched ng-pristine ng-valid"
-            name="selectedRegion"
-            required=""
+          <pdk-form-field
+            label="Filter by region"
           >
-            <select
-              class="govuk-select"
-              id="pdk-select-GENERATED_ID"
-              name="selectedRegion"
-              required=""
+            <pdk-form-group
+              class="pdk-form-group"
             >
-            </select>
-          </pdk-select>
+              <label
+                class="govuk-label"
+                for="pdk-select-GENERATED_ID"
+              >
+                 Filter by region 
+              </label>
+              <pdk-select
+                class="ng-untouched ng-pristine ng-valid"
+                name="selectedRegion"
+                required=""
+              >
+                <select
+                  class="govuk-select"
+                  id="pdk-select-GENERATED_ID"
+                  name="selectedRegion"
+                  required=""
+                >
+                </select>
+              </pdk-select>
+            </pdk-form-group>
+          </pdk-form-field>
           <pdk-form-group
             class="pdk-form-group"
+            style="align-content: end;"
           >
             <button
               class="govuk-!-margin-left-2 govuk-button"
@@ -508,6 +553,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
           scope="col"
         >
           Case reference number
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Prosecutor
         </th>
         <th
           class="govuk-table__cell"
@@ -578,6 +630,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         </td>
         <td
           class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           DVLA 
+        </td>
+        <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
@@ -599,6 +658,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
               {
     "firstName": "John",
     "lastName": "Jones",
+    "prosecutingAuthority": "DVLA",
     "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
     "caseId": "842054bb-3e72-4166-ae67-52355f047765",
     "region": "London",
@@ -663,6 +723,13 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
         </td>
         <td
           class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+           DVLA 
+        </td>
+        <td
+          class="govuk-table__cell"
           data-role="region"
           pdk-table-cell=""
         >
@@ -684,6 +751,7 @@ exports[`DefendantDetailsUpdatesComponent when the component is loaded with more
               {
     "firstName": "Bob",
     "lastName": "Last",
+    "prosecutingAuthority": "DVLA",
     "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
     "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
     "region": "London",

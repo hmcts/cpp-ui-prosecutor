@@ -174,6 +174,85 @@ describe('SjpService', () => {
         requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
       });
     });
+
+    it('should make a call with prosecuting authority', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10, null, 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '10').set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
+
+    it('should make a call with region and prosecuting authority', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10, 'testRegionId', 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams()
+        .set('limit', '10')
+        .set('regionId', 'testRegionId')
+        .set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
+
+    it('should not include region when regionId is ALL', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10, 'ALL', 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '10').set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
+
+    it('should not include prosecuting authority when it is All', () => {
+      const result = MOCK_DEFENDANT_DETAILS_UPDATES;
+      const expected$ = cold('-b|', { b: result });
+      const response$ = cold('-a|', { a: result });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getDefendantDetailsUpdates(10, 'testRegionId', 'All');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('limit', '10').set('regionId', 'testRegionId');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/defendant-details-updates',
+        params,
+        requestType: 'application/vnd.sjp.query.defendant-details-updates+json'
+      });
+    });
   });
 
   describe('acknowledgeDefendantDetailsUpdates', () => {
@@ -292,6 +371,82 @@ describe('SjpService', () => {
       mockQuery.mockReturnValue(response$);
 
       const query$ = service.getPendingDatesToAvoid('testRegionId');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('regionId', 'testRegionId');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+
+    it('should make a call with prosecuting authority', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid(null, 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+
+    it('should make a call with region and prosecuting authority', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid('testRegionId', 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('regionId', 'testRegionId').set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+
+    it('should not include region when regionId is ALL', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid('ALL', 'TFL');
+
+      expect(query$).toBeObservable(expected$);
+      const params = new HttpParams().set('prosecutingAuthority', 'TFL');
+
+      expect(http.query).toHaveBeenCalledWith({
+        url: '/sjp-query-api/query/api/rest/sjp/cases/pending-dates-to-avoid',
+        params,
+        requestType: 'application/vnd.sjp.query.pending-dates-to-avoid+json'
+      });
+    });
+
+    it('should not include prosecuting authority when it is All', () => {
+      const response = { body: '*' };
+      const response$ = cold('-a|', { a: response });
+      const expected$ = cold('-b|', { b: response });
+
+      mockQuery.mockReturnValue(response$);
+
+      const query$ = service.getPendingDatesToAvoid('testRegionId', 'All');
 
       expect(query$).toBeObservable(expected$);
       const params = new HttpParams().set('regionId', 'testRegionId');

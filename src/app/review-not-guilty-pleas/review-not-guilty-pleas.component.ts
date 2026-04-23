@@ -1,25 +1,27 @@
-import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
-import { NgForm, FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RegionState } from '../core/reducers/entities.reducer';
 import { BreadcrumbLinksComponent } from '../shared/breadcrumb-links/breadcrumb-links.component';
 import {
-  PdkWarningTextComponent,
+  PdkButtonDirective,
+  PdkCore,
   PdkDividerComponent,
+  PdkForm,
+  PdkFormGroupComponent,
   PdkGridComponent,
   PdkSelectComponent,
-  PdkFormGroupComponent,
   PdkTable,
-  PdkForm,
-  PdkCore,
-  PdkLabelDirective,
-  PdkButtonDirective
+  PdkWarningTextComponent,
+  SelectOption
 } from '@cpp/pdk';
 import { DatePipe, NgPlural, NgPluralCase } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DefendantNamePipe } from '../shared/pipes/defendant-name/defendant-name.pipe';
 import { FormatAddressPipe } from '../shared/pipes/format-address/format-address.pipe';
+import { SetFilterPayload } from '../core';
+import { PleadedNotGuiltyCaseResult } from '../contexts/sjp';
 
 @Component({
   selector: 'review-not-guilty-pleas',
@@ -45,12 +47,24 @@ import { FormatAddressPipe } from '../shared/pipes/format-address/format-address
       </span>
       <pdk-grid container>
         <pdk-grid one-half>
-          <form pdk-form (validSubmit)="setRegion.emit(form.value.selectedRegion)">
-            <label pdk-label>Filter by region</label>
+          <form pdk-form (validSubmit)="setFilter.emit(form.value)">
             <div style="display: inline-flex">
-              <pdk-select [ngModel]="region?.selectedRegion" [options]="region?.regions" name="selectedRegion" required>
-              </pdk-select>
-              <pdk-form-group>
+              @if (prosecutorOptions.length > minProsecutorCount) {
+              <pdk-form-field label="Filter by prosecutor" pdk-margin-right="2">
+                <pdk-select [ngModel]="region?.prosecutor" [options]="prosecutorOptions" name="prosecutor" required>
+                </pdk-select>
+              </pdk-form-field>
+              }
+              <pdk-form-field label="Filter by region">
+                <pdk-select
+                  [ngModel]="region?.selectedRegion"
+                  [options]="region?.regions"
+                  name="selectedRegion"
+                  required
+                >
+                </pdk-select>
+              </pdk-form-field>
+              <pdk-form-group style="align-content: end">
                 <button pdk-button pdk-margin-left="2" type="submit">Filter</button>
               </pdk-form-group>
             </div>
@@ -132,15 +146,16 @@ import { FormatAddressPipe } from '../shared/pipes/format-address/format-address
     PdkTable,
     PdkForm,
     PdkCore,
-    PdkLabelDirective,
     PdkButtonDirective
   ]
 })
 export class ReviewNotGuiltyPleasComponent {
+  readonly minProsecutorCount = 2;
   @ViewChild(NgForm) form: NgForm;
-  @Input() pleadedNotGuiltyCasesDetail;
+  @Input() pleadedNotGuiltyCasesDetail: PleadedNotGuiltyCaseResult;
   @Input() region: RegionState;
-  @Output() setRegion = new EventEmitter();
+  @Input() prosecutorOptions: SelectOption[] = [];
+  @Output() setFilter = new EventEmitter<SetFilterPayload>();
   @Output() viewCase = new EventEmitter();
   breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.REVIEW_NOT_GUILTY_PLEAS];
 }

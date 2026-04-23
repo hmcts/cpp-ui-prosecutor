@@ -1,28 +1,28 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { AcknowledgeDefendantDetailsUpdatesParam } from '../contexts/sjp';
+import { AcknowledgeDefendantDetailsUpdatesParam, DefendantDetailsUpdatesResult } from '../contexts/sjp';
 import { Breadcrumb } from '../shared/breadcrumb-links/breadcrumb-links.interface';
 import { Breadcrumbs } from '../shared/breadcrumb-links/breadcrumb-links.constant';
 import { RegionState } from '../core/reducers/entities.reducer';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { BreadcrumbLinksComponent } from '../shared/breadcrumb-links/breadcrumb-links.component';
 import {
+  PdkButtonDirective,
+  PdkCore,
+  PdkDividerComponent,
+  PdkForm,
+  PdkFormGroupComponent,
+  PdkGrid,
   PdkInsetTextComponent,
   PdkSelectComponent,
-  PdkFormGroupComponent,
-  PdkWarningTextComponent,
-  PdkDividerComponent,
-  PdkCore,
-  PdkForm,
-  PdkGrid,
   PdkTable,
-  PdkLabelDirective,
-  PdkButtonDirective
+  PdkWarningTextComponent,
+  SelectOption
 } from '@cpp/pdk';
 import { DatePipe, NgPlural, NgPluralCase } from '@angular/common';
 import { WhatChangedComponent } from './what-changed/what-changed.component';
 import { DefendantNamePipe } from '../shared/pipes/defendant-name/defendant-name.pipe';
-import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { SetFilterPayload } from '../core';
 
 @Component({
   selector: 'defendant-details-updates',
@@ -41,12 +41,19 @@ import { RouterLink } from '@angular/router';
     </pdk-inset-text>
     <pdk-grid container>
       <pdk-grid one-half>
-        <form pdk-form (validSubmit)="setRegion.emit(form.value.selectedRegion)">
-          <label pdk-label>Filter by region</label>
+        <form pdk-form (validSubmit)="setFilter.emit(form.value)">
           <div style="display: inline-flex">
-            <pdk-select [ngModel]="region?.selectedRegion" [options]="region?.regions" name="selectedRegion" required>
-            </pdk-select>
-            <pdk-form-group>
+            @if (prosecutorOptions.length > minNumberOfProsecutor) {
+            <pdk-form-field label="Filter by prosecutor" pdk-margin-right="2">
+              <pdk-select [ngModel]="region?.prosecutor" [options]="prosecutorOptions" name="prosecutor" required>
+              </pdk-select>
+            </pdk-form-field>
+            }
+            <pdk-form-field label="Filter by region">
+              <pdk-select [ngModel]="region?.selectedRegion" [options]="region?.regions" name="selectedRegion" required>
+              </pdk-select>
+            </pdk-form-field>
+            <pdk-form-group style="align-content: end">
               <button pdk-button pdk-margin-left="2" type="submit">Filter</button>
             </pdk-form-group>
           </div>
@@ -59,6 +66,7 @@ import { RouterLink } from '@angular/router';
         <tr pdk-table-row>
           <th pdk-table-header>Name</th>
           <th pdk-table-header>Case reference number</th>
+          <th pdk-table-header>Prosecutor</th>
           <th pdk-table-header>Region</th>
           <th pdk-table-header>Date of birth</th>
           <th pdk-table-header>What changed?</th>
@@ -76,6 +84,9 @@ import { RouterLink } from '@angular/router';
           </td>
           <td pdk-table-cell data-role="urn">
             {{ defendantDetailsUpdate.caseUrn }}
+          </td>
+          <td pdk-table-cell data-role="urn">
+            {{ defendantDetailsUpdate.prosecutingAuthority ?? '–' }}
           </td>
           <td pdk-table-cell data-role="region">
             {{ defendantDetailsUpdate.region }}
@@ -95,7 +106,7 @@ import { RouterLink } from '@angular/router';
               pdk-link
               data-role="remove-link"
               (click)="
-                acknowledgeDefendendantDetailsUpdate(defendantDetailsUpdate.caseId, defendantDetailsUpdate.defendantId)
+                acknowledgeDefendantDetailsUpdate(defendantDetailsUpdate.caseId, defendantDetailsUpdate.defendantId)
               "
               >Remove</a
             >
@@ -135,20 +146,23 @@ import { RouterLink } from '@angular/router';
     DefendantNamePipe,
     FormsModule,
     RouterLink,
-    PdkLabelDirective,
     PdkButtonDirective
   ]
 })
 export class DefendantDetailsUpdatesComponent {
+  readonly minNumberOfProsecutor = 2;
+
   @ViewChild(NgForm, { static: true }) form: NgForm;
-  @Input() defendantDetailsUpdates;
+  @Input() defendantDetailsUpdates: DefendantDetailsUpdatesResult;
   @Input() region: RegionState;
-  @Output() setRegion = new EventEmitter();
+  @Input() prosecutorOptions: SelectOption[] = [];
+  @Output() setFilter = new EventEmitter<SetFilterPayload>();
   @Output() acknowledgeDefendantDetailsUpdatesEmitter = new EventEmitter<AcknowledgeDefendantDetailsUpdatesParam>();
   @Output() viewCase = new EventEmitter();
+
   breadcrumbs: Breadcrumb[] = [Breadcrumbs.HOME, Breadcrumbs.DEFENDANT_DETAILS_UPDATES];
 
-  acknowledgeDefendendantDetailsUpdate(caseId: string, defendantId: string) {
+  acknowledgeDefendantDetailsUpdate(caseId: string, defendantId: string) {
     const param: AcknowledgeDefendantDetailsUpdatesParam = { caseId, defendantId };
     this.acknowledgeDefendantDetailsUpdatesEmitter.emit(param);
   }

@@ -1,28 +1,31 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getPleadedNotGuiltyCasesDetail, getRegion } from '../core/selectors';
-import { PleadedNotGuiltyCaseResult} from '../contexts/sjp';
+import { getPleadedNotGuiltyCasesDetail, getFormFilter } from '../core/selectors';
+import { PleadedNotGuiltyCaseResult } from '../contexts/sjp';
 import { State } from '../reducers';
 import { RegionState } from '../core/reducers/entities.reducer';
-import { LoadSelectedRegionSuccess } from '../core';
+import { SetFilter, SetFilterPayload } from '../core';
 import { Router } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { ReviewNotGuiltyPleasComponent } from './review-not-guilty-pleas.component';
 import { FormsModule } from '@angular/forms';
+import { SelectOption } from '@cpp/pdk';
+import { getProsecutorAuthoritiesOptions } from '../search/search.selectors';
 
 @Component({
-    selector: 'review-not-guilty-pleas-container',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    template: `
+  selector: 'review-not-guilty-pleas-container',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
     <review-not-guilty-pleas
       [pleadedNotGuiltyCasesDetail]="pleadedNotGuiltyCasesDetail$ | async"
       [region]="region$ | async"
-      (setRegion)="setRegion($event)"
+      [prosecutorOptions]="prosecutorOptions$ | async"
+      (setFilter)="setFilter($event)"
       (viewCase)="viewCase($event)"
     ></review-not-guilty-pleas>
   `,
-    imports: [AsyncPipe, ReviewNotGuiltyPleasComponent, AsyncPipe, FormsModule]
+  imports: [AsyncPipe, ReviewNotGuiltyPleasComponent, AsyncPipe, FormsModule]
 })
 export class ReviewNotGuiltyPleasContainer {
   private store = inject<Store<State>>(Store);
@@ -30,15 +33,17 @@ export class ReviewNotGuiltyPleasContainer {
 
   pleadedNotGuiltyCasesDetail$: Observable<PleadedNotGuiltyCaseResult>;
   region$: Observable<RegionState>;
+  prosecutorOptions$: Observable<SelectOption[]>;
 
   constructor() {
     this.pleadedNotGuiltyCasesDetail$ = this.store.pipe(select(getPleadedNotGuiltyCasesDetail));
-    this.region$ = this.store.pipe(select(getRegion));
+    this.region$ = this.store.pipe(select(getFormFilter));
+    this.prosecutorOptions$ = this.store.pipe(select(getProsecutorAuthoritiesOptions));
   }
 
-  setRegion(selectedRegion: string): void {
-    this.store.dispatch(new LoadSelectedRegionSuccess(selectedRegion));
-    this.router.navigate(['user', 'review-not-guilty-pleas', selectedRegion]);
+  setFilter(payload: SetFilterPayload): void {
+    this.store.dispatch(new SetFilter(payload));
+    this.router.navigate(['user', 'review-not-guilty-pleas', payload.selectedRegion, payload.prosecutor]);
   }
 
   viewCase(caseId: string): void {

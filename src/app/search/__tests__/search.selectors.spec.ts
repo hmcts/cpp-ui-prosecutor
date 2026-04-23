@@ -27,4 +27,65 @@ describe('search/selectors', () => {
       expect(fromSelectors.getSearchResultCases(state)).toMatchSnapshot();
     });
   });
+
+  describe('getProsecutorAuthorities', () => {
+    it('should return prosecutor authorities from user groups', () => {
+      const userGroups = [{ prosecutingAuthority: 'TFL' }, { prosecutingAuthority: 'TVL' }] as any;
+      const result = fromSelectors.getProsecutorAuthorities.projector(userGroups);
+      expect(result).toEqual(['TFL', 'TVL']);
+    });
+
+    it('should filter out groups without prosecutingAuthority', () => {
+      const userGroups = [
+        { prosecutingAuthority: 'TFL' },
+        { prosecutingAuthority: null },
+        { prosecutingAuthority: 'TVL' },
+        { prosecutingAuthority: undefined },
+        { prosecutingAuthority: '' }
+      ] as any;
+      const result = fromSelectors.getProsecutorAuthorities.projector(userGroups);
+      expect(result).toEqual(['TFL', 'TVL']);
+    });
+
+    it('should return empty array when user groups is null', () => {
+      const result = fromSelectors.getProsecutorAuthorities.projector(null);
+      expect(result).toEqual([]);
+    });
+
+    it('should return empty array when user groups is undefined', () => {
+      const result = fromSelectors.getProsecutorAuthorities.projector(undefined);
+      expect(result).toEqual([]);
+    });
+
+    it('should return empty array when user groups is empty', () => {
+      const result = fromSelectors.getProsecutorAuthorities.projector([]);
+      expect(result).toEqual([]);
+    });
+
+    it('should return empty array when no groups have prosecutingAuthority', () => {
+      const userGroups = [
+        { prosecutingAuthority: null },
+        { prosecutingAuthority: undefined },
+        { prosecutingAuthority: '' }
+      ] as any;
+      const result = fromSelectors.getProsecutorAuthorities.projector(userGroups);
+      expect(result).toEqual([]);
+    });
+
+    it('should return single prosecutor authority when only one group has it', () => {
+      const userGroups = [{ prosecutingAuthority: 'DVLA' }] as any;
+      const result = fromSelectors.getProsecutorAuthorities.projector(userGroups);
+      expect(result).toEqual(['DVLA']);
+    });
+
+    it('should preserve order of prosecutor authorities from user groups', () => {
+      const userGroups = [
+        { prosecutingAuthority: 'TVL' },
+        { prosecutingAuthority: 'TFL' },
+        { prosecutingAuthority: 'DVLA' }
+      ] as any;
+      const result = fromSelectors.getProsecutorAuthorities.projector(userGroups);
+      expect(result).toEqual(['TVL', 'TFL', 'DVLA']);
+    });
+  });
 });

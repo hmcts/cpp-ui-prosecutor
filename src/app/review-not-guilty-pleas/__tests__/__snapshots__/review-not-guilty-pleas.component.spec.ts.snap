@@ -4,8 +4,10 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
 <review-not-guilty-pleas
   breadcrumbs={[Function Array]}
   form={[Function _NgForm]}
+  minProsecutorCount={[Function Number]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
-  setRegion={[Function EventEmitter_]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
@@ -98,30 +100,39 @@ exports[`ReviewNotGuiltyPleasComponent then the component should be created with
           novalidate=""
           pdk-form=""
         >
-          <label
-            class="govuk-label"
-            pdk-label=""
-          >
-            Filter by region
-          </label>
           <div
             style="display: inline-flex;"
           >
-            <pdk-select
-              class="ng-untouched ng-pristine ng-valid"
-              name="selectedRegion"
-              required=""
+            <pdk-form-field
+              label="Filter by region"
             >
-              <select
-                class="govuk-select"
-                id="pdk-select-GENERATED_ID"
-                name="selectedRegion"
-                required=""
+              <pdk-form-group
+                class="pdk-form-group"
               >
-              </select>
-            </pdk-select>
+                <label
+                  class="govuk-label"
+                  for="pdk-select-GENERATED_ID"
+                >
+                   Filter by region 
+                </label>
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-GENERATED_ID"
+                    name="selectedRegion"
+                    required=""
+                  >
+                  </select>
+                </pdk-select>
+              </pdk-form-group>
+            </pdk-form-field>
             <pdk-form-group
               class="pdk-form-group"
+              style="align-content: end;"
             >
               <button
                 class="govuk-!-margin-left-2 govuk-button"
@@ -326,8 +337,10 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
 <review-not-guilty-pleas
   breadcrumbs={[Function Array]}
   form={[Function _NgForm]}
+  minProsecutorCount={[Function Number]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
-  setRegion={[Function EventEmitter_]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>
@@ -420,30 +433,39 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case
           novalidate=""
           pdk-form=""
         >
-          <label
-            class="govuk-label"
-            pdk-label=""
-          >
-            Filter by region
-          </label>
           <div
             style="display: inline-flex;"
           >
-            <pdk-select
-              class="ng-untouched ng-pristine ng-valid"
-              name="selectedRegion"
-              required=""
+            <pdk-form-field
+              label="Filter by region"
             >
-              <select
-                class="govuk-select"
-                id="pdk-select-GENERATED_ID"
-                name="selectedRegion"
-                required=""
+              <pdk-form-group
+                class="pdk-form-group"
               >
-              </select>
-            </pdk-select>
+                <label
+                  class="govuk-label"
+                  for="pdk-select-GENERATED_ID"
+                >
+                   Filter by region 
+                </label>
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-GENERATED_ID"
+                    name="selectedRegion"
+                    required=""
+                  >
+                  </select>
+                </pdk-select>
+              </pdk-form-group>
+            </pdk-form-field>
             <pdk-form-group
               class="pdk-form-group"
+              style="align-content: end;"
             >
               <button
                 class="govuk-!-margin-left-2 govuk-button"
@@ -592,8 +614,10 @@ exports[`ReviewNotGuiltyPleasComponent when the component is created with zero c
 <review-not-guilty-pleas
   breadcrumbs={[Function Array]}
   form="undefined"
+  minProsecutorCount={[Function Number]}
   pleadedNotGuiltyCasesDetail={[Function Object]}
-  setRegion={[Function EventEmitter_]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
   viewCase={[Function EventEmitter_]}
 >
   <breadcrumb-links>

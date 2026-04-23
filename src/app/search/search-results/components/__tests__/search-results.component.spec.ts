@@ -4,7 +4,8 @@ import { CaseDetails } from '../../../../contexts/sjp';
 import { MOCK_SEARCH_RESULTS } from '../../../__tests__/test-mock-data';
 import { SearchResultsComponent } from '../search-results.component';
 import { ActivatedRoute, provideRouter } from '@angular/router';
-import { ListSearchResultsComponent } from '../list-search-results.component';
+import { SelectOption } from '@cpp/pdk';
+import { JsonPipe } from '@angular/common';
 
 describe('SearchResultsComponent', () => {
   let fixture: ComponentFixture<TestSearchResultsComponent>;
@@ -21,6 +22,11 @@ describe('SearchResultsComponent', () => {
 
   it('should compile correctly', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
+    fixture.componentInstance.prosecutorOptions = [
+      { label: 'All', value: 'All' },
+      { label: 'TVL', value: 'TVL' },
+      { label: 'DVLA', value: 'DVLA' }
+    ];
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
@@ -28,22 +34,25 @@ describe('SearchResultsComponent', () => {
   @Component({
     selector: 'search-results-test',
     template: `
-      <search-results [searchResultCases]="searchResults"></search-results>
+      <search-results [searchResultCases]="searchResults" [prosecutorOptions]="prosecutorOptions"> </search-results>
     `,
     imports: [SearchResultsComponent]
   })
   class TestSearchResultsComponent {
     searchResults: CaseDetails[];
+    prosecutorOptions: SelectOption[] = [];
   }
 
   @Component({
     selector: 'list-search-results',
     template: `
       {{ searchResults | json }}
+      {{ prosecutorOptions | json }}
     `,
-    imports: [ListSearchResultsComponent]
+    imports: [JsonPipe]
   })
   class MockListSearchComponent {
     @Input() searchResults: CaseDetails[];
+    @Input() prosecutorOptions: SelectOption[];
   }
 });

@@ -1,12 +1,12 @@
 import { CanActivate, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { SjpService } from '../../contexts/sjp';
-import { Injectable, inject } from '@angular/core';
-import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
-import { Store, select } from '@ngrx/store';
+import { inject, Injectable } from '@angular/core';
+import { catchError, map, switchMap, take, tap } from 'rxjs/operators';
+import { select, Store } from '@ngrx/store';
 import { State } from '../reducers';
-import { LoadPleadedNotGuiltyCases } from '../actions/entities';
-import { getRegion } from '../selectors';
+import { LoadPleadedNotGuiltyCases } from '../actions';
+import { getFormFilter } from '../selectors';
 
 @Injectable({ providedIn: 'root' })
 export class PleadedNotGuiltyDataGuard implements CanActivate {
@@ -18,14 +18,14 @@ export class PleadedNotGuiltyDataGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(
-      select(getRegion),
+      select(getFormFilter),
       take(1),
       switchMap(region => {
-        return this.sjpService.getPendingDatesToAvoid(region.selectedRegion).pipe(
+        return this.sjpService.getPendingDatesToAvoid(region.selectedRegion, region.prosecutor).pipe(
           tap(pleadedNotGuiltyCasesDetail =>
             this.store.dispatch(new LoadPleadedNotGuiltyCases(pleadedNotGuiltyCasesDetail))
           ),
-          mapTo(true),
+          map(() => true),
           catchError(error => {
             switch (error.status) {
               case 403:

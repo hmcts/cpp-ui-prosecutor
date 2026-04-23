@@ -3,6 +3,7 @@
 exports[`SearchResultsContainer should compile correctly 1`] = `
 <search-results-container
   keyword$={[Function _Store]}
+  prosecutorOptions$={[Function _Store]}
   route={[Function ActivatedRoute]}
   router={[Function _Router]}
   searchResultCases$={[Function _Store]}
@@ -126,6 +127,53 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
       </pdk-grid>
     </search-input>
     <list-search-results>
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Filter by prosecutor"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label"
+              for="prosecutor"
+            >
+               Filter by prosecutor 
+            </label>
+            <pdk-select
+              class="ng-untouched ng-pristine ng-valid"
+              id="prosecutor"
+              name="prosecutor"
+              required=""
+            >
+              <select
+                class="govuk-select"
+                id="prosecutor"
+                name="prosecutor"
+                required=""
+              >
+                <option
+                  value="All"
+                >
+                   All 
+                </option>
+              </select>
+            </pdk-select>
+            <button
+              class="govuk-!-margin-left-2 govuk-button"
+              pdk-button=""
+              pdk-margin-left="2"
+              type="submit"
+            >
+              Filter
+            </button>
+          </pdk-form-group>
+        </pdk-form-field>
+      </form>
       <pdk-inset-text
         class="govuk-!-margin-top-6"
         pdk-margin-top="6"
@@ -160,7 +208,7 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
                 >
                   Warning
                 </span>
-                Cases with updated defendant name 
+                Cases with updated defendant name
               </strong>
             </div>
           </pdk-warning-text>

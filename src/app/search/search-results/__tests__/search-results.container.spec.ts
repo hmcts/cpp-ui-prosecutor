@@ -9,6 +9,8 @@ import { MOCK_SEARCH_RESULTS } from '../../__tests__/test-mock-data';
 import { By } from '@angular/platform-browser';
 import { provideRouter, Router } from '@angular/router';
 import { reducers } from '../../../reducers';
+import { JsonPipe } from '@angular/common';
+import { SelectOption } from '@cpp/pdk';
 
 describe('SearchResultsContainer', () => {
   let fixture: ComponentFixture<SearchResultsContainer>;
@@ -46,13 +48,16 @@ describe('SearchResultsContainer', () => {
 
   @Component({
     selector: 'search-results',
+    imports: [JsonPipe],
     template: `
       <div>{{ searchResultCases | json }}</div>
+      <div>{{ prosecutorOptions | json }}</div>
       <div>{{ keyword }}</div>
     `
   })
   class MockSearchResultsComponent {
     @Input() searchResultCases: CaseDetails[];
+    @Input() prosecutorOptions: SelectOption[];
     @Input() keyword: string;
   }
 });

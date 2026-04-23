@@ -124,7 +124,7 @@ export const appRoutes: Routes = [
         }
       },
       {
-        path: ':role/review-not-guilty-pleas/:regionFilter',
+        path: ':role/review-not-guilty-pleas/:regionFilter/:prosecutorFilter',
         loadComponent: () =>
           import('./review-not-guilty-pleas/review-not-guilty-pleas.container').then(
             m => m.ReviewNotGuiltyPleasContainer
@@ -165,7 +165,7 @@ export const appRoutes: Routes = [
         }
       },
       {
-        path: ':role/defendant-details-updates/:regionFilter',
+        path: ':role/defendant-details-updates/:regionFilter/:prosecutorFilter',
         loadComponent: () =>
           import('./defendant-details-updates/defendant-details-updates.container').then(
             m => m.DefendantDetailsUpdatesContainer

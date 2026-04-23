@@ -1,12 +1,10 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { Store, select } from '@ngrx/store';
-import { State } from '../core/reducers';
+import { select, Store } from '@ngrx/store';
+import { getFormFilter, LoadDefendantDetailsUpdates, State } from '../core';
 import { SjpService } from '../contexts/sjp';
 import { Observable, of } from 'rxjs';
-import { catchError, mapTo, take, tap, switchMap } from 'rxjs/operators';
-import { LoadDefendantDetailsUpdates } from '../core/actions';
-import { getRegion } from '../core';
+import { catchError, map, switchMap, take, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +18,12 @@ export class DefendantDetailsUpdatesPageDataGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.store.pipe(
-      select(getRegion),
+      select(getFormFilter),
       take(1),
-      switchMap(region => {
-        return this.sjpService.getDefendantDetailsUpdates(50, region.selectedRegion).pipe(
+      switchMap(filter => {
+        return this.sjpService.getDefendantDetailsUpdates(50, filter.selectedRegion, filter.prosecutor).pipe(
           tap(cases => this.store.dispatch(new LoadDefendantDetailsUpdates(cases))),
-          mapTo(true),
+          map(() => true),
           catchError(error => {
             switch (error.status) {
               case 403:

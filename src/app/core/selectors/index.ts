@@ -31,7 +31,7 @@ export const getWithdrawCaseStatus = createSelector(
 );
 
 export const getPleadedNotGuiltyCasesDetail = (state: State) => state.pleadedNotGuiltyCases;
-export const getRegion = (state: State) => state.region;
+export const getFormFilter = (state: State) => state.region;
 
 export const getDefendantDetailsUpdates = (state: State) => state.defendantDetailsUpdates;
 export const getCasesMissingSJPNotice = (state: State) => state.casesMissingSJPNoticeCount;

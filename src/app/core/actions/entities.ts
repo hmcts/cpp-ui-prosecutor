@@ -17,7 +17,7 @@ export const enum EntitiesActionType {
   LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS = '[ATCM] Load offence withdrawal reasons success',
   LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS = '[ATCM] Load cases missing SJP notice count success',
   LOAD_REGIONS_SUCCESS = '[ATCM] Load regions success',
-  LOAD_SELECTED_REGION_SUCCESS = '[ATCM] Load selected region success'
+  SET_FILTER = '[ATCM] Set filter'
 }
 
 export class LoadCaseSuccess implements Action {
@@ -62,10 +62,15 @@ export class LoadRegionsSuccess implements Action {
   constructor(public regions: Region[]) {}
 }
 
-export class LoadSelectedRegionSuccess implements Action {
-  readonly type = EntitiesActionType.LOAD_SELECTED_REGION_SUCCESS;
+export interface SetFilterPayload {
+  selectedRegion: string;
+  prosecutor: string;
+}
 
-  constructor(public selectedRegion: string) {}
+export class SetFilter implements Action {
+  readonly type = EntitiesActionType.SET_FILTER;
+
+  constructor(public payload: SetFilterPayload) {}
 }
 
 export type EntitiesAction =
@@ -76,4 +81,4 @@ export type EntitiesAction =
   | LoadOffenceWithdrawalReasonsSuccess
   | LoadCasesWithSjpNoticeCountSuccess
   | LoadRegionsSuccess
-  | LoadSelectedRegionSuccess;
+  | SetFilter;

@@ -3,6 +3,7 @@
 exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
 <review-not-guilty-pleas-container
   pleadedNotGuiltyCasesDetail$={[Function _Store]}
+  prosecutorOptions$={[Function _Store]}
   region$={[Function _Store]}
   router={[Function Object]}
   store={[Function _Store]}
@@ -100,30 +101,39 @@ exports[`ReviewNotGuiltyPleasContainer should create container 1`] = `
             novalidate=""
             pdk-form=""
           >
-            <label
-              class="govuk-label"
-              pdk-label=""
-            >
-              Filter by region
-            </label>
             <div
               style="display: inline-flex;"
             >
-              <pdk-select
-                class="ng-untouched ng-pristine ng-valid"
-                name="selectedRegion"
-                required=""
+              <pdk-form-field
+                label="Filter by region"
               >
-                <select
-                  class="govuk-select"
-                  id="pdk-select-GENERATED_ID"
-                  name="selectedRegion"
-                  required=""
+                <pdk-form-group
+                  class="pdk-form-group"
                 >
-                </select>
-              </pdk-select>
+                  <label
+                    class="govuk-label"
+                    for="pdk-select-GENERATED_ID"
+                  >
+                     Filter by region 
+                  </label>
+                  <pdk-select
+                    class="ng-untouched ng-pristine ng-valid"
+                    name="selectedRegion"
+                    required=""
+                  >
+                    <select
+                      class="govuk-select"
+                      id="pdk-select-GENERATED_ID"
+                      name="selectedRegion"
+                      required=""
+                    >
+                    </select>
+                  </pdk-select>
+                </pdk-form-group>
+              </pdk-form-field>
               <pdk-form-group
                 class="pdk-form-group"
+                style="align-content: end;"
               >
                 <button
                   class="govuk-!-margin-left-2 govuk-button"

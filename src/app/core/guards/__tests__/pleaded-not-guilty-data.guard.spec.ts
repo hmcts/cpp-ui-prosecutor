@@ -5,7 +5,7 @@ import { reducers, State } from '../../../reducers';
 import { PleadedNotGuiltyCaseResult, SjpService } from '../../../contexts/sjp';
 import { Router } from '@angular/router';
 import { cold } from 'jasmine-marbles';
-import { LoadPleadedNotGuiltyCases, LoadSelectedRegionSuccess } from '../../actions/entities';
+import { LoadPleadedNotGuiltyCases, SetFilter } from '../../actions/entities';
 
 describe('PleadedNotGuiltyDataGuard', () => {
   let pleadedNotGuiltyCasesDataGuard: PleadedNotGuiltyDataGuard;
@@ -47,7 +47,7 @@ describe('PleadedNotGuiltyDataGuard', () => {
     const pendingCasesToAvoid$ = cold('-a|', { a: pendingDatesToAvoidPayLoad });
     const expected$ = cold('-(b|)', { b: true });
 
-    store.dispatch(new LoadSelectedRegionSuccess('WEST'));
+    store.dispatch(new SetFilter({ selectedRegion: 'WEST', prosecutor: 'All' }));
 
     getPendingDatesToAvoid.mockReturnValue(pendingCasesToAvoid$);
 

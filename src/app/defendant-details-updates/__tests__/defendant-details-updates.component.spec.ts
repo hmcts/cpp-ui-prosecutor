@@ -71,9 +71,127 @@ describe('DefendantDetailsUpdatesComponent', () => {
 
       jest.spyOn(component.acknowledgeDefendantDetailsUpdatesEmitter, 'emit');
 
-      component.acknowledgeDefendendantDetailsUpdate(CASE_ID, DEFENDANT_ID);
+      component.acknowledgeDefendantDetailsUpdate(CASE_ID, DEFENDANT_ID);
 
       expect(component.acknowledgeDefendantDetailsUpdatesEmitter.emit).toHaveBeenCalledWith(params);
+    });
+  });
+
+  describe('prosecutor filter', () => {
+    it('should not display prosecutor filter when there are less than minNumberOfProsecutor options', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      component.prosecutorOptions = [{ label: 'All', value: 'All' }];
+      fixture.detectChanges();
+
+      const prosecutorSelect = fixture.nativeElement.querySelector('pdk-select[name="prosecutor"]');
+      expect(prosecutorSelect).toBeNull();
+    });
+
+    it('should display prosecutor filter when there are minNumberOfProsecutor or more options', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      component.prosecutorOptions = [
+        { label: 'All', value: 'All' },
+        { label: 'TFL', value: 'TFL' },
+        { label: 'TVL', value: 'TVL' }
+      ];
+      fixture.detectChanges();
+
+      const prosecutorSelect = fixture.nativeElement.querySelector('pdk-select[name="prosecutor"]');
+      expect(prosecutorSelect).not.toBeNull();
+    });
+
+    it('should display prosecutor filter with exactly 2 options (minNumberOfProsecutor)', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      component.prosecutorOptions = [
+        { label: 'All', value: 'All' },
+        { label: 'TFL', value: 'TFL' }
+      ];
+      fixture.detectChanges();
+
+      const prosecutorSelect = fixture.nativeElement.querySelector('pdk-select[name="prosecutor"]');
+      expect(prosecutorSelect).toBeNull();
+    });
+
+    it('should display prosecutor filter with 3 options (more than minNumberOfProsecutor)', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      component.prosecutorOptions = [
+        { label: 'All', value: 'All' },
+        { label: 'TFL', value: 'TFL' },
+        { label: 'TVL', value: 'TVL' }
+      ];
+      fixture.detectChanges();
+
+      const prosecutorSelect = fixture.nativeElement.querySelector('pdk-select[name="prosecutor"]');
+      expect(prosecutorSelect).not.toBeNull();
+    });
+  });
+
+  describe('setFilter event', () => {
+    it('should emit setFilter when form is submitted', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      component.region = {
+        selectedRegion: 'London',
+        regions: [
+          { label: 'All', value: 'All' },
+          { label: 'London', value: 'London' }
+        ],
+        prosecutor: 'All'
+      };
+      component.prosecutorOptions = [
+        { label: 'All', value: 'All' },
+        { label: 'TFL', value: 'TFL' },
+        { label: 'TVL', value: 'TVL' }
+      ];
+      fixture.detectChanges();
+
+      jest.spyOn(component.setFilter, 'emit');
+
+      const form = fixture.nativeElement.querySelector('form[pdk-form]');
+      form.dispatchEvent(new Event('submit'));
+      fixture.detectChanges();
+
+      expect(component.setFilter.emit).toHaveBeenCalled();
+    });
+  });
+
+  describe('empty state', () => {
+    it('should display warning message when there are no defendant details updates', () => {
+      component.defendantDetailsUpdates = {
+        total: 0,
+        defendantDetailsUpdates: []
+      };
+      fixture.detectChanges();
+
+      const warningText = fixture.nativeElement.querySelector('pdk-warning-text');
+      expect(warningText).not.toBeNull();
+      expect(warningText.textContent).toContain('There are no cases with defendant detail updates');
+    });
+
+    it('should not display table when there are no defendant details updates', () => {
+      component.defendantDetailsUpdates = {
+        total: 0,
+        defendantDetailsUpdates: []
+      };
+      fixture.detectChanges();
+
+      const table = fixture.nativeElement.querySelector('table[pdk-table]');
+      expect(table).toBeNull();
+    });
+  });
+
+  describe('viewCase event', () => {
+    it('should emit viewCase when defendant name link is clicked', () => {
+      component.defendantDetailsUpdates = MOCK_DEFENDANT_DETAILS_UPDATES;
+      fixture.detectChanges();
+
+      jest.spyOn(component.viewCase, 'emit');
+
+      const defendantLink = fixture.nativeElement.querySelector('[data-role="defendant-name"] a');
+      defendantLink.click();
+
+      expect(component.viewCase.emit).toHaveBeenCalledWith(
+        MOCK_DEFENDANT_DETAILS_UPDATES.defendantDetailsUpdates[0].caseId
+      );
     });
   });
 });
@@ -88,6 +206,6 @@ describe('DefendantDetailsUpdatesComponent', () => {
   imports: [JsonPipe]
 })
 class MockWhatChangedComponent {
-  @Input() defendantDetailsUpdate;
-  @Input() region;
+  @Input() defendantDetailsUpdate: any;
+  @Input() region: any;
 }

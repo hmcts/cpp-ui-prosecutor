@@ -2,29 +2,31 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { getDefendantDetailsUpdates, getRegion } from '../core/selectors';
+import { getDefendantDetailsUpdates, getFormFilter, SetFilter, SetFilterPayload } from '../core';
 import { AcknowledgeDefendantDetailsUpdatesParam, DefendantDetailsUpdatesResult } from '../contexts/sjp';
 import { State } from '../reducers';
 import { AcknowledgeDefendantDetailsUpdates } from './defendant-details-updates.action';
 import { RegionState } from '../core/reducers/entities.reducer';
-import { LoadSelectedRegionSuccess } from '../core';
-import { DefendantDetailsUpdatesComponent } from "./defendant-details-updates.component";
+import { DefendantDetailsUpdatesComponent } from './defendant-details-updates.component';
 import { AsyncPipe } from '@angular/common';
+import { SelectOption } from '@cpp/pdk';
+import { getProsecutorAuthoritiesOptions } from '../search/search.selectors';
 
 @Component({
-    selector: 'defendant-details-updates-container',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    template: `
+  selector: 'defendant-details-updates-container',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
     <defendant-details-updates
       [defendantDetailsUpdates]="defendantDetailsUpdates$ | async"
+      [prosecutorOptions]="prosecutorOptions$ | async"
       (acknowledgeDefendantDetailsUpdatesEmitter)="acknowledgeDefendantDetailsUpdates($event)"
       [region]="region$ | async"
-      (setRegion)="setRegion($event)"
+      (setFilter)="setFilter($event)"
       (viewCase)="viewCase($event)"
     >
     </defendant-details-updates>
   `,
-    imports: [DefendantDetailsUpdatesComponent, AsyncPipe]
+  imports: [DefendantDetailsUpdatesComponent, AsyncPipe]
 })
 export class DefendantDetailsUpdatesContainer {
   private store = inject<Store<State>>(Store);
@@ -32,19 +34,23 @@ export class DefendantDetailsUpdatesContainer {
 
   defendantDetailsUpdates$: Observable<DefendantDetailsUpdatesResult>;
   region$: Observable<RegionState>;
+  prosecutorOptions$: Observable<SelectOption[]>;
 
   constructor() {
     this.defendantDetailsUpdates$ = this.store.pipe(select(getDefendantDetailsUpdates));
-    this.region$ = this.store.pipe(select(getRegion));
+    this.region$ = this.store.pipe(select(getFormFilter));
+    this.prosecutorOptions$ = this.store.pipe(select(getProsecutorAuthoritiesOptions));
   }
 
-  acknowledgeDefendantDetailsUpdates(acknowledgedDefendantDetailsUpdates: AcknowledgeDefendantDetailsUpdatesParam): void {
+  acknowledgeDefendantDetailsUpdates(
+    acknowledgedDefendantDetailsUpdates: AcknowledgeDefendantDetailsUpdatesParam
+  ): void {
     this.store.dispatch(new AcknowledgeDefendantDetailsUpdates(acknowledgedDefendantDetailsUpdates));
   }
 
-  setRegion(selectedRegion: string): void {
-    this.store.dispatch(new LoadSelectedRegionSuccess(selectedRegion));
-    this.router.navigate(['user', 'defendant-details-updates', selectedRegion]);
+  setFilter(payload: SetFilterPayload): void {
+    this.store.dispatch(new SetFilter(payload));
+    this.router.navigate(['user', 'defendant-details-updates', payload.selectedRegion, payload.prosecutor]);
   }
 
   viewCase(caseId: string): void {

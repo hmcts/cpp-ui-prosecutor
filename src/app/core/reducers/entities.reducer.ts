@@ -9,6 +9,7 @@ import {
 } from '../../contexts/sjp';
 import { EntitiesAction, EntitiesActionType } from '../actions/entities';
 import { OffenceWithdrawalReason } from '../../contexts/reference-data';
+import { PROSECUTOR_DEFAULT_VALUE } from '../../search/search.selectors';
 
 export type CaseState = Case;
 
@@ -80,18 +81,27 @@ export function casesMissingSjpNoticesReducer(
 
 export interface RegionState {
   selectedRegion: string;
+  prosecutor: string;
   regions: Region[];
 }
 
 export function regionsReducer(
-  state: RegionState = {regions: [], selectedRegion: 'ALL'},
+  state: RegionState = {
+    regions: [],
+    selectedRegion: 'ALL',
+    prosecutor: PROSECUTOR_DEFAULT_VALUE
+  },
   action: EntitiesAction
 ): RegionState {
   switch (action.type) {
     case EntitiesActionType.LOAD_REGIONS_SUCCESS:
-      return {...state, regions: action.regions};
-    case EntitiesActionType.LOAD_SELECTED_REGION_SUCCESS:
-      return {...state, selectedRegion: action.selectedRegion};
+      return { ...state, regions: action.regions };
+    case EntitiesActionType.SET_FILTER:
+      return {
+        ...state,
+        selectedRegion: action.payload.selectedRegion,
+        prosecutor: action.payload.prosecutor
+      };
     default:
       return state;
   }

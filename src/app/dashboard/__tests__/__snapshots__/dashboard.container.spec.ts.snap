@@ -57,6 +57,7 @@ exports[`DashboardContainer should compile correctly 1`] = `
       {
         "firstName": "John",
         "lastName": "Jones",
+        "prosecutingAuthority": "DVLA",
         "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
         "caseId": "842054bb-3e72-4166-ae67-52355f047765",
         "region": "London",
@@ -70,6 +71,7 @@ exports[`DashboardContainer should compile correctly 1`] = `
       {
         "firstName": "Bob",
         "lastName": "Last",
+        "prosecutingAuthority": "DVLA",
         "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
         "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
         "region": "London",
