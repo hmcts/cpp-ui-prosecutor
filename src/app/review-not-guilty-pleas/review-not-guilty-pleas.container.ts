@@ -11,7 +11,7 @@ import { AsyncPipe } from '@angular/common';
 import { ReviewNotGuiltyPleasComponent } from './review-not-guilty-pleas.component';
 import { FormsModule } from '@angular/forms';
 import { SelectOption } from '@cpp/pdk';
-import { getProsecutorAuthoritiesOptions } from '../search/search.selectors';
+import { getProsecutorAuthoritiesOptions, PROSECUTOR_DEFAULT_VALUE } from '../search/search.selectors';
 
 @Component({
   selector: 'review-not-guilty-pleas-container',
@@ -43,7 +43,8 @@ export class ReviewNotGuiltyPleasContainer {
 
   setFilter(payload: SetFilterPayload): void {
     this.store.dispatch(new SetFilter(payload));
-    this.router.navigate(['user', 'review-not-guilty-pleas', payload.selectedRegion, payload.prosecutor]);
+    const { selectedRegion = 'ALL', prosecutor = PROSECUTOR_DEFAULT_VALUE } = payload;
+    this.router.navigate(['user', 'review-not-guilty-pleas', selectedRegion, prosecutor]);
   }
 
   viewCase(caseId: string): void {

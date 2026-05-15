@@ -114,14 +114,7 @@ export const appRoutes: Routes = [
       },
       {
         path: ':role/review-not-guilty-pleas',
-        loadComponent: () =>
-          import('./review-not-guilty-pleas/review-not-guilty-pleas.container').then(
-            m => m.ReviewNotGuiltyPleasContainer
-          ),
-        canActivate: [PleadedNotGuiltyDataGuard, RegionsGuard],
-        data: {
-          title: 'Review not guilty pleas | Common platform'
-        }
+        redirectTo: ':role/review-not-guilty-pleas/ALL/ALL'
       },
       {
         path: ':role/review-not-guilty-pleas/:regionFilter/:prosecutorFilter',
@@ -155,14 +148,7 @@ export const appRoutes: Routes = [
       },
       {
         path: ':role/defendant-details-updates',
-        loadComponent: () =>
-          import('./defendant-details-updates/defendant-details-updates.container').then(
-            m => m.DefendantDetailsUpdatesContainer
-          ),
-        canActivate: [DefendantDetailsUpdatesPageDataGuard, RegionsGuard],
-        data: {
-          title: 'Defendant details updates | Common platform'
-        }
+        redirectTo: ':role/defendant-details-updates/ALL/ALL'
       },
       {
         path: ':role/defendant-details-updates/:regionFilter/:prosecutorFilter',

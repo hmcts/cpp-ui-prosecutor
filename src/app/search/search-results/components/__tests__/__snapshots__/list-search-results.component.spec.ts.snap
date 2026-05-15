@@ -827,7 +827,7 @@ exports[`ListSearchResultsComponent should display filter dropdown when there ar
               required=""
             >
               <option
-                value="All"
+                value="ALL"
               >
                  All 
               </option>

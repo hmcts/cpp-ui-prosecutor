@@ -10,7 +10,7 @@ import { RegionState } from '../core/reducers/entities.reducer';
 import { DefendantDetailsUpdatesComponent } from './defendant-details-updates.component';
 import { AsyncPipe } from '@angular/common';
 import { SelectOption } from '@cpp/pdk';
-import { getProsecutorAuthoritiesOptions } from '../search/search.selectors';
+import { getProsecutorAuthoritiesOptions, PROSECUTOR_DEFAULT_VALUE } from '../search/search.selectors';
 
 @Component({
   selector: 'defendant-details-updates-container',
@@ -50,7 +50,8 @@ export class DefendantDetailsUpdatesContainer {
 
   setFilter(payload: SetFilterPayload): void {
     this.store.dispatch(new SetFilter(payload));
-    this.router.navigate(['user', 'defendant-details-updates', payload.selectedRegion, payload.prosecutor]);
+    const { selectedRegion = 'ALL', prosecutor = PROSECUTOR_DEFAULT_VALUE } = payload;
+    this.router.navigate(['user', 'defendant-details-updates', selectedRegion, prosecutor]);
   }
 
   viewCase(caseId: string): void {

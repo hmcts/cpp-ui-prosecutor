@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 import { ExternalHttp } from '../../core/services/external-http';
+import { PROSECUTOR_DEFAULT_VALUE } from '../../search/search.selectors';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +46,7 @@ export class SjpService {
       params = params.set('regionId', regionId);
     }
 
-    if (prosecutingAuthority && prosecutingAuthority !== 'All') {
+    if (prosecutingAuthority && prosecutingAuthority !== PROSECUTOR_DEFAULT_VALUE) {
       params = params.set('prosecutingAuthority', prosecutingAuthority);
     }
 
@@ -95,7 +96,7 @@ export class SjpService {
       params = params.set('regionId', regionId);
     }
 
-    if (prosecutingAuthority && prosecutingAuthority !== 'All') {
+    if (prosecutingAuthority && prosecutingAuthority !== PROSECUTOR_DEFAULT_VALUE) {
       params = params.set('prosecutingAuthority', prosecutingAuthority);
     }
 

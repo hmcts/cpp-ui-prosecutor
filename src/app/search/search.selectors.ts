@@ -13,9 +13,9 @@ export const getProsecutorAuthorities = createSelector(getUserGroups, userGroups
     .map(({ prosecutingAuthority }) => prosecutingAuthority)
 );
 
-export const PROSECUTOR_DEFAULT_VALUE = 'All';
+export const PROSECUTOR_DEFAULT_VALUE = 'ALL';
 
 export const getProsecutorAuthoritiesOptions = createSelector(getProsecutorAuthorities, prosecutors => [
-  { label: PROSECUTOR_DEFAULT_VALUE, value: PROSECUTOR_DEFAULT_VALUE },
+  { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
   ...prosecutors.map(p => ({ label: p, value: p }))
 ]);

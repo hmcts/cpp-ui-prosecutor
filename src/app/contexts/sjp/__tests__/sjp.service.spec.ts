@@ -6,6 +6,7 @@ import { Case, CaseDetails, SearchResult, Region } from '../sjp.interface';
 import { MOCK_DEFENDANT_DETAILS_UPDATES } from '../../../dashboard/__tests__/test-mock-data';
 import { HttpParams } from '@angular/common/http';
 import { ExternalHttp } from '../../../core/services/external-http';
+import { PROSECUTOR_DEFAULT_VALUE } from '../../../search/search.selectors';
 
 const MOCK_CASE_ID = 'mock-case-id';
 const MOCK_DATES_TO_AVOID = 'dates to avoid content';
@@ -235,14 +236,14 @@ describe('SjpService', () => {
       });
     });
 
-    it('should not include prosecuting authority when it is All', () => {
+    it('should not include prosecuting authority when it is default value', () => {
       const result = MOCK_DEFENDANT_DETAILS_UPDATES;
       const expected$ = cold('-b|', { b: result });
       const response$ = cold('-a|', { a: result });
 
       mockQuery.mockReturnValue(response$);
 
-      const query$ = service.getDefendantDetailsUpdates(10, 'testRegionId', 'All');
+      const query$ = service.getDefendantDetailsUpdates(10, 'testRegionId', PROSECUTOR_DEFAULT_VALUE);
 
       expect(query$).toBeObservable(expected$);
       const params = new HttpParams().set('limit', '10').set('regionId', 'testRegionId');
@@ -439,14 +440,14 @@ describe('SjpService', () => {
       });
     });
 
-    it('should not include prosecuting authority when it is All', () => {
+    it('should not include prosecuting authority when it is default value', () => {
       const response = { body: '*' };
       const response$ = cold('-a|', { a: response });
       const expected$ = cold('-b|', { b: response });
 
       mockQuery.mockReturnValue(response$);
 
-      const query$ = service.getPendingDatesToAvoid('testRegionId', 'All');
+      const query$ = service.getPendingDatesToAvoid('testRegionId', PROSECUTOR_DEFAULT_VALUE);
 
       expect(query$).toBeObservable(expected$);
       const params = new HttpParams().set('regionId', 'testRegionId');

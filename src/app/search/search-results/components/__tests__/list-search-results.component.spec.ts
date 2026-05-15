@@ -74,7 +74,7 @@ describe('ListSearchResultsComponent', () => {
   it('should display filter dropdown when there are multiple prosecutor authorities', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -85,7 +85,7 @@ describe('ListSearchResultsComponent', () => {
   it('should show all results when "All" filter is selected', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -98,7 +98,7 @@ describe('ListSearchResultsComponent', () => {
   it('should filter results by selected prosecutor authority', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -116,7 +116,7 @@ describe('ListSearchResultsComponent', () => {
   it('should display correct prosecutor options in filter dropdown', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -125,7 +125,7 @@ describe('ListSearchResultsComponent', () => {
     const component = fixture.debugElement.children[0].componentInstance as ListSearchResultsComponent;
     const prosecutors = component.prosecutorOptions();
     expect(prosecutors).toEqual([
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ]);
@@ -134,7 +134,7 @@ describe('ListSearchResultsComponent', () => {
   it('should reset to all results when filter is changed back to "All"', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -147,7 +147,7 @@ describe('ListSearchResultsComponent', () => {
     fixture.detectChanges();
 
     // Then reset to All
-    component.filterResults({ prosecutor: 'All' });
+    component.filterResults({ prosecutor: PROSECUTOR_DEFAULT_VALUE });
     fixture.detectChanges();
 
     const rows = fixture.nativeElement.querySelectorAll('[pdk-table-body] [pdk-table-row]');
@@ -157,7 +157,7 @@ describe('ListSearchResultsComponent', () => {
   it('should show empty table when filtering by prosecutor with no matching results', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results.filter(r => r.prosecutingAuthority === 'TFL');
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -174,7 +174,7 @@ describe('ListSearchResultsComponent', () => {
   it('should have "All" as default filter value', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -187,7 +187,7 @@ describe('ListSearchResultsComponent', () => {
   it('should update appliedFilter signal when filterResults is called', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -202,7 +202,7 @@ describe('ListSearchResultsComponent', () => {
   it('should filter results for TVL prosecutor', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -229,7 +229,7 @@ describe('ListSearchResultsComponent', () => {
   it('should display filtered results with correct prosecutor authority in table cells', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -250,7 +250,7 @@ describe('ListSearchResultsComponent', () => {
   it('should handle switching between different prosecutor filters', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];
@@ -273,7 +273,7 @@ describe('ListSearchResultsComponent', () => {
     expect(rows.length).toBe(tvlCount);
 
     // Switch back to All
-    component.filterResults({ prosecutor: 'All' });
+    component.filterResults({ prosecutor: PROSECUTOR_DEFAULT_VALUE });
     fixture.detectChanges();
     rows = fixture.nativeElement.querySelectorAll('[pdk-table-body] [pdk-table-row]');
     expect(rows.length).toBe(MOCK_SEARCH_RESULTS.results.length);
@@ -282,7 +282,7 @@ describe('ListSearchResultsComponent', () => {
   it('should display prosecutors in correct order with "All" first', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TVL', value: 'TVL' },
       { label: 'TFL', value: 'TFL' },
       { label: 'ABC', value: 'ABC' }
@@ -292,7 +292,7 @@ describe('ListSearchResultsComponent', () => {
     const component = fixture.debugElement.children[0].componentInstance as ListSearchResultsComponent;
     const prosecutors = component.prosecutorOptions();
 
-    expect(prosecutors[0]).toEqual({ label: 'All', value: 'All' });
+    expect(prosecutors[0]).toEqual({ label: 'All', value: PROSECUTOR_DEFAULT_VALUE });
     expect(prosecutors[1]).toEqual({ label: 'TVL', value: 'TVL' });
     expect(prosecutors[2]).toEqual({ label: 'TFL', value: 'TFL' });
     expect(prosecutors[3]).toEqual({ label: 'ABC', value: 'ABC' });
@@ -301,7 +301,7 @@ describe('ListSearchResultsComponent', () => {
   it('should update filteredResults computed signal when filter changes', () => {
     fixture.componentInstance.searchResults = MOCK_SEARCH_RESULTS.results;
     fixture.componentInstance.prosecutorOptions = [
-      { label: 'All', value: 'All' },
+      { label: 'All', value: PROSECUTOR_DEFAULT_VALUE },
       { label: 'TFL', value: 'TFL' },
       { label: 'TVL', value: 'TVL' }
     ];

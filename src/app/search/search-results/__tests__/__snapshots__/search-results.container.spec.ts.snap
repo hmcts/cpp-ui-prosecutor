@@ -157,7 +157,7 @@ exports[`SearchResultsContainer should compile correctly 1`] = `
                 required=""
               >
                 <option
-                  value="All"
+                  value="ALL"
                 >
                    All 
                 </option>
