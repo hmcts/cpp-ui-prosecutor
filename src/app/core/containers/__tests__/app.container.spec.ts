@@ -9,6 +9,7 @@ import {
   RouteConfigLoadStart,
   Router
 } from '@angular/router';
+import { AppConfigService } from '../../../config';
 import { BehaviorSubject, of } from 'rxjs';
 import { ApiError, PendingApiRequest } from '../../actions/api';
 import { Title } from '@angular/platform-browser';
@@ -23,6 +24,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('App page component', () => {
   window.scrollTo = jest.fn();
+
   const setTitle: jest.Mock = jest.fn();
   const mockParseUrl = jest.fn();
 
@@ -31,8 +33,24 @@ describe('App page component', () => {
   let mockRouterEvent: BehaviorSubject<any>;
   let routeData: BehaviorSubject<{}>;
 
+  let mockHref = '';
+
   beforeEach(
     waitForAsync(() => {
+      mockHref = '';
+      Object.defineProperty(window, 'location', {
+        value: {
+          get href() {
+            return mockHref;
+          },
+          set href(value: string) {
+            mockHref = value;
+          }
+        },
+        writable: true,
+        configurable: true
+      });
+
       mockRouterEvent = new BehaviorSubject<any>({});
       routeData = new BehaviorSubject<{}>({});
       TestBed.configureTestingModule({
@@ -50,6 +68,16 @@ describe('App page component', () => {
             }
           },
           { provide: Title, useValue: { getTitle: jest.fn(), setTitle } },
+          {
+            provide: AppConfigService,
+            useValue: {
+              getAppUrl: () => 'http://app-url',
+              getBaseUrl: () => 'http://base-url',
+              getAccountUrl: () => 'http://account-url',
+              getLogoutUrl: () => 'http://logout-url',
+              cppHomeUrl: 'http://base-url'
+            }
+          },
           {
             provide: Router,
             useValue: {
@@ -154,5 +182,25 @@ describe('App page component', () => {
     fixture = TestBed.createComponent(AppContainer);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
+  });
+
+  it('should redirect to search page when handleSearch is called with null', () => {
+    fixture = TestBed.createComponent(AppContainer);
+    fixture.detectChanges();
+
+    fixture.componentInstance.handleSearch(null);
+
+    expect(window.location.href).toBe(`http://base-url/search?referrer=${encodeURIComponent(document.baseURI)}`);
+  });
+
+  it('should redirect to search page with reference when handleSearch is called with a ref', () => {
+    fixture = TestBed.createComponent(AppContainer);
+    fixture.detectChanges();
+
+    fixture.componentInstance.handleSearch('ABC123');
+
+    expect(window.location.href).toBe(
+      `http://base-url/search?referrer=${encodeURIComponent(document.baseURI)}&reference=ABC123`
+    );
   });
 });

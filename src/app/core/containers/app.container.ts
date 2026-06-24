@@ -34,8 +34,8 @@ import { AsyncPipe } from '@angular/common';
       [searchEnabled]="searchEnabled$ | async"
       [serviceLink]="'/'"
       serviceName="CJS Common Platform"
-      searchPlaceholder="Search by reference"
-      searchLabel="Search by case or application reference"
+      searchPlaceholder="Search by Reference or PNC ID"
+      searchLabel="Search by case reference, application reference or PNC ID"
       (search)="handleSearch($event)"
       accessibilityLink="accessibility"
     >
@@ -148,7 +148,11 @@ export class AppContainer {
     return `${this.appConfigService.cppHomeUrl}/search?referrer=${encodeURIComponent(document.baseURI)}`;
   }
 
-  handleSearch(caseReference: string) {
-    window.location.href = `${this.searchUrl}&caseReference=${caseReference}`;
+  handleSearch(reference: string | null) {
+    let target = this.searchUrl;
+    if (reference) {
+      target = `${this.searchUrl}&reference=${reference}`;
+    }
+    window.location.href = target;
   }
 }
