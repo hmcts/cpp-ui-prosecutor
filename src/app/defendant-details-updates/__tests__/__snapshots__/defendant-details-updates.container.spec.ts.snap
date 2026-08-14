@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsUpdatesContainer should create container 1`] = `
+<defendant-details-updates-container
+  defendantDetailsUpdates$={[Function _Store]}
+  prosecutorOptions$={[Function _Store]}
+  region$={[Function _Store]}
+  router={[Function _Router]}
+  store={[Function _Store]}
+>
+  <defendant-details-updates>
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+      null
+    </span>
+  </defendant-details-updates>
+</defendant-details-updates-container>
+`;

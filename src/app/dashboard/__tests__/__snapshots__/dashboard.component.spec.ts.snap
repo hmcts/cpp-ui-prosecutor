@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardComponent should compile correctly 1`] = `
+<prosecutor-dashboard
+  defendantDetailsUpdates={[Function Object]}
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+>
+  <pdk-grid>
+    <h1
+      class="govuk-!-margin-top-8 govuk-!-margin-bottom-8 govuk-heading-xl"
+      pdk-margin-vertical="8"
+      pdk-typography="heading-xlarge"
+    >
+      <span
+        class="govuk-caption-xl"
+        pdk-typography="caption-xlarge"
+      >
+        Prosecutor
+      </span>
+       Single Justice Procedure 
+    </h1>
+    <h2
+      class="govuk-!-margin-top-8 govuk-heading-m"
+      pdk-margin-top="8"
+      pdk-typography="heading-medium"
+    >
+      Search for a case
+    </h2>
+    <search-input-container>
+      <search-input>
+        <label
+          class="govuk-label"
+          pdk-label=""
+        >
+          Enter case reference number or defendant’s last name or company name
+        </label>
+        <pdk-grid
+          class="govuk-grid-row"
+          container=""
+        >
+          <form
+            class="ng-untouched ng-pristine ng-valid"
+            novalidate=""
+            pdk-form=""
+          >
+            <pdk-grid
+              class="govuk-grid-column-one-third"
+              one-third=""
+            >
+              <pdk-form-field>
+                <pdk-form-group
+                  class="pdk-form-group"
+                >
+                  <pdk-searchbar
+                    class="ng-untouched ng-pristine ng-valid"
+                    name="searchInput"
+                  >
+                    <div
+                      class="pdk-searchbar"
+                    >
+                      <input
+                        class="pdk-searchbar__input govuk-input"
+                        id="pdk-search-GENERATED_ID"
+                        pdk-input=""
+                        placeholder=""
+                        type="text"
+                      />
+                      <button
+                        class="pdk-searchbar__button"
+                        type="submit"
+                      >
+                        <pdk-search-icon
+                          color="#fff"
+                          style="display: flex; align-items: center; justify-content: center;"
+                        >
+                          <i
+                            style="height: 20px; width: 20px; fill: #fff;"
+                          >
+                            <svg
+                              height="100%"
+                              viewBox="0 0 512 512"
+                              width="100%"
+                            >
+                              <path
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                              />
+                            </svg>
+                          </i>
+                        </pdk-search-icon>
+                        <span
+                          class="pdk-searchbar__label govuk-visually-hidden"
+                          pdk-visually-hidden=""
+                        >
+                        </span>
+                      </button>
+                    </div>
+                  </pdk-searchbar>
+                </pdk-form-group>
+              </pdk-form-field>
+            </pdk-grid>
+          </form>
+        </pdk-grid>
+      </search-input>
+    </search-input-container>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-two-thirds"
+      two-thirds=""
+    >
+      <h2
+        class="govuk-!-margin-top-8 govuk-heading-m"
+        pdk-margin-top="8"
+        pdk-typography="heading-medium"
+      >
+        Other tasks
+      </h2>
+      <review-not-guilty-pleas-link>
+        <p>
+          <pdk-warning-text>
+            <div
+              class="govuk-warning-text"
+            >
+              <span
+                aria-hidden="true"
+                class="govuk-warning-text__icon"
+              >
+                !
+              </span>
+              <strong
+                class="govuk-warning-text__text"
+              >
+                <span
+                  class="govuk-visually-hidden"
+                  pdk-visually-hidden=""
+                >
+                  Warning
+                </span>
+                <a
+                  class="govuk-link govuk-section-break govuk-section-break--s"
+                  href="/"
+                  pdk-link=""
+                  pdk-section="small"
+                  routerlink="review-not-guilty-pleas"
+                >
+                   Review not guilty pleas (2 
+                  <span>
+                    cases
+                  </span>
+                  ) 
+                </a>
+              </strong>
+            </div>
+          </pdk-warning-text>
+        </p>
+      </review-not-guilty-pleas-link>
+      <defendant-details-updates-link>
+        <p>
+          <a
+            class="govuk-link govuk-section-break govuk-section-break--s"
+            href="/"
+            id="defendant-details-updates-link"
+            pdk-link=""
+            pdk-section="small"
+            routerlink="defendant-details-updates"
+          >
+             Defendant details updates (2) 
+          </a>
+        </p>
+      </defendant-details-updates-link>
+      <div>
+        <a
+          class="govuk-link govuk-section-break govuk-section-break--s"
+          href="/"
+          pdk-link=""
+          pdk-section="small"
+          routerlink="search"
+        >
+          Manage offence withdrawals
+        </a>
+      </div>
+      <div
+        class="govuk-!-margin-top-6"
+        pdk-margin-top="6"
+      >
+        <a
+          class="govuk-link"
+          href="/"
+          pdk-link=""
+          routerlink="export-case-decisions"
+        >
+          Export case results by date
+        </a>
+      </div>
+      <div
+        class="govuk-!-margin-top-6"
+        pdk-margin-top="6"
+      >
+        <a
+          class="govuk-link"
+          href="/prosecution-casefile/manual-case/prosecutor?type=J"
+          pdk-link=""
+        >
+          Create an SJP case
+        </a>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-column-one-third"
+      one-third=""
+    >
+      <pdk-summary-item
+        label="cases missing SJP notices"
+      >
+        <dl
+          class="pdk-summary-item"
+        >
+          <dt
+            class="pdk-summary-item__number pdk-summary-item__number--hero"
+          >
+          </dt>
+          <dd
+            class="pdk-summary-item__label"
+          >
+            cases missing SJP notices
+          </dd>
+        </dl>
+      </pdk-summary-item>
+    </pdk-grid>
+  </pdk-grid>
+</prosecutor-dashboard>
+`;

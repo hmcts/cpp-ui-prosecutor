@@ -1,0 +1,708 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewNotGuiltyPleasComponent then the component should be created with out failure 1`] = `
+<review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form={[Function _NgForm]}
+  minProsecutorCount={[Function Number]}
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
+  viewCase={[Function EventEmitter_]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
+    pdk-section="large"
+  >
+     Review not guilty pleas (2 
+    <span>
+      cases
+    </span>
+    ) 
+  </h2><span>
+    <span>
+      <h4
+        class="govuk-section-break govuk-section-break--l"
+        pdk-section="large"
+      >
+        <pdk-warning-text>
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 days from plea entry whichever is sooner 
+            </strong>
+          </div>
+        </pdk-warning-text>
+        <pdk-divider>
+          <hr
+            class="pdk-divider"
+          />
+        </pdk-divider>
+      </h4>
+    </span>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        one-half=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <div
+            style="display: inline-flex;"
+          >
+            <pdk-form-field
+              label="Filter by region"
+            >
+              <pdk-form-group
+                class="pdk-form-group"
+              >
+                <label
+                  class="govuk-label"
+                  for="pdk-select-GENERATED_ID"
+                >
+                   Filter by region 
+                </label>
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-GENERATED_ID"
+                    name="selectedRegion"
+                    required=""
+                  >
+                  </select>
+                </pdk-select>
+              </pdk-form-group>
+            </pdk-form-field>
+            <pdk-form-group
+              class="pdk-form-group"
+              style="align-content: end;"
+            >
+              <button
+                class="govuk-!-margin-left-2 govuk-button"
+                pdk-button=""
+                pdk-margin-left="2"
+                type="submit"
+              >
+                Filter
+              </button>
+            </pdk-form-group>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Address
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Reference Number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Region
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Plea entry
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="javascript:void(0)"
+              pdk-link=""
+            >
+              <b>
+                Dennon Dennon Dennon SMITH
+              </b>
+            </a>
+          </td>
+          <td
+            class="pre-line govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  LE3 1AB 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+             TVL640029AGBG 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             25 Mar 1975 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             14 Mar 2019 
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="javascript:void(0)"
+              pdk-link=""
+            >
+              <b>
+                Stefanos Stefanos Stefanos SMITH
+              </b>
+            </a>
+          </td>
+          <td
+            class="pre-line govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  SE21 1AB 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+             TVL143468N9KN 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             23 Mar 2001 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             19 Mar 2019 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </span><button
+    class="govuk-button"
+    pdk-button=""
+    routerlink="/"
+    tabindex="0"
+    type="button"
+  >
+    Back to home
+  </button>
+</review-not-guilty-pleas>
+`;
+
+exports[`ReviewNotGuiltyPleasComponent when the component is created with 1 case then the component should be created with out failure 1`] = `
+<review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form={[Function _NgForm]}
+  minProsecutorCount={[Function Number]}
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
+  viewCase={[Function EventEmitter_]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
+    pdk-section="large"
+  >
+     Review not guilty pleas (2 
+    <span>
+      cases
+    </span>
+    ) 
+  </h2><span>
+    <span>
+      <h4
+        class="govuk-section-break govuk-section-break--l"
+        pdk-section="large"
+      >
+        <pdk-warning-text>
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+               These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 days from plea entry whichever is sooner 
+            </strong>
+          </div>
+        </pdk-warning-text>
+        <pdk-divider>
+          <hr
+            class="pdk-divider"
+          />
+        </pdk-divider>
+      </h4>
+    </span>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        one-half=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <div
+            style="display: inline-flex;"
+          >
+            <pdk-form-field
+              label="Filter by region"
+            >
+              <pdk-form-group
+                class="pdk-form-group"
+              >
+                <label
+                  class="govuk-label"
+                  for="pdk-select-GENERATED_ID"
+                >
+                   Filter by region 
+                </label>
+                <pdk-select
+                  class="ng-untouched ng-pristine ng-valid"
+                  name="selectedRegion"
+                  required=""
+                >
+                  <select
+                    class="govuk-select"
+                    id="pdk-select-GENERATED_ID"
+                    name="selectedRegion"
+                    required=""
+                  >
+                  </select>
+                </pdk-select>
+              </pdk-form-group>
+            </pdk-form-field>
+            <pdk-form-group
+              class="pdk-form-group"
+              style="align-content: end;"
+            >
+              <button
+                class="govuk-!-margin-left-2 govuk-button"
+                pdk-button=""
+                pdk-margin-left="2"
+                type="submit"
+              >
+                Filter
+              </button>
+            </pdk-form-group>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Address
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Reference Number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Region
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Plea entry
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="javascript:void(0)"
+              pdk-link=""
+            >
+              <b>
+                Stefanos Stefanos Stefanos SMITH
+              </b>
+            </a>
+          </td>
+          <td
+            class="pre-line govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  London
+  SE21 1AB 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+             TVL143468N9KN 
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="region"
+            pdk-table-cell=""
+          >
+             London 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             23 Mar 2001 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             19 Mar 2019 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </span><button
+    class="govuk-button"
+    pdk-button=""
+    routerlink="/"
+    tabindex="0"
+    type="button"
+  >
+    Back to home
+  </button>
+</review-not-guilty-pleas>
+`;
+
+exports[`ReviewNotGuiltyPleasComponent when the component is created with zero cases then the component should display message "There are no cases to review" 1`] = `
+<review-not-guilty-pleas
+  breadcrumbs={[Function Array]}
+  form="undefined"
+  minProsecutorCount={[Function Number]}
+  pleadedNotGuiltyCasesDetail={[Function Object]}
+  prosecutorOptions={[Function Array]}
+  setFilter={[Function EventEmitter_]}
+  viewCase={[Function EventEmitter_]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Review not guilty pleas 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><h2
+    class="govuk-section-break govuk-section-break--l"
+    pdk-section="large"
+  >
+     Review not guilty pleas (0 
+    <span>
+      cases
+    </span>
+    ) 
+  </h2><h4
+    class="govuk-section-break govuk-section-break--l"
+    pdk-section="large"
+  >
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           There are no cases to review 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    <pdk-divider>
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
+  </h4><button
+    class="govuk-button"
+    pdk-button=""
+    routerlink="/"
+    tabindex="0"
+    type="button"
+  >
+    Back to home
+  </button>
+</review-not-guilty-pleas>
+`;

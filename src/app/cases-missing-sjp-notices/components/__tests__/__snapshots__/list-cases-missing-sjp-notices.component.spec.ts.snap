@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with  multiple rows 1`] = `
+<list-cases-missing-sjp-notices
+  casesMissingNotices={[Function Array]}
+>
+  <table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <thead
+      class="govuk-table__head"
+      pdk-table-head=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Name
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Reference number
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Date of birth
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          KRUMPS Abel
+        </td>
+        <td
+          class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+          22C22222222
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          1 Jan 1972
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          CRAIG Linda
+        </td>
+        <td
+          class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+          33C2DF22222
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          12 Jul 1980
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</list-cases-missing-sjp-notices>
+`;
+
+exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with no data 1`] = `
+<list-cases-missing-sjp-notices
+  casesMissingNotices={[Function Array]}
+>
+</list-cases-missing-sjp-notices>
+`;
+
+exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with single row 1`] = `
+<list-cases-missing-sjp-notices
+  casesMissingNotices={[Function Array]}
+>
+  <table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <thead
+      class="govuk-table__head"
+      pdk-table-head=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Name
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Reference number
+        </th>
+        <th
+          class="govuk-table__cell"
+          pdk-table-header=""
+          scope="col"
+        >
+          Date of birth
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          KRUMPS Abel
+        </td>
+        <td
+          class="govuk-table__cell"
+          data-role="urn"
+          pdk-table-cell=""
+        >
+          22C22222222
+        </td>
+        <td
+          class="govuk-table__cell"
+          pdk-table-cell=""
+        >
+          1 Jan 1972
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</list-cases-missing-sjp-notices>
+`;

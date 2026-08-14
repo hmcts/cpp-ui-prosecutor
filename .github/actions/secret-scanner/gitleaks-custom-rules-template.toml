@@ -1,0 +1,28 @@
+title = "Custom rules"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "internal-urls"
+description = "Identify internal urls"
+regex = '''${GITLEAKS_REGEX_INTERNAL_URL}'''
+tags = ["internal-urls"]
+
+[[rules]]
+id = "banned-ids"
+description = "Identify banned IDs"
+regex = '''${GITLEAKS_REGEX_BANNED_IDS}'''
+tags = ["banned-ids"]
+
+[allowlist]
+regexes = [
+  '''(?i)^steccm04wrpxy01\.cpp\.nonlive$''',
+  '''(?i)^cpp-sit\.nftpr1\.cjscp\.org\.uk$''',
+  '''(?i)^libraries\.mdv\.cpp\.nonlive$''',
+  '''(?i)^steccm05actap01\.cpp\.nonlive$''',
+  '''(?i)^steccmslave01\.cpp\.nonlive$''',
+  '''(?i)^steccm05wrpxy01\.cpp\.nonlive$''',
+  '''(?i)^sitccm01actap06\.cpp\.nonlive$'''
+]
+

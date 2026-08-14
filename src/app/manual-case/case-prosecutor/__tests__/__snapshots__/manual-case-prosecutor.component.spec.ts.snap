@@ -1,0 +1,1267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual case prosecutor should render for npp 1`] = `
+<manual-case-prosecutor
+  editManualCase={[Function Object]}
+  errors={[Function Array]}
+  filterByCps={[Function Function]}
+  focused="false"
+  form={[Function _NgForm]}
+  hasSingleProsecutorCode="false"
+  isTrialOrSentence="false"
+  isTypeSjp={[Function Boolean]}
+  isTypeSummons="false"
+  location={[Function _Location]}
+  manualCaseDetail={[Function Object]}
+  nonCpsProsecutorCodes={[Function Array]}
+  nonPoliceProsecutor={[Function Object]}
+  requiresRefNumber="false"
+  selectedCpsProsecutor={[Function Object]}
+  selectedProsecutorAuthority={[Function Object]}
+  standardProsecutors={[Function Function]}
+  submitFormData={[Function EventEmitter_]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_PROSECUTOR.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      one-half=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Prosecution reference number"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-form-control-undefined-GENERATED_ID"
+            >
+               Prosecution reference number 
+            </label>
+            <input
+              class="ng-untouched ng-pristine govuk-input ng-invalid"
+              data-role="prosecutionAuthorityReference-input"
+              id="pdk-form-control-undefined-GENERATED_ID"
+              maxlength="30"
+              name="prosecutorCaseReference"
+              pdk-input=""
+              pdk-text-input=""
+              required=""
+              type="text"
+            />
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-field
+          data-test-id="prosecutorSearch"
+          label="Prosecuting authority"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="prosecutionAuthority"
+            >
+               Prosecuting authority 
+            </label>
+            <cpp-prosecutor-autosuggest
+              class="ng-untouched ng-pristine ng-valid"
+              data-role="prosecutionAuthority-input"
+              name="prosecutionAuthority"
+              required=""
+            >
+              <pdk-autosuggest-lite>
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                          aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                          aria-expanded="false"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="prosecutionAuthority"
+                          role="combobox"
+                          type="text"
+                        />
+                        <span
+                          class="govuk-visually-hidden"
+                          id="pdk-autosuggest__instructions-GENERATED_ID"
+                          pdk-visually-hidden=""
+                        >
+                           When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                        </span>
+                        <span
+                          aria-live="polite"
+                          class="govuk-visually-hidden"
+                          pdk-visually-hidden=""
+                          role="status"
+                        >
+                        </span>
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+              </pdk-autosuggest-lite>
+            </cpp-prosecutor-autosuggest>
+          </pdk-form-group>
+        </pdk-form-field>
+        <div
+          class="govuk-!-margin-bottom-3"
+          pdk-margin-bottom="3"
+        >
+          <pdk-form-field
+            label="Cost claimed by prosecutor"
+            labeltype="small"
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label govuk-label--s"
+                for="pdk-currency-input-GENERATED_ID"
+              >
+                 Cost claimed by prosecutor 
+              </label>
+              <pdk-currency-input
+                class="ng-untouched ng-pristine ng-invalid"
+                data-role="costClaimed-input"
+                name="appliedProsecutorCosts"
+                required=""
+              >
+                <div
+                  class="pdk-currency-input"
+                >
+                  <input
+                    autocomplete="off"
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-currency-input-GENERATED_ID"
+                    name="appliedProsecutorCosts"
+                    pattern="/^$|(?=.*?\\d)^\\$?(([1-9]\\d{0,2}(,\\d{3})*)|\\d+)?(\\.\\d{2})?$/"
+                    type="text"
+                  />
+                </div>
+              </pdk-currency-input>
+            </pdk-form-group>
+          </pdk-form-field>
+        </div>
+        <pdk-form-field
+          hint=""
+          label="Date of notice"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 Date of notice 
+              </legend>
+              <pdk-hint
+                class="govuk-hint"
+              >
+                <div>
+                   For example, 23 10 2017 
+                </div>
+              </pdk-hint>
+              <pdk-date-input
+                class="ng-untouched ng-pristine ng-invalid"
+                name="chargePostingDate"
+                required=""
+                validatedate=""
+              >
+                <pdk-interaction-container>
+                  <div>
+                    <div
+                      class="pdk-date-input"
+                    >
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </pdk-interaction-container>
+              </pdk-date-input>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_PROSECUTOR.CONTINUE 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <button
+            class="back-button pdk-!-text-color-blue govuk-link"
+            pdk-link=""
+            type="button"
+          >
+             MANUAL_CASE_PROSECUTOR.BACK 
+          </button>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-prosecutor>
+`;
+
+exports[`Manual case prosecutor should render the component 1`] = `
+<manual-case-prosecutor
+  editManualCase={[Function Object]}
+  errors={[Function Array]}
+  filterByCps={[Function Function]}
+  focused="false"
+  form={[Function _NgForm]}
+  hasSingleProsecutorCode="false"
+  isTrialOrSentence="false"
+  isTypeSjp={[Function Boolean]}
+  isTypeSummons="false"
+  location={[Function _Location]}
+  manualCaseDetail={[Function Object]}
+  nonCpsProsecutorCodes={[Function Array]}
+  nonPoliceProsecutor={[Function Object]}
+  requiresRefNumber="false"
+  selectedCpsProsecutor={[Function Object]}
+  selectedProsecutorAuthority={[Function Object]}
+  standardProsecutors={[Function Function]}
+  submitFormData={[Function EventEmitter_]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_PROSECUTOR.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      one-half=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Prosecution reference number"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-form-control-undefined-GENERATED_ID"
+            >
+               Prosecution reference number 
+            </label>
+            <input
+              class="ng-untouched ng-pristine ng-valid govuk-input"
+              data-role="prosecutionAuthorityReference-input"
+              id="pdk-form-control-undefined-GENERATED_ID"
+              maxlength="30"
+              name="prosecutorCaseReference"
+              pdk-input=""
+              pdk-text-input=""
+              required=""
+              type="text"
+            />
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-field
+          data-test-id="prosecutorSearch"
+          label="Prosecuting authority"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="prosecutionAuthority"
+            >
+               Prosecuting authority 
+            </label>
+            <cpp-prosecutor-autosuggest
+              class="ng-untouched ng-pristine ng-valid"
+              data-role="prosecutionAuthority-input"
+              name="prosecutionAuthority"
+              required=""
+            >
+              <pdk-autosuggest-lite>
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                          aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                          aria-expanded="false"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="prosecutionAuthority"
+                          role="combobox"
+                          type="text"
+                        />
+                        <span
+                          class="govuk-visually-hidden"
+                          id="pdk-autosuggest__instructions-GENERATED_ID"
+                          pdk-visually-hidden=""
+                        >
+                           When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                        </span>
+                        <span
+                          aria-live="polite"
+                          class="govuk-visually-hidden"
+                          pdk-visually-hidden=""
+                          role="status"
+                        >
+                        </span>
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+              </pdk-autosuggest-lite>
+            </cpp-prosecutor-autosuggest>
+          </pdk-form-group>
+        </pdk-form-field>
+        <div
+          class="govuk-!-margin-bottom-3"
+          pdk-margin-bottom="3"
+        >
+          <pdk-form-field
+            label="Cost claimed by prosecutor"
+            labeltype="small"
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label govuk-label--s"
+                for="pdk-currency-input-GENERATED_ID"
+              >
+                 Cost claimed by prosecutor 
+              </label>
+              <pdk-currency-input
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="costClaimed-input"
+                name="appliedProsecutorCosts"
+                required=""
+              >
+                <div
+                  class="pdk-currency-input"
+                >
+                  <input
+                    autocomplete="off"
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-currency-input-GENERATED_ID"
+                    name="appliedProsecutorCosts"
+                    pattern="/^$|(?=.*?\\d)^\\$?(([1-9]\\d{0,2}(,\\d{3})*)|\\d+)?(\\.\\d{2})?$/"
+                    type="text"
+                  />
+                </div>
+              </pdk-currency-input>
+            </pdk-form-group>
+          </pdk-form-field>
+        </div>
+        <pdk-form-field
+          hint=""
+          label="Date of notice"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 Date of notice 
+              </legend>
+              <pdk-hint
+                class="govuk-hint"
+              >
+                <div>
+                   For example, 23 10 2017 
+                </div>
+              </pdk-hint>
+              <pdk-date-input
+                class="ng-untouched ng-pristine ng-valid"
+                name="chargePostingDate"
+                required=""
+                validatedate=""
+              >
+                <pdk-interaction-container>
+                  <div>
+                    <div
+                      class="pdk-date-input"
+                    >
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </pdk-interaction-container>
+              </pdk-date-input>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_PROSECUTOR.CONTINUE 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <button
+            class="back-button pdk-!-text-color-blue govuk-link"
+            pdk-link=""
+            type="button"
+          >
+             MANUAL_CASE_PROSECUTOR.BACK 
+          </button>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-prosecutor>
+`;
+
+exports[`Manual case prosecutor should render the component with a npp 1`] = `
+<manual-case-prosecutor
+  editManualCase={[Function Object]}
+  errors={[Function Array]}
+  filterByCps={[Function Function]}
+  focused="false"
+  form={[Function _NgForm]}
+  hasSingleProsecutorCode="false"
+  isTrialOrSentence="false"
+  isTypeSjp={[Function Boolean]}
+  isTypeSummons="false"
+  location={[Function _Location]}
+  manualCaseDetail={[Function Object]}
+  nonCpsProsecutorCodes={[Function Array]}
+  nonPoliceProsecutor={[Function Object]}
+  requiresRefNumber="false"
+  selectedCpsProsecutor={[Function Object]}
+  selectedProsecutorAuthority={[Function Object]}
+  standardProsecutors={[Function Function]}
+  submitFormData={[Function EventEmitter_]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_PROSECUTOR.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      one-half=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Prosecution reference number"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-form-control-undefined-GENERATED_ID"
+            >
+               Prosecution reference number 
+            </label>
+            <input
+              class="ng-untouched ng-pristine ng-valid govuk-input"
+              data-role="prosecutionAuthorityReference-input"
+              id="pdk-form-control-undefined-GENERATED_ID"
+              maxlength="30"
+              name="prosecutorCaseReference"
+              pdk-input=""
+              pdk-text-input=""
+              required=""
+              type="text"
+            />
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-field
+          data-test-id="prosecutorSearch"
+          label="Prosecuting authority"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="prosecutionAuthority"
+            >
+               Prosecuting authority 
+            </label>
+            <cpp-prosecutor-autosuggest
+              class="ng-untouched ng-pristine ng-valid"
+              data-role="prosecutionAuthority-input"
+              name="prosecutionAuthority"
+              required=""
+            >
+              <pdk-autosuggest-lite>
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                          aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                          aria-expanded="false"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="prosecutionAuthority"
+                          role="combobox"
+                          type="text"
+                        />
+                        <span
+                          class="govuk-visually-hidden"
+                          id="pdk-autosuggest__instructions-GENERATED_ID"
+                          pdk-visually-hidden=""
+                        >
+                           When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                        </span>
+                        <span
+                          aria-live="polite"
+                          class="govuk-visually-hidden"
+                          pdk-visually-hidden=""
+                          role="status"
+                        >
+                        </span>
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+              </pdk-autosuggest-lite>
+            </cpp-prosecutor-autosuggest>
+          </pdk-form-group>
+        </pdk-form-field>
+        <div
+          class="govuk-!-margin-bottom-3"
+          pdk-margin-bottom="3"
+        >
+          <pdk-form-field
+            label="Cost claimed by prosecutor"
+            labeltype="small"
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label govuk-label--s"
+                for="pdk-currency-input-GENERATED_ID"
+              >
+                 Cost claimed by prosecutor 
+              </label>
+              <pdk-currency-input
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="costClaimed-input"
+                name="appliedProsecutorCosts"
+                required=""
+              >
+                <div
+                  class="pdk-currency-input"
+                >
+                  <input
+                    autocomplete="off"
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-currency-input-GENERATED_ID"
+                    name="appliedProsecutorCosts"
+                    pattern="/^$|(?=.*?\\d)^\\$?(([1-9]\\d{0,2}(,\\d{3})*)|\\d+)?(\\.\\d{2})?$/"
+                    type="text"
+                  />
+                </div>
+              </pdk-currency-input>
+            </pdk-form-group>
+          </pdk-form-field>
+        </div>
+        <pdk-form-field
+          hint=""
+          label="Date of notice"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 Date of notice 
+              </legend>
+              <pdk-hint
+                class="govuk-hint"
+              >
+                <div>
+                   For example, 23 10 2017 
+                </div>
+              </pdk-hint>
+              <pdk-date-input
+                class="ng-untouched ng-pristine ng-valid"
+                name="chargePostingDate"
+                required=""
+                validatedate=""
+              >
+                <pdk-interaction-container>
+                  <div>
+                    <div
+                      class="pdk-date-input"
+                    >
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </pdk-interaction-container>
+              </pdk-date-input>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_PROSECUTOR.CONTINUE 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <button
+            class="back-button pdk-!-text-color-blue govuk-link"
+            pdk-link=""
+            type="button"
+          >
+             MANUAL_CASE_PROSECUTOR.BACK 
+          </button>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-prosecutor>
+`;
+
+exports[`Manual case prosecutor should render the prosecuting authority search 1`] = `
+<manual-case-prosecutor
+  editManualCase={[Function Object]}
+  errors={[Function Array]}
+  filterByCps={[Function Function]}
+  focused="false"
+  form={[Function _NgForm]}
+  hasSingleProsecutorCode="false"
+  isTrialOrSentence="false"
+  isTypeSjp={[Function Boolean]}
+  isTypeSummons="false"
+  location={[Function _Location]}
+  manualCaseDetail={[Function Object]}
+  nonCpsProsecutorCodes={[Function Array]}
+  nonPoliceProsecutor={[Function Object]}
+  requiresRefNumber="false"
+  standardProsecutors={[Function Function]}
+  submitFormData={[Function EventEmitter_]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_PROSECUTOR.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      one-half=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Prosecution reference number"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-form-control-undefined-GENERATED_ID"
+            >
+               Prosecution reference number 
+            </label>
+            <input
+              class="ng-untouched ng-pristine ng-valid govuk-input"
+              data-role="prosecutionAuthorityReference-input"
+              id="pdk-form-control-undefined-GENERATED_ID"
+              maxlength="30"
+              name="prosecutorCaseReference"
+              pdk-input=""
+              pdk-text-input=""
+              required=""
+              type="text"
+            />
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-field
+          data-test-id="prosecutorSearch"
+          label="Prosecuting authority"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="prosecutionAuthority"
+            >
+               Prosecuting authority 
+            </label>
+            <cpp-prosecutor-autosuggest
+              class="ng-untouched ng-pristine ng-valid"
+              data-role="prosecutionAuthority-input"
+              name="prosecutionAuthority"
+              required=""
+            >
+              <pdk-autosuggest-lite>
+                <pdk-autosuggest
+                  highlightcolor="blue"
+                >
+                  <pdk-interaction-container>
+                    <div>
+                      <div
+                        class="pdk-autosuggest"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                          aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                          aria-expanded="false"
+                          autocomplete="off"
+                          class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                          id="prosecutionAuthority"
+                          role="combobox"
+                          type="text"
+                        />
+                        <span
+                          class="govuk-visually-hidden"
+                          id="pdk-autosuggest__instructions-GENERATED_ID"
+                          pdk-visually-hidden=""
+                        >
+                           When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                        </span>
+                        <span
+                          aria-live="polite"
+                          class="govuk-visually-hidden"
+                          pdk-visually-hidden=""
+                          role="status"
+                        >
+                        </span>
+                        <div
+                          class="pdk-autosuggest__suggestions-container"
+                          id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </pdk-interaction-container>
+                </pdk-autosuggest>
+              </pdk-autosuggest-lite>
+            </cpp-prosecutor-autosuggest>
+          </pdk-form-group>
+        </pdk-form-field>
+        <div
+          class="govuk-!-margin-bottom-3"
+          pdk-margin-bottom="3"
+        >
+          <pdk-form-field
+            label="Cost claimed by prosecutor"
+            labeltype="small"
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label govuk-label--s"
+                for="pdk-currency-input-GENERATED_ID"
+              >
+                 Cost claimed by prosecutor 
+              </label>
+              <pdk-currency-input
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="costClaimed-input"
+                name="appliedProsecutorCosts"
+                required=""
+              >
+                <div
+                  class="pdk-currency-input"
+                >
+                  <input
+                    autocomplete="off"
+                    class="ng-untouched ng-pristine ng-valid govuk-input"
+                    id="pdk-currency-input-GENERATED_ID"
+                    name="appliedProsecutorCosts"
+                    pattern="/^$|(?=.*?\\d)^\\$?(([1-9]\\d{0,2}(,\\d{3})*)|\\d+)?(\\.\\d{2})?$/"
+                    type="text"
+                  />
+                </div>
+              </pdk-currency-input>
+            </pdk-form-group>
+          </pdk-form-field>
+        </div>
+        <pdk-form-field
+          hint=""
+          label="Date of notice"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 Date of notice 
+              </legend>
+              <pdk-hint
+                class="govuk-hint"
+              >
+                <div>
+                   For example, 23 10 2017 
+                </div>
+              </pdk-hint>
+              <pdk-date-input
+                class="ng-untouched ng-pristine ng-valid"
+                name="chargePostingDate"
+                required=""
+                validatedate=""
+              >
+                <pdk-interaction-container>
+                  <div>
+                    <div
+                      class="pdk-date-input"
+                    >
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </pdk-interaction-container>
+              </pdk-date-input>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_PROSECUTOR.CONTINUE 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <button
+            class="back-button pdk-!-text-color-blue govuk-link"
+            pdk-link=""
+            type="button"
+          >
+             MANUAL_CASE_PROSECUTOR.BACK 
+          </button>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-prosecutor>
+`;

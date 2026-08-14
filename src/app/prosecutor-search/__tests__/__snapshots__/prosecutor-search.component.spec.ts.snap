@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProsecutorSearchComponent should match snapshot 1`] = `
+<prosecutor-search
+  canCreate={[Function Boolean]}
+  disabled="false"
+  filterByNonStandardOrganisation={[Function Function]}
+  hasNpp={[Function Boolean]}
+  includeNonStandardOrganisations="false"
+  prosecutorSelected={[Function EventEmitter_]}
+  searchLabel={[Function String]}
+>
+  <pdk-form-field
+    class="govuk-!-margin-bottom-2"
+    labeltype="small"
+    pdk-margin-bottom="2"
+  >
+    <pdk-form-group
+      class="pdk-form-group"
+    >
+      <label
+        class="govuk-label govuk-label--s"
+        for="pdk-checkbox-GENERATED_ID"
+      >
+         Prosecuting authority (Original informant on the case) 
+      </label>
+      <pdk-checkbox
+        checkboxtype="small"
+        class="govuk-checkboxes govuk-checkboxes--small ng-untouched ng-pristine ng-valid"
+        name="includeNonStandardOrganisations"
+      >
+        <div
+          class="govuk-checkboxes__item"
+        >
+          <input
+            class="govuk-checkboxes__input"
+            id="pdk-checkbox-GENERATED_ID"
+            name="includeNonStandardOrganisations"
+            type="checkbox"
+            value="true"
+          />
+          <label
+            class="govuk-label govuk-checkboxes__label"
+            for="pdk-checkbox-GENERATED_ID"
+          >
+             Include non-standard organisations 
+          </label>
+        </div>
+      </pdk-checkbox>
+    </pdk-form-group>
+  </pdk-form-field><div
+    class="govuk-!-margin-bottom-3"
+    pdk-margin-bottom="3"
+  >
+    <a
+      class="govuk-link govuk-link--no-visited-state"
+      href="/prosecutor/undefined/create"
+      pdk-link=""
+      unvisited=""
+    >
+       Add new prosecutor 
+    </a>
+  </div><pdk-form-field
+    data-test-id="prosecutorSearch"
+    label="Search prosecutors"
+    labeltype="none"
+  >
+    <pdk-form-group
+      class="pdk-form-group"
+    >
+      <label
+        class="govuk-visually-hidden govuk-label"
+        for="prosecutionAuthority"
+      >
+         Search prosecutors 
+      </label>
+      <cpp-prosecutor-autosuggest
+        class="ng-untouched ng-pristine ng-invalid"
+        data-role="prosecutionAuthority-input"
+        id="prosecutionAuthority"
+        name="prosecutionAuthority"
+        required=""
+      >
+        <pdk-autosuggest-lite>
+          <pdk-autosuggest
+            highlightcolor="blue"
+          >
+            <pdk-interaction-container>
+              <div>
+                <div
+                  class="pdk-autosuggest"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                    aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                    aria-expanded="false"
+                    autocomplete="off"
+                    class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                    id="prosecutionAuthority"
+                    role="combobox"
+                    type="text"
+                  />
+                  <span
+                    class="govuk-visually-hidden"
+                    id="pdk-autosuggest__instructions-GENERATED_ID"
+                    pdk-visually-hidden=""
+                  >
+                     When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                  </span>
+                  <span
+                    aria-live="polite"
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                    role="status"
+                  >
+                  </span>
+                  <div
+                    class="pdk-autosuggest__suggestions-container"
+                    id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                  >
+                  </div>
+                </div>
+              </div>
+            </pdk-interaction-container>
+          </pdk-autosuggest>
+        </pdk-autosuggest-lite>
+      </cpp-prosecutor-autosuggest>
+    </pdk-form-group>
+  </pdk-form-field>
+</prosecutor-search>
+`;
+
+exports[`ProsecutorSearchComponent should render for npp 1`] = `
+<prosecutor-search
+  canCreate={[Function Boolean]}
+  disabled="false"
+  filterByNonStandardOrganisation={[Function Function]}
+  hasNpp="false"
+  includeNonStandardOrganisations="false"
+  prosecutorSelected={[Function EventEmitter_]}
+  searchLabel={[Function String]}
+>
+</prosecutor-search>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OffenceWarning should compile correctly with all warnings 1`] = `
+<offence-warning-test>
+  <offence-warning>
+    <pdk-form-group
+      class="pdk-form-group govuk-form-group--error"
+    >
+      <div
+        class="pdk-!-text-color-red govuk-heading-s"
+        pdk-text-colour="red"
+        pdk-typography="heading-small"
+      >
+         This is a warning 
+      </div>
+    </pdk-form-group>
+  </offence-warning>
+</offence-warning-test>
+`;

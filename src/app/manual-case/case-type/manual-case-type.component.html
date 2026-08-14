@@ -1,0 +1,101 @@
+@if (errors) {
+<pdk-error-summary [errors]="errors" focusOnChange> </pdk-error-summary>
+}
+
+<pdk-grid container>
+  <pdk-grid full>
+    <h1 pdk-typography="heading-xlarge">
+      {{ 'MANUAL_CASE_TYPE.TITLE' | translate }}
+    </h1>
+  </pdk-grid>
+</pdk-grid>
+
+<pdk-grid container>
+  <pdk-grid two-thirds>
+    <form pdk-form novalidate (validSubmit)="submitData(form.value)" (errors)="errors = $event">
+      <pdk-form-field
+        label="{{ 'MANUAL_CASE_TYPE.CASE_APPLICATION_TYPE_LABEL' | translate }}"
+        labelType="none"
+        [errorMessages]="[
+          {
+            rule: 'required',
+            message: 'MANUAL_CASE_TYPE.CASE_APPLICATION_TYPE_LABEL' | translate
+          }
+        ]"
+      >
+        <pdk-radio-group
+          name="initiationCode"
+          [(ngModel)]="editManualCase.initiationCode"
+          required
+          data-role="enter-case-type"
+        >
+          @if (hasNpp) {
+          <pdk-radio-button value="Application">
+            {{ 'MANUAL_CASE_TYPE.APPLICATION' | translate }}
+          </pdk-radio-button>
+          }
+
+          <pdk-radio-button value="S">
+            {{ 'MANUAL_CASE_TYPE.SUMMONS' | translate }}
+          </pdk-radio-button>
+          @if (editManualCase.initiationCode === 'S') {
+          <pdk-inset-text [compound]="true">
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate }}"
+              labelType="none"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL' | translate
+                }
+              ]"
+            >
+              <pdk-radio-group
+                name="summonsCode"
+                [(ngModel)]="editManualCase.summonsCode"
+                [options]="summonsCodes"
+                required
+              >
+              </pdk-radio-group>
+            </pdk-form-field>
+          </pdk-inset-text>
+          }
+
+          <pdk-radio-button value="Q">
+            {{ 'MANUAL_CASE_TYPE.REQUISITIONS' | translate }}
+          </pdk-radio-button>
+
+          <pdk-radio-button value="J">
+            {{ 'MANUAL_CASE_TYPE.SJP' | translate }}
+          </pdk-radio-button>
+
+          @if (hasNpp) {
+          <pdk-radio-button value="C">
+            {{ 'MANUAL_CASE_TYPE.CHARGE' | translate }}
+          </pdk-radio-button>
+          } @if (hasNpp) {
+          <pdk-radio-button value="T">
+            {{ 'MANUAL_CASE_TYPE.TRIAL' | translate }}
+          </pdk-radio-button>
+          } @if (hasNpp) {
+          <pdk-radio-button value="CO">
+            {{ 'MANUAL_CASE_TYPE.COMMITTAL' | translate }}
+          </pdk-radio-button>
+          }
+        </pdk-radio-group>
+      </pdk-form-field>
+
+      <pdk-form-group>
+        <button pdk-button type="submit" data-role="save-applicant-details-button">
+          {{ 'MANUAL_CASE_TYPE.START' | translate }}
+        </button>
+      </pdk-form-group>
+
+      <p pdk-margin-top="3">
+        <a pdk-link unvisited href="javascript:void(0)" [href]="homepageUrl">
+          {{ 'MANUAL_CASE_TYPE.PREVIOUS' | translate }}
+        </a>
+      </p>
+    </form>
+  </pdk-grid>
+</pdk-grid>

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReferredOpenCourtOffeneDecision should compile correctly 1`] = `
+<referred-open-court-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <refer-to-open-court-offence-decision>
+    <div>
+      <p>
+         Summons issued for hearing before south West London Magistrates' Court 
+         (Room 5) 
+         on 4 Jun 2019 at Lavender Hill Magistrates' Court at 12:00am 
+      </p>
+      <p>
+        Reason: Equivocal plea (For Trial)
+      </p>
+    </div>
+  </refer-to-open-court-offence-decision>
+</referred-open-court-offence-decision-test>
+`;

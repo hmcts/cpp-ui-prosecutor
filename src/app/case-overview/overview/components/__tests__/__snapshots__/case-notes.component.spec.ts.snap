@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Case note component should display case notes 1`] = `
+<case-notes
+  caseNotes={[Function Object]}
+  changeRef={[Function ViewRef]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid>
+      <div>
+        <div>
+          <div
+            class="govuk-!-margin-left-2"
+            pdk-margin-left="2"
+          >
+            <div
+              class="govuk-heading-m"
+              pdk-typography="heading-medium"
+            >
+               General note 
+              <br />
+              <span
+                class="pdk-!-text-color-dark-grey govuk-body-m"
+                pdk-text-colour="dark-grey"
+                pdk-typography="body-medium"
+              >
+                 4 July 2019 at 12:00am by Erica Wilson 
+              </span>
+            </div>
+            <pdk-foldable-text
+              class="govuk-body-m"
+              pdk-typography="body-medium"
+            >
+              <div
+                class="pdk-foldable"
+              >
+                <span
+                  class="pdk-foldable__content pdk-foldable__content__single"
+                  id="pdk-foldable-text-GENERATED_ID"
+                >
+                   Not enough documents 
+                </span>
+              </div>
+            </pdk-foldable-text>
+          </div>
+          <pdk-divider>
+            <hr
+              class="pdk-divider"
+            />
+          </pdk-divider>
+        </div>
+        <div>
+          <div
+            class="govuk-!-margin-left-2"
+            pdk-margin-left="2"
+          >
+            <div
+              class="govuk-heading-m"
+              pdk-typography="heading-medium"
+            >
+               General note 
+              <br />
+              <span
+                class="pdk-!-text-color-dark-grey govuk-body-m"
+                pdk-text-colour="dark-grey"
+                pdk-typography="body-medium"
+              >
+                 2 July 2019 at 12:00am by Erica Wilson 
+              </span>
+            </div>
+            <pdk-foldable-text
+              class="govuk-body-m"
+              pdk-typography="body-medium"
+            >
+              <div
+                class="pdk-foldable"
+              >
+                <span
+                  class="pdk-foldable__content pdk-foldable__content__single"
+                  id="pdk-foldable-text-GENERATED_ID"
+                >
+                   Not enough documents 
+                </span>
+              </div>
+            </pdk-foldable-text>
+          </div>
+        </div>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</case-notes>
+`;

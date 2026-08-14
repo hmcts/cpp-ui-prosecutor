@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManualCaseSummaryComponent should render the component 1`] = `
+<manual-case-summary
+  add={[Function EventEmitter_]}
+  caseDetails={[Function Object]}
+  defendantNames={[Function Array]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter_]}
+  formSubmit={[Function EventEmitter_]}
+  hasNpp={[Function Boolean]}
+  location={[Function _Location]}
+  offenceStateService={[Function ManualCaseOffenceStateService]}
+  prosecutors={[Function Array]}
+  remove={[Function EventEmitter_]}
+>
+  <pdk-grid
+    container=""
+  >
+    <pdk-grid
+      full=""
+    >
+      <h1
+        pdk-typography="heading-xlarge"
+      >
+      </h1>
+    </pdk-grid>
+  </pdk-grid><prosecution-case-details>
+    <div
+      class="prosecution-details govuk-!-margin-bottom-7"
+      pdk-margin-bottom="7"
+    >
+      <pdk-divider
+        class="margin-top-0"
+      >
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+      <pdk-grid
+        container=""
+      >
+        <pdk-grid
+          two-thirds=""
+        >
+          <span
+            class="table-header"
+            pdk-typography="heading-medium"
+          >
+          </span>
+        </pdk-grid>
+        <pdk-grid
+          class="change-link"
+          one-third=""
+        >
+          <a
+            data-role="prosecution-change-link"
+            href="javascript:void(0)"
+            pdk-link=""
+            unvisited=""
+          >
+          </a>
+        </pdk-grid>
+      </pdk-grid>
+      <table
+        pdk-table=""
+      >
+        <tbody
+          pdk-table-body=""
+        >
+          <tr
+            class="table-row"
+            pdk-table-row=""
+          >
+            <th
+              class="header"
+              pdk-table-header="row"
+            >
+            </th>
+            <td
+              class="data"
+              data-role="prosecutor-case-reference"
+              pdk-table-cell=""
+            >
+            </td>
+          </tr>
+          <tr
+            class="table-row"
+            pdk-table-row=""
+          >
+            <th
+              class="header"
+              pdk-table-header="row"
+            >
+            </th>
+            <td
+              class="data"
+              data-role="prosecution-authority"
+              pdk-table-cell=""
+            >
+            </td>
+          </tr>
+          <tr
+            class="table-row"
+            pdk-table-row=""
+          >
+            <th
+              class="header"
+              pdk-table-header="row"
+            >
+            </th>
+            <td
+              class="data"
+              data-role="cps-prosecutor"
+              pdk-table-cell=""
+            >
+            </td>
+          </tr>
+          <tr
+            class="table-row"
+            pdk-table-row=""
+          >
+            <th
+              class="header"
+              pdk-table-header="row"
+            >
+            </th>
+            <td
+              class="data"
+              data-role="cost-claimed"
+              pdk-table-cell=""
+            >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </prosecution-case-details><manual-defendant-details>
+    <div
+      class="defendant-details"
+    >
+      <pdk-divider
+        class="govuk-!-margin-top-2"
+        pdk-margin-top="2"
+      >
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+  </manual-defendant-details><manual-case-offence-details>
+    <div
+      class="defendant-details govuk-!-margin-bottom-7"
+      pdk-margin-bottom="7"
+    >
+      <pdk-grid
+        container=""
+      >
+        <pdk-grid
+          two-thirds=""
+        >
+          <span
+            class="table-header bold"
+            pdk-typography="body-medium"
+          >
+          </span>
+        </pdk-grid>
+        <pdk-grid
+          class="change-link"
+          one-third=""
+        >
+          <a
+            href="javascript:void(0)"
+            pdk-link=""
+            unvisted=""
+          >
+          </a>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </manual-case-offence-details><button
+    pdk-button=""
+    type="submit"
+  >
+  </button><p
+    class="govuk-!-margin-top-3"
+    pdk-margin-top="3"
+  >
+    <a
+      href="javascript:void(0)"
+      pdk-link=""
+      unvisited=""
+    >
+    </a>
+  </p>
+</manual-case-summary>
+`;

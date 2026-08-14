@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExportCaseDecisionsContainer should compile correctly 1`] = `
+<export-case-decisions-container
+  caseCountResult$={[Function _Store]}
+  role$={[Function Observable]}
+  store={[Function _Store]}
+>
+  <export-case-decisions>
+     null "user" 
+  </export-case-decisions>
+</export-case-decisions-container>
+`;
+
+exports[`ExportCaseDecisionsContainer should compile correctly with resulted case count 1`] = `
+<export-case-decisions-container
+  caseCountResult$={[Function _Store]}
+  role$={[Function Observable]}
+  store={[Function _Store]}
+>
+  <export-case-decisions>
+     {
+    "casesResultedCount": 10
+  } "user" 
+  </export-case-decisions>
+</export-case-decisions-container>
+`;

@@ -1,0 +1,91 @@
+@if (errors) {
+<pdk-error-summary [errors]="errors" focusOnChange> </pdk-error-summary>
+}
+
+<pdk-alert [icon]="true" type="warning">
+  Prosecution reference <strong>{{ oldValue }}</strong> already exists - enter correct reference
+</pdk-alert>
+
+<pdk-grid container>
+  <pdk-grid full>
+    <h1 pdk-typography="heading-xlarge">
+      {{ 'MANUAL_CASE_PROSECUTOR.REF_NUMBER' | translate }}
+    </h1>
+  </pdk-grid>
+</pdk-grid>
+
+<pdk-grid container>
+  <pdk-grid one-half>
+    <form pdk-form novalidate (validSubmit)="submitData()" (errors)="errors = $event">
+      <ng-container>
+        <pdk-form-field
+          label="Do you have a prosecution reference number?"
+          labelType="small"
+          [errorMessages]="[
+            {
+              rule: 'required',
+              message: 'Select if you have a prosecution reference or not'
+            }
+          ]"
+        >
+          <pdk-radio-group
+            name="hasProsecutionReferenceNo"
+            [ngModel]="hasProsecutorReferenceNumber()"
+            (ngModelChange)="requiresRefNumber = $event; updateProsecutionReferenceNo($event)"
+            required
+            [inline]="true"
+            data-role="hasProsecutionReferenceNo-input"
+            required
+          >
+            <pdk-radio-button [value]="true">Yes</pdk-radio-button>
+            <pdk-radio-button [value]="false">No</pdk-radio-button>
+          </pdk-radio-group>
+        </pdk-form-field>
+
+        @if (requiresRefNumber || hasProsecutorReferenceNumber()) {
+        <pdk-inset-text class="pl-m">
+          <pdk-form-field
+            label="Prosecution reference number"
+            labelType="small"
+            [errorMessages]="[
+              {
+                rule: 'required',
+                message: 'Enter prosecution reference number'
+              },
+              {
+                rule: 'duplicatedProsecutor',
+                message: 'Reference already exists - enter correct reference'
+              }
+            ]"
+          >
+            <input
+              pdk-text-input
+              pdk-input
+              name="prosecutorCaseReference"
+              type="text"
+              required
+              [(ngModel)]="editManualCase.prosecutorCaseReference"
+              maxlength="30"
+              required
+              data-role="prosecutionAuthorityReference-input"
+              prosecutorValidator
+            />
+          </pdk-form-field>
+        </pdk-inset-text>
+        }
+      </ng-container>
+
+      <pdk-form-group>
+        <button pdk-button type="submit" data-role="save-applicant-details-button">
+          {{ 'MANUAL_CASE_PROSECUTOR.CONTINUE' | translate }}
+        </button>
+      </pdk-form-group>
+
+      <p pdk-margin-top="3">
+        <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+          {{ 'MANUAL_CASE_PROSECUTOR.BACK' | translate }}
+        </a>
+      </p>
+    </form>
+  </pdk-grid>
+</pdk-grid>

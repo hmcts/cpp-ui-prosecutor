@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual case create success should render the component 1`] = `
+<manual-case-create-success
+  caseDetails={[Function Object]}
+>
+  <pdk-grid
+    class="govuk-!-margin-top-3"
+    container=""
+    pdk-margin-top="3"
+  >
+    <pdk-grid
+      full=""
+    >
+      <pdk-context-panel
+        icon="tick"
+        type="confirmation"
+      >
+        <div
+          role="alert"
+        >
+          <div
+            class="pdk-context-panel__message"
+          >
+            <div>
+              <h3
+                class="govuk-heading-m"
+              >
+              </h3>
+              <p
+                class="govuk-body-l"
+              >
+                <p
+                  class="govuk-!-margin-bottom-4"
+                  pdk-margin-bottom="4"
+                  pdk-typography="body-lead"
+                >
+                </p>
+                <p
+                  class="bold govuk-!-margin-bottom-5"
+                  data-role="prosecutor-case-reference"
+                  pdk-margin-bottom="5"
+                  pdk-typography="heading-xlarge"
+                >
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </pdk-context-panel>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-create-success>
+`;

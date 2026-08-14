@@ -1,0 +1,197 @@
+<pdk-grid container>
+  <pdk-grid full>
+    <h1 pdk-typography="heading-xlarge">
+      {{ 'MANUAL_CASE_EITHER_WAY.TITLE' | translate }}
+    </h1>
+  </pdk-grid>
+</pdk-grid>
+
+<pdk-grid container>
+  <pdk-grid full>
+    <form pdk-form novalidate (validSubmit)="submitData(form.value)" (errors)="onErrors($event)">
+      @for (item of offencesWithDefendants | keyvalue; track item.value.offence.offenceId; let offenceIndex = $index) {
+      <pdk-grid container>
+        <pdk-grid full>
+          <div>
+            <div class="offence-num" pdk-typography="heading-small">
+              {{ offenceIndex + 1 }}
+            </div>
+            <div pdk-padding-left="6">
+              <p pdk-typography="heading-small">
+                {{ item.value.offence.offenceTitle }}
+              </p>
+              <p>
+                {{ item.value.offence.offenceLegislation }}
+              </p>
+              <p>
+                {{ item.value.offence.offenceWording }}
+              </p>
+            </div>
+          </div>
+          @for (defendant of item.value.defendants; track defendant.id; let defendantIndex = $index) { @if
+          (defendant.individual) {
+          <p pdk-padding-top="4">
+            <span class="bold">{{ defendant?.individual?.personalInformation | fullName }}</span>
+          </p>
+          } @if (defendant.organisationName) {
+          <p pdk-padding-top="4">
+            <span class="bold">{{ defendant.organisationName }}</span>
+          </p>
+          } @if (initiationCode === 'T') {
+          <pdk-form-field
+            label="{{ 'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION' | translate }}"
+            labelType="small"
+            [errorMessages]="[
+              {
+                rule: 'required',
+                message: 'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION_REQUIRED' | translate
+              }
+            ]"
+          >
+            <pdk-select
+              name="{{ 'allocation-decision-' + item.value.offence.offenceId + '-' + defendant.id }}"
+              placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
+              [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId"
+              [options]="allocationDecisionOptions"
+              data-role="allocationDecision-input"
+            >
+            </pdk-select>
+          </pdk-form-field>
+          } @if (initiationCode === 'CO') { @if (getDefedantOffence(defendant, item.value.offence.offenceId)) {
+          <pdk-form-field
+            label="{{ 'MANUAL_CASE_EITHER_WAY.PLEA' | translate }}"
+            labelType="small"
+            [errorMessages]="[
+              {
+                rule: 'required',
+                message: 'MANUAL_CASE_EITHER_WAY.PLEA_REQUIRED' | translate
+              }
+            ]"
+          >
+            <pdk-select
+              name="{{ 'plea-' + item.value.offence.offenceId + '-' + defendant.id }}"
+              placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
+              [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaValue"
+              [options]="pleaOptions"
+              required
+              (change)="resetFormforOffenceId(item.value.offence.offenceId)"
+              data-role="plea"
+            >
+            </pdk-select>
+          </pdk-form-field>
+          } @if (getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue) {
+          <pdk-inset-text>
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_EITHER_WAY.PLEA_DATE' | translate }}"
+              labelType="small"
+              hintText="{{ 'COMMON.HINT_TEXT_DATE' | translate }}"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_EITHER_WAY.DATE_REQUIRED' | translate
+                },
+                {
+                  rule: 'pastDate',
+                  message: 'MANUAL_CASE_EITHER_WAY.PAST_DATE' | translate
+                }
+              ]"
+            >
+              <pdk-date-input
+                name="{{ 'plea-date-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).plea.pleaDate"
+                validateDate
+                [pastDate]="true"
+                required
+                data-role="pleaDate-input"
+              >
+              </pdk-date-input>
+            </pdk-form-field>
+            @if ( getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'GUILTY' ||
+            getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'NOT_GUILTY' ) {
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION' | translate }}"
+              labelType="small"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION_REQUIRED' | translate
+                }
+              ]"
+            >
+              <pdk-select
+                name="{{ 'allocation-decision-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                placeholder="{{ 'MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION' | translate }}"
+                [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).motReasonId"
+                [options]="allocationDecisionOptions"
+                required
+                data-role="allocationDecision-input"
+              >
+              </pdk-select>
+            </pdk-form-field>
+            } @if ( getDefedantOffence(defendant, item.value.offence.offenceId)?.plea.pleaValue === 'NOT_GUILTY' ) {
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_EITHER_WAY.VERDICT' | translate }}"
+              labelType="small"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_EITHER_WAY.VERDICT_REQUIRED' | translate
+                }
+              ]"
+            >
+              <pdk-radio-group
+                name="{{ 'verdict-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                [inline]="false"
+                required
+                [options]="verdictsOptions"
+                [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).verdict.verdictType.id"
+                (change)="verdictChanged($event, getDefedantOffence(defendant, item.value.offence.offenceId))"
+                data-role="verdict-input"
+              >
+              </pdk-radio-group>
+            </pdk-form-field>
+            <pdk-form-field
+              label="{{ 'MANUAL_CASE_EITHER_WAY.VERDICT_DATE' | translate }}"
+              labelType="small"
+              hintText="{{ 'COMMON.HINT_TEXT_DATE' | translate }}"
+              [errorMessages]="[
+                {
+                  rule: 'required',
+                  message: 'MANUAL_CASE_EITHER_WAY.DATE_REQUIRED' | translate
+                },
+                {
+                  rule: 'pastDate',
+                  message: 'MANUAL_CASE_EITHER_WAY.PAST_DATE' | translate
+                }
+              ]"
+            >
+              <pdk-date-input
+                name="{{ 'verdict-date-' + item.value.offence.offenceId + '-' + defendant.id }}"
+                [(ngModel)]="getDefedantOffence(defendant, item.value.offence.offenceId).verdict.verdictDate"
+                validateDate
+                [pastDate]="true"
+                required
+                data-role="verdictDate-input"
+              >
+              </pdk-date-input>
+            </pdk-form-field>
+            }
+          </pdk-inset-text>
+          } } }
+        </pdk-grid>
+      </pdk-grid>
+      }
+      <pdk-form-group>
+        <button pdk-button type="submit" data-role="continue">
+          {{ 'MANUAL_CASE_EITHER_WAY.CONTINUE' | translate }}
+        </button>
+      </pdk-form-group>
+
+      <p pdk-margin-top="3">
+        <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+          {{ 'MANUAL_CASE_EITHER_WAY.BACK' | translate }}
+        </a>
+      </p>
+    </form>
+  </pdk-grid>
+</pdk-grid>

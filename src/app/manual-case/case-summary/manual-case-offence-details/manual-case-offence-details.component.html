@@ -1,0 +1,256 @@
+<div class="defendant-details" pdk-margin-bottom="7">
+  <pdk-grid container>
+    <pdk-grid two-thirds>
+      <span class="table-header bold" pdk-typography="body-medium">{{
+        'MANUAL_CASE_SUMMARY.OFFENCE' + '_DETAILS.TITLE' | translate | titlecase
+      }}</span>
+    </pdk-grid>
+    <pdk-grid one-third class="change-link">
+      <a pdk-link unvisted href="javascript:void(0)" (click)="onAdd()">{{
+        'MANUAL_CASE_SUMMARY.ADD_OFFENCE' | translate
+      }}</a>
+    </pdk-grid>
+  </pdk-grid>
+
+  @for (defendant of defendants; let i = $index; track i) {
+  <div class="defendant" pdk-margin-bottom="7">
+    <pdk-divider pdk-margin-top="1" [dark]="true"></pdk-divider>
+    @if (defendant.offences && defendant.offences.length) {
+    <div>
+      <pdk-grid container>
+        <pdk-grid two-thirds>
+          <span pdk-typography="heading-medium" class="table-header">{{
+            (defendant.individual
+              ? (defendant?.individual?.personalInformation | fullName: true)
+              : defendant.organisationName) +
+              ' - ' +
+              ('MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.OFFENCES' | translate | lowercase)
+          }}</span>
+        </pdk-grid>
+      </pdk-grid>
+      @for (offence of defendant.offences; let y = $index; track y;) {
+      <div>
+        @if (y !== 0) {
+        <pdk-divider [dark]="true"></pdk-divider>
+        }
+        <pdk-grid container class="offence-header">
+          <pdk-grid two-thirds>
+            <span class="table-header bold" pdk-typography="body-small">{{
+              ('MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.OFFENCE' | translate) + ' ' + (y + 1)
+            }}</span>
+          </pdk-grid>
+          <pdk-grid one-third class="change-link">
+            <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit(offence)" data-role="offence-change-link">{{
+              'MANUAL_CASE_SUMMARY.CHANGE' | translate
+            }}</a>
+          </pdk-grid>
+        </pdk-grid>
+        <table pdk-table class="" pdk-margin-bottom="4" pdk-margin-top="2">
+          <thead
+            pdk-table-head
+            pdk-typography="body-small"
+            class="bold"
+            pdk-margin-bottom="4"
+            pdk-margin-top="4"
+          ></thead>
+          <tbody pdk-table-body>
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.OFFENCE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="offence-details">
+                <div>{{ offence?.offenceCode }}</div>
+                <div pdk-typography="body-small" class="bold">{{ offence?.offenceTitle }}</div>
+                <div>{{ offence?.offenceLegislation }}</div>
+              </td>
+              <td pdk-table-cell align="right">
+                @if (defendant.offences.length > 1) {
+                <a pdk-link class="remove-link" href="javascript:void(0)" (click)="onRemove(i, y)">{{
+                  'MANUAL_CASE_SUMMARY.REMOVE' | translate
+                }}</a>
+                }
+              </td>
+            </tr>
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.TITLE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="offence-title">
+                {{ offence?.offenceWording }}
+              </td>
+              <td></td>
+            </tr>
+            @if (offence?.arrestDate) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ARREST_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="arrest-date">
+                {{ offence?.arrestDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.chargeDate) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.CHARGE_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="charge-date">
+                {{ offence?.chargeDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.aocpEligible) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.FINE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="applied-compensation">
+                {{ offence?.aocpStandardPenalty | currency: 'GBP' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.appliedCompensation) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.COMPENSATION_CLAIMED' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="applied-compensation">
+                {{ offence?.appliedCompensation | currency: 'GBP' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.alcoholRelatedOffence?.alcoholLevelMethod) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_METHOD' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="alcohol-drug-level">
+                {{ getAlcoholLevelMethod(offence?.alcoholRelatedOffence?.alcoholLevelMethod) }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.alcoholRelatedOffence?.alcoholLevelAmount) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_AMOUNT' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="alcohol-amount">
+                {{
+                  offence?.alcoholRelatedOffence?.alcoholLevelAmount +
+                    ' ' +
+                    ('MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALCOHOL_DRUG_LEVEL' | translate)
+                }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_OWED' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="back-duty-owed">
+                {{ offence?.backDuty | currency: 'GBP' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_FROM_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="back-duty-date-from">
+                {{ offence?.backDutyDateFrom | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.backDuty) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.BACK_DUTY_TO_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="back-duty-date-to">
+                {{ offence?.backDutyDateTo | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.laidDate && hasNpp) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.LAID_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="laid-date">
+                {{ offence?.laidDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (!hasNpp && prosecutionCase.initiationCode === 'S') {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.LAID_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="laid-date">
+                {{ todayDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.plea?.pleaValue) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.PLEA' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="plea">
+                {{ getPleaDescription(offence?.plea.pleaValue) }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.plea?.pleaDate) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.PLEA_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="plea-date">
+                {{ offence?.plea.pleaDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.verdict?.verdictType?.id) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.VERDICT' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="verdict">
+                {{ getVerdictDescription(offence?.verdict.verdictType.id) }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.verdict?.verdictDate) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.VERDICT_DATE' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="verdict-date">
+                {{ offence?.verdict.verdictDate | date: 'd MMMM yyyy' }}
+              </td>
+              <td></td>
+            </tr>
+            } @if (offence?.motReasonId) {
+            <tr pdk-table-row class="table-row">
+              <th pdk-table-header="row" class="header">
+                {{ 'MANUAL_CASE_SUMMARY.OFFENCE_DETAILS.ALLOCATION_DECISION' | translate }}
+              </th>
+              <td pdk-table-cell class="data" data-role="allocation-decision">
+                {{ getAllocationDecisionDescription(offence?.motReasonId) }}
+              </td>
+              <td></td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      }
+    </div>
+    }
+  </div>
+  }
+</div>

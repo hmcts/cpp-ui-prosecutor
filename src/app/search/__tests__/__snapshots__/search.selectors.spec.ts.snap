@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search/selectors getSearchKeyword should select the available keyword 1`] = `"keyword"`;
+
+exports[`search/selectors getSearchResultCases should select the available cases with details 1`] = `
+[
+  {
+    "assigned": false,
+    "caseId": "caseId1",
+    "completed": true,
+    "defendant": {
+      "address": {
+        "address1": "Hogwards",
+        "postcode": "E1",
+      },
+      "addressChanged": false,
+      "contactDetails": {},
+      "dateOfBirth": "1957-03-11",
+      "dobChanged": false,
+      "firstName": "Guy",
+      "gender": "male",
+      "lastName": "Smith",
+      "nameChanged": false,
+      "outdated": true,
+      "title": "alpha",
+    },
+    "enterpriseId": "Z8QG1JR7CMTD",
+    "listedInCriminalCourts": false,
+    "postingDate": "2019-01-27",
+    "prosecutingAuthority": "TFL",
+    "status": "COMPLETED",
+    "urn": "TFL26168N21T5",
+  },
+  {
+    "assigned": false,
+    "caseId": "caseId2",
+    "completed": true,
+    "defendant": {
+      "dateOfBirth": "1985-03-04",
+      "firstName": "Jonti Jonti Jonti",
+      "lastName": "Smith",
+      "outdated": false,
+    },
+    "enterpriseId": "Y91FYLC8SCJJ",
+    "listedInCriminalCourts": false,
+    "postingDate": "2019-01-27",
+    "prosecutingAuthority": "TVL",
+    "status": "COMPLETED",
+    "urn": "TVL26116MZMMI",
+  },
+  {
+    "assigned": false,
+    "caseId": "caseId3",
+    "completed": false,
+    "defendant": {
+      "dateOfBirth": "1989-03-04",
+      "firstName": "Murad",
+      "lastName": "Smith",
+      "outdated": false,
+    },
+    "enterpriseId": "JZPFWZ26GWBF",
+    "listedInCriminalCourts": false,
+    "postingDate": "2019-01-28",
+    "prosecutingAuthority": "TFL",
+    "status": "NO_PLEA_RECEIVED",
+    "urn": "TFL84598WRMSZ",
+  },
+  {
+    "assigned": false,
+    "caseId": "caseId4",
+    "completed": false,
+    "defendant": {
+      "dateOfBirth": "1949-03-14",
+      "firstName": "Petru",
+      "lastName": "Smith",
+      "outdated": false,
+    },
+    "enterpriseId": "7XQLP31VP93C",
+    "listedInCriminalCourts": false,
+    "postingDate": "2019-01-28",
+    "prosecutingAuthority": "TFL",
+    "status": "NO_PLEA_RECEIVED_READY_FOR_DECISION",
+    "urn": "TFL92613WXH4V",
+  },
+  {
+    "assigned": false,
+    "caseId": "caseId5",
+    "completed": true,
+    "defendant": {
+      "dateOfBirth": "1981-03-05",
+      "firstName": "Sartaaj Sartaaj Sartaaj",
+      "lastName": "Smith",
+      "outdated": false,
+    },
+    "enterpriseId": "8PQ1KQYQK8ZC",
+    "listedInCriminalCourts": false,
+    "postingDate": "2019-01-27",
+    "prosecutingAuthority": "TVL",
+    "status": "COMPLETED",
+    "urn": "TVL26120QYR99",
+  },
+]
+`;

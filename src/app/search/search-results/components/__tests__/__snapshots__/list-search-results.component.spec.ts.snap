@@ -1,0 +1,1857 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSearchResultsComponent should compile correctly with multiple results 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         5 
+        <span>
+          results
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Jonti Jonti Jonti
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26116MZMMI
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1985
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Murad
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL84598WRMSZ
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1989
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Petru
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL92613WXH4V
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received - ready for decision 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            14 Mar 1949
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Sartaaj Sartaaj Sartaaj
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26120QYR99
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            05 Mar 1981
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should compile correctly with no results 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         0 
+        <span>
+          results
+        </span>
+         available 
+      </div>
+    </pdk-inset-text>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should compile correctly with single result 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         1 
+        <span>
+          result
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should display Awaiting listing for refer to court yet to be listed 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         1 
+        <span>
+          result
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Referred for court hearing 
+            <div
+              class="govuk-body-s"
+              pdk-typography="body-small"
+            >
+               Awaiting Listing 
+            </div>
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should display filter dropdown when there are multiple prosecutor authorities 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-form-field
+        label="Filter by prosecutor"
+      >
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-label"
+            for="prosecutor"
+          >
+             Filter by prosecutor 
+          </label>
+          <pdk-select
+            class="ng-untouched ng-pristine ng-valid"
+            id="prosecutor"
+            name="prosecutor"
+            required=""
+          >
+            <select
+              class="govuk-select"
+              id="prosecutor"
+              name="prosecutor"
+              required=""
+            >
+              <option
+                value="ALL"
+              >
+                 All 
+              </option>
+              <option
+                value="TFL"
+              >
+                 TFL 
+              </option>
+              <option
+                value="TVL"
+              >
+                 TVL 
+              </option>
+            </select>
+          </pdk-select>
+          <button
+            class="govuk-!-margin-left-2 govuk-button"
+            pdk-button=""
+            pdk-margin-left="2"
+            type="submit"
+          >
+            Filter
+          </button>
+        </pdk-form-group>
+      </pdk-form-field>
+    </form>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         5 
+        <span>
+          results
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Jonti Jonti Jonti
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26116MZMMI
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1985
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Murad
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL84598WRMSZ
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1989
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Petru
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL92613WXH4V
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received - ready for decision 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            14 Mar 1949
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Sartaaj Sartaaj Sartaaj
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26120QYR99
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            05 Mar 1981
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should display the 'Upload and enter postal reply' link 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         1 
+        <span>
+          result
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received - ready for decision 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;
+
+exports[`ListSearchResultsComponent should not display filter when there is only one prosecutor authority 1`] = `
+<list-search-results-test
+  prosecutorOptions={[Function Array]}
+  searchResults={[Function Array]}
+>
+  <list-search-results>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+      pdk-form=""
+    >
+      <pdk-form-field
+        label="Filter by prosecutor"
+      >
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-label"
+            for="prosecutor"
+          >
+             Filter by prosecutor 
+          </label>
+          <pdk-select
+            class="ng-untouched ng-pristine ng-valid"
+            id="prosecutor"
+            name="prosecutor"
+            required=""
+          >
+            <select
+              class="govuk-select"
+              id="prosecutor"
+              name="prosecutor"
+              required=""
+            >
+              <option
+                value="TFL"
+              >
+                 TFL 
+              </option>
+            </select>
+          </pdk-select>
+          <button
+            class="govuk-!-margin-left-2 govuk-button"
+            pdk-button=""
+            pdk-margin-left="2"
+            type="submit"
+          >
+            Filter
+          </button>
+        </pdk-form-group>
+      </pdk-form-field>
+    </form>
+    <pdk-inset-text
+      class="govuk-!-margin-top-6"
+      pdk-margin-top="6"
+    >
+      <div
+        class="govuk-inset-text"
+      >
+         5 
+        <span>
+          results
+        </span>
+         available 
+        <pdk-warning-text
+          class="govuk-!-margin-top-2"
+          pdk-margin-top="2"
+        >
+          <div
+            class="govuk-warning-text"
+          >
+            <span
+              aria-hidden="true"
+              class="govuk-warning-text__icon"
+            >
+              !
+            </span>
+            <strong
+              class="govuk-warning-text__text"
+            >
+              <span
+                class="govuk-visually-hidden"
+                pdk-visually-hidden=""
+              >
+                Warning
+              </span>
+              Cases with updated defendant name
+            </strong>
+          </div>
+        </pdk-warning-text>
+      </div>
+    </pdk-inset-text>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Case status
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Prosecutor
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Notice served
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <pdk-warning-text
+              class="govuk-!-margin-top-5"
+              pdk-margin-top="5"
+            >
+              <div
+                class="govuk-warning-text"
+              >
+                <span
+                  aria-hidden="true"
+                  class="govuk-warning-text__icon"
+                >
+                  !
+                </span>
+                <strong
+                  class="govuk-warning-text__text"
+                >
+                  <span
+                    class="govuk-visually-hidden"
+                    pdk-visually-hidden=""
+                  >
+                    Warning
+                  </span>
+                  <a
+                    class="govuk-link"
+                    href="/"
+                    pdk-link=""
+                  >
+                    <b>
+                      SMITH Guy
+                    </b>
+                  </a>
+                </strong>
+              </div>
+            </pdk-warning-text>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL26168N21T5
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            11 Mar 1957
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Jonti Jonti Jonti
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26116MZMMI
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1985
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Murad
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL84598WRMSZ
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            04 Mar 1989
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Petru
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TFL92613WXH4V
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             No plea received - ready for decision 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TFL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            14 Mar 1949
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            28 Jan 2019
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            <a
+              class="govuk-link"
+              href="/"
+              pdk-link=""
+            >
+              <b>
+                SMITH Sartaaj Sartaaj Sartaaj
+              </b>
+            </a>
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            TVL26120QYR99
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+             Completed 
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            TVL
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            05 Mar 1981
+          </td>
+          <td
+            class="no-wrap govuk-table__cell"
+            pdk-table-cell=""
+          >
+            27 Jan 2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-search-results>
+</list-search-results-test>
+`;

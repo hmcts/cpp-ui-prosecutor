@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updates (0 updates) 1`] = `
+<defendant-details-updates-link
+  numberOfUpdates="0"
+>
+  <p>
+     Defendant details updates (0) 
+  </p>
+</defendant-details-updates-link>
+`;
+
+exports[`DefendantDetailsUpdatesLinkComponent should contain the number of updates (1 update) 1`] = `
+<defendant-details-updates-link
+  numberOfUpdates={[Function Number]}
+>
+  <p>
+    <a
+      class="govuk-link govuk-section-break govuk-section-break--s"
+      href="/"
+      id="defendant-details-updates-link"
+      pdk-link=""
+      pdk-section="small"
+      routerlink="defendant-details-updates"
+    >
+       Defendant details updates (1) 
+    </a>
+  </p>
+</defendant-details-updates-link>
+`;

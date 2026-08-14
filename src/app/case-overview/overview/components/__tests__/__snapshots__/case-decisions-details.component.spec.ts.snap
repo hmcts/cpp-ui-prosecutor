@@ -1,0 +1,2296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseDecisionsDetailsComponent should compile correctly 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Withdrawn - Insufficient evidence
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Withdrawn - Insufficient evidence
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 11 Jun 2019 (or after)
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 11 Jul 2019 (or after)
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Adjourned to 21 Jun 2019 (or after)
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Referred for court hearing - Not suitable for SJP
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Dismissed
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should not show press restriction when undefined 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should show application 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <application-decision-details>
+        <pdk-grid
+          container=""
+          data-role="application-decision-details"
+        >
+          <pdk-grid
+            one-third=""
+          >
+            <div
+              class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              pdk-margin-left="2"
+              pdk-padding-vertical="2"
+            >
+              <b>
+                Application
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            two-thirds=""
+          >
+            <div
+              class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+              pdk-padding-vertical="2"
+            >
+              <p
+                data-role="application-rejected"
+              >
+                 Refused: Test reason 
+              </p>
+            </div>
+          </pdk-grid>
+        </pdk-grid>
+      </application-decision-details>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should show press restriction revoked when requested=false 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction restricting publicity revoked 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should show press restriction when requested 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+        <div
+          data-role="press-restrictions"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <p>
+                <b>
+                  Reporting restrictions
+                </b>
+              </p>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+            <p
+              data-role="reporting-restriction"
+            >
+               Direction made under section 45 Youth Justice and Criminal Evidence Act 1999, in respect of Test name 
+            </p>
+          </pdk-grid>
+        </div>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;
+
+exports[`CaseDecisionsDetailsComponent should show set aside 1`] = `
+<case-decisions-test
+  caseDecisionWithOffenceDecisions={[Function Object]}
+>
+  <case-decisions-details>
+    <div>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div
+            class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-margin-left="2"
+            pdk-padding-vertical="2"
+          >
+            <b>
+              Decision made
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <div
+            class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+            pdk-padding-vertical="2"
+          >
+            <div>
+               1 December 2018 
+            </div>
+            <div>
+               12:00am 
+            </div>
+            <div
+              class="pre-line"
+            >
+            </div>
+            <div>
+               Legal Adviser: Mark Adams 
+            </div>
+            <div>
+              Magistrate: Jenny
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey"
+              pdk-text-colour="dark-grey"
+            >
+               Wimbledon Magistrates' Court 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId1"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 1 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId2"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 2 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId3"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 3 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId4"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 4 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId5"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 5 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId6"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 6 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-divider>
+        <hr
+          class="pdk-divider"
+        />
+      </pdk-divider>
+    </div>
+    <div
+      data-role="offence-decision-container-offenceId7"
+    >
+      <pdk-grid
+        class="govuk-!-padding-left-2 govuk-!-padding-right-2 govuk-grid-row"
+        container=""
+        pdk-padding-horizontal="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <div>
+            <b>
+              Offence 7 
+            </b>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-bottom-2 govuk-grid-column-two-thirds"
+          pdk-padding-bottom="2"
+          two-thirds=""
+        >
+          <p>
+             Proved SJP 
+          </p>
+          <p
+            data-role="offence-decision"
+          >
+            Decision set aside
+          </p>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </case-decisions-details>
+</case-decisions-test>
+`;

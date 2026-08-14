@@ -1,0 +1,629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow input of \`pleaDate\` and \`allocationDecision\` if plea is \`GUILTY\` 1`] = `
+<pdk-inset-text>
+  <div
+    class="govuk-inset-text"
+  >
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <fieldset
+          class="govuk-fieldset"
+          pdk-fieldset=""
+        >
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          >
+             MANUAL_CASE_EITHER_WAY.PLEA_DATE 
+          </legend>
+          
+          <pdk-hint
+            class="govuk-hint"
+          >
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+            </div>
+          </pdk-hint>
+          
+          
+          <pdk-date-input
+            class="ng-untouched ng-pristine ng-valid"
+            data-role="pleaDate-input"
+            required=""
+            validatedate=""
+          >
+            <pdk-interaction-container>
+              <div>
+                <div
+                  class="pdk-date-input"
+                >
+                  <div
+                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  >
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-day"
+                        pdk-label=""
+                      >
+                         Day 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="day"
+                        id="pdk-date-input-GENERATED_ID-day"
+                        name="dateDay"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-month"
+                        pdk-label=""
+                      >
+                         Month 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="month"
+                        id="pdk-date-input-GENERATED_ID-month"
+                        name="dateMonth"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-year"
+                        pdk-label=""
+                      >
+                         Year 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                        formcontrolname="year"
+                        id="pdk-date-input-GENERATED_ID-year"
+                        name="dateYear"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </pdk-interaction-container>
+          </pdk-date-input>
+          
+        </fieldset>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        
+        <label
+          class="govuk-label govuk-label--s"
+          for="pdk-select-GENERATED_ID"
+        >
+           MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION 
+        </label>
+        
+        
+        
+        <pdk-select
+          class="ng-untouched ng-pristine ng-valid"
+          data-role="allocationDecision-input"
+          required=""
+        >
+          <select
+            class="govuk-select"
+            id="pdk-select-GENERATED_ID"
+            name="allocation-decision-4fc9cb0f24-ac3b-4a76-9c67-1320196daf79-46e1c5f5-5e91-4655-9eda-43368640f218"
+            required=""
+          >
+            <option
+              value=""
+            >
+              MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
+            </option>
+            
+            
+          </select>
+        </pdk-select>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <fieldset
+          class="govuk-fieldset"
+          pdk-fieldset=""
+        >
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          >
+             MANUAL_CASE_EITHER_WAY.VERDICT 
+          </legend>
+          
+          
+          
+          <pdk-radio-group
+            class="ng-untouched ng-pristine ng-valid"
+            data-role="verdict-input"
+            required=""
+          >
+            <div
+              class="govuk-radios"
+            >
+              
+            </div>
+          </pdk-radio-group>
+          
+        </fieldset>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <fieldset
+          class="govuk-fieldset"
+          pdk-fieldset=""
+        >
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          >
+             MANUAL_CASE_EITHER_WAY.VERDICT_DATE 
+          </legend>
+          
+          <pdk-hint
+            class="govuk-hint"
+          >
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+            </div>
+          </pdk-hint>
+          
+          
+          <pdk-date-input
+            class="ng-untouched ng-pristine ng-valid"
+            data-role="verdictDate-input"
+            required=""
+            validatedate=""
+          >
+            <pdk-interaction-container>
+              <div>
+                <div
+                  class="pdk-date-input"
+                >
+                  <div
+                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  >
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-day"
+                        pdk-label=""
+                      >
+                         Day 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="day"
+                        id="pdk-date-input-GENERATED_ID-day"
+                        name="dateDay"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-month"
+                        pdk-label=""
+                      >
+                         Month 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="month"
+                        id="pdk-date-input-GENERATED_ID-month"
+                        name="dateMonth"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-year"
+                        pdk-label=""
+                      >
+                         Year 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                        formcontrolname="year"
+                        id="pdk-date-input-GENERATED_ID-year"
+                        name="dateYear"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </pdk-interaction-container>
+          </pdk-date-input>
+          
+        </fieldset>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    
+  </div>
+</pdk-inset-text>
+`;
+
+exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow input of \`pleaDate\` if plea is \`INDICATED_GUILTY\` 1`] = `
+<pdk-inset-text>
+  <div
+    class="govuk-inset-text"
+  >
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <fieldset
+          class="govuk-fieldset"
+          pdk-fieldset=""
+        >
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          >
+             MANUAL_CASE_EITHER_WAY.PLEA_DATE 
+          </legend>
+          
+          <pdk-hint
+            class="govuk-hint"
+          >
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+            </div>
+          </pdk-hint>
+          
+          
+          <pdk-date-input
+            class="ng-untouched ng-pristine ng-valid"
+            data-role="pleaDate-input"
+            required=""
+            validatedate=""
+          >
+            <pdk-interaction-container>
+              <div>
+                <div
+                  class="pdk-date-input"
+                >
+                  <div
+                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  >
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-day"
+                        pdk-label=""
+                      >
+                         Day 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="day"
+                        id="pdk-date-input-GENERATED_ID-day"
+                        name="dateDay"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-month"
+                        pdk-label=""
+                      >
+                         Month 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="month"
+                        id="pdk-date-input-GENERATED_ID-month"
+                        name="dateMonth"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-year"
+                        pdk-label=""
+                      >
+                         Year 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                        formcontrolname="year"
+                        id="pdk-date-input-GENERATED_ID-year"
+                        name="dateYear"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </pdk-interaction-container>
+          </pdk-date-input>
+          
+        </fieldset>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    
+    
+  </div>
+</pdk-inset-text>
+`;
+
+exports[`EitherWayOffenceComponent when \`initiationCode === "CO" should allow input of \`pleaDate\`, \`allocationDecision\`, \`verdict\` and \`verdictDate\` if plea is \`NOT_GUILTY\` 1`] = `
+<pdk-inset-text>
+  <div
+    class="govuk-inset-text"
+  >
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <fieldset
+          class="govuk-fieldset"
+          pdk-fieldset=""
+        >
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          >
+             MANUAL_CASE_EITHER_WAY.PLEA_DATE 
+          </legend>
+          
+          <pdk-hint
+            class="govuk-hint"
+          >
+            <div>
+              
+               COMMON.HINT_TEXT_DATE 
+              
+            </div>
+          </pdk-hint>
+          
+          
+          <pdk-date-input
+            class="ng-untouched ng-pristine ng-valid"
+            data-role="pleaDate-input"
+            required=""
+            validatedate=""
+          >
+            <pdk-interaction-container>
+              <div>
+                <div
+                  class="pdk-date-input"
+                >
+                  <div
+                    class="govuk-date-input ng-untouched ng-pristine ng-invalid"
+                  >
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-day"
+                        pdk-label=""
+                      >
+                         Day 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="day"
+                        id="pdk-date-input-GENERATED_ID-day"
+                        name="dateDay"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-month"
+                        pdk-label=""
+                      >
+                         Month 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+                        formcontrolname="month"
+                        id="pdk-date-input-GENERATED_ID-month"
+                        name="dateMonth"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                    <div
+                      class="govuk-date-input__item"
+                    >
+                      <label
+                        class="govuk-date-input__label govuk-label"
+                        for="pdk-date-input-GENERATED_ID-year"
+                        pdk-label=""
+                      >
+                         Year 
+                      </label>
+                      <input
+                        autocomplete="off"
+                        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-4"
+                        formcontrolname="year"
+                        id="pdk-date-input-GENERATED_ID-year"
+                        name="dateYear"
+                        required=""
+                        type="number"
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </pdk-interaction-container>
+          </pdk-date-input>
+          
+        </fieldset>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    <pdk-form-field
+      labeltype="small"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        
+        <label
+          class="govuk-label govuk-label--s"
+          for="pdk-select-GENERATED_ID"
+        >
+           MANUAL_CASE_EITHER_WAY.ALLOCATION_DECISION 
+        </label>
+        
+        
+        
+        <pdk-select
+          class="ng-untouched ng-pristine ng-valid"
+          data-role="allocationDecision-input"
+          required=""
+        >
+          <select
+            class="govuk-select"
+            id="pdk-select-GENERATED_ID"
+            name="allocation-decision-8ecd315e-c3d3-4e5e-ace7-0c0e7ee951b1-6c7f97ab-ed75-4414-8e2e-dbeadd9b282d"
+            required=""
+          >
+            <option
+              value=""
+            >
+              MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
+            </option>
+            
+            
+          </select>
+        </pdk-select>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+    
+    
+  </div>
+</pdk-inset-text>
+`;
+
+exports[`EitherWayOffenceComponent when \`initiationCode === "T" should allow input of \`allocationDecision\` 1`] = `
+<pdk-select
+  class="ng-untouched ng-pristine ng-valid"
+  data-role="allocationDecision-input"
+>
+  <select
+    class="govuk-select"
+    id="pdk-select-GENERATED_ID"
+    name="allocation-decision-12af2be8-b257-4227-9cf0-3d77975ed7aa-c0121990-1eaf-4f05-ad4e-491e3aa4092e"
+  >
+    <option
+      value=""
+    >
+      MANUAL_CASE_EITHER_WAY.CHOOSE_OPTION
+    </option>
+    
+    
+  </select>
+</pdk-select>
+`;

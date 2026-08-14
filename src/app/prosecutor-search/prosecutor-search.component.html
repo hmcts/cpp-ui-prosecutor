@@ -1,0 +1,43 @@
+@if (hasNpp) {
+  <pdk-form-field [label]="searchLabel" labelType="small" pdk-margin-bottom="2">
+    <pdk-checkbox
+      checkboxType="small"
+      name="includeNonStandardOrganisations"
+      [(ngModel)]="includeNonStandardOrganisations"
+      [ngModelOptions]="{ standalone: true }"
+      [disabled]="disabled"
+      >
+      Include non-standard organisations
+    </pdk-checkbox>
+  </pdk-form-field>
+  @if (canCreate) {
+    <div pdk-margin-bottom="3">
+      <a pdk-link [routerLink]="['/prosecutor', prosecutorRouteType, 'create']" unvisited>
+        Add new prosecutor
+      </a>
+    </div>
+  }
+  <pdk-form-field
+    data-test-id="prosecutorSearch"
+    label="Search prosecutors"
+    labelType="none"
+    [errorMessages]="[
+      {
+        rule: 'required',
+        message: 'Enter prosecuting authority'
+      }
+    ]"
+  >
+  <cpp-prosecutor-autosuggest
+    id="prosecutionAuthority"
+    name="prosecutionAuthority"
+    required
+    [disabled]="disabled"
+    [filterBy]="filterByNonStandardOrganisation"
+    data-role="prosecutionAuthority-input"
+    [ngModel]="selectedProsecutor"
+    (ngModelChange)="prosecutorSelected.emit($event)"
+    >
+  </cpp-prosecutor-autosuggest>
+</pdk-form-field>
+}

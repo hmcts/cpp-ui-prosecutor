@@ -1,0 +1,55 @@
+<h1 pdk-typography="heading-xlarge">{{ 'MANUAL_CASE_DEFENDANT.PAGE_TITLE' | translate }}</h1>
+<h2 pdk-typography="heading-medium">{{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_NO' | translate }} {{ counter }}</h2>
+
+<pdk-grid container>
+  @if (editDefendant) {
+  <pdk-grid two-thirds>
+    <fieldset pdk-margin-top="3" pdk-fieldset>
+      <legend pdk-margin-bottom="3">
+        {{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_TYPE' | translate }}
+      </legend>
+      <pdk-radio-group
+        name="type"
+        [inline]="true"
+        [(ngModel)]="defendantType"
+        (click)="clearErrors()"
+        data-role="other-type-input"
+        pdk-margin-bottom="3"
+      >
+        <pdk-radio-button value="INDIVIDUAL">
+          {{ 'APPLICANT_DETAILS.INDIVIDUAL' | translate }}
+        </pdk-radio-button>
+        <pdk-radio-button value="ORGANISATION">
+          {{ 'APPLICANT_DETAILS.ORGANISATION' | translate }}
+        </pdk-radio-button>
+      </pdk-radio-group>
+    </fieldset>
+    @if (defendantType === 'INDIVIDUAL') {
+    <individual-defendant-form
+      [manualCaseDefendant]="editDefendant"
+      [manualCaseType]="manualCaseType"
+      [aliasesReset]="aliasesReset"
+      [remandStatuses]="remandStatuses"
+      [showAddButton]="iterateDefendant"
+      [isPoliceProsecutor]="isPoliceProsecutor()"
+      (formSubmit)="submitData($event)"
+      (formError)="displayErrors($event)"
+      (goBack)="back()"
+    >
+    </individual-defendant-form>
+    } @if (defendantType === 'ORGANISATION') {
+    <organisation-defendant-form
+      [aliasesReset]="aliasesReset"
+      [isPoliceProsecutor]="isPoliceProsecutor()"
+      [manualCaseDefendant]="editDefendant"
+      [manualCaseType]="manualCaseType"
+      [showAddButton]="iterateDefendant"
+      (formSubmit)="submitData($event)"
+      (formError)="displayErrors($event)"
+      (goBack)="back()"
+    >
+    </organisation-defendant-form>
+    }
+  </pdk-grid>
+  }
+</pdk-grid>

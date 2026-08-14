@@ -1,0 +1,190 @@
+@if (isEditMode && data) {
+<form pdk-form novalidate (validSubmit)="submitData()" (errors)="formError.emit($event)">
+  @for (section of data.sections; let i = $index; track i;) {
+  <div>
+    @if (section.type === 'DROPDOWN') {
+    <pdk-form-field
+      label="{{ section.label }}"
+      labelType="small"
+      [errorMessages]="[
+        {
+          rule: 'required',
+          message: 'MANUAL_CASE_OFFENCE.OFFENCE_DATE_TYPE_REQUIRED' | translate
+        }
+      ]"
+    >
+      <pdk-select
+        [name]="'value_' + i"
+        [(ngModel)]="section.value"
+        [options]="offenceDateTypes"
+        (change)="onOffenceDateTypeChange($event, i)"
+        required
+        justified
+      >
+      </pdk-select>
+    </pdk-form-field>
+    } @if (section.type === 'DATE') {
+    <pdk-form-field
+      label="{{
+        (section.showValueTwoElement ? 'MANUAL_CASE_OFFENCE.START_DATE' : 'MANUAL_CASE_OFFENCE.DATE') | translate
+      }}"
+      labelType="small"
+      [errorMessages]="[
+        {
+          rule: 'required',
+          message: 'MANUAL_CASE_OFFENCE.DATE_REQUIRED' | translate
+        },
+        {
+          rule: 'maxDate',
+          message: !section.showValueTwoElement
+            ? ('MANUAL_CASE_OFFENCE.BEFORE_ARREST_DATE_ERROR' | translate)
+            : ('MANUAL_CASE_OFFENCE.AFTER_START_DATE_ERROR' | translate)
+        }
+      ]"
+    >
+      <pdk-date-input
+        name="date_{{ i }}"
+        [(ngModel)]="section.value"
+        [pastDate]="true"
+        required
+        [maxDate]="section.showValueTwoElement ? section.valueTwo : arrestDateValue"
+        picker
+      >
+      </pdk-date-input>
+    </pdk-form-field>
+    @if (section.showValueTwoElement) {
+    <pdk-form-field
+      label="{{ 'MANUAL_CASE_OFFENCE.END_DATE' | translate }}"
+      labelType="small"
+      [errorMessages]="[
+        {
+          rule: 'maxDate',
+          message: 'MANUAL_CASE_OFFENCE.BEFORE_ARREST_DATE_ERROR' | translate
+        },
+        {
+          rule: 'required',
+          message: 'MANUAL_CASE_OFFENCE.DATE_REQUIRED' | translate
+        },
+        {
+          rule: 'minDate',
+          message: 'MANUAL_CASE_OFFENCE.AFTER_START_DATE_ERROR' | translate
+        }
+      ]"
+    >
+      <pdk-date-input
+        name="end_date_{{ i }}"
+        [(ngModel)]="section.valueTwo"
+        [pastDate]="true"
+        [minDate]="section.value"
+        [maxDate]="arrestDateValue"
+        required
+        picker
+      >
+      </pdk-date-input>
+    </pdk-form-field>
+    } } @if (section.type === 'LABEL') {
+    <div class="dynamic-label">{{ section.label }}</div>
+    } @if (section.type === 'TEXT') {
+    <pdk-form-field
+      label="{{ section.label }}"
+      labelType="small"
+      [errorMessages]="[
+        {
+          rule: 'required',
+          message: section.label
+        }
+      ]"
+    >
+      <input
+        pdk-text-input
+        pdk-input
+        type="text"
+        name="value_{{ i }}"
+        [(ngModel)]="section.value"
+        required
+        [attr.data-role]="section.label"
+      />
+    </pdk-form-field>
+    } @if (section.type === 'LIST') {
+    <pdk-form-field
+      label="{{ 'MANUAL_CASE_OFFENCE.SELECT_AN_OPTION' | translate }}"
+      labelType="small"
+      [errorMessages]="[
+        {
+          rule: 'required',
+          message: 'MANUAL_CASE_OFFENCE.SELECT_AN_OPTION' | translate
+        }
+      ]"
+    >
+      <pdk-radio-group
+        name="value_{{ i }}"
+        [ngModel]="section.value"
+        (ngModelChange)="section.value = $event; optionSelect(section.list)"
+        required
+        attr.data-role="value_{{ i }}"
+      >
+        @for (radio of section.list; let r = $index; track r;) {
+        <div>
+          <pdk-radio-button pdk-margin-bottom="2" [value]="radio.value">{{ radio.label }}</pdk-radio-button>
+          @if (radio.children) {
+          <fieldset [disabled]="radio.value !== section.value">
+            <div class="radio-container">
+              @for (child of radio.children; let z = $index; track z;) { @if (child.type === 'TEXT') {
+              <pdk-form-field
+                label="{{ child.label }}"
+                labelType="small"
+                [errorMessages]="[
+                  {
+                    rule: 'required',
+                    message: child.label
+                  }
+                ]"
+              >
+                <input
+                  pdk-text-input
+                  pdk-input
+                  type="text"
+                  name="value_{{ i }}_{{ r }}_{{ z }}"
+                  [(ngModel)]="child.value"
+                  [required]="radio.value === section.value"
+                />
+              </pdk-form-field>
+              } @if (child.type === 'LABEL') {
+              <div class="dynamic-label">{{ child.label }}</div>
+              } }
+            </div>
+          </fieldset>
+          }
+        </div>
+        }
+      </pdk-radio-group>
+    </pdk-form-field>
+    }
+  </div>
+  }
+  <div>
+    <button pdk-button="secondary" type="submit" pdk-margin-top="3" pdk-margin-bottom="3" data-role="apply">
+      Apply Details
+    </button>
+  </div>
+</form>
+} @if (!isEditMode) {
+<div>
+  <pdk-form-field label="{{ 'CASE_DETAILS.OFFENCE.PARTICULARS' | translate }}" labelType="small">
+    <textarea
+      pdk-resize
+      minRows="5"
+      maxRows="10"
+      pdk-text-input
+      pdk-input
+      name="offenceWording"
+      [ngModel]="offenceWording"
+      [readonly]="true"
+    >
+    </textarea>
+  </pdk-form-field>
+  <button pdk-button="secondary" pdk-margin-top="3" pdk-margin-bottom="3" data-role="amend" (click)="isEditMode = true">
+    Amend Details
+  </button>
+</div>
+}

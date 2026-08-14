@@ -1,0 +1,638 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinancialImpositionsComponent should compile correctly 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay fine of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-fine-amount"
+            two-thirds=""
+          >
+             £20.34 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay victim surcharge of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-surcharge-amount"
+            two-thirds=""
+          >
+             £123 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should compile correctly with NOT all absolute discharge with no victimSurcharge 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay compensation of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-compensation-amount"
+            two-thirds=""
+          >
+             £20.30 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Victim surcharge not imposed because
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             reasonForNoVictimSurcharge 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should compile correctly with all absolute discharge with no victimSurcharge 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Victim surcharge not imposed because
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Absolute Discharge 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display backDuty and calculated fine, if case decision is FINANCIAL_PENALTY and backDuty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay fine of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-fine-amount"
+            two-thirds=""
+          >
+             £70 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay back duty of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-backduty-amount"
+            two-thirds=""
+          >
+             £50 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Victim surcharge not imposed because
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             reasonForNoVictimSurcharge 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display backDuty, if case decision is FINANCIAL_PENALTY or DISCHARGE and backDuty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay back duty of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-backduty-amount"
+            two-thirds=""
+          >
+             £50 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Victim surcharge not imposed because
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             reasonForNoVictimSurcharge 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;
+
+exports[`FinancialImpositionsComponent should display excisePenalty and not display calculated fine, if case decision is FINANCIAL_PENALTY and excisePenalty > 0 1`] = `
+<financial-impositions-test
+  caseDecision={[Function Object]}
+>
+  <financial-impositions>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div>
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Impositions
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Transfer of fine made to 
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Magistrates 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay excise penalty of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-excise-penalty-amount"
+            two-thirds=""
+          >
+             £50 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              To pay costs of
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            data-role="imposition-costs-amount"
+            two-thirds=""
+          >
+             £120.23 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Victim surcharge not imposed because
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             reasonForNoVictimSurcharge 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </financial-impositions>
+</financial-impositions-test>
+`;

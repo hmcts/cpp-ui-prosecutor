@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual case prosecutor should render the component 1`] = `
+<manual-case-duplicated-prosecutor
+  editManualCase={[Function Object]}
+  form={[Function _NgForm]}
+  location={[Function _Location]}
+  manualCaseDetail={[Function Object]}
+  oldValue="undefined"
+  requiresRefNumber="false"
+  submitFormData={[Function EventEmitter_]}
+>
+  <pdk-alert
+    type="warning"
+  >
+    <div
+      class="pdk-alert pdk-alert--warning"
+      role="alert"
+    >
+      <div
+        class="pdk-alert__container"
+      >
+        <i
+          aria-hidden="true"
+          class="pdk-alert__icon pdk-alert__icon--alert"
+          role="presentation"
+        />
+        <div
+          class="pdk-alert__message"
+        >
+          <div>
+             Prosecution reference 
+            <strong>
+            </strong>
+             already exists - enter correct reference
+          </div>
+        </div>
+      </div>
+    </div>
+  </pdk-alert><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_PROSECUTOR.REF_NUMBER 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-one-half"
+      one-half=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          label="Do you have a prosecution reference number?"
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 Do you have a prosecution reference number? 
+              </legend>
+              <pdk-radio-group
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="hasProsecutionReferenceNo-input"
+                name="hasProsecutionReferenceNo"
+                required=""
+              >
+                <div
+                  class="govuk-radios govuk-radios--inline"
+                >
+                  <pdk-radio-button>
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="true"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                        Yes
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button>
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="false"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                        No
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                </div>
+              </pdk-radio-group>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_PROSECUTOR.CONTINUE 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="javascript:void(0)"
+            pdk-link=""
+            unvisited=""
+          >
+             MANUAL_CASE_PROSECUTOR.BACK 
+          </a>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-duplicated-prosecutor>
+`;

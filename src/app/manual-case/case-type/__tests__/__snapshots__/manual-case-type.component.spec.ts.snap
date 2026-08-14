@@ -1,0 +1,818 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual Case Type Component should render the component correctly in addnew mode 1`] = `
+<manual-case-type
+  appConfigService={[Function Object]}
+  editManualCase={[Function Object]}
+  form={[Function _NgForm]}
+  hasNpp={[Function Boolean]}
+  location={[Function Object]}
+  manualCaseDetail={[Function Object]}
+  submitFormData={[Function EventEmitter_]}
+  summonsCodes={[Function Array]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_TYPE.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-two-thirds"
+      two-thirds=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          labeltype="none"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-visually-hidden"
+              >
+                 MANUAL_CASE_TYPE.CASE_APPLICATION_TYPE_LABEL 
+              </legend>
+              <pdk-radio-group
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="enter-case-type"
+                name="initiationCode"
+                required=""
+              >
+                <div
+                  class="govuk-radios"
+                >
+                  <pdk-radio-button
+                    value="Application"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="Application"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.APPLICATION 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="S"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="S"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SUMMONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="Q"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="Q"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.REQUISITIONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="J"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="J"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SJP 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="C"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="C"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.CHARGE 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="T"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="T"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.TRIAL 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="CO"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="CO"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.COMMITTAL 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                </div>
+              </pdk-radio-group>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_TYPE.START 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="mock-base-url"
+            pdk-link=""
+            unvisited=""
+          >
+             MANUAL_CASE_TYPE.PREVIOUS 
+          </a>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-type>
+`;
+
+exports[`Manual Case Type Component should render the component correctly in edit mode 1`] = `
+<manual-case-type
+  appConfigService={[Function Object]}
+  editManualCase={[Function Object]}
+  form={[Function _NgForm]}
+  hasNpp={[Function Boolean]}
+  location={[Function Object]}
+  manualCaseDetail={[Function Object]}
+  submitFormData={[Function EventEmitter_]}
+  summonsCodes={[Function Array]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_TYPE.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-two-thirds"
+      two-thirds=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          labeltype="none"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-visually-hidden"
+              >
+                 MANUAL_CASE_TYPE.CASE_APPLICATION_TYPE_LABEL 
+              </legend>
+              <pdk-radio-group
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="enter-case-type"
+                name="initiationCode"
+                required=""
+              >
+                <div
+                  class="govuk-radios"
+                >
+                  <pdk-radio-button
+                    value="Application"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="Application"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.APPLICATION 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="S"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="S"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SUMMONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-inset-text>
+                    <div
+                      class="govuk-inset-text"
+                      style="padding-right: 0px;"
+                    >
+                      <pdk-form-field
+                        labeltype="none"
+                      >
+                        <pdk-form-group
+                          class="pdk-form-group"
+                        >
+                          <fieldset
+                            class="govuk-fieldset"
+                            pdk-fieldset=""
+                          >
+                            <legend
+                              class="govuk-fieldset__legend govuk-visually-hidden"
+                            >
+                               MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL 
+                            </legend>
+                            <pdk-radio-group
+                              class="ng-untouched ng-pristine ng-valid"
+                              name="summonsCode"
+                              required=""
+                            >
+                              <div
+                                class="govuk-radios"
+                              >
+                                <pdk-radio-button>
+                                  <div
+                                    class="govuk-radios__item"
+                                  >
+                                    <input
+                                      class="govuk-radios__input"
+                                      id="pdk-radio-GENERATED_ID"
+                                      name="pdk-radio-group-GENERATED_ID"
+                                      type="radio"
+                                      value="undefined"
+                                    />
+                                    <label
+                                      class="govuk-radios__label govuk-label"
+                                      for="pdk-radio-GENERATED_ID"
+                                      pdk-label=""
+                                    >
+                                    </label>
+                                  </div>
+                                </pdk-radio-button>
+                                <pdk-radio-button>
+                                  <div
+                                    class="govuk-radios__item"
+                                  >
+                                    <input
+                                      class="govuk-radios__input"
+                                      id="pdk-radio-GENERATED_ID"
+                                      name="pdk-radio-group-GENERATED_ID"
+                                      type="radio"
+                                      value="undefined"
+                                    />
+                                    <label
+                                      class="govuk-radios__label govuk-label"
+                                      for="pdk-radio-GENERATED_ID"
+                                      pdk-label=""
+                                    >
+                                    </label>
+                                  </div>
+                                </pdk-radio-button>
+                              </div>
+                            </pdk-radio-group>
+                          </fieldset>
+                        </pdk-form-group>
+                      </pdk-form-field>
+                    </div>
+                  </pdk-inset-text>
+                  <pdk-radio-button
+                    value="Q"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="Q"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.REQUISITIONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="J"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="J"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SJP 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="C"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="C"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.CHARGE 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="T"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="T"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.TRIAL 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="CO"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="CO"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.COMMITTAL 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                </div>
+              </pdk-radio-group>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_TYPE.START 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="mock-base-url"
+            pdk-link=""
+            unvisited=""
+          >
+             MANUAL_CASE_TYPE.PREVIOUS 
+          </a>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-type>
+`;
+
+exports[`Manual Case Type Component should render the component for npp 1`] = `
+<manual-case-type
+  appConfigService={[Function Object]}
+  editManualCase={[Function Object]}
+  form={[Function _NgForm]}
+  hasNpp="false"
+  location={[Function Object]}
+  manualCaseDetail={[Function Object]}
+  submitFormData={[Function EventEmitter_]}
+  summonsCodes={[Function Array]}
+>
+  <pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-full"
+      full=""
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+         MANUAL_CASE_TYPE.TITLE 
+      </h1>
+    </pdk-grid>
+  </pdk-grid><pdk-grid
+    class="govuk-grid-row"
+    container=""
+  >
+    <pdk-grid
+      class="govuk-grid-column-two-thirds"
+      two-thirds=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-form-field
+          labeltype="none"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-visually-hidden"
+              >
+                 MANUAL_CASE_TYPE.CASE_APPLICATION_TYPE_LABEL 
+              </legend>
+              <pdk-radio-group
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="enter-case-type"
+                name="initiationCode"
+                required=""
+              >
+                <div
+                  class="govuk-radios"
+                >
+                  <pdk-radio-button
+                    value="S"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="S"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SUMMONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-inset-text>
+                    <div
+                      class="govuk-inset-text"
+                      style="padding-right: 0px;"
+                    >
+                      <pdk-form-field
+                        labeltype="none"
+                      >
+                        <pdk-form-group
+                          class="pdk-form-group"
+                        >
+                          <fieldset
+                            class="govuk-fieldset"
+                            pdk-fieldset=""
+                          >
+                            <legend
+                              class="govuk-fieldset__legend govuk-visually-hidden"
+                            >
+                               MANUAL_CASE_TYPE.SUMMONS_TYPE_LABEL 
+                            </legend>
+                            <pdk-radio-group
+                              class="ng-untouched ng-pristine ng-valid"
+                              name="summonsCode"
+                              required=""
+                            >
+                              <div
+                                class="govuk-radios"
+                              >
+                                <pdk-radio-button>
+                                  <div
+                                    class="govuk-radios__item"
+                                  >
+                                    <input
+                                      class="govuk-radios__input"
+                                      id="pdk-radio-GENERATED_ID"
+                                      name="pdk-radio-group-GENERATED_ID"
+                                      type="radio"
+                                      value="undefined"
+                                    />
+                                    <label
+                                      class="govuk-radios__label govuk-label"
+                                      for="pdk-radio-GENERATED_ID"
+                                      pdk-label=""
+                                    >
+                                    </label>
+                                  </div>
+                                </pdk-radio-button>
+                                <pdk-radio-button>
+                                  <div
+                                    class="govuk-radios__item"
+                                  >
+                                    <input
+                                      class="govuk-radios__input"
+                                      id="pdk-radio-GENERATED_ID"
+                                      name="pdk-radio-group-GENERATED_ID"
+                                      type="radio"
+                                      value="undefined"
+                                    />
+                                    <label
+                                      class="govuk-radios__label govuk-label"
+                                      for="pdk-radio-GENERATED_ID"
+                                      pdk-label=""
+                                    >
+                                    </label>
+                                  </div>
+                                </pdk-radio-button>
+                              </div>
+                            </pdk-radio-group>
+                          </fieldset>
+                        </pdk-form-group>
+                      </pdk-form-field>
+                    </div>
+                  </pdk-inset-text>
+                  <pdk-radio-button
+                    value="Q"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="Q"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.REQUISITIONS 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                  <pdk-radio-button
+                    value="J"
+                  >
+                    <div
+                      class="govuk-radios__item"
+                    >
+                      <input
+                        class="govuk-radios__input"
+                        id="pdk-radio-GENERATED_ID"
+                        name="pdk-radio-group-GENERATED_ID"
+                        type="radio"
+                        value="J"
+                      />
+                      <label
+                        class="govuk-radios__label govuk-label"
+                        for="pdk-radio-GENERATED_ID"
+                        pdk-label=""
+                      >
+                         MANUAL_CASE_TYPE.SJP 
+                      </label>
+                    </div>
+                  </pdk-radio-button>
+                </div>
+              </pdk-radio-group>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <button
+            class="govuk-button"
+            data-role="save-applicant-details-button"
+            pdk-button=""
+            type="submit"
+          >
+             MANUAL_CASE_TYPE.START 
+          </button>
+        </pdk-form-group>
+        <p
+          class="govuk-!-margin-top-3"
+          pdk-margin-top="3"
+        >
+          <a
+            class="govuk-link govuk-link--no-visited-state"
+            href="mock-base-url"
+            pdk-link=""
+            unvisited=""
+          >
+             MANUAL_CASE_TYPE.PREVIOUS 
+          </a>
+        </p>
+      </form>
+    </pdk-grid>
+  </pdk-grid>
+</manual-case-type>
+`;

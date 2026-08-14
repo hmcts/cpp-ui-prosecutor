@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantOffenceComponent should compile correctly 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should compile correctly with offence warnings 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Offence may be out of time 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Offence not in effect - refer to court and see SJPN for offence details 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
+      <offence-warning>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <div
+            class="pdk-!-text-color-red govuk-heading-s"
+            pdk-text-colour="red"
+            pdk-typography="heading-small"
+          >
+             Imprisonable offence 
+          </div>
+        </pdk-form-group>
+      </offence-warning>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should compile correctly with the offence is pending withdrawal 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 2
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At thread needle street EC2 Being a passenger on a Public service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not as directed by the Driver an Inspector or a Notice displayed on the vehicle pay the fare for the journey in accordance with the direction  
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 1 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 27 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         Notified Not Guilty 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should display "Pending Withdrawal" if there is withdrawal reason 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+      <pdk-badge
+        class="pdk-badge"
+      >
+         Pending withdrawal 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the case is completed 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;
+
+exports[`DefendantOffenceComponent should not show "Pending Withdrawal" if the reason is empty 1`] = `
+<defendant-offence-test
+  kase={[Function Object]}
+  offence={[Function Object]}
+>
+  <defendant-offence>
+    <h2
+      class="govuk-heading-l"
+      pdk-typography="heading-large"
+    >
+       Offence 
+    </h2>
+    <defendant-offence-warnings>
+    </defendant-offence-warnings>
+    <h3
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      offence title 1
+    </h3>
+    <pdk-foldable-text
+      class="govuk-body-m"
+      pdk-typography="body-medium"
+    >
+      <div
+        class="pdk-foldable"
+      >
+        <span
+          class="pdk-foldable__content pdk-foldable__content__single"
+          id="pdk-foldable-text-GENERATED_ID"
+        >
+           On 02/07/2015 At threadneedle street EC2 Being a passenger on a Public service Vehicle operated on .. 
+        </span>
+      </div>
+    </pdk-foldable-text>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       legislation 2 
+    </p>
+    <p
+      class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
+      pdk-margin-vertical="4"
+      pdk-typography="body-small"
+    >
+       On 24 Jan 2019 
+    </p>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
+      pdk-margin-vertical="6"
+    >
+      <pdk-badge
+        class="govuk-!-margin-right-4 pdk-badge"
+        pdk-margin-right="4"
+      >
+         No plea received 
+      </pdk-badge>
+    </div>
+  </defendant-offence>
+</defendant-offence-test>
+`;

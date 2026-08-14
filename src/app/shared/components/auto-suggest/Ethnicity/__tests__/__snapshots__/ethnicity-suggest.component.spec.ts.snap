@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EthnicityAutoSuggestComponent should be able to change value 1`] = `
+[
+  [
+    {
+      "Ethnicity": {
+        "code": "br",
+        "description": "British",
+        "id": "id",
+        "sequence": 0,
+      },
+    },
+  ],
+]
+`;
+
+exports[`EthnicityAutoSuggestComponent should render correctly 1`] = `
+<ethnicity-auto-suggest-test
+  getEthnicitiesOnMount="false"
+  mapSelectionToKey={[Function Boolean]}
+  submitForm={[Function Function]}
+>
+  <form
+    autocomplete="off"
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+    pdk-form=""
+  >
+    <pdk-form-field
+      label="Ethnicity"
+    >
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <label
+          class="govuk-label"
+          for="EthnicityId"
+        >
+           Ethnicity 
+        </label>
+        <ethnicity-auto-suggest
+          class="ng-untouched ng-pristine ng-valid"
+          id="EthnicityId"
+          name="Ethnicity"
+        >
+          <pdk-autosuggest-lite>
+            <pdk-autosuggest
+              highlightcolor="blue"
+            >
+              <pdk-interaction-container>
+                <div>
+                  <div
+                    class="pdk-autosuggest"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                      aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                      aria-expanded="false"
+                      autocomplete="off"
+                      class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                      id="EthnicityId"
+                      role="combobox"
+                      type="text"
+                    />
+                    <span
+                      class="govuk-visually-hidden"
+                      id="pdk-autosuggest__instructions-GENERATED_ID"
+                      pdk-visually-hidden=""
+                    >
+                       When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                    </span>
+                    <span
+                      aria-live="polite"
+                      class="govuk-visually-hidden"
+                      pdk-visually-hidden=""
+                      role="status"
+                    >
+                    </span>
+                    <div
+                      class="pdk-autosuggest__suggestions-container"
+                      id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </pdk-interaction-container>
+            </pdk-autosuggest>
+          </pdk-autosuggest-lite>
+        </ethnicity-auto-suggest>
+      </pdk-form-group>
+    </pdk-form-field>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</ethnicity-auto-suggest-test>
+`;
+
+exports[`EthnicityAutoSuggestComponent should set ethnicity object when \`mapToKey\` is not set 1`] = `
+[
+  [
+    {
+      "Ethnicity": {
+        "code": "ir",
+        "description": "Irish",
+        "id": "id1",
+        "sequence": 0,
+      },
+    },
+  ],
+]
+`;
+
+exports[`EthnicityAutoSuggestComponent should set the default value and submit 1`] = `
+[
+  [
+    {
+      "Ethnicity": "id1",
+    },
+  ],
+]
+`;

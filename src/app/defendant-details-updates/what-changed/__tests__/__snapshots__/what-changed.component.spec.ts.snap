@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhatChangedComponent should show address changed 1`] = `
+<what-changed
+  defendantDetailsUpdate={[Function Object]}
+>
+  <ul
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+    pdk-margin-vertical="2"
+  >
+    <li
+      data-role="address-updated"
+    >
+       Address details 
+    </li>
+  </ul>
+</what-changed>
+`;
+
+exports[`WhatChangedComponent should show all change 1`] = `
+<what-changed
+  defendantDetailsUpdate={[Function Object]}
+>
+  <ul
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+    pdk-margin-vertical="2"
+  >
+    <li
+      data-role="date-of-birth-updated"
+    >
+       Date of birth 
+    </li>
+    <li
+      data-role="address-updated"
+    >
+       Address details 
+    </li>
+    <li
+      data-role="name-updated"
+    >
+       Name 
+    </li>
+  </ul>
+</what-changed>
+`;
+
+exports[`WhatChangedComponent should show date of birth changed 1`] = `
+<what-changed
+  defendantDetailsUpdate={[Function Object]}
+>
+  <ul
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+    pdk-margin-vertical="2"
+  >
+    <li
+      data-role="date-of-birth-updated"
+    >
+       Date of birth 
+    </li>
+  </ul>
+</what-changed>
+`;
+
+exports[`WhatChangedComponent should show name changed 1`] = `
+<what-changed
+  defendantDetailsUpdate={[Function Object]}
+>
+  <ul
+    class="govuk-list govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+    pdk-margin-vertical="2"
+  >
+    <li
+      data-role="name-updated"
+    >
+       Name 
+    </li>
+  </ul>
+</what-changed>
+`;

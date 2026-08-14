@@ -1,0 +1,275 @@
+@if (errors) {
+<pdk-error-summary [errors]="errors" focusOnChange></pdk-error-summary>
+}
+
+<h1 pdk-typography="heading-xlarge">{{ 'MANUAL_CASE_HEARING_DETAILS.TITLE' | translate }}</h1>
+
+<pdk-grid container>
+  <form pdk-form novalidate (validSubmit)="submitData()" (errors)="errors = $event">
+    <pdk-grid one-half>
+      <pdk-grid data-role="create-new-hearing-form">
+        <!-- Court name -->
+        <pdk-form-field
+          label="{{ 'COMMON.COURT' | translate }}"
+          labelType="small"
+          [hintText]="'MEDIA_REGISTER.COURT.HINT' | translate"
+          [errorMessages]="[{
+            rule: 'required',
+            message: 'Select a court from the list'
+          }]"
+        >
+          <pdk-autosuggest-lite
+            id="courtHearingLocation"
+            name="courtCentre"
+            [(ngModel)]="selectedCourtCentre"
+            (inputText)="setCourtCentresSuggestions($event)"
+            [ariaDescribedBy]="'aria-describedby-courtcentre-autosuggest'"
+            [suggestionKey]="'oucode'"
+            [suggestionTitle]="'name'"
+            [suggestions]="courtCentreSuggestions"
+            required
+            data-role="hearing-court-centre-input"
+          >
+          </pdk-autosuggest-lite>
+        </pdk-form-field>
+
+        @if (isTrialOrSentence()) {
+        <pdk-form-field
+          label="{{ 'MANUAL_CASE_HEARING_DETAILS.HEARING_TYPE' | translate }}"
+          labelType="small"
+          [errorMessages]="[{
+              rule: 'required',
+              message: 'MANUAL_CASE_HEARING_DETAILS.HEARING_TYPE_REQUIRED' | translate
+            }]"
+        >
+          <pdk-autosuggest-lite
+            id="hearingTypeCode"
+            name="hearingType"
+            [(ngModel)]="selectedHearingType"
+            (inputText)="setHearingTypeSuggestion($event)"
+            [ariaDescribedBy]="'aria-describedby-hearingtype-autosuggest'"
+            [suggestionKey]="'code'"
+            [suggestionTitle]="'description'"
+            [suggestions]="hearingTypeSuggestions"
+            required
+            data-role="hearingTypeCode-input"
+          >
+          </pdk-autosuggest-lite>
+        </pdk-form-field>
+        } @if (selectedCourtCentre && selectedCourtCentre.oucodeL1Code === jurisdictionTypeCode.CROWN &&
+        selectedCourtCentre.courtrooms?.length !== 0) {
+        <!-- Court room -->
+        <pdk-form-field
+          label="{{ 'MANUAL_CASE_HEARING_DETAILS.SPECIFY_COURT' | translate }}"
+          labelType="small"
+          [errorMessages]="[{
+            rule: 'required',
+            message: 'Select if you want to specify the court room or not'
+          }]"
+        >
+          <pdk-radio-group [(ngModel)]="hasCourtRoom" name="hasCourtRoom" [inline]="true" required>
+            <pdk-radio-button [value]="true">{{ 'COMMON.YES' | translate }}</pdk-radio-button>
+            <pdk-radio-button [value]="false">{{ 'COMMON.NO' | translate }}</pdk-radio-button>
+          </pdk-radio-group>
+        </pdk-form-field>
+        <!-- Court room name -->
+        @if (hasCourtRoom) {
+        <pdk-inset-text>
+          <pdk-form-field
+            label="{{ 'COMMON.COURT_ROOM' | translate }}"
+            labelType="small"
+            [hintText]="'MEDIA_REGISTER.COURT.HINT' | translate"
+            [errorMessages]="[{
+            rule: 'required',
+            message: 'Select a court room from the list'
+          }]"
+          >
+            <pdk-autosuggest-lite
+              id="roomId"
+              name="room"
+              [(ngModel)]="selectedCourtRoom"
+              (inputText)="setCourtRoomSuggestions($event)"
+              [ariaDescribedBy]="'aria-describedby-court-room-autosuggest'"
+              [suggestionKey]="'id'"
+              [suggestionTitle]="'name'"
+              [suggestions]="courtRoomSugestions"
+              required
+            >
+            </pdk-autosuggest-lite>
+          </pdk-form-field>
+        </pdk-inset-text>
+        }
+        <!-- Notes for listing officer -->
+        @if (!hasCourtRoom) {
+        <pdk-inset-text>
+          <pdk-form-field
+            label="{{ 'MANUAL_CASE_HEARING_DETAILS.NOTES' | translate }}"
+            labelType="small"
+            [errorMessages]="[{
+                rule: 'required',
+                message: 'Select a court room from the list'
+              }]"
+          >
+            <textarea
+              name="hearingListingDuration"
+              [ngModel]="editManualCase.initialHearing?.hearingListingDirection"
+              (ngModelChange)="editManualCase.initialHearing.hearingListingDirection = $event"
+              pdk-text-input
+              pdk-input
+              pdk-resize
+              minRows="5"
+              maxRows="10"
+              #charCountTextArea="ngModel"
+            >
+            </textarea>
+            <pdk-character-count [value]="charCountTextArea.value" [limit]="1000"> </pdk-character-count>
+          </pdk-form-field>
+        </pdk-inset-text>
+        } } @if (selectedCourtCentre && selectedCourtCentre.oucodeL1Code === jurisdictionTypeCode.MAGISTRATES &&
+        selectedCourtCentre.courtrooms?.length !== 0) {
+        <pdk-form-field
+          label="{{ 'COMMON.COURT_ROOM' | translate }}"
+          labelType="small"
+          [hintText]="'MEDIA_REGISTER.COURT.HINT' | translate"
+          [errorMessages]="[{
+            rule: 'required',
+            message: 'Select a court room from the list'
+          }]"
+        >
+          <pdk-autosuggest-lite
+            id="roomId"
+            name="room"
+            [(ngModel)]="selectedCourtRoom"
+            (inputText)="setCourtRoomSuggestions($event)"
+            [ariaDescribedBy]="'aria-describedby-court-room-autosuggest'"
+            [suggestionKey]="'id'"
+            [suggestionTitle]="'name'"
+            [suggestions]="courtRoomSugestions"
+            required
+          >
+          </pdk-autosuggest-lite>
+        </pdk-form-field>
+        <pdk-form-field
+          label="{{ 'MANUAL_CASE_HEARING_DETAILS.NOTES' | translate }}"
+          labelType="small"
+          [errorMessages]="[{
+                rule: 'required',
+                message: 'Select a court room from the list'
+              }]"
+        >
+          <textarea
+            name="hearingListingDuration"
+            [ngModel]="editManualCase.initialHearing?.hearingListingDirection"
+            (ngModelChange)="editManualCase.initialHearing.hearingListingDirection = $event"
+            pdk-text-input
+            pdk-input
+            pdk-resize
+            minRows="5"
+            maxRows="10"
+            #charCountTextArea="ngModel"
+          >
+          </textarea>
+          <pdk-character-count [value]="charCountTextArea.value" [limit]="1000"> </pdk-character-count>
+        </pdk-form-field>
+        }
+        <!-- Hearing date -->
+        <div>
+          <pdk-form-field
+            id="dateOfHearing"
+            class="filterSelect"
+            label="{{ 'COMMON.HEARING.DATE' | translate }}"
+            labelType="small"
+            hint
+            [errorMessages]="[{
+            rule: 'required',
+            message: 'Enter a date'
+          },{
+            rule: 'futureDate',
+            message: 'Hearing date must be today or in the future'
+          }]"
+          >
+            <pdk-date-input
+              name="dateOfHearing"
+              [id]="'dateOfHearing'"
+              [ariaDescribedBy]="'date'"
+              (ngModelChange)="onChanges({'dateOfHearing': $event})"
+              [ngModel]="editManualCase.initialHearing.dateOfHearing"
+              data-role="hearing-date-filter-input"
+              required
+              [futureDate]="true"
+              picker
+            >
+            </pdk-date-input>
+          </pdk-form-field>
+        </div>
+
+        <!-- Start time -->
+        <pdk-form-field
+          label="{{ 'COMMON.HEARING.START_TIME' | translate }}"
+          labelType="small"
+          [errorMessages]="[{
+            rule: 'required',
+            message: 'Enter hearing start time'
+          }]"
+          hint
+        >
+          <pdk-time-input
+            name="timeOfHearing"
+            [(ngModel)]="editManualCase.initialHearing.timeOfHearing"
+            [autoShift]="true"
+            data-role="hearing-earliest-start-input"
+            required
+            [labelHidden]="false"
+          >
+          </pdk-time-input>
+        </pdk-form-field>
+
+        <!-- Hearing duration -->
+        <pdk-form-field
+          label="{{ 'COMMON.HEARING.DURATION' | translate }}"
+          labelType="small"
+          [errorMessages]="[{
+            rule: 'required',
+            message: 'Enter hearing duration'
+          }]"
+        >
+          <pdk-time-input
+            name="hearingDuration"
+            [(ngModel)]="editManualCase.initialHearing.hearingDuration"
+            #estimatedMinutes="ngModel"
+            (focus)="hearingDurationFocused = true"
+            [autoShift]="hearingDurationFocused && estimatedMinutes.dirty"
+            data-role="hearing-estimated-minutes-input"
+            required
+            [labelHidden]="false"
+          >
+          </pdk-time-input>
+        </pdk-form-field>
+
+        <!-- Hearing Language  -->
+        <pdk-form-field label="{{ 'COMMON.HEARING.LANGUAGES' | translate }}" labelType="small">
+          <pdk-radio-group
+            name="hearingLanguage"
+            [inline]="true"
+            required
+            [(ngModel)]="editManualCase.initialHearing.hearingLanguage"
+          >
+            <pdk-radio-button value="ENGLISH">{{ 'COMMON.ENGLISH' | translate }}</pdk-radio-button>
+            <pdk-radio-button value="WELSH">{{ 'COMMON.WELSH' | translate }}</pdk-radio-button>
+          </pdk-radio-group>
+        </pdk-form-field>
+      </pdk-grid>
+
+      <button pdk-button name="continue" type="submit" data-role="send-for-listing">
+        {{ 'COMMON.CONTINUE' | translate }}
+      </button>
+      <br />
+
+      <p pdk-margin-top="3">
+        <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+          {{ 'COMMON.BACK' | translate }}
+        </a>
+      </p>
+    </pdk-grid>
+  </form>
+</pdk-grid>

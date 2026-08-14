@@ -1,0 +1,7 @@
+export interface OffenceWithdrawalReason {
+  id: string;
+  sequence: number;
+  reasonCodeDescription: string;
+  legalAdviser: boolean;
+  prosecutor: boolean;
+}

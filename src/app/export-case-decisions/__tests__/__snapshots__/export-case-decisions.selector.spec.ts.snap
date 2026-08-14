@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`export case results by date/selectors getResultedCaseCount should select resulted case count 1`] = `
+{
+  "casesResultedCount": 10,
+}
+`;

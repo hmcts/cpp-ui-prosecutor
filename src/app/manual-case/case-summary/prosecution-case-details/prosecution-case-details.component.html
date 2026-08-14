@@ -1,0 +1,81 @@
+<div class="prosecution-details" pdk-margin-bottom="7">
+  <pdk-divider class="margin-top-0" [dark]="true"></pdk-divider>
+  <pdk-grid container>
+    <pdk-grid two-thirds>
+      <span pdk-typography="heading-medium" class="table-header">{{
+        'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.TITLE' | translate
+      }}</span>
+    </pdk-grid>
+    <pdk-grid one-third class="change-link">
+      <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit()" data-role="prosecution-change-link">{{
+        'MANUAL_CASE_SUMMARY.CHANGE' | translate
+      }}</a>
+    </pdk-grid>
+  </pdk-grid>
+  <table pdk-table>
+    <tbody pdk-table-body>
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.PROSECUTION_REFERENCE_NUMBER' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="prosecutor-case-reference">
+          {{ prosecutionCase?.prosecutorCaseReference | dash }}
+        </td>
+      </tr>
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.PROSECUTION_AUTHORITY' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="prosecution-authority">
+          {{ prosecutionCase?.prosecutor?.name }}
+        </td>
+      </tr>
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.CPS_PROSECUTOR' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="cps-prosecutor">
+          {{ getProsecutorCode() }}
+        </td>
+      </tr>
+      @if (prosecutionCase?.originatingPoliceForce?.name) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.ORIGINATING_POLICE_FORCE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="originating-police-force">
+            {{ prosecutionCase.originatingPoliceForce.name }}
+          </td>
+        </tr>
+      }
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.COST_CLAIMED' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="cost-claimed">
+          {{ prosecutionCase?.prosecutor?.appliedProsecutorCosts | currency: 'GBP' }}
+        </td>
+      </tr>
+      @if (prosecutionCase.initiationCode === 'S') {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.SUMMONS_REQUEST_RECEIVED_DATE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="summons-request-receipt-date">
+            {{ prosecutionCase?.prosecutor?.summonsRequestReceivedDate | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      }
+      @if (isSJPOrRequisition()) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.CHARGE_POSTING_DATE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="charge-posting-date">
+            {{ prosecutionCase?.prosecutor?.chargePostingDate | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,475 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organisation Defendant Form Component should render component correctly 1`] = `
+<host-dynamic-form
+  data={[Function Object]}
+  dynamicFormChange={[Function Function]}
+  offenceTypes={[Function Array]}
+  offenceWording={[Function String]}
+  onError={[Function Function]}
+  wordingService={[Function OffenceWordingService]}
+>
+  <dynamic-particular-form
+    class="ng-untouched ng-pristine ng-valid"
+    name="dynamicParticularFormData"
+  >
+    <form
+      class="ng-untouched ng-valid ng-dirty"
+      novalidate=""
+      pdk-form=""
+    >
+      <div>
+        <pdk-form-field
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-select-GENERATED_ID"
+            >
+               Offence date type 
+            </label>
+            <pdk-select
+              class="ng-untouched ng-pristine ng-valid"
+              justified=""
+              required=""
+            >
+              <select
+                class="govuk-select pdk-select--justified"
+                id="pdk-select-GENERATED_ID"
+                name="value_0"
+                required=""
+              >
+                <option
+                  value="3"
+                >
+                   after 
+                </option>
+                <option
+                  value="4"
+                >
+                   between 
+                </option>
+              </select>
+            </pdk-select>
+          </pdk-form-group>
+        </pdk-form-field>
+      </div>
+      <div>
+        <pdk-form-field
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 MANUAL_CASE_OFFENCE.DATE 
+              </legend>
+              <pdk-date-input
+                class="ng-untouched ng-valid ng-dirty"
+                picker=""
+                required=""
+              >
+                <pdk-interaction-container>
+                  <div>
+                    <div
+                      class="pdk-date-input"
+                    >
+                      <div
+                        class="govuk-date-input ng-untouched ng-pristine ng-valid"
+                      >
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-day"
+                            pdk-label=""
+                          >
+                             Day 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                            formcontrolname="day"
+                            id="pdk-date-input-GENERATED_ID-day"
+                            name="dateDay"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-month"
+                            pdk-label=""
+                          >
+                             Month 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                            formcontrolname="month"
+                            id="pdk-date-input-GENERATED_ID-month"
+                            name="dateMonth"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                        <div
+                          class="govuk-date-input__item"
+                        >
+                          <label
+                            class="govuk-date-input__label govuk-label"
+                            for="pdk-date-input-GENERATED_ID-year"
+                            pdk-label=""
+                          >
+                             Year 
+                          </label>
+                          <input
+                            autocomplete="off"
+                            class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-4 ng-valid"
+                            formcontrolname="year"
+                            id="pdk-date-input-GENERATED_ID-year"
+                            name="dateYear"
+                            required=""
+                            type="number"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="pdk-!-negative-margin-left-2"
+                        pdk-margin-left="-2"
+                      >
+                        <pdk-date-picker-toggle>
+                          <pdk-interaction-container>
+                            <div>
+                              <div
+                                aria-expanded="false"
+                                aria-label="Toggle date picker"
+                                class="pdk-date-picker__toggle"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <pdk-date-picker-icon
+                                  style="margin-top: -4px; display: inline-block; vertical-align: middle;"
+                                >
+                                  <div
+                                    style="display: flex; align-items: center; justify-content: center;"
+                                  >
+                                    <i
+                                      style="height: 28px; width: 28px; fill: #333;"
+                                    >
+                                      <svg
+                                        viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
+                                        />
+                                      </svg>
+                                    </i>
+                                  </div>
+                                </pdk-date-picker-icon>
+                              </div>
+                            </div>
+                          </pdk-interaction-container>
+                        </pdk-date-picker-toggle>
+                      </div>
+                    </div>
+                  </div>
+                </pdk-interaction-container>
+              </pdk-date-input>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+      </div>
+      <div>
+        <div
+          class="dynamic-label"
+        >
+          occurring at
+        </div>
+      </div>
+      <div>
+        <pdk-form-field
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <label
+              class="govuk-label govuk-label--s"
+              for="pdk-form-control-undefined-GENERATED_ID"
+            >
+               Specify township 
+            </label>
+            <input
+              class="ng-untouched ng-pristine ng-valid govuk-input"
+              data-role="Specify township"
+              id="pdk-form-control-undefined-GENERATED_ID"
+              pdk-input=""
+              pdk-text-input=""
+              required=""
+              type="text"
+            />
+          </pdk-form-group>
+        </pdk-form-field>
+      </div>
+      <div>
+        <pdk-form-field
+          labeltype="small"
+        >
+          <pdk-form-group
+            class="pdk-form-group"
+          >
+            <fieldset
+              class="govuk-fieldset"
+              pdk-fieldset=""
+            >
+              <legend
+                class="govuk-fieldset__legend govuk-fieldset__legend--s"
+              >
+                 MANUAL_CASE_OFFENCE.SELECT_AN_OPTION 
+              </legend>
+              <pdk-radio-group
+                class="ng-untouched ng-pristine ng-valid"
+                data-role="value_4"
+                required=""
+              >
+                <div
+                  class="govuk-radios"
+                >
+                  <div>
+                    <pdk-radio-button
+                      class="govuk-!-margin-bottom-2"
+                      pdk-margin-bottom="2"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
+                          type="radio"
+                          value="Allowed another, namely"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-GENERATED_ID"
+                          pdk-label=""
+                        >
+                          Allowed another, namely
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <fieldset>
+                      <div
+                        class="radio-container"
+                      >
+                        <pdk-form-field
+                          labeltype="small"
+                        >
+                          <pdk-form-group
+                            class="pdk-form-group"
+                          >
+                            <label
+                              class="govuk-label govuk-label--s"
+                              for="pdk-form-control-undefined-GENERATED_ID"
+                            >
+                               Specify person 
+                            </label>
+                            <input
+                              class="ng-untouched ng-pristine ng-valid govuk-input"
+                              id="pdk-form-control-undefined-GENERATED_ID"
+                              pdk-input=""
+                              pdk-text-input=""
+                              required=""
+                              type="text"
+                            />
+                          </pdk-form-group>
+                        </pdk-form-field>
+                        <div
+                          class="dynamic-label"
+                        >
+                          to have possession of an official document, namely
+                        </div>
+                        <pdk-form-field
+                          labeltype="small"
+                        >
+                          <pdk-form-group
+                            class="pdk-form-group"
+                          >
+                            <label
+                              class="govuk-label govuk-label--s"
+                              for="pdk-form-control-undefined-GENERATED_ID"
+                            >
+                               Specify document 
+                            </label>
+                            <input
+                              class="ng-untouched ng-pristine ng-valid govuk-input"
+                              id="pdk-form-control-undefined-GENERATED_ID"
+                              pdk-input=""
+                              pdk-text-input=""
+                              required=""
+                              type="text"
+                            />
+                          </pdk-form-group>
+                        </pdk-form-field>
+                        <div
+                          class="dynamic-label"
+                        >
+                          issued for your use alone
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <pdk-radio-button
+                      class="govuk-!-margin-bottom-2"
+                      pdk-margin-bottom="2"
+                    >
+                      <div
+                        class="govuk-radios__item"
+                      >
+                        <input
+                          class="govuk-radios__input"
+                          id="pdk-radio-GENERATED_ID"
+                          name="pdk-radio-group-GENERATED_ID"
+                          type="radio"
+                          value="Communicated to"
+                        />
+                        <label
+                          class="govuk-radios__label govuk-label"
+                          for="pdk-radio-GENERATED_ID"
+                          pdk-label=""
+                        >
+                          Communicated to
+                        </label>
+                      </div>
+                    </pdk-radio-button>
+                    <fieldset
+                      disabled=""
+                    >
+                      <div
+                        class="radio-container"
+                      >
+                        <pdk-form-field
+                          labeltype="small"
+                        >
+                          <pdk-form-group
+                            class="pdk-form-group"
+                          >
+                            <label
+                              class="govuk-label govuk-label--s"
+                              for="pdk-form-control-undefined-GENERATED_ID"
+                            >
+                               Specify to whom word was communicated 
+                            </label>
+                            <input
+                              class="ng-untouched ng-pristine ng-valid govuk-input"
+                              id="pdk-form-control-undefined-GENERATED_ID"
+                              pdk-input=""
+                              pdk-text-input=""
+                              type="text"
+                            />
+                          </pdk-form-group>
+                        </pdk-form-field>
+                        <div
+                          class="dynamic-label"
+                        >
+                          a secret official code word issued for use alone
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </pdk-radio-group>
+            </fieldset>
+          </pdk-form-group>
+        </pdk-form-field>
+      </div>
+      <div>
+        <button
+          class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-button govuk-button--secondary"
+          data-role="apply"
+          pdk-button="secondary"
+          pdk-margin-bottom="3"
+          pdk-margin-top="3"
+          type="submit"
+        >
+           Apply Details 
+        </button>
+      </div>
+    </form>
+  </dynamic-particular-form>
+</host-dynamic-form>
+`;
+
+exports[`Organisation Defendant Form Component should throw error build wording from a blank form 1`] = `
+[
+  {
+    "controlRef": ElementRef {
+      "nativeElement": <select
+        class="govuk-select pdk-select--justified"
+        id="pdk-select-GENERATED_ID"
+        name="value_0"
+        required=""
+      >
+        
+        <option
+          value="3"
+        >
+           after 
+        </option>
+        <option
+          value="4"
+        >
+           between 
+        </option>
+        
+      </select>,
+    },
+    "id": "pdk-form-error-undefined-GENERATED_ID",
+    "message": "MANUAL_CASE_OFFENCE.OFFENCE_DATE_TYPE_REQUIRED",
+    "shouldFocus": true,
+  },
+  {
+    "controlRef": ElementRef {
+      "nativeElement": <input
+        autocomplete="off"
+        class="govuk-date-input__input ng-untouched ng-pristine ng-invalid govuk-input govuk-input--width-2"
+        formcontrolname="day"
+        id="pdk-date-input-GENERATED_ID-day"
+        name="dateDay"
+        required=""
+        type="number"
+      />,
+    },
+    "id": "pdk-form-error-undefined-GENERATED_ID",
+    "message": "MANUAL_CASE_OFFENCE.DATE_REQUIRED",
+    "shouldFocus": true,
+  },
+  {
+    "controlRef": {
+      "nativeElement": {
+        "focus": [Function],
+      },
+    },
+    "id": "pdk-form-error-undefined-GENERATED_ID",
+    "message": "MANUAL_CASE_OFFENCE.SELECT_AN_OPTION",
+    "shouldFocus": true,
+  },
+]
+`;

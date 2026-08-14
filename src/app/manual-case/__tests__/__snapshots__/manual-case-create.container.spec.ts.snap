@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
+<export-case-decisions-form-test
+  errors={[Function Function]}
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions-form>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+    >
+      <input
+        class="ng-untouched ng-pristine ng-valid"
+        name="currentDate"
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </export-case-decisions-form>
+</export-case-decisions-form-test>
+`;

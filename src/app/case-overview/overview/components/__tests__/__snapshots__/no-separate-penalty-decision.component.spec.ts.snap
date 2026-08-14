@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoSeparatePenaltyOffenceDecisionComponent should compile correctly with no separate penalty offence decision, that DOES NOT have licenseEndorsement and guilty plea 1`] = `
+<no-separate-penalty-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <no-separate-penalty-offence-decision>
+  </no-separate-penalty-offence-decision>
+</no-separate-penalty-offence-decision-test>
+`;
+
+exports[`NoSeparatePenaltyOffenceDecisionComponent should compile correctly with no separate penalty offence decision, that DOES have licenseEndorsement and guilty plea 1`] = `
+<no-separate-penalty-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <no-separate-penalty-offence-decision>
+    <div>
+       Driver licence record endorsed (no points) 
+    </div>
+    <div>
+       Defendant's guilty plea taken into account when imposing sentence 
+    </div>
+  </no-separate-penalty-offence-decision>
+</no-separate-penalty-offence-decision-test>
+`;
+
+exports[`NoSeparatePenaltyOffenceDecisionComponent should compile correctly with no separate penalty offence decision, with only guilty plea 1`] = `
+<no-separate-penalty-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <no-separate-penalty-offence-decision>
+    <div>
+       Defendant's guilty plea taken into account when imposing sentence 
+    </div>
+  </no-separate-penalty-offence-decision>
+</no-separate-penalty-offence-decision-test>
+`;
+
+exports[`NoSeparatePenaltyOffenceDecisionComponent should compile correctly with no separate penalty offence decision, with only licenseEndorsement 1`] = `
+<no-separate-penalty-offence-decision-test
+  offenceDecision={[Function Object]}
+>
+  <no-separate-penalty-offence-decision>
+    <div>
+       Driver licence record endorsed (no points) 
+    </div>
+  </no-separate-penalty-offence-decision>
+</no-separate-penalty-offence-decision-test>
+`;

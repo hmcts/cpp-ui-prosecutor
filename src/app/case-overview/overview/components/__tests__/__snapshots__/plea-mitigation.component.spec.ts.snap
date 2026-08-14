@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PleaMitigationComponent should compile correctly 1`] = `
+<plea-mitigation-test
+  pleaMitigation={[Function String]}
+>
+  <plea-mitigation>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Mitigation
+    </h4>
+    <p
+      class="govuk-!-margin-bottom-4"
+      pdk-margin-bottom="4"
+    >
+       Mitigated plea 
+    </p>
+  </plea-mitigation>
+</plea-mitigation-test>
+`;
