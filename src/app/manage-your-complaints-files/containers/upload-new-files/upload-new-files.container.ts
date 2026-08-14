@@ -24,6 +24,7 @@ import { NewFilesRoutes } from './upload-new-files.routes';
       [serverErrorMessage]="store.getUploadValidationMessage()"
       (fileSubmitted)="onFileSubmitted($event)"
       (errors)="showValidationError($event)"
+      (fileChanged)="store.setUploadErrorMessage(null)"
     >
       <span page-header>Upload new complaints file</span>
       <div ngProjectAs="section">

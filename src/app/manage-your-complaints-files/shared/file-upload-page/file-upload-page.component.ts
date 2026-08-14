@@ -10,6 +10,7 @@ import {
   PdkTypographyDirective,
   ValidationError
 } from '@cpp/pdk';
+import { FileSizeValidatorDirective } from '../../../shared';
 
 @Component({
   selector: 'file-upload-page',
@@ -34,6 +35,7 @@ import {
               ngModel
               pdk-file-input
               [accept]="acceptedFileTypes()"
+              [fileSizeLimit]="maxFileSizeBytes()"
               (change)="onFileSelected($event)"
               required
               pdk-margin-top="3"
@@ -47,46 +49,44 @@ import {
       </pdk-grid>
     </pdk-grid>
   `,
-  imports: [PdkCore, PdkGrid, PdkForm, PdkFileInput, FormsModule, PdkButton, PdkTypographyDirective]
+  imports: [
+    PdkCore,
+    PdkGrid,
+    PdkForm,
+    PdkFileInput,
+    FormsModule,
+    PdkButton,
+    PdkTypographyDirective,
+    FileSizeValidatorDirective
+  ]
 })
 export class FileUploadPageComponent {
-  acceptedFileTypes = input<string[]>([]);
-  hint = input<string>('');
-  serverErrorMessage = input<string | null>(null);
-  maxFileSizeBytes = input<number>(1024 * 1024);
+  readonly acceptedFileTypes = input<string[]>([]);
+  readonly hint = input<string>('');
+  readonly serverErrorMessage = input<string | null>(null);
+  readonly maxFileSizeBytes = input<number>(1024 * 1024);
+
   readonly errors = output<ValidationError[] | null>();
-  fileSubmitted = output<File>();
+  readonly fileSubmitted = output<File>();
+  readonly fileChanged = output<void>();
+
   readonly selectedFile = signal<File | null>(null);
-  readonly fileTooLarge = signal(false);
 
   readonly errorMessages = computed<ErrorMessageConfig[]>(() => [
     { rule: 'required', message: 'Select a file to upload' },
-    { rule: 'fileSize', message: 'File size must not exceed 1MB' },
+    { rule: 'fileSize', message: `File size must not exceed 1MB` },
     { rule: 'serverError', message: this.serverErrorMessage() ?? '' }
   ]);
 
-  readonly fieldErrors = computed(() => {
-    if (this.fileTooLarge()) {
-      return { fileSize: true };
-    }
-    return this.serverErrorMessage() ? { serverError: true } : null;
-  });
+  readonly fieldErrors = computed(() => (this.serverErrorMessage() ? { serverError: true } : null));
 
-  onFileSelected(event: Event) {
+  onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    const file = input.files?.[0] ?? null;
-
-    if (file && file.size > this.maxFileSizeBytes()) {
-      this.fileTooLarge.set(true);
-      this.selectedFile.set(null);
-      return;
-    }
-
-    this.fileTooLarge.set(false);
-    this.selectedFile.set(file);
+    this.selectedFile.set(input.files?.[0] ?? null);
+    this.fileChanged.emit();
   }
 
-  onContinue() {
+  onContinue(): void {
     const file = this.selectedFile();
     if (file) {
       this.fileSubmitted.emit(file);
