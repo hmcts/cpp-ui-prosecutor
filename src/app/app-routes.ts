@@ -302,6 +302,16 @@ export const appRoutes: Routes = [
             }
           }
         ]
+      },
+      {
+        path: 'manage-your-complaints-files',
+        loadChildren: () =>
+          import('./manage-your-complaints-files/manage-your-complaints-files.routes').then(
+            m => m.manageYourComplaintsFilesRoutes
+          ),
+        data: {
+          title: 'Manage Your Complaints Files | Common Platform'
+        }
       }
     ]
   },
