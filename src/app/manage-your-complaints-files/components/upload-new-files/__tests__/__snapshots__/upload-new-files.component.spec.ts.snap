@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadNewFilesComponent should render the component correctly 1`] = `
+<upload-new-files>
+  <back-button
+    actiontext="Back"
+    linkurl="../"
+  >
+    <a
+      class="back-button link-back pdk-!-text-color-black govuk-back-link"
+      href="/"
+      pdk-back-link=""
+      pdk-text-colour="black"
+    >
+       Back
+    </a>
+  </back-button><h1
+    pdk-margin-bottom="6"
+    pdk-margin-top="6"
+    pdk-typography="heading-large"
+  >
+    Upload new files
+  </h1>
+</upload-new-files>
+`;
