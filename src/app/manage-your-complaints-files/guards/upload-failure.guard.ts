@@ -5,5 +5,5 @@ import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-comp
 export const uploadFailureGuard: CanActivateFn = route => {
   const store = inject(ManageYourComplaintsFilesStore);
 
-  return store.getUploadCsvFailed() ? true : createUrlTreeFromSnapshot(route, ['../..']);
+  return store.hasUploadCsvFailed() ? true : createUrlTreeFromSnapshot(route, ['../..']);
 };

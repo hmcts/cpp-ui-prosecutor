@@ -32,8 +32,8 @@ describe('UploadNewFilesContainer', () => {
         {
           provide: ManageYourComplaintsFilesStore,
           useValue: {
-            getDownloadError: showDownloadErrorMessage,
-            getUploadValidationMessage: uploadErrorMessage,
+            hasDownloadCsvError: showDownloadErrorMessage,
+            uploadCsvValidationMessage: uploadErrorMessage,
             downloadCsvTemplate,
             validateUploadCsvFile,
             setUploadErrorMessage,

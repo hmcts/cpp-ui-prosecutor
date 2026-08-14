@@ -22,7 +22,7 @@ describe('ManageYourComplaintsFilesContainer', () => {
         {
           provide: ManageYourComplaintsFilesStore,
           useValue: {
-            getDownloadError: showDownloadErrorMessage,
+            hasDownloadCsvError: showDownloadErrorMessage,
             downloadCsvTemplate,
             resetState
           }

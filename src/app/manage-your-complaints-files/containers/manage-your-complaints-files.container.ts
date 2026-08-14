@@ -8,7 +8,7 @@ import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-comp
 @Component({
   selector: 'manage-your-complaints-files-container',
   template: `
-    <csv-template-download-error [show]="store.getDownloadError()"></csv-template-download-error>
+    <csv-template-download-error [show]="store.hasDownloadCsvError()"></csv-template-download-error>
     <back-button actionText="Back" linkUrl="/"></back-button>
 
     <h1 pdk-typography="heading-large" pdk-margin-top="6" pdk-margin-bottom="6">Manage your complaints files</h1>

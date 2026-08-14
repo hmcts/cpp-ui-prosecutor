@@ -9,10 +9,10 @@ import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-c
 class TestPageComponent {}
 
 describe('uploadFailureGuard', () => {
-  let getUploadCsvFailed: WritableSignal<boolean>;
+  let hasUploadCsvFailed: WritableSignal<boolean>;
 
   beforeEach(() => {
-    getUploadCsvFailed = signal(false);
+    hasUploadCsvFailed = signal(false);
 
     const routes: Routes = [
       {
@@ -31,12 +31,12 @@ describe('uploadFailureGuard', () => {
     ];
 
     TestBed.configureTestingModule({
-      providers: [provideRouter(routes), { provide: ManageYourComplaintsFilesStore, useValue: { getUploadCsvFailed } }]
+      providers: [provideRouter(routes), { provide: ManageYourComplaintsFilesStore, useValue: { hasUploadCsvFailed } }]
     });
   });
 
   it('should allow navigation to the failure page when the upload has failed', async () => {
-    getUploadCsvFailed.set(true);
+    hasUploadCsvFailed.set(true);
     const harness = await RouterTestingHarness.create();
 
     await harness.navigateByUrl('/manage-your-complaints-files/upload-new-files/failure');

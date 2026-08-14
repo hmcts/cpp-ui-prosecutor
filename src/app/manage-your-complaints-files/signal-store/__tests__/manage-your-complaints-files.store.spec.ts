@@ -39,7 +39,7 @@ describe('ManageYourComplaintsFilesStore', () => {
   });
 
   it('should not show the download error message by default', () => {
-    expect(store.getDownloadError()).toBe(false);
+    expect(store.hasDownloadCsvError()).toBe(false);
   });
 
   it('should save the csv template when the download succeeds', () => {
@@ -49,7 +49,7 @@ describe('ManageYourComplaintsFilesStore', () => {
     store.downloadCsvTemplate();
 
     expect(FileSaver.saveAs).toHaveBeenCalledWith(blob, 'complaints-files-template.csv');
-    expect(store.getDownloadError()).toBe(false);
+    expect(store.hasDownloadCsvError()).toBe(false);
   });
 
   it('should show the download error message when the download fails', () => {
@@ -57,7 +57,7 @@ describe('ManageYourComplaintsFilesStore', () => {
 
     store.downloadCsvTemplate();
 
-    expect(store.getDownloadError()).toBe(true);
+    expect(store.hasDownloadCsvError()).toBe(true);
     expect(FileSaver.saveAs).not.toHaveBeenCalled();
   });
 
@@ -73,23 +73,23 @@ describe('ManageYourComplaintsFilesStore', () => {
   it('should clear a previous error message when a new download attempt succeeds', () => {
     fetchCsvTemplate.mockReturnValue(throwError(() => new Error('network error')));
     store.downloadCsvTemplate();
-    expect(store.getDownloadError()).toBe(true);
+    expect(store.hasDownloadCsvError()).toBe(true);
 
     fetchCsvTemplate.mockReturnValue(of(new Blob()));
     store.downloadCsvTemplate();
 
-    expect(store.getDownloadError()).toBe(false);
+    expect(store.hasDownloadCsvError()).toBe(false);
   });
 
   it('should reset the state back to its initial values', () => {
     fetchCsvTemplate.mockReturnValue(throwError(() => new Error('network error')));
     store.downloadCsvTemplate();
-    expect(store.getDownloadError()).toBe(true);
+    expect(store.hasDownloadCsvError()).toBe(true);
 
     store.resetState();
 
-    expect(store.getDownloadError()).toBe(false);
-    expect(store.getReferenceNumber()).toBe('');
+    expect(store.hasDownloadCsvError()).toBe(false);
+    expect(store.referenceNumber()).toBe('');
   });
 
   it('should store the reference number and call onUploadSuccess when the upload succeeds', () => {
@@ -99,10 +99,10 @@ describe('ManageYourComplaintsFilesStore', () => {
 
     store.validateUploadCsvFile({ file: new File(['a,b,c'], 'complaints.csv'), onUploadSuccess, onUploadError });
 
-    expect(store.getReferenceNumber()).toBe('REF123');
+    expect(store.referenceNumber()).toBe('REF123');
     expect(onUploadSuccess).toHaveBeenCalledWith('REF123');
     expect(onUploadError).not.toHaveBeenCalled();
-    expect(store.getUploadValidationMessage()).toBeNull();
+    expect(store.uploadCsvValidationMessage()).toBeNull();
   });
 
   it('should call onUploadError with the raw error when the upload fails', () => {
@@ -123,7 +123,7 @@ describe('ManageYourComplaintsFilesStore', () => {
   it('should let setUploadErrorMessage set a backend validation message for display', () => {
     store.setUploadErrorMessage('File size must not exceed 2MB');
 
-    expect(store.getUploadValidationMessage()).toBe('File size must not exceed 2MB');
+    expect(store.uploadCsvValidationMessage()).toBe('File size must not exceed 2MB');
   });
 
   it('should clear a previous backend validation error when a new upload attempt is made', () => {
@@ -136,6 +136,6 @@ describe('ManageYourComplaintsFilesStore', () => {
       onUploadError: jest.fn()
     });
 
-    expect(store.getUploadValidationMessage()).toBeNull();
+    expect(store.uploadCsvValidationMessage()).toBeNull();
   });
 });

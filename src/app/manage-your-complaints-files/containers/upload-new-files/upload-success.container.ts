@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
         File is being processed
       </h1>
       <p pdk-typography="body">
-        Your reference number is <strong>{{ store.getReferenceNumber() }}</strong>
+        Your reference number is <strong>{{ store.referenceNumber() }}</strong>
       </p>
     </pdk-notification-banner>
 

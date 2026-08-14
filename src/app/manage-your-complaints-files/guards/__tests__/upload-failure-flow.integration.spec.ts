@@ -43,7 +43,7 @@ describe('real upload failure flow (real store, real guard, real router)', () =>
     container.onFileSubmitted(new File(['a,b,c'], 'complaints.csv'));
     await harness.fixture.whenStable();
 
-    expect(TestBed.inject(ManageYourComplaintsFilesStore).getUploadCsvFailed()).toBe(true);
+    expect(TestBed.inject(ManageYourComplaintsFilesStore).hasUploadCsvFailed()).toBe(true);
     expect(TestBed.inject(Router).url).toBe('/manage-your-complaints-files/upload-new-files/failure');
   });
 });

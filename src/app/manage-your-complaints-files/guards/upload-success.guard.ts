@@ -5,5 +5,5 @@ import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-comp
 export const uploadSuccessGuard: CanActivateFn = route => {
   const store = inject(ManageYourComplaintsFilesStore);
 
-  return store.getReferenceNumber() ? true : createUrlTreeFromSnapshot(route, ['../..']);
+  return store.referenceNumber() ? true : createUrlTreeFromSnapshot(route, ['../..']);
 };

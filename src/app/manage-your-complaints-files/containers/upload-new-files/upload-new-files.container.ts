@@ -12,7 +12,7 @@ import { NewFilesRoutes } from './upload-new-files.routes';
 @Component({
   selector: 'upload-new-files-container',
   template: `
-    <csv-template-download-error [show]="store.getDownloadError()"></csv-template-download-error>
+    <csv-template-download-error [show]="store.hasDownloadCsvError()"></csv-template-download-error>
 
     <back-button actionText="Back" linkUrl="/manage-your-complaints-files"></back-button>
     @if (errors()?.length) {
@@ -21,7 +21,7 @@ import { NewFilesRoutes } from './upload-new-files.routes';
     <file-upload-page
       [acceptedFileTypes]="['.csv']"
       [hint]="'The file name should match the hearing date.'"
-      [serverErrorMessage]="store.getUploadValidationMessage()"
+      [serverErrorMessage]="store.uploadCsvValidationMessage()"
       (fileSubmitted)="onFileSubmitted($event)"
       (errors)="showValidationError($event)"
       (fileChanged)="store.setUploadErrorMessage(null)"

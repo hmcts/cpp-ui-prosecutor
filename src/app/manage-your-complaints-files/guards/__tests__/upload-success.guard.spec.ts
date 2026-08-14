@@ -9,10 +9,10 @@ import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-c
 class TestPageComponent {}
 
 describe('uploadSuccessGuard', () => {
-  let getReferenceNumber: WritableSignal<string>;
+  let referenceNumber: WritableSignal<string>;
 
   beforeEach(() => {
-    getReferenceNumber = signal('');
+    referenceNumber = signal('');
 
     const routes: Routes = [
       {
@@ -31,12 +31,12 @@ describe('uploadSuccessGuard', () => {
     ];
 
     TestBed.configureTestingModule({
-      providers: [provideRouter(routes), { provide: ManageYourComplaintsFilesStore, useValue: { getReferenceNumber } }]
+      providers: [provideRouter(routes), { provide: ManageYourComplaintsFilesStore, useValue: { referenceNumber } }]
     });
   });
 
   it('should allow navigation to the success page when a reference number has been recorded', async () => {
-    getReferenceNumber.set('REF123');
+    referenceNumber.set('REF123');
     const harness = await RouterTestingHarness.create();
 
     await harness.navigateByUrl('/manage-your-complaints-files/upload-new-files/success');

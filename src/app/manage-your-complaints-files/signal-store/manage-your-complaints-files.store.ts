@@ -1,5 +1,5 @@
-import { computed, inject } from '@angular/core';
-import { patchState, signalStore, withComputed, withMethods, withProps, withState } from '@ngrx/signals';
+import { inject } from '@angular/core';
+import { patchState, signalStore, withMethods, withProps, withState } from '@ngrx/signals';
 import { ManageYourComplaintsFilesService } from '../services/manage-your-complaints-files.service';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { pipe, switchMap, tap } from 'rxjs';
@@ -30,12 +30,6 @@ export const ManageYourComplaintsFilesStore = signalStore(
   withProps((_, service = inject(ManageYourComplaintsFilesService)) => ({
     _downloadCsvTemplate: () => service.fetchCsvTemplate(),
     _uploadCsvFile: (file: File) => service.postCsvFile(file)
-  })),
-  withComputed(({ referenceNumber, hasDownloadCsvError, uploadCsvValidationMessage, hasUploadCsvFailed }) => ({
-    getReferenceNumber: computed(() => referenceNumber()),
-    getDownloadError: computed(() => hasDownloadCsvError()),
-    getUploadValidationMessage: computed(() => uploadCsvValidationMessage()),
-    getUploadCsvFailed: computed(() => hasUploadCsvFailed())
   })),
   withMethods(store => ({
     downloadCsvTemplate: rxMethod<void>(
