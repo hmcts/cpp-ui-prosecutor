@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ManageYourComplaintsFilesContainer } from '../manage-your-complaints-files.container';
-import { ManageYourComplaintsFilesStore } from '../../signalStore/manage-your-complaints-files.store';
+import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-complaints-files.store';
 
 describe('ManageYourComplaintsFilesContainer', () => {
   let fixture: ComponentFixture<ManageYourComplaintsFilesContainer>;
@@ -22,7 +22,7 @@ describe('ManageYourComplaintsFilesContainer', () => {
         {
           provide: ManageYourComplaintsFilesStore,
           useValue: {
-            getShowDownloadErrorMessage: showDownloadErrorMessage,
+            hasDownloadCsvError: showDownloadErrorMessage,
             downloadCsvTemplate,
             resetState
           }

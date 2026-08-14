@@ -6,7 +6,6 @@ import { ViewYourFilesComponent } from '../components/view-your-files/view-your-
   template: `
     <view-your-files></view-your-files>
   `,
-  styles: [],
   imports: [ViewYourFilesComponent]
 })
 export class ViewYourFilesContainer {}

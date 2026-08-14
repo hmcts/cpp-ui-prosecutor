@@ -3,12 +3,12 @@ import { CsvTemplateDownloadErrorComponent } from '../shared/csv-template-downlo
 import { PdkCore, PdkGrid, PdkTypographyDirective } from '@cpp/pdk';
 import { BackButtonComponent } from '../../shared';
 import { RouterLink } from '@angular/router';
-import { ManageYourComplaintsFilesStore } from '../signalStore/manage-your-complaints-files.store';
+import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-complaints-files.store';
 
 @Component({
   selector: 'manage-your-complaints-files-container',
   template: `
-    <csv-template-download-error [show]="store.getShowDownloadErrorMessage()"></csv-template-download-error>
+    <csv-template-download-error [show]="store.hasDownloadCsvError()"></csv-template-download-error>
     <back-button actionText="Back" linkUrl="/"></back-button>
 
     <h1 pdk-typography="heading-large" pdk-margin-top="6" pdk-margin-bottom="6">Manage your complaints files</h1>

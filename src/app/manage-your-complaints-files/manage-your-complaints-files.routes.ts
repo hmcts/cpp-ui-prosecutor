@@ -1,5 +1,10 @@
 import { Routes } from '@angular/router';
 
+export enum ComplaintsFileRoutes {
+  UPLOAD_NEW_FILES = 'upload-new-files',
+  VIEW_YOUR_FILES = 'view-your-files'
+}
+
 export const manageYourComplaintsFilesRoutes: Routes = [
   {
     path: '',
@@ -7,11 +12,12 @@ export const manageYourComplaintsFilesRoutes: Routes = [
       import('./containers/manage-your-complaints-files.container').then(m => m.ManageYourComplaintsFilesContainer)
   },
   {
-    path: 'upload-new-files',
-    loadComponent: () => import('./containers/upload-new-files.container').then(m => m.UploadNewFilesContainer)
+    path: ComplaintsFileRoutes.UPLOAD_NEW_FILES,
+    loadChildren: () =>
+      import('./containers/upload-new-files/upload-new-files.routes').then(m => m.uploadNewFilesRoutes)
   },
   {
-    path: 'view-your-files',
+    path: ComplaintsFileRoutes.VIEW_YOUR_FILES,
     loadComponent: () => import('./containers/view-your-files.container').then(m => m.ViewYourFilesContainer)
   }
 ];
