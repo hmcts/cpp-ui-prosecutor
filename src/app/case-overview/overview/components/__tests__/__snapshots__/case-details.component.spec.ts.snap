@@ -1,0 +1,878 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseDetailsComponent should compile correctly 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          pdk-padding-vertical="2"
+        >
+           Completed 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should compile correctly with re-opened date 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-body-m"
+          pdk-padding-vertical="2"
+          pdk-typography="body-medium"
+        >
+           Reopened 12 Dec 2018
+          <br />
+           Libra account no: case123
+          <br />
+           Reason: collateral damage 
+          <br />
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should display Awaiting listing for refer to court yet to be listed 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          pdk-padding-vertical="2"
+        >
+           Referred for court hearing 
+          <div
+            class="govuk-body-xs"
+            pdk-typography="body-xsmall"
+          >
+             Awaiting Listing 
+          </div>
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should display application if application is present 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          pdk-padding-vertical="2"
+        >
+           Completed 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Date application received
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           1 Jan 2020 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Application status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Appeal abandoned 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should display the court details for listed in criminal courts case 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          pdk-padding-vertical="2"
+        >
+           Referred for court hearing 
+          <div
+            class="govuk-body-xs"
+            pdk-typography="body-xsmall"
+          >
+             Hearing court  12 Dec 2018 at 12:00 AM
+            <br />
+             Summons issued 
+          </div>
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;
+
+exports[`CaseDetailsComponent should not display application details if no application is present 1`] = `
+<case-details-test
+  kase={[Function Object]}
+>
+  <case-details>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Case Details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Case Status
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="case-status"
+          pdk-padding-vertical="2"
+        >
+           Completed 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Prosecutor
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="prosecutor"
+          pdk-padding-vertical="2"
+        >
+           Transport for London 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Notice served
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           27 Jan 2019 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Dates to avoid
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </case-details>
+</case-details-test>
+`;

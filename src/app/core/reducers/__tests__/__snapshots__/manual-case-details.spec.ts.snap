@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manualCaseDetailsReducer when LOAD_MANUAL_CASE_DETAILS_SUCCESS should populate the state with details 1`] = `
+{
+  "caseDetails": {
+    "caseId": "manual-case-id-001",
+    "initiationCode": "S",
+    "summonsCode": "E",
+  },
+}
+`;
+
+exports[`manualCaseDetailsReducer when initialised should set the default state 1`] = `
+{
+  "caseDetails": {
+    "initiationCode": "J",
+  },
+  "channel": "MCC",
+  "defendants": [],
+}
+`;

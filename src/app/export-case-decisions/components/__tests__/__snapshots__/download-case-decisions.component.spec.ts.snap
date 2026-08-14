@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadCaseDecisionsComponent should compile correctly with case count results 1`] = `
+<download-case-decisions-test
+  caseCountResult={[Function Object]}
+>
+  <download-case-decisions>
+    <pdk-inset-text>
+      <div
+        class="govuk-inset-text"
+      >
+        <p
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           13 case 
+          <span>
+            results
+          </span>
+           found from 2019-10-01 to 2019-10-10 
+        </p>
+        <a
+          class="govuk-button govuk-button--secondary"
+          href="/api/mireportdata-query-api/query/api/rest/mireportdata/case-export?fromDate=2019-10-01&toDate=2019-10-10"
+          pdk-button="secondary"
+          target="_blank"
+        >
+           Download results in json file 
+        </a>
+        <a
+          class="govuk-!-margin-left-2 govuk-button govuk-button--secondary"
+          href="/api/mireportdata-query-api/query/api/rest/mireportdata/case-export?fromDate=2019-10-01&toDate=2019-10-10&csvExport=true"
+          pdk-button="secondary"
+          pdk-margin-left="2"
+          target="_blank"
+        >
+           Download results in excel/csv file 
+        </a>
+      </div>
+    </pdk-inset-text>
+  </download-case-decisions>
+</download-case-decisions-test>
+`;
+
+exports[`DownloadCaseDecisionsComponent should compile correctly with zero cases 1`] = `
+<download-case-decisions-test
+  caseCountResult={[Function Object]}
+>
+  <download-case-decisions>
+    <pdk-inset-text>
+      <div
+        class="govuk-inset-text"
+      >
+        <p
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+           0 case 
+          <span>
+            results
+          </span>
+           found from 2019-10-01 to 2019-10-10 
+        </p>
+      </div>
+    </pdk-inset-text>
+  </download-case-decisions>
+</download-case-decisions-test>
+`;

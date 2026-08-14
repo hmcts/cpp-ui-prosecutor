@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OffenceDetailsComponent should render the component 1`] = `
+<manual-case-offence-details
+  add={[Function EventEmitter_]}
+  alcoholLevelMethods={[Function Array]}
+  createUUID={[Function Function]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter_]}
+  hasNpp={[Function Boolean]}
+  offenceStateService={[Function ManualCaseOffenceStateService]}
+  remove={[Function EventEmitter_]}
+  todayDate={[Function String]}
+>
+  <div
+    class="defendant-details govuk-!-margin-bottom-7"
+    pdk-margin-bottom="7"
+  >
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <span
+          class="table-header bold"
+          pdk-typography="body-medium"
+        >
+        </span>
+      </pdk-grid>
+      <pdk-grid
+        class="change-link"
+        one-third=""
+      >
+        <a
+          href="javascript:void(0)"
+          pdk-link=""
+          unvisted=""
+        >
+        </a>
+      </pdk-grid>
+    </pdk-grid>
+  </div>
+</manual-case-offence-details>
+`;

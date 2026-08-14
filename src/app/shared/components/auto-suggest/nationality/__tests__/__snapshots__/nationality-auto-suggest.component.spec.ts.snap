@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NationalityAutoSuggestComponent should be able to change value 1`] = `
+[
+  [
+    {
+      "nationality": {
+        "cjsCode": 1,
+        "countryName": "GBR",
+        "govCode": "GBR",
+        "id": "id",
+        "isoCode": "GBR",
+        "nationality": "British",
+      },
+    },
+  ],
+]
+`;
+
+exports[`NationalityAutoSuggestComponent should render the component correctly 1`] = `
+<nationality-auto-suggest-test
+  getNationalitiesOnMount="false"
+  mapSelectionToKey={[Function Boolean]}
+  submitForm={[Function Function]}
+>
+  <form
+    autocomplete="off"
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+    pdk-form=""
+  >
+    <pdk-form-field
+      label="Nationality"
+    >
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        <label
+          class="govuk-label"
+          for="nationalityId"
+        >
+           Nationality 
+        </label>
+        <nationality-auto-suggest
+          class="ng-untouched ng-pristine ng-valid"
+          id="nationalityId"
+          name="nationality"
+        >
+          <pdk-autosuggest-lite>
+            <pdk-autosuggest
+              highlightcolor="blue"
+            >
+              <pdk-interaction-container>
+                <div>
+                  <div
+                    class="pdk-autosuggest"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                      aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                      aria-expanded="false"
+                      autocomplete="off"
+                      class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                      id="nationalityId"
+                      role="combobox"
+                      type="text"
+                    />
+                    <span
+                      class="govuk-visually-hidden"
+                      id="pdk-autosuggest__instructions-GENERATED_ID"
+                      pdk-visually-hidden=""
+                    >
+                       When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                    </span>
+                    <span
+                      aria-live="polite"
+                      class="govuk-visually-hidden"
+                      pdk-visually-hidden=""
+                      role="status"
+                    >
+                    </span>
+                    <div
+                      class="pdk-autosuggest__suggestions-container"
+                      id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </pdk-interaction-container>
+            </pdk-autosuggest>
+          </pdk-autosuggest-lite>
+        </nationality-auto-suggest>
+      </pdk-form-group>
+    </pdk-form-field>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</nationality-auto-suggest-test>
+`;
+
+exports[`NationalityAutoSuggestComponent should set nationality object when \`mapToKey\` is not set 1`] = `
+[
+  [
+    {
+      "nationality": {
+        "cjsCode": 1,
+        "countryName": "GBR",
+        "govCode": "GBR",
+        "id": "id1",
+        "isoCode": "GBR",
+        "nationality": "Irish",
+      },
+    },
+  ],
+]
+`;
+
+exports[`NationalityAutoSuggestComponent should set the default value and submit 1`] = `
+[
+  [
+    {
+      "nationality": "id1",
+    },
+  ],
+]
+`;

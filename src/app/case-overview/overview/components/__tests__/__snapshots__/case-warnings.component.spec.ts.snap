@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseWarnings should compile correctly with all warnings 1`] = `
+<case-warnings-test
+  defendant={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-warnings>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           Defendant under 18 at date of charge 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           Offence may be out of time 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           Offence not in effect - refer to court and see SJPN for offence details 
+        </strong>
+      </div>
+    </pdk-warning-text>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           Imprisonable offence 
+        </strong>
+      </div>
+    </pdk-warning-text>
+  </case-warnings>
+</case-warnings-test>
+`;
+
+exports[`CaseWarnings should compile correctly without any warnings 1`] = `
+<case-warnings-test
+  defendant={[Function Object]}
+  offences={[Function Array]}
+>
+  <case-warnings>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text pdk-warning-text--error"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+           Defendant under 18 at date of charge 
+        </strong>
+      </div>
+    </pdk-warning-text>
+  </case-warnings>
+</case-warnings-test>
+`;

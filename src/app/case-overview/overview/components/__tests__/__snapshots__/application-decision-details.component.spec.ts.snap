@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationDecisionDetailsComponent Reopening should display rejected reason 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="reopening-details"
+        >
+           Application to reopen case 
+        </div>
+        <p
+          data-role="application-rejected"
+        >
+           Refused: Test rejection reason 
+        </p>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent Reopening should display reopening details when granted 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="reopening-details"
+        >
+           Application to reopen case 
+          <p
+            data-role="reopening-granted"
+          >
+             Case reopened under section 142 of the Magistrates' Courts Act 1980. Conviction and Sentence imposed on 1 December 2020 set aside. 
+          </p>
+        </div>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent Stat dec should display out of time reason when out of time 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="stat-dec-details"
+        >
+           Appearance to make statutory declaration (SJP case) 
+          <p
+            data-role="stat-dec-granted"
+          >
+             Statutory declaration made under section 16E of the Magistrates' Courts Act 1980. 
+             Service accepted outside 21 day limit. Reasons: In hospital 
+          </p>
+        </div>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent Stat dec should display rejected reason 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="stat-dec-details"
+        >
+           Appearance to make statutory declaration (SJP case) 
+        </div>
+        <p
+          data-role="application-rejected"
+        >
+           Refused: Test rejection reason 
+        </p>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec details when granted 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="stat-dec-details"
+        >
+           Appearance to make statutory declaration (SJP case) 
+          <p
+            data-role="stat-dec-granted"
+          >
+             Statutory declaration made under section 16E of the Magistrates' Courts Act 1980. 
+          </p>
+        </div>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent Stat dec should display stat dec details when granted, and not display reasons when not out of time 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+        <div
+          data-role="stat-dec-details"
+        >
+           Appearance to make statutory declaration (SJP case) 
+          <p
+            data-role="stat-dec-granted"
+          >
+             Statutory declaration made under section 16E of the Magistrates' Courts Act 1980. 
+          </p>
+        </div>
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;
+
+exports[`ApplicationDecisionDetailsComponent should compile correctly 1`] = `
+<application-decision-details
+  applicationDecision={[Function Object]}
+>
+  <pdk-grid
+    container=""
+    data-role="application-decision-details"
+  >
+    <pdk-grid
+      one-third=""
+    >
+      <div
+        class="govuk-!-margin-left-2 govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-margin-left="2"
+        pdk-padding-vertical="2"
+      >
+        <b>
+          Application
+        </b>
+      </div>
+    </pdk-grid>
+    <pdk-grid
+      two-thirds=""
+    >
+      <div
+        class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+        pdk-padding-vertical="2"
+      >
+      </div>
+    </pdk-grid>
+  </pdk-grid>
+</application-decision-details>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadcrumbLinksComponent should compile 1`] = `
+<test-breadcrumb-links
+  breadcrumbs={[Function Array]}
+  caseId={[Function String]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="cases-missing-sjp-notices"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Cases missing SJP Notices 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Search for a case 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links>
+</test-breadcrumb-links>
+`;

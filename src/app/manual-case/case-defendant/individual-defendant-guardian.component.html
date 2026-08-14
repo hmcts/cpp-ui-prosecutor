@@ -1,0 +1,242 @@
+<div pdk-margin-top="3" pdk-margin-bottom="3">
+  <a pdk-link href="javascript:void(0);" (click)="toggleGuardianForm()">{{
+    'MANUAL_CASE_DEFENDANT.GUARDIAN_PANEL' | translate
+  }}</a>
+</div>
+
+@if (showGuardian) {
+  <pdk-inset-text size="narrow" class="pl-m">
+    <pdk-grid container ngModelGroup="individual" pdk-margin-bottom="3" pdk-padding-left="3">
+      <pdk-form-field [label]="'MANUAL_CASE_DEFENDANT.GUARDIAN_TYPE' | translate" labelType="small">
+        <pdk-radio-group
+          name="guardianType"
+          [inline]="true"
+          [(ngModel)]="manualCaseDefendant.individual.guardianType"
+          data-role="other-type-input"
+          >
+          <pdk-radio-button value="INDIVIDUAL">
+            {{ 'APPLICANT_DETAILS.INDIVIDUAL' | translate }}
+          </pdk-radio-button>
+          <pdk-radio-button value="ORGANISATION">
+            {{ 'APPLICANT_DETAILS.ORGANISATION' | translate }}
+          </pdk-radio-button>
+        </pdk-radio-group>
+      </pdk-form-field>
+      @if (manualCaseDefendant.individual.guardianType === 'INDIVIDUAL') {
+        <div ngModelGroup="individual">
+          <div ngModelGroup="parentGuardianInformation">
+            <div ngModelGroup="personalInformation">
+              <!-- Title -->
+              <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.TITLE' | translate }}" labelType="small">
+                <input
+                  pdk-text-input
+                  pdk-input
+                  name="title"
+                  type="text"
+                  [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.title"
+                  [maxLength]="35"
+                  required
+                  />
+              </pdk-form-field>
+              <!-- Forenames -->
+              <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.FORENAME' | translate }}" labelType="small">
+                <input
+                  pdk-text-input
+                  pdk-input
+                  name="firstName"
+                  type="text"
+                  [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.firstName"
+                  [maxLength]="35"
+                  required
+                  data-role="forename-input"
+                  />
+              </pdk-form-field>
+              <!-- Middlename -->
+              <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.MIDDLENAME' | translate: param }}" labelType="small">
+                <input
+                  pdk-text-input
+                  pdk-input
+                  name="givenName2"
+                  type="text"
+                  [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.givenName2"
+                  [maxLength]="35"
+                  data-role="middlename-input"
+                  />
+              </pdk-form-field>
+              <!-- Surname -->
+              <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.SURNAME' | translate }}" labelType="small">
+                <input
+                  pdk-text-input
+                  pdk-input
+                  name="lastName"
+                  type="text"
+                  [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.lastName"
+                  [maxLength]="35"
+                  required
+                  data-role="surname-input"
+                  />
+              </pdk-form-field>
+              <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+                {{ 'MANUAL_CASE_DEFENDANT.GUARDIAN_ADDRESS' | translate }}
+              </h2>
+              <p>
+                <a
+                  pdk-link
+                  href="javascript:void(0);"
+                  data-role="same-as-individual-defendant"
+                  (click)="sameAsDefendant()"
+                  >{{ 'MANUAL_CASE_DEFENDANT.SAME_AS_DEFENDANT' | translate }}</a
+                  >
+                </p>
+                <!-- Address -->
+                <pdk-form-field
+                  label="{{ 'MANUAL_CASE_DEFENDANT.ADDRESS' | translate }}"
+                  labelType="small"
+                  pdk-margin-bottom="3"
+                  >
+                  <input-address
+                    name="address"
+                    [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.personalInformation.address"
+                    [maxLength]="35"
+                    [isRequired]="true"
+                    [validWhenEmpty]="false"
+                    [showFixedAbode]="manualCaseType !== 'S'"
+                    data-role="address-input"
+                    >
+                </input-address>
+              </pdk-form-field>
+              <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+                {{ 'MANUAL_CASE_DEFENDANT.GUARDIAN_CONTACT_DETAILS' | translate }}
+              </h2>
+              <div ngModelGroup="contactDetails">
+                <pdk-form-field
+                  label="{{ 'MANUAL_CASE_DEFENDANT.EMAIL' | translate: param }}"
+                [errorMessages]="[
+                  {
+                    rule: 'email',
+                    message: 'MANUAL_CASE_DEFENDANT.EMAIL_FORMAT' | translate
+                  }
+                ]"
+                >
+                <input
+                  pdk-text-input
+                  pdk-input
+                  name="primaryEmail"
+                  type="email"
+                  [(ngModel)]="
+                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation.contactDetails
+                      .primaryEmail
+                  "
+                  validateEmail
+                  [maxLength]="255"
+                  />
+              </pdk-form-field>
+              <!-- Work -->
+              <pdk-form-field
+                label="{{ 'MANUAL_CASE_DEFENDANT.PHONE' | translate: param }}"
+                [errorMessages]="[
+                  {
+                    rule: 'inValidPhone',
+                    message: 'MANUAL_CASE_DEFENDANT.PHONE_FORMAT' | translate
+                  }
+                ]"
+              >
+              <input
+                pdk-text-input
+                pdk-input
+                name="work"
+                type="tel"
+                maxlength="20"
+                  [(ngModel)]="
+                    manualCaseDefendant.individual.parentGuardianInformation.personalInformation.contactDetails.work
+                  "
+                validatePhone
+                [maxLength]="35"
+                />
+            </pdk-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  @if (manualCaseDefendant.individual.guardianType === 'ORGANISATION') {
+    <div ngModelGroup="individual">
+      <div ngModelGroup="parentGuardianInformation">
+        <!-- Organisation Name -->
+        <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.ORGANISATION_NAME' | translate }}" labelType="small">
+          <input
+            pdk-text-input
+            pdk-input
+            name="organisationName"
+            type="text"
+            [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.organisationName"
+            [maxLength]="35"
+            required
+            />
+        </pdk-form-field>
+        <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+          {{ 'MANUAL_CASE_DEFENDANT.GUARDIAN_ADDRESS' | translate }}
+        </h2>
+        <p>
+          <a
+            pdk-link
+            href="javascript:void(0);"
+            data-role="same-as-organisation-defendant"
+            (click)="sameAsDefendant()"
+            >{{ 'MANUAL_CASE_DEFENDANT.SAME_AS_DEFENDANT' | translate }}</a
+            >
+          </p>
+          <!-- Address -->
+          <pdk-form-field
+            label="{{ 'MANUAL_CASE_DEFENDANT.ADDRESS' | translate }}"
+            labelType="small"
+            pdk-margin-bottom="3"
+            >
+            <input-address
+              name="address"
+              [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.address"
+              [maxLength]="35"
+              [isRequired]="true"
+              [validWhenEmpty]="false"
+              [showFixedAbode]="manualCaseType !== 'S'"
+              data-role="address-input"
+              >
+          </input-address>
+        </pdk-form-field>
+        <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+          {{ 'MANUAL_CASE_DEFENDANT.GUARDIAN_CONTACT_DETAILS' | translate }}
+        </h2>
+        <!-- Work -->
+        <pdk-form-field
+          label="{{ 'MANUAL_CASE_DEFENDANT.PHONE' | translate: param }}"
+            [errorMessages]="[
+              {
+                rule: 'inValidPhone',
+                message: 'MANUAL_CASE_DEFENDANT.PHONE_FORMAT' | translate
+              }
+            ]"
+        >
+        <input
+          pdk-text-input
+          pdk-input
+          name="companyTelephoneNumber"
+          type="tel"
+          maxlength="20"
+          [(ngModel)]="manualCaseDefendant.individual.parentGuardianInformation.companyTelephoneNumber"
+          validatePhone
+          [maxLength]="35"
+          />
+      </pdk-form-field>
+    </div>
+  </div>
+}
+@if (manualCaseDefendant.individual.guardianType) {
+  <p>
+    <a pdk-link href="javascript:void(0);" data-role="remove-guardian-link" (click)="removeGuardian()">{{
+      'MANUAL_CASE_DEFENDANT.GUARDIAN_REMOVE_LINK' | translate
+    }}</a>
+  </p>
+}
+</pdk-grid>
+</pdk-inset-text>
+}

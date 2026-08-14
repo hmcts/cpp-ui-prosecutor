@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateOfBirthComponent should compile correctly 1`] = `
+<date-of-birth-test
+  dateOfBirth={[Function String]}
+  defaultSubstitute={[Function String]}
+>
+  <div
+    id="withoutDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+         31 Jan 1998 (28 years old) 
+      </div>
+    </date-of-birth>
+  </div><div
+    id="withDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+         31 Jan 1998 (28 years old) 
+      </div>
+    </date-of-birth>
+  </div>
+</date-of-birth-test>
+`;
+
+exports[`DateOfBirthComponent should show dash substitution on both divs 1`] = `
+<date-of-birth-test
+  dateOfBirth="undefined"
+  defaultSubstitute={[Function String]}
+>
+  <div
+    id="withoutDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+         – 
+      </div>
+    </date-of-birth>
+  </div><div
+    id="withDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+         – 
+      </div>
+    </date-of-birth>
+  </div>
+</date-of-birth-test>
+`;
+
+exports[`DateOfBirthComponent should show nothing on the div(withDefaultSubstitute) but the a dash (by default) on the div(withoutDefaultSubstitute) 1`] = `
+<date-of-birth-test
+  dateOfBirth="undefined"
+  defaultSubstitute="undefined"
+>
+  <div
+    id="withoutDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+         – 
+      </div>
+    </date-of-birth>
+  </div><div
+    id="withDefaultSubstitute"
+  >
+    <date-of-birth>
+      <div>
+      </div>
+    </date-of-birth>
+  </div>
+</date-of-birth-test>
+`;

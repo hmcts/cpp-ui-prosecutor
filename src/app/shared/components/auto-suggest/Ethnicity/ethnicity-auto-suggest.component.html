@@ -1,0 +1,14 @@
+<pdk-autosuggest-lite
+  [ariaDescribedBy]="ariaDescribedBy"
+  [ariaLabel]="ariaLabel"
+  [ariaLabelledBy]="ariaLabelledBy"
+  [suggestionKey]="suggestionKey"
+  [suggestionTitle]="suggestionLabel"
+  [suggestions]="suggestions$ | async"
+  [highlightMatchedText]="true"
+  [id]="id"
+  [inputWidth]="inputWidth"
+  [hasError]="hasError"
+  (inputText)="searchEthnicity$.next($event)"
+>
+</pdk-autosuggest-lite>

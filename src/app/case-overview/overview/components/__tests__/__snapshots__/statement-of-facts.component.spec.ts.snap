@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatementOfFactsComponent should compile correctly 1`] = `
+<statement-of-facts-test
+  statement={[Function String]}
+>
+  <statement-of-facts>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Statement of facts
+    </h4>
+    <div
+      class="govuk-!-margin-bottom-8"
+      pdk-margin-bottom="8"
+    >
+      <pdk-foldable-text
+        class="govuk-body-m"
+        pdk-typography="body-medium"
+      >
+        <div
+          class="pdk-foldable"
+        >
+          <span
+            class="pdk-foldable__content pdk-foldable__content__single"
+            id="pdk-foldable-text-GENERATED_ID"
+          >
+             statement of facts 
+          </span>
+        </div>
+      </pdk-foldable-text>
+    </div>
+  </statement-of-facts>
+</statement-of-facts-test>
+`;

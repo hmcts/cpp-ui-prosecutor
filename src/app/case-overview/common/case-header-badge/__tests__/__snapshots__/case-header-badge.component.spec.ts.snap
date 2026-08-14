@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseHeaderBadgeComponent should compile correctly 1`] = `
+<case-header-badge
+  kase={[Function Object]}
+>
+  <div
+    class="govuk-!-margin-top-4"
+    pdk-margin-top="4"
+  >
+    <pdk-page-header>
+      <div
+        class="pdk-page-header"
+      >
+        <pdk-page-header-content>
+          <div
+            class="pdk-page-header__content"
+          >
+            <div
+              class="pdk-page-header__reference"
+            >
+              TFL26168N21T5
+            </div>
+            <div
+              class="pdk-page-header__title"
+            >
+              <b>
+                Guy SMITH
+              </b>
+            </div>
+          </div>
+        </pdk-page-header-content>
+      </div>
+    </pdk-page-header>
+  </div>
+</case-header-badge>
+`;

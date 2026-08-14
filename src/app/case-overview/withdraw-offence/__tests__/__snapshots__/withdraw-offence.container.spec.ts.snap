@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithdrawOffenceContainer should compile correctly 1`] = `
+<withdraw-offence
+  case$={[Function _Store]}
+  caseWithdrawnStatus$={[Function _Store]}
+  offenceWithdrawalReasons$={[Function _Store]}
+  offences$={[Function _Store]}
+  store={[Function _Store]}
+>
+  <withdraw-offence-list>
+    <pre>
+      null
+    </pre>
+  </withdraw-offence-list>
+</withdraw-offence>
+`;

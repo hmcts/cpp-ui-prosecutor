@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectors getCase should select the case from the store 1`] = `
+{
+  "assigned": false,
+  "caseDocuments": [
+    {
+      "addedAt": "2019-02-25T09:30:24.442Z",
+      "documentNumber": 1,
+      "documentType": "PLEA",
+      "id": "documentId1",
+      "materialId": "736fabcb-f42e-4677-9f0e-aa7620c5812c",
+      "metadata": {
+        "fileName": "fileName.pdf",
+      },
+    },
+    {
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "documentNumber": 1,
+      "documentType": "SJPN",
+      "id": "documentId2",
+      "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+      "metadata": {
+        "fileName": "fileName1.pdf",
+      },
+    },
+    {
+      "addedAt": "2019-02-24T16:35:56.558Z",
+      "documentNumber": 1,
+      "documentType": "CITN",
+      "id": "documentId3",
+      "materialId": "5c0ab97e-20e4-4c67-9b78-0ffb9e92c782",
+      "metadata": {
+        "fileName": "fileName1.pdf",
+      },
+    },
+  ],
+  "completed": true,
+  "costs": 19,
+  "dateTimeCreated": "2019-02-24T16:35:46.273Z",
+  "defendant": {
+    "caseId": "case-id-test",
+    "id": "defendantId1",
+    "interpreter": {
+      "needed": false,
+    },
+    "numPreviousConvictions": 2,
+    "offences": [
+      {
+        "chargeDate": "2019-01-24",
+        "cjsCode": "CA03013",
+        "compensation": 30,
+        "id": "offenceId1",
+        "legislation": "legislation 2",
+        "offenceCode": "CA03013",
+        "offenceSequenceNumber": 1,
+        "prosecutionFacts": "facts",
+        "sequenceNumber": 1,
+        "startDate": "2019-01-19",
+        "title": "offence title 1",
+        "wording": "wording",
+      },
+      {
+        "chargeDate": "2019-01-27",
+        "cjsCode": "CA03013",
+        "compensation": 23,
+        "id": "offenceId2",
+        "legislation": "legislation 1",
+        "offenceCode": "CA03013",
+        "offenceSequenceNumber": 1,
+        "pendingWithdrawal": true,
+        "plea": "NOT_GUILTY",
+        "pleaDate": "2019-02-27T15:32:20.593Z",
+        "pleaMethod": "POSTAL",
+        "prosecutionFacts": "facts",
+        "sequenceNumber": 1,
+        "startDate": "2019-01-15",
+        "title": "offence title 2",
+        "wording": "wording",
+      },
+    ],
+    "personalDetails": {
+      "address": {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "postcode": "CV8 1AB",
+      },
+      "addressChanged": false,
+      "contactDetails": {
+        "email": "a@a.com",
+        "home": "333333333",
+        "mobile": "77777777",
+        "niNumber": "WWWWWWW",
+      },
+      "dateOfBirth": "1957-03-11",
+      "dobChanged": false,
+      "firstName": "Guy",
+      "gender": "Male",
+      "lastName": "Smith",
+      "nameChanged": false,
+      "title": "Mr",
+    },
+    "speakWelsh": false,
+  },
+  "enterpriseId": "Z8QG1JR7CMTD",
+  "id": "case-id-test",
+  "listedInCriminalCourts": false,
+  "managedByATCM": false,
+  "onlinePleaReceived": false,
+  "policeFlag": false,
+  "postConviction": false,
+  "postingDate": "2019-01-27",
+  "prosecutingAuthority": "TFL",
+  "prosecutingAuthorityName": "Transport for London",
+  "setAside": false,
+  "status": "COMPLETED",
+  "urn": "TFL26168N21T5",
+}
+`;
+
+exports[`selectors getCaseDecisions should select the case decisions from the store 1`] = `
+[
+  {
+    "id": "mock-case-decision-1",
+    "offenceDecisions": [
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "offenceSequenceNumber": 1,
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "offenceSequenceNumber": 2,
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "adjournedTo": "2019-06-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "offenceSequenceNumber": 3,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-07-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "offenceSequenceNumber": 4,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-06-21",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "offenceSequenceNumber": 5,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "offenceSequenceNumber": 6,
+        "referralReason": "Not suitable for SJP",
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "DISMISS",
+        "id": "mock-case-offence-decision-7",
+        "offenceId": "offenceId7",
+        "offenceSequenceNumber": 7,
+        "verdict": "PROVED_SJP",
+      },
+    ],
+    "savedAt": "2018-12-01",
+    "session": {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2018-12-01",
+      "legalAdviser": {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-1",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "magistrate": "Jenny",
+      "sessionId": "mock-case-decision-session-1",
+      "sessionType": "DELEGATEDPOWERS",
+      "startedAt": "2018-12-01",
+    },
+  },
+]
+`;
+
+exports[`selectors getCaseNotes should select and sort the case notes in desc 1`] = `
+{
+  "caseId": "0f03e10f-d9a5-47f9-92ba-a8e220448451",
+  "notes": [
+    {
+      "addedAt": "2019-07-04",
+      "authorFirstName": "Erica",
+      "authorLastName": "Wilson",
+      "decisionId": "009879ca-7817-42ed-b742-c782316936c7",
+      "noteId": "751e8907-2c67-4f02-94b7-309a39ef2030",
+      "noteText": "Not enough documents",
+      "noteType": "ADJOURNMENT",
+    },
+    {
+      "addedAt": "2019-07-02",
+      "authorFirstName": "Erica",
+      "authorLastName": "Wilson",
+      "decisionId": "cb42e4e9-a23e-45de-8e62-a15e6ed948ac",
+      "noteId": "6614df24-d9bb-4bcd-9a3f-57c436177d67",
+      "noteText": "Not enough documents",
+      "noteType": "ADJOURNMENT",
+    },
+  ],
+}
+`;
+
+exports[`selectors getDefendant should select  defendant from the store 1`] = `
+{
+  "caseId": "case-id-test",
+  "id": "defendantId1",
+  "interpreter": {
+    "needed": false,
+  },
+  "numPreviousConvictions": 2,
+  "offences": [
+    {
+      "chargeDate": "2019-01-24",
+      "cjsCode": "CA03013",
+      "compensation": 30,
+      "id": "offenceId1",
+      "legislation": "legislation 2",
+      "offenceCode": "CA03013",
+      "offenceSequenceNumber": 1,
+      "prosecutionFacts": "facts",
+      "sequenceNumber": 1,
+      "startDate": "2019-01-19",
+      "title": "offence title 1",
+      "wording": "wording",
+    },
+    {
+      "chargeDate": "2019-01-27",
+      "cjsCode": "CA03013",
+      "compensation": 23,
+      "id": "offenceId2",
+      "legislation": "legislation 1",
+      "offenceCode": "CA03013",
+      "offenceSequenceNumber": 1,
+      "pendingWithdrawal": true,
+      "plea": "NOT_GUILTY",
+      "pleaDate": "2019-02-27T15:32:20.593Z",
+      "pleaMethod": "POSTAL",
+      "prosecutionFacts": "facts",
+      "sequenceNumber": 1,
+      "startDate": "2019-01-15",
+      "title": "offence title 2",
+      "wording": "wording",
+    },
+  ],
+  "personalDetails": {
+    "address": {
+      "address1": "Flat 1, Armageddon House",
+      "address2": "13 Old Road",
+      "address3": "Giggleswick",
+      "address4": "Merton",
+      "postcode": "CV8 1AB",
+    },
+    "addressChanged": false,
+    "contactDetails": {
+      "email": "a@a.com",
+      "home": "333333333",
+      "mobile": "77777777",
+      "niNumber": "WWWWWWW",
+    },
+    "dateOfBirth": "1957-03-11",
+    "dobChanged": false,
+    "firstName": "Guy",
+    "gender": "Male",
+    "lastName": "Smith",
+    "nameChanged": false,
+    "title": "Mr",
+  },
+  "speakWelsh": false,
+}
+`;
+
+exports[`selectors getOffenceWithdrawalRequestReasons should select offences withdrawal request reasons from the store 1`] = `
+[
+  {
+    "label": "First",
+    "value": "1",
+  },
+  {
+    "label": "Third",
+    "value": "3",
+  },
+]
+`;
+
+exports[`selectors getOffences should select offences from the store 1`] = `
+[
+  {
+    "chargeDate": "2019-01-24",
+    "cjsCode": "CA03013",
+    "compensation": 30,
+    "id": "offenceId1",
+    "legislation": "legislation 2",
+    "offenceCode": "CA03013",
+    "offenceSequenceNumber": 1,
+    "prosecutionFacts": "facts",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-19",
+    "title": "offence title 1",
+    "wording": "wording",
+  },
+  {
+    "chargeDate": "2019-01-27",
+    "cjsCode": "CA03013",
+    "compensation": 23,
+    "id": "offenceId2",
+    "legislation": "legislation 1",
+    "offenceCode": "CA03013",
+    "offenceSequenceNumber": 1,
+    "pendingWithdrawal": true,
+    "plea": "NOT_GUILTY",
+    "pleaDate": "2019-02-27T15:32:20.593Z",
+    "pleaMethod": "POSTAL",
+    "prosecutionFacts": "facts",
+    "sequenceNumber": 1,
+    "startDate": "2019-01-15",
+    "title": "offence title 2",
+    "wording": "wording",
+  },
+]
+`;
+
+exports[`selectors getPleadedNotGuiltyCasesDetail should select the right data from the store 1`] = `
+{
+  "cases": [
+    {
+      "address": {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "LE3 1AB",
+      },
+      "caseId": "f10c88de-e577-47df-98af-c8944c5094d0",
+      "dateOfBirth": "1975-03-25",
+      "firstName": "Dennon Dennon Dennon",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-14T11:54:08.167Z",
+      "referenceNumber": "TVL640029AGBG",
+      "region": "London",
+    },
+    {
+      "address": {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "SE21 1AB",
+      },
+      "caseId": "facca075-d7a5-4f66-ac54-c2e0a2b47d77",
+      "dateOfBirth": "2001-03-23",
+      "firstName": "Stefanos Stefanos Stefanos",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-19T16:56:14.915Z",
+      "referenceNumber": "TVL143468N9KN",
+      "region": "London",
+    },
+  ],
+  "count": 2,
+}
+`;
+
+exports[`selectors getWithdrawCaseStatus should select case withdrawn status from the store 1`] = `false`;

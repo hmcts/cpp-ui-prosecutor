@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantOffenceWarnings should compile correctly with all warnings 1`] = `
+<defendant-offence-warnings-test
+  offence={[Function Object]}
+>
+  <defendant-offence-warnings>
+    <offence-warning>
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Offence may be out of time 
+        </div>
+      </pdk-form-group>
+    </offence-warning>
+    <offence-warning>
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Offence not in effect - refer to court and see SJPN for offence details 
+        </div>
+      </pdk-form-group>
+    </offence-warning>
+    <offence-warning>
+      <pdk-form-group
+        class="pdk-form-group govuk-form-group--error"
+      >
+        <div
+          class="pdk-!-text-color-red govuk-heading-s"
+          pdk-text-colour="red"
+          pdk-typography="heading-small"
+        >
+           Imprisonable offence 
+        </div>
+      </pdk-form-group>
+    </offence-warning>
+  </defendant-offence-warnings>
+</defendant-offence-warnings-test>
+`;
+
+exports[`DefendantOffenceWarnings should compile correctly without any warnings 1`] = `
+<defendant-offence-warnings-test
+  offence={[Function Object]}
+>
+  <defendant-offence-warnings>
+  </defendant-offence-warnings>
+</defendant-offence-warnings-test>
+`;

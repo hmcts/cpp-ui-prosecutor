@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manual Case Offence State Service should transform defendants\` \`either way\` offences to be grouped by offence id 1`] = `
+{
+  "12af2be8-b257-4227-9cf0-3d77975ed7aa": {
+    "defendants": [
+      {
+        "id": "46e1c5f5-5e91-4655-9eda-43368640f218",
+        "individual": {
+          "personalInformation": {
+            "firstName": "Defendant",
+            "lastName": "One",
+            "title": "Mr",
+          },
+        },
+        "offences": [
+          {
+            "modeOfTrialDerived": "either way",
+            "offenceCode": "RT88584B",
+            "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
+            "offenceSequenceNumber": 1,
+            "offenceWording": "Caught Driving On Phone",
+            "plea": {
+              "pleaDate": undefined,
+              "pleaValue": undefined,
+            },
+            "verdict": {
+              "verdictDate": undefined,
+              "verdictType": {
+                "category": undefined,
+                "categoryType": undefined,
+                "id": undefined,
+              },
+            },
+          },
+          {
+            "modeOfTrialDerived": "either way",
+            "offenceCode": "MR73002",
+            "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
+            "offenceSequenceNumber": 2,
+            "offenceWording": "Assault of a person",
+            "plea": {
+              "pleaDate": undefined,
+              "pleaValue": undefined,
+            },
+            "verdict": {
+              "verdictDate": undefined,
+              "verdictType": {
+                "category": undefined,
+                "categoryType": undefined,
+                "id": undefined,
+              },
+            },
+          },
+          {
+            "modeOfTrialDerived": "Trial",
+            "offenceCode": "AT01020",
+            "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
+            "offenceSequenceNumber": 3,
+            "offenceWording": "Controlled substance",
+          },
+        ],
+      },
+    ],
+    "offence": {
+      "modeOfTrialDerived": "either way",
+      "offenceCode": "MR73002",
+      "offenceId": "12af2be8-b257-4227-9cf0-3d77975ed7aa",
+      "offenceSequenceNumber": 2,
+      "offenceWording": "Assault of a person",
+      "plea": {
+        "pleaDate": undefined,
+        "pleaValue": undefined,
+      },
+      "verdict": {
+        "verdictDate": undefined,
+        "verdictType": {
+          "category": undefined,
+          "categoryType": undefined,
+          "id": undefined,
+        },
+      },
+    },
+  },
+}
+`;

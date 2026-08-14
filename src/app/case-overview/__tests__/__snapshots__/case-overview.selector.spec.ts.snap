@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`case overview/selectors getCase should select and sort multiple case decisions from the store 1`] = `
+[
+  {
+    "id": "mock-case-decision-2",
+    "offenceDecisions": [
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId3",
+        "offenceSequenceNumber": 3,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId4",
+        "offenceSequenceNumber": 4,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId5",
+        "offenceSequenceNumber": 5,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+    ],
+    "savedAt": "2019-12-01",
+    "session": {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2019-12-01",
+      "legalAdviser": {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-2",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-2",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "sessionId": "mock-case-decision-session-2",
+      "sessionType": "DELEGATEDPOWERS",
+      "startedAt": "2019-12-01",
+    },
+  },
+  {
+    "id": "mock-case-decision-1",
+    "offenceDecisions": [
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "offenceSequenceNumber": 1,
+        "offenceTitle": "offence title 1",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "offenceSequenceNumber": 2,
+        "offenceTitle": "offence title 2",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "adjournedTo": "2019-06-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "offenceSequenceNumber": 3,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-07-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "offenceSequenceNumber": 4,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-06-21",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "offenceSequenceNumber": 5,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "offenceSequenceNumber": 6,
+        "referralReason": "Not suitable for SJP",
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "DISMISS",
+        "id": "mock-case-offence-decision-7",
+        "offenceId": "offenceId7",
+        "offenceSequenceNumber": 7,
+        "verdict": "PROVED_SJP",
+      },
+    ],
+    "savedAt": "2018-12-01",
+    "session": {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2018-12-01",
+      "legalAdviser": {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-1",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "magistrate": "Jenny",
+      "sessionId": "mock-case-decision-session-1",
+      "sessionType": "DELEGATEDPOWERS",
+      "startedAt": "2018-12-01",
+    },
+  },
+]
+`;
+
+exports[`case overview/selectors getCase should select and sort offence decisions from the store 1`] = `
+[
+  {
+    "id": "mock-case-decision-1",
+    "offenceDecisions": [
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "offenceSequenceNumber": 1,
+        "offenceTitle": "offence title 1",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "adjournedTo": "2019-06-21",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId5",
+        "offenceSequenceNumber": 2,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "DISMISS",
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId7",
+        "offenceSequenceNumber": 3,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "PROVED_SJP",
+      },
+      {
+        "adjournedTo": "2019-06-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId3",
+        "offenceSequenceNumber": 4,
+        "offenceTitle": "Use / install a television set without a licence",
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId6",
+        "offenceSequenceNumber": 5,
+        "offenceTitle": "Use / install a television set without a licence",
+        "referralReason": "Not suitable for SJP",
+        "verdict": "NO_VERDICT",
+      },
+    ],
+    "savedAt": "2018-12-01",
+    "session": {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2018-12-01",
+      "legalAdviser": {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-1",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "sessionId": "mock-case-decision-session-1",
+      "sessionType": "DELEGATEDPOWERS",
+      "startedAt": "2018-12-01",
+    },
+  },
+]
+`;
+
+exports[`case overview/selectors getCase should select case decisions from the store 1`] = `
+[
+  {
+    "id": "mock-case-decision-1",
+    "offenceDecisions": [
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-1",
+        "offenceId": "offenceId1",
+        "offenceSequenceNumber": 1,
+        "offenceTitle": "offence title 1",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "decisionType": "WITHDRAW",
+        "id": "mock-case-offence-decision-2",
+        "offenceId": "offenceId2",
+        "offenceSequenceNumber": 2,
+        "offenceTitle": "offence title 2",
+        "verdict": "NO_VERDICT",
+        "withdrawalReason": "Insufficient evidence",
+        "withdrawalReasonId": "1",
+      },
+      {
+        "adjournedTo": "2019-06-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-3",
+        "offenceId": "offenceId3",
+        "offenceSequenceNumber": 3,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-07-11",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-4",
+        "offenceId": "offenceId4",
+        "offenceSequenceNumber": 4,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "adjournedTo": "2019-06-21",
+        "decisionType": "ADJOURN",
+        "id": "mock-case-offence-decision-5",
+        "offenceId": "offenceId5",
+        "offenceSequenceNumber": 5,
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "REFER_FOR_COURT_HEARING",
+        "id": "mock-case-offence-decision-6",
+        "offenceId": "offenceId6",
+        "offenceSequenceNumber": 6,
+        "referralReason": "Not suitable for SJP",
+        "verdict": "NO_VERDICT",
+      },
+      {
+        "decisionType": "DISMISS",
+        "id": "mock-case-offence-decision-7",
+        "offenceId": "offenceId7",
+        "offenceSequenceNumber": 7,
+        "verdict": "PROVED_SJP",
+      },
+    ],
+    "savedAt": "2018-12-01",
+    "session": {
+      "courtHouseCode": "B01OK",
+      "courtHouseName": "Wimbledon Magistrates' Court",
+      "endedAt": "2018-12-01",
+      "legalAdviser": {
+        "firstName": "Mark",
+        "lastName": "Adams",
+        "userId": "legal-adviser-1",
+      },
+      "legalAdviserUserId": "mock-case-decision-session-userid-1",
+      "localJusticeAreaNationalCourtCode": "2577",
+      "magistrate": "Jenny",
+      "sessionId": "mock-case-decision-session-1",
+      "sessionType": "DELEGATEDPOWERS",
+      "startedAt": "2018-12-01",
+    },
+  },
+]
+`;
+
+exports[`case overview/selectors getDatesToAvoidStatus should select the case from the store 1`] = `true`;
+
+exports[`case overview/selectors getWithdrawOffenceStatus should respond to failure 1`] = `true`;
+
+exports[`case overview/selectors getWithdrawOffenceStatus should select the case from the store 1`] = `true`;

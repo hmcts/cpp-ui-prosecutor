@@ -1,0 +1,2195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnlinePleaComponent should compile correctly with legal entity defendant 1`] = `
+<online-plea-details
+  breadcrumbs={[Function Array]}
+  kase={[Function Object]}
+  onlinePleas={[Function Array]}
+  userGroups={[Function Array]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="search"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Search for a case 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="case-overview"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Case details 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Online plea 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><case-header-badge-container>
+    <pre>
+      case badge
+    </pre>
+  </case-header-badge-container><h1
+    class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-heading-xl"
+    pdk-margin-vertical="3"
+    pdk-typography="heading-xlarge"
+  >
+    Defendant’s online plea
+  </h1><p
+    class="govuk-!-margin-bottom-8 govuk-body-m"
+    pdk-margin-bottom="8"
+    pdk-typography="body-medium"
+  >
+     Submitted online on 18 October 2019 at 12:00am 
+  </p><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Personal details
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Personal details 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Name
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="defendantName"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Seyit Ahmet Kamil GUNGOR 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Address
+        </td>
+        <td
+          class="pre-line govuk-table__cell govuk-body-s"
+          data-locator="defendantAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Line 11
+  Line 22
+  Line 33
+  Line 44
+  Line 55
+  SE16 5UD 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Home telephone
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="homeTelephone"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           1111111111 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Mobile number
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="mobileNumber"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           22222222222 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Email address
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="emailAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           a@b.co 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Date of birth
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="dateOfBirth"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          <date-of-birth>
+            <div>
+               9 Sep 1960 (65 years old) 
+            </div>
+          </date-of-birth>
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Plea for offence 1
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Plea for offence 1 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Charge
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="offenceTitle_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Obstruct person executing search warrant for TV receiver 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          How they pleaded
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="plea_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Notified Not Guilty 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Why do they believe they’re not guilty?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="notGuiltyBecause_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Not guilty plea1 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Plea for offence 2
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Plea for offence 2 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Charge
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="offenceTitle_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Use / install a television set without a licence 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          How they pleaded
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="plea_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Notified Guilty 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Guilty plea mitigation
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="mitigation_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Guilty plea mitigation2 
+        </td>
+      </tr>
+    </tbody>
+  </table><h3
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Court hearing 
+  </h3><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are they bringing their own witness?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="doHaveOwnWitness"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Their witness’ details
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="witnessDetails"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           ter the name and add 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are there any dates they can not attend court?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="existsUnavailability"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Dates they can’t attend court
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="unavailability"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           no days 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they need an interpreter?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="interpreterRequired"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Language
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="interpreterLanguage"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           turkish 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they wish to speak Welsh?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="speakWelsh"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they have disability or accessibility needs?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="disabilityNeedsRequired"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Disability or accessibility needs
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="disabilityNeeds"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Finances 
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Finances 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like to give income or benefits details?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="wantGiveIncomeBenefitDetails"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Do they have any outstanding Magistrates’ Court or Crown Court fines? 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="outstandingFines"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employment status
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employment"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Unemployed 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="incomeAfterTaxTypeLabel"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Weekly income (after tax) 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="incomePaymentAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £0 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like to deduct from earnings?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="deductFromEarningsFinances"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer’s name
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employerName"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employee reference
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employeeReference"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer’s address
+        </td>
+        <td
+          class="pre-line govuk-table__cell govuk-body-s"
+          data-locator="employerAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer telephone
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employerPhone"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are they claiming benefits?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsClaimed"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like us to deduct from benefits?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsDeductPenaltyPreference"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Which benefits they are claiming?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsType"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           childcare 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          National Insurance number
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="nationalInsuranceNumber"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           AA123456D 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Monthly outgoings 
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Monthly outgoings 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Would they like to give details of their monthly bills? 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="showDetailsOfMonthlyBillings"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Accomodation
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="accommodationAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £1 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Council Tax
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="councilTaxAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £2 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Household bills
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="householdBillsAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £3 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Travel expenses
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="travelExpensesAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £4 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Child maintenance
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="childMaintenanceAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £5 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are there any other expenses?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="areThereAnyOtherExpenses"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Other expenses listed
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="otherExpensesListed"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           TV licence 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Amount of other expenses?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="amountOfOtherExpenses"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £23 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Monthly amount total
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="monthlyAmountTotal"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £38 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</online-plea-details>
+`;
+
+exports[`OnlinePleaComponent should display online plea 1`] = `
+<online-plea-details
+  breadcrumbs={[Function Array]}
+  kase={[Function Object]}
+  onlinePleas={[Function Array]}
+  userGroups={[Function Array]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="search"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Search for a case 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="case-overview"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Case details 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Online plea 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><case-header-badge-container>
+    <pre>
+      case badge
+    </pre>
+  </case-header-badge-container><h1
+    class="govuk-!-margin-top-3 govuk-!-margin-bottom-3 govuk-heading-xl"
+    pdk-margin-vertical="3"
+    pdk-typography="heading-xlarge"
+  >
+    Defendant’s online plea
+  </h1><p
+    class="govuk-!-margin-bottom-8 govuk-body-m"
+    pdk-margin-bottom="8"
+    pdk-typography="body-medium"
+  >
+     Submitted online on 18 October 2019 at 12:00am 
+  </p><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Personal details
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Personal details 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Name
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="defendantName"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Seyit Ahmet Kamil GUNGOR 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Address
+        </td>
+        <td
+          class="pre-line govuk-table__cell govuk-body-s"
+          data-locator="defendantAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Line 11
+  Line 22
+  Line 33
+  Line 44
+  Line 55
+  SE16 5UD 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Home telephone
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="homeTelephone"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           1111111111 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Mobile number
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="mobileNumber"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           22222222222 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Email address
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="emailAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           a@b.co 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Date of birth
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="dateOfBirth"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          <date-of-birth>
+            <div>
+               9 Sep 1960 (65 years old) 
+            </div>
+          </date-of-birth>
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Plea for offence 1
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Plea for offence 1 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Charge
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="offenceTitle_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Obstruct person executing search warrant for TV receiver 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          How they pleaded
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="plea_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Notified Not Guilty 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Why do they believe they’re not guilty?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="notGuiltyBecause_offenceId1"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Not guilty plea1 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+    Plea for offence 2
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Plea for offence 2 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Charge
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="offenceTitle_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Use / install a television set without a licence 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          How they pleaded
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="plea_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Notified Guilty 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Guilty plea mitigation
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          id="mitigation_offenceId2"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Guilty plea mitigation2 
+        </td>
+      </tr>
+    </tbody>
+  </table><h3
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Court hearing 
+  </h3><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are they bringing their own witness?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="doHaveOwnWitness"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Their witness’ details
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="witnessDetails"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           ter the name and add 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are there any dates they can not attend court?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="existsUnavailability"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Dates they can’t attend court
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="unavailability"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           no days 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they need an interpreter?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="interpreterRequired"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Language
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="interpreterLanguage"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           turkish 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they wish to speak Welsh?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="speakWelsh"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Do they have disability or accessibility needs?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="disabilityNeedsRequired"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Disability or accessibility needs
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="disabilityNeeds"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Finances 
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Finances 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like to give income or benefits details?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="wantGiveIncomeBenefitDetails"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Do they have any outstanding Magistrates’ Court or Crown Court fines? 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="outstandingFines"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employment status
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employment"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Unemployed 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="incomeAfterTaxTypeLabel"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Weekly income (after tax) 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="incomePaymentAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £0 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like to deduct from earnings?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="deductFromEarningsFinances"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer’s name
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employerName"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employee reference
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employeeReference"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer’s address
+        </td>
+        <td
+          class="pre-line govuk-table__cell govuk-body-s"
+          data-locator="employerAddress"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Employer telephone
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="employerPhone"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           – 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are they claiming benefits?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsClaimed"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Would they like us to deduct from benefits?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsDeductPenaltyPreference"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           No 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Which benefits they are claiming?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="benefitsType"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           childcare 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          National Insurance number
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="nationalInsuranceNumber"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           AA123456D 
+        </td>
+      </tr>
+    </tbody>
+  </table><h2
+    aria-hidden="true"
+    class="govuk-!-margin-bottom-0 govuk-heading-m"
+    pdk-margin-bottom="0"
+    pdk-typography="heading-medium"
+  >
+     Monthly outgoings 
+  </h2><table
+    class="govuk-table"
+    pdk-table=""
+  >
+    <caption
+      class="pdk-visually-hidden"
+    >
+       Monthly outgoings 
+    </caption>
+    <tbody
+      class="column-width govuk-table__body"
+      pdk-table-body=""
+    >
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Would they like to give details of their monthly bills? 
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="showDetailsOfMonthlyBillings"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Accomodation
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="accommodationAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £1 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Council Tax
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="councilTaxAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £2 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Household bills
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="householdBillsAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £3 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Travel expenses
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="travelExpensesAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £4 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Child maintenance
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="childMaintenanceAmount"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £5 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Are there any other expenses?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="areThereAnyOtherExpenses"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           Yes 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Other expenses listed
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="otherExpensesListed"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           TV licence 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Amount of other expenses?
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="amountOfOtherExpenses"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £23 
+        </td>
+      </tr>
+      <tr
+        class="govuk-table__row"
+        pdk-table-row=""
+      >
+        <td
+          class="govuk-table__cell govuk-body-s"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+          Monthly amount total
+        </td>
+        <td
+          class="govuk-table__cell govuk-body-s"
+          data-locator="monthlyAmountTotal"
+          pdk-table-cell=""
+          pdk-typography="body-small"
+        >
+           £38 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</online-plea-details>
+`;

@@ -1,0 +1,49 @@
+<pdk-grid container pdk-margin-top="3">
+  <pdk-grid full>
+    <pdk-context-panel type="confirmation" icon="tick">
+      @if (isSummons) {
+        <p pdk-typography="body-lead" class="bold" pdk-margin-bottom="4">
+          {{ 'MANUAL_CASE_CREATE.CASE_CREATION_REQUEST' | translate }}
+        </p>
+      }
+      @if (!isSummons) {
+        <p pdk-typography="body-lead" class="bold" pdk-margin-bottom="4">
+          {{ 'MANUAL_CASE_CREATE.CASE_CREATED_SUCCESSFULLY' | translate }}
+        </p>
+      }
+      <p pdk-typography="body-lead" pdk-margin-bottom="4">
+        {{ 'MANUAL_CASE_CREATE.REFERENCE_IS' | translate }}
+      </p>
+      <p pdk-typography="heading-xlarge" class="bold" data-role="prosecutor-case-reference" pdk-margin-bottom="5">
+        {{ reference.prosecutorCaseReference }}
+      </p>
+      @if (isTypeSjp) {
+        <p pdk-typography="body" pdk-text-colour="white" pdk-margin-bottom="4">
+          <a href="/sjp/hmcts/case-overview/{{ reference.caseId }}/documents" pdk-typography="body-medium">{{
+            'MANUAL_CASE_CREATE.UPLOAD_DOCUMENTS' | translate
+          }}</a>
+        </p>
+        <p pdk-typography="body" pdk-text-colour="white">
+          <a href="/sjp/hmcts/case-overview/{{ reference.caseId }}" pdk-typography="body-medium">{{
+            'MANUAL_CASE_CREATE.VIEW_CASE_DETAILS' | translate
+          }}</a>
+        </p>
+      }
+      @if (!isTypeSjp && !isSummons) {
+        <p pdk-typography="body" pdk-text-colour="white" pdk-margin-bottom="4">
+          <a
+            [routerLink]="['/', 'case-materials']"
+            [queryParams]="{ caseId: reference.caseId }"
+            pdk-typography="body-medium"
+            >{{ 'MANUAL_CASE_CREATE.UPLOAD_DOCUMENTS' | translate }}</a
+            >
+          </p>
+          <p pdk-typography="body" pdk-text-colour="white">
+            <a [routerLink]="['/', 'edit-case', reference.caseId]" pdk-typography="body-medium">{{
+              'MANUAL_CASE_CREATE.VIEW_CASE_DETAILS' | translate
+            }}</a>
+          </p>
+        }
+      </pdk-context-panel>
+    </pdk-grid>
+  </pdk-grid>

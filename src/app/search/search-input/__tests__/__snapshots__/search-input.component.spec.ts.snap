@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInputComponent should compile correctly 1`] = `
+<search-test>
+  <search-input>
+    <label
+      class="govuk-label"
+      pdk-label=""
+    >
+      Enter case reference number or defendant’s last name or company name
+    </label>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        novalidate=""
+        pdk-form=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <pdk-form-field>
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <pdk-searchbar
+                class="ng-untouched ng-pristine ng-valid"
+                name="searchInput"
+              >
+                <div
+                  class="pdk-searchbar"
+                >
+                  <input
+                    class="pdk-searchbar__input govuk-input"
+                    id="pdk-search-GENERATED_ID"
+                    pdk-input=""
+                    placeholder=""
+                    type="text"
+                  />
+                  <button
+                    class="pdk-searchbar__button"
+                    type="submit"
+                  >
+                    <pdk-search-icon
+                      color="#fff"
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <i
+                        style="height: 20px; width: 20px; fill: #fff;"
+                      >
+                        <svg
+                          height="100%"
+                          viewBox="0 0 512 512"
+                          width="100%"
+                        >
+                          <path
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                          />
+                        </svg>
+                      </i>
+                    </pdk-search-icon>
+                    <span
+                      class="pdk-searchbar__label govuk-visually-hidden"
+                      pdk-visually-hidden=""
+                    >
+                    </span>
+                  </button>
+                </div>
+              </pdk-searchbar>
+            </pdk-form-group>
+          </pdk-form-field>
+        </pdk-grid>
+      </form>
+    </pdk-grid>
+  </search-input>
+</search-test>
+`;

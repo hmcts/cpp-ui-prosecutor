@@ -1,0 +1,115 @@
+@if (defendantNames && defendantNames.length) {
+<pdk-alert [icon]="true" type="warning">
+  <div class="alert-text">
+    Defendant @for (name of defendantNames; let last = $last; let index = $index; track name.firstName + name.lastName +
+    index;) {
+    <span>
+      <span>{{ name.firstName }} {{ name.lastName | uppercase }}</span
+      >@if (!last) {
+      <span>,</span>
+      }
+    </span>
+    } must have an offence
+  </div>
+  <a pdk-link href="javascript:void(0)" (click)="onAddTop()" data-role="add-top-link">{{
+    'MANUAL_CASE_SUMMARY.ADD_OFFENCE' | translate
+  }}</a>
+</pdk-alert>
+}
+
+<pdk-grid container>
+  <pdk-grid full>
+    <h1 pdk-typography="heading-xlarge">
+      {{ 'MANUAL_CASE_SUMMARY.TITLE' | translate }}
+    </h1>
+  </pdk-grid>
+</pdk-grid>
+
+<prosecution-case-details
+  [hasNpp]="hasNpp"
+  [prosecutionCase]="caseDetails"
+  [prosecutors]="prosecutors"
+  (edit)="onEdit($event)"
+></prosecution-case-details>
+
+@if (!isSJP()) {
+<manual-case-hearing-summary
+  [initialHearing]="caseDetails.initialHearing"
+  [courtCentres]="courtCentres"
+  [hearingTypes]="hearingTypes"
+  (edit)="onEdit($event)"
+>
+</manual-case-hearing-summary>
+}
+
+<manual-defendant-details
+  [defendants]="defendants"
+  [nationalities]="nationalities"
+  [remandStatuses]="remandStatuses"
+  [ethnicities]="ethnicities"
+  [observedEthnicities]="observedEthnicities"
+  [caseInitiationCode]="caseDetails.initiationCode"
+  (edit)="onEdit($event)"
+  (add)="onAdd($event)"
+  (remove)="onRemove($event)"
+>
+</manual-defendant-details>
+
+<manual-case-offence-details
+  [defendants]="defendants"
+  [hasNpp]="hasNpp"
+  [prosecutionCase]="caseDetails"
+  [alcoholLevelMethods]="alcoholLevelMethods"
+  [pleaTypes]="pleaTypes"
+  [verdictsTypes]="verdictsTypes"
+  [allocationDecisionTypes]="allocationDecisionTypes"
+  (edit)="onEdit($event)"
+  (add)="onAdd($event)"
+  (remove)="onRemove($event)"
+>
+</manual-case-offence-details>
+
+@if (hasAllOffencesAocpEligible()) {
+<table pdk-table pdk-margin-bottom="4" pdk-margin-top="2">
+  <thead pdk-table-head pdk-typography="body-small" class="bold" pdk-margin-bottom="4" pdk-margin-top="4">
+    {{
+      'MANUAL_CASE_SUMMARY.CASE_DETAILS.CASE' | translate
+    }}
+  </thead>
+  <tbody pdk-table-body>
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_SUMMARY.CASE_DETAILS.COSTS' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="aocp-case-cost">
+        {{ caseDetails?.prosecutor?.appliedProsecutorCosts | currency: 'GBP' }}
+      </td>
+    </tr>
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_SUMMARY.CASE_DETAILS.VICTIM_SURCHARGE' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="aocp-case-surcharge">
+        {{ getVictimSurcharge(caseDetails?.prosecutor?.appliedProsecutorCosts) | currency: 'GBP' }}
+      </td>
+    </tr>
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_SUMMARY.CASE_DETAILS.TOTAL' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="aocp-case-total">
+        {{ totalAocpFine | currency: 'GBP' }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+}
+
+<button pdk-button type="submit" [disabled]="defendantNames && defendantNames.length" (click)="submitManualCase()">
+  {{ 'MANUAL_CASE_SUMMARY.CREATE_CASE' | translate }}
+</button>
+<p pdk-margin-top="3">
+  <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+    {{ 'MANUAL_CASE_SUMMARY.BACK' | translate }}
+  </a>
+</p>

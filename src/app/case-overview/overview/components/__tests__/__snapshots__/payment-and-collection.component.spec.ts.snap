@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentAndCollectionComponent should compile correctly for payment terms with deduct from benefits with lump sum and within days > 0 1`] = `
+<payment-and-collection-test
+  caseDecision={[Function Object]}
+>
+  <payment-and-collection>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div
+        class="govuk-!-margin-bottom-3"
+        pdk-margin-bottom="3"
+      >
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Payment and collection
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Collection order made
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Outstanding balance to be paid as a Lump sum within 10 days 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </payment-and-collection>
+</payment-and-collection-test>
+`;
+
+exports[`PaymentAndCollectionComponent should compile correctly for payment terms with lump sum and within days = 0 and amount = 0 and not collection ordered 1`] = `
+<payment-and-collection-test
+  caseDecision={[Function Object]}
+>
+  <payment-and-collection>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div
+        class="govuk-!-margin-bottom-3"
+        pdk-margin-bottom="3"
+      >
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Payment and collection
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              No collection order made
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Instalments of £100.23 to be paid fortnightly starting 10/10/2020 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </payment-and-collection>
+</payment-and-collection-test>
+`;
+
+exports[`PaymentAndCollectionComponent should compile correctly for payment terms with lump sum and within days = 0 and amount > 0 1`] = `
+<payment-and-collection-test
+  caseDecision={[Function Object]}
+>
+  <payment-and-collection>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div
+        class="govuk-!-margin-bottom-3"
+        pdk-margin-bottom="3"
+      >
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Payment and collection
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Collection order made
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Deduct from benefits. 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <b>
+                Application made for benefit deductions 
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Sum to be recovered £100.23. Reason: Compensation ordered 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             A lump sum of £100.23 to be paid, followed by instalments of £100.23 paid fortnightly starting on 20 Oct 2010 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </payment-and-collection>
+</payment-and-collection-test>
+`;
+
+exports[`PaymentAndCollectionComponent should compile correctly with attach to earnings with lump sum and within days > 0 1`] = `
+<payment-and-collection-test
+  caseDecision={[Function Object]}
+>
+  <payment-and-collection>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div
+        class="govuk-!-margin-bottom-3"
+        pdk-margin-bottom="3"
+      >
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Payment and collection
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Collection order made
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Attach to earnings. 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <b>
+                Attachment of Earnings Order made for the collection of 
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23. Reason: Compensation ordered 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Reserve terms(if deductions fail)
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Outstanding balance to be paid as a Lump sum within 10 days 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </payment-and-collection>
+</payment-and-collection-test>
+`;
+
+exports[`PaymentAndCollectionComponent should compile correctly with pay to court with lump sum and within days > 0 1`] = `
+<payment-and-collection-test
+  caseDecision={[Function Object]}
+>
+  <payment-and-collection>
+    <div
+      class="govuk-!-margin-left-2"
+      pdk-margin-left="2"
+    >
+      <div
+        class="govuk-!-margin-bottom-3"
+        pdk-margin-bottom="3"
+      >
+        <b
+          class="govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          Payment and collection
+        </b>
+      </div>
+      <div>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Collection order made
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             Pay to court. 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <div>
+              <b>
+                Reason no deduction or attachment made
+              </b>
+            </div>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             some reason 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Payment terms
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 To be paid as a lump sum within 10 days 
+          </pdk-grid>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-!-padding-top-1 govuk-!-padding-bottom-1 govuk-grid-row"
+          container=""
+          pdk-padding-vertical="1"
+        >
+          <pdk-grid
+            class="govuk-grid-column-one-third"
+            one-third=""
+          >
+            <b>
+              Total to pay
+            </b>
+          </pdk-grid>
+          <pdk-grid
+            class="govuk-grid-column-two-thirds"
+            two-thirds=""
+          >
+             £100.23 
+          </pdk-grid>
+        </pdk-grid>
+      </div>
+    </div>
+  </payment-and-collection>
+</payment-and-collection-test>
+`;

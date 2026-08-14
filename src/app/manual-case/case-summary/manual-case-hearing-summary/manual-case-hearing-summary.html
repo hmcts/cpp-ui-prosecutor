@@ -1,0 +1,69 @@
+<div class="hearing-details" pdk-margin-bottom="7">
+  <pdk-divider class="margin-top-0" [dark]="true"></pdk-divider>
+  <pdk-grid container>
+    <pdk-grid two-thirds>
+      <span pdk-typography="heading-medium" class="table-header">{{ 'COMMON.HEARING.DETAILS' | translate }}</span>
+    </pdk-grid>
+    <pdk-grid one-third class="change-link">
+      <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit()" data-role="hearing-change-link"
+        >{{ 'COMMON.CHANGE' | translate }}</a
+        >
+      </pdk-grid>
+    </pdk-grid>
+    <table pdk-table>
+      <tbody pdk-table-body>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">{{ 'COMMON.COURT' | translate }}</th>
+          <td id="hearing-court-name" pdk-table-cell class="data" data-role="court-name">
+            {{ courtCentreName }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th scope="row" pdk-table-header="row" class="header">
+            {{ 'COMMON.COURT_ROOM' | translate }}
+          </th>
+          <td id="hearing-room-name" pdk-table-cell class="data" data-role="court-room">
+            {{ courtRoomName | dash}}
+            @if (initialHearing?.hearingListingDirection) {
+              <div>
+                {{('MANUAL_CASE_HEARING_DETAILS.NOTES_SUMMARY' | translate) + ': ' +
+                initialHearing.hearingListingDirection}}
+              </div>
+            }
+          </td>
+        </tr>
+        @if (!!initialHearing?.hearingTypeCode) {
+          <tr pdk-table-row class="table-row">
+            <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.TYPE' | translate }}</th>
+            <td id="hearing-type" pdk-table-cell class="data" data-role="hearing-type">
+              {{ hearingTypeDesc | dash}}
+            </td>
+          </tr>
+        }
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.DATE' | translate }}</th>
+          <td id="hearing-date" pdk-table-cell class="data" data-role="hearing-date">
+            {{ initialHearing?.dateOfHearing | date : 'd MMMM yyyy' }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.START_TIME' | translate }}</th>
+          <td id="hearing-time" pdk-table-cell class="data" data-role="start-time">
+            {{ initialHearing?.dateOfHearing + 'T' + initialHearing.timeOfHearing + ':00' | date : 'h:mm a' | lowercase }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.DURATION' | translate }}</th>
+          <td id="hearing-duration" pdk-table-cell class="data" data-role="hearing-duration">
+            {{ duration }} {{ 'COMMON.MINUTES' | translate }}
+          </td>
+        </tr>
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">{{ 'COMMON.HEARING.LANGUAGES' | translate }}</th>
+          <td id="hearing-language" pdk-table-cell class="data" data-role="hearing-language">
+            {{ (initialHearing?.hearingLanguage === 'ENGLISH' ? 'English' : 'Welsh') | titlecase }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

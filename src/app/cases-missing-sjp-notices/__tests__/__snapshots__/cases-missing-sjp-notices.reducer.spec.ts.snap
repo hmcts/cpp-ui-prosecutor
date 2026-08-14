@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check Cases Missing SJP Notice reducer default should set the state 1`] = `undefined`;
+
+exports[`Check Cases Missing SJP Notice reducer default should update the state with cases missing sjp notice 1`] = `
+[
+  {
+    "defendant": {
+      "dateOfBirth": "1972-01-01",
+      "firstName": "Abel",
+      "gender": "Male",
+      "id": "defendantId1",
+      "lastName": "Krumps",
+      "nationalInsuranceNumber": "SR67854OP",
+      "title": "Mr",
+    },
+    "id": "caseId1",
+    "postingDate": "2019-05-03",
+    "prosecutingAuthority": "TFL",
+    "urn": "22C22222222",
+  },
+  {
+    "defendant": {
+      "dateOfBirth": "1980-07-12",
+      "firstName": "Linda",
+      "gender": "Female",
+      "id": "defendantId2",
+      "lastName": "Craig",
+      "nationalInsuranceNumber": "SR63344OQ",
+      "title": "Mrs",
+    },
+    "id": "caseId2",
+    "postingDate": "2019-05-03",
+    "prosecutingAuthority": "TFL",
+    "urn": "33C2DF22222",
+  },
+]
+`;

@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProsecutionCaseDetailsComponent should render the component 1`] = `
+<prosecution-case-details
+  edit={[Function EventEmitter_]}
+  hasNpp={[Function Boolean]}
+  prosecutionCase={[Function Object]}
+  prosecutors={[Function Array]}
+>
+  <div
+    class="prosecution-details govuk-!-margin-bottom-7"
+    pdk-margin-bottom="7"
+  >
+    <pdk-divider
+      class="margin-top-0"
+    >
+      <hr
+        class="pdk-divider pdk-divider--dark"
+      />
+    </pdk-divider>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <span
+          class="table-header govuk-heading-m"
+          pdk-typography="heading-medium"
+        >
+          MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.TITLE
+        </span>
+      </pdk-grid>
+      <pdk-grid
+        class="change-link govuk-grid-column-one-third"
+        one-third=""
+      >
+        <a
+          class="govuk-link govuk-link--no-visited-state"
+          data-role="prosecution-change-link"
+          href="javascript:void(0)"
+          pdk-link=""
+          unvisited=""
+        >
+          MANUAL_CASE_SUMMARY.CHANGE
+        </a>
+      </pdk-grid>
+    </pdk-grid>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="table-row govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="header govuk-table__cell"
+            pdk-table-header="row"
+            scope="row"
+          >
+             MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.PROSECUTION_REFERENCE_NUMBER 
+          </th>
+          <td
+            class="data govuk-table__cell"
+            data-role="prosecutor-case-reference"
+            pdk-table-cell=""
+          >
+             TFL123456789 
+          </td>
+        </tr>
+        <tr
+          class="table-row govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="header govuk-table__cell"
+            pdk-table-header="row"
+            scope="row"
+          >
+             MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.PROSECUTION_AUTHORITY 
+          </th>
+          <td
+            class="data govuk-table__cell"
+            data-role="prosecution-authority"
+            pdk-table-cell=""
+          >
+             Transport for London 
+          </td>
+        </tr>
+        <tr
+          class="table-row govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="header govuk-table__cell"
+            pdk-table-header="row"
+            scope="row"
+          >
+             MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.CPS_PROSECUTOR 
+          </th>
+          <td
+            class="data govuk-table__cell"
+            data-role="cps-prosecutor"
+            pdk-table-cell=""
+          >
+             Surrey Police 
+          </td>
+        </tr>
+        <tr
+          class="table-row govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="header govuk-table__cell"
+            pdk-table-header="row"
+            scope="row"
+          >
+             MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.ORIGINATING_POLICE_FORCE 
+          </th>
+          <td
+            class="data govuk-table__cell"
+            data-role="originating-police-force"
+            pdk-table-cell=""
+          >
+             Warwick Police 
+          </td>
+        </tr>
+        <tr
+          class="table-row govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="header govuk-table__cell"
+            pdk-table-header="row"
+            scope="row"
+          >
+             MANUAL_CASE_SUMMARY.PROSECUTION_DETAILS.COST_CLAIMED 
+          </th>
+          <td
+            class="data govuk-table__cell"
+            data-role="cost-claimed"
+            pdk-table-cell=""
+          >
+             £22.50 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</prosecution-case-details>
+`;

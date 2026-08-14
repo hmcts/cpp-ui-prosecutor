@@ -1,0 +1,195 @@
+<form pdk-form novalidate (validSubmit)="submitData(form.value)" (errors)="onErrors($event)">
+  <!-- Forenames -->
+  <pdk-form-field
+    label="{{ 'MANUAL_CASE_DEFENDANT.ORGANISATION_NAME' | translate }}"
+    labelType="small"
+    pdk-margin-top="4"
+    [errorMessages]="[
+      {
+        rule: 'required',
+        message: 'Enter organisation name'
+      }
+    ]"
+  >
+    <textarea
+      name="organisationName"
+      [ngModel]="manualCaseDefendant.organisationName"
+      [maxLength]="255"
+      pdk-text-input
+      pdk-input
+      pdk-resize
+      required
+      data-role="organisationName-input"
+    >
+    </textarea>
+  </pdk-form-field>
+
+  @if (manualCaseType === 'J') {
+  <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.NUMBER_OF_CONVICTIONS' | translate: param }}" labelType="small">
+    <input
+      pdk-text-input="number"
+      pdk-input
+      name="numPreviousConvictions"
+      type="number"
+      [(ngModel)]="manualCaseDefendant.numPreviousConvictions"
+    />
+  </pdk-form-field>
+  }
+
+  <!--ASN-->
+  @if (manualCaseType === 'J') {
+  <pdk-form-field
+    label="{{
+      isPoliceProsecutor
+        ? ('MANUAL_CASE_DEFENDANT.ARREST_SUMMONS_NUMBER' | translate)
+        : ('MANUAL_CASE_DEFENDANT.ARREST_SUMMONS_NUMBER_OPTIONAL' | translate)
+    }}"
+    labelType="small"
+    [errorMessages]="[
+      {
+        rule: 'required',
+        message: 'Enter arrest summons number'
+      }
+    ]"
+  >
+    <input
+      pdk-text-input
+      pdk-input
+      name="asn"
+      type="text"
+      [maxLength]="20"
+      [(ngModel)]="manualCaseDefendant.asn"
+      [required]="isPoliceProsecutor"
+    />
+  </pdk-form-field>
+  }
+
+  <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+    {{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_ADDRESS' | translate }}
+  </h2>
+
+  <!-- Address -->
+  <pdk-form-field label="{{ 'MANUAL_CASE_DEFENDANT.ADDRESS' | translate }}" labelType="small" pdk-margin-bottom="3">
+    <input-address
+      name="address"
+      [(ngModel)]="manualCaseDefendant.address"
+      [maxLength]="35"
+      [isRequired]="true"
+      [validWhenEmpty]="false"
+      data-role="address-input"
+    >
+    </input-address>
+  </pdk-form-field>
+
+  <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+    {{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_CONTACT_DETAILS' | translate }}
+  </h2>
+
+  <pdk-form-field
+    label="{{ 'MANUAL_CASE_DEFENDANT.EMAIL' | translate: param }}"
+    [errorMessages]="[
+      {
+        rule: 'email',
+        message: 'MANUAL_CASE_DEFENDANT.EMAIL_FORMAT' | translate
+      }
+    ]"
+  >
+    <input
+      pdk-text-input
+      pdk-input
+      name="emailAddress1"
+      type="email"
+      [(ngModel)]="manualCaseDefendant.emailAddress1"
+      validateEmail
+      [maxLength]="255"
+    />
+  </pdk-form-field>
+
+  <!-- Work -->
+  <pdk-form-field
+    label="{{ 'MANUAL_CASE_DEFENDANT.PHONE' | translate: param }}"
+    [errorMessages]="[
+      {
+        rule: 'inValidPhone',
+        message: 'MANUAL_CASE_DEFENDANT.PHONE_FORMAT' | translate
+      }
+    ]"
+  >
+    <input
+      pdk-text-input
+      pdk-input
+      name="telephoneNumberBusiness"
+      type="tel"
+      maxlength="20"
+      [(ngModel)]="manualCaseDefendant.telephoneNumberBusiness"
+      validatePhone
+      [maxLength]="35"
+    />
+  </pdk-form-field>
+
+  <h2 pdk-typography="body-medium" pdk-margin-bottom="3" class="bold">
+    {{ 'MANUAL_CASE_DEFENDANT.DEFENDANT_NEEDS' | translate }}
+  </h2>
+
+  <!--Written Language Needs -->
+  <pdk-form-field
+    label="{{ 'MANUAL_CASE_DEFENDANT.WRITTEN_LANGUAGE_NEEDS' | translate }}"
+    [errorMessages]="[
+      {
+        rule: 'required',
+        message: 'Enter hearing language needs'
+      }
+    ]"
+  >
+    <pdk-radio-group
+      name="documentationLanguage"
+      [inline]="true"
+      required
+      [(ngModel)]="manualCaseDefendant.documentationLanguage"
+    >
+      <pdk-radio-button value="ENGLISH">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
+      <pdk-radio-button value="WELSH">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
+    </pdk-radio-group>
+  </pdk-form-field>
+
+  <!-- Hearing Language Needs -->
+  <pdk-form-field
+    label="{{ 'MANUAL_CASE_DEFENDANT.HEARING_LANGUAGE_NEEDS' | translate }}"
+    [errorMessages]="[
+      {
+        rule: 'required',
+        message: 'Enter hearing language needs'
+      }
+    ]"
+  >
+    <pdk-radio-group name="hearingLanguage" [inline]="true" required [(ngModel)]="manualCaseDefendant.hearingLanguage">
+      <pdk-radio-button value="ENGLISH">{{ 'MANUAL_CASE_DEFENDANT.ENGLISH' | translate }}</pdk-radio-button>
+      <pdk-radio-button value="WELSH">{{ 'MANUAL_CASE_DEFENDANT.WELSH' | translate }}</pdk-radio-button>
+    </pdk-radio-group>
+  </pdk-form-field>
+
+  @if (manualCaseType !== 'J' && showAddButton) {
+  <button
+    pdk-button="secondary"
+    type="submit"
+    pdk-margin-top="3"
+    pdk-margin-bottom="3"
+    data-role="add"
+    (click)="beforeSubmit('add')"
+  >
+    {{ 'MANUAL_CASE_DEFENDANT.ADD_DEFENDANT' | translate }}
+  </button>
+  }
+
+  <pdk-form-group>
+    <button pdk-button type="submit" data-role="continue" (click)="beforeSubmit('continue')">
+      {{ 'MANUAL_CASE_DEFENDANT.CONTINUE' | translate }}
+    </button>
+  </pdk-form-group>
+
+  <p pdk-margin-top="3">
+    <a pdk-link unvisited href="javascript:void(0)" (click)="back()">
+      {{ 'MANUAL_CASE_DEFENDANT.BACK' | translate }}
+    </a>
+  </p>
+</form>

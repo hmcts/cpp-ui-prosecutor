@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with multiple cases then the link should contain (2 cases) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases={[Function Number]}
+>
+  <p>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+          <a
+            class="govuk-link govuk-section-break govuk-section-break--s"
+            href="/"
+            pdk-link=""
+            pdk-section="small"
+            routerlink="review-not-guilty-pleas"
+          >
+             Review not guilty pleas (2 
+            <span>
+              cases
+            </span>
+            ) 
+          </a>
+        </strong>
+      </div>
+    </pdk-warning-text>
+  </p>
+</review-not-guilty-pleas-link>
+`;
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with single case then the link should contain (1 case) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases={[Function Number]}
+>
+  <p>
+    <pdk-warning-text>
+      <div
+        class="govuk-warning-text"
+      >
+        <span
+          aria-hidden="true"
+          class="govuk-warning-text__icon"
+        >
+          !
+        </span>
+        <strong
+          class="govuk-warning-text__text"
+        >
+          <span
+            class="govuk-visually-hidden"
+            pdk-visually-hidden=""
+          >
+            Warning
+          </span>
+          <a
+            class="govuk-link govuk-section-break govuk-section-break--s"
+            href="/"
+            pdk-link=""
+            pdk-section="small"
+            routerlink="review-not-guilty-pleas"
+          >
+             Review not guilty pleas (1 
+            <span>
+              case
+            </span>
+            ) 
+          </a>
+        </strong>
+      </div>
+    </pdk-warning-text>
+  </p>
+</review-not-guilty-pleas-link>
+`;
+
+exports[`ReviewNotGuiltyPleasLinkComponent when the component is created with zero cases then the link should contain (0) 1`] = `
+<review-not-guilty-pleas-link
+  numberOfCases="0"
+>
+  <p>
+     Review not guilty pleas (0) 
+  </p>
+</review-not-guilty-pleas-link>
+`;

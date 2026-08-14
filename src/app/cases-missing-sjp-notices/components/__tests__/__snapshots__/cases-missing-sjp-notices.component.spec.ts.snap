@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with multiple rows 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Cases missing SJP Notices 
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <h1
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+      pdk-margin-vertical="6"
+      pdk-typography="heading-xlarge"
+    >
+       Cases missing SJP Notices 
+    </h1>
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+    >
+      2 cases
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            KRUMPS Abel
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            22C22222222
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            1 Jan 1972
+          </td>
+        </tr>
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            CRAIG Linda
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            33C2DF22222
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            12 Jul 1980
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with no data 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Cases missing SJP Notices 
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <h1
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+      pdk-margin-vertical="6"
+      pdk-typography="heading-xlarge"
+    >
+       Cases missing SJP Notices 
+    </h1>
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+    >
+      No cases
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;
+
+exports[`CasesMissingSjpNoticesComponent should compile correctly with single row 1`] = `
+<cases-missing-sjp-notices
+  breadcrumbs={[Function Array]}
+  casesMissingNotices={[Function Array]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Cases missing SJP Notices 
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <h1
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+      pdk-margin-vertical="6"
+      pdk-typography="heading-xlarge"
+    >
+       Cases missing SJP Notices 
+    </h1>
+  </breadcrumb-links><p
+    class="govuk-heading-m"
+    pdk-typography="heading-medium"
+  >
+    <span
+      data-test="cases-number"
+    >
+      1 cases
+    </span>
+     missing notices 
+  </p><list-cases-missing-sjp-notices>
+    <table
+      class="govuk-table"
+      pdk-table=""
+    >
+      <thead
+        class="govuk-table__head"
+        pdk-table-head=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Reference number
+          </th>
+          <th
+            class="govuk-table__cell"
+            pdk-table-header=""
+            scope="col"
+          >
+            Date of birth
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="govuk-table__body"
+        pdk-table-body=""
+      >
+        <tr
+          class="govuk-table__row"
+          pdk-table-row=""
+        >
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            KRUMPS Abel
+          </td>
+          <td
+            class="govuk-table__cell"
+            data-role="urn"
+            pdk-table-cell=""
+          >
+            22C22222222
+          </td>
+          <td
+            class="govuk-table__cell"
+            pdk-table-cell=""
+          >
+            1 Jan 1972
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </list-cases-missing-sjp-notices>
+</cases-missing-sjp-notices>
+`;

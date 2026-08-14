@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManualCaseDetailSummaryComponent should render the component 1`] = `
+<manual-case-detail-summary
+  courtCentres={[Function Array]}
+  edit={[Function EventEmitter_]}
+  manualCase={[Function Object]}
+  policeForces={[Function Array]}
+>
+  <div
+    class="govuk-!-margin-bottom-6"
+    pdk-margin-bottom="6"
+  >
+    <pdk-divider
+      class="margin-top-0"
+    >
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <span
+          class="table-header"
+          pdk-typography="heading-medium"
+        >
+        </span>
+      </pdk-grid>
+      <pdk-grid
+        class="change-link"
+        one-third=""
+      >
+        <a
+          data-role="case-detail-change-link"
+          href="javascript:void(0)"
+          pdk-link=""
+          unvisited=""
+        >
+        </a>
+      </pdk-grid>
+    </pdk-grid>
+    <table
+      pdk-table=""
+    >
+      <tbody
+        pdk-table-body=""
+      >
+        <tr
+          class="table-row"
+          pdk-table-row=""
+        >
+          <th
+            class="header"
+            pdk-table-header="row"
+          >
+          </th>
+          <td
+            class="data"
+            data-role="date-received"
+            pdk-table-cell=""
+          >
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+          pdk-table-row=""
+        >
+          <th
+            class="header"
+            pdk-table-header="row"
+          >
+          </th>
+          <td
+            class="data"
+            data-role="court-received-to-name"
+            pdk-table-cell=""
+          >
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+          pdk-table-row=""
+        >
+          <th
+            class="header"
+            pdk-table-header="row"
+          >
+          </th>
+          <td
+            class="data"
+            data-role="court-received-from-name"
+            pdk-table-cell=""
+          >
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+          pdk-table-row=""
+        >
+          <th
+            class="header"
+            pdk-table-header="row"
+          >
+          </th>
+          <td
+            class="data"
+            data-role="police-force-name"
+            pdk-table-cell=""
+          >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</manual-case-detail-summary>
+`;

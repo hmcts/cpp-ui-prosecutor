@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatesToAvoidComponent should compile correctly 1`] = `
+<dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
+  formSubmit={[Function EventEmitter_]}
+  kase={[Function Object]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="search"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Search for a case 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="case-overview"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Case details 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Dates to avoid 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><case-header-badge-container>
+    <pre>
+      case badge
+    </pre>
+  </case-header-badge-container><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><dates-to-avoid-form>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label"
+                for="pdk-form-control-undefined-GENERATED_ID"
+              >
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              <textarea
+                class="ng-untouched ng-pristine ng-valid govuk-input"
+                id="pdk-form-control-undefined-GENERATED_ID"
+                minrows="10"
+                name="datesToAvoid"
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; height: -146px; min-height: -86px; max-height: -146px;"
+              >
+              </textarea>
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
+              href="/"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../"
+              unvisited=""
+            >
+              Cancel
+            </a>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</dates-to-avoid-page>
+`;
+
+exports[`DatesToAvoidComponent should display confirmation banner 1`] = `
+<dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
+  displayDatesToAvoidBanner={[Function Boolean]}
+  formSubmit={[Function EventEmitter_]}
+  kase={[Function Object]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="search"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Search for a case 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="case-overview"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Case details 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Dates to avoid 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><case-header-badge-container>
+    <pre>
+      case badge
+    </pre>
+  </case-header-badge-container><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><div
+    class="govuk-!-margin-top-1 govuk-!-margin-bottom-1"
+    pdk-margin-vertical="1"
+  >
+    <pdk-alert>
+      <div
+        class="pdk-alert pdk-alert--confirmation"
+        role="alert"
+      >
+        <div
+          class="pdk-alert__container"
+        >
+          <div
+            class="pdk-alert__message"
+          >
+            <div>
+               Dates to avoid court submitted 
+            </div>
+          </div>
+        </div>
+      </div>
+    </pdk-alert>
+    <div>
+      <button
+        class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+        pdk-button=""
+        pdk-margin-vertical="5"
+        routerlink="../../../review-not-guilty-pleas"
+        tabindex="0"
+        type="button"
+      >
+         Continue 
+      </button>
+    </div>
+  </div>
+</dates-to-avoid-page>
+`;
+
+exports[`DatesToAvoidComponent should display the dates to avoid component 1`] = `
+<dates-to-avoid-page
+  breadcrumb={[Function Object]}
+  breadcrumbs={[Function Array]}
+  displayDatesToAvoidBanner="false"
+  formSubmit={[Function EventEmitter_]}
+  kase={[Function Object]}
+>
+  <breadcrumb-links>
+    <nav
+      aria-label="Breadcrumb"
+    >
+      <ol
+        class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+        pdk-breadcrumb-list=""
+        pdk-margin-top="4"
+      >
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="home"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Home 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="search"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Search for a case 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <a
+            class="govuk-breadcrumbs__link"
+            data-breadcrumb="case-overview"
+            href="javascript: void(0)"
+            pdk-breadcrumb=""
+          >
+             Case details 
+          </a>
+        </li>
+        <li
+          class="govuk-breadcrumbs__list-item"
+          pdk-breadcrumb-list-item=""
+        >
+          <div
+            aria-current="page"
+          >
+             Dates to avoid 
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </breadcrumb-links><case-header-badge-container>
+    <pre>
+      case badge
+    </pre>
+  </case-header-badge-container><h1
+    class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-heading-xl"
+    pdk-margin-vertical="5"
+    pdk-typography="heading-xlarge"
+  >
+    Dates to avoid
+  </h1><dates-to-avoid-form>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label"
+                for="pdk-form-control-undefined-GENERATED_ID"
+              >
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              <textarea
+                class="ng-untouched ng-pristine ng-valid govuk-input"
+                id="pdk-form-control-undefined-GENERATED_ID"
+                minrows="10"
+                name="datesToAvoid"
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; height: -146px; min-height: -86px; max-height: -146px;"
+              >
+              </textarea>
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
+              href="/"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../"
+              unvisited=""
+            >
+              Cancel
+            </a>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</dates-to-avoid-page>
+`;

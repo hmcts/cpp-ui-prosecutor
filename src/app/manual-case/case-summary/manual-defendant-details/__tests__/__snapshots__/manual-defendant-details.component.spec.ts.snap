@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsComponent should render the component 1`] = `
+<manual-defendant-details
+  add={[Function EventEmitter_]}
+  createUUID={[Function Function]}
+  defendantStateService={[Function ManualCaseDefendantStateService]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter_]}
+  ethnicities={[Function Array]}
+  nationalities={[Function Array]}
+  observedEthnicities={[Function Array]}
+  remandStatuses={[Function Array]}
+  remove={[Function EventEmitter_]}
+>
+  <div
+    class="defendant-details"
+  >
+    <pdk-divider
+      class="govuk-!-margin-top-2"
+      pdk-margin-top="2"
+    >
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
+  </div>
+</manual-defendant-details>
+`;
+
+exports[`DefendantDetailsComponent should render the component when case is SJP and legal entity defendant 1`] = `
+<manual-defendant-details
+  add={[Function EventEmitter_]}
+  caseInitiationCode={[Function String]}
+  createUUID={[Function Function]}
+  defendantStateService={[Function ManualCaseDefendantStateService]}
+  defendants={[Function Array]}
+  edit={[Function EventEmitter_]}
+  ethnicities={[Function Array]}
+  nationalities={[Function Array]}
+  observedEthnicities={[Function Array]}
+  remandStatuses={[Function Array]}
+  remove={[Function EventEmitter_]}
+>
+  <div
+    class="defendant-details"
+  >
+    <pdk-divider
+      class="govuk-!-margin-top-2"
+      pdk-margin-top="2"
+    >
+      <hr
+        class="pdk-divider"
+      />
+    </pdk-divider>
+  </div>
+</manual-defendant-details>
+`;

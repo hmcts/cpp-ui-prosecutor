@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Address Input component all fields optional correctly compiles 1`] = `
+<test-input-address
+  required="false"
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+    pdk-form=""
+  >
+    <input-address
+      aria-describedby="identifier"
+      class="ng-untouched ng-pristine ng-valid"
+      name="address"
+    >
+      <div
+        class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
+        pdk-margin-bottom="6"
+      >
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address1"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 1 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address1"
+            maxlength="50"
+            name="address1"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address2"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 2 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address2"
+            maxlength="50"
+            name="address2"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address3"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 3 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address3"
+            maxlength="50"
+            name="address3"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address4"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 4 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address4"
+            maxlength="50"
+            name="address4"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address5"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 5 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address5"
+            maxlength="50"
+            name="address5"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-postcode"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Postcode (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-postcode"
+            maxlength="8"
+            name="postcode"
+            pdk-input=""
+            pdk-text-input=""
+            type="text"
+          />
+        </pdk-form-group>
+      </div>
+    </input-address>
+  </form>
+</test-input-address>
+`;
+
+exports[`Address Input component with required field(s) should compile correctly when the control has an external error 1`] = `
+<test-input-address
+  required={[Function Boolean]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid ng-submitted"
+    novalidate=""
+    pdk-form=""
+  >
+    <input-address
+      class="ng-untouched ng-pristine ng-invalid"
+      name="address"
+    >
+      <div
+        class="govuk-!-margin-bottom-6 ng-untouched ng-pristine ng-invalid"
+        pdk-margin-bottom="6"
+      >
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address1"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 1 
+          </label>
+          <pdk-error-message
+            class="govuk-error-message"
+            id="address-error-undefined-GENERATED_ID-address1"
+          >
+             Enter at least one line of address 
+          </pdk-error-message>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid form-control-error"
+            id="address-control-undefined-GENERATED_ID-address1"
+            maxlength="50"
+            name="address1"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address2"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 2 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address2"
+            maxlength="50"
+            name="address2"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address3"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 3 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address3"
+            maxlength="50"
+            name="address3"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address4"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 4 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address4"
+            maxlength="50"
+            name="address4"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-address5"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Address line 5 (optional) 
+          </label>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid"
+            id="address-control-undefined-GENERATED_ID-address5"
+            maxlength="50"
+            name="address5"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+        <pdk-form-group
+          class="pdk-form-group govuk-form-group--error"
+        >
+          <label
+            class="govuk-!-margin-top-6 govuk-label govuk-label--s"
+            for="address-control-undefined-GENERATED_ID-postcode"
+            pdk-label="small"
+            pdk-margin-top="6"
+          >
+             Postcode 
+          </label>
+          <pdk-error-message
+            class="govuk-error-message"
+            id="address-error-undefined-GENERATED_ID-postcode"
+          >
+             Postcode must be in the right format with a space, for example AB1 2CD 
+          </pdk-error-message>
+          <input
+            class="form-control govuk-input ng-untouched ng-pristine ng-invalid form-control-error"
+            id="address-control-undefined-GENERATED_ID-postcode"
+            maxlength="8"
+            name="postcode"
+            pdk-input=""
+            pdk-text-input=""
+            required=""
+            type="text"
+          />
+        </pdk-form-group>
+      </div>
+    </input-address>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</test-input-address>
+`;
+
+exports[`Address Input component with required field(s) should raise a \`postcodeFormat\` validation error when postcode does not have a space 1`] = `
+[
+  "address-control-undefined-GENERATED_ID-postcode",
+  {
+    "id": "address-error-undefined-GENERATED_ID-postcode",
+    "message": "Postcode must be in the right format with a space, for example AB1 2CD",
+  },
+]
+`;
+
+exports[`Address Input component with required field(s) should raise a \`postcodeFormat\` validation error when postcode field is invalidated 1`] = `
+[
+  "address-control-undefined-GENERATED_ID-postcode",
+  {
+    "id": "address-error-undefined-GENERATED_ID-postcode",
+    "message": "Postcode must be in the right format with a space, for example AB1 2CD",
+  },
+]
+`;
+
+exports[`Address Input component with required field(s) should raise an \`addressRequired\` validation error when required field(s) is/are empty 1`] = `
+[
+  "address-control-undefined-GENERATED_ID-address1",
+  {
+    "id": "address-error-undefined-GENERATED_ID-address1",
+    "message": "Enter at least one line of address",
+  },
+]
+`;
+
+exports[`Address Input component with required field(s) should raise an \`postcodeRequired\` validation error when required postcode field is empty 1`] = `
+[
+  "address-control-undefined-GENERATED_ID-postcode",
+  {
+    "id": "address-error-undefined-GENERATED_ID-postcode",
+    "message": "Postcode must be in the right format with a space, for example AB1 2CD",
+  },
+]
+`;
+
+exports[`Address Input component with required field(s) should raises a \`address1SpecialChar\` validation error when address line 1 starts with a special char 1`] = `
+[
+  "address-control-undefined-GENERATED_ID-address1",
+  {
+    "id": "address-error-undefined-GENERATED_ID-address1",
+    "message": "Address line 1 can only start with letters or numbers",
+  },
+]
+`;

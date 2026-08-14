@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExportCaseDecisionsComponent should compile correctly 1`] = `
+<export-case-decisions-test
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions>
+    <breadcrumb-links>
+      <nav
+        aria-label="Breadcrumb"
+      >
+        <ol
+          class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+          pdk-breadcrumb-list=""
+          pdk-margin-top="4"
+        >
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <a
+              class="govuk-breadcrumbs__link"
+              data-breadcrumb="home"
+              href="javascript: void(0)"
+              pdk-breadcrumb=""
+            >
+               Home 
+            </a>
+          </li>
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <div
+              aria-current="page"
+            >
+               Export case results by date 
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+        pdk-margin-vertical="6"
+        pdk-typography="heading-xlarge"
+      >
+         Export case results by date 
+      </h1>
+    </breadcrumb-links>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+  </export-case-decisions>
+</export-case-decisions-test>
+`;
+
+exports[`ExportCaseDecisionsComponent should compile correctly with case count results 1`] = `
+<export-case-decisions-test
+  caseCountResult={[Function Object]}
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions>
+    <breadcrumb-links>
+      <nav
+        aria-label="Breadcrumb"
+      >
+        <ol
+          class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+          pdk-breadcrumb-list=""
+          pdk-margin-top="4"
+        >
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <a
+              class="govuk-breadcrumbs__link"
+              data-breadcrumb="home"
+              href="javascript: void(0)"
+              pdk-breadcrumb=""
+            >
+               Home 
+            </a>
+          </li>
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <div
+              aria-current="page"
+            >
+               Export case results by date 
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+        pdk-margin-vertical="6"
+        pdk-typography="heading-xlarge"
+      >
+         Export case results by date 
+      </h1>
+    </breadcrumb-links>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+    <download-case-decisions>
+       {
+    "casesResultedCount": 0,
+    "fromDate": "2019-10-01",
+    "toDate": "2019-10-10"
+  }  
+    </download-case-decisions>
+  </export-case-decisions>
+</export-case-decisions-test>
+`;
+
+exports[`ExportCaseDecisionsComponent should compile correctly with errors 1`] = `
+<export-case-decisions-test
+  loadCaseCount={[Function Function]}
+>
+  <export-case-decisions>
+    <breadcrumb-links>
+      <nav
+        aria-label="Breadcrumb"
+      >
+        <ol
+          class="govuk-!-margin-top-4 govuk-breadcrumbs govuk-breadcrumbs__list"
+          pdk-breadcrumb-list=""
+          pdk-margin-top="4"
+        >
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <a
+              class="govuk-breadcrumbs__link"
+              data-breadcrumb="home"
+              href="javascript: void(0)"
+              pdk-breadcrumb=""
+            >
+               Home 
+            </a>
+          </li>
+          <li
+            class="govuk-breadcrumbs__list-item"
+            pdk-breadcrumb-list-item=""
+          >
+            <div
+              aria-current="page"
+            >
+               Export case results by date 
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-xl"
+        pdk-margin-vertical="6"
+        pdk-typography="heading-xlarge"
+      >
+         Export case results by date 
+      </h1>
+    </breadcrumb-links>
+    <pdk-error-summary
+      title="Fix the following"
+    >
+      <div
+        class="govuk-error-summary"
+        tabindex="-1"
+      >
+        <div
+          aria-labelledby="pdk-error-sumamry-GENERATED_ID"
+          role="alert"
+        >
+          <h2
+            class="govuk-error-summary__title"
+            id="pdk-error-sumamry-GENERATED_ID"
+          >
+            Fix the following
+          </h2>
+          <div
+            class="govuk-error-summary__body"
+          >
+            <ul
+              class="govuk-list govuk-error-summary__list"
+            >
+              <li>
+                <a
+                  href="javascript:void(0)"
+                >
+                   Invalid input 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </pdk-error-summary>
+    <export-case-decisions-form>
+      <form />
+    </export-case-decisions-form>
+  </export-case-decisions>
+</export-case-decisions-test>
+`;

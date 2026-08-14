@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`caseReducer LOAD_CASE_SUCCESS should set the incoming case 1`] = `
+{
+  "id": "caseId",
+}
+`;
+
+exports[`caseReducer undefined action should initialize the default state 1`] = `null`;
+
+exports[`defendantDetailsUpdatesReducer LOAD_CASES_MISSING_SJP_NOTICE_COUNT_SUCCESS should set the new state 1`] = `
+{
+  "count": 3,
+}
+`;
+
+exports[`defendantDetailsUpdatesReducer LOAD_DEFENDANT_DETAILS_UPDATES_SUCCESS should set the new state 1`] = `
+{
+  "defendantDetailsUpdates": [
+    {
+      "addressUpdated": true,
+      "caseId": "842054bb-3e72-4166-ae67-52355f047765",
+      "caseUrn": "TVL7105556000",
+      "dateOfBirth": "1977-10-17",
+      "dateOfBirthUpdated": true,
+      "defendantId": "1844b883-1646-428a-a0f8-cb92706af5d2",
+      "firstName": "John",
+      "lastName": "Jones",
+      "nameUpdated": true,
+      "prosecutingAuthority": "DVLA",
+      "region": "London",
+      "updatedOn": "2019-04-04",
+    },
+    {
+      "addressUpdated": true,
+      "caseId": "12ca0803-d10b-44dd-bf6b-c0242c207e55",
+      "caseUrn": "TVL9772166531",
+      "dateOfBirth": "1991-02-19",
+      "dateOfBirthUpdated": true,
+      "defendantId": "4ab78156-d8d0-4b99-9e96-da50a311aaba",
+      "firstName": "Bob",
+      "lastName": "Last",
+      "nameUpdated": true,
+      "prosecutingAuthority": "DVLA",
+      "region": "London",
+      "updatedOn": "2019-04-04",
+    },
+  ],
+  "total": 2,
+}
+`;
+
+exports[`defendantDetailsUpdatesReducer LOAD_OFFENCE_WITHDRAWAL_REASONS_SUCCESS should set the new state 1`] = `
+[
+  {
+    "id": "1",
+    "legalAdviser": true,
+    "prosecutor": true,
+    "reasonCodeDescription": "First",
+    "sequence": 1,
+  },
+  {
+    "id": "2",
+    "legalAdviser": true,
+    "prosecutor": false,
+    "reasonCodeDescription": "Second",
+    "sequence": 2,
+  },
+  {
+    "id": "3",
+    "legalAdviser": false,
+    "prosecutor": true,
+    "reasonCodeDescription": "Third",
+    "sequence": 3,
+  },
+]
+`;
+
+exports[`defendantDetailsUpdatesReducer undefined action should initialize the default state 1`] = `undefined`;
+
+exports[`pleadedNotGuiltyReducer LOAD_PLEADED_NOT_GUILTY_CASES_SUCCESS should set the new state 1`] = `
+{
+  "cases": [
+    {
+      "address": {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "LE3 1AB",
+      },
+      "caseId": "f10c88de-e577-47df-98af-c8944c5094d0",
+      "dateOfBirth": "1975-03-25",
+      "firstName": "Dennon Dennon Dennon",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-14T11:54:08.167Z",
+      "referenceNumber": "TVL640029AGBG",
+      "region": "London",
+    },
+    {
+      "address": {
+        "address1": "Flat 1, Armageddon House",
+        "address2": "13 Old Road",
+        "address3": "Giggleswick",
+        "address4": "Merton",
+        "address5": "London",
+        "postcode": "SE21 1AB",
+      },
+      "caseId": "facca075-d7a5-4f66-ac54-c2e0a2b47d77",
+      "dateOfBirth": "2001-03-23",
+      "firstName": "Stefanos Stefanos Stefanos",
+      "lastName": "Smith",
+      "pleaEntry": "2019-03-19T16:56:14.915Z",
+      "referenceNumber": "TVL143468N9KN",
+      "region": "London",
+    },
+  ],
+  "count": 2,
+}
+`;
+
+exports[`pleadedNotGuiltyReducer undefined action should initialize the default state 1`] = `undefined`;

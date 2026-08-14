@@ -1,0 +1,79 @@
+<div pdk-margin-bottom="6">
+  <pdk-divider class="margin-top-0" [dark]="true"></pdk-divider>
+  <pdk-grid container>
+    <pdk-grid two-thirds>
+      <span pdk-typography="heading-medium" class="table-header">{{
+        'MANUAL_CASE_SUMMARY.CASE_DETAILS.TITLE' | translate
+      }}</span>
+    </pdk-grid>
+    <pdk-grid one-third class="change-link">
+      <a pdk-link unvisited href="javascript:void(0)" (click)="onEdit()" data-role="case-detail-change-link">{{
+        'MANUAL_CASE_SUMMARY.CHANGE' | translate
+      }}</a>
+    </pdk-grid>
+  </pdk-grid>
+  <table pdk-table>
+    <tbody pdk-table-body>
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_DETAIL.DATE_RECEIVED' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="date-received">
+          {{ manualCase.dateReceived | date: 'd MMMM yyyy' }}
+        </td>
+      </tr>
+      @if (isTrial()) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_DETAIL.DATE_OF_SENDING' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="date-of-sending">
+            {{ manualCase.dateOfSending | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      }
+      @if (isTrial()) {
+        <tr pdk-table-row class="table-row">
+          <th pdk-table-header="row" class="header">
+            {{ 'MANUAL_CASE_DETAIL.RECEIPT_TYPE' | translate }}
+          </th>
+          <td pdk-table-cell class="data" data-role="receipt-type">
+            {{ manualCase.trialReceiptType }}@if (hasEitherWayType()) {
+            <span> - {{ manualCase.eitherWayType }}</span>
+          }
+        </td>
+      </tr>
+    }
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_DETAIL.RECEIVING_COURT' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="court-received-to-name">
+        {{ courtReceivedToName }}
+      </td>
+    </tr>
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_DETAIL.COURT_RECEIVED_FROM' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="court-received-from-name">
+        {{ courtReceivedFromName }}
+      </td>
+    </tr>
+    @if (isTrial()) {
+      <tr pdk-table-row class="table-row">
+        <th pdk-table-header="row" class="header">
+          {{ 'MANUAL_CASE_DETAIL.CLASS_OF_CASE' | translate }}
+        </th>
+        <td pdk-table-cell class="data" data-role="class-of-case">{{ manualCase.classOfCase }}</td>
+      </tr>
+    }
+    <tr pdk-table-row class="table-row">
+      <th pdk-table-header="row" class="header">
+        {{ 'MANUAL_CASE_DETAIL.POLICE_FORCE' | translate }}
+      </th>
+      <td pdk-table-cell class="data" data-role="police-force-name">{{ policeForceName }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

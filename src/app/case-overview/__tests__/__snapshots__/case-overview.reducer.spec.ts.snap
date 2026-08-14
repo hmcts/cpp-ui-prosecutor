@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Case Overview reducer default should set the state 1`] = `
+{
+  "datesToAvoidFailed": false,
+  "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
+  "withdrawOffencesFailed": false,
+  "withdrawOffencesSuccess": false,
+}
+`;
+
+exports[` Case Overview reducer default should update the dates to avoid failed state 1`] = `
+{
+  "datesToAvoidFailed": true,
+  "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
+  "withdrawOffencesFailed": false,
+  "withdrawOffencesSuccess": false,
+}
+`;
+
+exports[` Case Overview reducer default should update the dates to avoid success state 1`] = `
+{
+  "datesToAvoidFailed": false,
+  "datesToAvoidSuccess": true,
+  "onlinePlea": undefined,
+  "withdrawOffencesFailed": false,
+  "withdrawOffencesSuccess": false,
+}
+`;
+
+exports[` Case Overview reducer default should update the withdraw offences failed state 1`] = `
+{
+  "datesToAvoidFailed": false,
+  "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
+  "withdrawOffencesFailed": true,
+  "withdrawOffencesSuccess": false,
+}
+`;
+
+exports[` Case Overview reducer default should update the withdraw offences success state 1`] = `
+{
+  "datesToAvoidFailed": false,
+  "datesToAvoidSuccess": false,
+  "onlinePlea": undefined,
+  "withdrawOffencesFailed": false,
+  "withdrawOffencesSuccess": true,
+}
+`;

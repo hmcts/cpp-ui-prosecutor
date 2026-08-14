@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FromToDatesComponent should compile correctly 1`] = `
+<from-to-dates-test
+  errors={[Function Function]}
+  fromDate={[Function String]}
+  maxDaysForToDate={[Function Number]}
+  submit={[Function Function]}
+  toDate={[Function String]}
+>
+  <form
+    class="ng-untouched ng-valid ng-dirty"
+    novalidate=""
+    pdk-form=""
+  >
+    <from-to-dates>
+      <pdk-form-field
+        hinttext="For example, 13 6 2016"
+        label="From"
+      >
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <fieldset
+            class="govuk-fieldset"
+            pdk-fieldset=""
+          >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               From 
+            </legend>
+            <pdk-hint
+              class="govuk-hint"
+            >
+              <div>
+                 For example, 13 6 2016 
+              </div>
+            </pdk-hint>
+            <pdk-date-input
+              class="ng-untouched ng-valid ng-dirty"
+              name="fromDate"
+              pastdate=""
+              required=""
+            >
+              <pdk-interaction-container>
+                <div>
+                  <div
+                    class="pdk-date-input"
+                  >
+                    <div
+                      class="govuk-date-input ng-untouched ng-pristine ng-valid"
+                    >
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-day"
+                          pdk-label=""
+                        >
+                           Day 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                          formcontrolname="day"
+                          id="pdk-date-input-GENERATED_ID-day"
+                          name="dateDay"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-month"
+                          pdk-label=""
+                        >
+                           Month 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                          formcontrolname="month"
+                          id="pdk-date-input-GENERATED_ID-month"
+                          name="dateMonth"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-year"
+                          pdk-label=""
+                        >
+                           Year 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-4 ng-valid"
+                          formcontrolname="year"
+                          id="pdk-date-input-GENERATED_ID-year"
+                          name="dateYear"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </pdk-interaction-container>
+            </pdk-date-input>
+          </fieldset>
+        </pdk-form-group>
+      </pdk-form-field>
+      <pdk-form-field
+        hinttext="For example, 13 7 2016"
+        label="To"
+      >
+        <pdk-form-group
+          class="pdk-form-group"
+        >
+          <fieldset
+            class="govuk-fieldset"
+            pdk-fieldset=""
+          >
+            <legend
+              class="govuk-fieldset__legend"
+            >
+               To 
+            </legend>
+            <pdk-hint
+              class="govuk-hint"
+            >
+              <div>
+                 For example, 13 7 2016 
+              </div>
+            </pdk-hint>
+            <pdk-date-input
+              class="ng-untouched ng-valid ng-dirty"
+              name="toDate"
+              pastdate=""
+              required=""
+            >
+              <pdk-interaction-container>
+                <div>
+                  <div
+                    class="pdk-date-input"
+                  >
+                    <div
+                      class="govuk-date-input ng-untouched ng-pristine ng-valid"
+                    >
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-day"
+                          pdk-label=""
+                        >
+                           Day 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                          formcontrolname="day"
+                          id="pdk-date-input-GENERATED_ID-day"
+                          name="dateDay"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-month"
+                          pdk-label=""
+                        >
+                           Month 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-2 ng-valid"
+                          formcontrolname="month"
+                          id="pdk-date-input-GENERATED_ID-month"
+                          name="dateMonth"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="govuk-date-input__item"
+                      >
+                        <label
+                          class="govuk-date-input__label govuk-label"
+                          for="pdk-date-input-GENERATED_ID-year"
+                          pdk-label=""
+                        >
+                           Year 
+                        </label>
+                        <input
+                          autocomplete="off"
+                          class="govuk-date-input__input ng-untouched ng-pristine govuk-input govuk-input--width-4 ng-valid"
+                          formcontrolname="year"
+                          id="pdk-date-input-GENERATED_ID-year"
+                          name="dateYear"
+                          required=""
+                          type="number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </pdk-interaction-container>
+            </pdk-date-input>
+          </fieldset>
+        </pdk-form-group>
+      </pdk-form-field>
+    </from-to-dates>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</from-to-dates-test>
+`;

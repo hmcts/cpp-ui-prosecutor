@@ -1,0 +1,52 @@
+<div class="offence-search">
+  <pdk-autosuggest
+    #autosuggest="pdkAutosuggest"
+    name="id"
+    [id]="id"
+    [ariaDescribedBy]="ariaDescribedBy"
+    [hasError]="hasError"
+    highlightColor="blue"
+    [mapSuggestionToKey]="getKey"
+    [mapSuggestionToLabel]="getLabel"
+    (inputText)="input$.next($event)"
+    [suggestions]="(source$ | async) || []"
+    [suggestionTemplateRef]="suggestionTemplateRef"
+  >
+  </pdk-autosuggest>
+  @if (noResult) {
+    <div class="noResult" pdk-border-colour="black" pdk-text-colour="mid-grey" pdk-padding="1">
+      No results found
+    </div>
+  }
+</div>
+
+<ng-template #suggestionTemplateRef let-highlighted="highlighted" let-suggestion="suggestion">
+  <pdk-grid container data-role="offence">
+    <pdk-grid three-quarters>
+      <span
+        pdk-typography="body-small"
+        data-role="title"
+        [pdk-text-colour]="getTextColour('black', highlighted)"
+        [innerHtml]="getMatchedTitle(suggestion.offence, 'title')"
+      >
+      </span>
+      <br />
+      <span
+        pdk-typography="body-xsmall"
+        [pdk-text-colour]="getTextColour('dark-grey', highlighted)"
+        data-role="legislation"
+      >
+        {{ suggestion.offence.legislation }}
+      </span>
+    </pdk-grid>
+    <pdk-grid one-quarter>
+      <span
+        pdk-typography="body-xsmall"
+        [pdk-text-colour]="getTextColour('dark-grey', highlighted)"
+        data-role="offence-code"
+        [innerHtml]="getMatchedTitle(suggestion.offence, 'cjsOffenceCode')"
+      >
+      </span>
+    </pdk-grid>
+  </pdk-grid>
+</ng-template>

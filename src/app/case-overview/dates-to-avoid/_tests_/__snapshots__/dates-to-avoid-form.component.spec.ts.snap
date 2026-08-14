@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatesToAvoidFormComponent should compile correctly 1`] = `
+<test-dates-to-avoid-form
+  formSubmit={[Function Function]}
+  kase={[Function Object]}
+>
+  <dates-to-avoid-form>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-invalid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label"
+                for="pdk-form-control-undefined-GENERATED_ID"
+              >
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              <textarea
+                class="ng-untouched ng-pristine govuk-input ng-invalid"
+                id="pdk-form-control-undefined-GENERATED_ID"
+                minrows="10"
+                name="datesToAvoid"
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; min-height: NaNpx; max-height: NaNpx;"
+              >
+              </textarea>
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
+              href="/"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../"
+              unvisited=""
+            >
+              Cancel
+            </a>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</test-dates-to-avoid-form>
+`;
+
+exports[`DatesToAvoidFormComponent should display the dates to avoid 1`] = `
+<test-dates-to-avoid-form
+  formSubmit={[Function Function]}
+  kase={[Function Object]}
+>
+  <dates-to-avoid-form>
+    <pdk-grid
+      container=""
+    >
+      <pdk-grid
+        two-thirds=""
+      >
+        <form
+          class="ng-untouched ng-pristine ng-invalid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            label="Enter dates this case shouldn't be listed or write 'none'."
+          >
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              <label
+                class="govuk-label"
+                for="pdk-form-control-undefined-GENERATED_ID"
+              >
+                 Enter dates this case shouldn't be listed or write 'none'. 
+              </label>
+              <textarea
+                class="ng-untouched ng-pristine govuk-input ng-invalid"
+                id="pdk-form-control-undefined-GENERATED_ID"
+                minrows="10"
+                name="datesToAvoid"
+                pdk-input=""
+                pdk-resize=""
+                pdk-text-input=""
+                required=""
+                style="resize: none; min-height: NaNpx; max-height: NaNpx;"
+              >
+              </textarea>
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+             Submit 
+          </button>
+          <div>
+            <a
+              class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-link govuk-link--no-visited-state"
+              href="/"
+              pdk-link=""
+              pdk-margin-vertical="5"
+              routerlink="../"
+              unvisited=""
+            >
+              Cancel
+            </a>
+          </div>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </dates-to-avoid-form>
+</test-dates-to-avoid-form>
+`;

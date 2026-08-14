@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsPersonComponent should compile correctly 1`] = `
+<defendant-details-test
+  personDetails={[Function Object]}
+>
+  <defendant-details-person>
+    <h4
+      class="govuk-heading-m"
+      pdk-typography="heading-medium"
+    >
+      Defendant details
+    </h4>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Name
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="defendant-name"
+          pdk-padding-vertical="2"
+        >
+           Guy SMITH 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Date of Birth
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        data-role="date-of-birth"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <date-of-birth>
+            <div>
+               11 Mar 1957 (59 years old) 
+            </div>
+          </date-of-birth>
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Address
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="pre-line govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           Flat 1, Armageddon House
+  13 Old Road
+  Giggleswick
+  Merton
+  CV8 1AB 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Email
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="defendant-email"
+          pdk-padding-vertical="2"
+        >
+           a@a.com 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Home telephone
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           333333333 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Mobile
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           77777777 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            National Insurance number
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-one-third"
+        one-third=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          pdk-padding-vertical="2"
+        >
+          <b>
+            Driver licence number
+          </b>
+        </div>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-grid-column-two-thirds"
+        two-thirds=""
+      >
+        <div
+          class="govuk-!-padding-top-2 govuk-!-padding-bottom-2"
+          data-role="defendant-driver-number"
+          pdk-padding-vertical="2"
+        >
+           – 
+        </div>
+      </pdk-grid>
+    </pdk-grid>
+  </defendant-details-person>
+</defendant-details-test>
+`;

@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pcfReferencedataReducer when LOAD_ALCOHOL_LEVEL_METHODS_SUCCESS should populate the state with alcohol level methods 1`] = `
+{
+  "alcoholLevelMethods": [
+    {
+      "id": "f833257e-e355-4c72-838b-d236db530226",
+      "methodCode": "B01",
+      "methodDescription": "Breath",
+    },
+    {
+      "id": "d15a29d0-68b4-4a4f-8c46-c1316d7238eb",
+      "methodCode": "B02",
+      "methodDescription": "Blood",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_ETHNICITIES_SUCCESS should populate the state with ethnicties 1`] = `
+{
+  "enthnicities": [
+    {
+      "code": "09",
+      "description": "Afrikaan",
+      "id": "Id-loaded-ethnicitiy",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_MOT_REASONS_SUCCESS should populate the state with mode of trial reasons 1`] = `
+{
+  "motReasons": [
+    {
+      "code": "123",
+      "description": "description",
+      "id": "dd4073b6-22be-3875-9d63-5da286bb3ece",
+      "seqNum": 10,
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_NATIONALITIES_SUCCESS should populate the state with nationalities 1`] = `
+{
+  "nationalities": [
+    {
+      "countryName": "France",
+      "isoCode": "FR",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_OBSERVED_ETHNICITIES_SUCCESS should populate the state with observed ethnicities methods 1`] = `
+{
+  "observedEthnicities": [
+    {
+      "ethnicityCode": "1",
+      "ethnicityDescription": "White - North European",
+      "id": "c4ca4238-a0b9-3382-8dcc-509a6f75849b",
+    },
+    {
+      "ethnicityCode": "2",
+      "ethnicityDescription": "White - South European",
+      "id": "c81e728d-9d4c-3f63-af06-7f89cc14862c",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_OFFENCE_DATE_CODES_SUCCESS should populate the state with summon codes 1`] = `
+{
+  "offenceDateCodes": [
+    {
+      "dateCode": "1",
+      "dateCodeDescription": "before",
+      "id": "4aaecac5-222b-402d-9047-84803679edac",
+    },
+    {
+      "dateCode": "2",
+      "dateCodeDescription": "after",
+      "id": "5aaecac5-222b-402d-9047-84803679edac",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_POLICE_FORCES_SUCCESS should populate the state with police forces methods 1`] = `
+{
+  "policeForces": [
+    {
+      "id": "47bb2c5d-cde9-3c13-9ae3-b3f5be9177e7",
+      "policeForceCode": "2",
+      "policeForceName": "London",
+      "sequence": 3,
+      "validForSpiOut": true,
+    },
+    {
+      "id": "97c89e9d-57dc-3936-a88f-9160a4572e3a",
+      "oucodeL2Code": "03",
+      "policeForceCode": "3",
+      "policeForceName": "Cumbria",
+      "sequence": 4,
+      "validForSpiOut": true,
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_REMAND_STATUSES_SUCCESS should populate the state with remand statuses 1`] = `
+{
+  "remandStatuses": [
+    {
+      "id": "dd4073b6-22be-3875-9d63-5da286bb3ece",
+      "seqNo": 10,
+      "statusCode": "B",
+      "statusDescription": "Conditional Bail",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_SUMMONS_CODES_SUCCESS should populate the state with summon codes 1`] = `
+{
+  "summonsCodes": [
+    {
+      "id": "5aaecac5-222b-402d-9047-84803679edac",
+      "seqNo": 20,
+      "summonsCode": "B",
+      "summonsCodeDescription": "Breach offences",
+      "validFrom": "2019-03-01",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when LOAD_VERDICT_TYPES_SUCCESS should populate the state with verdict types 1`] = `
+{
+  "verdictTypes": [
+    {
+      "code": "123",
+      "description": "description",
+      "id": "dd4073b6-22be-3875-9d63-5da286bb3ece",
+      "jurisdiction": "CROWN",
+    },
+  ],
+}
+`;
+
+exports[`pcfReferencedataReducer when initialised should set the default state 1`] = `
+{
+  "alcoholLevelMethods": [],
+  "enthnicities": [],
+  "motReasons": [],
+  "nationalities": [],
+  "observedEthnicities": [],
+  "offenceDateCodes": [],
+  "policeForces": [],
+  "prosecutorByUserGroup": {},
+  "remandStatuses": [],
+  "summonsCodes": [],
+  "verdictTypes": [],
+}
+`;
