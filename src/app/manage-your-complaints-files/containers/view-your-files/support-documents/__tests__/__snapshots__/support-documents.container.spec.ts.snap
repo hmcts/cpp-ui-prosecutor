@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewYourFilesComponent should render the component correctly 1`] = `
-<view-your-files>
+exports[`SupportDocumentsContainer should render the container correctly 1`] = `
+<support-documents-container>
   <back-button
     actiontext="Back"
     linkurl="../"
@@ -15,11 +15,12 @@ exports[`ViewYourFilesComponent should render the component correctly 1`] = `
        Back
     </a>
   </back-button><h1
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-l"
     pdk-margin-bottom="6"
     pdk-margin-top="6"
     pdk-typography="heading-large"
   >
-    View your files
+    Add supporting documents
   </h1>
-</view-your-files>
+</support-documents-container>
 `;

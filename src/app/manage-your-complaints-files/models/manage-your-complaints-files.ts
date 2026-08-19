@@ -10,3 +10,12 @@ export interface UploadCsvFileRequest {
   onUploadSuccess: (referenceNumber: string) => void;
   onUploadError: (error: HttpErrorResponse) => void;
 }
+
+export interface ComplaintsFileRecord {
+  reference: string;
+  dateUploaded: string;
+  status: string;
+  action: string | null;
+  fileName: string;
+  uploadedBy: string;
+}

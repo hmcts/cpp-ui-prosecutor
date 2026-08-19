@@ -22,6 +22,30 @@ describe('ManageYourComplaintsFilesService', () => {
     service = TestBed.inject(ManageYourComplaintsFilesService);
   });
 
+  it('should search for complaints files by reference number or file name', done => {
+    const complaintsFiles = [
+      {
+        reference: 'KUJ5953G',
+        dateUploaded: '16 June 2026',
+        status: 'File processing',
+        action: null,
+        fileName: 'complaints-list-KM',
+        uploadedBy: 'Sarah Hall'
+      }
+    ];
+    mockQuery.mockReturnValue(of({ complaintsFiles }));
+
+    service.searchComplaintsFiles('KUJ5953G').subscribe(result => {
+      expect(mockQuery).toHaveBeenCalledWith({
+        url:
+          '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files?search=KUJ5953G',
+        requestType: 'application/vnd.stagingprosecutorscivil.query.complaints-files+json'
+      });
+      expect(result).toEqual(complaintsFiles);
+      done();
+    });
+  });
+
   it('should fetch the csv template as a blob', done => {
     const blob = new Blob(['a,b,c'], { type: 'text/csv' });
     mockQuery.mockReturnValue(of(blob));

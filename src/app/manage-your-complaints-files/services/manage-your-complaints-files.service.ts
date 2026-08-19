@@ -3,11 +3,22 @@ import { CppHttp } from '@cpp/core';
 import { HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { UploadCsvFileResponse } from '../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-your-complaints-files';
 
 @Injectable({ providedIn: 'root' })
 export class ManageYourComplaintsFilesService {
   private http = inject(CppHttp);
+
+  searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord[]> {
+    return this.http
+      .query<{ complaintsFiles: ComplaintsFileRecord[] }>({
+        url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files?search=${encodeURIComponent(
+          searchTerm
+        )}`,
+        requestType: 'application/vnd.stagingprosecutorscivil.query.complaints-files+json'
+      })
+      .pipe(map(response => response.complaintsFiles));
+  }
 
   fetchCsvTemplate(): Observable<Blob> {
     return this.http
