@@ -3,6 +3,7 @@ import { CppHttp } from '@cpp/core';
 import { HttpResponse } from '@angular/common/http';
 import { of } from 'rxjs';
 import { ManageYourComplaintsFilesService } from '../manage-your-complaints-files.service';
+import { ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
 
 describe('ManageYourComplaintsFilesService', () => {
   let service: ManageYourComplaintsFilesService;
@@ -22,26 +23,27 @@ describe('ManageYourComplaintsFilesService', () => {
     service = TestBed.inject(ManageYourComplaintsFilesService);
   });
 
-  it('should search for complaints files by reference number or file name', done => {
-    const complaintsFiles = [
-      {
-        reference: 'KUJ5953G',
-        dateUploaded: '16 June 2026',
-        status: 'File processing',
-        action: null,
-        fileName: 'complaints-list-KM',
-        uploadedBy: 'Sarah Hall'
-      }
-    ];
-    mockQuery.mockReturnValue(of({ complaintsFiles }));
+  it('should search for a complaints file by submission reference number', done => {
+    const complaintsFile = {
+      id: 'KUJ5953G',
+      status: ComplaintsFileStatus.PENDING,
+      warnings: [],
+      errors: [],
+      type: 'PROSECUTION',
+      receivedAt: '16 June 2026',
+      filename: 'complaints-list-KM',
+      username: 'Sarah Hall',
+      caseErrors: [],
+      defendantErrors: []
+    };
+    mockQuery.mockReturnValue(of(complaintsFile));
 
     service.searchComplaintsFiles('KUJ5953G').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url:
-          '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files?search=KUJ5953G',
-        requestType: 'application/vnd.stagingprosecutorscivil.query.complaints-files+json'
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/KUJ5953G',
+        requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
       });
-      expect(result).toEqual(complaintsFiles);
+      expect(result).toEqual(complaintsFile);
       done();
     });
   });

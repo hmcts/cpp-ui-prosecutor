@@ -5,7 +5,7 @@ import { of, throwError } from 'rxjs';
 import { ViewYourFilesStore } from '../view-your-files.store';
 import { ManageYourComplaintsFilesService } from '../../services/manage-your-complaints-files.service';
 import { ApiError } from '../../../core';
-import { ComplaintsFileRecord } from '../../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
 
 describe('ViewYourFilesStore', () => {
   let store: InstanceType<typeof ViewYourFilesStore>;
@@ -13,12 +13,16 @@ describe('ViewYourFilesStore', () => {
   let dispatch: jest.Mock;
 
   const complaintsFile: ComplaintsFileRecord = {
-    reference: 'KUJ5953G',
-    dateUploaded: '16 June 2026',
-    status: 'File processing',
-    action: null,
-    fileName: 'complaints-list-KM',
-    uploadedBy: 'Sarah Hall'
+    id: 'KUJ5953G',
+    status: ComplaintsFileStatus.PENDING,
+    warnings: [],
+    errors: [],
+    type: 'PROSECUTION',
+    receivedAt: '16 June 2026',
+    filename: 'complaints-list-KM',
+    username: 'Sarah Hall',
+    caseErrors: [],
+    defendantErrors: []
   };
 
   beforeEach(() => {
@@ -45,8 +49,8 @@ describe('ViewYourFilesStore', () => {
     expect(store.complaintsFile()).toBeNull();
   });
 
-  it('should store the first matching record when the search succeeds', () => {
-    searchComplaintsFiles.mockReturnValue(of([complaintsFile]));
+  it('should store the matching record when the search succeeds', () => {
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
 
     store.searchComplaintsFiles('KUJ5953G');
 
@@ -54,16 +58,8 @@ describe('ViewYourFilesStore', () => {
     expect(store.complaintsFile()).toEqual(complaintsFile);
   });
 
-  it('should store a null result when the search finds nothing', () => {
-    searchComplaintsFiles.mockReturnValue(of([]));
-
-    store.searchComplaintsFiles('unknown');
-
-    expect(store.complaintsFile()).toBeNull();
-  });
-
   it('should clear the result and dispatch an ApiError when the search fails', () => {
-    searchComplaintsFiles.mockReturnValue(of([complaintsFile]));
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
     store.searchComplaintsFiles('KUJ5953G');
 
     const error = new HttpErrorResponse({ status: 500 });
@@ -97,14 +93,14 @@ describe('ViewYourFilesStore', () => {
     store.searchComplaintsFiles('not-a-reference');
     expect(store.searchErrorMessage()).toBe('Enter a valid reference number');
 
-    searchComplaintsFiles.mockReturnValue(of([complaintsFile]));
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
     store.searchComplaintsFiles('KUJ5953G');
 
     expect(store.searchErrorMessage()).toBeNull();
   });
 
   it('should reset the state back to its initial values', () => {
-    searchComplaintsFiles.mockReturnValue(of([complaintsFile]));
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
     store.searchComplaintsFiles('KUJ5953G');
     expect(store.complaintsFile()).toEqual(complaintsFile);
 

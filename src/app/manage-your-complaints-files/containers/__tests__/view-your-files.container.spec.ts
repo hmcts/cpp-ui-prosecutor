@@ -4,7 +4,7 @@ import { signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ViewYourFilesContainer } from '../view-your-files/view-your-files.container';
 import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
-import { ComplaintsFileRecord } from '../../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
 
 describe('ViewYourFilesContainer', () => {
   let fixture: ComponentFixture<ViewYourFilesContainer>;
@@ -13,12 +13,16 @@ describe('ViewYourFilesContainer', () => {
   let searchComplaintsFiles: jest.Mock;
 
   const complaintsFile: ComplaintsFileRecord = {
-    reference: 'KUJ5953G',
-    dateUploaded: '16 June 2026',
-    status: 'File processing',
-    action: null,
-    fileName: 'complaints-list-KM',
-    uploadedBy: 'Sarah Hall'
+    id: 'KUJ5953G',
+    status: ComplaintsFileStatus.PENDING,
+    warnings: [],
+    errors: [],
+    type: 'PROSECUTION',
+    receivedAt: '16 June 2026',
+    filename: 'complaints-list-KM',
+    username: 'Sarah Hall',
+    caseErrors: [],
+    defendantErrors: []
   };
 
   beforeEach(() => {
@@ -43,7 +47,7 @@ describe('ViewYourFilesContainer', () => {
   });
 
   it('should render the container correctly', () => {
-    expect(fixture).toMatchSnapshot();
+    expect(fixture.nativeElement).toMatchSnapshot();
   });
 
   it('should not show a results table before a search has been made', () => {
@@ -66,7 +70,30 @@ describe('ViewYourFilesContainer', () => {
 
     const row = fixture.debugElement.query(By.css('[data-role="reference"]')).nativeElement;
     expect(row.textContent).toContain('KUJ5953G');
+    expect(fixture.nativeElement.textContent).toContain('File processing');
     expect(fixture.debugElement.query(By.css('[data-role="no-results"]'))).toBeNull();
+  });
+
+  it('should show the status as a red tag with a "View error report" link when the upload failed', () => {
+    fixture.componentInstance.hasSearched.set(true);
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.FAILED });
+    fixture.detectChanges();
+
+    const tag = fixture.debugElement.query(By.css('pdk-tag'));
+    expect(tag.attributes['color']).toBe('red');
+    expect(tag.nativeElement.textContent).toContain('Upload failed');
+
+    const link = fixture.debugElement.query(By.css('[data-role="file-action"]')).nativeElement;
+    expect(link.textContent).toContain('View error report');
+  });
+
+  it('should show an "Add supporting documents" link when awaiting court decision', () => {
+    fixture.componentInstance.hasSearched.set(true);
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.AWAITING_APPROVAL });
+    fixture.detectChanges();
+
+    expect(fixture.debugElement.query(By.css('pdk-tag'))).toBeNull();
+    expect(fixture.nativeElement.textContent).toContain('Add supporting documents');
   });
 
   it('should show a no results message when the search finds nothing', () => {

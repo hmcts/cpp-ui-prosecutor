@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ViewYourFilesContainer should render the container correctly 1`] = `
-<view-your-files-container
-  errorMessages={[Function Function]}
-  errors={[Function Function]}
-  fieldErrors={[Function Function]}
-  hasSearched={[Function Function]}
-  referenceNumber={[Function Function]}
-  store={[Function Object]}
+<div
+  id="root0"
 >
   <back-button
     actiontext="Back"
@@ -20,15 +15,19 @@ exports[`ViewYourFilesContainer should render the container correctly 1`] = `
       pdk-text-colour="black"
     >
        Back
+
     </a>
-  </back-button><h1
+  </back-button>
+  
+  <h1
     class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-l"
     pdk-margin-bottom="6"
     pdk-margin-top="6"
     pdk-typography="heading-large"
   >
     View your complaints files
-  </h1><form
+  </h1>
+  <form
     class="ng-untouched ng-pristine ng-valid"
     novalidate=""
     pdk-form=""
@@ -36,15 +35,20 @@ exports[`ViewYourFilesContainer should render the container correctly 1`] = `
     <pdk-form-field
       label="Find by reference number"
     >
+      
       <pdk-form-group
         class="pdk-form-group"
       >
+        
         <label
           class="govuk-label"
           for="pdk-form-control-undefined-GENERATED_ID"
         >
            Find by reference number 
         </label>
+        
+        
+        
         <input
           class="govuk-input govuk-input--width-20 ng-untouched ng-pristine ng-valid"
           data-role="search-input"
@@ -63,8 +67,11 @@ exports[`ViewYourFilesContainer should render the container correctly 1`] = `
         >
           Search
         </button>
+        
+        
       </pdk-form-group>
     </pdk-form-field>
   </form>
-</view-your-files-container>
+  
+</div>
 `;

@@ -1,20 +1,30 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import {
   ErrorMessageConfig,
   PdkButton,
+  PdkCore,
   PdkErrorSummaryComponent,
   PdkForm,
   PdkFormFieldComponent,
   PdkInput,
   PdkMarginDirective,
+  PdkSummaryList,
   PdkTable,
+  PdkTagComponent,
   PdkTextInput,
   PdkTypographyDirective,
   ValidationError
 } from '@cpp/pdk';
 import { BackButtonComponent } from '../../../shared';
+import {
+  columns,
+  COMPLAINTS_FILE_STATUS_LABELS,
+  ComplaintsFileStatus
+} from '../../models/manage-your-complaints-files';
 import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'view-your-files-container',
@@ -44,34 +54,84 @@ import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
     <table pdk-table pdk-margin-top="6">
       <thead pdk-table-head>
         <tr pdk-table-row>
-          <th pdk-table-header>Reference</th>
-          <th pdk-table-header>Date uploaded</th>
-          <th pdk-table-header>Status</th>
-          <th pdk-table-header>Action</th>
-          <th pdk-table-header>File name</th>
-          <th pdk-table-header>Uploaded by</th>
+          @for (item of tableColumns; track item.key) {
+          <th pdk-table-header>{{ item.label }}</th>
+          }
         </tr>
       </thead>
       <tbody pdk-table-body>
         <tr pdk-table-row>
           <td pdk-table-cell data-role="reference">
-            <b>{{ result.reference }}</b>
+            <b>{{ result.id }}</b>
           </td>
-          <td pdk-table-cell>{{ result.dateUploaded }}</td>
-          <td pdk-table-cell>{{ result.status }}</td>
-          <td pdk-table-cell>{{ result.action }}</td>
-          <td pdk-table-cell>{{ result.fileName }}</td>
-          <td pdk-table-cell>{{ result.uploadedBy }}</td>
+          <td pdk-table-cell data-role="date-uploaded">{{ result.receivedAt | date: 'd MMMM yyyy' }}</td>
+          <td pdk-table-cell data-role="file-name">{{ result.filename }}</td>
+          <td pdk-table-cell data-role="uploaded-by">{{ result.username }}</td>
+          <td pdk-table-cell data-role="status">
+            @if (result.status === ComplaintsFileStatus.FAILED) {
+            <pdk-tag color="red">{{ statusLabels[result.status] }}</pdk-tag>
+            } @else {
+            {{ statusLabels[result.status] }}
+            }
+          </td>
+          <td pdk-table-cell data-role="file-action">
+            @if (result.status === ComplaintsFileStatus.FAILED) {
+            <a href="#" data-role="file-action">View error report</a>
+            } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
+            <a routerLink="support-documents" data-role="file-action">Add supporting documents</a>
+            }
+          </td>
         </tr>
       </tbody>
     </table>
+
+    <dl pdk-summary-list pdk-margin-top="6">
+      <div pdk-summary-list-item pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>Reference</dt>
+        <dd pdk-summary-list-value>{{ result.id }}</dd>
+      </div>
+      <div pdk-summary-list-item pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>Date uploaded</dt>
+        <dd pdk-summary-list-value>{{ result.receivedAt | date: 'd MMMM yyyy' }}</dd>
+      </div>
+      <div pdk-summary-list-item pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>File name</dt>
+        <dd pdk-summary-list-value>{{ result.filename }}</dd>
+      </div>
+      <div pdk-summary-list-item pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>Uploaded by</dt>
+        <dd pdk-summary-list-value>{{ result.username }}</dd>
+      </div>
+      <div pdk-summary-list-item pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>Status</dt>
+        <dd pdk-summary-list-value>
+          @if (result.status === ComplaintsFileStatus.FAILED) {
+          <pdk-tag color="red">{{ statusLabels[result.status] }}</pdk-tag>
+          } @else {
+          {{ statusLabels[result.status] }}
+          }
+        </dd>
+      </div>
+      <div pdk-summary-list-item borderless pdk-margin-bottom="2">
+        <dt pdk-summary-list-key>Action</dt>
+        <dd pdk-summary-list-value>
+          @if (result.status === ComplaintsFileStatus.FAILED) {
+          <a href="#" pdk-link data-role="summary-file-action">View error report</a>
+          } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
+          <a routerLink="support-documents" pdk-link data-role="summary-file-action">Add supporting documents</a>
+          }
+        </dd>
+      </div>
+    </dl>
     } @else {
     <p pdk-margin-top="6" data-role="no-results">No results found. Please check your reference number and try again.</p>
     } }
   `,
   imports: [
     BackButtonComponent,
+    PdkCore,
     PdkErrorSummaryComponent,
+    PdkSummaryList,
     PdkTypographyDirective,
     PdkMarginDirective,
     PdkForm,
@@ -80,11 +140,17 @@ import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
     PdkInput,
     PdkButton,
     PdkTable,
-    FormsModule
+    PdkTagComponent,
+    RouterLink,
+    FormsModule,
+    DatePipe
   ]
 })
 export class ViewYourFilesContainer {
   readonly store = inject(ViewYourFilesStore);
+  readonly ComplaintsFileStatus = ComplaintsFileStatus;
+  readonly statusLabels = COMPLAINTS_FILE_STATUS_LABELS;
+  readonly tableColumns = columns;
 
   referenceNumber = signal('');
   hasSearched = signal(false);

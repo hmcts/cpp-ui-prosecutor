@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SupportDocumentsContainer should render the container correctly 1`] = `
-<support-documents-container>
+<div
+  id="root0"
+>
   <back-button
     actiontext="Back"
     linkurl="../"
@@ -13,14 +15,108 @@ exports[`SupportDocumentsContainer should render the container correctly 1`] = `
       pdk-text-colour="black"
     >
        Back
+
     </a>
-  </back-button><h1
-    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-l"
-    pdk-margin-bottom="6"
-    pdk-margin-top="6"
-    pdk-typography="heading-large"
-  >
-    Add supporting documents
-  </h1>
-</support-documents-container>
+  </back-button>
+  
+  <file-upload-page>
+    <h1
+      class="govuk-!-margin-top-2 govuk-!-margin-bottom-2 govuk-heading-l"
+      pdk-margin-bottom="2"
+      pdk-margin-top="2"
+      pdk-typography="heading-large"
+    >
+      <span
+        page-header=""
+      >
+        Upload supporting documents for KUJ5953G (optional)
+      </span>
+    </h1>
+    <pdk-grid
+      class="govuk-grid-row"
+      container=""
+    >
+      <pdk-grid
+        class="govuk-grid-column-full"
+        full=""
+      >
+        <div
+          ngprojectas="section"
+        >
+          <p
+            class="govuk-!-margin-bottom-4"
+            pdk-margin-bottom="4"
+          >
+            You can upload a supporting document.
+          </p>
+          <p
+            class="govuk-!-margin-bottom-6"
+            pdk-margin-bottom="6"
+          >
+            Accepted file types include pdf, doc, jpeg, png, jpg, docx, odt and txt.
+          </p>
+        </div>
+        <form
+          class="ng-untouched ng-pristine ng-valid"
+          novalidate=""
+          pdk-form=""
+        >
+          <pdk-form-field
+            label="Upload a file"
+          >
+            
+            <pdk-form-group
+              class="pdk-form-group"
+            >
+              
+              <label
+                class="govuk-label"
+                for="file"
+              >
+                 Upload a file 
+              </label>
+              
+              <pdk-hint
+                class="govuk-hint"
+              >
+                <div>
+                  
+                   Make sure the file name includes the reference number and case name. 
+                  
+                </div>
+              </pdk-hint>
+              
+              
+              <input
+                accept=".pdf,.doc,.docx,.jpeg,.jpg,.png,.odt,.txt"
+                class="govuk-!-margin-top-3 govuk-file-upload ng-untouched ng-pristine ng-valid"
+                id="file"
+                name="file-upload"
+                ngmodel=""
+                pdk-file-input=""
+                pdk-margin-top="3"
+                required=""
+                type="file"
+              />
+              
+              
+            </pdk-form-group>
+          </pdk-form-field>
+          <button
+            class="govuk-!-margin-top-5 govuk-!-margin-bottom-5 govuk-button"
+            pdk-button=""
+            pdk-margin-vertical="5"
+            type="submit"
+          >
+            <span
+              submit=""
+            >
+              Upload and send
+            </span>
+          </button>
+        </form>
+      </pdk-grid>
+    </pdk-grid>
+  </file-upload-page>
+</div>
 `;

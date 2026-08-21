@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SupportDocumentsSuccessContainer should render the container correctly 1`] = `
+<div
+  id="root0"
+>
+  <back-button
+    actiontext="Back"
+    linkurl="../../"
+  >
+    <a
+      class="back-button link-back pdk-!-text-color-black govuk-back-link"
+      href="/"
+      pdk-back-link=""
+      pdk-text-colour="black"
+    >
+       Back
+
+    </a>
+  </back-button>
+  <pdk-panel
+    title="Supporting documents uploaded"
+  >
+    <div
+      class="govuk-panel govuk-panel--confirmation"
+    >
+      <h1
+        class="govuk-panel__title"
+      >
+        Supporting documents uploaded
+      </h1>
+      <div
+        class="govuk-panel__body"
+      >
+         For file 
+        <br />
+        <strong>
+          KUJ5953G
+        </strong>
+      </div>
+    </div>
+  </pdk-panel>
+  <h4
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-4 govuk-heading-s"
+    pdk-margin-bottom="4"
+    pdk-margin-top="6"
+    pdk-typography="heading-small"
+  >
+    What happens next
+  </h4>
+  <p
+    class="govuk-!-margin-bottom-4"
+    pdk-margin-bottom="4"
+  >
+    The supporting document will be considered by the court alongside your file.
+  </p>
+  <p
+    class="govuk-!-margin-bottom-6"
+    pdk-margin-bottom="6"
+  >
+     You can check the status of your files on the 
+    <a
+      class="govuk-link"
+      href="/manage-your-complaints-files/view-your-files"
+      pdk-link=""
+    >
+      view your files
+    </a>
+     page. 
+  </p>
+</div>
+`;

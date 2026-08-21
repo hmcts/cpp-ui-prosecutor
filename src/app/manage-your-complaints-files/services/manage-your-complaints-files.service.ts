@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-your-complaints-files';
 
@@ -9,15 +9,18 @@ import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-yo
 export class ManageYourComplaintsFilesService {
   private http = inject(CppHttp);
 
-  searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord[]> {
-    return this.http
-      .query<{ complaintsFiles: ComplaintsFileRecord[] }>({
-        url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files?search=${encodeURIComponent(
-          searchTerm
-        )}`,
-        requestType: 'application/vnd.stagingprosecutorscivil.query.complaints-files+json'
-      })
-      .pipe(map(response => response.complaintsFiles));
+  searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord> {
+    return this.http.query<ComplaintsFileRecord>({
+      url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+        searchTerm
+      )}`,
+      requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
+    });
+  }
+
+  uploadSupportingDocument(submissionId: string, file: File): Observable<void> {
+    // TODO: replace with the real supporting-documents upload endpoint once available
+    return of(undefined);
   }
 
   fetchCsvTemplate(): Observable<Blob> {
