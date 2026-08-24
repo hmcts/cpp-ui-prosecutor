@@ -48,7 +48,7 @@ export const ViewYourFilesStore = signalStore(
                 patchState(store, {
                   complaintsFile: {
                     id: 'c9a0fe7b-c05c-405a-97c0-012f9cbd9b6b',
-                    status: ComplaintsFileStatus.AWAITING_APPROVAL,
+                    status: ComplaintsFileStatus.FAILED,
                     warnings: [],
                     errors: [],
                     type: 'PROSECUTION',

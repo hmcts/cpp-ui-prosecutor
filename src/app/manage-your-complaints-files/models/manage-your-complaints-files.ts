@@ -33,15 +33,6 @@ export const COMPLAINTS_FILE_STATUS_LABELS: Record<ComplaintsFileStatus, string>
   [ComplaintsFileStatus.REJECTED]: 'Rejected by court'
 };
 
-export const columns: { key: keyof ComplaintsFileRecord | 'action'; label: string }[] = [
-  { key: 'id', label: 'Reference' },
-  { key: 'receivedAt', label: 'Date uploaded' },
-  { key: 'filename', label: 'File name' },
-  { key: 'username', label: 'Uploaded by' },
-  { key: 'status', label: 'Status' },
-  { key: 'action', label: 'Action' }
-];
-
 export interface ComplaintsFileRecord {
   id: string;
   status: ComplaintsFileStatus;

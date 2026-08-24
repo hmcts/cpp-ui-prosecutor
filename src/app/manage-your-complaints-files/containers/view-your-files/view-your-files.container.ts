@@ -11,18 +11,13 @@ import {
   PdkInput,
   PdkMarginDirective,
   PdkSummaryList,
-  PdkTable,
   PdkTagComponent,
   PdkTextInput,
   PdkTypographyDirective,
   ValidationError
 } from '@cpp/pdk';
 import { BackButtonComponent } from '../../../shared';
-import {
-  columns,
-  COMPLAINTS_FILE_STATUS_LABELS,
-  ComplaintsFileStatus
-} from '../../models/manage-your-complaints-files';
+import { COMPLAINTS_FILE_STATUS_LABELS, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
 import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
 import { DatePipe } from '@angular/common';
 
@@ -51,44 +46,10 @@ import { DatePipe } from '@angular/common';
     </form>
 
     @if (hasSearched()) { @if (store.complaintsFile(); as result) {
-    <table pdk-table pdk-margin-top="6">
-      <thead pdk-table-head>
-        <tr pdk-table-row>
-          @for (item of tableColumns; track item.key) {
-          <th pdk-table-header>{{ item.label }}</th>
-          }
-        </tr>
-      </thead>
-      <tbody pdk-table-body>
-        <tr pdk-table-row>
-          <td pdk-table-cell data-role="reference">
-            <b>{{ result.id }}</b>
-          </td>
-          <td pdk-table-cell data-role="date-uploaded">{{ result.receivedAt | date: 'd MMMM yyyy' }}</td>
-          <td pdk-table-cell data-role="file-name">{{ result.filename }}</td>
-          <td pdk-table-cell data-role="uploaded-by">{{ result.username }}</td>
-          <td pdk-table-cell data-role="status">
-            @if (result.status === ComplaintsFileStatus.FAILED) {
-            <pdk-tag color="red">{{ statusLabels[result.status] }}</pdk-tag>
-            } @else {
-            {{ statusLabels[result.status] }}
-            }
-          </td>
-          <td pdk-table-cell data-role="file-action">
-            @if (result.status === ComplaintsFileStatus.FAILED) {
-            <a href="#" data-role="file-action">View error report</a>
-            } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
-            <a routerLink="support-documents" data-role="file-action">Add supporting documents</a>
-            }
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
     <dl pdk-summary-list pdk-margin-top="6">
       <div pdk-summary-list-item pdk-margin-bottom="2">
         <dt pdk-summary-list-key>Reference</dt>
-        <dd pdk-summary-list-value>{{ result.id }}</dd>
+        <dd pdk-summary-list-value data-role="reference">{{ result.id }}</dd>
       </div>
       <div pdk-summary-list-item pdk-margin-bottom="2">
         <dt pdk-summary-list-key>Date uploaded</dt>
@@ -116,9 +77,9 @@ import { DatePipe } from '@angular/common';
         <dt pdk-summary-list-key>Action</dt>
         <dd pdk-summary-list-value>
           @if (result.status === ComplaintsFileStatus.FAILED) {
-          <a href="#" pdk-link data-role="summary-file-action">View error report</a>
+          <a href="#" pdk-link data-role="file-action">View error report</a>
           } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
-          <a routerLink="support-documents" pdk-link data-role="summary-file-action">Add supporting documents</a>
+          <a routerLink="support-documents" pdk-link data-role="file-action">Add supporting documents</a>
           }
         </dd>
       </div>
@@ -139,7 +100,6 @@ import { DatePipe } from '@angular/common';
     PdkTextInput,
     PdkInput,
     PdkButton,
-    PdkTable,
     PdkTagComponent,
     RouterLink,
     FormsModule,
@@ -150,7 +110,6 @@ export class ViewYourFilesContainer {
   readonly store = inject(ViewYourFilesStore);
   readonly ComplaintsFileStatus = ComplaintsFileStatus;
   readonly statusLabels = COMPLAINTS_FILE_STATUS_LABELS;
-  readonly tableColumns = columns;
 
   referenceNumber = signal('');
   hasSearched = signal(false);

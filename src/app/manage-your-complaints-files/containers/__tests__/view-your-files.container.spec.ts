@@ -50,8 +50,8 @@ describe('ViewYourFilesContainer', () => {
     expect(fixture.nativeElement).toMatchSnapshot();
   });
 
-  it('should not show a results table before a search has been made', () => {
-    expect(fixture.debugElement.query(By.css('table'))).toBeNull();
+  it('should not show a results summary before a search has been made', () => {
+    expect(fixture.debugElement.query(By.css('dl[pdk-summary-list]'))).toBeNull();
   });
 
   it('should search the store with the entered search term', () => {
@@ -63,7 +63,7 @@ describe('ViewYourFilesContainer', () => {
     expect(fixture.componentInstance.hasSearched()).toBe(true);
   });
 
-  it('should show the matching record in a table once a search has been made', () => {
+  it('should show the matching record once a search has been made', () => {
     fixture.componentInstance.hasSearched.set(true);
     result.set(complaintsFile);
     fixture.detectChanges();
@@ -104,7 +104,7 @@ describe('ViewYourFilesContainer', () => {
 
     const message = fixture.debugElement.query(By.css('[data-role="no-results"]')).nativeElement;
     expect(message.textContent).toContain('No results found. Please check your reference number and try again.');
-    expect(fixture.debugElement.query(By.css('table'))).toBeNull();
+    expect(fixture.debugElement.query(By.css('dl[pdk-summary-list]'))).toBeNull();
   });
 
   it('should show the error summary and not search when submitted with an empty reference number', () => {
