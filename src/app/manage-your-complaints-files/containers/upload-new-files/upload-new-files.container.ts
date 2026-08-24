@@ -12,7 +12,9 @@ import { NewFilesRoutes } from './upload-new-files.routes';
 @Component({
   selector: 'upload-new-files-container',
   template: `
-    <csv-template-download-error [show]="store.hasDownloadCsvError()"></csv-template-download-error>
+    <csv-template-download-error [show]="store.hasDownloadCsvError()">
+      <span error-message>Unable to download the CSV template at the moment. Please try again later.</span>
+    </csv-template-download-error>
 
     <back-button actionText="Back" linkUrl="/manage-your-complaints-files"></back-button>
     @if (errors()?.length) {

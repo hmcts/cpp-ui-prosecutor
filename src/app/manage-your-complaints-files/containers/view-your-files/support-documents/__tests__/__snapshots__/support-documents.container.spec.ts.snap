@@ -29,7 +29,7 @@ exports[`SupportDocumentsContainer should render the container correctly 1`] = `
       <span
         page-header=""
       >
-        Upload supporting documents for KUJ5953G (optional)
+        Upload supporting documents for dummy-id-1 (optional)
       </span>
     </h1>
     <pdk-grid

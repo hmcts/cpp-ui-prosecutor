@@ -25,7 +25,7 @@ describe('ManageYourComplaintsFilesService', () => {
 
   it('should search for a complaints file by submission reference number', done => {
     const complaintsFile = {
-      id: 'KUJ5953G',
+      id: 'dummy-id-1',
       status: ComplaintsFileStatus.PENDING,
       warnings: [],
       errors: [],
@@ -38,9 +38,9 @@ describe('ManageYourComplaintsFilesService', () => {
     };
     mockQuery.mockReturnValue(of(complaintsFile));
 
-    service.searchComplaintsFiles('KUJ5953G').subscribe(result => {
+    service.searchComplaintsFiles('dummy-id-1').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/KUJ5953G',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1',
         requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
       });
       expect(result).toEqual(complaintsFile);
@@ -63,17 +63,33 @@ describe('ManageYourComplaintsFilesService', () => {
     });
   });
 
+  it('should fetch the error report for a submission as a blob', done => {
+    const blob = new Blob(['a,b,c'], { type: 'text/csv' });
+    mockQuery.mockReturnValue(of(blob));
+
+    service.fetchErrorReport('dummy-id-1').subscribe(result => {
+      expect(mockQuery).toHaveBeenCalledWith({
+        url:
+          '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1/error-report',
+        requestType: 'text/csv',
+        responseType: 'blob'
+      });
+      expect(result).toBeInstanceOf(Blob);
+      done();
+    });
+  });
+
   it('should parse the JSON text body returned by the command API into an UploadCsvFileResponse', done => {
     const body = JSON.stringify({
-      statusURL: 'https://replace-me.gov.uk/7dc10444-b23d-48fa-8026-d3a970723d94',
-      submissionId: '7dc10444-b23d-48fa-8026-d3a970723d94'
+      statusURL: 'https://replace-me.gov.uk/dummy-id-1',
+      submissionId: 'dummy-id-1'
     });
     mockCommand.mockReturnValue(of(new HttpResponse({ body, status: 200 })));
 
     service.postCsvFile(new File(['a,b,c'], 'complaints.csv')).subscribe(result => {
       expect(result).toEqual({
-        statusURL: 'https://replace-me.gov.uk/7dc10444-b23d-48fa-8026-d3a970723d94',
-        submissionId: '7dc10444-b23d-48fa-8026-d3a970723d94'
+        statusURL: 'https://replace-me.gov.uk/dummy-id-1',
+        submissionId: 'dummy-id-1'
       });
       done();
     });

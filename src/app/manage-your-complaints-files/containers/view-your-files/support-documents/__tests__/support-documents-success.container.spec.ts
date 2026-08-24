@@ -11,7 +11,7 @@ describe('SupportDocumentsSuccessContainer', () => {
     TestBed.configureTestingModule({
       imports: [SupportDocumentsSuccessContainer],
       providers: [
-        { provide: ViewYourFilesStore, useValue: { referenceNumber: () => 'KUJ5953G' } },
+        { provide: ViewYourFilesStore, useValue: { referenceNumber: () => 'dummy-id-1' } },
         { provide: ActivatedRoute, useValue: {} }
       ],
       teardown: { destroyAfterEach: false }
@@ -28,7 +28,7 @@ describe('SupportDocumentsSuccessContainer', () => {
   it('should show the reference number for the uploaded file', () => {
     expect(fixture.nativeElement.textContent).toContain('Supporting documents uploaded');
     expect(fixture.nativeElement.textContent).toContain('For file');
-    expect(fixture.nativeElement.textContent).toContain('KUJ5953G');
+    expect(fixture.nativeElement.textContent).toContain('dummy-id-1');
   });
 
   it('should link to view your files', () => {

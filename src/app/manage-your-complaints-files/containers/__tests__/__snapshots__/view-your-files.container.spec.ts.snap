@@ -4,6 +4,9 @@ exports[`ViewYourFilesContainer should render the container correctly 1`] = `
 <div
   id="root0"
 >
+  <csv-template-download-error>
+    
+  </csv-template-download-error>
   <back-button
     actiontext="Back"
     linkurl="../"

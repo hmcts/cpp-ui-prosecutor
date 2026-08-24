@@ -20,11 +20,15 @@ import { BackButtonComponent } from '../../../shared';
 import { COMPLAINTS_FILE_STATUS_LABELS, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
 import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
 import { DatePipe } from '@angular/common';
+import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-download-error/csv-template-download-error.component';
 
 @Component({
   selector: 'view-your-files-container',
   template: `
-    <back-button actionText="Back" linkUrl="../"></back-button>
+    <csv-template-download-error [show]="store.hasDownloadErrorReportError()">
+      <span error-message>Unable to download the error report at the moment. Please try again later.</span>
+    </csv-template-download-error>
+    <back-button actionText="Back" linkUrl="../" (backClick)="store.resetState()"></back-button>
     @if (errors()?.length) {
     <pdk-error-summary [errors]="errors()" shouldFocus="true" pdk-margin-top="4"></pdk-error-summary>
     }
@@ -77,7 +81,9 @@ import { DatePipe } from '@angular/common';
         <dt pdk-summary-list-key>Action</dt>
         <dd pdk-summary-list-value>
           @if (result.status === ComplaintsFileStatus.FAILED) {
-          <a href="#" pdk-link data-role="file-action">View error report</a>
+          <a href="javascript:void(0)" pdk-link data-role="file-action" (click)="store.downloadErrorReport(result.id)"
+            >View error report</a
+          >
           } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
           <a routerLink="support-documents" pdk-link data-role="file-action">Add supporting documents</a>
           }
@@ -103,7 +109,8 @@ import { DatePipe } from '@angular/common';
     PdkTagComponent,
     RouterLink,
     FormsModule,
-    DatePipe
+    DatePipe,
+    CsvTemplateDownloadErrorComponent
   ]
 })
 export class ViewYourFilesContainer {
@@ -112,7 +119,7 @@ export class ViewYourFilesContainer {
   readonly statusLabels = COMPLAINTS_FILE_STATUS_LABELS;
 
   referenceNumber = signal('');
-  hasSearched = signal(false);
+  hasSearched = signal(!!this.store.complaintsFile());
   errors = signal<ValidationError[] | null>(null);
 
   readonly errorMessages = computed<ErrorMessageConfig[]>(() => [

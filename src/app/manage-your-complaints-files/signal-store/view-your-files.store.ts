@@ -4,6 +4,7 @@ import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
 import { HttpErrorResponse } from '@angular/common/http';
+import FileSaver from 'file-saver';
 import { ManageYourComplaintsFilesService } from '../services/manage-your-complaints-files.service';
 import { withErrorHandlerAdapter } from './with-error-handler-adapter.feature';
 import {
@@ -15,11 +16,13 @@ import {
 interface ViewYourFilesState {
   complaintsFile: ComplaintsFileRecord | null;
   searchErrorMessage: string | null;
+  hasDownloadErrorReportError: boolean;
 }
 
 const initialState: ViewYourFilesState = {
   complaintsFile: null,
-  searchErrorMessage: null
+  searchErrorMessage: null,
+  hasDownloadErrorReportError: false
 };
 
 export const ViewYourFilesStore = signalStore(
@@ -29,7 +32,8 @@ export const ViewYourFilesStore = signalStore(
   withProps((_, service = inject(ManageYourComplaintsFilesService)) => ({
     _searchComplaintsFiles: (searchTerm: string) => service.searchComplaintsFiles(searchTerm),
     _uploadSupportingDocument: (submissionId: string, file: File) =>
-      service.uploadSupportingDocument(submissionId, file)
+      service.uploadSupportingDocument(submissionId, file),
+    _fetchErrorReport: (submissionId: string) => service.fetchErrorReport(submissionId)
   })),
   withComputed(({ complaintsFile }) => ({
     referenceNumber: computed(() => complaintsFile()?.id ?? null)
@@ -37,7 +41,7 @@ export const ViewYourFilesStore = signalStore(
   withMethods(store => ({
     searchComplaintsFiles: rxMethod<string>(
       pipe(
-        tap(() => patchState(store, { searchErrorMessage: null })),
+        tap(() => patchState(store, { searchErrorMessage: null, hasDownloadErrorReportError: false })),
         switchMap(searchTerm =>
           store._searchComplaintsFiles(searchTerm).pipe(
             tapResponse({
@@ -79,6 +83,23 @@ export const ViewYourFilesStore = signalStore(
             tapResponse({
               next: onUploadSuccess,
               error: (error: HttpErrorResponse) => onUploadError(error)
+            })
+          )
+        )
+      )
+    ),
+
+    downloadErrorReport: rxMethod<string>(
+      pipe(
+        tap(() => patchState(store, { hasDownloadErrorReportError: false })),
+        switchMap(submissionId =>
+          store._fetchErrorReport(submissionId).pipe(
+            tapResponse({
+              next: blob => FileSaver.saveAs(blob, `error-report-${submissionId}.csv`),
+              error: (error: HttpErrorResponse) => {
+                patchState(store, { hasDownloadErrorReportError: true });
+                store.handleError(error);
+              }
             })
           )
         )

@@ -1,3 +1,9 @@
-<a pdk-text-colour="black" pdk-back-link class="back-button link-back" [routerLink]="[linkUrl]">
+<a
+  pdk-text-colour="black"
+  pdk-back-link
+  class="back-button link-back"
+  [routerLink]="[linkUrl]"
+  (click)="backClick.emit()"
+>
   {{ actionText }}
 </a>

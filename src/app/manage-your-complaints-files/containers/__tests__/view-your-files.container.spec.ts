@@ -11,9 +11,12 @@ describe('ViewYourFilesContainer', () => {
   let result: WritableSignal<ComplaintsFileRecord | null>;
   let searchErrorMessage: WritableSignal<string | null>;
   let searchComplaintsFiles: jest.Mock;
+  let downloadErrorReport: jest.Mock;
+  let hasDownloadErrorReportError: WritableSignal<boolean>;
+  let resetState: jest.Mock;
 
   const complaintsFile: ComplaintsFileRecord = {
-    id: 'KUJ5953G',
+    id: 'dummy-id-1',
     status: ComplaintsFileStatus.PENDING,
     warnings: [],
     errors: [],
@@ -29,13 +32,23 @@ describe('ViewYourFilesContainer', () => {
     result = signal(null);
     searchErrorMessage = signal(null);
     searchComplaintsFiles = jest.fn();
+    downloadErrorReport = jest.fn();
+    hasDownloadErrorReportError = signal(false);
+    resetState = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [ViewYourFilesContainer],
       providers: [
         {
           provide: ViewYourFilesStore,
-          useValue: { complaintsFile: result, searchErrorMessage, searchComplaintsFiles }
+          useValue: {
+            complaintsFile: result,
+            searchErrorMessage,
+            searchComplaintsFiles,
+            downloadErrorReport,
+            hasDownloadErrorReportError,
+            resetState
+          }
         },
         { provide: ActivatedRoute, useValue: {} }
       ],
@@ -55,11 +68,11 @@ describe('ViewYourFilesContainer', () => {
   });
 
   it('should search the store with the entered search term', () => {
-    fixture.componentInstance.referenceNumber.set('KUJ5953G');
+    fixture.componentInstance.referenceNumber.set('dummy-id-1');
 
     fixture.componentInstance.search();
 
-    expect(searchComplaintsFiles).toHaveBeenCalledWith('KUJ5953G');
+    expect(searchComplaintsFiles).toHaveBeenCalledWith('dummy-id-1');
     expect(fixture.componentInstance.hasSearched()).toBe(true);
   });
 
@@ -69,7 +82,7 @@ describe('ViewYourFilesContainer', () => {
     fixture.detectChanges();
 
     const row = fixture.debugElement.query(By.css('[data-role="reference"]')).nativeElement;
-    expect(row.textContent).toContain('KUJ5953G');
+    expect(row.textContent).toContain('dummy-id-1');
     expect(fixture.nativeElement.textContent).toContain('File processing');
     expect(fixture.debugElement.query(By.css('[data-role="no-results"]'))).toBeNull();
   });
@@ -87,6 +100,28 @@ describe('ViewYourFilesContainer', () => {
     expect(link.textContent).toContain('View error report');
   });
 
+  it('should download the error report when the "View error report" link is clicked', () => {
+    fixture.componentInstance.hasSearched.set(true);
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.FAILED });
+    fixture.detectChanges();
+
+    fixture.debugElement.query(By.css('[data-role="file-action"]')).triggerEventHandler('click', new Event('click'));
+
+    expect(downloadErrorReport).toHaveBeenCalledWith(complaintsFile.id);
+  });
+
+  it('should not show a download error report error by default', () => {
+    expect(fixture.debugElement.query(By.css('pdk-alert'))).toBeNull();
+  });
+
+  it('should show a download error report error when downloading the error report fails', () => {
+    hasDownloadErrorReportError.set(true);
+    fixture.detectChanges();
+
+    const alert = fixture.debugElement.query(By.css('pdk-alert')).nativeElement;
+    expect(alert.textContent).toContain('Unable to download the error report at the moment');
+  });
+
   it('should show an "Add supporting documents" link when awaiting court decision', () => {
     fixture.componentInstance.hasSearched.set(true);
     result.set({ ...complaintsFile, status: ComplaintsFileStatus.AWAITING_APPROVAL });
@@ -97,7 +132,7 @@ describe('ViewYourFilesContainer', () => {
   });
 
   it('should show a no results message when the search finds nothing', () => {
-    fixture.componentInstance.referenceNumber.set('KUJ5953G');
+    fixture.componentInstance.referenceNumber.set('dummy-id-1');
     fixture.componentInstance.search();
     result.set(null);
     fixture.detectChanges();
@@ -121,5 +156,21 @@ describe('ViewYourFilesContainer', () => {
     fixture.detectChanges();
 
     expect(fixture.nativeElement.textContent).toContain('Enter a valid reference number');
+  });
+
+  it('should reset the store when the "Back" link is clicked', () => {
+    fixture.debugElement.query(By.css('back-button a')).triggerEventHandler('click', new Event('click'));
+
+    expect(resetState).toHaveBeenCalled();
+  });
+
+  it('should show the previously found record on creation, e.g. when returning from supporting documents', () => {
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.AWAITING_APPROVAL });
+
+    const newFixture = TestBed.createComponent(ViewYourFilesContainer);
+    newFixture.detectChanges();
+
+    expect(newFixture.componentInstance.hasSearched()).toBe(true);
+    expect(newFixture.debugElement.query(By.css('dl[pdk-summary-list]'))).not.toBeNull();
   });
 });

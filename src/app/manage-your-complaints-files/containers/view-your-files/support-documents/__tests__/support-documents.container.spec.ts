@@ -18,7 +18,7 @@ describe('SupportDocumentsContainer', () => {
       providers: [
         {
           provide: ViewYourFilesStore,
-          useValue: { referenceNumber: () => 'KUJ5953G', uploadSupportingDocument }
+          useValue: { referenceNumber: () => 'dummy-id-1', uploadSupportingDocument }
         },
         { provide: ActivatedRoute, useValue: {} }
       ],
@@ -35,7 +35,7 @@ describe('SupportDocumentsContainer', () => {
   });
 
   it('should show the reference number in the page header', () => {
-    expect(fixture.nativeElement.textContent).toContain('Upload supporting documents for KUJ5953G (optional)');
+    expect(fixture.nativeElement.textContent).toContain('Upload supporting documents for dummy-id-1 (optional)');
   });
 
   it('should navigate to the success page when the upload succeeds', () => {

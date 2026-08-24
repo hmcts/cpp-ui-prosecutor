@@ -23,10 +23,23 @@ export class ManageYourComplaintsFilesService {
     return of(undefined);
   }
 
+  fetchErrorReport(submissionId: string): Observable<Blob> {
+    // TODO: dummy endpoint - replace with the real error report endpoint once available
+    return this.http
+      .query<Blob>({
+        url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+          submissionId
+        )}/error-report`,
+        requestType: 'text/csv',
+        responseType: 'blob'
+      })
+      .pipe(map(response => new Blob([response], { type: response.type })));
+  }
+
   fetchCsvTemplate(): Observable<Blob> {
     return this.http
       .query<Blob>({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template1',
         requestType: 'text/csv',
         responseType: 'blob'
       })
