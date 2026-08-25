@@ -7,11 +7,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import FileSaver from 'file-saver';
 import { ManageYourComplaintsFilesService } from '../services/manage-your-complaints-files.service';
 import { withErrorHandlerAdapter } from './with-error-handler-adapter.feature';
-import {
-  ComplaintsFileRecord,
-  ComplaintsFileStatus,
-  UploadSupportingDocumentRequest
-} from '../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, UploadSupportingDocumentRequest } from '../models/manage-your-complaints-files';
 
 interface ViewYourFilesState {
   complaintsFile: ComplaintsFileRecord | null;
@@ -47,22 +43,7 @@ export const ViewYourFilesStore = signalStore(
             tapResponse({
               next: result => patchState(store, { complaintsFile: result }),
               error: (error: HttpErrorResponse) => {
-                //patchState(store, { complaintsFile: null });
-                // TODO: remove - dummy data for testing the error state UI
-                patchState(store, {
-                  complaintsFile: {
-                    id: 'c9a0fe7b-c05c-405a-97c0-012f9cbd9b6b',
-                    status: ComplaintsFileStatus.FAILED,
-                    warnings: [],
-                    errors: [],
-                    type: 'PROSECUTION',
-                    receivedAt: '2026-08-21T08:58:13.859Z',
-                    filename: 'raghavendra-chaturvedula-file.csv',
-                    username: 'Test User',
-                    caseErrors: [],
-                    defendantErrors: []
-                  }
-                });
+                patchState(store, { complaintsFile: null });
                 if (error.status === 400) {
                   const parsedError = JSON.parse(error.error);
                   patchState(store, { searchErrorMessage: parsedError.error });

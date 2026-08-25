@@ -22,10 +22,12 @@ describe('ViewYourFilesContainer', () => {
     errors: [],
     type: 'PROSECUTION',
     receivedAt: '16 June 2026',
-    filename: 'complaints-list-KM',
+    fileName: 'complaints-list-KM',
     username: 'Sarah Hall',
     caseErrors: [],
-    defendantErrors: []
+    defendantErrors: [],
+    prosecutingAuthority: 'Crown Prosecution Service',
+    completedAt: '16 June 2026'
   };
 
   beforeEach(() => {

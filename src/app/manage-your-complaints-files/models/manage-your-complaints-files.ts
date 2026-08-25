@@ -40,8 +40,10 @@ export interface ComplaintsFileRecord {
   errors: string[];
   type: string;
   receivedAt: string;
-  filename: string;
+  fileName: string;
   username: string;
   caseErrors: string[];
   defendantErrors: string[];
+  completedAt: string;
+  prosecutingAuthority: string;
 }

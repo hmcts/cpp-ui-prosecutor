@@ -25,10 +25,12 @@ describe('ViewYourFilesStore', () => {
     errors: [],
     type: 'PROSECUTION',
     receivedAt: '16 June 2026',
-    filename: 'complaints-list-KM',
+    fileName: 'complaints-list-KM',
     username: 'Sarah Hall',
     caseErrors: [],
-    defendantErrors: []
+    defendantErrors: [],
+    prosecutingAuthority: 'Crown Prosecution Service',
+    completedAt: '16 June 2026'
   };
 
   beforeEach(() => {
@@ -65,7 +67,7 @@ describe('ViewYourFilesStore', () => {
     expect(store.complaintsFile()).toEqual(complaintsFile);
   });
 
-  it('should show the dummy error record and dispatch an ApiError when the search fails', () => {
+  it('should clear the complaints file and dispatch an ApiError when the search fails', () => {
     searchComplaintsFiles.mockReturnValue(of(complaintsFile));
     store.searchComplaintsFiles('dummy-id-1');
 
@@ -73,7 +75,7 @@ describe('ViewYourFilesStore', () => {
     searchComplaintsFiles.mockReturnValue(throwError(() => error));
     store.searchComplaintsFiles('dummy-id-1');
 
-    expect(store.complaintsFile()).toEqual(expect.objectContaining({ id: expect.any(String) }));
+    expect(store.complaintsFile()).toBeNull();
     expect(dispatch).toHaveBeenCalledWith(new ApiError(error));
   });
 
@@ -86,7 +88,7 @@ describe('ViewYourFilesStore', () => {
 
     store.searchComplaintsFiles('not-a-reference');
 
-    expect(store.complaintsFile()).toEqual(expect.objectContaining({ id: expect.any(String) }));
+    expect(store.complaintsFile()).toBeNull();
     expect(store.searchErrorMessage()).toBe('Enter a valid reference number');
     expect(dispatch).not.toHaveBeenCalled();
   });

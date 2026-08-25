@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { CppHttp } from '@cpp/core';
-import { HttpResponse } from '@angular/common/http';
+import { HttpParams, HttpResponse } from '@angular/common/http';
 import { of } from 'rxjs';
 import { ManageYourComplaintsFilesService } from '../manage-your-complaints-files.service';
 import { ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
@@ -41,6 +41,7 @@ describe('ManageYourComplaintsFilesService', () => {
     service.searchComplaintsFiles('dummy-id-1').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
         url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1',
+        params: new HttpParams().set('additionalInfo', true),
         requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
       });
       expect(result).toEqual(complaintsFile);

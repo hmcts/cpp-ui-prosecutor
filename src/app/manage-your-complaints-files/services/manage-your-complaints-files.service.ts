@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
-import { HttpResponse } from '@angular/common/http';
+import { HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-your-complaints-files';
@@ -14,6 +14,7 @@ export class ManageYourComplaintsFilesService {
       url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
         searchTerm
       )}`,
+      params: new HttpParams().set('additionalInfo', true),
       requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
     });
   }
@@ -39,7 +40,7 @@ export class ManageYourComplaintsFilesService {
   fetchCsvTemplate(): Observable<Blob> {
     return this.http
       .query<Blob>({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template1',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template',
         requestType: 'text/csv',
         responseType: 'blob'
       })

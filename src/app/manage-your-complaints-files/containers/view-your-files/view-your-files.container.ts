@@ -61,7 +61,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
       </div>
       <div pdk-summary-list-item pdk-margin-bottom="2">
         <dt pdk-summary-list-key>File name</dt>
-        <dd pdk-summary-list-value>{{ result.filename }}</dd>
+        <dd pdk-summary-list-value>{{ result.fileName }}</dd>
       </div>
       <div pdk-summary-list-item pdk-margin-bottom="2">
         <dt pdk-summary-list-key>Uploaded by</dt>
@@ -86,7 +86,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
           >
           } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
           <a routerLink="support-documents" pdk-link data-role="file-action">Add supporting documents</a>
-          }
+          } @else{ -- }
         </dd>
       </div>
     </dl>
