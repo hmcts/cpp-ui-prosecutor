@@ -3,7 +3,7 @@ import { CppHttp } from '@cpp/core';
 import { HttpParams, HttpResponse } from '@angular/common/http';
 import { of } from 'rxjs';
 import { ManageYourComplaintsFilesService } from '../manage-your-complaints-files.service';
-import { ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
+import { ComplaintsFileStatus } from '../../interface/manage-your-complaints-files';
 
 describe('ManageYourComplaintsFilesService', () => {
   let service: ManageYourComplaintsFilesService;

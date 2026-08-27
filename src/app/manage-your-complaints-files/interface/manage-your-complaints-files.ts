@@ -1,5 +1,13 @@
 import { HttpErrorResponse } from '@angular/common/http';
 
+export interface ComplaintsTile {
+  testId: string;
+  title: string;
+  description: string;
+  link?: string;
+  action?: () => void;
+}
+
 export interface UploadCsvFileResponse {
   statusURL: string;
   submissionId: string;

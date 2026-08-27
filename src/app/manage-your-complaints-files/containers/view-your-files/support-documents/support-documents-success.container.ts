@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PdkLinkDirective, PdkMarginDirective, PdkPanelComponent, PdkTypographyDirective } from '@cpp/pdk';
 import { ViewYourFilesStore } from '../../../signal-store/view-your-files.store';
+import { ComplaintsFileRoutes } from '../../../manage-your-complaints-files.routes';
 
 @Component({
   selector: 'support-documents-success-container',
@@ -19,7 +20,10 @@ import { ViewYourFilesStore } from '../../../signal-store/view-your-files.store'
 
     <p pdk-margin-bottom="6">
       You can check the status of your files on the
-      <a href="javascript:void(0)" pdk-link [routerLink]="['/manage-your-complaints-files/view-your-files']"
+      <a
+        href="javascript:void(0)"
+        pdk-link
+        [routerLink]="['/manage-your-complaints-files', ComplaintsFileRoutes.VIEW_YOUR_FILES]"
         >view your files</a
       >
       page.
@@ -29,4 +33,5 @@ import { ViewYourFilesStore } from '../../../signal-store/view-your-files.store'
 })
 export class SupportDocumentsSuccessContainer {
   readonly store = inject(ViewYourFilesStore);
+  readonly ComplaintsFileRoutes = ComplaintsFileRoutes;
 }

@@ -4,7 +4,7 @@ import { HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { v4 as uuid } from 'uuid';
-import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, UploadCsvFileResponse } from '../interface/manage-your-complaints-files';
 import { buildAddCourtDocumentRequest } from '../manage-your-complaints-files.util';
 
 @Injectable({ providedIn: 'root' })
@@ -32,12 +32,11 @@ export class ManageYourComplaintsFilesService {
   }
 
   fetchErrorReport(submissionId: string): Observable<Blob> {
-    // TODO: dummy endpoint - replace with the real error report endpoint once available
     return this.http
       .query<Blob>({
         url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
           submissionId
-        )}`,
+        )}/error-report`,
         requestType: 'text/csv',
         responseType: 'blob'
       })

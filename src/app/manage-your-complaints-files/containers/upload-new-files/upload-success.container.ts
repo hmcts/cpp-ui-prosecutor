@@ -3,6 +3,7 @@ import { BackButtonComponent } from '../../../shared';
 import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-complaints-files.store';
 import { PdkLinkDirective, PdkMarginDirective, PdkNotificationBanner, PdkTypographyDirective } from '@cpp/pdk';
 import { RouterLink } from '@angular/router';
+import { ComplaintsFileRoutes } from '../../manage-your-complaints-files.routes';
 
 @Component({
   selector: 'upload-success-container',
@@ -29,7 +30,10 @@ import { RouterLink } from '@angular/router';
 
     <p pdk-margin-bottom="6">
       You can check the status of your files on the
-      <a href="javascript:void(0)" pdk-link [routerLink]="['/manage-your-complaints-files/view-your-files']"
+      <a
+        href="javascript:void(0)"
+        pdk-link
+        [routerLink]="['/manage-your-complaints-files', ComplaintsFileRoutes.VIEW_YOUR_FILES]"
         >view your files</a
       >
       page. You can also add supporting documents here once the file has been successfully processed.
@@ -48,4 +52,5 @@ import { RouterLink } from '@angular/router';
 })
 export class UploadSuccessContainer {
   readonly store = inject(ManageYourComplaintsFilesStore);
+  readonly ComplaintsFileRoutes = ComplaintsFileRoutes;
 }

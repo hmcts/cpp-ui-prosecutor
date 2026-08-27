@@ -7,7 +7,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import FileSaver from 'file-saver';
 import { ManageYourComplaintsFilesService } from '../services/manage-your-complaints-files.service';
 import { withErrorHandlerAdapter } from './with-error-handler-adapter.feature';
-import { ComplaintsFileRecord, UploadSupportingDocumentRequest } from '../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, UploadSupportingDocumentRequest } from '../interface/manage-your-complaints-files';
 
 interface ViewYourFilesState {
   complaintsFile: ComplaintsFileRecord | null;

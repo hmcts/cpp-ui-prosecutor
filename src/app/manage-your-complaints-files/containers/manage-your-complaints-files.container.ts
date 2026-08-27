@@ -1,9 +1,10 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import { Component, OnDestroy, inject, signal } from '@angular/core';
 import { CsvTemplateDownloadErrorComponent } from '../shared/csv-template-download-error/csv-template-download-error.component';
 import { PdkCore, PdkGrid, PdkTypographyDirective } from '@cpp/pdk';
 import { BackButtonComponent } from '../../shared';
 import { RouterLink } from '@angular/router';
 import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-complaints-files.store';
+import { ComplaintsTile } from '../interface/manage-your-complaints-files';
 
 @Component({
   selector: 'manage-your-complaints-files-container',
@@ -16,42 +17,24 @@ import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-comp
     <h1 pdk-typography="heading-large" pdk-margin-top="6" pdk-margin-bottom="6">Manage your complaints files</h1>
 
     <pdk-grid container>
+      @for (tile of tiles(); track tile.testId) {
       <pdk-grid one-third>
-        <div data-test-id="upload-new-files" pdk-border-colour="mid-grey" tint="25" class="complaints-tile">
+        <div [attr.data-test-id]="tile.testId" pdk-border-colour="mid-grey" tint="25" class="complaints-tile">
           <div pdk-fill-colour="light-grey" pdk-padding="3">
             <h2 pdk-typography="heading-small" pdk-margin="0">
-              <a href="javascript:void(0)" pdk-link routerLink="upload-new-files">Upload new files</a>
+              @if (tile.link) {
+              <a href="javascript:void(0)" pdk-link [routerLink]="tile.link">{{ tile.title }}</a>
+              } @else {
+              <a href="javascript:void(0)" pdk-link (click)="tile.action?.()">{{ tile.title }}</a>
+              }
             </h2>
           </div>
           <div pdk-padding="3">
-            <p>Upload the list to be authorised before the summons. Additional files need to be uploaded separately.</p>
+            <p>{{ tile.description }}</p>
           </div>
         </div>
       </pdk-grid>
-      <pdk-grid one-third>
-        <div data-test-id="view-your-files" pdk-border-colour="mid-grey" tint="25" class="complaints-tile">
-          <div pdk-fill-colour="light-grey" pdk-padding="3">
-            <h2 pdk-typography="heading-small" pdk-margin="0">
-              <a href="javascript:void(0)" pdk-link routerLink="view-your-files">View your files</a>
-            </h2>
-          </div>
-          <div pdk-padding="3">
-            <p>View and manage files already uploaded.</p>
-          </div>
-        </div>
-      </pdk-grid>
-      <pdk-grid one-third>
-        <div data-test-id="download-csv-template" pdk-border-colour="mid-grey" tint="25" class="complaints-tile">
-          <div pdk-fill-colour="light-grey" pdk-padding="3">
-            <h2 pdk-typography="heading-small" pdk-margin="0">
-              <a href="javascript:void(0)" pdk-link (click)="store.downloadCsvTemplate()">Download CSV template</a>
-            </h2>
-          </div>
-          <div pdk-padding="3">
-            <p>Download the template you need to convert your files into CSV ready for uploading.</p>
-          </div>
-        </div>
-      </pdk-grid>
+      }
     </pdk-grid>
   `,
   imports: [
@@ -72,6 +55,28 @@ import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-comp
 })
 export class ManageYourComplaintsFilesContainer implements OnDestroy {
   readonly store = inject(ManageYourComplaintsFilesStore);
+
+  readonly tiles = signal<ComplaintsTile[]>([
+    {
+      testId: 'upload-new-files',
+      title: 'Upload new files',
+      description:
+        'Upload the list to be authorised before the summons. Additional files need to be uploaded separately.',
+      link: 'upload-new-files'
+    },
+    {
+      testId: 'view-your-files',
+      title: 'View your files',
+      description: 'View and manage files already uploaded.',
+      link: 'view-your-files'
+    },
+    {
+      testId: 'download-csv-template',
+      title: 'Download CSV template',
+      description: 'Download the template you need to convert your files into CSV ready for uploading.',
+      action: () => this.store.downloadCsvTemplate()
+    }
+  ]);
 
   ngOnDestroy() {
     this.store.resetState();

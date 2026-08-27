@@ -17,7 +17,7 @@ import {
   ValidationError
 } from '@cpp/pdk';
 import { BackButtonComponent } from '../../../shared';
-import { COMPLAINTS_FILE_STATUS_LABELS, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
+import { COMPLAINTS_FILE_STATUS_LABELS, ComplaintsFileStatus } from '../../interface/manage-your-complaints-files';
 import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
 import { DatePipe } from '@angular/common';
 import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-download-error/csv-template-download-error.component';

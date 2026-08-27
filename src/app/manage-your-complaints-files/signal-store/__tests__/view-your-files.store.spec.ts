@@ -6,7 +6,7 @@ import FileSaver from 'file-saver';
 import { ViewYourFilesStore } from '../view-your-files.store';
 import { ManageYourComplaintsFilesService } from '../../services/manage-your-complaints-files.service';
 import { ApiError } from '../../../core';
-import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../models/manage-your-complaints-files';
+import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../interface/manage-your-complaints-files';
 
 jest.mock('file-saver', () => ({
   saveAs: jest.fn()
