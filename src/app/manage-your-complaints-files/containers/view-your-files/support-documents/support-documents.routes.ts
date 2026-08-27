@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { documentTypeAccessGuard } from '../../../guards/document-type-access.guard';
 
 export enum SupportDocumentsRoutes {
   SUCCESS = 'success',
@@ -8,6 +9,7 @@ export enum SupportDocumentsRoutes {
 export const supportDocumentsRoutes: Routes = [
   {
     path: '',
+    canActivate: [documentTypeAccessGuard],
     loadComponent: () => import('./support-documents.container').then(m => m.SupportDocumentsContainer)
   },
   {

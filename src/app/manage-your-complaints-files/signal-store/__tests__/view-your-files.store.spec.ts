@@ -15,6 +15,7 @@ jest.mock('file-saver', () => ({
 describe('ViewYourFilesStore', () => {
   let store: InstanceType<typeof ViewYourFilesStore>;
   let searchComplaintsFiles: jest.Mock;
+  let uploadSupportingDocument: jest.Mock;
   let fetchErrorReport: jest.Mock;
   let dispatch: jest.Mock;
 
@@ -35,13 +36,17 @@ describe('ViewYourFilesStore', () => {
 
   beforeEach(() => {
     searchComplaintsFiles = jest.fn();
+    uploadSupportingDocument = jest.fn();
     fetchErrorReport = jest.fn();
     dispatch = jest.fn();
 
     TestBed.configureTestingModule({
       providers: [
         ViewYourFilesStore,
-        { provide: ManageYourComplaintsFilesService, useValue: { searchComplaintsFiles, fetchErrorReport } },
+        {
+          provide: ManageYourComplaintsFilesService,
+          useValue: { searchComplaintsFiles, uploadSupportingDocument, fetchErrorReport }
+        },
         { provide: Store, useValue: { dispatch } }
       ],
       teardown: { destroyAfterEach: false }
@@ -143,6 +148,29 @@ describe('ViewYourFilesStore', () => {
     store.downloadErrorReport('dummy-id-1');
 
     expect(store.hasDownloadErrorReportError()).toBe(false);
+  });
+
+  it('should not have a document type id by default', () => {
+    expect(store.documentTypeId()).toBeNull();
+  });
+
+  it('should store the document type id', () => {
+    store.setDocumentTypeId('document-type-id-1');
+
+    expect(store.documentTypeId()).toBe('document-type-id-1');
+  });
+
+  it('should upload a supporting document using the stored document type id', () => {
+    store.setDocumentTypeId('document-type-id-1');
+    uploadSupportingDocument.mockReturnValue(of(undefined));
+    const file = new File(['a'], 'test.csv');
+    const onUploadSuccess = jest.fn();
+    const onUploadError = jest.fn();
+
+    store.uploadSupportingDocument({ file, onUploadSuccess, onUploadError });
+
+    expect(uploadSupportingDocument).toHaveBeenCalledWith(file, 'document-type-id-1');
+    expect(onUploadSuccess).toHaveBeenCalled();
   });
 
   it('should reset the state back to its initial values', () => {

@@ -80,6 +80,30 @@ describe('ManageYourComplaintsFilesService', () => {
     });
   });
 
+  it('should upload a supporting document as an add-court-document command', done => {
+    mockCommand.mockReturnValue(of(undefined));
+    const file = new File(['a,b,c'], 'test.csv', { type: 'text/csv' });
+
+    service.uploadSupportingDocument(file, 'document-type-id-1').subscribe(() => {
+      expect(mockCommand).toHaveBeenCalledTimes(1);
+      const [options] = mockCommand.mock.calls[0];
+
+      expect(options.url).toMatch(
+        /^\/progression-command-api\/command\/api\/rest\/progression\/courtdocument\/[0-9a-f-]{36}$/
+      );
+      expect(options.requestType).toBe('application/vnd.progression.add-court-document+json');
+
+      const materialId = options.url.split('/').pop();
+      expect(options.body.courtDocument.materials[0].id).toBe(materialId);
+      expect(options.body.courtDocument.name).toBe('test.csv');
+      expect(options.body.courtDocument.documentCategory.applicationDocument.applicationId).toBe(
+        '4cf684b8-ae91-405c-96a1-adebad1d5411'
+      );
+      expect(options.body.courtDocument.documentTypeId).toBe('document-type-id-1');
+      done();
+    });
+  });
+
   it('should parse the JSON text body returned by the command API into an UploadCsvFileResponse', done => {
     const body = JSON.stringify({
       statusURL: 'https://replace-me.gov.uk/dummy-id-1',

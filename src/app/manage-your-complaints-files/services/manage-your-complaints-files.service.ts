@@ -1,9 +1,11 @@
 import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
 import { HttpParams, HttpResponse } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { v4 as uuid } from 'uuid';
 import { ComplaintsFileRecord, UploadCsvFileResponse } from '../models/manage-your-complaints-files';
+import { buildAddCourtDocumentRequest } from '../manage-your-complaints-files.util';
 
 @Injectable({ providedIn: 'root' })
 export class ManageYourComplaintsFilesService {
@@ -19,9 +21,14 @@ export class ManageYourComplaintsFilesService {
     });
   }
 
-  uploadSupportingDocument(submissionId: string, file: File): Observable<void> {
-    // TODO: replace with the real supporting-documents upload endpoint once available
-    return of(undefined);
+  uploadSupportingDocument(file: File, documentTypeId: string): Observable<void> {
+    const materialId = uuid();
+
+    return this.http.command({
+      url: `/progression-command-api/command/api/rest/progression/courtdocument/${materialId}`,
+      requestType: 'application/vnd.progression.add-court-document+json',
+      body: buildAddCourtDocumentRequest(file, materialId, documentTypeId)
+    });
   }
 
   fetchErrorReport(submissionId: string): Observable<Blob> {

@@ -13,12 +13,14 @@ interface ViewYourFilesState {
   complaintsFile: ComplaintsFileRecord | null;
   searchErrorMessage: string | null;
   hasDownloadErrorReportError: boolean;
+  documentTypeId: string | null;
 }
 
 const initialState: ViewYourFilesState = {
   complaintsFile: null,
   searchErrorMessage: null,
-  hasDownloadErrorReportError: false
+  hasDownloadErrorReportError: false,
+  documentTypeId: null
 };
 
 export const ViewYourFilesStore = signalStore(
@@ -27,8 +29,8 @@ export const ViewYourFilesStore = signalStore(
   withErrorHandlerAdapter(),
   withProps((_, service = inject(ManageYourComplaintsFilesService)) => ({
     _searchComplaintsFiles: (searchTerm: string) => service.searchComplaintsFiles(searchTerm),
-    _uploadSupportingDocument: (submissionId: string, file: File) =>
-      service.uploadSupportingDocument(submissionId, file),
+    _uploadSupportingDocument: (file: File, documentTypeId: string) =>
+      service.uploadSupportingDocument(file, documentTypeId),
     _fetchErrorReport: (submissionId: string) => service.fetchErrorReport(submissionId)
   })),
   withComputed(({ complaintsFile }) => ({
@@ -60,7 +62,7 @@ export const ViewYourFilesStore = signalStore(
     uploadSupportingDocument: rxMethod<UploadSupportingDocumentRequest>(
       pipe(
         switchMap(({ file, onUploadSuccess, onUploadError }) =>
-          store._uploadSupportingDocument(store.referenceNumber() ?? '', file).pipe(
+          store._uploadSupportingDocument(file, store.documentTypeId() ?? '').pipe(
             tapResponse({
               next: onUploadSuccess,
               error: (error: HttpErrorResponse) => onUploadError(error)
@@ -69,6 +71,10 @@ export const ViewYourFilesStore = signalStore(
         )
       )
     ),
+
+    setDocumentTypeId(documentTypeId: string): void {
+      patchState(store, { documentTypeId });
+    },
 
     downloadErrorReport: rxMethod<string>(
       pipe(

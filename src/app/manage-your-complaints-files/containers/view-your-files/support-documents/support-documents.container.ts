@@ -14,7 +14,7 @@ import { SupportDocumentsRoutes } from './support-documents.routes';
     <pdk-error-summary [errors]="errors()" shouldFocus="true" pdk-margin-top="4"></pdk-error-summary>
     }
     <file-upload-page
-      [acceptedFileTypes]="['.pdf', '.doc', '.docx', '.jpeg', '.jpg', '.png', '.odt', '.txt']"
+      [acceptedFileTypes]="['.csv', '.pdf', '.doc', '.docx', '.jpeg', '.jpg', '.png', '.odt', '.txt']"
       [hint]="'Make sure the file name includes the reference number and case name.'"
       (fileSubmitted)="onFileSubmitted($event)"
       (errors)="errors.set($event)"
@@ -22,7 +22,7 @@ import { SupportDocumentsRoutes } from './support-documents.routes';
       <span page-header>Upload supporting documents for {{ store.referenceNumber() }} (optional)</span>
       <div ngProjectAs="section">
         <p pdk-margin-bottom="4">You can upload a supporting document.</p>
-        <p pdk-margin-bottom="6">Accepted file types include pdf, doc, jpeg, png, jpg, docx, odt and txt.</p>
+        <p pdk-margin-bottom="6">Accepted file types include csv, pdf, doc, jpeg, png, jpg, docx, odt and txt.</p>
       </div>
       <span submit>Upload and send</span>
     </file-upload-page>

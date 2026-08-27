@@ -17,6 +17,31 @@ export interface UploadSupportingDocumentRequest {
   onUploadError: (error: HttpErrorResponse) => void;
 }
 
+export interface CourtDocumentMaterial {
+  id: string;
+  receivedDateTime: string;
+}
+
+export interface CourtDocument {
+  courtDocumentId: string;
+  documentCategory: {
+    applicationDocument: {
+      applicationId: string;
+    };
+  };
+  name: string;
+  documentTypeId: string;
+  documentTypeDescription: string;
+  mimeType: string;
+  containsFinancialMeans: boolean;
+  sendToCps: boolean;
+  materials: CourtDocumentMaterial[];
+}
+
+export interface AddCourtDocumentRequest {
+  courtDocument: CourtDocument;
+}
+
 export enum ComplaintsFileStatus {
   PENDING = 'PENDING',
   FAILED = 'FAILED',
@@ -47,3 +72,5 @@ export interface ComplaintsFileRecord {
   completedAt: string;
   prosecutingAuthority: string;
 }
+
+export const APPLICATION_DOCUMENT_CATEGORY = 'Applications';
