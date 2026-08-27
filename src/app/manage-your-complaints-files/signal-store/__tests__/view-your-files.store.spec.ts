@@ -117,14 +117,16 @@ describe('ViewYourFilesStore', () => {
     expect(store.hasDownloadErrorReportError()).toBe(false);
   });
 
-  it('should save the error report as a csv file named after the submission', () => {
+  it('should save the error report as a csv file named after the uploaded file', () => {
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
+    store.searchComplaintsFiles('dummy-id-1');
     const blob = new Blob(['a,b,c'], { type: 'text/csv' });
     fetchErrorReport.mockReturnValue(of(blob));
 
     store.downloadErrorReport('dummy-id-1');
 
     expect(fetchErrorReport).toHaveBeenCalledWith('dummy-id-1');
-    expect(FileSaver.saveAs).toHaveBeenCalledWith(blob, 'error-report-dummy-id-1.csv');
+    expect(FileSaver.saveAs).toHaveBeenCalledWith(blob, 'complaints-list-KM_error.csv');
     expect(store.hasDownloadErrorReportError()).toBe(false);
   });
 
