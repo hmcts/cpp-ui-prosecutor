@@ -133,6 +133,16 @@ describe('ViewYourFilesContainer', () => {
     expect(fixture.nativeElement.textContent).toContain('Add supporting documents');
   });
 
+  it('should show the status label and no action link when the case was created successfully', () => {
+    fixture.componentInstance.hasSearched.set(true);
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.SUCCESS });
+    fixture.detectChanges();
+
+    expect(fixture.debugElement.query(By.css('pdk-tag'))).toBeNull();
+    expect(fixture.nativeElement.textContent).toContain('Case Created Successfully');
+    expect(fixture.debugElement.query(By.css('[data-role="file-action"]'))).toBeNull();
+  });
+
   it('should show a no results message when the search finds nothing', () => {
     fixture.componentInstance.referenceNumber.set('dummy-id-1');
     fixture.componentInstance.search();
