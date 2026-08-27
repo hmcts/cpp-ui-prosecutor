@@ -124,9 +124,9 @@ describe('ViewYourFilesContainer', () => {
     expect(alert.textContent).toContain('Unable to download the error report at the moment');
   });
 
-  it('should show an "Add supporting documents" link when awaiting court decision', () => {
+  it('should show an "Add supporting documents" link when pending court decision', () => {
     fixture.componentInstance.hasSearched.set(true);
-    result.set({ ...complaintsFile, status: ComplaintsFileStatus.AWAITING_APPROVAL });
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.PENDING_COURT_DECISION });
     fixture.detectChanges();
 
     expect(fixture.debugElement.query(By.css('pdk-tag'))).toBeNull();
@@ -167,7 +167,7 @@ describe('ViewYourFilesContainer', () => {
   });
 
   it('should show the previously found record on creation, e.g. when returning from supporting documents', () => {
-    result.set({ ...complaintsFile, status: ComplaintsFileStatus.AWAITING_APPROVAL });
+    result.set({ ...complaintsFile, status: ComplaintsFileStatus.PENDING_COURT_DECISION });
 
     const newFixture = TestBed.createComponent(ViewYourFilesContainer);
     newFixture.detectChanges();

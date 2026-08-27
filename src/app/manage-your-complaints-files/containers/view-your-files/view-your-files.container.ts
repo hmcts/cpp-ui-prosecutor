@@ -84,7 +84,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
           <a href="javascript:void(0)" pdk-link data-role="file-action" (click)="store.downloadErrorReport(result.id)"
             >View error report</a
           >
-          } @else if (result.status === ComplaintsFileStatus.AWAITING_APPROVAL) {
+          } @else if (result.status === ComplaintsFileStatus.PENDING_COURT_DECISION) {
           <a routerLink="support-documents" pdk-link data-role="file-action">Add supporting documents</a>
           } @else{ -- }
         </dd>

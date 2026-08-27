@@ -53,17 +53,19 @@ export interface AddCourtDocumentRequest {
 export enum ComplaintsFileStatus {
   PENDING = 'PENDING',
   FAILED = 'FAILED',
-  AWAITING_APPROVAL = 'AWAITING_APPROVAL',
+  PENDING_COURT_DECISION = 'PENDING_COURT_DECISION',
   ACCEPTED = 'ACCEPTED',
-  REJECTED = 'REJECTED'
+  REJECTED = 'REJECTED',
+  SUCCESS = 'SUCCESS'
 }
 
 export const COMPLAINTS_FILE_STATUS_LABELS: Record<ComplaintsFileStatus, string> = {
   [ComplaintsFileStatus.PENDING]: 'File processing',
   [ComplaintsFileStatus.FAILED]: 'Upload failed',
-  [ComplaintsFileStatus.AWAITING_APPROVAL]: 'Awaiting court decision',
+  [ComplaintsFileStatus.PENDING_COURT_DECISION]: 'Pending court decision',
   [ComplaintsFileStatus.ACCEPTED]: 'Accepted by court',
-  [ComplaintsFileStatus.REJECTED]: 'Rejected by court'
+  [ComplaintsFileStatus.REJECTED]: 'Rejected by court',
+  [ComplaintsFileStatus.SUCCESS]: 'Case Created Successfully'
 };
 
 export interface ComplaintsFileRecord {

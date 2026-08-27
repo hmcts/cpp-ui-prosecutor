@@ -9,7 +9,8 @@ const APPLICATION_ID = '4cf684b8-ae91-405c-96a1-adebad1d5411';
 export const findDocumentTypeId = (documentsTypeAccess: DocumentTypeAccess[]): string =>
   documentsTypeAccess.find(({ documentCategory }) => documentCategory === APPLICATION_DOCUMENT_CATEGORY)?.id ?? '';
 
-export const parseApiErrorMessage = (error: HttpErrorResponse): string => JSON.parse(error.error).error;
+export const parseApiErrorMessage = (error: HttpErrorResponse): string =>
+  (typeof error.error === 'string' ? JSON.parse(error.error) : error.error).error;
 
 export const buildAddCourtDocumentRequest = (
   file: File,
