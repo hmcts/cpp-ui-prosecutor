@@ -14,13 +14,15 @@ interface ViewYourFilesState {
   searchErrorMessage: string | null;
   hasDownloadErrorReportError: boolean;
   documentTypeId: string | null;
+  hasUploadSupportingDocumentFailed: boolean;
 }
 
 const initialState: ViewYourFilesState = {
   complaintsFile: null,
   searchErrorMessage: null,
   hasDownloadErrorReportError: false,
-  documentTypeId: null
+  documentTypeId: null,
+  hasUploadSupportingDocumentFailed: false
 };
 
 export const ViewYourFilesStore = signalStore(
@@ -39,7 +41,13 @@ export const ViewYourFilesStore = signalStore(
   withMethods(store => ({
     searchComplaintsFiles: rxMethod<string>(
       pipe(
-        tap(() => patchState(store, { searchErrorMessage: null, hasDownloadErrorReportError: false })),
+        tap(() =>
+          patchState(store, {
+            searchErrorMessage: null,
+            hasDownloadErrorReportError: false,
+            hasUploadSupportingDocumentFailed: false
+          })
+        ),
         switchMap(searchTerm =>
           store._searchComplaintsFiles(searchTerm).pipe(
             tapResponse({
@@ -61,11 +69,15 @@ export const ViewYourFilesStore = signalStore(
 
     uploadSupportingDocument: rxMethod<UploadSupportingDocumentRequest>(
       pipe(
+        tap(() => patchState(store, { hasUploadSupportingDocumentFailed: false })),
         switchMap(({ file, onUploadSuccess, onUploadError }) =>
           store._uploadSupportingDocument(file, store.documentTypeId() ?? '').pipe(
             tapResponse({
               next: onUploadSuccess,
-              error: (error: HttpErrorResponse) => onUploadError(error)
+              error: (error: HttpErrorResponse) => {
+                patchState(store, { hasUploadSupportingDocumentFailed: true });
+                onUploadError(error);
+              }
             })
           )
         )

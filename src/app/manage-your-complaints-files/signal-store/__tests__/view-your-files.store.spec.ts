@@ -173,6 +173,48 @@ describe('ViewYourFilesStore', () => {
     expect(onUploadSuccess).toHaveBeenCalled();
   });
 
+  it('should not show the supporting document upload failure by default', () => {
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(false);
+  });
+
+  it('should record the supporting document upload failure and call onUploadError', () => {
+    const error = new HttpErrorResponse({ status: 500 });
+    uploadSupportingDocument.mockReturnValue(throwError(() => error));
+    const file = new File(['a'], 'test.csv');
+    const onUploadSuccess = jest.fn();
+    const onUploadError = jest.fn();
+
+    store.uploadSupportingDocument({ file, onUploadSuccess, onUploadError });
+
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(true);
+    expect(onUploadError).toHaveBeenCalledWith(error);
+    expect(onUploadSuccess).not.toHaveBeenCalled();
+  });
+
+  it('should clear a previous supporting document upload failure when a new upload attempt is made', () => {
+    uploadSupportingDocument.mockReturnValue(throwError(() => new HttpErrorResponse({ status: 500 })));
+    const file = new File(['a'], 'test.csv');
+    store.uploadSupportingDocument({ file, onUploadSuccess: jest.fn(), onUploadError: jest.fn() });
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(true);
+
+    uploadSupportingDocument.mockReturnValue(of(undefined));
+    store.uploadSupportingDocument({ file, onUploadSuccess: jest.fn(), onUploadError: jest.fn() });
+
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(false);
+  });
+
+  it('should clear a previous supporting document upload failure when a new search is made', () => {
+    uploadSupportingDocument.mockReturnValue(throwError(() => new HttpErrorResponse({ status: 500 })));
+    const file = new File(['a'], 'test.csv');
+    store.uploadSupportingDocument({ file, onUploadSuccess: jest.fn(), onUploadError: jest.fn() });
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(true);
+
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
+    store.searchComplaintsFiles('dummy-id-1');
+
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(false);
+  });
+
   it('should reset the state back to its initial values', () => {
     searchComplaintsFiles.mockReturnValue(of(complaintsFile));
     store.searchComplaintsFiles('dummy-id-1');

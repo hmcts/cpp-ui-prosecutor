@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { documentTypeAccessGuard } from '../../../guards/document-type-access.guard';
 import { supportDocumentsGuard } from '../../../guards/support-documents.guard';
+import { supportDocumentsFailureGuard } from '../../../guards/support-documents-failure.guard';
 
 export enum SupportDocumentsRoutes {
   SUCCESS = 'success',
@@ -20,7 +21,7 @@ export const supportDocumentsRoutes: Routes = [
   },
   {
     path: SupportDocumentsRoutes.FAILURE,
-    canActivate: [supportDocumentsGuard],
+    canActivate: [supportDocumentsFailureGuard],
     loadComponent: () => import('./support-documents-failure.container').then(m => m.SupportDocumentsFailureContainer)
   }
 ];
