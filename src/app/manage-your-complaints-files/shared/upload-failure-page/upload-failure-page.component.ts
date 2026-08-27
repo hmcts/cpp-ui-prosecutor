@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PdkLinkDirective, PdkMarginDirective, PdkTypographyDirective } from '@cpp/pdk';
-import { RouterLinkWithHref } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'upload-failure-page',
@@ -15,6 +15,6 @@ import { RouterLinkWithHref } from '@angular/router';
       >Go to manage your complaints files</a
     >
   `,
-  imports: [PdkTypographyDirective, PdkMarginDirective, PdkLinkDirective, RouterLinkWithHref]
+  imports: [PdkTypographyDirective, PdkMarginDirective, PdkLinkDirective, RouterLink]
 })
 export class UploadFailurePageComponent {}

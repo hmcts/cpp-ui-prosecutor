@@ -5,7 +5,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Store } from '@ngrx/store';
 import { throwError } from 'rxjs';
 import { UploadNewFilesContainer } from '../../containers/upload-new-files/upload-new-files.container';
-import { UploadFailureContainer } from '../../containers/upload-new-files/upload-failure.container';
+import { UploadFailurePageComponent } from '../../shared/upload-failure-page/upload-failure-page.component';
 import { uploadFailureGuard } from '../upload-failure.guard';
 import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-complaints-files.store';
 import { ManageYourComplaintsFilesService } from '../../services/manage-your-complaints-files.service';
@@ -22,7 +22,7 @@ describe('real upload failure flow (real store, real guard, real router)', () =>
             path: 'upload-new-files',
             children: [
               { path: '', component: UploadNewFilesContainer },
-              { path: 'failure', canActivate: [uploadFailureGuard], component: UploadFailureContainer }
+              { path: 'failure', canActivate: [uploadFailureGuard], component: UploadFailurePageComponent }
             ]
           }
         ]

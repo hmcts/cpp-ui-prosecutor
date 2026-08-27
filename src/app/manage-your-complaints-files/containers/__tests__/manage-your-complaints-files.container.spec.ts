@@ -47,7 +47,7 @@ describe('ManageYourComplaintsFilesContainer', () => {
   it('should link to the upload-new-files page', () => {
     const link = fixture.debugElement.query(By.css('[data-test-id="upload-new-files"] a')).nativeElement;
     expect(link.textContent).toContain('Upload new files');
-    expect(fixture.componentInstance.tiles().find(tile => tile.testId === 'upload-new-files')?.link).toBe(
+    expect(fixture.componentInstance.tiles.find(tile => tile.testId === 'upload-new-files')?.link).toBe(
       'upload-new-files'
     );
   });
@@ -55,7 +55,7 @@ describe('ManageYourComplaintsFilesContainer', () => {
   it('should link to the view-your-files page', () => {
     const link = fixture.debugElement.query(By.css('[data-test-id="view-your-files"] a')).nativeElement;
     expect(link.textContent).toContain('View your files');
-    expect(fixture.componentInstance.tiles().find(tile => tile.testId === 'view-your-files')?.link).toBe(
+    expect(fixture.componentInstance.tiles.find(tile => tile.testId === 'view-your-files')?.link).toBe(
       'view-your-files'
     );
   });

@@ -8,6 +8,7 @@ import FileSaver from 'file-saver';
 import { ManageYourComplaintsFilesService } from '../services/manage-your-complaints-files.service';
 import { withErrorHandlerAdapter } from './with-error-handler-adapter.feature';
 import { ComplaintsFileRecord, UploadSupportingDocumentRequest } from '../interface/manage-your-complaints-files';
+import { parseApiErrorMessage } from '../util/manage-your-complaints-files';
 
 interface ViewYourFilesState {
   complaintsFile: ComplaintsFileRecord | null;
@@ -55,8 +56,7 @@ export const ViewYourFilesStore = signalStore(
               error: (error: HttpErrorResponse) => {
                 patchState(store, { complaintsFile: null });
                 if (error.status === 400) {
-                  const parsedError = JSON.parse(error.error);
-                  patchState(store, { searchErrorMessage: parsedError.error });
+                  patchState(store, { searchErrorMessage: parseApiErrorMessage(error) });
                 } else {
                   store.handleError(error);
                 }

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, inject, signal } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import { CsvTemplateDownloadErrorComponent } from '../shared/csv-template-download-error/csv-template-download-error.component';
 import { PdkCore, PdkGrid, PdkTypographyDirective } from '@cpp/pdk';
 import { BackButtonComponent } from '../../shared';
@@ -17,7 +17,7 @@ import { ComplaintsTile } from '../interface/manage-your-complaints-files';
     <h1 pdk-typography="heading-large" pdk-margin-top="6" pdk-margin-bottom="6">Manage your complaints files</h1>
 
     <pdk-grid container>
-      @for (tile of tiles(); track tile.testId) {
+      @for (tile of tiles; track tile.testId) {
       <pdk-grid one-third>
         <div [attr.data-test-id]="tile.testId" pdk-border-colour="mid-grey" tint="25" class="complaints-tile">
           <div pdk-fill-colour="light-grey" pdk-padding="3">
@@ -56,7 +56,7 @@ import { ComplaintsTile } from '../interface/manage-your-complaints-files';
 export class ManageYourComplaintsFilesContainer implements OnDestroy {
   readonly store = inject(ManageYourComplaintsFilesStore);
 
-  readonly tiles = signal<ComplaintsTile[]>([
+  readonly tiles: ComplaintsTile[] = [
     {
       testId: 'upload-new-files',
       title: 'Upload new files',
@@ -76,7 +76,7 @@ export class ManageYourComplaintsFilesContainer implements OnDestroy {
       description: 'Download the template you need to convert your files into CSV ready for uploading.',
       action: () => this.store.downloadCsvTemplate()
     }
-  ]);
+  ];
 
   ngOnDestroy() {
     this.store.resetState();

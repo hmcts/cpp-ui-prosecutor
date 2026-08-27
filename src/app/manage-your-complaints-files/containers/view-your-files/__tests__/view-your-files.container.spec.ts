@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ViewYourFilesContainer } from '../view-your-files/view-your-files.container';
-import { ViewYourFilesStore } from '../../signal-store/view-your-files.store';
-import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../interface/manage-your-complaints-files';
+import { ViewYourFilesContainer } from '../view-your-files.container';
+import { ViewYourFilesStore } from '../../../signal-store/view-your-files.store';
+import { ComplaintsFileRecord, ComplaintsFileStatus } from '../../../interface/manage-your-complaints-files';
 
 describe('ViewYourFilesContainer', () => {
   let fixture: ComponentFixture<ViewYourFilesContainer>;
