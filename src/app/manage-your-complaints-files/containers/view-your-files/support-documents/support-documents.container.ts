@@ -21,7 +21,7 @@ import { SupportDocumentsRoutes } from './support-documents.routes';
     >
       <span page-header>Upload supporting documents for {{ store.referenceNumber() }} (optional)</span>
       <div ngProjectAs="section">
-        <p pdk-margin-bottom="4">You can upload a supporting document.</p>
+        <p pdk-margin-bottom="4">You can upload one supporting document at a time.</p>
         <p pdk-margin-bottom="6">Accepted file types include csv, pdf, doc, jpeg, png, jpg, docx, odt and txt.</p>
       </div>
       <span submit>Upload and send</span>

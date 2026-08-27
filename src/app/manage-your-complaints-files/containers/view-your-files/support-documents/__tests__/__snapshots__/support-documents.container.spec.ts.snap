@@ -47,7 +47,7 @@ exports[`SupportDocumentsContainer should render the container correctly 1`] = `
             class="govuk-!-margin-bottom-4"
             pdk-margin-bottom="4"
           >
-            You can upload a supporting document.
+            You can upload one supporting document at a time.
           </p>
           <p
             class="govuk-!-margin-bottom-6"
