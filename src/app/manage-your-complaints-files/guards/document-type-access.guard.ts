@@ -5,7 +5,7 @@ import { of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { ReferenceDataService } from '../../contexts/reference-data/reference-data.service';
 import { ViewYourFilesStore } from '../signal-store/view-your-files.store';
-import { findDocumentTypeId } from '../manage-your-complaints-files.util';
+import { findDocumentTypeId } from '../util/manage-your-complaints-files';
 
 export const documentTypeAccessGuard: CanActivateFn = route => {
   const store = inject(ViewYourFilesStore);

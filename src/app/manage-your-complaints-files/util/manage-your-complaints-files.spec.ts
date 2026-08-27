@@ -1,4 +1,4 @@
-import { buildAddCourtDocumentRequest, findDocumentTypeId } from './manage-your-complaints-files.util';
+import { buildAddCourtDocumentRequest, findDocumentTypeId } from './manage-your-complaints-files';
 
 describe('buildAddCourtDocumentRequest', () => {
   it('builds an add-court-document request from a file, material id and document type id', () => {

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { v4 as uuid } from 'uuid';
 import { ComplaintsFileRecord, UploadCsvFileResponse } from '../interface/manage-your-complaints-files';
-import { buildAddCourtDocumentRequest } from '../manage-your-complaints-files.util';
+import { buildAddCourtDocumentRequest } from '../util/manage-your-complaints-files';
 
 @Injectable({ providedIn: 'root' })
 export class ManageYourComplaintsFilesService {
