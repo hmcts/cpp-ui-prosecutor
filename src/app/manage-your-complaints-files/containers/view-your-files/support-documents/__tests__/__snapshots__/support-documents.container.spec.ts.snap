@@ -53,7 +53,7 @@ exports[`SupportDocumentsContainer should render the container correctly 1`] = `
             class="govuk-!-margin-bottom-6"
             pdk-margin-bottom="6"
           >
-            Accepted file types include pdf, doc, jpeg, png, jpg, docx, odt and txt.
+            Accepted file types include csv, pdf, doc, jpeg, png, jpg, docx, odt and txt.
           </p>
         </div>
         <form
@@ -88,7 +88,7 @@ exports[`SupportDocumentsContainer should render the container correctly 1`] = `
               
               
               <input
-                accept=".pdf,.doc,.docx,.jpeg,.jpg,.png,.odt,.txt"
+                accept=".csv,.pdf,.doc,.docx,.jpeg,.jpg,.png,.odt,.txt"
                 class="govuk-!-margin-top-3 govuk-file-upload ng-untouched ng-pristine ng-valid"
                 id="file"
                 name="file-upload"
