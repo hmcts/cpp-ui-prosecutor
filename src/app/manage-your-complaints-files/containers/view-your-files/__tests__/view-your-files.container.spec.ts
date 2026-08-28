@@ -14,6 +14,7 @@ describe('ViewYourFilesContainer', () => {
   let downloadErrorReport: jest.Mock;
   let hasDownloadErrorReportError: WritableSignal<boolean>;
   let resetState: jest.Mock;
+  let clearErrorStates: jest.Mock;
 
   const complaintsFile: ComplaintsFileRecord = {
     id: 'dummy-id-1',
@@ -37,6 +38,7 @@ describe('ViewYourFilesContainer', () => {
     downloadErrorReport = jest.fn();
     hasDownloadErrorReportError = signal(false);
     resetState = jest.fn();
+    clearErrorStates = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [ViewYourFilesContainer],
@@ -49,7 +51,8 @@ describe('ViewYourFilesContainer', () => {
             searchComplaintsFiles,
             downloadErrorReport,
             hasDownloadErrorReportError,
-            resetState
+            resetState,
+            clearErrorStates
           }
         },
         { provide: ActivatedRoute, useValue: {} }

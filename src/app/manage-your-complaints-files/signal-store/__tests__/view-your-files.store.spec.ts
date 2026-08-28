@@ -113,6 +113,32 @@ describe('ViewYourFilesStore', () => {
     expect(store.searchErrorMessage()).toBeNull();
   });
 
+  it('should clear the search, download and upload error states when clearErrorStates is called', () => {
+    const error = new HttpErrorResponse({
+      status: 400,
+      error: JSON.stringify({ error: 'Enter a valid reference number' })
+    });
+    searchComplaintsFiles.mockReturnValue(throwError(() => error));
+    store.searchComplaintsFiles('not-a-reference');
+    fetchErrorReport.mockReturnValue(throwError(() => new HttpErrorResponse({ status: 500 })));
+    store.downloadErrorReport('dummy-id-1');
+    uploadSupportingDocument.mockReturnValue(throwError(() => new HttpErrorResponse({ status: 500 })));
+    store.uploadSupportingDocument({
+      file: new File(['a'], 'test.csv'),
+      onUploadSuccess: jest.fn(),
+      onUploadError: jest.fn()
+    });
+    expect(store.searchErrorMessage()).toBe('Enter a valid reference number');
+    expect(store.hasDownloadErrorReportError()).toBe(true);
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(true);
+
+    store.clearErrorStates();
+
+    expect(store.searchErrorMessage()).toBeNull();
+    expect(store.hasDownloadErrorReportError()).toBe(false);
+    expect(store.hasUploadSupportingDocumentFailed()).toBe(false);
+  });
+
   it('should not show the download error report error by default', () => {
     expect(store.hasDownloadErrorReportError()).toBe(false);
   });

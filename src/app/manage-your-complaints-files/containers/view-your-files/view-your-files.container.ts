@@ -1,4 +1,4 @@
-import { Component, computed, inject, model, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import {
@@ -42,6 +42,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
           name="referenceNumber"
           type="text"
           [(ngModel)]="referenceNumber"
+          (ngModelChange)="store.clearErrorStates()"
           required
           pattern="^[a-zA-Z0-9-]+$"
           data-role="search-input"
@@ -119,7 +120,7 @@ export class ViewYourFilesContainer {
   readonly ComplaintsFileStatus = ComplaintsFileStatus;
   readonly statusLabels = COMPLAINTS_FILE_STATUS_LABELS;
 
-  referenceNumber = model('');
+  referenceNumber = signal('');
   hasSearched = signal(!!this.store.complaintsFile());
   errors = signal<ValidationError[] | null>(null);
 

@@ -88,6 +88,14 @@ export const ViewYourFilesStore = signalStore(
       patchState(store, { documentTypeId });
     },
 
+    clearErrorStates(): void {
+      patchState(store, {
+        searchErrorMessage: null,
+        hasDownloadErrorReportError: false,
+        hasUploadSupportingDocumentFailed: false
+      });
+    },
+
     downloadErrorReport: rxMethod<string>(
       pipe(
         tap(() => patchState(store, { hasDownloadErrorReportError: false })),
