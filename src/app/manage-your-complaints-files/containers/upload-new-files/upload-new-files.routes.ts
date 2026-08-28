@@ -16,11 +16,17 @@ export const uploadNewFilesRoutes: Routes = [
   {
     path: NewFilesRoutes.SUCCESS,
     canActivate: [uploadSuccessGuard],
-    loadComponent: () => import('./upload-success.container').then(m => m.UploadSuccessContainer)
+    loadComponent: () => import('./upload-success.container').then(m => m.UploadSuccessContainer),
+    data: {
+      title: 'Upload New Complaints Files Successfully'
+    }
   },
   {
     path: NewFilesRoutes.FAILURE,
     canActivate: [uploadFailureGuard],
-    component: UploadFailurePageComponent
+    component: UploadFailurePageComponent,
+    data: {
+      title: 'Sorry, there is a problem with service'
+    }
   }
 ];

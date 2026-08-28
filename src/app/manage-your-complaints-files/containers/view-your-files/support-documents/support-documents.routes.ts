@@ -18,11 +18,17 @@ export const supportDocumentsRoutes: Routes = [
   {
     path: SupportDocumentsRoutes.SUCCESS,
     canActivate: [supportDocumentsGuard],
-    loadComponent: () => import('./support-documents-success.container').then(m => m.SupportDocumentsSuccessContainer)
+    loadComponent: () => import('./support-documents-success.container').then(m => m.SupportDocumentsSuccessContainer),
+    data: {
+      title: 'Upload Support Documents'
+    }
   },
   {
     path: SupportDocumentsRoutes.FAILURE,
     canActivate: [supportDocumentsFailureGuard],
-    component: UploadFailurePageComponent
+    component: UploadFailurePageComponent,
+    data: {
+      title: 'Document failed to upload'
+    }
   }
 ];

@@ -13,11 +13,19 @@ describe('UploadFailurePageComponent', () => {
     });
 
     fixture = TestBed.createComponent(UploadFailurePageComponent);
+    fixture.componentRef.setInput('title', 'Sorry, there is a problem with service');
     fixture.detectChanges();
   });
 
   it('should render the container correctly', () => {
     expect(fixture.nativeElement).toMatchSnapshot();
+  });
+
+  it('should render the title provided via route data', () => {
+    fixture.componentRef.setInput('title', 'Document failed to upload');
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('h1').textContent).toContain('Document failed to upload');
   });
 
   it('should link back to manage your complaints files', () => {

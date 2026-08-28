@@ -14,10 +14,16 @@ export const manageYourComplaintsFilesRoutes: Routes = [
   {
     path: ComplaintsFileRoutes.UPLOAD_NEW_FILES,
     loadChildren: () =>
-      import('./containers/upload-new-files/upload-new-files.routes').then(m => m.uploadNewFilesRoutes)
+      import('./containers/upload-new-files/upload-new-files.routes').then(m => m.uploadNewFilesRoutes),
+    data: {
+      title: 'Upload New Complaints Files'
+    }
   },
   {
     path: ComplaintsFileRoutes.VIEW_YOUR_FILES,
-    loadChildren: () => import('./containers/view-your-files/view-your-files.routes').then(m => m.viewYourFilesRoutes)
+    loadChildren: () => import('./containers/view-your-files/view-your-files.routes').then(m => m.viewYourFilesRoutes),
+    data: {
+      title: 'View Your Complaints Files'
+    }
   }
 ];
