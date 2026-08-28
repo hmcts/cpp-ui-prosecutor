@@ -11,7 +11,10 @@ export enum NewFilesRoutes {
 export const uploadNewFilesRoutes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./upload-new-files.container').then(m => m.UploadNewFilesContainer)
+    loadComponent: () => import('./upload-new-files.container').then(m => m.UploadNewFilesContainer),
+    data: {
+      title: 'Upload New Complaints Files'
+    }
   },
   {
     path: NewFilesRoutes.SUCCESS,

@@ -13,14 +13,17 @@ export const supportDocumentsRoutes: Routes = [
   {
     path: '',
     canActivate: [supportDocumentsGuard, documentTypeAccessGuard],
-    loadComponent: () => import('./support-documents.container').then(m => m.SupportDocumentsContainer)
+    loadComponent: () => import('./support-documents.container').then(m => m.SupportDocumentsContainer),
+    data: {
+      title: 'Upload Support Documents'
+    }
   },
   {
     path: SupportDocumentsRoutes.SUCCESS,
     canActivate: [supportDocumentsGuard],
     loadComponent: () => import('./support-documents-success.container').then(m => m.SupportDocumentsSuccessContainer),
     data: {
-      title: 'Upload Support Documents'
+      title: 'Uploaded Support Documents Successfully'
     }
   },
   {

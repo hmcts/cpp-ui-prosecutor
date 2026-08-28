@@ -7,7 +7,10 @@ export enum ViewYourFilesRoutes {
 export const viewYourFilesRoutes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./view-your-files.container').then(m => m.ViewYourFilesContainer)
+    loadComponent: () => import('./view-your-files.container').then(m => m.ViewYourFilesContainer),
+    data: {
+      title: 'View Your Complaints Files'
+    }
   },
   {
     path: ViewYourFilesRoutes.SUPPORT_DOCUMENTS,
