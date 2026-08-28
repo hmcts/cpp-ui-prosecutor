@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, model, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import {
@@ -43,6 +43,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
           type="text"
           [(ngModel)]="referenceNumber"
           required
+          pattern="^[a-zA-Z0-9-]+$"
           data-role="search-input"
         />
         <button pdk-margin-left="2" pdk-button type="submit" data-role="search-button">Search</button>
@@ -118,12 +119,13 @@ export class ViewYourFilesContainer {
   readonly ComplaintsFileStatus = ComplaintsFileStatus;
   readonly statusLabels = COMPLAINTS_FILE_STATUS_LABELS;
 
-  referenceNumber = signal('');
+  referenceNumber = model('');
   hasSearched = signal(!!this.store.complaintsFile());
   errors = signal<ValidationError[] | null>(null);
 
   readonly errorMessages = computed<ErrorMessageConfig[]>(() => [
     { rule: 'required', message: 'Enter a reference number' },
+    { rule: 'pattern', message: 'Reference number must only contain letters, numbers and hyphens' },
     { rule: 'searchError', message: this.store.searchErrorMessage() ?? '' }
   ]);
 

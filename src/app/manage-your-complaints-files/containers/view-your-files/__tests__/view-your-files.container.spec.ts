@@ -163,6 +163,22 @@ describe('ViewYourFilesContainer', () => {
     expect(searchComplaintsFiles).not.toHaveBeenCalled();
   });
 
+  it('should show the error summary and not search when submitted with an invalid reference number', () => {
+    const input = fixture.debugElement.query(By.css('[data-role="search-input"]')).nativeElement;
+    input.value = 'dummy id!';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    fixture.debugElement.query(By.css('form')).triggerEventHandler('submit', new Event('submit'));
+    fixture.detectChanges();
+
+    expect(fixture.debugElement.query(By.css('pdk-error-summary'))).not.toBeNull();
+    expect(fixture.nativeElement.textContent).toContain(
+      'Reference number must only contain letters, numbers and hyphens'
+    );
+    expect(searchComplaintsFiles).not.toHaveBeenCalled();
+  });
+
   it('should show a backend validation message when the reference number is rejected as invalid', () => {
     searchErrorMessage.set('Enter a valid reference number');
     fixture.detectChanges();

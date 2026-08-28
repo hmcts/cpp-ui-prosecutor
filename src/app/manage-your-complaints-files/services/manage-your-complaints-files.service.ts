@@ -36,7 +36,7 @@ export class ManageYourComplaintsFilesService {
       .query<Blob>({
         url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
           submissionId
-        )}/error-report`,
+        )}`,
         requestType: 'text/csv',
         responseType: 'blob'
       })

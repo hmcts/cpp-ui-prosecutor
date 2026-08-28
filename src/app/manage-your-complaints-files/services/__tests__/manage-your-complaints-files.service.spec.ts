@@ -70,8 +70,7 @@ describe('ManageYourComplaintsFilesService', () => {
 
     service.fetchErrorReport('dummy-id-1').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url:
-          '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1/error-report',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1',
         requestType: 'text/csv',
         responseType: 'blob'
       });

@@ -94,7 +94,7 @@ export const ViewYourFilesStore = signalStore(
         switchMap(submissionId =>
           store._fetchErrorReport(submissionId).pipe(
             tapResponse({
-              next: blob => FileSaver.saveAs(blob, `${store.complaintsFile()?.fileName}_error.csv`),
+              next: blob => FileSaver.saveAs(blob, store.complaintsFile()?.fileName?.replace('.csv', '_error.csv')),
               error: (error: HttpErrorResponse) => {
                 patchState(store, { hasDownloadErrorReportError: true });
                 store.handleError(error);

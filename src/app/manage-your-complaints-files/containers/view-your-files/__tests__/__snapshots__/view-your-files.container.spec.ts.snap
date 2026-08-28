@@ -57,6 +57,7 @@ exports[`ViewYourFilesContainer should render the container correctly 1`] = `
           data-role="search-input"
           id="pdk-form-control-undefined-GENERATED_ID"
           name="referenceNumber"
+          pattern="^[a-zA-Z0-9-]+$"
           pdk-text-input=""
           required=""
           type="text"

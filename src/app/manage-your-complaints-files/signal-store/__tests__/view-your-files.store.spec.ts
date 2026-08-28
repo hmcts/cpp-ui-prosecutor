@@ -118,7 +118,7 @@ describe('ViewYourFilesStore', () => {
   });
 
   it('should save the error report as a csv file named after the uploaded file', () => {
-    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
+    searchComplaintsFiles.mockReturnValue(of({ ...complaintsFile, fileName: 'summons-prosecution-output (1).csv' }));
     store.searchComplaintsFiles('dummy-id-1');
     const blob = new Blob(['a,b,c'], { type: 'text/csv' });
     fetchErrorReport.mockReturnValue(of(blob));
@@ -126,7 +126,7 @@ describe('ViewYourFilesStore', () => {
     store.downloadErrorReport('dummy-id-1');
 
     expect(fetchErrorReport).toHaveBeenCalledWith('dummy-id-1');
-    expect(FileSaver.saveAs).toHaveBeenCalledWith(blob, 'complaints-list-KM_error.csv');
+    expect(FileSaver.saveAs).toHaveBeenCalledWith(blob, 'summons-prosecution-output (1)_error.csv');
     expect(store.hasDownloadErrorReportError()).toBe(false);
   });
 
