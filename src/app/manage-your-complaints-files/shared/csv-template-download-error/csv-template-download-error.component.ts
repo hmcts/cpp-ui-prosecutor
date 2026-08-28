@@ -5,9 +5,12 @@ import { PdkAlertComponent, PdkMarginDirective } from '@cpp/pdk';
   selector: 'csv-template-download-error',
   template: `
     @if (show()) {
-    <pdk-alert type="warning" icon pdk-margin-vertical="5">
-      Unable to download the CSV template at the moment. Please try again later.
-    </pdk-alert>
+    <div pdk-margin-top="3">
+      <pdk-alert type="warning" icon pdk-margin-vertical="5">
+        <ng-content select="[error-message]"></ng-content>
+      </pdk-alert>
+    </div>
+
     }
   `,
   imports: [PdkAlertComponent, PdkMarginDirective]

@@ -57,10 +57,11 @@ exports[`ManageYourComplaintsFilesContainer should render the container correctl
               class="govuk-link"
               href="/"
               pdk-link=""
-              routerlink="upload-new-files"
             >
               Upload new files
             </a>
+            
+            
           </h2>
         </div>
         <div
@@ -97,10 +98,11 @@ exports[`ManageYourComplaintsFilesContainer should render the container correctl
               class="govuk-link"
               href="/"
               pdk-link=""
-              routerlink="view-your-files"
             >
               View your files
             </a>
+            
+            
           </h2>
         </div>
         <div
@@ -133,6 +135,7 @@ exports[`ManageYourComplaintsFilesContainer should render the container correctl
             pdk-margin="0"
             pdk-typography="heading-small"
           >
+            
             <a
               class="govuk-link"
               href="javascript:void(0)"
@@ -140,6 +143,7 @@ exports[`ManageYourComplaintsFilesContainer should render the container correctl
             >
               Download CSV template
             </a>
+            
           </h2>
         </div>
         <div
@@ -152,6 +156,7 @@ exports[`ManageYourComplaintsFilesContainer should render the container correctl
         </div>
       </div>
     </pdk-grid>
+    
   </pdk-grid>
 </div>
 `;

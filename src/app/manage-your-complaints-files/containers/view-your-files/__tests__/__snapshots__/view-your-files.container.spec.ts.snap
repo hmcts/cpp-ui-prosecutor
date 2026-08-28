@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewYourFilesContainer should render the container correctly 1`] = `
+<div
+  id="root0"
+>
+  <csv-template-download-error>
+    
+  </csv-template-download-error>
+  <back-button
+    actiontext="Back"
+    linkurl="../"
+  >
+    <a
+      class="back-button link-back pdk-!-text-color-black govuk-back-link"
+      href="/"
+      pdk-back-link=""
+      pdk-text-colour="black"
+    >
+       Back
+
+    </a>
+  </back-button>
+  
+  <h1
+    class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-heading-l"
+    pdk-margin-bottom="6"
+    pdk-margin-top="6"
+    pdk-typography="heading-large"
+  >
+    View your complaints files
+  </h1>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+    pdk-form=""
+  >
+    <pdk-form-field
+      label="Find by reference number"
+    >
+      
+      <pdk-form-group
+        class="pdk-form-group"
+      >
+        
+        <label
+          class="govuk-label"
+          for="pdk-form-control-undefined-GENERATED_ID"
+        >
+           Find by reference number 
+        </label>
+        
+        
+        
+        <input
+          class="govuk-input govuk-input--width-20 ng-untouched ng-pristine ng-valid"
+          data-role="search-input"
+          id="pdk-form-control-undefined-GENERATED_ID"
+          name="referenceNumber"
+          pattern="^[a-zA-Z0-9-]+$"
+          pdk-text-input=""
+          required=""
+          type="text"
+        />
+        <button
+          class="govuk-!-margin-left-2 govuk-button"
+          data-role="search-button"
+          pdk-button=""
+          pdk-margin-left="2"
+          type="submit"
+        >
+          Search
+        </button>
+        
+        
+      </pdk-form-group>
+    </pdk-form-field>
+  </form>
+  
+</div>
+`;

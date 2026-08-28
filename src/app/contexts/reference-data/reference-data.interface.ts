@@ -5,3 +5,8 @@ export interface OffenceWithdrawalReason {
   legalAdviser: boolean;
   prosecutor: boolean;
 }
+
+export interface DocumentTypeAccess {
+  id: string;
+  documentCategory: string;
+}

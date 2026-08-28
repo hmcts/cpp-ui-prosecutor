@@ -9,7 +9,10 @@ export const manageYourComplaintsFilesRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./containers/manage-your-complaints-files.container').then(m => m.ManageYourComplaintsFilesContainer)
+      import('./containers/manage-your-complaints-files.container').then(m => m.ManageYourComplaintsFilesContainer),
+    data: {
+      title: 'Manage Your Complaints Files'
+    }
   },
   {
     path: ComplaintsFileRoutes.UPLOAD_NEW_FILES,
@@ -18,6 +21,6 @@ export const manageYourComplaintsFilesRoutes: Routes = [
   },
   {
     path: ComplaintsFileRoutes.VIEW_YOUR_FILES,
-    loadComponent: () => import('./containers/view-your-files.container').then(m => m.ViewYourFilesContainer)
+    loadChildren: () => import('./containers/view-your-files/view-your-files.routes').then(m => m.viewYourFilesRoutes)
   }
 ];

@@ -7,7 +7,7 @@ import { tapResponse } from '@ngrx/operators';
 import FileSaver from 'file-saver';
 import { HttpErrorResponse } from '@angular/common/http';
 import { withErrorHandlerAdapter } from './with-error-handler-adapter.feature';
-import { UploadCsvFileRequest } from '../models/manage-your-complaints-files';
+import { UploadCsvFileRequest } from '../interface/manage-your-complaints-files';
 
 interface ManageYourComplaintsFilesState {
   referenceNumber: string;

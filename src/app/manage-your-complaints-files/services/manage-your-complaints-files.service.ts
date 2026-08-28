@@ -1,13 +1,47 @@
 import { Injectable, inject } from '@angular/core';
 import { CppHttp } from '@cpp/core';
-import { HttpResponse } from '@angular/common/http';
+import { HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { UploadCsvFileResponse } from '../models/manage-your-complaints-files';
+import { v4 as uuid } from 'uuid';
+import { ComplaintsFileRecord, UploadCsvFileResponse } from '../interface/manage-your-complaints-files';
+import { buildAddCourtDocumentRequest } from '../util/manage-your-complaints-files';
 
 @Injectable({ providedIn: 'root' })
 export class ManageYourComplaintsFilesService {
   private http = inject(CppHttp);
+
+  searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord> {
+    return this.http.query<ComplaintsFileRecord>({
+      url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+        searchTerm
+      )}`,
+      params: new HttpParams().set('additionalInfo', true),
+      requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
+    });
+  }
+
+  uploadSupportingDocument(file: File, documentTypeId: string, summonsApplicationId: string): Observable<void> {
+    const materialId = uuid();
+
+    return this.http.command({
+      url: `/progression-command-api/command/api/rest/progression/courtdocument/${materialId}`,
+      requestType: 'application/vnd.progression.add-court-document+json',
+      body: buildAddCourtDocumentRequest(file, materialId, documentTypeId, summonsApplicationId)
+    });
+  }
+
+  fetchErrorReport(submissionId: string): Observable<Blob> {
+    return this.http
+      .query<Blob>({
+        url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+          submissionId
+        )}`,
+        requestType: 'text/csv',
+        responseType: 'blob'
+      })
+      .pipe(map(response => new Blob([response], { type: response.type })));
+  }
 
   fetchCsvTemplate(): Observable<Blob> {
     return this.http
