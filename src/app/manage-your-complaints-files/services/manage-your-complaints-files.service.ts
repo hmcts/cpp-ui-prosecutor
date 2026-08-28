@@ -21,13 +21,13 @@ export class ManageYourComplaintsFilesService {
     });
   }
 
-  uploadSupportingDocument(file: File, documentTypeId: string): Observable<void> {
+  uploadSupportingDocument(file: File, documentTypeId: string, summonsApplicationId: string): Observable<void> {
     const materialId = uuid();
 
     return this.http.command({
       url: `/progression-command-api/command/api/rest/progression/courtdocument/${materialId}`,
       requestType: 'application/vnd.progression.add-court-document+json',
-      body: buildAddCourtDocumentRequest(file, materialId, documentTypeId)
+      body: buildAddCourtDocumentRequest(file, materialId, documentTypeId, summonsApplicationId)
     });
   }
 

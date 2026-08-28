@@ -3,9 +3,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { DocumentTypeAccess } from '../../contexts/reference-data/reference-data.interface';
 import { AddCourtDocumentRequest, APPLICATION_DOCUMENT_CATEGORY } from '../interface/manage-your-complaints-files';
 
-// TODO: backend to confirm the real applicationId - hardcoded for the time being
-const APPLICATION_ID = '4cf684b8-ae91-405c-96a1-adebad1d5411';
-
 export const findDocumentTypeId = (documentsTypeAccess: DocumentTypeAccess[]): string =>
   documentsTypeAccess.find(({ documentCategory }) => documentCategory === APPLICATION_DOCUMENT_CATEGORY)?.id ?? '';
 
@@ -15,13 +12,14 @@ export const parseApiErrorMessage = (error: HttpErrorResponse): string =>
 export const buildAddCourtDocumentRequest = (
   file: File,
   materialId: string,
-  documentTypeId: string
+  documentTypeId: string,
+  summonsApplicationId: string
 ): AddCourtDocumentRequest => ({
   courtDocument: {
     courtDocumentId: uuid(),
     documentCategory: {
       applicationDocument: {
-        applicationId: APPLICATION_ID
+        applicationId: summonsApplicationId
       }
     },
     name: file.name,

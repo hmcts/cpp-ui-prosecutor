@@ -1,17 +1,22 @@
 import { buildAddCourtDocumentRequest, findDocumentTypeId } from '../manage-your-complaints-files';
 
 describe('buildAddCourtDocumentRequest', () => {
-  it('builds an add-court-document request from a file, material id and document type id', () => {
+  it('builds an add-court-document request from a file, material id, document type id and summons application id', () => {
     const file = new File(['a,b,c'], 'test.csv', { type: 'text/csv' });
 
-    const result = buildAddCourtDocumentRequest(file, 'material-id-1', 'document-type-id-1');
+    const result = buildAddCourtDocumentRequest(
+      file,
+      'material-id-1',
+      'document-type-id-1',
+      'summons-application-id-1'
+    );
 
     expect(result).toEqual({
       courtDocument: {
         courtDocumentId: expect.any(String),
         documentCategory: {
           applicationDocument: {
-            applicationId: '4cf684b8-ae91-405c-96a1-adebad1d5411'
+            applicationId: 'summons-application-id-1'
           }
         },
         name: 'test.csv',
@@ -33,7 +38,12 @@ describe('buildAddCourtDocumentRequest', () => {
   it('sends the material receivedDateTime as midnight UTC on the current date', () => {
     const file = new File(['a'], 'test.csv', { type: 'text/csv' });
 
-    const result = buildAddCourtDocumentRequest(file, 'material-id-1', 'document-type-id-1');
+    const result = buildAddCourtDocumentRequest(
+      file,
+      'material-id-1',
+      'document-type-id-1',
+      'summons-application-id-1'
+    );
 
     const expectedDate = new Date();
     expectedDate.setUTCHours(0, 0, 0, 0);
@@ -43,8 +53,13 @@ describe('buildAddCourtDocumentRequest', () => {
   it('generates a new courtDocumentId on each call', () => {
     const file = new File(['a'], 'test.csv', { type: 'text/csv' });
 
-    const first = buildAddCourtDocumentRequest(file, 'material-id-1', 'document-type-id-1');
-    const second = buildAddCourtDocumentRequest(file, 'material-id-1', 'document-type-id-1');
+    const first = buildAddCourtDocumentRequest(file, 'material-id-1', 'document-type-id-1', 'summons-application-id-1');
+    const second = buildAddCourtDocumentRequest(
+      file,
+      'material-id-1',
+      'document-type-id-1',
+      'summons-application-id-1'
+    );
 
     expect(first.courtDocument.courtDocumentId).not.toBe(second.courtDocument.courtDocumentId);
   });

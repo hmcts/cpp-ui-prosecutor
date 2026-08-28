@@ -83,7 +83,7 @@ describe('ManageYourComplaintsFilesService', () => {
     mockCommand.mockReturnValue(of(undefined));
     const file = new File(['a,b,c'], 'test.csv', { type: 'text/csv' });
 
-    service.uploadSupportingDocument(file, 'document-type-id-1').subscribe(() => {
+    service.uploadSupportingDocument(file, 'document-type-id-1', 'summons-application-id-1').subscribe(() => {
       expect(mockCommand).toHaveBeenCalledTimes(1);
       const [options] = mockCommand.mock.calls[0];
 
@@ -96,7 +96,7 @@ describe('ManageYourComplaintsFilesService', () => {
       expect(options.body.courtDocument.materials[0].id).toBe(materialId);
       expect(options.body.courtDocument.name).toBe('test.csv');
       expect(options.body.courtDocument.documentCategory.applicationDocument.applicationId).toBe(
-        '4cf684b8-ae91-405c-96a1-adebad1d5411'
+        'summons-application-id-1'
       );
       expect(options.body.courtDocument.documentTypeId).toBe('document-type-id-1');
       done();

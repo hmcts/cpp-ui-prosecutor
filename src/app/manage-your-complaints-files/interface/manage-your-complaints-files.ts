@@ -81,6 +81,7 @@ export interface ComplaintsFileRecord {
   defendantErrors: string[];
   completedAt: string;
   prosecutingAuthority: string;
+  summonsApplicationId: string;
 }
 
 export const APPLICATION_DOCUMENT_CATEGORY = 'Applications';

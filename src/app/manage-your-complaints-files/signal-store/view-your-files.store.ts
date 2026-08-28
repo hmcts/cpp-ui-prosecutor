@@ -32,8 +32,8 @@ export const ViewYourFilesStore = signalStore(
   withErrorHandlerAdapter(),
   withProps((_, service = inject(ManageYourComplaintsFilesService)) => ({
     _searchComplaintsFiles: (searchTerm: string) => service.searchComplaintsFiles(searchTerm),
-    _uploadSupportingDocument: (file: File, documentTypeId: string) =>
-      service.uploadSupportingDocument(file, documentTypeId),
+    _uploadSupportingDocument: (file: File, documentTypeId: string, summonsApplicationId: string) =>
+      service.uploadSupportingDocument(file, documentTypeId, summonsApplicationId),
     _fetchErrorReport: (submissionId: string) => service.fetchErrorReport(submissionId)
   })),
   withComputed(({ complaintsFile }) => ({
@@ -71,12 +71,35 @@ export const ViewYourFilesStore = signalStore(
       pipe(
         tap(() => patchState(store, { hasUploadSupportingDocumentFailed: false })),
         switchMap(({ file, onUploadSuccess, onUploadError }) =>
-          store._uploadSupportingDocument(file, store.documentTypeId() ?? '').pipe(
+          store
+            ._uploadSupportingDocument(
+              file,
+              store.documentTypeId() ?? '',
+              store.complaintsFile()?.summonsApplicationId ?? ''
+            )
+            .pipe(
+              tapResponse({
+                next: onUploadSuccess,
+                error: (error: HttpErrorResponse) => {
+                  patchState(store, { hasUploadSupportingDocumentFailed: true });
+                  onUploadError(error);
+                }
+              })
+            )
+        )
+      )
+    ),
+
+    downloadErrorReport: rxMethod<string>(
+      pipe(
+        tap(() => patchState(store, { hasDownloadErrorReportError: false })),
+        switchMap(submissionId =>
+          store._fetchErrorReport(submissionId).pipe(
             tapResponse({
-              next: onUploadSuccess,
+              next: blob => FileSaver.saveAs(blob, store.complaintsFile()?.fileName?.replace('.csv', '_error.csv')),
               error: (error: HttpErrorResponse) => {
-                patchState(store, { hasUploadSupportingDocumentFailed: true });
-                onUploadError(error);
+                patchState(store, { hasDownloadErrorReportError: true });
+                store.handleError(error);
               }
             })
           )
@@ -95,23 +118,6 @@ export const ViewYourFilesStore = signalStore(
         hasUploadSupportingDocumentFailed: false
       });
     },
-
-    downloadErrorReport: rxMethod<string>(
-      pipe(
-        tap(() => patchState(store, { hasDownloadErrorReportError: false })),
-        switchMap(submissionId =>
-          store._fetchErrorReport(submissionId).pipe(
-            tapResponse({
-              next: blob => FileSaver.saveAs(blob, store.complaintsFile()?.fileName?.replace('.csv', '_error.csv')),
-              error: (error: HttpErrorResponse) => {
-                patchState(store, { hasDownloadErrorReportError: true });
-                store.handleError(error);
-              }
-            })
-          )
-        )
-      )
-    ),
 
     resetState(): void {
       patchState(store, initialState);

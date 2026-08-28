@@ -31,7 +31,8 @@ describe('ViewYourFilesStore', () => {
     caseErrors: [],
     defendantErrors: [],
     prosecutingAuthority: 'Crown Prosecution Service',
-    completedAt: '16 June 2026'
+    completedAt: '16 June 2026',
+    summonsApplicationId: 'summons-application-id-1'
   };
 
   beforeEach(() => {
@@ -197,8 +198,20 @@ describe('ViewYourFilesStore', () => {
 
     store.uploadSupportingDocument({ file, onUploadSuccess, onUploadError });
 
-    expect(uploadSupportingDocument).toHaveBeenCalledWith(file, 'document-type-id-1');
+    expect(uploadSupportingDocument).toHaveBeenCalledWith(file, 'document-type-id-1', '');
     expect(onUploadSuccess).toHaveBeenCalled();
+  });
+
+  it('should upload a supporting document using the summons application id from the found complaints file', () => {
+    searchComplaintsFiles.mockReturnValue(of(complaintsFile));
+    store.searchComplaintsFiles('dummy-id-1');
+    store.setDocumentTypeId('document-type-id-1');
+    uploadSupportingDocument.mockReturnValue(of(undefined));
+    const file = new File(['a'], 'test.csv');
+
+    store.uploadSupportingDocument({ file, onUploadSuccess: jest.fn(), onUploadError: jest.fn() });
+
+    expect(uploadSupportingDocument).toHaveBeenCalledWith(file, 'document-type-id-1', 'summons-application-id-1');
   });
 
   it('should not show the supporting document upload failure by default', () => {

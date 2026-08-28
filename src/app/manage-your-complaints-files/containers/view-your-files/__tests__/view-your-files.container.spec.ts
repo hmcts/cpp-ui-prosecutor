@@ -28,7 +28,8 @@ describe('ViewYourFilesContainer', () => {
     caseErrors: [],
     defendantErrors: [],
     prosecutingAuthority: 'Crown Prosecution Service',
-    completedAt: '16 June 2026'
+    completedAt: '16 June 2026',
+    summonsApplicationId: 'summons-application-id-1'
   };
 
   beforeEach(() => {
