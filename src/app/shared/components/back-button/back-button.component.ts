@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PdkBackLink, PdkCore } from '@cpp/pdk';
 
@@ -11,5 +11,4 @@ import { PdkBackLink, PdkCore } from '@cpp/pdk';
 export class BackButtonComponent {
   @Input() actionText: string;
   @Input() linkUrl: string;
-  @Output() backClick = new EventEmitter<void>();
 }

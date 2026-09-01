@@ -190,12 +190,6 @@ describe('ViewYourFilesContainer', () => {
     expect(fixture.nativeElement.textContent).toContain('Enter a valid reference number');
   });
 
-  it('should reset the store when the "Back" link is clicked', () => {
-    fixture.debugElement.query(By.css('back-button a')).triggerEventHandler('click', new Event('click'));
-
-    expect(resetState).toHaveBeenCalled();
-  });
-
   it('should show the previously found record on creation, e.g. when returning from supporting documents', () => {
     result.set({ ...complaintsFile, status: ComplaintsFileStatus.PENDING_COURT_DECISION });
 

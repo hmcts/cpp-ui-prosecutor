@@ -28,7 +28,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
     <csv-template-download-error [show]="store.hasDownloadErrorReportError()">
       <span error-message>Unable to download the error report at the moment. Please try again later.</span>
     </csv-template-download-error>
-    <back-button actionText="Back" linkUrl="../" (backClick)="store.resetState()"></back-button>
+    <back-button actionText="Back" linkUrl="../"></back-button>
     @if (errors()?.length) {
     <pdk-error-summary [errors]="errors()" shouldFocus="true" pdk-margin-top="4"></pdk-error-summary>
     }
