@@ -27,7 +27,6 @@ const initialState: ViewYourFilesState = {
 };
 
 export const ViewYourFilesStore = signalStore(
-  { providedIn: 'root' },
   withState(initialState),
   withErrorHandlerAdapter(),
   withProps((_, service = inject(ManageYourComplaintsFilesService)) => ({

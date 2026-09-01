@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { ViewYourFilesStore } from './signal-store/view-your-files.store';
+import { resetViewYourFilesStoreGuard } from './guards/reset-view-your-files-store.guard';
 
 export enum ComplaintsFileRoutes {
   UPLOAD_NEW_FILES = 'upload-new-files',
@@ -21,6 +23,8 @@ export const manageYourComplaintsFilesRoutes: Routes = [
   },
   {
     path: ComplaintsFileRoutes.VIEW_YOUR_FILES,
+    providers: [ViewYourFilesStore],
+    canDeactivate: [resetViewYourFilesStoreGuard],
     loadChildren: () => import('./containers/view-your-files/view-your-files.routes').then(m => m.viewYourFilesRoutes)
   }
 ];
