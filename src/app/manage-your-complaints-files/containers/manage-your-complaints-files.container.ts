@@ -1,7 +1,6 @@
 import { Component, OnDestroy, inject } from '@angular/core';
 import { CsvTemplateDownloadErrorComponent } from '../shared/csv-template-download-error/csv-template-download-error.component';
 import { PdkCore, PdkGrid, PdkTypographyDirective } from '@cpp/pdk';
-import { BackButtonComponent } from '../../shared';
 import { RouterLink } from '@angular/router';
 import { ManageYourComplaintsFilesStore } from '../signal-store/manage-your-complaints-files.store';
 import { ComplaintsTile } from '../interface/manage-your-complaints-files';
@@ -12,7 +11,6 @@ import { ComplaintsTile } from '../interface/manage-your-complaints-files';
     <csv-template-download-error [show]="store.hasDownloadCsvError()">
       <span error-message>Unable to download the CSV template at the moment. Please try again later.</span>
     </csv-template-download-error>
-    <back-button actionText="Back" linkUrl="/"></back-button>
 
     <h1 pdk-typography="heading-large" pdk-margin-top="6" pdk-margin-bottom="6">Manage your complaints files</h1>
 
@@ -37,14 +35,7 @@ import { ComplaintsTile } from '../interface/manage-your-complaints-files';
       }
     </pdk-grid>
   `,
-  imports: [
-    PdkCore,
-    PdkGrid,
-    PdkTypographyDirective,
-    BackButtonComponent,
-    RouterLink,
-    CsvTemplateDownloadErrorComponent
-  ],
+  imports: [PdkCore, PdkGrid, PdkTypographyDirective, RouterLink, CsvTemplateDownloadErrorComponent],
   styles: [
     `
       .complaints-tile {
