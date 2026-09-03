@@ -8,6 +8,7 @@ exports[`App page component should compile correctly 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -139,7 +140,7 @@ exports[`App page component should compile correctly 1`] = `
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
@@ -487,6 +488,7 @@ exports[`App page component should compile correctly when search is available 1`
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -618,7 +620,7 @@ exports[`App page component should compile correctly when search is available 1`
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
@@ -966,6 +968,7 @@ exports[`App page component should detect when the app is busy 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -1124,7 +1127,7 @@ exports[`App page component should detect when the app is busy 1`] = `
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
@@ -1472,6 +1475,7 @@ exports[`App page component should track any api errors 1`] = `
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -1623,7 +1627,7 @@ exports[`App page component should track any api errors 1`] = `
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
@@ -1971,6 +1975,7 @@ exports[`App page component should track the offline status of the container 1`]
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -2122,7 +2127,7 @@ exports[`App page component should track the offline status of the container 1`]
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
@@ -2470,6 +2475,7 @@ exports[`App page component should track the online status of the container 1`] 
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
   searchEnabled$={[Function _Store]}
+  serviceLink$={[Function _Store]}
   translate={[Function _TranslateService]}
 >
   <cpp-application-layout
@@ -2601,7 +2607,7 @@ exports[`App page component should track the online status of the container 1`] 
                 >
                   <a
                     class="govuk-header__link govuk-header__link--homepage"
-                    href="#"
+                    href=""
                     pdk-header-title=""
                   >
                     <svg
