@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { BackButtonComponent } from '../../../shared';
 import { ManageYourComplaintsFilesStore } from '../../signal-store/manage-your-complaints-files.store';
 import { PdkLinkDirective, PdkMarginDirective, PdkNotificationBanner, PdkTypographyDirective } from '@cpp/pdk';
 import { RouterLink } from '@angular/router';
@@ -8,7 +7,6 @@ import { ComplaintsFileRoutes } from '../../manage-your-complaints-files.routes'
 @Component({
   selector: 'upload-success-container',
   template: `
-    <back-button actionText="Back" [linkUrl]="'../'"></back-button>
     <pdk-notification-banner title="Important">
       <h1 pdk-margin-top="1" pdk-typography="heading-large">
         File is being processed
@@ -41,14 +39,7 @@ import { ComplaintsFileRoutes } from '../../manage-your-complaints-files.routes'
 
     <a href="javascript:void(0)" pdk-link [routerLink]="['../']">Upload another complaints list</a>
   `,
-  imports: [
-    BackButtonComponent,
-    PdkNotificationBanner,
-    PdkTypographyDirective,
-    PdkMarginDirective,
-    PdkLinkDirective,
-    RouterLink
-  ]
+  imports: [PdkNotificationBanner, PdkTypographyDirective, PdkMarginDirective, PdkLinkDirective, RouterLink]
 })
 export class UploadSuccessContainer {
   readonly store = inject(ManageYourComplaintsFilesStore);
