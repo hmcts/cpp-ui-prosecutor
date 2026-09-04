@@ -32,7 +32,7 @@ import { AsyncPipe } from '@angular/common';
       [activity]="isBusy$ | async"
       [headerNavItems]="headerNavItems$ | async"
       [searchEnabled]="searchEnabled$ | async"
-      [serviceLink]="serviceLink$ | async"
+      [serviceLink]="'/'"
       serviceName="CJS Common Platform"
       searchPlaceholder="Search by reference"
       searchLabel="Search by case or application reference"
@@ -53,7 +53,6 @@ export class AppContainer {
   apiError$: Observable<boolean>;
   isBusy$: Observable<boolean>;
   searchEnabled$: Observable<boolean>;
-  serviceLink$: Observable<string>;
 
   constructor() {
     const activatedRoute = inject(ActivatedRoute);
@@ -87,20 +86,6 @@ export class AppContainer {
           )
         )
       )
-    );
-
-    this.serviceLink$ = store.pipe(
-      select(getUserGroups),
-      map(userGroups => {
-        if (
-          (userGroups || []).some(group =>
-            ['Legal Advisers', 'Court Administrators', 'Court Associate'].includes(group.groupName)
-          )
-        ) {
-          return this.appConfigService.getBaseUrl();
-        }
-        return this.appConfigService.getAppUrl();
-      })
     );
 
     this.offline$ = merge(
