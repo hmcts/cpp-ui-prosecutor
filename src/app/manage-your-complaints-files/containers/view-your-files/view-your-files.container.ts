@@ -44,7 +44,7 @@ import { CsvTemplateDownloadErrorComponent } from '../../shared/csv-template-dow
           [(ngModel)]="referenceNumber"
           (ngModelChange)="store.clearErrorStates()"
           required
-          pattern="^[a-zA-Z0-9-]+$"
+          pattern="^[-a-zA-Z0-9]+$"
           data-role="search-input"
         />
         <button pdk-margin-left="2" pdk-button type="submit" data-role="search-button">Search</button>

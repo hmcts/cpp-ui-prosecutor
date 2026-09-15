@@ -6,6 +6,8 @@ exports[`UploadSuccessContainer should render the container correctly 1`] = `
 >
   <pdk-notification-banner
     aria-labelledby="pdk-notification-banner-title-GENERATED_ID"
+    class="govuk-!-margin-top-6"
+    pdk-margin-top="6"
     role="region"
     title="Important"
   >

@@ -9,14 +9,16 @@ describe('ManageYourComplaintsFilesService', () => {
   let service: ManageYourComplaintsFilesService;
   let mockQuery: jest.Mock;
   let mockCommand: jest.Mock;
+  let mockCommandSync: jest.Mock;
 
   beforeEach(() => {
     mockQuery = jest.fn();
     mockCommand = jest.fn();
+    mockCommandSync = jest.fn();
     TestBed.configureTestingModule({
       providers: [
         ManageYourComplaintsFilesService,
-        { provide: CppHttp, useValue: { query: mockQuery, command: mockCommand } }
+        { provide: CppHttp, useValue: { query: mockQuery, command: mockCommand, commandSync: mockCommandSync } }
       ],
       teardown: { destroyAfterEach: false }
     });
@@ -79,17 +81,24 @@ describe('ManageYourComplaintsFilesService', () => {
     });
   });
 
-  it('should upload a supporting document as an add-court-document command', done => {
+  it('should upload the file content before sending the add-court-document command', done => {
+    mockCommandSync.mockReturnValue(of({ materialId: 'dummy-material-id' }));
     mockCommand.mockReturnValue(of(undefined));
     const file = new File(['a,b,c'], 'test.csv', { type: 'text/csv' });
 
     service.uploadSupportingDocument(file, 'document-type-id-1', 'summons-application-id-1').subscribe(() => {
+      expect(mockCommandSync).toHaveBeenCalledTimes(1);
+      const [syncOptions] = mockCommandSync.mock.calls[0];
+      expect(syncOptions.url).toMatch(
+        /^\/progression-command-api\/command\/api\/rest\/progression\/courtdocument\/[0-9a-f-]{36}$/
+      );
+      expect(syncOptions.successEvent).toBe('public.progression.events.court-document-uploaded');
+      expect(syncOptions.body.get('fileServiceId')).toBeInstanceOf(File);
+
       expect(mockCommand).toHaveBeenCalledTimes(1);
       const [options] = mockCommand.mock.calls[0];
 
-      expect(options.url).toMatch(
-        /^\/progression-command-api\/command\/api\/rest\/progression\/courtdocument\/[0-9a-f-]{36}$/
-      );
+      expect(options.url).toBe(syncOptions.url);
       expect(options.requestType).toBe('application/vnd.progression.add-court-document+json');
 
       const materialId = options.url.split('/').pop();

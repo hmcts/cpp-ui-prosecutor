@@ -7,7 +7,7 @@ import { ComplaintsFileRoutes } from '../../manage-your-complaints-files.routes'
 @Component({
   selector: 'upload-success-container',
   template: `
-    <pdk-notification-banner title="Important">
+    <pdk-notification-banner title="Important" pdk-margin-top="6">
       <h1 pdk-margin-top="1" pdk-typography="heading-large">
         File is being processed
       </h1>
