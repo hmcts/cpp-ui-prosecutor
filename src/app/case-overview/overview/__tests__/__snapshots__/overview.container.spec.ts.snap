@@ -144,7 +144,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
           >
             <date-of-birth>
               <div>
-                 11 Mar 1957 (69 years old) 
+                 11 Mar 1957 (59 years old) 
               </div>
             </date-of-birth>
              Flat 1, Armageddon House, 13 Old Road, Giggleswick, Merton, CV8 1AB 
@@ -423,7 +423,7 @@ exports[`OverviewContainer should compile correctly 1`] = `
                             >
                               <date-of-birth>
                                 <div>
-                                   11 Mar 1957 (69 years old) 
+                                   11 Mar 1957 (59 years old) 
                                 </div>
                               </date-of-birth>
                             </div>
