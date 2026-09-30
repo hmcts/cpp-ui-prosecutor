@@ -13,11 +13,11 @@ export class ManageYourComplaintsFilesService {
 
   searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord> {
     return this.http.query<ComplaintsFileRecord>({
-      url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+      url: `/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/${encodeURIComponent(
         searchTerm
       )}`,
       params: new HttpParams().set('additionalInfo', true),
-      requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
+      requestType: 'application/vnd.stagingcivil.submission-details+json'
     });
   }
 
@@ -57,7 +57,7 @@ export class ManageYourComplaintsFilesService {
   fetchErrorReport(submissionId: string): Observable<Blob> {
     return this.http
       .query<Blob>({
-        url: `/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/${encodeURIComponent(
+        url: `/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/${encodeURIComponent(
           submissionId
         )}`,
         requestType: 'text/csv',
@@ -69,7 +69,7 @@ export class ManageYourComplaintsFilesService {
   fetchCsvTemplate(): Observable<Blob> {
     return this.http
       .query<Blob>({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/complaints-files-template',
         requestType: 'text/csv',
         responseType: 'blob'
       })
@@ -82,7 +82,7 @@ export class ManageYourComplaintsFilesService {
 
     return this.http
       .command({
-        url: '/stagingprosecutorscivil-command-api/command/api/rest/stagingprosecutors-civil/complaints-files',
+        url: '/stagingprosecutorscivil-command-api/command/api/rest/staging-civil/complaints-files',
         body: formData
       })
       .pipe(map((response: HttpResponse<string>) => JSON.parse(response.body) as UploadCsvFileResponse));

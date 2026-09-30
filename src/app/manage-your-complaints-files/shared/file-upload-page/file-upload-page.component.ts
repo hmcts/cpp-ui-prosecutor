@@ -10,7 +10,6 @@ import {
   PdkTypographyDirective,
   ValidationError
 } from '@cpp/pdk';
-import { FileSizeValidatorDirective } from '../../../shared';
 
 @Component({
   selector: 'file-upload-page',
@@ -35,7 +34,6 @@ import { FileSizeValidatorDirective } from '../../../shared';
               ngModel
               pdk-file-input
               [accept]="acceptedFileTypes()"
-              [fileSizeLimit]="maxFileSizeBytes()"
               (change)="onFileSelected($event)"
               required
               pdk-margin-top="3"
@@ -49,22 +47,12 @@ import { FileSizeValidatorDirective } from '../../../shared';
       </pdk-grid>
     </pdk-grid>
   `,
-  imports: [
-    PdkCore,
-    PdkGrid,
-    PdkForm,
-    PdkFileInput,
-    FormsModule,
-    PdkButton,
-    PdkTypographyDirective,
-    FileSizeValidatorDirective
-  ]
+  imports: [PdkCore, PdkGrid, PdkForm, PdkFileInput, FormsModule, PdkButton, PdkTypographyDirective]
 })
 export class FileUploadPageComponent {
   readonly acceptedFileTypes = input<string[]>([]);
   readonly hint = input<string>('');
   readonly serverErrorMessage = input<string | null>(null);
-  readonly maxFileSizeBytes = input<number>(1024 * 1024);
 
   readonly errors = output<ValidationError[] | null>();
   readonly fileSubmitted = output<File>();
@@ -74,7 +62,6 @@ export class FileUploadPageComponent {
 
   readonly errorMessages = computed<ErrorMessageConfig[]>(() => [
     { rule: 'required', message: 'Select a file to upload' },
-    { rule: 'fileSize', message: `File size must not exceed 1MB` },
     { rule: 'serverError', message: this.serverErrorMessage() ?? '' }
   ]);
 

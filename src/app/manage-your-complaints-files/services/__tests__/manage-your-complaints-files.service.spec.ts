@@ -42,9 +42,9 @@ describe('ManageYourComplaintsFilesService', () => {
 
     service.searchComplaintsFiles('dummy-id-1').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/dummy-id-1',
         params: new HttpParams().set('additionalInfo', true),
-        requestType: 'application/vnd.stagingprosecutorscivil.submission-details+json'
+        requestType: 'application/vnd.stagingcivil.submission-details+json'
       });
       expect(result).toEqual(complaintsFile);
       done();
@@ -57,7 +57,7 @@ describe('ManageYourComplaintsFilesService', () => {
 
     service.fetchCsvTemplate().subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/complaints-files-template',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/complaints-files-template',
         requestType: 'text/csv',
         responseType: 'blob'
       });
@@ -72,7 +72,7 @@ describe('ManageYourComplaintsFilesService', () => {
 
     service.fetchErrorReport('dummy-id-1').subscribe(result => {
       expect(mockQuery).toHaveBeenCalledWith({
-        url: '/stagingprosecutorscivil-query-api/query/api/rest/stagingprosecutors-civil/submissions/dummy-id-1',
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/dummy-id-1',
         requestType: 'text/csv',
         responseType: 'blob'
       });
@@ -120,6 +120,10 @@ describe('ManageYourComplaintsFilesService', () => {
     mockCommand.mockReturnValue(of(new HttpResponse({ body, status: 200 })));
 
     service.postCsvFile(new File(['a,b,c'], 'complaints.csv')).subscribe(result => {
+      expect(mockCommand).toHaveBeenCalledWith({
+        url: '/stagingprosecutorscivil-command-api/command/api/rest/staging-civil/complaints-files',
+        body: expect.any(FormData)
+      });
       expect(result).toEqual({
         statusURL: 'https://replace-me.gov.uk/dummy-id-1',
         submissionId: 'dummy-id-1'
