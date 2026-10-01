@@ -20,6 +20,7 @@ describe('OverviewContainer', () => {
       teardown: { destroyAfterEach: false }
     });
 
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
     store = TestBed.inject(Store);
     fixture = TestBed.createComponent(OverviewContainer);
   });

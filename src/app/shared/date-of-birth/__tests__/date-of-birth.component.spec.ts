@@ -11,6 +11,8 @@ describe('DateOfBirthComponent', () => {
       providers: [AgePipeMock],
       teardown: { destroyAfterEach: false }
     });
+
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
     fixture = TestBed.createComponent(TestDateOfBirthComponent);
     fixture.componentInstance.dateOfBirth = '1998-01-31';
   });

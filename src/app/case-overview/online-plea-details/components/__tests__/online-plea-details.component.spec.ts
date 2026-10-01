@@ -29,6 +29,8 @@ describe('OnlinePleaComponent', () => {
         imports: [MockCaseHeaderBadgeContainer]
       }
     });
+
+    Date.now = jest.fn(() => Date.parse('2017-02-14'));
     fixture = TestBed.createComponent(OnlinePleaDetailsComponent);
   });
 
