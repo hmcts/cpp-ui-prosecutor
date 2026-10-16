@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Case, Offence, PleaseStatus } from '../../../contexts/sjp';
 import { DefendantOffenceWarningsComponent } from './defendant-offence-warnings.component';
-import { PdkFoldableTextComponent, PdkBadge, PdkCore } from '@cpp/pdk';
-import { FormatDatePipe } from '../../../shared/pipes/format-date/format-date.pipe';
+import { PdkBadge, PdkCore, PdkFoldableTextComponent } from '@cpp/pdk';
 import { PleaStatusPipe } from '../../../shared/pipes/please-status/plea-status.pipe';
 
 @Component({
@@ -33,14 +32,7 @@ import { PleaStatusPipe } from '../../../shared/pipes/please-status/plea-status.
       }
     </div>
   `,
-  imports: [
-    PdkCore,
-    DefendantOffenceWarningsComponent,
-    PdkFoldableTextComponent,
-    PdkBadge,
-    FormatDatePipe,
-    PleaStatusPipe
-  ]
+  imports: [PdkCore, DefendantOffenceWarningsComponent, PdkFoldableTextComponent, PdkBadge, PleaStatusPipe]
 })
 export class DefendantOffenceComponent {
   @Input() index: number;
