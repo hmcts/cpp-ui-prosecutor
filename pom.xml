@@ -9,7 +9,7 @@
 
   <groupId>uk.gov.moj.cpp.ui</groupId>
   <artifactId>ui-prosecutor</artifactId>
-  <version>19.0.4-PRE-RELEASE-3RD-LINE-SNAPSHOT</version>
+  <version>19.0.5-PRE-RELEASE-3RD-LINE-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <protractor.baseUrl>http://localhost:4650</protractor.baseUrl>
