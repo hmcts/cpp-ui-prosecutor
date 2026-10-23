@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CaseSummary } from '../../contexts/sjp';
 import { DefendantNamePipe } from '../../shared/pipes/defendant-name/defendant-name.pipe';
 import { FormatDatePipe } from '../../shared/pipes/format-date/format-date.pipe';
@@ -7,7 +7,7 @@ import { PdkTable } from '@cpp/pdk';
   selector: 'list-cases-missing-sjp-notices',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    @if (casesMissingNotices.length > 0) {
+    @if (casesMissingNotices().length > 0) {
     <table pdk-table>
       <thead pdk-table-head>
         <tr pdk-table-row>
@@ -17,7 +17,7 @@ import { PdkTable } from '@cpp/pdk';
         </tr>
       </thead>
       <tbody pdk-table-body>
-        @for (caseWithoutNotice of casesMissingNotices; track caseWithoutNotice.id) {
+        @for (caseWithoutNotice of casesMissingNotices(); track caseWithoutNotice.id) {
         <tr pdk-table-row>
           <td pdk-table-cell>{{ caseWithoutNotice.defendant | defendantName }}</td>
           <td pdk-table-cell data-role="urn">{{ caseWithoutNotice.urn }}</td>
@@ -31,5 +31,5 @@ import { PdkTable } from '@cpp/pdk';
   imports: [DefendantNamePipe, FormatDatePipe, PdkTable]
 })
 export class ListCasesMissingSjpNoticesComponent {
-  @Input() casesMissingNotices: CaseSummary[];
+  readonly casesMissingNotices = input<CaseSummary[]>([]);
 }

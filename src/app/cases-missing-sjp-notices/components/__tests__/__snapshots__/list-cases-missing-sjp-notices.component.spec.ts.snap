@@ -2,7 +2,7 @@
 
 exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with  multiple rows 1`] = `
 <list-cases-missing-sjp-notices
-  casesMissingNotices={[Function Array]}
+  casesMissingNotices={[Function Function]}
 >
   <table
     class="govuk-table"
@@ -98,14 +98,14 @@ exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly 
 
 exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with no data 1`] = `
 <list-cases-missing-sjp-notices
-  casesMissingNotices={[Function Array]}
+  casesMissingNotices={[Function Function]}
 >
 </list-cases-missing-sjp-notices>
 `;
 
 exports[`ListCasesMissingSjpNotices.ComponentComponent should compile correctly with single row 1`] = `
 <list-cases-missing-sjp-notices
-  casesMissingNotices={[Function Array]}
+  casesMissingNotices={[Function Function]}
 >
   <table
     class="govuk-table"
