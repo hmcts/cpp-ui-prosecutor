@@ -4,7 +4,6 @@ import { ListCasesMissingSjpNoticesComponent } from '../list-cases-missing-sjp-n
 import { CaseSummary, DefendantSummary } from '../../../contexts/sjp';
 
 describe('ListCasesMissingSjpNotices.ComponentComponent', () => {
-  let component: ListCasesMissingSjpNoticesComponent;
   let fixture: ComponentFixture<ListCasesMissingSjpNoticesComponent>;
 
   const mockCasesMissingSjpNoticesArray = [
@@ -47,24 +46,23 @@ describe('ListCasesMissingSjpNotices.ComponentComponent', () => {
         teardown: { destroyAfterEach: false }
       });
       fixture = TestBed.createComponent(ListCasesMissingSjpNoticesComponent);
-      component = fixture.componentInstance;
     })
   );
 
   it('should compile correctly with no data', () => {
-    component.casesMissingNotices = [];
+    fixture.componentRef.setInput('casesMissingNotices', []);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   it('should compile correctly with single row', () => {
-    component.casesMissingNotices = [mockCasesMissingSjpNoticesArray[0]];
+    fixture.componentRef.setInput('casesMissingNotices', [mockCasesMissingSjpNoticesArray[0]]);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   it('should compile correctly with  multiple rows', () => {
-    component.casesMissingNotices = mockCasesMissingSjpNoticesArray;
+    fixture.componentRef.setInput('casesMissingNotices', mockCasesMissingSjpNoticesArray);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

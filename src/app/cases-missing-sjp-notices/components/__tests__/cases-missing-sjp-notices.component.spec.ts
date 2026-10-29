@@ -5,7 +5,6 @@ import { Component, Input } from '@angular/core';
 
 describe('CasesMissingSjpNoticesComponent', () => {
   let fixture: ComponentFixture<CasesMissingSjpNoticesComponent>;
-  let component;
 
   const mockCasesMissingNotice = [
     {
@@ -47,24 +46,23 @@ describe('CasesMissingSjpNoticesComponent', () => {
         teardown: { destroyAfterEach: false }
       });
       fixture = TestBed.createComponent(CasesMissingSjpNoticesComponent);
-      component = fixture.componentInstance;
     })
   );
 
   it('should compile correctly with no data', () => {
-    component.casesMissingNotices = [];
+    fixture.componentRef.setInput('casesMissingNotices', []);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   it('should compile correctly with single row', () => {
-    component.casesMissingNotices = [mockCasesMissingNotice[0]];
+    fixture.componentRef.setInput('casesMissingNotices', [mockCasesMissingNotice[0]]);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });
 
   it('should compile correctly with multiple rows', () => {
-    component.casesMissingNotices = mockCasesMissingNotice;
+    fixture.componentRef.setInput('casesMissingNotices', mockCasesMissingNotice);
     fixture.detectChanges();
     expect(fixture).toMatchSnapshot();
   });

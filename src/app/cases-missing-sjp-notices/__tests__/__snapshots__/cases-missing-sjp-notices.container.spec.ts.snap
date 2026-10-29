@@ -2,7 +2,7 @@
 
 exports[`CasesMissingSjpNoticesContainer should compile correctly 1`] = `
 <cases-missing-sjp-notices-container
-  casesMissingNotices$={[Function _Store]}
+  casesMissingNotices={[Function Function]}
   store={[Function _Store]}
 >
   <cases-missing-sjp-notices>
