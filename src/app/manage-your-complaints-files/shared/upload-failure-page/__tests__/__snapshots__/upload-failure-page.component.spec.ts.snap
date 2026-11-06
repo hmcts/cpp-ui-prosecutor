@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadFailurePageComponent should render the container correctly 1`] = `
+<div
+  id="root0"
+>
+  <h1
+    class="govuk-!-margin-top-8 govuk-!-margin-bottom-6 govuk-heading-l"
+    pdk-margin-bottom="6"
+    pdk-margin-top="8"
+    pdk-typography="heading-large"
+  >
+     Sorry, there is a problem with service 
+  </h1>
+  <p>
+    Try again later.
+  </p>
+  <a
+    class="govuk-link"
+    href="/manage-your-complaints-files"
+    pdk-link=""
+  >
+    Go to manage your complaints files
+  </a>
+</div>
+`;

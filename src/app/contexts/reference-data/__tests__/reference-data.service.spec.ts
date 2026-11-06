@@ -47,6 +47,24 @@ describe('ReferenceDataService', () => {
     });
   });
 
+  describe('getDocumentTypeAccess', () => {
+    it('Should fetch reference data getDocumentTypeAccess', () => {
+      const documentsTypeAccess = [{ id: 'application-id-1', documentCategory: 'Application' }];
+      const response$ = cold('-a|', { a: { documentsTypeAccess } });
+      const expected$ = cold('-b|', { b: documentsTypeAccess });
+
+      query.mockReturnValue(response$);
+
+      const query$ = referenceData.getDocumentTypeAccess();
+
+      expect(query$).toBeObservable(expected$);
+      expect(query).toHaveBeenCalledWith({
+        url: '/referencedata-query-api/query/api/rest/referencedata/documents-type-access',
+        requestType: 'application/vnd.referencedata.get-all-document-type-access+json'
+      });
+    });
+  });
+
   describe('getPoliceForces', () => {
     it('Should fetch reference data getPoliceForces', () => {
       const response = { policeForces: [] };
