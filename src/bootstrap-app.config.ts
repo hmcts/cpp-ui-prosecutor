@@ -1,5 +1,5 @@
 import { ApplicationConfig, inject, provideAppInitializer } from '@angular/core';
-import { provideRouter, withRouterConfig } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withRouterConfig } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { appRoutes } from './app/app-routes';
@@ -40,7 +40,8 @@ export const bootstrapAppConfig: ApplicationConfig = {
       appRoutes,
       withRouterConfig({
         onSameUrlNavigation: 'reload'
-      })
+      }),
+      withComponentInputBinding()
     ),
     provideHttpClient(),
     provideProtractorTestingSupport(),

@@ -6,3 +6,4 @@ export * from './documentNameValidator';
 export * from './prosecutorValidator';
 export * from './digitsOnlyValidator';
 export * from './splitCaseValidators';
+export * from './fileSizeValidator';

@@ -1,0 +1,90 @@
+import { Injectable, inject } from '@angular/core';
+import { CppHttp } from '@cpp/core';
+import { HttpParams, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { v4 as uuid } from 'uuid';
+import { ComplaintsFileRecord, UploadCsvFileResponse } from '../interface/manage-your-complaints-files';
+import { buildAddCourtDocumentRequest } from '../util/manage-your-complaints-files';
+
+@Injectable({ providedIn: 'root' })
+export class ManageYourComplaintsFilesService {
+  private http = inject(CppHttp);
+
+  searchComplaintsFiles(searchTerm: string): Observable<ComplaintsFileRecord> {
+    return this.http.query<ComplaintsFileRecord>({
+      url: `/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/${encodeURIComponent(
+        searchTerm
+      )}`,
+      params: new HttpParams().set('additionalInfo', true),
+      requestType: 'application/vnd.stagingcivil.submission-details+json'
+    });
+  }
+
+  uploadSupportingDocument(file: File, documentTypeId: string, summonsApplicationId: string): Observable<void> {
+    const materialId = uuid();
+
+    return this.uploadDocument(materialId, file).pipe(
+      switchMap(() => this.addCourtDocument(file, materialId, documentTypeId, summonsApplicationId))
+    );
+  }
+
+  private uploadDocument(materialId: string, file: File): Observable<{ materialId: string }> {
+    const formData = new FormData();
+    const fileName = file.name.replace(/\.+$/, '');
+    formData.append('fileServiceId', file, fileName);
+
+    return this.http.commandSync<{ materialId: string }>({
+      url: `/progression-command-api/command/api/rest/progression/courtdocument/${materialId}`,
+      successEvent: 'public.progression.events.court-document-uploaded',
+      body: formData
+    });
+  }
+
+  private addCourtDocument(
+    file: File,
+    materialId: string,
+    documentTypeId: string,
+    summonsApplicationId: string
+  ): Observable<void> {
+    return this.http.command({
+      url: `/progression-command-api/command/api/rest/progression/courtdocument/${materialId}`,
+      requestType: 'application/vnd.progression.add-court-document+json',
+      body: buildAddCourtDocumentRequest(file, materialId, documentTypeId, summonsApplicationId)
+    });
+  }
+
+  fetchErrorReport(submissionId: string): Observable<Blob> {
+    return this.http
+      .query<Blob>({
+        url: `/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/submissions/${encodeURIComponent(
+          submissionId
+        )}`,
+        requestType: 'text/csv',
+        responseType: 'blob'
+      })
+      .pipe(map(response => new Blob([response], { type: response.type })));
+  }
+
+  fetchCsvTemplate(): Observable<Blob> {
+    return this.http
+      .query<Blob>({
+        url: '/stagingprosecutorscivil-query-api/query/api/rest/staging-civil/complaints-files-template',
+        requestType: 'text/csv',
+        responseType: 'blob'
+      })
+      .pipe(map(response => new Blob([response], { type: response.type })));
+  }
+
+  postCsvFile(file: File): Observable<UploadCsvFileResponse> {
+    const formData = new FormData();
+    formData.append('file', file, file.name);
+
+    return this.http
+      .command({
+        url: '/stagingprosecutorscivil-command-api/command/api/rest/staging-civil/complaints-files',
+        body: formData
+      })
+      .pipe(map((response: HttpResponse<string>) => JSON.parse(response.body) as UploadCsvFileResponse));
+  }
+}

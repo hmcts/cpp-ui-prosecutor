@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CppHttp } from '@cpp/core';
-import { OffenceWithdrawalReason } from './reference-data.interface';
+import { DocumentTypeAccess, OffenceWithdrawalReason } from './reference-data.interface';
 import { map } from 'rxjs/operators';
 
 import { HttpParams } from '@angular/common/http';
@@ -30,7 +30,6 @@ export class ReferenceDataService {
 
   private readonly query = '/referencedata-query-api/query/api/rest/referencedata';
 
-
   constructor() {}
 
   getOffenceWithdrawalReasons(): Observable<OffenceWithdrawalReason[]> {
@@ -45,6 +44,15 @@ export class ReferenceDataService {
             result.offenceWithdrawRequestReasons || []
         )
       );
+  }
+
+  getDocumentTypeAccess(): Observable<DocumentTypeAccess[]> {
+    return this.http
+      .query<{ documentsTypeAccess: DocumentTypeAccess[] }>({
+        url: `${this.query}/documents-type-access`,
+        requestType: 'application/vnd.referencedata.get-all-document-type-access+json'
+      })
+      .pipe(map(res => res.documentsTypeAccess));
   }
 
   getCaseTypes(): Observable<CaseProp[]> {

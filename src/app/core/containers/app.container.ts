@@ -32,6 +32,7 @@ import { AsyncPipe } from '@angular/common';
       [activity]="isBusy$ | async"
       [headerNavItems]="headerNavItems$ | async"
       [searchEnabled]="searchEnabled$ | async"
+      [serviceLink]="'/'"
       serviceName="CJS Common Platform"
       searchPlaceholder="Search by reference"
       searchLabel="Search by case or application reference"
