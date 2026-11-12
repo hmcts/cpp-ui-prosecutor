@@ -910,13 +910,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -1011,13 +1004,6 @@ exports[`OverviewComponent should compile correctly 1`] = `
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -2484,13 +2470,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -2580,13 +2559,6 @@ exports[`OverviewComponent should compile correctly assigned case 1`] = `
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -4026,13 +3998,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -4122,13 +4087,6 @@ exports[`OverviewComponent should compile correctly completed case 1`] = `
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -5680,13 +5638,6 @@ exports[`OverviewComponent should compile correctly with case warnings 1`] = `
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 14 Jan 2017 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -7189,13 +7140,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -7290,13 +7234,6 @@ exports[`OverviewComponent should compile correctly with personal detail change 
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -8752,13 +8689,6 @@ exports[`OverviewComponent should compile correctly with plea mitigation 1`] = `
               pdk-typography="body-small"
             >
                legislation 2 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -10233,13 +10163,6 @@ exports[`OverviewComponent should compile correctly with single offence 1`] = `
               pdk-typography="body-small"
             >
                legislation 2 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -11743,13 +11666,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -11844,13 +11760,6 @@ exports[`OverviewComponent should display Decisions tab with Case Decisions 1`] 
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
@@ -13349,13 +13258,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -13450,13 +13352,6 @@ exports[`OverviewComponent should display empty Decisions tab without Case Decis
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"

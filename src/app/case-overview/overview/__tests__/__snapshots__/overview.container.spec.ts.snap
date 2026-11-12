@@ -893,13 +893,6 @@ exports[`OverviewContainer should compile correctly 1`] = `
             >
                legislation 2 
             </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 24 Jan 2019 
-            </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
               pdk-margin-vertical="6"
@@ -989,13 +982,6 @@ exports[`OverviewContainer should compile correctly 1`] = `
               pdk-typography="body-small"
             >
                legislation 1 
-            </p>
-            <p
-              class="govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-body-s"
-              pdk-margin-vertical="4"
-              pdk-typography="body-small"
-            >
-               On 27 Jan 2019 
             </p>
             <div
               class="govuk-!-margin-top-6 govuk-!-margin-bottom-6"
