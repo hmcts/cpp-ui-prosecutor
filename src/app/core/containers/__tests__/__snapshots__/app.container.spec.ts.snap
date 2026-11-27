@@ -3,7 +3,7 @@
 exports[`App page component should compile correctly 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -12,8 +12,8 @@ exports[`App page component should compile correctly 1`] = `
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
@@ -482,7 +482,7 @@ exports[`App page component should compile correctly 1`] = `
 exports[`App page component should compile correctly when search is available 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -491,8 +491,8 @@ exports[`App page component should compile correctly when search is available 1`
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
@@ -961,7 +961,7 @@ exports[`App page component should compile correctly when search is available 1`
 exports[`App page component should detect when the app is busy 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -970,8 +970,8 @@ exports[`App page component should detect when the app is busy 1`] = `
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
@@ -1467,7 +1467,7 @@ exports[`App page component should detect when the app is busy 1`] = `
 exports[`App page component should track any api errors 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -1476,8 +1476,8 @@ exports[`App page component should track any api errors 1`] = `
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
@@ -1966,7 +1966,7 @@ exports[`App page component should track any api errors 1`] = `
 exports[`App page component should track the offline status of the container 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -1975,8 +1975,8 @@ exports[`App page component should track the offline status of the container 1`]
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
@@ -2465,7 +2465,7 @@ exports[`App page component should track the offline status of the container 1`]
 exports[`App page component should track the online status of the container 1`] = `
 <app-root
   apiError$={[Function _Store]}
-  appConfigService={[Function AppConfigService]}
+  appConfigService={[Function Object]}
   headerNavItems$={[Function _Store]}
   isBusy$={[Function Observable]}
   offline$={[Function Observable]}
@@ -2474,8 +2474,8 @@ exports[`App page component should track the online status of the container 1`] 
 >
   <cpp-application-layout
     accessibilitylink="accessibility"
-    searchlabel="Search by case or application reference"
-    searchplaceholder="Search by reference"
+    searchlabel="Search by case reference, application reference or PNC ID"
+    searchplaceholder="Search by Reference or PNC ID"
     servicename="CJS Common Platform"
   >
     <pdk-provider
